@@ -18,8 +18,8 @@ Lightweight static dashboard for copying ChimeraX scripts for spliceosome cryo-E
 For offline work, clone the repository and run the setup helper. It copies the dashboard assets and downloads uncompressed mmCIF coordinate files into a local folder. EM maps are not included by default.
 
 ```bash
-git clone https://github.com/mvorlander/spliceosome-structure-vis.git
-cd spliceosome-structure-vis
+git clone https://github.com/plaschka-lab/SpliceVis.git
+cd SpliceVis
 python3 tools/setup_offline.py --dest ~/Documents/SpliceVis
 ```
 
@@ -37,6 +37,6 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis --with-primary-maps
 ```
 
 Open `index.html` locally, or use the GitHub Pages dashboard:
-https://mvorlander.github.io/spliceosome-structure-vis/
+https://plaschka-lab.github.io/SpliceVis/
 
 Internal local CIF-only examples are intentionally excluded.

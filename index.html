@@ -170,7 +170,7 @@
       <div class="field"><label for="rnaFeatureFilter">RNA Features</label><select id="rnaFeatureFilter"></select></div>
       <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
       <div class="field"><label for="helperSource">ChimeraX helper scripts</label><select id="helperSource"><option value="github">Load helpers from GitHub</option><option value="local">Use local cloned repo</option></select></div>
-      <div class="field"><label for="localRepoPath">Local repo path</label><input id="localRepoPath" type="text" placeholder="/path/to/spliceosome-structure-vis"><div class="field-help">Clone once, then paste the resulting folder path here when using local helpers. For full model-only offline use, run the setup command in the Local Copy tab.<code>git clone https://github.com/mvorlander/spliceosome-structure-vis.git</code></div></div>
+      <div class="field"><label for="localRepoPath">Local repo path</label><input id="localRepoPath" type="text" placeholder="/path/to/SpliceVis"><div class="field-help">Clone once, then paste the resulting folder path here when using local helpers. For full model-only offline use, run the setup command in the Local Copy tab.<code>git clone https://github.com/plaschka-lab/SpliceVis.git</code></div></div>
       <button class="button" id="reset" type="button">Reset</button>
     </aside>
     <main>
@@ -241,8 +241,8 @@
       </div>
       <div id="localCopyView" hidden>
         <section class="panel"><div class="panel-head"><h2>Local Copy</h2><span class="subtle">offline coordinates; maps optional</span></div><div class="panel-body"><div class="doc-grid">
-          <div class="doc-section"><h3>Model-Only Offline Install</h3><p>Clone the public repository, then create a local dashboard folder with all public dashboard assets, helper scripts, thumbnails, RNA panels, and uncompressed coordinate mmCIF files. EM maps are not downloaded by default.</p><pre>git clone https://github.com/mvorlander/spliceosome-structure-vis.git
-cd spliceosome-structure-vis
+          <div class="doc-section"><h3>Model-Only Offline Install</h3><p>Clone the public repository, then create a local dashboard folder with all public dashboard assets, helper scripts, thumbnails, RNA panels, and uncompressed coordinate mmCIF files. EM maps are not downloaded by default.</p><pre>git clone https://github.com/plaschka-lab/SpliceVis.git
+cd SpliceVis
 python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
           <div class="doc-section"><h3>Open Offline</h3><p>The offline folder includes a small local-server launcher so the dashboard can load JSON and CXC files reliably in the browser.</p><pre>cd ~/Documents/SpliceVis
 ./open_dashboard.command</pre></div>
@@ -858,7 +858,7 @@ ${await scriptFor(record,"no_maps")}
     function localizeHelperPaths(text){
       const root = (state.localRepoPath || ".").replace(/\/+$/, "");
       const prefix = root === "." ? "" : `${root}/`;
-      return String(text || "").replaceAll("https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/", prefix);
+      return String(text || "").replaceAll("https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/", prefix);
     }
     async function copyStructureScript(id, button, mode="no_maps"){
       const r = records.find(item => item.pdb_id === id);
@@ -913,7 +913,7 @@ ${await scriptFor(record,"no_maps")}
         "### Evidence",
         "Add paper, figure, PDB/mmCIF annotation, ChimeraX screenshot, or other supporting evidence."
       ].join("\n");
-      return `https://github.com/mvorlander/spliceosome-structure-vis/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+      return `https://github.com/plaschka-lab/SpliceVis/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
     }
     function reportIssueLink(r){
       return `<a class="report-link" href="${attr(reportIssueUrl(r))}" target="_blank" rel="noreferrer" title="Open a prefilled GitHub issue for reporting annotation, homolog, RNA-feature, pathway, or coloring errors">Report annotation/coloring error</a>`;

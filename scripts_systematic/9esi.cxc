@@ -24,7 +24,7 @@ close #395.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
-open https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/scripts_systematic/prune_implausible_bonds.py
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic/prune_implausible_bonds.py
 
 hide atoms
 cartoon
@@ -304,10 +304,10 @@ select clear
 # RNA feature 3D residue labels.
 # Labels are created as independent grouped models under #395.2.
 # Fetch and run the self-contained RNA label script from GitHub.
-open https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/scripts_systematic/label_scripts/9esi_rna_labels.py
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic/label_scripts/9esi_rna_labels.py
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
-open https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/scripts_systematic/selection_browser_scripts/9esi_selection_browser.py
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic/selection_browser_scripts/9esi_selection_browser.py
 view
 show nucleic

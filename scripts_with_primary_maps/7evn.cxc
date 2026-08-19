@@ -17,7 +17,7 @@ close #311.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
-open https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/scripts/prune_implausible_bonds.py
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
 
 hide atoms
 cartoon
@@ -60,6 +60,6 @@ name pdb_7EVN_U2_SF3B #311.1/A,B,C,D
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
-open https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/scripts/selection_browser_scripts/7evn_selection_browser.py
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/7evn_selection_browser.py
 view
 show nucleic

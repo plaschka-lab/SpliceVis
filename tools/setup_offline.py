@@ -22,7 +22,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DEST = Path.home() / "Documents" / "SpliceVis"
-RAW_GITHUB_PREFIX = "https://raw.githubusercontent.com/mvorlander/spliceosome-structure-vis/main/"
+RAW_GITHUB_PREFIX = "https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/"
 PDB_CIF_URL = "https://files.rcsb.org/download/{pdb}.cif"
 EMDB_MAP_URL = "https://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-{emd}/map/emd_{emd_lower}.map.gz"
 
