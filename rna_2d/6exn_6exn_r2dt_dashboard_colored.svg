@@ -993,17 +993,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1594.2" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1612.9" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1631.6" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1426.1" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1444.7" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1463.4" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1482.1" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1500.8" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1519.5" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1538.2" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1556.8" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1575.5" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1594.2" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1612.9" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1575.5" cy="988.6" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <circle cx="1687.6" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>3&#x27; splice site; confidence medium</title></circle>
 <circle cx="1706.3" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>3&#x27; splice site; confidence medium</title></circle>
@@ -1056,12 +1045,10 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1413.5" y="968.3" class="feature-label" text-anchor="start" fill="#f97316">lariat nt 1-16,56-73,91-95</text>
 <path d="M1472.8,988.6 L1516.3,1008.9" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1516.3" y="1008.9" class="feature-label" text-anchor="start" fill="#303030">BP region nt 56-73</text>
-<path d="M1519.5,988.6 L1539.8,1032.1" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1539.8" y="1032.1" class="feature-label" text-anchor="start" fill="#303030">BP region nt 62-72</text>
 <path d="M1575.5,988.6 L1619.0,968.3" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1619.0" y="968.3" class="feature-label" text-anchor="start" fill="#303030">BP-A nt 70</text>
-<path d="M1706.3,988.6 L1686.0,945.1" class="feature-callout" stroke="#303030" opacity="0.54"/>
-<text x="1686.0" y="945.1" class="feature-label" text-anchor="end" fill="#303030">3&#x27;SS nt 93-95</text>
+<path d="M1706.3,988.6 L1686.0,1032.1" class="feature-callout" stroke="#303030" opacity="0.54"/>
+<text x="1686.0" y="1032.1" class="feature-label" text-anchor="end" fill="#303030">3&#x27;SS nt 93-95</text>
 <rect x="70.0" y="1342.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="1370.0" class="label" style="font-size:16px;fill:#303030">EXON /E -&gt; M</text>
 <polyline points="125.0,1613.5 147.9,1613.5 170.8,1613.5 193.7,1613.5 216.6,1613.5 239.5,1613.5 262.4,1613.5 285.3,1613.5 308.2,1613.5 331.1,1613.5 354.0,1613.5 376.9,1613.5 399.8,1613.5 422.7,1613.5 445.6,1613.5 468.5,1613.5 491.5,1613.5 514.4,1613.5 537.3,1613.5 560.2,1613.5 583.1,1613.5 606.0,1613.5 628.9,1613.5 651.8,1613.5 674.7,1613.5 697.6,1613.5 720.5,1613.5 743.4,1613.5 766.3,1613.5 789.2,1613.5 812.1,1613.5 835.0,1613.5" class="backbone"/>

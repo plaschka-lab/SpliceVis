@@ -800,13 +800,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1679.2" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1702.1" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1725.0" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1564.7" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1587.6" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1610.5" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1633.4" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1656.3" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1679.2" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1702.1" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1679.2" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <text x="1015.0" y="988.5" class="base" fill="#303030"><title>/Y seq 59 auth 59</title>G</text>
 <text x="1037.9" y="988.5" class="base" fill="#303030"><title>/Y seq 60 auth 60</title>U</text>
@@ -847,8 +840,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1115.8" y="968.3" class="feature-label" text-anchor="start" fill="#303030">? 5&#x27;SS nt 59-64</text>
 <path d="M1473.1,988.5 L1516.6,968.3" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1516.6" y="968.3" class="feature-label" text-anchor="start" fill="#303030">BP region nt 135-157</text>
-<path d="M1633.4,988.5 L1591.8,1012.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1591.8" y="1012.5" class="feature-label" text-anchor="end" fill="#303030">BP region nt 150-156</text>
 <path d="M1679.2,988.5 L1658.9,1032.0" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1658.9" y="1032.0" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 155</text>
 <rect x="70.0" y="1342.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>

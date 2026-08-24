@@ -264,9 +264,9 @@ name C_5GMK_branch_region #400.1/I:493-503
 # branch point adenosine: residues 501, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5GMK_branch_A #400.1/I:501
-# 5' splice site: residues 100-105; 100-114, component-name/network-scored-motif, high confidence, validation validated
+# 5' splice site: residues 100-105, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_5GMK_5SS #400.1/MB:100-114|#400.1/MB:100-105
+name C_5GMK_5SS #400.1/MB:100-105
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
@@ -313,7 +313,7 @@ select clear
 # intron: residues 100-114; 482-510
 # BP region: residues 493-503
 # BP-A: residues 501
-# 5'SS: residues 100-105; 100-114
+# 5'SS: residues 100-105
 # U2/U6 helix I: residues 26-30
 color #400.1/2:26-30 #047857
 select #400.1/2:26-30

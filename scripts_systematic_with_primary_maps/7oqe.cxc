@@ -222,19 +222,19 @@ name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,XA,XA0,XA1,XA2,XA3,XA4,XA5
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -2--1, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7OQE_5exon #326.1/M:-2--1
+name A_complex_7OQE_5exon #326.1/M:-2--1
 # substrate RNA: residues -2,-1,1,2,3,4,5,6,7,8;103-128;130-156;246-268, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7OQE_substrate #326.1/M:-2,-1,1,2,3,4,5,6,7,8,103-128,130-156,246-268
+name A_complex_7OQE_substrate #326.1/M:-2,-1,1,2,3,4,5,6,7,8,103-128,130-156,246-268
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7OQE_5SS #326.1/M:1-6
+name A_complex_7OQE_5SS #326.1/M:1-6
 # intron: residues 1-8;103-128;130-156;246-268, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7OQE_intron #326.1/M:1-8,103-128,130-156,246-268
-# branch point region: residues 246-268; 260-267, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+name A_complex_7OQE_intron #326.1/M:1-8,103-128,130-156,246-268
+# branch point region: residues 246-268, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7OQE_branch_region #326.1/M:246-268|#326.1/M:260-267
+name A_complex_7OQE_branch_region #326.1/M:246-268
 # Named selections for resolved snRNA functional regions.
 # U1 snRNA 5' splice-site recognition region: residues 1-10, review-region, medium confidence
 # selector_meta {"color":"#B66AAE","family":"RNA","feature":"U1_5prime_5SS_recognition","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
@@ -265,7 +265,7 @@ nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-8;103-128;130-156;246-268
-# BP region: residues 246-268; 260-267
+# BP region: residues 246-268
 # U1 5'SS recog.: residues 1-10
 color #326.1/1:1-10 #B66AAE
 select #326.1/1:1-10

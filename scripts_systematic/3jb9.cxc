@@ -249,9 +249,9 @@ name ILS_disassembly_3JB9_intron #425.1/MA:100-107
 # substrate RNA: residues 100-107; 492-504, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_3JB9_substrate #425.1/MA:100-107|#425.1/MB:492-504
-# branch point region: residues 492-504; 496-502, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 492-504, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_3JB9_branch_region #425.1/MB:492-504|#425.1/MB:496-502
+name ILS_disassembly_3JB9_branch_region #425.1/MB:492-504
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
@@ -277,7 +277,7 @@ nucleotides sel atoms
 select clear
 # 5'SS: residues 100-105
 # intron: residues 100-107
-# BP region: residues 492-504; 496-502
+# BP region: residues 492-504
 # U2/U6 helix I: residues 26-30
 color #425.1/2:26-30 #047857
 select #425.1/2:26-30

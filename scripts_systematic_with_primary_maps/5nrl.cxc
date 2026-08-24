@@ -279,9 +279,9 @@ name B_5NRL_intron #358.1/M:6-8,51-53,57-79
 # substrate RNA: residues 6-8;51-53;57-79, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_5NRL_substrate #358.1/M:6-8,51-53,57-79
-# branch point region: residues 57-79; 62-72, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 57-79, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_5NRL_branch_region #358.1/M:57-79|#358.1/M:62-72
+name B_5NRL_branch_region #358.1/M:57-79
 # branch point adenosine: residues 70, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_5NRL_branch_A #358.1/M:70
@@ -343,7 +343,7 @@ nucleotides sel atoms
 select clear
 # 5'SS: residues 6
 # intron: residues 6-8;51-53;57-79
-# BP region: residues 57-79; 62-72
+# BP region: residues 57-79
 # BP-A: residues 70
 # U2/U6 helix I: residues 30
 color #358.1/2:30 #047857

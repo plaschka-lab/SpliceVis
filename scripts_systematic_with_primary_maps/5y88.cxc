@@ -255,9 +255,9 @@ name ILS_disassembly_5Y88_intron_lariat #426.1/I:1-15,492-504
 # substrate RNA: residues 1-15;492-504, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_5Y88_substrate #426.1/I:1-15,492-504
-# branch point region: residues 492-504; 495-503, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 492-504, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_5Y88_branch_region #426.1/I:492-504|#426.1/I:495-503
+name ILS_disassembly_5Y88_branch_region #426.1/I:492-504
 # branch point adenosine: residues 501, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_5Y88_branch_A #426.1/I:501
@@ -296,7 +296,7 @@ select clear
 # 5'SS: residues 1-6
 # intron: residues 1-15;492-504
 # lariat: residues 1-15;492-504
-# BP region: residues 492-504; 495-503
+# BP region: residues 492-504
 # BP-A: residues 501
 # U2/U6 helix I: residues 26-30
 color #426.1/2:26-30 #047857

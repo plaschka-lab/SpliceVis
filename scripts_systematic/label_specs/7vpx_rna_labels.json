@@ -102,7 +102,7 @@
   "labels": [
     {
       "index": 1,
-      "selector_name": "E_complex_7VPX_branch_region",
+      "selector_name": "A_complex_7VPX_branch_region",
       "feature": "branch_point_region",
       "atomspec": "#327.1/MA:34",
       "text": "BP region (res. 27-41)",
@@ -116,7 +116,7 @@
     },
     {
       "index": 2,
-      "selector_name": "E_complex_7VPX_5exon",
+      "selector_name": "A_complex_7VPX_5exon",
       "feature": "exon_5",
       "atomspec": "#327.1/MB:0",
       "text": "5' exon (res. -1-0)",
@@ -130,7 +130,7 @@
     },
     {
       "index": 3,
-      "selector_name": "E_complex_7VPX_5SS",
+      "selector_name": "A_complex_7VPX_5SS",
       "feature": "five_prime_splice_site",
       "atomspec": "#327.1/MB:4",
       "text": "5'SS (res. 1-6)",
@@ -144,7 +144,7 @@
     },
     {
       "index": 4,
-      "selector_name": "E_complex_7VPX_intron",
+      "selector_name": "A_complex_7VPX_intron",
       "feature": "intron",
       "atomspec": "#327.1/MB:4",
       "text": "intron (res. 1-8)",

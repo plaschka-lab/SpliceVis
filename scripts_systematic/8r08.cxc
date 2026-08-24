@@ -307,9 +307,9 @@ name spliceosome_U6_snRNP /6,6R1,6R2
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAKA,XAKB,XAL,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBCA,XBCB,XBD,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBXA,XBXB,XBY,XBZ,XCA,XCB,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 # Named selections for resolved substrate RNA features.
-# branch point region: residues 29-43; 36-43, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 29-43, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8R08_branch_region #353.1/MA:29-43|#353.1/MA:36-43
+name pre_B_8R08_branch_region #353.1/MA:29-43
 # substrate RNA: residues 29-43; 3-7, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8R08_substrate #353.1/MA:29-43|#353.1/MB:3-7
@@ -378,7 +378,7 @@ name pre_B_8R08_U6_LSm_site #353.1/6:102-106
 select #353.1 & nucleic
 nucleotides sel atoms
 select clear
-# BP region: residues 29-43; 36-43
+# BP region: residues 29-43
 # BP-A: residues 41
 # U1 SL1: residues 12-46
 color #353.1/1:12-46 #BF72B7

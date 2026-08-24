@@ -609,13 +609,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="716.7" cy="1612.8" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="775.8" cy="1612.8" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="835.0" cy="1612.8" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
-<circle cx="361.7" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="420.8" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="480.0" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="539.2" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="598.3" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="657.5" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="716.7" cy="1612.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <text x="125.0" y="1612.8" class="base" fill="#303030"><title>/Q seq 1 auth 492</title>U</text>
 <text x="184.2" y="1612.8" class="base" fill="#303030"><title>/Q seq 2 auth 493</title>U</text>
 <text x="243.3" y="1612.8" class="base" fill="#303030"><title>/Q seq 3 auth 494</title>U</text>
@@ -632,8 +625,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="835.0" y="1612.8" class="base" fill="#303030"><title>/Q seq 13 auth 504</title>C</text>
 <path d="M480.0,1612.8 L459.7,1569.3" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="459.7" y="1569.3" class="feature-label" text-anchor="end" fill="#303030">BP region nt 492-504</text>
-<path d="M539.2,1612.8 L559.5,1569.3" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="559.5" y="1569.3" class="feature-label" text-anchor="start" fill="#303030">BP region nt 496-502</text>
 <path d="M402.1,1026.2 Q987.5,942.0 1572.9,987.0" class="inter" stroke-width="2.0"><title>N:33-36 to O:5-8; 4 FR3D interactions; cWW</title></path>
 <path d="M522.1,1026.2 Q437.9,359.4 353.8,404.4" class="inter" stroke-width="1.3"><title>N:45-45 to P:26-26; 1 FR3D interactions; cWW</title></path>
 <path d="M562.0,1026.2 Q432.8,359.4 303.5,404.4" class="inter" stroke-width="2.0"><title>N:47-50 to P:19-22; 4 FR3D interactions; cWW</title></path>

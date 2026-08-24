@@ -102,7 +102,7 @@
   "labels": [
     {
       "index": 1,
-      "selector_name": "B_9ESI_5exon",
+      "selector_name": "BstarD_complex_9ESI_5exon",
       "feature": "exon_5",
       "atomspec": "#395.1/1:-8",
       "text": "5' exon (res. -15-0)",
@@ -116,10 +116,10 @@
     },
     {
       "index": 2,
-      "selector_name": "B_9ESI_5SS",
+      "selector_name": "BstarD_complex_9ESI_5SS",
       "feature": "five_prime_splice_site",
       "atomspec": "#395.1/1:4",
-      "text": "5'SS (res. 1-6)",
+      "text": "? 5'SS (res. 1-6)",
       "color": "#303030",
       "model_name": "label_02_5_SS_res_1_6",
       "category_key": "pre_mRNA_features",
@@ -130,7 +130,7 @@
     },
     {
       "index": 3,
-      "selector_name": "B_9ESI_intron",
+      "selector_name": "BstarD_complex_9ESI_intron",
       "feature": "intron",
       "atomspec": "#395.1/1:7",
       "text": "intron (res. 1-13)",

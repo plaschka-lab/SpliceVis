@@ -125,6 +125,12 @@
     .compare-toggle { border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); padding:3px 7px; font-size:12px; }
     .compare-toggle.active { background:#eaf4ff; border-color:#9fc6ef; color:#0b5cab; font-weight:700; }
     .badge-row { display:flex; flex-wrap:wrap; gap:5px; align-items:center; }
+    .active-filter-panel { margin-bottom:14px; }
+    .active-filter-panel .panel-body { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; }
+    .active-filter-panel strong { font-size:13px; }
+    .filter-hint { flex:1 1 240px; min-width:220px; }
+    .empty-state { padding:26px 18px; text-align:center; color:var(--muted); }
+    .empty-state strong { display:block; color:var(--ink); margin-bottom:4px; }
     .filter-chips, .quick-filters, .rna-feature-results { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
     .filter-chip, .quick-filter { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); padding:4px 9px; font-size:12px; min-height:26px; }
     .filter-chip { background:#eef6ff; border-color:#b8d7f4; color:#0b5cab; }
@@ -215,6 +221,7 @@
         </div></section>
         <section class="stats" id="stats"></section>
         <section class="panel"><div class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></div><div class="panel-body"><div class="cycle" id="cycle"></div></div></section>
+        <section class="panel active-filter-panel"><div class="panel-body"><strong>Active filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span></div></section>
         <details class="panel compact-filter-panel"><summary class="panel-head"><h2>Advanced RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></summary><div class="panel-body"><div class="rna-feature-picker">
           <div class="field"><label for="rnaFeatureQuickSearch">Search Or Choose RNA Feature</label><input id="rnaFeatureQuickSearch" type="search" placeholder="5SS, branch, exon, U6"></div>
           <div class="subtle">Matching feature filters appear below; click one to apply it.</div>
@@ -225,7 +232,7 @@
           <button type="button" class="quick-filter" data-rna-feature="feature:ligated_exons">Ligated exons</button>
           <button type="button" class="quick-filter" data-rna-feature="feature:branch_point_adenosine">Branch A</button>
           <button type="button" class="quick-filter" data-rna-feature="feature:U6_ACAGAGA_box">U6 ACAGAGA</button>
-        </div><div class="filter-chips" id="activeFilterChips"></div></div></details>
+        </div></div></details>
         <section class="workspace">
           <div class="panel"><div class="panel-head"><h2>Structure Set</h2><span class="subtle" id="tableCount"></span></div><div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Resolution</th><th data-sort="year">Year</th><th data-sort="chains">Chain count</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div></div>
           <div class="panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
@@ -307,7 +314,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     let rnaFeatureConsistency = [];
     const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null };
     const els = {};
-    for (const id of ["search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterChips","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
+    for (const id of ["search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U2 snRNP","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const NODE_POS = [[280,100],[130,250],[205,410],[400,292],[365,535],[540,535],[705,515],[850,465],[990,390],[1110,295],[1190,190],[1150,92],[880,100],[735,100],[590,100]];
@@ -483,7 +490,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       if(state.species!=="all") chips.push(["species", `Species: ${state.species}`]);
       if(state.rnaFeature!=="all") chips.push(["rnaFeature", `RNA: ${rnaFeatureLabel(state.rnaFeature)}`]);
       els.activeFilterChips.innerHTML = chips.length ? chips.map(([key,label])=>`<button type="button" class="filter-chip" data-clear-filter="${attr(key)}" title="Clear this filter">${esc(label)} x</button>`).join("") : '<span class="subtle">No active filters.</span>';
+      if(els.filterHint) els.filterHint.textContent = chips.length ? "Clear individual chips or use Reset to broaden the Structure Set." : "Use search, state, species, or RNA-feature filters to narrow the Structure Set.";
       for(const button of els.rnaQuickFilters.querySelectorAll("button[data-rna-feature]")) button.classList.toggle("active", button.dataset.rnaFeature===state.rnaFeature);
+    }
+    function hasActiveStructureFilters(){
+      return Boolean(state.query || state.family!=="all" || state.cyclePdbIds.length || state.species!=="all" || state.rnaFeature!=="all");
     }
     function filtered(options = {}){
       return records.filter(r=>{
@@ -710,6 +721,13 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       return `<g class="cycle-node${active}${empty}" tabindex="0" role="button" data-stage="${attr(stage)}" onclick="state.family='${attr(stage)}'; els.family.value='${attr(stage)}'; render();"><ellipse class="cycle-node-shell" cx="${x}" cy="${y}" rx="65" ry="37"/>${rnaLine}${particles}<text class="cycle-label" x="${x}" y="${y+52}">${esc(stage)}</text><circle class="cycle-count-badge" cx="${x+52}" cy="${y-29}" r="12"/><text class="cycle-count-label" x="${x+52}" y="${y-29}">${count}</text></g>`;
     }
     function renderRows(rows){
+      if(!rows.length){
+        const message = hasActiveStructureFilters()
+          ? "No deposited structures match the current filters. Clear the active filter chips above or press Reset to broaden the search."
+          : "No deposited structures are available for this view.";
+        els.rows.innerHTML = `<tr><td colspan="12" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
+        return;
+      }
       els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div></td><td>${esc(r.state)}</td><td>${esc(r.resolution||"")}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
       for (const row of els.rows.querySelectorAll("tr")) {
         row.addEventListener("click", event => {

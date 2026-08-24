@@ -214,9 +214,9 @@ name pdb_8QZS_U6_snRNP #366.1/6
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_8QZS_other #366.1/I,K,W,X,r,v,w,x,y
 # Named selections for resolved substrate RNA features.
-# branch point region: residues 29-43; 35-43, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 29-43, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_8QZS_branch_region #366.1/Z:29-43|#366.1/Z:35-43
+name B_8QZS_branch_region #366.1/Z:29-43
 # substrate RNA: residues -3,-2,-1,1; -3,-2,-1,1,2,3,4,5,6,7,8; 29-43, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8QZS_substrate #366.1/Z:29-43|#366.1/z1:-3,-2,-1,1,2,3,4,5,6,7,8|#366.1/z2:-3,-2,-1,1
@@ -288,7 +288,7 @@ name B_8QZS_U6_LSm_site #366.1/6:102-105
 select #366.1 & nucleic
 nucleotides sel atoms
 select clear
-# BP region: residues 29-43; 35-43
+# BP region: residues 29-43
 # BP-A: residues 41
 # 5' exon: residues -3--1
 color #366.1/z1:-3--1 #FF8C00

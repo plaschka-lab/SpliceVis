@@ -858,50 +858,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1201.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
 <circle cx="1212.9" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
 <circle cx="1224.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
-<circle cx="1166.3" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1178.0" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1189.6" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1201.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1212.9" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1224.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1236.1" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1247.8" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1259.4" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1271.1" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1282.7" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1294.3" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1306.0" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1317.6" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1329.3" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1340.9" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1352.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1364.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1375.8" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1387.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1399.1" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1410.7" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1422.4" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1434.0" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1445.7" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1457.3" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1468.9" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1480.6" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1492.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1503.9" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1515.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1527.1" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1538.8" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1550.4" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1562.0" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1573.7" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1585.3" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1597.0" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1608.6" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1620.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1631.9" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1643.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1655.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
-<circle cx="1666.8" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>intron; confidence medium</title></circle>
 <circle cx="1340.9" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1352.5" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1364.2" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
@@ -925,16 +881,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1573.7" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1585.3" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1597.0" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1480.6" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1492.2" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1503.9" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1515.5" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1527.1" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1538.8" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1550.4" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1562.0" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1573.7" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1585.3" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1562.0" cy="988.8" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <circle cx="1643.5" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>3&#x27; splice site; confidence medium</title></circle>
 <circle cx="1655.2" cy="988.8" r="9.2" fill="#303030" opacity="0.22"><title>3&#x27; splice site; confidence medium</title></circle>
@@ -1019,8 +965,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1238.9" y="1009.1" class="feature-label" text-anchor="start" fill="#303030">5&#x27;SS nt 1-6</text>
 <path d="M1468.9,988.8 L1512.4,1009.1" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1512.4" y="1009.1" class="feature-label" text-anchor="start" fill="#303030">BP region nt 282-304</text>
-<path d="M1533.0,988.8 L1491.4,1012.8" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1491.4" y="1012.8" class="feature-label" text-anchor="end" fill="#303030">BP region nt 294-303</text>
 <path d="M1562.0,988.8 L1541.8,945.3" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1541.8" y="945.3" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 301</text>
 <path d="M1655.2,988.8 L1634.9,1032.3" class="feature-callout" stroke="#303030" opacity="0.54"/>

@@ -280,9 +280,9 @@ name pre_Bact_7ABI_5SS #371.1/M:59-64
 # intron: residues 59-78;141-168, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_7ABI_intron #371.1/M:59-78,141-168
-# branch point region: residues 141-168; 150-156, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 141-168, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABI_branch_region #371.1/M:141-168|#371.1/M:150-156
+name pre_Bact_7ABI_branch_region #371.1/M:141-168
 # branch point adenosine: residues 155, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_7ABI_branch_A #371.1/M:155
@@ -331,7 +331,7 @@ nucleotides sel fill
 select clear
 # 5'SS: residues 59-64
 # intron: residues 59-78;141-168
-# BP region: residues 141-168; 150-156
+# BP region: residues 141-168
 # BP-A: residues 155
 # U2/U6 helix I: residues 26-30
 color #371.1/2:26-30 #047857

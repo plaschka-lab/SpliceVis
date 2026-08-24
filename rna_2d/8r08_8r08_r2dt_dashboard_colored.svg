@@ -1177,14 +1177,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1623.6" cy="1613.0" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1674.3" cy="1613.0" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1725.0" cy="1613.0" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
-<circle cx="1370.0" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1420.7" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1471.4" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1522.1" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1572.9" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1623.6" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1674.3" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1725.0" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1623.6" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <text x="1015.0" y="1613.0" class="base" fill="#303030"><title>/Z seq 1 auth 29</title>G</text>
 <text x="1065.7" y="1613.0" class="base" fill="#303030"><title>/Z seq 2 auth 30</title>A</text>
@@ -1204,10 +1196,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1725.0" y="1613.0" class="base" fill="#303030"><title>/Z seq 15 auth 43</title>C</text>
 <path d="M1370.0,1613.0 L1349.7,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1349.7" y="1569.5" class="feature-label" text-anchor="end" fill="#303030">BP region nt 29-43</text>
-<path d="M1547.5,1613.0 L1527.2,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1527.2" y="1569.5" class="feature-label" text-anchor="end" fill="#303030">BP region nt 36-43</text>
-<path d="M1623.6,1613.0 L1643.9,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1643.9" y="1569.5" class="feature-label" text-anchor="start" fill="#303030">BP-A nt 41</text>
+<path d="M1623.6,1613.0 L1603.3,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
+<text x="1603.3" y="1569.5" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 41</text>
 <rect x="70.0" y="1967.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="1995.0" class="label" style="font-size:16px;fill:#303030">mRNA /Z1 -&gt; MB</text>
 <polyline points="125.0,2235.4 302.5,2235.4 480.0,2235.4 657.5,2235.4 835.0,2235.4" class="backbone"/>

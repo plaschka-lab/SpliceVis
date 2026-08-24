@@ -846,13 +846,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="748.4" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="765.7" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="783.0" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="644.5" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="661.8" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="679.1" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="696.5" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="713.8" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="731.1" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="748.4" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="713.8" cy="1613.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <circle cx="800.4" cy="1613.7" r="9.2" fill="#303030" opacity="0.22"><title>3&#x27; splice site; confidence medium</title></circle>
 <circle cx="817.7" cy="1613.7" r="9.2" fill="#303030" opacity="0.22"><title>3&#x27; splice site; confidence medium</title></circle>
@@ -909,12 +902,10 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="500.3" y="1570.2" class="feature-label" text-anchor="start" fill="#f97316">lariat nt 1-20,83-101,111-113</text>
 <path d="M627.2,1613.7 L647.5,1657.2" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="647.5" y="1657.2" class="feature-label" text-anchor="start" fill="#303030">BP region nt 83-101</text>
-<path d="M696.5,1613.7 L716.7,1570.2" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="716.7" y="1570.2" class="feature-label" text-anchor="start" fill="#303030">BP region nt 93-99</text>
-<path d="M713.8,1613.7 L672.2,1589.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="672.2" y="1589.7" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 97</text>
-<path d="M817.7,1613.7 L776.1,1637.7" class="feature-callout" stroke="#303030" opacity="0.54"/>
-<text x="776.1" y="1637.7" class="feature-label" text-anchor="end" fill="#303030">? 3&#x27;SS nt 111-113</text>
+<path d="M713.8,1613.7 L734.1,1570.2" class="feature-callout" stroke="#303030" opacity="0.60"/>
+<text x="734.1" y="1570.2" class="feature-label" text-anchor="start" fill="#303030">BP-A nt 97</text>
+<path d="M817.7,1613.7 L776.1,1589.7" class="feature-callout" stroke="#303030" opacity="0.54"/>
+<text x="776.1" y="1589.7" class="feature-label" text-anchor="end" fill="#303030">? 3&#x27;SS nt 111-113</text>
 <path d="M170.2,434.8 Q475.0,389.8 779.7,1035.0" class="inter" stroke-width="3.3"><title>2:1-11 to 6:87-97; 10 FR3D interactions; cWW</title></path>
 <path d="M298.2,434.8 Q466.6,389.8 635.0,1035.0" class="inter" stroke-width="1.3"><title>2:19-19 to 6:80-80; 1 FR3D interactions; tHW</title></path>
 <path d="M317.4,434.8 Q438.6,389.8 559.8,1035.0" class="inter" stroke-width="1.8"><title>2:20-22 to 6:53-55; 3 FR3D interactions; cWW</title></path>

@@ -476,12 +476,12 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1674.3" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1699.6" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1725.0" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
-<circle cx="1420.7" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1446.1" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1471.4" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1496.8" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1522.1" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1547.5" cy="988.5" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1420.7" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
+<circle cx="1446.1" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
+<circle cx="1471.4" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
+<circle cx="1496.8" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
+<circle cx="1522.1" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
+<circle cx="1547.5" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>5&#x27; splice site; confidence medium</title></circle>
 <circle cx="1420.7" cy="988.5" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
 <circle cx="1446.1" cy="988.5" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
 <circle cx="1471.4" cy="988.5" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
@@ -528,8 +528,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1725.0" y="988.5" class="base" fill="#303030"><title>/1 seq 29 auth 13</title>U</text>
 <path d="M1205.2,988.5 L1248.7,968.2" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
 <text x="1248.7" y="968.2" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -15-0</text>
-<path d="M1484.1,988.5 L1527.6,968.2" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1527.6" y="968.2" class="feature-label" text-anchor="start" fill="#303030">5&#x27;SS nt 1-6</text>
+<path d="M1484.1,988.5 L1527.6,968.2" class="feature-callout" stroke="#303030" opacity="0.54"/>
+<text x="1527.6" y="968.2" class="feature-label" text-anchor="start" fill="#303030">? 5&#x27;SS nt 1-6</text>
 <path d="M1306.6,988.5 Q1295.4,157.0 1284.1,202.0" class="inter" stroke-width="1.5"><title>1:12-13 to 5:51-52; 2 FR3D interactions; cWW</title></path>
 <path d="M1572.9,988.5 Q990.3,943.5 407.8,1031.9" class="inter" stroke-width="1.3"><title>1:23-23 to 6:35-35; 1 FR3D interactions; cSW</title></path>
 <path d="M125.0,363.4 Q457.2,318.4 789.3,1031.9" class="inter" stroke-width="1.3"><title>2:3-3 to 6:88-88; 1 FR3D interactions; cWW</title></path>
@@ -543,22 +543,23 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M732.2,1031.9 Q505.8,318.4 279.3,363.4" class="inter" stroke-width="1.3"><title>6:83-83 to 2:8-8; 1 FR3D interactions; cWW</title></path>
 <path d="M789.3,1031.9 Q457.2,318.4 125.0,363.4" class="inter" stroke-width="1.3"><title>6:88-88 to 2:3-3; 1 FR3D interactions; cWW</title></path>
 <text x="70" y="1364.0" class="label" style="font-size:15px">Feature overlays</text>
-<circle cx="77.0" cy="1386.0" r="7" fill="#FF8C00" opacity="0.28"/>
-<text x="90.0" y="1390.0" class="small">exon 5</text>
-<circle cx="287.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="300.0" y="1390.0" class="small">substrate</text>
-<circle cx="497.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="510.0" y="1390.0" class="small">five prime splice site</text>
-<circle cx="707.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="720.0" y="1390.0" class="small">intron</text>
-<circle cx="917.0" cy="1386.0" r="7" fill="#047857" opacity="0.28"/>
-<text x="930.0" y="1390.0" class="small">U2 U6 helix I partner</text>
-<circle cx="1127.0" cy="1386.0" r="7" fill="#1b3cd0" opacity="0.28"/>
-<text x="1140.0" y="1390.0" class="small">U5 loop I</text>
-<circle cx="1337.0" cy="1386.0" r="7" fill="#d0183c" opacity="0.28"/>
-<text x="1350.0" y="1390.0" class="small">U6 U2 helix I partner</text>
-<circle cx="1547.0" cy="1386.0" r="7" fill="#e01842" opacity="0.28"/>
-<text x="1560.0" y="1390.0" class="small">U6 5SS upstream contact</text>
-<circle cx="77.0" cy="1409.0" r="7" fill="#dc143c" opacity="0.28"/>
-<text x="90.0" y="1413.0" class="small">U6 ACAGAGA box</text>
+<text x="70.0" y="1390.0" class="small">? label prefix = uncertain RNA-feature assignment; inspect validation notes before interpretation.</text>
+<circle cx="77.0" cy="1410.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<text x="90.0" y="1414.0" class="small">exon 5</text>
+<circle cx="287.0" cy="1410.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="300.0" y="1414.0" class="small">substrate</text>
+<circle cx="497.0" cy="1410.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="510.0" y="1414.0" class="small">five prime splice site</text>
+<circle cx="707.0" cy="1410.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="720.0" y="1414.0" class="small">intron</text>
+<circle cx="917.0" cy="1410.0" r="7" fill="#047857" opacity="0.28"/>
+<text x="930.0" y="1414.0" class="small">U2 U6 helix I partner</text>
+<circle cx="1127.0" cy="1410.0" r="7" fill="#1b3cd0" opacity="0.28"/>
+<text x="1140.0" y="1414.0" class="small">U5 loop I</text>
+<circle cx="1337.0" cy="1410.0" r="7" fill="#d0183c" opacity="0.28"/>
+<text x="1350.0" y="1414.0" class="small">U6 U2 helix I partner</text>
+<circle cx="1547.0" cy="1410.0" r="7" fill="#e01842" opacity="0.28"/>
+<text x="1560.0" y="1414.0" class="small">U6 5SS upstream contact</text>
+<circle cx="77.0" cy="1433.0" r="7" fill="#dc143c" opacity="0.28"/>
+<text x="90.0" y="1437.0" class="small">U6 ACAGAGA box</text>
 </svg>
