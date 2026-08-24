@@ -86,7 +86,8 @@
     .molstar-viewer { width:100%; height:min(68vh,720px); min-height:500px; border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; position:relative; }
     .molstar-viewer:empty::before { content:"The interactive preview loads automatically after selecting a structure row."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
     .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
-    .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; font-size:12px; max-width:180px; }
+    .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; color:var(--ink); font-size:12px; max-width:180px; min-height:24px; }
+    .molstar-legend-chip:hover, .molstar-legend-chip.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; }
     .molstar-legend-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .molstar-feature-box { border:1px solid var(--line); border-radius:8px; background:#fafbfc; padding:8px; }
     .molstar-feature-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:end; margin-bottom:8px; }
@@ -978,13 +979,19 @@ ${await scriptFor(record,"no_maps")}
       return `<a class="report-link" href="${attr(reportIssueUrl(r))}" target="_blank" rel="noreferrer" title="Open a prefilled GitHub issue for reporting annotation, homolog, RNA-feature, pathway, or coloring errors">Report annotation/coloring error</a>`;
     }
     function molstarLegend(r){
-      const seen = new Set();
-      return (r.molstar_color_selections||[]).filter(x=>{
+      const groups = [];
+      const byKey = new Map();
+      for(const x of (r.molstar_color_selections||[])){
         const key = `${x.label}|${x.color}`;
-        if(seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      }).slice(0,36).map(x=>`<span class="molstar-legend-chip" title="${attr(`${x.label || x.auth_asym_id} ${x.color}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label || x.auth_asym_id)}</span></span>`).join("");
+        let item = byKey.get(key);
+        if(!item){
+          item = {label: x.label || x.auth_asym_id, color: x.color, chains: []};
+          byKey.set(key, item);
+          groups.push(item);
+        }
+        if(x.auth_asym_id && !item.chains.includes(x.auth_asym_id)) item.chains.push(x.auth_asym_id);
+      }
+      return groups.slice(0,36).map((x,index)=>`<button type="button" class="molstar-legend-chip" data-legend-index="${index}" onclick="selectMolstarComponentFromLegend(this)" title="${attr(`${x.label} ${x.color}; chains ${x.chains.join(', ')}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label)}</span></button>`).join("");
     }
     function molstarFeatureBrowser(r){
       const features = r.molstar_feature_selections || [];
@@ -1111,6 +1118,7 @@ ${await scriptFor(record,"no_maps")}
       if(!feature) return;
       await selectMolstarFeature(feature);
       for(const item of list.querySelectorAll(".molstar-feature-button")) item.classList.toggle("active", item===button);
+      clearMolstarLegendActive();
     }
     async function selectMolstarFeature(feature){
       const status = document.getElementById("molstarStatus");
@@ -1126,6 +1134,43 @@ ${await scriptFor(record,"no_maps")}
       await instance.visual.highlight({data: queries, color: feature.color || "#FFFF00"});
       if(status) status.textContent = `Focused ${feature.label} (${feature.chain}:${feature.residue_ranges}).`;
     }
+    function molstarLegendItems(r){
+      const groups = [];
+      const byKey = new Map();
+      for(const x of (r?.molstar_color_selections || [])){
+        const key = `${x.label}|${x.color}`;
+        let item = byKey.get(key);
+        if(!item){
+          item = {label: x.label || x.auth_asym_id, color: x.color || "#FFFF00", chains: []};
+          byKey.set(key, item);
+          groups.push(item);
+        }
+        if(x.auth_asym_id && !item.chains.includes(x.auth_asym_id)) item.chains.push(x.auth_asym_id);
+      }
+      return groups.slice(0,36);
+    }
+    function clearMolstarLegendActive(){
+      for(const item of document.querySelectorAll(".molstar-legend-chip")) item.classList.remove("active");
+    }
+    async function selectMolstarComponentFromLegend(button){
+      const r = currentMolstarRecord();
+      const item = molstarLegendItems(r)[Number(button.dataset.legendIndex)];
+      const status = document.getElementById("molstarStatus");
+      if(!item || !item.chains.length) return;
+      if(!state.molstarViewer || state.molstarPdbId !== state.selected){
+        await loadMolstarForSelected();
+      }
+      const viewer = state.molstarViewer || document.querySelector("#molstarViewer pdbe-molstar");
+      const instance = viewer && viewer.viewerInstance;
+      if(!instance || !instance.visual){ if(status) status.textContent = "Mol* viewer is not ready yet."; return; }
+      const queries = item.chains.map(auth_asym_id=>({auth_asym_id, color: item.color, focus: true}));
+      await instance.visual.focus(queries);
+      await instance.visual.highlight({data: queries, color: item.color});
+      for(const chip of document.querySelectorAll(".molstar-legend-chip")) chip.classList.toggle("active", chip===button);
+      const featureList = document.getElementById("molstarFeatureList");
+      if(featureList) for(const featureButton of featureList.querySelectorAll(".molstar-feature-button")) featureButton.classList.remove("active");
+      if(status) status.textContent = `Focused ${item.label} chain${item.chains.length === 1 ? "" : "s"} ${item.chains.join(", ")}.`;
+    }
     async function clearMolstarFeature(){
       const status = document.getElementById("molstarStatus");
       const viewer = state.molstarViewer || document.querySelector("#molstarViewer pdbe-molstar");
@@ -1134,6 +1179,7 @@ ${await scriptFor(record,"no_maps")}
       if(instance?.visual?.reset) await instance.visual.reset({camera:true});
       const list = document.getElementById("molstarFeatureList");
       if(list) for(const item of list.querySelectorAll(".molstar-feature-button")) item.classList.remove("active");
+      clearMolstarLegendActive();
       if(status) status.textContent = "Cleared Mol* feature highlight.";
     }
     function showStartTab(tab){
