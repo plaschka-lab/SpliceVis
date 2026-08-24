@@ -85,7 +85,7 @@
     .molstar-toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .molstar-status { color:var(--muted); font-size:12px; }
     .molstar-viewer { width:100%; height:clamp(420px,44vh,680px); min-height:420px; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; position:relative; }
-    .molstar-viewer:empty::before { content:"Select a structure row or press Reload 3D preview to load the interactive model."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
+    .molstar-viewer:empty::before { content:"Select a structure to load the interactive model."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
     .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
     .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; color:var(--ink); font-size:12px; max-width:180px; min-height:24px; }
     .molstar-legend-chip:hover, .molstar-legend-chip.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; }
@@ -97,6 +97,12 @@
     .molstar-feature-button { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); min-height:28px; padding:4px 9px; font-size:12px; max-width:270px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .molstar-feature-button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:700; }
     .molstar-feature-button .component-swatch { margin-right:5px; }
+    .molstar-options { margin-top:8px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+    .molstar-options > summary { cursor:pointer; list-style:none; padding:8px 10px; color:var(--muted); font-size:12px; font-weight:750; }
+    .molstar-options > summary::-webkit-details-marker { display:none; }
+    .molstar-options > summary::after { content:"+"; float:right; color:#0b5cab; }
+    .molstar-options[open] > summary::after { content:"-"; }
+    .molstar-options-body { padding:0 10px 10px; }
     .rna-2d-img { display:block; width:100%; max-height:520px; object-fit:contain; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .table-thumbnail { display:block; width:64px; height:64px; object-fit:contain; border:1px solid var(--line); border-radius:6px; background:#fff; }
     .preview-cell { width:78px; min-width:78px; }
@@ -209,11 +215,9 @@
     .selected-panel { position:sticky; top:12px; }
     .selected-panel .detail-title { font-size:17px; line-height:1.25; }
     .selected-panel details.detail-section:first-of-type { margin-top:10px; }
-    .selected-panel .molstar-panel { display:flex; flex-direction:column; }
-    .selected-panel .molstar-viewer { order:1; height:320px; min-height:320px; }
-    .selected-panel .molstar-toolbar { order:2; }
-    .selected-panel .molstar-legend { order:3; max-height:68px; }
-    .selected-panel .molstar-feature-box { order:4; }
+    .selected-panel .molstar-panel { display:grid; gap:8px; }
+    .selected-panel .molstar-viewer { height:320px; min-height:320px; }
+    .selected-panel .molstar-legend { max-height:68px; }
     .active-filter-panel .panel-body { min-height:46px; }
     th { box-shadow:0 1px 0 var(--line); }
     tbody tr { transition:background .12s ease; }
@@ -224,11 +228,22 @@
     main { max-width:none; padding:24px 28px 36px; }
     .brand-block { display:block; margin:0 0 18px; }
     .brand-block h1 { font-size:31px; line-height:1; margin-bottom:10px; }
-    .filter-panel { display:grid; grid-template-columns:1fr; gap:12px; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+    .filter-panel { display:grid; grid-template-columns:1fr; gap:8px; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
     .filter-panel input, .filter-panel select { min-height:40px; border-radius:7px; }
-    .reset-button { width:100%; min-height:40px; }
+    .search-field label { font-size:12px; }
+    .search-field input { min-height:48px; font-size:16px; border-radius:10px; background:#fff; box-shadow:0 1px 2px rgba(31,37,45,.04); }
+    .filter-actions { display:grid; grid-template-columns:1fr auto; gap:8px; align-items:center; }
+    .refine-panel, .nav-section { margin-top:4px; border-top:1px solid #e1e6ec; padding-top:8px; }
+    .refine-panel > summary, .nav-section > summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; color:var(--muted); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0; }
+    .refine-panel > summary::-webkit-details-marker, .nav-section > summary::-webkit-details-marker { display:none; }
+    .refine-panel > summary::after, .nav-section > summary::after { content:"+"; color:#0b5cab; font-size:16px; line-height:1; }
+    .refine-panel[open] > summary::after, .nav-section[open] > summary::after { content:"-"; }
+    .refine-grid { display:grid; grid-template-columns:1fr; gap:10px; padding-top:10px; }
+    .reset-button { width:100%; min-height:36px; border-color:#cbd6e1; background:#fff; color:#4d5866; }
     .tabs { display:grid; gap:12px; margin:20px 0 12px; justify-content:stretch; }
     .tab-group { display:grid; grid-template-columns:1fr; gap:6px; align-items:stretch; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+    .nav-section .tab-group { padding-top:10px; }
+    .nav-section .tab-group-label { display:none; }
     .tab-group-label { padding:0; margin:4px 0 0; }
     .tab-button { display:flex; justify-content:space-between; align-items:center; width:100%; min-height:36px; padding:7px 10px; border-radius:7px; background:#fff; }
     .tab-button::after { content:""; width:6px; height:6px; border-radius:50%; background:#c8d0d9; }
@@ -236,10 +251,12 @@
     .helper-panel { margin-top:16px; padding-top:14px; border-top:1px solid #e1e6ec; }
     .helper-panel[open] { display:block; padding:14px 0 0; border:0; border-top:1px solid #e1e6ec; border-radius:0; background:transparent; }
     .topbar { display:block; margin:0 0 16px; }
-    .hero-copy { display:grid; grid-template-columns:minmax(360px,720px) auto; gap:18px; align-items:end; }
-    .hero-copy h1 { font-size:34px; line-height:1.04; max-width:760px; }
-    .stats { grid-template-columns:repeat(4,minmax(120px,1fr)); margin-bottom:16px; }
-    .stat { border-radius:10px; background:#fff; }
+    .hero-copy { display:block; max-width:900px; }
+    .hero-copy h1 { font-size:29px; line-height:1.08; max-width:760px; margin:4px 0 6px; }
+    .stats { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
+    .stat { display:inline-flex; align-items:baseline; gap:6px; width:auto; min-width:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+    .stat strong { font-size:15px; }
+    .stat + .stat::before { content:"/"; color:#a0aab5; margin-right:2px; }
     .landing-grid { display:grid; grid-template-columns:minmax(600px,1.18fr) minmax(500px,.82fr); gap:16px; align-items:start; }
     .cycle-panel, .selected-panel, .active-filter-panel, .workspace > .panel { border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(31,37,45,.06); }
     .cycle-panel .panel-body { min-height:700px; padding:18px 22px 22px; }
@@ -258,13 +275,16 @@
     .selected-panel details.detail-section:first-of-type > summary { display:none; }
     .selected-panel details.detail-section:first-of-type .detail-section-body { padding:0; }
     .active-filter-panel { margin-top:16px; }
+    .active-filter-panel[hidden] { display:none; }
+    .active-filter-panel .panel-body { min-height:0; padding:10px 12px; }
+    .active-filter-panel .reset-button { width:auto; min-height:28px; padding:4px 9px; margin-left:auto; }
     .workspace { margin-top:16px; }
     .workspace > .panel .panel-head { padding:14px 16px; }
     .table-wrap { max-height:720px; }
     table { font-size:12px; }
     th, td { padding:7px 8px; }
-    .compact-filter-panel { margin-top:16px; }
-    @media (max-width:1300px) { .app { grid-template-columns:1fr; } aside { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line); } .filter-panel { grid-template-columns:minmax(260px,1.4fr) repeat(3,minmax(130px,1fr)); } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .landing-grid, .hero-copy { grid-template-columns:1fr; } .selected-panel { position:static; } .cycle-panel .panel-body { min-height:0; } }
+    .compact-filter-panel { display:none; }
+    @media (max-width:1300px) { .app { grid-template-columns:1fr; } aside { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line); } .filter-panel { grid-template-columns:1fr; } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .landing-grid, .hero-copy { grid-template-columns:1fr; } .selected-panel { position:static; } .cycle-panel .panel-body { min-height:0; } }
     @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
     @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open], .tabs { grid-template-columns:1fr; } .hero-copy h1 { font-size:25px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
     </style>
@@ -277,15 +297,19 @@
         <div class="subtle">Explore deposited spliceosome structures, inspect color-coded 3D previews, and copy ready-to-run ChimeraX scripts.</div>
       </div>
       <div class="filter-panel">
-        <div class="field search-field"><label for="search">Search structures</label><input id="search" type="search" placeholder="PDB, protein, RNA, author, paper"></div>
-        <div class="field"><label for="searchMode">Search in</label><select id="searchMode"><option value="all">All fields</option><option value="component">Proteins, RNAs, genes</option><option value="structure">PDB, title, state</option><option value="paper">Paper, DOI, PubMed, authors</option><option value="author">Authors</option></select></div>
-        <div class="field"><label for="family">State</label><select id="family"></select></div>
-        <div class="field"><label for="species">Species</label><select id="species"></select></div>
-        <div class="field"><label for="rnaFeatureFilter">RNA feature</label><select id="rnaFeatureFilter"></select></div>
-        <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
-        <button class="button reset-button" id="reset" type="button">Reset filters</button>
+        <div class="field search-field"><label for="search">Find structures</label><input id="search" type="search" placeholder="PDB, protein, RNA, author"></div>
+        <details class="refine-panel">
+          <summary>Refine results</summary>
+          <div class="refine-grid">
+            <div class="field"><label for="searchMode">Search in</label><select id="searchMode"><option value="all">All fields</option><option value="component">Proteins, RNAs, genes</option><option value="structure">PDB, title, state</option><option value="paper">Paper, DOI, PubMed, authors</option><option value="author">Authors</option></select></div>
+            <div class="field"><label for="family">State</label><select id="family"></select></div>
+            <div class="field"><label for="species">Species</label><select id="species"></select></div>
+            <div class="field"><label for="rnaFeatureFilter">RNA feature</label><select id="rnaFeatureFilter"></select></div>
+            <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
+          </div>
+        </details>
       </div>
-      <div class="tabs" id="tabs"><div class="tab-group" aria-label="Dashboard tools"><span class="tab-group-label">Explore</span><button type="button" class="tab-button active" data-tab="structures">Structures</button><button type="button" class="tab-button" data-tab="proximity">Proximity</button><button type="button" class="tab-button" data-tab="localCopy">Local Copy</button></div><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="cycleStates">Cycle</button><button type="button" class="tab-button" data-tab="rnaElements">RNA Elements</button><button type="button" class="tab-button" data-tab="complexes">Complexes</button><button type="button" class="tab-button" data-tab="proteins">Components</button><button type="button" class="tab-button" data-tab="rnaFeatures">RNA Features</button><button type="button" class="tab-button" data-tab="documentation">Methods</button><button type="button" class="tab-button" data-tab="help">Help</button></div></div>
+      <div class="tabs" id="tabs"><button type="button" class="tab-button active" data-tab="structures">Structure atlas</button><details class="nav-section"><summary>Analysis tools</summary><div class="tab-group" aria-label="Analysis tools"><button type="button" class="tab-button" data-tab="proximity">Residue proximity</button><button type="button" class="tab-button" data-tab="localCopy">Offline copy</button></div></details><details class="nav-section"><summary>Reference guide</summary><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="cycleStates">Splicing states</button><button type="button" class="tab-button" data-tab="rnaElements">RNA elements</button><button type="button" class="tab-button" data-tab="complexes">Protein complexes</button><button type="button" class="tab-button" data-tab="proteins">Components and colors</button><button type="button" class="tab-button" data-tab="rnaFeatures">RNA feature definitions</button><button type="button" class="tab-button" data-tab="documentation">Methods</button><button type="button" class="tab-button" data-tab="help">Help</button></div></details></div>
       <details class="helper-panel">
         <summary>ChimeraX helper setup</summary>
         <div class="field"><label for="helperSource">Helper scripts</label><select id="helperSource"><option value="github">Load helpers from GitHub</option><option value="local">Use local cloned repo</option></select></div>
@@ -294,7 +318,7 @@
     </aside>
     <main>
       <div class="topbar">
-        <div class="hero-copy"><div class="eyebrow">Public spliceosome structure atlas</div><h1>Deposited spliceosome structures, one color code, ready for ChimeraX.</h1><div class="subtle" id="resultSubtitle"></div></div>
+        <div class="hero-copy"><div class="eyebrow">Public spliceosome structure atlas</div><h1>Spliceosome structure atlas</h1><div class="subtle" id="resultSubtitle"></div></div>
       </div>
       <div id="structuresView">
         <section class="stats" id="stats"></section>
@@ -302,7 +326,7 @@
           <div class="panel cycle-panel"><div class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></div><div class="panel-body"><div class="cycle" id="cycle"></div></div></div>
           <div class="panel selected-panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
         </section>
-        <section class="panel active-filter-panel"><div class="panel-body"><strong>Active filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span></div></section>
+        <section class="panel active-filter-panel" id="activeFilterPanel" hidden><div class="panel-body"><strong>Filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
         <details class="panel compact-filter-panel"><summary class="panel-head"><h2>Advanced RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></summary><div class="panel-body"><div class="rna-feature-picker">
           <div class="field"><label for="rnaFeatureQuickSearch">Search Or Choose RNA Feature</label><input id="rnaFeatureQuickSearch" type="search" placeholder="5SS, branch, exon, U6"></div>
           <div class="subtle">Matching feature filters appear below; click one to apply it.</div>
@@ -394,7 +418,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     let rnaFeatureConsistency = [];
     const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null };
     const els = {};
-    for (const id of ["search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
+    for (const id of ["search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U2 snRNP","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const NODE_POS = [[280,100],[130,250],[205,410],[400,292],[365,535],[540,535],[705,515],[850,465],[990,390],[1110,295],[1190,190],[1150,92],[880,100],[735,100],[590,100]];
@@ -572,8 +596,9 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       if(state.cyclePdbIds.length) chips.push(["cyclePdb", `Cycle: ${state.cyclePdbLabel || state.cyclePdbIds.map(id=>id.toUpperCase()).join(", ")}`]);
       if(state.species!=="all") chips.push(["species", `Species: ${state.species}`]);
       if(state.rnaFeature!=="all") chips.push(["rnaFeature", `RNA: ${rnaFeatureLabel(state.rnaFeature)}`]);
-      els.activeFilterChips.innerHTML = chips.length ? chips.map(([key,label])=>`<button type="button" class="filter-chip" data-clear-filter="${attr(key)}" title="Clear this filter">${esc(label)} x</button>`).join("") : '<span class="subtle">No active filters.</span>';
-      if(els.filterHint) els.filterHint.textContent = chips.length ? "Clear individual chips or use Reset to broaden the Structure Set." : "Use search, state, species, or RNA-feature filters to narrow the Structure Set.";
+      if(els.activeFilterPanel) els.activeFilterPanel.hidden = !chips.length;
+      els.activeFilterChips.innerHTML = chips.map(([key,label])=>`<button type="button" class="filter-chip" data-clear-filter="${attr(key)}" title="Clear this filter">${esc(label)} x</button>`).join("");
+      if(els.filterHint) els.filterHint.textContent = chips.length ? "Clear individual chips or clear all to broaden the Structure Set." : "";
       for(const button of els.rnaQuickFilters.querySelectorAll("button[data-rna-feature]")) button.classList.toggle("active", button.dataset.rnaFeature===state.rnaFeature);
     }
     function hasActiveStructureFilters(){
@@ -1085,7 +1110,8 @@ ${await scriptFor(record,"no_maps")}
     }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
-      return `<div class="molstar-panel"><div class="molstar-toolbar"><button type="button" onclick="loadMolstarForSelected(this)" title="Reload this deposited PDB entry in the embedded PDBe Mol* viewer and apply SpliceVis chain colors.">Reload 3D preview</button><button type="button" onclick="applyMolstarColors()" title="Reapply SpliceVis color selections to the current Mol* view.">Reapply colors</button><span class="molstar-status" id="molstarStatus">${count ? `Clicking a structure row loads the 3D preview automatically. ${count} chain-color selections available.` : "Clicking a structure row loads the 3D preview automatically. No chain-color selections are available for this entry."}</span></div>${molstarFeatureBrowser(r)}<div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-legend">${molstarLegend(r)}</div></div>`;
+      const legend = molstarLegend(r);
+      return `<div class="molstar-panel"><div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div><details class="molstar-options"><summary>RNA feature selections</summary><div class="molstar-options-body">${molstarFeatureBrowser(r)}</div></details>${legend ? `<details class="molstar-options"><summary>Color legend</summary><div class="molstar-options-body"><div class="molstar-legend">${legend}</div></div></details>` : ""}</div>`;
     }
     function pdbeMolstarReady(){
       return Boolean(customElements.get("pdbe-molstar"));
