@@ -74,20 +74,6 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "pdb_7DVQ_Sm_ring",
-      "label": "Sm ring",
-      "category": "subcomplex",
-      "section": "Named selections for systematic-chain subcomplexes.",
-      "comment": "Sm ring",
-      "atomspec": "#383.1/SA,SB,SC,SD,SE,SF,SG",
-      "family": "Protein/RNP groups",
-      "group": "other protein/RNP groups",
-      "group_key": "",
-      "kind": "subcomplex",
-      "feature": "",
-      "color": "#9CA3AF"
-    },
-    {
       "name": "pdb_7DVQ_U11_U12_snRNP",
       "label": "U11/U12 snRNP",
       "category": "subcomplex",
@@ -100,6 +86,20 @@
       "kind": "subcomplex",
       "feature": "",
       "color": "#B66AAE"
+    },
+    {
+      "name": "pdb_7DVQ_U2_Sm_ring",
+      "label": "U2 Sm ring",
+      "category": "subcomplex",
+      "section": "Named selections for systematic-chain subcomplexes.",
+      "comment": "U2 Sm ring",
+      "atomspec": "#383.1/2S1,2S2,2S3,2SB,2SE,2SF,2SG",
+      "family": "Protein/RNP groups",
+      "group": "U2/SF3B groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#BFE6BF"
     },
     {
       "name": "pdb_7DVQ_U2_SF3B",

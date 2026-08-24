@@ -268,9 +268,9 @@ name P_9DTR_intron #423.1/I:1-16,56-77,86-95
 # intron lariat: residues 1-16;56-77;86-95, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron_lariat","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_9DTR_intron_lariat #423.1/I:1-16,56-77,86-95
-# branch point region: residues 56-77; 62-72, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 56-77, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9DTR_branch_region #423.1/I:56-77|#423.1/I:62-72
+name P_9DTR_branch_region #423.1/I:56-77
 # branch point adenosine: residues 70, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_9DTR_branch_A #423.1/I:70
@@ -330,7 +330,7 @@ select clear
 # 5'SS: residues 1-6
 # intron: residues 1-16;56-77;86-95
 # lariat: residues 1-16;56-77;86-95
-# BP region: residues 56-77; 62-72
+# BP region: residues 56-77
 # BP-A: residues 70
 # 3'SS: residues 93-95
 # U2/U6 helix I: residues 26-30

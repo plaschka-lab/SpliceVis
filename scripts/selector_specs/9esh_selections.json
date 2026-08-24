@@ -200,7 +200,7 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "B_9ESH_5exon",
+      "name": "BstarD_complex_9ESH_5exon",
       "label": "5' exon",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
@@ -218,7 +218,7 @@
       "label_default_visible": "true"
     },
     {
-      "name": "B_9ESH_substrate",
+      "name": "BstarD_complex_9ESH_substrate",
       "label": "substrate RNA",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
@@ -232,11 +232,11 @@
       "color": "#303030"
     },
     {
-      "name": "B_9ESH_5SS",
+      "name": "BstarD_complex_9ESH_5SS",
       "label": "5' splice site",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
-      "comment": "5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated",
+      "comment": "5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation",
       "atomspec": "#394.1/1:1-6",
       "family": "RNA",
       "group": "pre-mRNA features",
@@ -250,7 +250,7 @@
       "label_default_visible": "true"
     },
     {
-      "name": "B_9ESH_intron",
+      "name": "BstarD_complex_9ESH_intron",
       "label": "intron from 5' splice site",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",

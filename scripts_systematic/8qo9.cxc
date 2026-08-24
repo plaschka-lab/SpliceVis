@@ -316,9 +316,9 @@ name B_8QO9_5SS #363.1/M:59-64
 # intron: residues 59-79;144-158, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8QO9_intron #363.1/M:59-79,144-158
-# branch point region: residues 144-158; 150-158, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 144-158, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_8QO9_branch_region #363.1/M:144-158|#363.1/M:150-158
+name B_8QO9_branch_region #363.1/M:144-158
 # branch point adenosine: residues 156, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8QO9_branch_A #363.1/M:156
@@ -388,7 +388,7 @@ nucleotides sel fill
 select clear
 # 5'SS: residues 59-64
 # intron: residues 59-79;144-158
-# BP region: residues 144-158; 150-158
+# BP region: residues 144-158
 # BP-A: residues 156
 # U2/U6 helix I: residues 29-30
 color #363.1/2:29-30 #047857

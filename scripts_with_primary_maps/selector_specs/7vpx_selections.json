@@ -102,7 +102,7 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "E_complex_7VPX_substrate",
+      "name": "A_complex_7VPX_substrate",
       "label": "substrate RNA",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
@@ -116,7 +116,7 @@
       "color": "#303030"
     },
     {
-      "name": "E_complex_7VPX_branch_region",
+      "name": "A_complex_7VPX_branch_region",
       "label": "branch point region",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
@@ -134,7 +134,7 @@
       "label_default_visible": "true"
     },
     {
-      "name": "E_complex_7VPX_5exon",
+      "name": "A_complex_7VPX_5exon",
       "label": "5' exon",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
@@ -152,7 +152,7 @@
       "label_default_visible": "true"
     },
     {
-      "name": "E_complex_7VPX_5SS",
+      "name": "A_complex_7VPX_5SS",
       "label": "5' splice site",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
@@ -170,7 +170,7 @@
       "label_default_visible": "true"
     },
     {
-      "name": "E_complex_7VPX_intron",
+      "name": "A_complex_7VPX_intron",
       "label": "intron from 5' splice site",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",

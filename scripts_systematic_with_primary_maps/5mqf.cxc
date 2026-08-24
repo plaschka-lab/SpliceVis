@@ -258,9 +258,9 @@ name Cstar_5MQF_5SS #411.1/IA:59-64
 # intron: residues 59-67;135-157, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_5MQF_intron #411.1/IA:59-67,135-157
-# branch point region: residues 135-157; 150-156, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 135-157, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_5MQF_branch_region #411.1/IA:135-157|#411.1/IA:150-156
+name Cstar_5MQF_branch_region #411.1/IA:135-157
 # branch point adenosine: residues 155, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_5MQF_branch_A #411.1/IA:155
@@ -307,7 +307,7 @@ nucleotides sel atoms
 select clear
 # 5'SS: residues 59-64
 # intron: residues 59-67;135-157
-# BP region: residues 135-157; 150-156
+# BP region: residues 135-157
 # BP-A: residues 155
 # 5' exon: residues 47-58
 color #411.1/IB:47-58 #FF8C00

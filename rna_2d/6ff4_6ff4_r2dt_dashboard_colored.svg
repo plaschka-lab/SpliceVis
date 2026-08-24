@@ -622,17 +622,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1694.8" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1709.9" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1725.0" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1558.8" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1573.9" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1589.0" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1604.1" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1619.3" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1634.4" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1649.5" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1664.6" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1679.7" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1694.8" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1709.9" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1679.7" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <text x="1015.0" y="988.7" class="base" fill="#303030"><title>/Z seq 233 auth 233</title>C</text>
 <text x="1030.1" y="988.7" class="base" fill="#303030"><title>/Z seq 234 auth 234</title>G</text>
@@ -693,10 +682,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1247.3" y="1009.0" class="feature-label" text-anchor="start" fill="#303030">5&#x27;SS nt 243-248</text>
 <path d="M1596.6,988.7 L1555.0,964.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1555.0" y="964.7" class="feature-label" text-anchor="end" fill="#303030">BP region nt 380-397</text>
-<path d="M1634.4,988.7 L1592.8,1012.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1592.8" y="1012.7" class="feature-label" text-anchor="end" fill="#303030">BP region nt 386-396</text>
-<path d="M1679.7,988.7 L1659.4,945.2" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1659.4" y="945.2" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 394</text>
+<path d="M1679.7,988.7 L1638.1,1012.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
+<text x="1638.1" y="1012.7" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 394</text>
 <path d="M176.8,387.9 Q484.4,342.9 791.9,1027.8" class="inter" stroke-width="2.9"><title>2:3-11 to 6:87-95; 8 FR3D interactions; cWW</title></path>
 <path d="M373.6,387.9 Q469.9,342.9 566.2,1027.8" class="inter" stroke-width="1.8"><title>2:20-22 to 6:53-55; 3 FR3D interactions; cWW</title></path>
 <path d="M449.6,387.9 Q487.8,342.9 526.0,1027.8" class="inter" stroke-width="2.0"><title>2:25-28 to 6:49-52; 4 FR3D interactions; cWW</title></path>

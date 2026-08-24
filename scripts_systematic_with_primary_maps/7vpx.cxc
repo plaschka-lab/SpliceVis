@@ -217,19 +217,19 @@ name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,XA,XA0,XA1,XA2,XA3,XA4,XA5
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues -1-8; 27-41, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7VPX_substrate #327.1/MA:27-41|#327.1/MB:-1-8
+name A_complex_7VPX_substrate #327.1/MA:27-41|#327.1/MB:-1-8
 # branch point region: residues 27-41, five-ss-inference; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7VPX_branch_region #327.1/MA:27-41
+name A_complex_7VPX_branch_region #327.1/MA:27-41
 # 5' exon: residues -1-0, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7VPX_5exon #327.1/MB:-1-0
+name A_complex_7VPX_5exon #327.1/MB:-1-0
 # 5' splice site: residues 1-6, component-name; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7VPX_5SS #327.1/MB:1-6
+name A_complex_7VPX_5SS #327.1/MB:1-6
 # intron from 5' splice site: residues 1-8, five-ss-inference, low confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_7VPX_intron #327.1/MB:1-8
+name A_complex_7VPX_intron #327.1/MB:1-8
 # Named selections for resolved snRNA functional regions.
 # U1 snRNA 5' splice-site recognition region: residues 1-10, review-region, medium confidence
 # selector_meta {"color":"#B66AAE","family":"RNA","feature":"U1_5prime_5SS_recognition","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}

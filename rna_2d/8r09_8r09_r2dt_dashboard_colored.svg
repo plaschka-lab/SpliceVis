@@ -914,15 +914,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="733.6" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="784.3" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="835.0" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="429.3" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="480.0" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="530.7" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="581.4" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="632.1" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="682.9" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="733.6" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="784.3" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="835.0" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="733.6" cy="1613.0" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <text x="125.0" y="1613.0" class="base" fill="#303030"><title>/Z seq 166 auth 29</title>G</text>
 <text x="175.7" y="1613.0" class="base" fill="#303030"><title>/Z seq 167 auth 30</title>A</text>
@@ -943,8 +934,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="845.0" y="1601.0" class="small" fill="#94a3b8">180</text>
 <path d="M480.0,1613.0 L459.7,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="459.7" y="1569.5" class="feature-label" text-anchor="end" fill="#303030">BP region nt 29-43</text>
-<path d="M632.1,1613.0 L611.9,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="611.9" y="1569.5" class="feature-label" text-anchor="end" fill="#303030">BP region nt 35-43</text>
 <path d="M733.6,1613.0 L713.3,1569.5" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="713.3" y="1569.5" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 41</text>
 <rect x="960.0" y="1342.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
