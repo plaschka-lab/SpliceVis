@@ -15,7 +15,7 @@ open 8y6o id 342.1 name 8Y6O
 # Rename 8Y6O chains to systematic project IDs.
 # Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
 changechains #342.1 A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046 log false
-changechains #342.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046 M,5,5A,5C,5B,5E,5D,X8,6A,4AT,6AT,4C,4BA,4A,4D,11,4BB,XV,5H,6C,RC,XAJ,XJ,XM,XAV,5SB,5S1,5S2,5S3,5SE,5SF,5SG,SAA,SBA,SCA,SDA,SEA,SFA,SGA,SAB,SBB,SCB,SDB,SEB,SFB,SGB log false
+changechains #342.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046 M,5,5A,5C,5B,5E,5D,X8,6A,4AT,6AT,4C,4BA,4A,4D,11,4BB,XV,5H,6C,RC,XAJ,XJ,XM,XAV,5SB,5S1,5S2,5S3,5SE,5SF,5SG,4SB,4S1,4S2,4S3,4SE,4SF,4SG,1SB,1S1,1S2,1S3,1SE,1SF,1SG log false
 open emdb:38993 id 342.3.1 name pre_B_8y6o_EMD-38993_primary_map
 rename #342 pre_B_8y6o_structure
 
@@ -68,46 +68,46 @@ color #342.1/X8 #B3A389
 color #342.1/6A #CA9982
 # U5 Sm ring: U5-Sm SNRPB
 color #342.1/5SB #B0C4DE
-# Sm ring: SNRPB
-color #342.1/SAA #B0C4DE
-# Sm ring: SNRPB
-color #342.1/SAB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPB
+color #342.1/4SB #F7F0A6
+# U1 Sm ring: U1-Sm SNRPB
+color #342.1/1SB #EAD7E8
 # U5 Sm ring: U5-Sm SNRPD1
 color #342.1/5S1 #B0C4DE
-# Sm ring: SNRPD1
-color #342.1/SBA #B0C4DE
-# Sm ring: SNRPD1
-color #342.1/SBB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPD1
+color #342.1/4S1 #F7F0A6
+# U1 Sm ring: U1-Sm SNRPD1
+color #342.1/1S1 #EAD7E8
 # U5 Sm ring: U5-Sm SNRPD2
 color #342.1/5S2 #B0C4DE
-# Sm ring: SNRPD2
-color #342.1/SCA #B0C4DE
-# Sm ring: SNRPD2
-color #342.1/SCB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPD2
+color #342.1/4S2 #F7F0A6
+# U1 Sm ring: U1-Sm SNRPD2
+color #342.1/1S2 #EAD7E8
 # U5 Sm ring: U5-Sm SNRPD3
 color #342.1/5S3 #B0C4DE
-# Sm ring: SNRPD3
-color #342.1/SDA #B0C4DE
-# Sm ring: SNRPD3
-color #342.1/SDB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPD3
+color #342.1/4S3 #F7F0A6
+# U1 Sm ring: U1-Sm SNRPD3
+color #342.1/1S3 #EAD7E8
 # U5 Sm ring: U5-Sm SNRPE
 color #342.1/5SE #B0C4DE
-# Sm ring: SNRPE
-color #342.1/SEA #B0C4DE
-# Sm ring: SNRPE
-color #342.1/SEB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPE
+color #342.1/4SE #F7F0A6
+# U1 Sm ring: U1-Sm SNRPE
+color #342.1/1SE #EAD7E8
 # U5 Sm ring: U5-Sm SNRPF
 color #342.1/5SF #B0C4DE
-# Sm ring: SNRPF
-color #342.1/SFA #B0C4DE
-# Sm ring: SNRPF
-color #342.1/SFB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPF
+color #342.1/4SF #F7F0A6
+# U1 Sm ring: U1-Sm SNRPF
+color #342.1/1SF #EAD7E8
 # U5 Sm ring: U5-Sm SNRPG
 color #342.1/5SG #B0C4DE
-# Sm ring: SNRPG
-color #342.1/SGA #B0C4DE
-# Sm ring: SNRPG
-color #342.1/SGB #B0C4DE
+# U4 Sm ring: U4-Sm SNRPG
+color #342.1/4SG #F7F0A6
+# U1 Sm ring: U1-Sm SNRPG
+color #342.1/1SG #EAD7E8
 # U4atac/U6atac snRNP: U4atac snRNA
 color #342.1/4AT #F2D94E
 # U4atac/U6atac snRNP: U6atac snRNA
@@ -147,12 +147,15 @@ name pdb_8Y6O_RNA_binding #342.1/RC
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
 name pdb_8Y6O_RNA_substrate #342.1/M
-# Sm ring
-# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8Y6O_Sm_ring #342.1/SAA,SAB,SBA,SBB,SCA,SCB,SDA,SDB,SEA,SEB,SFA,SFB,SGA,SGB
+# U1 Sm ring
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_8Y6O_U1_Sm_ring #342.1/1S1,1S2,1S3,1SB,1SE,1SF,1SG
 # U11/U12 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
 name pdb_8Y6O_U11_U12_snRNP #342.1/11
+# U4 Sm ring
+# selector_meta {"color":"#F5E85A","family":"Protein/RNP groups","group":"U4 snRNP groups","kind":"subcomplex"}
+name pdb_8Y6O_U4_Sm_ring #342.1/4S1,4S2,4S3,4SB,4SE,4SF,4SG
 # U4/U6 snRNP
 # selector_meta {"color":"#C3BA7A","family":"Protein/RNP groups","group":"U4/U6 groups","kind":"subcomplex"}
 name pdb_8Y6O_U4_U6_snRNP #342.1/4A,4BA,4BB,4C,4D,6A,6C

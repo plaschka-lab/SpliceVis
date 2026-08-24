@@ -58,32 +58,32 @@ color #341.1/6 #375A40
 color #341.1/7 #92BB8F
 # U12 snRNA
 color #341.1/H #71C562
-# SNRPD3
-color #341.1/h #B0C4DE
-# SNRPB
-color #341.1/i #B0C4DE
-# SNRPD1
-color #341.1/j #B0C4DE
-# SNRPD2
-color #341.1/k #B0C4DE
-# SNRPE
-color #341.1/l #B0C4DE
-# SNRPF
-color #341.1/m #B0C4DE
-# SNRPG
-color #341.1/n #B0C4DE
+# U2-Sm SNRPD3
+color #341.1/h #D5F5E3
+# U2-Sm SNRPB
+color #341.1/i #D5F5E3
+# U2-Sm SNRPD1
+color #341.1/j #D5F5E3
+# U2-Sm SNRPD2
+color #341.1/k #D5F5E3
+# U2-Sm SNRPE
+color #341.1/l #D5F5E3
+# U2-Sm SNRPF
+color #341.1/m #D5F5E3
+# U2-Sm SNRPG
+color #341.1/n #D5F5E3
 # SCNM1
 color #341.1/v #A0916A
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
 name pdb_8Y7E_RNA_substrate #341.1/A
-# Sm ring
-# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8Y7E_Sm_ring #341.1/h,i,j,k,l,m,n
 # U11/U12 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
 name pdb_8Y7E_U11_U12_snRNP #341.1/H
+# U2 Sm ring
+# selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
+name pdb_8Y7E_U2_Sm_ring #341.1/h,i,j,k,l,m,n
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
 name pdb_8Y7E_U2_SF3B #341.1/1,2,3,4,5,6,7

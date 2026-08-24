@@ -15,7 +15,7 @@ open 8y7e id 341.1 name 8Y7E
 # Rename 8Y7E chains to systematic project IDs.
 # Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
 changechains #341.1 1,2,3,4,5,6,7,A,H,h,i,j,k,l,m,n,v TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017 log false
-changechains #341.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017 2A,2B,2C,2D,2F,2G,2E,M,12,SD,SA,SB,SC,SE,SF,SG,XA8 log false
+changechains #341.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017 2A,2B,2C,2D,2F,2G,2E,M,12,2S3,2SB,2S1,2S2,2SE,2SF,2SG,XA8 log false
 open emdb:39013 id 341.3.1 name pre_B_8y7e_EMD-39013_primary_map
 rename #341 pre_B_8y7e_structure
 
@@ -66,32 +66,32 @@ color #341.1/2G #375A40
 color #341.1/2E #92BB8F
 # U11/U12 snRNP: U12 snRNA
 color #341.1/12 #71C562
-# Sm ring: SNRPD3
-color #341.1/SD #B0C4DE
-# Sm ring: SNRPB
-color #341.1/SA #B0C4DE
-# Sm ring: SNRPD1
-color #341.1/SB #B0C4DE
-# Sm ring: SNRPD2
-color #341.1/SC #B0C4DE
-# Sm ring: SNRPE
-color #341.1/SE #B0C4DE
-# Sm ring: SNRPF
-color #341.1/SF #B0C4DE
-# Sm ring: SNRPG
-color #341.1/SG #B0C4DE
+# U2 Sm ring: U2-Sm SNRPD3
+color #341.1/2S3 #D5F5E3
+# U2 Sm ring: U2-Sm SNRPB
+color #341.1/2SB #D5F5E3
+# U2 Sm ring: U2-Sm SNRPD1
+color #341.1/2S1 #D5F5E3
+# U2 Sm ring: U2-Sm SNRPD2
+color #341.1/2S2 #D5F5E3
+# U2 Sm ring: U2-Sm SNRPE
+color #341.1/2SE #D5F5E3
+# U2 Sm ring: U2-Sm SNRPF
+color #341.1/2SF #D5F5E3
+# U2 Sm ring: U2-Sm SNRPG
+color #341.1/2SG #D5F5E3
 # other: SCNM1
 color #341.1/XA8 #A0916A
 # Named selections for systematic-chain subcomplexes.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
 name pdb_8Y7E_RNA_substrate #341.1/M
-# Sm ring
-# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8Y7E_Sm_ring #341.1/SA,SB,SC,SD,SE,SF,SG
 # U11/U12 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
 name pdb_8Y7E_U11_U12_snRNP #341.1/12
+# U2 Sm ring
+# selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
+name pdb_8Y7E_U2_Sm_ring #341.1/2S1,2S2,2S3,2SB,2SE,2SF,2SG
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
 name pdb_8Y7E_U2_SF3B #341.1/2A,2B,2C,2D,2E,2F,2G

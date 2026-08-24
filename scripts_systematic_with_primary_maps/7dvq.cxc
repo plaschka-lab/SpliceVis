@@ -15,7 +15,7 @@ open 7dvq id 383.1 name 7DVQ
 # Rename 7DVQ chains to systematic project IDs.
 # Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
 changechains #383.1 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,P,R,T,U,V,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,v,x,y,z TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049 log false
-changechains #383.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049 XY,2A,2B,2C,2D,2F,2G,2E,XBI,XAX,5A,5,5C,5B,5E,6AT,M,12,XN,NR,XA,N2,XA7,N5,NW,N3,RB,J5,XBD,XW,XI,5S3,5SB,5S1,5S2,5SE,5SF,5SG,SD,SA,SB,SC,SE,SF,SG,XA8,X5,XAF,X1 log false
+changechains #383.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049 XY,2A,2B,2C,2D,2F,2G,2E,XBI,XAX,5A,5,5C,5B,5E,6AT,M,12,XN,NR,XA,N2,XA7,N5,NW,N3,RB,J5,XBD,XW,XI,5S3,5SB,5S1,5S2,5SE,5SF,5SG,2S3,2SB,2S1,2S2,2SE,2SF,2SG,XA8,X5,XAF,X1 log false
 open emdb:30875 id 383.3.1 name Bact_7dvq_EMD-30875_primary_map
 rename #383 Bact_7dvq_structure
 
@@ -60,32 +60,32 @@ color #383.1/5B #AFEEEE
 color #383.1/5E #E2F3F4
 # U5 Sm ring: U5-Sm SNRPD3
 color #383.1/5S3 #B0C4DE
-# Sm ring: SNRPD3
-color #383.1/SD #B0C4DE
+# U2 Sm ring: U2-Sm SNRPD3
+color #383.1/2S3 #D5F5E3
 # U5 Sm ring: U5-Sm SNRPB
 color #383.1/5SB #B0C4DE
-# Sm ring: SNRPB
-color #383.1/SA #B0C4DE
+# U2 Sm ring: U2-Sm SNRPB
+color #383.1/2SB #D5F5E3
 # U5 Sm ring: U5-Sm SNRPD1
 color #383.1/5S1 #B0C4DE
-# Sm ring: SNRPD1
-color #383.1/SB #B0C4DE
+# U2 Sm ring: U2-Sm SNRPD1
+color #383.1/2S1 #D5F5E3
 # U5 Sm ring: U5-Sm SNRPD2
 color #383.1/5S2 #B0C4DE
-# Sm ring: SNRPD2
-color #383.1/SC #B0C4DE
+# U2 Sm ring: U2-Sm SNRPD2
+color #383.1/2S2 #D5F5E3
 # U5 Sm ring: U5-Sm SNRPF
 color #383.1/5SF #B0C4DE
-# Sm ring: SNRPF
-color #383.1/SF #B0C4DE
+# U2 Sm ring: U2-Sm SNRPF
+color #383.1/2SF #D5F5E3
 # U5 Sm ring: U5-Sm SNRPE
 color #383.1/5SE #B0C4DE
-# Sm ring: SNRPE
-color #383.1/SE #B0C4DE
+# U2 Sm ring: U2-Sm SNRPE
+color #383.1/2SE #D5F5E3
 # U5 Sm ring: U5-Sm SNRPG
 color #383.1/5SG #B0C4DE
-# Sm ring: SNRPG
-color #383.1/SG #B0C4DE
+# U2 Sm ring: U2-Sm SNRPG
+color #383.1/2SG #D5F5E3
 # U4atac/U6atac snRNP: U6atac snRNA
 color #383.1/6AT #EF4444
 # RNA/substrate: mRNA
@@ -162,12 +162,12 @@ name pdb_7DVQ_RNA_substrate #383.1/M
 # SR proteins
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_7DVQ_SR_proteins #383.1/RB
-# Sm ring
-# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_7DVQ_Sm_ring #383.1/SA,SB,SC,SD,SE,SF,SG
 # U11/U12 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
 name pdb_7DVQ_U11_U12_snRNP #383.1/12
+# U2 Sm ring
+# selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
+name pdb_7DVQ_U2_Sm_ring #383.1/2S1,2S2,2S3,2SB,2SE,2SF,2SG
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
 name pdb_7DVQ_U2_SF3B #383.1/2A,2B,2C,2D,2E,2F,2G
