@@ -82,21 +82,28 @@
     .doc-methods { grid-column:1 / -1; }
     .thumbnail-img { display:block; width:100%; max-width:360px; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .molstar-panel { display:grid; gap:10px; }
+    .molstar-workbench { display:grid; grid-template-columns:minmax(430px,1fr) minmax(250px,320px); gap:10px; align-items:stretch; }
     .molstar-toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .molstar-status { color:var(--muted); font-size:12px; }
     .molstar-viewer { width:100%; height:clamp(420px,44vh,680px); min-height:420px; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; position:relative; }
     .molstar-viewer:empty::before { content:"Select a structure to load the interactive model."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
-    .molstar-selection-rail { display:grid; gap:6px; padding-top:2px; }
-    .molstar-selection-rail .rail-label { color:var(--muted); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0; }
-    .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
+    .molstar-selection-sidebar { display:grid; align-content:start; gap:10px; min-width:0; max-height:clamp(420px,44vh,680px); overflow:auto; }
+    .molstar-selection-tabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
+    .molstar-selection-tab { min-height:30px; justify-content:center; border-radius:999px; font-size:12px; }
+    .molstar-selection-tab.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:800; }
+    .molstar-selection-section { border:1px solid var(--line); border-radius:8px; background:#fff; padding:8px; }
+    .molstar-selection-sidebar[data-active-selection="rna"] [data-molstar-section="protein"], .molstar-selection-sidebar[data-active-selection="protein"] [data-molstar-section="rna"] { display:none; }
+    .molstar-selection-section h3 { margin:0 0 6px; color:var(--ink); font-size:12px; font-weight:820; }
+    .molstar-selection-section .section-note { margin:0 0 8px; color:var(--muted); font-size:11px; line-height:1.25; }
+    .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:220px; overflow:auto; }
     .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; color:var(--ink); font-size:12px; max-width:180px; min-height:24px; }
     .molstar-legend-chip:hover, .molstar-legend-chip.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; }
     .molstar-legend-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .molstar-inline-features { min-width:0; }
-    .molstar-feature-box { border:1px solid var(--line); border-radius:7px; background:#fff; padding:8px; }
-    .molstar-feature-controls { display:grid; grid-template-columns:minmax(130px,.8fr) minmax(160px,1fr) auto; gap:8px; align-items:end; margin-bottom:8px; }
-    .molstar-feature-controls .field { margin:0; min-width:170px; flex:1 1 180px; }
-    .molstar-feature-list { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
+    .molstar-feature-box { display:grid; gap:8px; }
+    .molstar-feature-controls { display:grid; grid-template-columns:1fr; gap:8px; align-items:end; margin-bottom:0; }
+    .molstar-feature-controls .field { margin:0; min-width:0; }
+    .molstar-feature-controls button { width:100%; justify-content:center; }
+    .molstar-feature-list { display:flex; flex-wrap:wrap; gap:6px; max-height:220px; overflow:auto; }
     .molstar-feature-button { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); min-height:28px; padding:4px 9px; font-size:12px; max-width:270px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .molstar-feature-button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:700; }
     .molstar-feature-button .component-swatch { margin-right:5px; }
@@ -290,6 +297,8 @@
     .selected-panel .actions button, .selected-panel .actions a { justify-content:center; border-radius:7px; }
     .selected-panel .actions a.report-link { grid-column:1 / -1; }
     .selected-panel .molstar-viewer { height:clamp(500px,56vh,760px); min-height:500px; }
+    .selected-panel .molstar-selection-sidebar { max-height:clamp(500px,56vh,760px); }
+    .selected-panel .molstar-feature-list, .selected-panel .molstar-legend { max-height:330px; }
     .selected-panel .molstar-toolbar { align-items:center; padding-top:2px; }
     .selected-panel details.detail-section { border:0; border-radius:0; background:transparent; margin-top:8px; }
     .selected-panel details.detail-section > summary { display:flex; align-items:center; justify-content:space-between; list-style:none; min-height:36px; padding:8px 0; border-top:1px solid #e1e6ec; color:var(--muted); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0; }
@@ -327,6 +336,7 @@
     .compact-filter-panel { display:none; }
     @media (max-width:1300px) { .app { grid-template-columns:1fr; } aside { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line); } .filter-panel { grid-template-columns:1fr; } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .atlas-grid, .hero-copy { grid-template-columns:1fr; } .structure-browser, .selected-panel { position:static; } .cycle-panel .panel-body { min-height:0; } }
     @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
+    @media (max-width:900px) { .molstar-workbench { grid-template-columns:1fr; } .molstar-selection-sidebar { max-height:none; } }
     @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open], .tabs, .cycle-panel .panel-body { grid-template-columns:1fr; } .cycle-context { border-left:0; border-top:1px solid #e1e6ec; padding-left:0; padding-top:10px; } .hero-copy h1 { font-size:25px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
     </style>
 </head>
@@ -1182,9 +1192,22 @@ ${await scriptFor(record,"no_maps")}
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
       const legend = molstarLegend(r);
-      const features = (r.molstar_feature_selections || []).length ? `<div class="molstar-inline-features">${molstarFeatureBrowser(r)}</div>` : "";
-      const legendBlock = legend ? `<div class="molstar-selection-rail"><div class="rail-label">Click component to focus</div><div class="molstar-legend">${legend}</div></div>` : "";
-      return `<div class="molstar-panel">${features}<div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${legendBlock}</div>`;
+      const hasFeatures = Boolean((r.molstar_feature_selections || []).length);
+      const hasLegend = Boolean(legend);
+      const activeSelection = hasFeatures ? "rna" : "protein";
+      const tabs = hasFeatures && hasLegend ? `<div class="molstar-selection-tabs"><button type="button" class="molstar-selection-tab active" data-selection-tab="rna" onclick="switchMolstarSelectionTab('rna')">RNA elements</button><button type="button" class="molstar-selection-tab" data-selection-tab="protein" onclick="switchMolstarSelectionTab('protein')">Protein colors</button></div>` : "";
+      const features = hasFeatures ? `<section class="molstar-selection-section" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
+      const legendBlock = hasLegend ? `<section class="molstar-selection-section" data-molstar-section="protein"><h3>Protein color legend</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><div class="molstar-legend">${legend}</div></section>` : "";
+      const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar" data-active-selection="${attr(activeSelection)}">${tabs}${features}${legendBlock}</aside>` : "";
+      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div></div>`;
+    }
+    function switchMolstarSelectionTab(tab){
+      const value = tab === "protein" ? "protein" : "rna";
+      const sidebar = document.querySelector(".molstar-selection-sidebar");
+      if(!sidebar) return;
+      sidebar.dataset.activeSelection = value;
+      for(const button of sidebar.querySelectorAll("[data-selection-tab]")) button.classList.toggle("active", button.dataset.selectionTab === value);
+      renderMolstarFeatureButtons();
     }
     function pdbeMolstarReady(){
       return Boolean(customElements.get("pdbe-molstar"));
