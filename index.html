@@ -217,9 +217,56 @@
     .active-filter-panel .panel-body { min-height:46px; }
     th { box-shadow:0 1px 0 var(--line); }
     tbody tr { transition:background .12s ease; }
-    @media (max-width:1250px) { .filter-panel { grid-template-columns:minmax(260px,1.4fr) repeat(3,minmax(130px,1fr)); } .reset-button { width:100%; } .topbar, .landing-grid { grid-template-columns:1fr; } .tabs { justify-content:flex-start; } .selected-panel { position:static; } }
+    /* Extreme workbench prototype: cycle-first atlas, not table-first dashboard. */
+    body { background:#eef2f5; }
+    .app { display:grid; grid-template-columns:330px minmax(0,1fr); min-height:100vh; }
+    aside { position:sticky; top:0; height:100vh; max-width:none; margin:0; padding:22px 18px; overflow:auto; border-right:1px solid #d7dee6; background:#f9fafb; box-shadow:8px 0 28px rgba(31,37,45,.05); }
+    main { max-width:none; padding:24px 28px 36px; }
+    .brand-block { display:block; margin:0 0 18px; }
+    .brand-block h1 { font-size:31px; line-height:1; margin-bottom:10px; }
+    .filter-panel { display:grid; grid-template-columns:1fr; gap:12px; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+    .filter-panel input, .filter-panel select { min-height:40px; border-radius:7px; }
+    .reset-button { width:100%; min-height:40px; }
+    .tabs { display:grid; gap:12px; margin:20px 0 12px; justify-content:stretch; }
+    .tab-group { display:grid; grid-template-columns:1fr; gap:6px; align-items:stretch; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
+    .tab-group-label { padding:0; margin:4px 0 0; }
+    .tab-button { display:flex; justify-content:space-between; align-items:center; width:100%; min-height:36px; padding:7px 10px; border-radius:7px; background:#fff; }
+    .tab-button::after { content:""; width:6px; height:6px; border-radius:50%; background:#c8d0d9; }
+    .tab-button.active::after { background:#0b5cab; }
+    .helper-panel { margin-top:16px; padding-top:14px; border-top:1px solid #e1e6ec; }
+    .helper-panel[open] { display:block; padding:14px 0 0; border:0; border-top:1px solid #e1e6ec; border-radius:0; background:transparent; }
+    .topbar { display:block; margin:0 0 16px; }
+    .hero-copy { display:grid; grid-template-columns:minmax(360px,720px) auto; gap:18px; align-items:end; }
+    .hero-copy h1 { font-size:34px; line-height:1.04; max-width:760px; }
+    .stats { grid-template-columns:repeat(4,minmax(120px,1fr)); margin-bottom:16px; }
+    .stat { border-radius:10px; background:#fff; }
+    .landing-grid { display:grid; grid-template-columns:minmax(600px,1.18fr) minmax(500px,.82fr); gap:16px; align-items:start; }
+    .cycle-panel, .selected-panel, .active-filter-panel, .workspace > .panel { border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(31,37,45,.06); }
+    .cycle-panel .panel-body { min-height:700px; padding:18px 22px 22px; }
+    .cycle { overflow:hidden; }
+    .cycle-art { max-width:790px; }
+    .selected-panel { position:sticky; top:24px; }
+    .selected-panel .panel-body { padding:16px; }
+    .selected-panel .detail-meta { margin-top:6px; }
+    .selected-panel .actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:14px 0 10px; }
+    .selected-panel .actions button, .selected-panel .actions a { justify-content:center; border-radius:7px; }
+    .selected-panel .actions a.report-link { grid-column:1 / -1; }
+    .selected-panel .molstar-viewer { height:350px; min-height:350px; }
+    .selected-panel .molstar-toolbar { align-items:center; padding-top:2px; }
+    .selected-panel details.detail-section { border-radius:10px; }
+    .selected-panel details.detail-section:first-of-type { border:0; margin-top:12px; background:transparent; }
+    .selected-panel details.detail-section:first-of-type > summary { display:none; }
+    .selected-panel details.detail-section:first-of-type .detail-section-body { padding:0; }
+    .active-filter-panel { margin-top:16px; }
+    .workspace { margin-top:16px; }
+    .workspace > .panel .panel-head { padding:14px 16px; }
+    .table-wrap { max-height:720px; }
+    table { font-size:12px; }
+    th, td { padding:7px 8px; }
+    .compact-filter-panel { margin-top:16px; }
+    @media (max-width:1300px) { .app { grid-template-columns:1fr; } aside { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line); } .filter-panel { grid-template-columns:minmax(260px,1.4fr) repeat(3,minmax(130px,1fr)); } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .landing-grid, .hero-copy { grid-template-columns:1fr; } .selected-panel { position:static; } .cycle-panel .panel-body { min-height:0; } }
     @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
-    @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open] { grid-template-columns:1fr; } .hero-copy h1 { font-size:24px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
+    @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open], .tabs { grid-template-columns:1fr; } .hero-copy h1 { font-size:25px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
     </style>
 </head>
 <body>
@@ -238,6 +285,7 @@
         <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
         <button class="button reset-button" id="reset" type="button">Reset filters</button>
       </div>
+      <div class="tabs" id="tabs"><div class="tab-group" aria-label="Dashboard tools"><span class="tab-group-label">Explore</span><button type="button" class="tab-button active" data-tab="structures">Structures</button><button type="button" class="tab-button" data-tab="proximity">Proximity</button><button type="button" class="tab-button" data-tab="localCopy">Local Copy</button></div><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="cycleStates">Cycle</button><button type="button" class="tab-button" data-tab="rnaElements">RNA Elements</button><button type="button" class="tab-button" data-tab="complexes">Complexes</button><button type="button" class="tab-button" data-tab="proteins">Components</button><button type="button" class="tab-button" data-tab="rnaFeatures">RNA Features</button><button type="button" class="tab-button" data-tab="documentation">Methods</button><button type="button" class="tab-button" data-tab="help">Help</button></div></div>
       <details class="helper-panel">
         <summary>ChimeraX helper setup</summary>
         <div class="field"><label for="helperSource">Helper scripts</label><select id="helperSource"><option value="github">Load helpers from GitHub</option><option value="local">Use local cloned repo</option></select></div>
@@ -247,7 +295,6 @@
     <main>
       <div class="topbar">
         <div class="hero-copy"><div class="eyebrow">Public spliceosome structure atlas</div><h1>Deposited spliceosome structures, one color code, ready for ChimeraX.</h1><div class="subtle" id="resultSubtitle"></div></div>
-        <div class="tabs" id="tabs"><div class="tab-group" aria-label="Dashboard tools"><span class="tab-group-label">Explore</span><button type="button" class="tab-button active" data-tab="structures">Structures</button><button type="button" class="tab-button" data-tab="proximity">Proximity</button><button type="button" class="tab-button" data-tab="localCopy">Local Copy</button></div><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="cycleStates">Cycle</button><button type="button" class="tab-button" data-tab="rnaElements">RNA Elements</button><button type="button" class="tab-button" data-tab="complexes">Complexes</button><button type="button" class="tab-button" data-tab="proteins">Components</button><button type="button" class="tab-button" data-tab="rnaFeatures">RNA Features</button><button type="button" class="tab-button" data-tab="documentation">Methods</button><button type="button" class="tab-button" data-tab="help">Help</button></div></div>
       </div>
       <div id="structuresView">
         <section class="stats" id="stats"></section>
@@ -1266,7 +1313,7 @@ ${await scriptFor(record,"no_maps")}
       const primaryMapButton = primaryMapAvailable ? `<button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy ChimeraX script with primary map</button>` : "";
       const compositeButtons = (r.composite_groups||[]).map(group => `<button onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')}">Copy split-assembly ChimeraX script: ${esc(group.label || group.composite_id)}</button>`).join("");
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(r.resolution||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script without maps</button>${primaryMapButton}${compositeButtons}${reportIssueLink(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Resources", externalLinks(r), true)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("Components", `<h3>Proteins (${r.protein_count})</h3><div class="mini-list"><div class="chips">${proteins || '<span class="subtle">None listed</span>'}</div></div><h3>RNAs (${r.rna_count})</h3><div class="mini-list"><div class="chips">${rnas || '<span class="subtle">None listed</span>'}</div></div>`)}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(r.resolution||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script without maps</button>${primaryMapButton}${compositeButtons}${reportIssueLink(r)}</div>${detailSection("Resources", externalLinks(r), true)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("Components", `<h3>Proteins (${r.protein_count})</h3><div class="mini-list"><div class="chips">${proteins || '<span class="subtle">None listed</span>'}</div></div><h3>RNAs (${r.rna_count})</h3><div class="mini-list"><div class="chips">${rnas || '<span class="subtle">None listed</span>'}</div></div>`)}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
       renderMolstarFeatureButtons();
       scriptFor(r, "no_maps").then(text => {
         const preview = document.getElementById("scriptPreview");
