@@ -321,6 +321,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     const NODE_POS = [[280,100],[130,250],[205,410],[400,292],[365,535],[540,535],[705,515],[850,465],[990,390],[1110,295],[1190,190],[1150,92],[880,100],[735,100],[590,100]];
     const U = {u1:"#d8a3cf", u2:"#78c96b", u4:"#f2dc4e", u5:"#5da8d7", u6:"#ee5960", ntc:"#f2bd5c", mrna:"#22272d"};
     let molstarLoadPromise = null;
+    let molstarPendingPdbId = "";
     function esc(v){return String(v ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
     function attr(v){return esc(v);}
     function unique(values){return [...new Set(values.filter(Boolean))].sort();}
@@ -575,6 +576,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       renderRows(rows);
       updateSortHeaders();
       renderDetail(records.find(r=>r.pdb_id===state.selected));
+      autoLoadMolstarForSelected();
     }
 
     function updateSortHeaders(){
@@ -1025,6 +1027,7 @@ ${await scriptFor(record,"no_maps")}
       const status = document.getElementById("molstarStatus");
       if(!r || !target) return;
       const requestedPdbId = r.pdb_id;
+      molstarPendingPdbId = requestedPdbId;
       if(status) status.textContent = "Loading PDBe Mol* viewer...";
       if(button) button.disabled = true;
       try{
@@ -1051,11 +1054,16 @@ ${await scriptFor(record,"no_maps")}
         state.molstarPdbId = r.pdb_id;
         await new Promise(resolve=>setTimeout(resolve, 3500));
         if(state.selected !== requestedPdbId) return;
-        await applyMolstarColors();
+        try{
+          await applyMolstarColors();
+        }catch(colorError){
+          if(status) status.textContent = `Loaded ${r.pdb_id.toUpperCase()}, but the SpliceVis color overlay failed: ${colorError.message}`;
+        }
         renderMolstarFeatureButtons();
       }catch(error){
         if(status) status.textContent = `Mol* preview error: ${error.message}`;
       }finally{
+        if(molstarPendingPdbId === requestedPdbId) molstarPendingPdbId = "";
         if(button) button.disabled = false;
       }
     }
@@ -1065,6 +1073,9 @@ ${await scriptFor(record,"no_maps")}
         if(state.selected !== requestedPdbId) return;
         const target = document.getElementById("molstarViewer");
         if(!target) return;
+        if(molstarPendingPdbId === requestedPdbId) return;
+        if(state.molstarPdbId === requestedPdbId && target.querySelector("pdbe-molstar")) return;
+        molstarPendingPdbId = requestedPdbId;
         loadMolstarForSelected();
       }, 0);
     }
