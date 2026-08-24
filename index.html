@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:,">
   <title>Spliceosome Structure Visualization</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pdbe-molstar@latest/build/pdbe-molstar.css">
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdbe-molstar@latest/build/pdbe-molstar-component.js"></script>
   <style>
     :root { color-scheme: light; --bg:#f5f7f9; --panel:#fff; --ink:#20242a; --muted:#68717b; --line:#d9dee6; --focus:#0b5cab; --good:#13795b; }
     * { box-sizing: border-box; }
@@ -32,6 +36,12 @@
     .tab-group { display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:8px; border:1px solid var(--line); border-radius:8px; background:#f8fafc; }
     .tab-group-label { font-size:11px; font-weight:750; color:var(--muted); text-transform:uppercase; letter-spacing:0; padding:0 4px; }
     .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:14px; }
+    .start-panel .panel-body { display:grid; grid-template-columns:minmax(280px,1.1fr) repeat(2,minmax(220px,.75fr)); gap:14px; align-items:stretch; }
+    .start-card { border:1px solid var(--line); border-radius:8px; background:#fff; padding:13px 14px; min-width:0; }
+    .start-card h3 { margin:0 0 6px; font-size:14px; }
+    .start-card p { margin:0 0 10px; color:#3d444d; font-size:13px; }
+    .start-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .start-actions button { min-height:30px; padding:5px 9px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
     .stat, .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
     .stat { padding:11px 12px; }
     .stat strong { display:block; font-size:20px; }
@@ -70,6 +80,14 @@
     .doc-section ul { margin:8px 0 0; padding-left:18px; }
     .doc-methods { grid-column:1 / -1; }
     .thumbnail-img { display:block; width:100%; max-width:360px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+    .molstar-panel { display:grid; gap:10px; }
+    .molstar-toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .molstar-status { color:var(--muted); font-size:12px; }
+    .molstar-viewer { width:100%; height:520px; min-height:380px; border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; position:relative; }
+    .molstar-viewer:empty::before { content:"Load the interactive preview to rotate the selected structure in the browser."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
+    .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
+    .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; font-size:12px; max-width:180px; }
+    .molstar-legend-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .rna-2d-img { display:block; width:100%; max-height:520px; object-fit:contain; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .table-thumbnail { display:block; width:64px; height:64px; object-fit:contain; border:1px solid var(--line); border-radius:6px; background:#fff; }
     .preview-cell { width:78px; min-width:78px; }
@@ -154,7 +172,7 @@
     .palette-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .systematic-id-row { display:flex; align-items:baseline; gap:6px; margin:1px 0; }
     .systematic-id-row code { min-width:34px; }
-    @media (max-width:1100px) { .app, .workspace { grid-template-columns:1fr; } aside { position:static; height:auto; border-right:0; border-bottom:1px solid var(--line); } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
+    @media (max-width:1100px) { .app, .workspace, .start-panel .panel-body { grid-template-columns:1fr; } aside { position:static; height:auto; border-right:0; border-bottom:1px solid var(--line); } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
     @media (max-width:680px) { main { padding:12px; } .topbar { align-items:start; flex-direction:column; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } }
     </style>
 </head>
@@ -179,6 +197,11 @@
         <div class="tabs" id="tabs"><div class="tab-group" aria-label="Dashboard tools"><span class="tab-group-label">Tools</span><button type="button" class="tab-button active" data-tab="structures">Structures</button><button type="button" class="tab-button" data-tab="proximity">Search Proximity</button><button type="button" class="tab-button" data-tab="localCopy">Local Copy</button></div><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="rnaFeatures">RNA Features</button><button type="button" class="tab-button" data-tab="cycleStates">Cycle States</button><button type="button" class="tab-button" data-tab="rnaElements">RNA Elements</button><button type="button" class="tab-button" data-tab="complexes">Complexes</button><button type="button" class="tab-button" data-tab="proteins">Components & Colors</button><button type="button" class="tab-button" data-tab="documentation">Documentation</button><button type="button" class="tab-button" data-tab="help">Help</button></div></div>
       </div>
       <div id="structuresView">
+        <section class="panel start-panel"><div class="panel-head"><h2>Start Here</h2><span class="subtle">browse, rotate, or open structures in ChimeraX</span></div><div class="panel-body">
+          <div class="start-card"><h3>Find a spliceosome structure</h3><p>Search by PDB, state, species, author, protein, RNA, paper, or annotated RNA feature. Click a pathway state in the cycle cartoon to narrow the table.</p><div class="start-actions"><button type="button" onclick="focusSearch()">Search structures</button><button type="button" onclick="showStartTab('cycleStates')">Read state guide</button></div></div>
+          <div class="start-card"><h3>Rotate in the browser</h3><p>Select a table row, then load the interactive 3D preview. The Mol* view uses the SpliceVis color code for deposited chains.</p><div class="start-actions"><button type="button" onclick="openInteractivePreview()">Show 3D preview</button></div></div>
+          <div class="start-card"><h3>Use ChimeraX</h3><p>Copy model-only or primary-map CXC scripts for aligned, colored structures with named selections, RNA labels, and optional systematic chain IDs.</p><div class="start-actions"><button type="button" onclick="document.querySelector('.actions button')?.focus()">Copy CXC scripts</button><button type="button" onclick="showStartTab('localCopy')">Set up local copy</button></div></div>
+        </div></section>
         <section class="stats" id="stats"></section>
         <section class="panel"><div class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></div><div class="panel-body"><div class="cycle" id="cycle"></div></div></section>
         <section class="panel"><div class="panel-head"><h2>RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></div><div class="panel-body"><div class="rna-feature-picker">
@@ -271,13 +294,14 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     let proteinLookup = [];
     let rnaFeatureDefinitions = [];
     let rnaFeatureConsistency = [];
-    const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [] };
+    const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null };
     const els = {};
     for (const id of ["search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterChips","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U2 snRNP","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const NODE_POS = [[280,100],[130,250],[205,410],[400,292],[365,535],[540,535],[705,515],[850,465],[990,390],[1110,295],[1190,190],[1150,92],[880,100],[735,100],[590,100]];
     const U = {u1:"#d8a3cf", u2:"#78c96b", u4:"#f2dc4e", u5:"#5da8d7", u6:"#ee5960", ntc:"#f2bd5c", mrna:"#22272d"};
+    let molstarLoadPromise = null;
     function esc(v){return String(v ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
     function attr(v){return esc(v);}
     function unique(values){return [...new Set(values.filter(Boolean))].sort();}
@@ -923,6 +947,104 @@ ${await scriptFor(record,"no_maps")}
     function reportIssueLink(r){
       return `<a class="report-link" href="${attr(reportIssueUrl(r))}" target="_blank" rel="noreferrer" title="Open a prefilled GitHub issue for reporting annotation, homolog, RNA-feature, pathway, or coloring errors">Report annotation/coloring error</a>`;
     }
+    function molstarLegend(r){
+      const seen = new Set();
+      return (r.molstar_color_selections||[]).filter(x=>{
+        const key = `${x.label}|${x.color}`;
+        if(seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      }).slice(0,36).map(x=>`<span class="molstar-legend-chip" title="${attr(`${x.label || x.auth_asym_id} ${x.color}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label || x.auth_asym_id)}</span></span>`).join("");
+    }
+    function molstarPanel(r){
+      const count = (r.molstar_color_selections||[]).length;
+      return `<div class="molstar-panel"><div class="molstar-toolbar"><button type="button" onclick="loadMolstarForSelected(this)" title="Load this deposited PDB entry into an embedded PDBe Mol* viewer and apply SpliceVis chain colors.">Load color-coded 3D preview</button><button type="button" onclick="applyMolstarColors()" title="Reapply SpliceVis color selections to the current Mol* view.">Reapply colors</button><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections available.` : "No chain-color selections are available for this entry."}</span></div><div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-legend">${molstarLegend(r)}</div></div>`;
+    }
+    function pdbeMolstarReady(){
+      return Boolean(customElements.get("pdbe-molstar"));
+    }
+    async function waitForMolstarComponent(){
+      if(pdbeMolstarReady()) return;
+      if(!molstarLoadPromise){
+        molstarLoadPromise = new Promise((resolve,reject)=>{
+          const started = Date.now();
+          const timer = setInterval(()=>{
+            if(pdbeMolstarReady()){ clearInterval(timer); resolve(); }
+            else if(Date.now() - started > 15000){ clearInterval(timer); reject(new Error("PDBe Mol* component did not load from the CDN.")); }
+          },100);
+        });
+      }
+      await molstarLoadPromise;
+    }
+    async function loadMolstarForSelected(button){
+      const r = records.find(item=>item.pdb_id===state.selected);
+      const target = document.getElementById("molstarViewer");
+      const status = document.getElementById("molstarStatus");
+      if(!r || !target) return;
+      if(status) status.textContent = "Loading PDBe Mol* viewer...";
+      if(button) button.disabled = true;
+      try{
+        await waitForMolstarComponent();
+        target.innerHTML = "";
+        const viewer = document.createElement("pdbe-molstar");
+        viewer.setAttribute("molecule-id", r.pdb_id.toLowerCase());
+        viewer.setAttribute("assembly-id", "1");
+        viewer.setAttribute("default-preset", "default");
+        viewer.setAttribute("hide-water", "true");
+        viewer.setAttribute("hide-controls", "false");
+        viewer.setAttribute("sequence-panel", "false");
+        viewer.setAttribute("pdbe-link", "");
+        viewer.setAttribute("loading-overlay", "");
+        viewer.setAttribute("subscribe-events", "false");
+        viewer.setAttribute("bg-color-r", "255");
+        viewer.setAttribute("bg-color-g", "255");
+        viewer.setAttribute("bg-color-b", "255");
+        viewer.style.width = "100%";
+        viewer.style.height = "100%";
+        target.appendChild(viewer);
+        state.molstarViewer = viewer;
+        state.molstarPdbId = r.pdb_id;
+        await new Promise(resolve=>setTimeout(resolve, 3500));
+        await applyMolstarColors();
+      }catch(error){
+        if(status) status.textContent = `Mol* preview error: ${error.message}`;
+      }finally{
+        if(button) button.disabled = false;
+      }
+    }
+    async function applyMolstarColors(){
+      const r = records.find(item=>item.pdb_id===state.molstarPdbId || item.pdb_id===state.selected);
+      const status = document.getElementById("molstarStatus");
+      const viewer = state.molstarViewer || document.querySelector("#molstarViewer pdbe-molstar");
+      const instance = viewer && viewer.viewerInstance;
+      const selections = (r && r.molstar_color_selections || []).map(x=>({auth_asym_id:x.auth_asym_id, color:x.color}));
+      if(!instance || !instance.visual){ if(status) status.textContent = "Mol* viewer is not ready yet."; return; }
+      if(!selections.length){ if(status) status.textContent = "No SpliceVis color selections are available for this entry."; return; }
+      await instance.visual.select({data: selections, nonSelectedColor: "#D8DDE4"});
+      if(instance.canvas && instance.canvas.setBgColor) instance.canvas.setBgColor("white");
+      if(status) status.textContent = `Applied ${selections.length} SpliceVis chain colors to ${r.pdb_id.toUpperCase()}.`;
+    }
+    function showStartTab(tab){
+      state.activeTab = tab;
+      for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x.dataset.tab===tab);
+      render();
+      window.scrollTo({top:0, behavior:"smooth"});
+    }
+    function focusSearch(){
+      showStartTab("structures");
+      els.search.focus();
+    }
+    function openInteractivePreview(){
+      showStartTab("structures");
+      for(const section of document.querySelectorAll("details.detail-section")){
+        const summary = section.querySelector("summary");
+        if(summary && summary.textContent.trim() === "Interactive 3D"){
+          section.open = true;
+          section.scrollIntoView({behavior:"smooth", block:"center"});
+          return;
+        }
+      }
+    }
     function renderDetail(r){
       if(!r){ els.detail.innerHTML='<div class="subtle">No structure selected.</div>'; return; }
       els.selectedId.textContent = r.pdb_id.toUpperCase();
@@ -938,7 +1060,7 @@ ${await scriptFor(record,"no_maps")}
       const primaryMapButton = primaryMapAvailable ? `<button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Script with primary map</button>` : "";
       const compositeButtons = (r.composite_groups||[]).map(group => `<button onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')}">Split assembly: ${esc(group.label || group.composite_id)}</button>`).join("");
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(r.resolution||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Script without maps</button>${primaryMapButton}${compositeButtons}${reportIssueLink(r)}</div>${detailSection("Overview", `${thumbnail}<h3>Paper</h3><div>${esc(r.paper_title||"")}</div><div class="subtle">${esc(r.authors_short||"")}${r.doi ? " - DOI " + esc(r.doi) : ""}</div>${abstractBlock}`, true)}${detailSection("Resources", externalLinks(r), true)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("Components", `<h3>Proteins (${r.protein_count})</h3><div class="mini-list"><div class="chips">${proteins || '<span class="subtle">None listed</span>'}</div></div><h3>RNAs (${r.rna_count})</h3><div class="mini-list"><div class="chips">${rnas || '<span class="subtle">None listed</span>'}</div></div>`)}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(r.resolution||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Script without maps</button>${primaryMapButton}${compositeButtons}${reportIssueLink(r)}</div>${detailSection("Overview", `${thumbnail}<h3>Paper</h3><div>${esc(r.paper_title||"")}</div><div class="subtle">${esc(r.authors_short||"")}${r.doi ? " - DOI " + esc(r.doi) : ""}</div>${abstractBlock}`, true)}${detailSection("Interactive 3D", molstarPanel(r), false)}${detailSection("Resources", externalLinks(r), true)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("Components", `<h3>Proteins (${r.protein_count})</h3><div class="mini-list"><div class="chips">${proteins || '<span class="subtle">None listed</span>'}</div></div><h3>RNAs (${r.rna_count})</h3><div class="mini-list"><div class="chips">${rnas || '<span class="subtle">None listed</span>'}</div></div>`)}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
       scriptFor(r, "no_maps").then(text => {
         const preview = document.getElementById("scriptPreview");
         if (preview && state.selected === r.pdb_id) preview.textContent = text;
