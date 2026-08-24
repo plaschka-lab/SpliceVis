@@ -84,7 +84,7 @@
     .molstar-toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .molstar-status { color:var(--muted); font-size:12px; }
     .molstar-viewer { width:100%; height:min(68vh,720px); min-height:500px; border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; position:relative; }
-    .molstar-viewer:empty::before { content:"Load the interactive preview to rotate the selected structure in the browser."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
+    .molstar-viewer:empty::before { content:"The interactive preview loads automatically after selecting a structure row."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
     .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
     .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; font-size:12px; max-width:180px; }
     .molstar-legend-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
@@ -216,7 +216,7 @@
       <div id="structuresView">
         <section class="panel start-panel"><div class="panel-head"><h2>Start Here</h2><span class="subtle">browse, rotate, or open structures in ChimeraX</span></div><div class="panel-body">
           <div class="start-card"><h3>Find a spliceosome structure</h3><p>Search by PDB, state, species, author, protein, RNA, paper, or annotated RNA feature. Click a pathway state in the cycle cartoon to narrow the table.</p><div class="start-actions"><button type="button" onclick="focusSearch()">Search structures</button><button type="button" onclick="showStartTab('cycleStates')">Read state guide</button></div></div>
-          <div class="start-card"><h3>Rotate in the browser</h3><p>Select a table row, then load the interactive 3D preview. The Mol* view uses the SpliceVis color code for deposited chains.</p><div class="start-actions"><button type="button" onclick="openInteractivePreview()">Show 3D preview</button></div></div>
+          <div class="start-card"><h3>Rotate in the browser</h3><p>Click a structure row to load a color-coded interactive Mol* preview automatically. The view uses the SpliceVis color code for deposited chains.</p><div class="start-actions"><button type="button" onclick="openInteractivePreview()">Show selected 3D preview</button></div></div>
           <div class="start-card"><h3>Use ChimeraX</h3><p>Copy model-only or primary-map CXC scripts for aligned, colored structures with named selections, RNA labels, and optional systematic chain IDs.</p><div class="start-actions"><button type="button" onclick="document.querySelector('.actions button')?.focus()">Copy CXC scripts</button><button type="button" onclick="showStartTab('localCopy')">Set up local copy</button></div></div>
         </div></section>
         <section class="stats" id="stats"></section>
@@ -735,6 +735,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
           if (button) { toggleCompare(button.dataset.compare); event.stopPropagation(); return; }
           state.selected = row.dataset.pdb;
           render();
+          autoLoadMolstarForSelected();
         });
       }
     }
@@ -993,7 +994,7 @@ ${await scriptFor(record,"no_maps")}
     }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
-      return `<div class="molstar-panel"><div class="molstar-toolbar"><button type="button" onclick="loadMolstarForSelected(this)" title="Load this deposited PDB entry into an embedded PDBe Mol* viewer and apply SpliceVis chain colors.">Load color-coded 3D preview</button><button type="button" onclick="applyMolstarColors()" title="Reapply SpliceVis color selections to the current Mol* view.">Reapply colors</button><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections available.` : "No chain-color selections are available for this entry."}</span></div>${molstarFeatureBrowser(r)}<div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-legend">${molstarLegend(r)}</div></div>`;
+      return `<div class="molstar-panel"><div class="molstar-toolbar"><button type="button" onclick="loadMolstarForSelected(this)" title="Reload this deposited PDB entry in the embedded PDBe Mol* viewer and apply SpliceVis chain colors.">Reload 3D preview</button><button type="button" onclick="applyMolstarColors()" title="Reapply SpliceVis color selections to the current Mol* view.">Reapply colors</button><span class="molstar-status" id="molstarStatus">${count ? `Clicking a structure row loads the 3D preview automatically. ${count} chain-color selections available.` : "Clicking a structure row loads the 3D preview automatically. No chain-color selections are available for this entry."}</span></div>${molstarFeatureBrowser(r)}<div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-legend">${molstarLegend(r)}</div></div>`;
     }
     function pdbeMolstarReady(){
       return Boolean(customElements.get("pdbe-molstar"));
@@ -1016,10 +1017,12 @@ ${await scriptFor(record,"no_maps")}
       const target = document.getElementById("molstarViewer");
       const status = document.getElementById("molstarStatus");
       if(!r || !target) return;
+      const requestedPdbId = r.pdb_id;
       if(status) status.textContent = "Loading PDBe Mol* viewer...";
       if(button) button.disabled = true;
       try{
         await waitForMolstarComponent();
+        if(state.selected !== requestedPdbId) return;
         target.innerHTML = "";
         const viewer = document.createElement("pdbe-molstar");
         viewer.setAttribute("molecule-id", r.pdb_id.toLowerCase());
@@ -1040,6 +1043,7 @@ ${await scriptFor(record,"no_maps")}
         state.molstarViewer = viewer;
         state.molstarPdbId = r.pdb_id;
         await new Promise(resolve=>setTimeout(resolve, 3500));
+        if(state.selected !== requestedPdbId) return;
         await applyMolstarColors();
         renderMolstarFeatureButtons();
       }catch(error){
@@ -1047,6 +1051,15 @@ ${await scriptFor(record,"no_maps")}
       }finally{
         if(button) button.disabled = false;
       }
+    }
+    function autoLoadMolstarForSelected(){
+      const requestedPdbId = state.selected;
+      window.setTimeout(()=>{
+        if(state.selected !== requestedPdbId) return;
+        const target = document.getElementById("molstarViewer");
+        if(!target) return;
+        loadMolstarForSelected();
+      }, 0);
     }
     async function applyMolstarColors(){
       const r = records.find(item=>item.pdb_id===state.molstarPdbId || item.pdb_id===state.selected);
@@ -1140,6 +1153,7 @@ ${await scriptFor(record,"no_maps")}
         if(summary && summary.textContent.trim() === "Interactive 3D"){
           section.open = true;
           section.scrollIntoView({behavior:"smooth", block:"center"});
+          autoLoadMolstarForSelected();
           return;
         }
       }
