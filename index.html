@@ -134,6 +134,10 @@
     .rna-feature-results { max-height:124px; overflow:auto; padding:2px 0 10px; }
     .rna-feature-result { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); min-height:28px; padding:4px 10px; font:inherit; font-size:12px; cursor:pointer; max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .rna-feature-result.active { background:#eef6ff; border-color:#9fc6ef; color:#0b5cab; font-weight:700; }
+    .compact-filter-panel > summary.panel-head { cursor:pointer; list-style:none; }
+    .compact-filter-panel > summary.panel-head::-webkit-details-marker { display:none; }
+    .compact-filter-panel > summary.panel-head::before { content:"▸"; color:var(--muted); margin-right:4px; }
+    .compact-filter-panel[open] > summary.panel-head::before { content:"▾"; }
     details.detail-section { border:1px solid var(--line); border-radius:8px; background:#fff; margin-top:12px; }
     details.detail-section > summary { cursor:pointer; padding:9px 11px; font-weight:760; color:var(--ink); border-bottom:1px solid transparent; }
     details.detail-section[open] > summary { border-bottom-color:var(--line); }
@@ -211,7 +215,7 @@
         </div></section>
         <section class="stats" id="stats"></section>
         <section class="panel"><div class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></div><div class="panel-body"><div class="cycle" id="cycle"></div></div></section>
-        <section class="panel"><div class="panel-head"><h2>RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></div><div class="panel-body"><div class="rna-feature-picker">
+        <details class="panel compact-filter-panel"><summary class="panel-head"><h2>Advanced RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></summary><div class="panel-body"><div class="rna-feature-picker">
           <div class="field"><label for="rnaFeatureQuickSearch">Search Or Choose RNA Feature</label><input id="rnaFeatureQuickSearch" type="search" placeholder="5SS, branch, exon, U6"></div>
           <div class="subtle">Matching feature filters appear below; click one to apply it.</div>
         </div><div class="rna-feature-results" id="rnaFeatureQuickResults"></div><div class="quick-filters" id="rnaQuickFilters">
@@ -221,7 +225,7 @@
           <button type="button" class="quick-filter" data-rna-feature="feature:ligated_exons">Ligated exons</button>
           <button type="button" class="quick-filter" data-rna-feature="feature:branch_point_adenosine">Branch A</button>
           <button type="button" class="quick-filter" data-rna-feature="feature:U6_ACAGAGA_box">U6 ACAGAGA</button>
-        </div><div class="filter-chips" id="activeFilterChips"></div></div></section>
+        </div><div class="filter-chips" id="activeFilterChips"></div></div></details>
         <section class="workspace">
           <div class="panel"><div class="panel-head"><h2>Structure Set</h2><span class="subtle" id="tableCount"></span></div><div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Resolution</th><th data-sort="year">Year</th><th data-sort="chains">Chain count</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div></div>
           <div class="panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
@@ -1031,12 +1035,28 @@ ${await scriptFor(record,"no_maps")}
       const status = document.getElementById("molstarStatus");
       const viewer = state.molstarViewer || document.querySelector("#molstarViewer pdbe-molstar");
       const instance = viewer && viewer.viewerInstance;
-      const selections = (r && r.molstar_color_selections || []).map(x=>({auth_asym_id:x.auth_asym_id, color:x.color}));
+      const chainSelections = (r && r.molstar_color_selections || []).map(x=>({auth_asym_id:x.auth_asym_id, color:x.color}));
+      const featureSelections = defaultMolstarFeatureSelections(r);
+      const selections = [...chainSelections, ...featureSelections];
       if(!instance || !instance.visual){ if(status) status.textContent = "Mol* viewer is not ready yet."; return; }
       if(!selections.length){ if(status) status.textContent = "No SpliceVis color selections are available for this entry."; return; }
       await instance.visual.select({data: selections, nonSelectedColor: "#D8DDE4"});
       if(instance.canvas && instance.canvas.setBgColor) instance.canvas.setBgColor("white");
-      if(status) status.textContent = `Applied ${selections.length} SpliceVis chain colors to ${r.pdb_id.toUpperCase()}.`;
+      if(status) status.textContent = `Applied ${chainSelections.length} chain colors and ${featureSelections.length} RNA feature overlays to ${r.pdb_id.toUpperCase()}.`;
+    }
+    function molstarFeatureColorPriority(feature){
+      const f = String(feature?.feature || "").toLowerCase();
+      if(f === "substrate") return -1;
+      if(f.includes("exon_5") || f.includes("exon_3") || f.includes("ligated") || f.includes("exon_defined")) return 30;
+      if(f.includes("branch_point_adenosine")) return 40;
+      if(f.includes("splice_site") || f.includes("branch") || f.includes("polypyrimidine")) return 20;
+      return 10;
+    }
+    function defaultMolstarFeatureSelections(r){
+      return (r?.molstar_feature_selections || [])
+        .filter(feature => String(feature.feature || "").toLowerCase() !== "substrate")
+        .sort((a,b)=>molstarFeatureColorPriority(a)-molstarFeatureColorPriority(b))
+        .flatMap(feature => (feature.queries || []).map(query=>({...query, color: feature.color || "#FFFF00"})));
     }
     function currentMolstarRecord(){
       return records.find(item=>item.pdb_id===state.selected) || records.find(item=>item.pdb_id===state.molstarPdbId);
