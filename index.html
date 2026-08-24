@@ -1615,7 +1615,8 @@ ${await scriptFor(record,"no_maps")}
       return [p.human_gene,p.protein_name,p.class_family,p.color_key,(p.aliases||[]).join(" "),(p.canonical_chain_ids||[]).map(c=>[c.identity||c.canonical_identity,c.subcomplex,c.chain_id].join(" ")).join(" ")].join(" ").toLowerCase();
     }
     init().catch(error => {
-      document.body.innerHTML = `<main style="padding:24px;font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"><h1>Could not load dashboard data</h1><p>${esc(error.message)}</p></main>`;
+      document.body.innerHTML = `<main style="padding:24px;font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.45;max-width:760px"><h1>Could not load dashboard data</h1><p>${esc(error.message)}</p><p>This dashboard loads structure metadata, Mol* color selections, and clickable RNA feature definitions from <code>data/structures.json</code>. Open it through a local web server from the repository root, not directly as a <code>file://</code> URL.</p><pre style="padding:12px;background:#f3f5f7;border:1px solid #d8dee6;border-radius:8px;overflow:auto">cd /Users/matthias.vorlaender/Library/CloudStorage/OneDrive-VBC/spliceosome-cryoem-dashboard
+python3 -m http.server 8765 --bind 127.0.0.1</pre><p>Then open <code>http://127.0.0.1:8765/</code>.</p></main>`;
     });
     </script>
 </body>
