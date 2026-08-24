@@ -10,30 +10,31 @@
   <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pdbe-molstar@latest/build/pdbe-molstar-component.js"></script>
   <style>
-    :root { color-scheme: light; --bg:#f5f7f9; --panel:#fff; --ink:#20242a; --muted:#68717b; --line:#d9dee6; --focus:#0b5cab; --good:#13795b; }
+    :root { color-scheme: light; --bg:#f6f8fb; --panel:#fff; --ink:#1f252d; --muted:#66717d; --line:#dce2ea; --soft-line:#edf1f5; --focus:#0b5cab; --good:#13795b; --shadow:0 18px 48px rgba(31,37,45,.08); }
     * { box-sizing: border-box; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    body { margin:0; background:radial-gradient(circle at top left, #ffffff 0, #f8fafc 34%, var(--bg) 100%); color:var(--ink); font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
     button, input, select { font:inherit; }
     button { cursor:pointer; }
-    .app { display:grid; grid-template-columns:280px minmax(0,1fr); min-height:100vh; }
-    aside { background:var(--panel); border-right:1px solid var(--line); padding:18px; position:sticky; top:0; height:100vh; overflow:auto; }
-    main { min-width:0; padding:16px; }
-    h1 { margin:0; font-size:21px; letter-spacing:0; }
+    .app { display:block; min-height:100vh; }
+    aside { max-width:1760px; margin:0 auto; padding:16px 24px 6px; background:transparent; border:0; height:auto; overflow:visible; position:relative; }
+    main { max-width:1760px; min-width:0; margin:0 auto; padding:6px 24px 28px; }
+    h1 { margin:0; font-size:23px; letter-spacing:0; }
     h2 { margin:0; font-size:15px; letter-spacing:0; }
     h3 { margin:16px 0 8px; font-size:13px; letter-spacing:0; }
     .subtle { color:var(--muted); }
-    .field { margin-top:14px; }
+    .field { margin-top:0; }
     .field-help { margin-top:5px; color:var(--muted); font-size:11px; line-height:1.35; }
     .field-help code { display:block; margin-top:4px; padding:5px 6px; border:1px solid var(--line); border-radius:5px; background:#f8fafc; color:#30363d; white-space:normal; overflow-wrap:anywhere; }
     label { display:block; font-size:12px; color:var(--muted); font-weight:700; margin-bottom:5px; }
-    input, select { width:100%; border:1px solid var(--line); border-radius:6px; padding:8px 9px; background:#fff; color:var(--ink); }
-    .button, .tab-button, .segmented button, .copy-button { border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); padding:7px 9px; }
-    .button { width:100%; margin-top:14px; background:#0b5cab; border-color:#0b5cab; color:#fff; }
+    input, select { width:100%; border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:#fff; color:var(--ink); min-height:38px; }
+    input:focus, select:focus, button:focus-visible, a:focus-visible { outline:2px solid rgba(11,92,171,.28); outline-offset:2px; }
+    .button, .tab-button, .segmented button, .copy-button { border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); padding:7px 10px; }
+    .button { width:auto; margin-top:0; background:#0b5cab; border-color:#0b5cab; color:#fff; }
     .segmented { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
     .segmented button.active, .tab-button.active { background:#eaf4ff; border-color:#9fc6ef; color:#0b5cab; }
-    .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
-    .tabs { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; align-items:flex-start; }
-    .tab-group { display:flex; gap:6px; flex-wrap:wrap; align-items:center; padding:8px; border:1px solid var(--line); border-radius:8px; background:#f8fafc; }
+    .topbar { display:grid; grid-template-columns:minmax(360px,1fr) auto; align-items:end; gap:18px; margin:4px 0 12px; }
+    .tabs { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; align-items:flex-start; }
+    .tab-group { display:flex; gap:5px; flex-wrap:wrap; align-items:center; padding:5px; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.78); box-shadow:0 1px 2px rgba(31,37,45,.04); }
     .tab-group-label { font-size:11px; font-weight:750; color:var(--muted); text-transform:uppercase; letter-spacing:0; padding:0 4px; }
     .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:14px; }
     .start-panel .panel-body { display:grid; grid-template-columns:minmax(280px,1.1fr) repeat(2,minmax(220px,.75fr)); gap:14px; align-items:stretch; }
@@ -42,14 +43,14 @@
     .start-card p { margin:0 0 10px; color:#3d444d; font-size:13px; }
     .start-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .start-actions button { min-height:30px; padding:5px 9px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
-    .stat, .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
-    .stat { padding:11px 12px; }
+    .stat, .panel { background:rgba(255,255,255,.94); border:1px solid var(--line); border-radius:12px; box-shadow:0 1px 2px rgba(31,37,45,.035); }
+    .stat { padding:11px 13px; }
     .stat strong { display:block; font-size:20px; }
     .panel { overflow:hidden; margin-bottom:14px; }
-    .panel-head { padding:12px 14px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    .panel-head { padding:11px 14px; border-bottom:1px solid var(--soft-line); display:flex; justify-content:space-between; gap:10px; align-items:center; }
     .panel-body { padding:12px 14px; }
-    .workspace { display:grid; grid-template-columns:minmax(420px,.86fr) minmax(560px,1.14fr); gap:14px; align-items:start; }
-    .table-wrap { max-height:calc(100vh - 390px); min-height:360px; overflow:auto; }
+    .workspace { display:block; }
+    .table-wrap { max-height:620px; min-height:360px; overflow:auto; }
     .protein-table-wrap { max-height:calc(100vh - 140px); overflow:auto; }
     table { width:100%; border-collapse:separate; border-spacing:0; font-size:13px; }
     th, td { padding:8px 9px; border-bottom:1px solid #edf0f3; text-align:left; vertical-align:top; }
@@ -83,7 +84,7 @@
     .molstar-panel { display:grid; gap:10px; }
     .molstar-toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .molstar-status { color:var(--muted); font-size:12px; }
-    .molstar-viewer { width:100%; height:min(68vh,720px); min-height:500px; border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; position:relative; }
+    .molstar-viewer { width:100%; height:clamp(420px,44vh,680px); min-height:420px; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; position:relative; }
     .molstar-viewer:empty::before { content:"Select a structure row or press Reload 3D preview to load the interactive model."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
     .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
     .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; color:var(--ink); font-size:12px; max-width:180px; min-height:24px; }
@@ -149,8 +150,8 @@
     details.detail-section > summary { cursor:pointer; padding:9px 11px; font-weight:760; color:var(--ink); border-bottom:1px solid transparent; }
     details.detail-section[open] > summary { border-bottom-color:var(--line); }
     .detail-section-body { padding:0 11px 11px; }
-    .cycle { overflow:auto; height:clamp(520px,58vw,780px); }
-    .cycle-art { position:relative; width:min(100%,980px); aspect-ratio:1578/1391; margin:0 auto; }
+    .cycle { overflow:visible; min-height:0; width:100%; }
+    .cycle-art { position:relative; width:100%; max-width:620px; aspect-ratio:1578/1391; margin:0 auto; }
     .cycle-source-svg { width:100%; height:100%; display:block; }
     .cycle-hotspot { position:absolute; border:2px solid transparent; border-radius:999px; background:rgba(11,92,171,0); color:#0b5cab; padding:0; min-width:0; min-height:0; cursor:pointer; }
     .cycle-hotspot:hover, .cycle-hotspot:focus-visible { border-color:rgba(11,92,171,.48); background:rgba(11,92,171,.10); outline:none; }
@@ -190,38 +191,70 @@
     .palette-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .systematic-id-row { display:flex; align-items:baseline; gap:6px; margin:1px 0; }
     .systematic-id-row code { min-width:34px; }
-    @media (max-width:1100px) { .app, .workspace, .start-panel .panel-body { grid-template-columns:1fr; } aside { position:static; height:auto; border-right:0; border-bottom:1px solid var(--line); } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
-    @media (max-width:680px) { main { padding:12px; } .topbar { align-items:start; flex-direction:column; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } }
+    .brand-block { display:grid; grid-template-columns:auto minmax(280px,680px); gap:16px; align-items:end; margin-bottom:10px; }
+    .brand-block h1 { font-size:25px; font-weight:820; letter-spacing:0; }
+    .filter-panel { display:grid; grid-template-columns:minmax(260px,2fr) minmax(130px,.75fr) repeat(4,minmax(130px,.9fr)) auto; gap:10px; align-items:end; padding:10px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.9); box-shadow:var(--shadow); }
+    .search-field input { font-size:15px; }
+    .reset-button { min-height:38px; white-space:nowrap; }
+    .helper-panel { margin-top:10px; color:var(--muted); }
+    .helper-panel > summary { cursor:pointer; display:inline-flex; color:var(--muted); font-weight:700; font-size:12px; }
+    .helper-panel[open] { display:grid; grid-template-columns:minmax(180px,280px) minmax(260px,520px); gap:12px; align-items:start; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.72); }
+    .helper-panel[open] > summary { grid-column:1 / -1; }
+    .hero-copy h1 { max-width:980px; font-size:27px; line-height:1.12; font-weight:820; margin:2px 0 6px; }
+    .eyebrow { color:#0b5cab; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
+    .tab-button { min-height:30px; padding:5px 9px; font-size:12px; border-radius:8px; }
+    .landing-grid { display:grid; grid-template-columns:minmax(520px,1.05fr) minmax(520px,.95fr); gap:14px; align-items:start; }
+    .cycle-panel, .selected-panel { min-width:0; }
+    .cycle-panel .panel-body { display:grid; place-items:center; padding:16px; }
+    .selected-panel { position:sticky; top:12px; }
+    .selected-panel .detail-title { font-size:17px; line-height:1.25; }
+    .selected-panel details.detail-section:first-of-type { margin-top:10px; }
+    .selected-panel .molstar-panel { display:flex; flex-direction:column; }
+    .selected-panel .molstar-viewer { order:1; height:320px; min-height:320px; }
+    .selected-panel .molstar-toolbar { order:2; }
+    .selected-panel .molstar-legend { order:3; max-height:68px; }
+    .selected-panel .molstar-feature-box { order:4; }
+    .active-filter-panel .panel-body { min-height:46px; }
+    th { box-shadow:0 1px 0 var(--line); }
+    tbody tr { transition:background .12s ease; }
+    @media (max-width:1250px) { .filter-panel { grid-template-columns:minmax(260px,1.4fr) repeat(3,minmax(130px,1fr)); } .reset-button { width:100%; } .topbar, .landing-grid { grid-template-columns:1fr; } .tabs { justify-content:flex-start; } .selected-panel { position:static; } }
+    @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
+    @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open] { grid-template-columns:1fr; } .hero-copy h1 { font-size:24px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
     </style>
 </head>
 <body>
   <div class="app">
     <aside>
-      <h1>Spliceosome Structure Vis</h1>
-      <div class="subtle">Public lightweight dashboard. Scripts download PDB models directly in ChimeraX.</div>
-      <div class="field"><label for="search">Search</label><input id="search" type="search" placeholder="PDB, title, protein, RNA, paper, author"></div>
-      <div class="field"><label for="searchMode">Search In</label><select id="searchMode"><option value="all">All fields</option><option value="component">Proteins, RNAs, genes</option><option value="structure">PDB, title, state</option><option value="paper">Paper, DOI, PubMed, authors</option><option value="author">Authors</option></select></div>
-      <div class="field"><label for="family">State</label><select id="family"></select></div>
-      <div class="field"><label for="species">Species</label><select id="species"></select></div>
-      <div class="field"><label for="rnaFeatureFilter">RNA Features</label><select id="rnaFeatureFilter"></select></div>
-      <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
-      <div class="field"><label for="helperSource">ChimeraX helper scripts</label><select id="helperSource"><option value="github">Load helpers from GitHub</option><option value="local">Use local cloned repo</option></select></div>
-      <div class="field"><label for="localRepoPath">Local repo path</label><input id="localRepoPath" type="text" placeholder="/path/to/SpliceVis"><div class="field-help">Clone once, then paste the resulting folder path here when using local helpers. For full model-only offline use, run the setup command in the Local Copy tab.<code>git clone https://github.com/plaschka-lab/SpliceVis.git</code></div></div>
-      <button class="button" id="reset" type="button">Reset</button>
+      <div class="brand-block">
+        <h1>SpliceVis</h1>
+        <div class="subtle">Explore deposited spliceosome structures, inspect color-coded 3D previews, and copy ready-to-run ChimeraX scripts.</div>
+      </div>
+      <div class="filter-panel">
+        <div class="field search-field"><label for="search">Search structures</label><input id="search" type="search" placeholder="PDB, protein, RNA, author, paper"></div>
+        <div class="field"><label for="searchMode">Search in</label><select id="searchMode"><option value="all">All fields</option><option value="component">Proteins, RNAs, genes</option><option value="structure">PDB, title, state</option><option value="paper">Paper, DOI, PubMed, authors</option><option value="author">Authors</option></select></div>
+        <div class="field"><label for="family">State</label><select id="family"></select></div>
+        <div class="field"><label for="species">Species</label><select id="species"></select></div>
+        <div class="field"><label for="rnaFeatureFilter">RNA feature</label><select id="rnaFeatureFilter"></select></div>
+        <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
+        <button class="button reset-button" id="reset" type="button">Reset filters</button>
+      </div>
+      <details class="helper-panel">
+        <summary>ChimeraX helper setup</summary>
+        <div class="field"><label for="helperSource">Helper scripts</label><select id="helperSource"><option value="github">Load helpers from GitHub</option><option value="local">Use local cloned repo</option></select></div>
+        <div class="field"><label for="localRepoPath">Local repo path</label><input id="localRepoPath" type="text" placeholder="/path/to/SpliceVis"><div class="field-help">Clone once, then paste the folder path here to avoid repeated helper downloads.<code>git clone https://github.com/plaschka-lab/SpliceVis.git</code></div></div>
+      </details>
     </aside>
     <main>
       <div class="topbar">
-        <div><h1>Deposited Spliceosome Structures</h1><div class="subtle" id="resultSubtitle"></div></div>
-        <div class="tabs" id="tabs"><div class="tab-group" aria-label="Dashboard tools"><span class="tab-group-label">Tools</span><button type="button" class="tab-button active" data-tab="structures">Structures</button><button type="button" class="tab-button" data-tab="proximity">Search Proximity</button><button type="button" class="tab-button" data-tab="localCopy">Local Copy</button></div><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="rnaFeatures">RNA Features</button><button type="button" class="tab-button" data-tab="cycleStates">Cycle States</button><button type="button" class="tab-button" data-tab="rnaElements">RNA Elements</button><button type="button" class="tab-button" data-tab="complexes">Complexes</button><button type="button" class="tab-button" data-tab="proteins">Components & Colors</button><button type="button" class="tab-button" data-tab="documentation">Documentation</button><button type="button" class="tab-button" data-tab="help">Help</button></div></div>
+        <div class="hero-copy"><div class="eyebrow">Public spliceosome structure atlas</div><h1>Deposited spliceosome structures, one color code, ready for ChimeraX.</h1><div class="subtle" id="resultSubtitle"></div></div>
+        <div class="tabs" id="tabs"><div class="tab-group" aria-label="Dashboard tools"><span class="tab-group-label">Explore</span><button type="button" class="tab-button active" data-tab="structures">Structures</button><button type="button" class="tab-button" data-tab="proximity">Proximity</button><button type="button" class="tab-button" data-tab="localCopy">Local Copy</button></div><div class="tab-group" aria-label="Reference information"><span class="tab-group-label">Reference</span><button type="button" class="tab-button" data-tab="cycleStates">Cycle</button><button type="button" class="tab-button" data-tab="rnaElements">RNA Elements</button><button type="button" class="tab-button" data-tab="complexes">Complexes</button><button type="button" class="tab-button" data-tab="proteins">Components</button><button type="button" class="tab-button" data-tab="rnaFeatures">RNA Features</button><button type="button" class="tab-button" data-tab="documentation">Methods</button><button type="button" class="tab-button" data-tab="help">Help</button></div></div>
       </div>
       <div id="structuresView">
-        <section class="panel start-panel"><div class="panel-head"><h2>Start Here</h2><span class="subtle">browse, rotate, or open structures in ChimeraX</span></div><div class="panel-body">
-          <div class="start-card"><h3>Find a spliceosome structure</h3><p>Search by PDB, state, species, author, protein, RNA, paper, or annotated RNA feature. Click a pathway state in the cycle cartoon to narrow the table.</p><div class="start-actions"><button type="button" onclick="focusSearch()">Search structures</button><button type="button" onclick="showStartTab('cycleStates')">Read state guide</button></div></div>
-          <div class="start-card"><h3>Rotate in the browser</h3><p>Click a structure row to load a color-coded interactive Mol* preview automatically. The view uses the SpliceVis color code for deposited chains.</p><div class="start-actions"><button type="button" onclick="openInteractivePreview()">Show selected 3D preview</button></div></div>
-          <div class="start-card"><h3>Use ChimeraX</h3><p>Copy model-only or primary-map CXC scripts for aligned, colored structures with named selections, RNA labels, and optional systematic chain IDs.</p><div class="start-actions"><button type="button" onclick="document.querySelector('.actions button')?.focus()">Copy CXC scripts</button><button type="button" onclick="showStartTab('localCopy')">Set up local copy</button></div></div>
-        </div></section>
         <section class="stats" id="stats"></section>
-        <section class="panel"><div class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></div><div class="panel-body"><div class="cycle" id="cycle"></div></div></section>
+        <section class="landing-grid">
+          <div class="panel cycle-panel"><div class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></div><div class="panel-body"><div class="cycle" id="cycle"></div></div></div>
+          <div class="panel selected-panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
+        </section>
         <section class="panel active-filter-panel"><div class="panel-body"><strong>Active filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span></div></section>
         <details class="panel compact-filter-panel"><summary class="panel-head"><h2>Advanced RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></summary><div class="panel-body"><div class="rna-feature-picker">
           <div class="field"><label for="rnaFeatureQuickSearch">Search Or Choose RNA Feature</label><input id="rnaFeatureQuickSearch" type="search" placeholder="5SS, branch, exon, U6"></div>
@@ -236,7 +269,6 @@
         </div></div></details>
         <section class="workspace">
           <div class="panel"><div class="panel-head"><h2>Structure Set</h2><span class="subtle" id="tableCount"></span></div><div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Resolution</th><th data-sort="year">Year</th><th data-sort="chains">Chain count</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div></div>
-          <div class="panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
         </section>
       </div>
       <div id="proximityView" hidden>
@@ -341,7 +373,8 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       rnaFeatureConsistency = payload.rna_feature_consistency || [];
       records = DATA.records;
       proteinLookup = DATA.protein_lookup;
-      state.selected = records[0]?.pdb_id || "";
+      state.selected = (records.find(r=>String(r.pdb_id).toLowerCase()==="5zya") || records[0])?.pdb_id || "";
+      molstarAutoPreviewEnabled = Boolean(state.selected);
       els.family.innerHTML = '<option value="all">All states</option>' + STAGES.map(s=>`<option value="${attr(s)}">${esc(s)}</option>`).join("");
       els.species.innerHTML = '<option value="all">All species</option>' + unique(records.map(r=>r.species)).map(s=>`<option>${esc(s)}</option>`).join("");
       els.rnaFeatureFilter.innerHTML = rnaFeatureOptionData().map(x=>`<option value="${attr(x.value)}">${esc(x.label)}</option>`).join("");
