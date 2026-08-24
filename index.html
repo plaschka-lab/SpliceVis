@@ -88,6 +88,13 @@
     .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:92px; overflow:auto; }
     .molstar-legend-chip { display:inline-flex; align-items:center; gap:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; background:#fff; font-size:12px; max-width:180px; }
     .molstar-legend-chip span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .molstar-feature-box { border:1px solid var(--line); border-radius:8px; background:#fafbfc; padding:8px; }
+    .molstar-feature-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:end; margin-bottom:8px; }
+    .molstar-feature-controls .field { margin:0; min-width:170px; flex:1 1 180px; }
+    .molstar-feature-list { display:flex; flex-wrap:wrap; gap:6px; max-height:150px; overflow:auto; }
+    .molstar-feature-button { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); min-height:28px; padding:4px 9px; font-size:12px; max-width:270px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .molstar-feature-button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:700; }
+    .molstar-feature-button .component-swatch { margin-right:5px; }
     .rna-2d-img { display:block; width:100%; max-height:520px; object-fit:contain; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .table-thumbnail { display:block; width:64px; height:64px; object-fit:contain; border:1px solid var(--line); border-radius:6px; background:#fff; }
     .preview-cell { width:78px; min-width:78px; }
@@ -956,9 +963,15 @@ ${await scriptFor(record,"no_maps")}
         return true;
       }).slice(0,36).map(x=>`<span class="molstar-legend-chip" title="${attr(`${x.label || x.auth_asym_id} ${x.color}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label || x.auth_asym_id)}</span></span>`).join("");
     }
+    function molstarFeatureBrowser(r){
+      const features = r.molstar_feature_selections || [];
+      if(!features.length) return '<div class="subtle">No RNA feature selections are available for this structure.</div>';
+      const groups = unique(features.map(x=>x.group));
+      return `<div class="molstar-feature-box"><div class="molstar-feature-controls"><div class="field"><label for="molstarFeatureGroup">Feature group</label><select id="molstarFeatureGroup" onchange="renderMolstarFeatureButtons()"><option value="all">All feature groups</option>${groups.map(g=>`<option value="${attr(g)}">${esc(g)}</option>`).join("")}</select></div><div class="field"><label for="molstarFeatureSearch">Find feature</label><input id="molstarFeatureSearch" type="search" placeholder="branch, 5SS, U6" oninput="renderMolstarFeatureButtons()"></div><button type="button" onclick="clearMolstarFeature()" title="Clear Mol* feature highlight and refocus the full structure.">Clear feature</button></div><div class="molstar-feature-list" id="molstarFeatureList"></div></div>`;
+    }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
-      return `<div class="molstar-panel"><div class="molstar-toolbar"><button type="button" onclick="loadMolstarForSelected(this)" title="Load this deposited PDB entry into an embedded PDBe Mol* viewer and apply SpliceVis chain colors.">Load color-coded 3D preview</button><button type="button" onclick="applyMolstarColors()" title="Reapply SpliceVis color selections to the current Mol* view.">Reapply colors</button><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections available.` : "No chain-color selections are available for this entry."}</span></div><div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-legend">${molstarLegend(r)}</div></div>`;
+      return `<div class="molstar-panel"><div class="molstar-toolbar"><button type="button" onclick="loadMolstarForSelected(this)" title="Load this deposited PDB entry into an embedded PDBe Mol* viewer and apply SpliceVis chain colors.">Load color-coded 3D preview</button><button type="button" onclick="applyMolstarColors()" title="Reapply SpliceVis color selections to the current Mol* view.">Reapply colors</button><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections available.` : "No chain-color selections are available for this entry."}</span></div>${molstarFeatureBrowser(r)}<div class="molstar-viewer" id="molstarViewer"></div><div class="molstar-legend">${molstarLegend(r)}</div></div>`;
     }
     function pdbeMolstarReady(){
       return Boolean(customElements.get("pdbe-molstar"));
@@ -1006,6 +1019,7 @@ ${await scriptFor(record,"no_maps")}
         state.molstarPdbId = r.pdb_id;
         await new Promise(resolve=>setTimeout(resolve, 3500));
         await applyMolstarColors();
+        renderMolstarFeatureButtons();
       }catch(error){
         if(status) status.textContent = `Mol* preview error: ${error.message}`;
       }finally{
@@ -1023,6 +1037,53 @@ ${await scriptFor(record,"no_maps")}
       await instance.visual.select({data: selections, nonSelectedColor: "#D8DDE4"});
       if(instance.canvas && instance.canvas.setBgColor) instance.canvas.setBgColor("white");
       if(status) status.textContent = `Applied ${selections.length} SpliceVis chain colors to ${r.pdb_id.toUpperCase()}.`;
+    }
+    function currentMolstarRecord(){
+      return records.find(item=>item.pdb_id===state.selected) || records.find(item=>item.pdb_id===state.molstarPdbId);
+    }
+    function renderMolstarFeatureButtons(){
+      const list = document.getElementById("molstarFeatureList");
+      if(!list) return;
+      const r = currentMolstarRecord();
+      const group = document.getElementById("molstarFeatureGroup")?.value || "all";
+      const query = (document.getElementById("molstarFeatureSearch")?.value || "").trim().toLowerCase();
+      const features = (r?.molstar_feature_selections || []).filter((item, index)=>{
+        const hay = [item.label,item.feature,item.group,item.kind,item.chain,item.residue_ranges,item.confidence].join(" ").toLowerCase();
+        return (group==="all" || item.group===group) && (!query || hay.includes(query));
+      });
+      list.innerHTML = features.length ? features.slice(0,70).map((item,index)=>`<button type="button" class="molstar-feature-button" data-feature-index="${index}" onclick="selectMolstarFeatureFromButton(this)" title="${attr(`${item.group}: ${item.label} chain ${item.chain} residues ${item.residue_ranges}`)}"><span class="component-swatch" style="background:${attr(item.color)}"></span>${esc(item.label)} <span class="subtle">${esc(item.residue_ranges)}</span></button>`).join("") + (features.length>70 ? `<span class="subtle">+${features.length-70} more</span>` : "") : '<span class="subtle">No matching feature selections.</span>';
+      list._molstarFeatures = features;
+    }
+    async function selectMolstarFeatureFromButton(button){
+      const list = document.getElementById("molstarFeatureList");
+      const feature = list?._molstarFeatures?.[Number(button.dataset.featureIndex)];
+      if(!feature) return;
+      await selectMolstarFeature(feature);
+      for(const item of list.querySelectorAll(".molstar-feature-button")) item.classList.toggle("active", item===button);
+    }
+    async function selectMolstarFeature(feature){
+      const status = document.getElementById("molstarStatus");
+      if(!state.molstarViewer || state.molstarPdbId !== state.selected){
+        await loadMolstarForSelected();
+      }
+      const viewer = state.molstarViewer || document.querySelector("#molstarViewer pdbe-molstar");
+      const instance = viewer && viewer.viewerInstance;
+      if(!instance || !instance.visual){ if(status) status.textContent = "Mol* viewer is not ready yet."; return; }
+      const queries = (feature.queries || []).map(q=>({...q, color: feature.color || "#FFFF00", focus: true}));
+      if(!queries.length){ if(status) status.textContent = "This feature has no selectable Mol* residue ranges."; return; }
+      await instance.visual.focus(queries);
+      await instance.visual.highlight({data: queries, color: feature.color || "#FFFF00"});
+      if(status) status.textContent = `Focused ${feature.label} (${feature.chain}:${feature.residue_ranges}).`;
+    }
+    async function clearMolstarFeature(){
+      const status = document.getElementById("molstarStatus");
+      const viewer = state.molstarViewer || document.querySelector("#molstarViewer pdbe-molstar");
+      const instance = viewer && viewer.viewerInstance;
+      if(instance?.visual?.clearHighlight) await instance.visual.clearHighlight();
+      if(instance?.visual?.reset) await instance.visual.reset({camera:true});
+      const list = document.getElementById("molstarFeatureList");
+      if(list) for(const item of list.querySelectorAll(".molstar-feature-button")) item.classList.remove("active");
+      if(status) status.textContent = "Cleared Mol* feature highlight.";
     }
     function showStartTab(tab){
       state.activeTab = tab;
@@ -1061,6 +1122,7 @@ ${await scriptFor(record,"no_maps")}
       const compositeButtons = (r.composite_groups||[]).map(group => `<button onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')}">Split assembly: ${esc(group.label || group.composite_id)}</button>`).join("");
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
       els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(r.resolution||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Script without maps</button>${primaryMapButton}${compositeButtons}${reportIssueLink(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Overview", `${thumbnail}<h3>Paper</h3><div>${esc(r.paper_title||"")}</div><div class="subtle">${esc(r.authors_short||"")}${r.doi ? " - DOI " + esc(r.doi) : ""}</div>${abstractBlock}`, false)}${detailSection("Resources", externalLinks(r), true)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("Components", `<h3>Proteins (${r.protein_count})</h3><div class="mini-list"><div class="chips">${proteins || '<span class="subtle">None listed</span>'}</div></div><h3>RNAs (${r.rna_count})</h3><div class="mini-list"><div class="chips">${rnas || '<span class="subtle">None listed</span>'}</div></div>`)}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      renderMolstarFeatureButtons();
       scriptFor(r, "no_maps").then(text => {
         const preview = document.getElementById("scriptPreview");
         if (preview && state.selected === r.pdb_id) preview.textContent = text;
