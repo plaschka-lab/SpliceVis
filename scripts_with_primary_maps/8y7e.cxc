@@ -73,7 +73,7 @@ color #341.1/m #B0C4DE
 # SNRPG
 color #341.1/n #B0C4DE
 # SCNM1
-color #341.1/v #547083
+color #341.1/v #A0916A
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}

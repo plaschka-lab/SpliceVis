@@ -63,7 +63,7 @@ color #342.1/5E #E2F3F4
 # U5 snRNP: PRPF6
 color #342.1/5D #CFA785
 # other: DIM2
-color #342.1/X8 #6A90A0
+color #342.1/X8 #B3A389
 # U4/U6 snRNP: DDX23
 color #342.1/6A #CA9982
 # U5 Sm ring: U5-Sm SNRPB
@@ -121,7 +121,7 @@ color #342.1/4A #E1DD1B
 # U4/U6 snRNP: NHP2L1
 color #342.1/4D #A89264
 # other: CCDC84
-color #342.1/XV #C7B8A8
+color #342.1/XV #C7CBDB
 # U11/U12 snRNP: U11 snRNA
 color #342.1/11 #D46BB8
 # RNA-binding: ZMAT5
@@ -133,7 +133,7 @@ color #342.1/XJ #A458BB
 # other: C6ORF151
 color #342.1/XM #CA7DCA
 # other: PDCD7
-color #342.1/XAV #A8ABC7
+color #342.1/XAV #CFC7DB
 # U5 snRNP: SART1
 color #342.1/5H #D6937B
 # U4/U6 snRNP: USP39

@@ -1,17 +1,20 @@
-# Lightweight ChimeraX script for 8Y6O
-# Models are downloaded directly by ChimeraX from the PDB.
-# Primary maps, when requested, are downloaded directly from EMDB.
-# Original deposited chain identifiers are used.
+# Composite ChimeraX script for Minor pre-B complex assembled from 8Y6O and 8Y7E
+# Opens split deposited PDB parts together and preserves their relative orientation.
+# Representative part aligned to the shared anchor: 8Y6O
+# Brought partner part(s): 8Y7E
+
 
 # Shared anchor frame: 8H6L
 # Structure group: #342; target model: #342.1; RNA labels: #342.2.
 
 open 8h6l id 342.9 name 8H6L_anchor
 open 8y6o id 342.1 name 8Y6O
+open 8y7e id 341.1 name 8Y7E
+rename #341 pre_B_8y7e_structure
 rename #342 pre_B_8y6o_structure
 
 # Align on PRPF8.
-matchmaker #342.1/C to #342.9/5B
+matchmaker #342.1/C to #342.9/5B bring #341.1
 close #342.9
 
 # Remove implausibly long deposited covalent bonds before styling.
@@ -275,5 +278,120 @@ open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/8y6o_selection_browser.py
+view
+show nucleic
+
+# Apply display, coloring, named selections, and RNA labels for 8Y7E.
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# mRNA
+color #341.1/A #303030
+# SF3B1
+color #341.1/1 #487957
+# SF3B2
+color #341.1/2 #49926C
+# SF3B3
+color #341.1/3 #6A9064
+# SF3B4
+color #341.1/4 #77B088
+# SF3B6
+color #341.1/5 #ADCEA0
+# PHF5A
+color #341.1/6 #375A40
+# SF3B5
+color #341.1/7 #92BB8F
+# U12 snRNA
+color #341.1/H #71C562
+# SNRPD3
+color #341.1/h #B0C4DE
+# SNRPB
+color #341.1/i #B0C4DE
+# SNRPD1
+color #341.1/j #B0C4DE
+# SNRPD2
+color #341.1/k #B0C4DE
+# SNRPE
+color #341.1/l #B0C4DE
+# SNRPF
+color #341.1/m #B0C4DE
+# SNRPG
+color #341.1/n #B0C4DE
+# SCNM1
+color #341.1/v #A0916A
+# Named selections for subcomplexes using original deposited chain IDs.
+# RNA/substrate
+# selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
+name pdb_8Y7E_RNA_substrate #341.1/A
+# Sm ring
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_8Y7E_Sm_ring #341.1/h,i,j,k,l,m,n
+# U11/U12 snRNP
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_8Y7E_U11_U12_snRNP #341.1/H
+# U2/SF3B
+# selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
+name pdb_8Y7E_U2_SF3B #341.1/1,2,3,4,5,6,7
+# other
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_8Y7E_other #341.1/v
+# Named selections for resolved substrate RNA features.
+# substrate RNA: residues 193-222, component, medium confidence, validation not_applicable
+# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name pre_B_8Y7E_substrate #341.1/A:193-222
+# branch point region: residues 193-222; 195-206, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name pre_B_8Y7E_branch_region #341.1/A:193-222|#341.1/A:195-206
+# branch point adenosine: residues 203, network-scored-motif, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name pre_B_8Y7E_branch_A #341.1/A:203
+# Named selections for resolved snRNA functional regions.
+# U12 snRNA branchpoint pairing region: residues 16-26, reference-alignment, high confidence
+# selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U12_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
+name pre_B_8Y7E_U12_branchpoint_pairing_region #341.1/H:16-26
+# U12 snRNA Sm site: residues 75-81, sequence-motif, medium confidence
+# selector_meta {"color":"#2F8B4D","family":"RNA","feature":"U12_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name pre_B_8Y7E_U12_Sm_site #341.1/H:75-81
+# RNA feature nucleotide display.
+select #341.1 & nucleic
+nucleotides sel atoms
+select clear
+# BP region: residues 193-222; 195-206
+# BP-A: residues 203
+# U12 BP pairing: residues 16-26
+color #341.1/H:16-26 #0B6E2D
+select #341.1/H:16-26
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #341.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8y7e_rna_labels.py
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/8y7e_selection_browser.py
 view
 show nucleic

@@ -55,7 +55,7 @@ color #342.1/F #E2F3F4
 # PRPF6
 color #342.1/G #CFA785
 # DIM2
-color #342.1/H #6A90A0
+color #342.1/H #B3A389
 # DDX23
 color #342.1/I #CA9982
 # U5-Sm SNRPB
@@ -113,7 +113,7 @@ color #342.1/N #E1DD1B
 # NHP2L1
 color #342.1/O #A89264
 # CCDC84
-color #342.1/R #C7B8A8
+color #342.1/R #C7CBDB
 # U11 snRNA
 color #342.1/P #D46BB8
 # ZMAT5
@@ -125,7 +125,7 @@ color #342.1/X #A458BB
 # C6ORF151
 color #342.1/Y #CA7DCA
 # PDCD7
-color #342.1/Z #A8ABC7
+color #342.1/Z #CFC7DB
 # SART1
 color #342.1/S #D6937B
 # USP39

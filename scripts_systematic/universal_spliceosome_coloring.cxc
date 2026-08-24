@@ -431,7 +431,7 @@ color /X6 #5F2E8A
 # DDX41 (X7)
 color /X7 #EE82EE
 # DIM2 (X8)
-color /X8 #6A90A0
+color /X8 #B3A389
 # DNAJC8 (X9)
 color /X9 #6E86A6
 # ARMC7 (XA)
@@ -443,7 +443,7 @@ color /XA6 #F88379
 # RNF113 (XA7)
 color /XA7 #6C46CE
 # SCNM1 (XA8)
-color /XA8 #547083
+color /XA8 #A0916A
 # SDE2 (XA9)
 color /XA9 #FFFF00
 # ESS2 (XAA)
@@ -479,7 +479,7 @@ color /XAS #6987A9
 # NPWBP (XAT)
 color /XAT #D8944F
 # PDCD7 (XAV)
-color /XAV #A8ABC7
+color /XAV #CFC7DB
 # PPIG (XAW)
 color /XAW #4C79BC
 # PPIL2 (XAX)
@@ -487,13 +487,13 @@ color /XAX #B12F50
 # PPIL3 (XAY)
 color /XAY #57389F
 # PPIL4 (XAZ)
-color /XAZ #CFC7DB
+color /XAZ #547083
 # ASF (XB)
 color /XB #CC3E8E
 # YJU2B (XB6)
 color /XB6 #DA70D6
 # SF1 (XBB)
-color /XBB #BA4F9A
+color /XBB #8A7354
 # SMU1 (XBC)
 color /XBC #E0A3D2
 # SMU1 (XBCA)
@@ -527,7 +527,7 @@ color /XL #C99A2C
 # C6ORF151 (XM)
 color /XM #CA7DCA
 # C7ORF64 (XN)
-color /XN #89ACB3
+color /XN #C7B8A8
 # C9ORF78 (XO)
 color /XO #D9CCFF
 # CA150 (XP)
@@ -543,11 +543,11 @@ color /XT #FAEBD7
 # CCDC49 (XU)
 color /XU #2F4DB1
 # CCDC84 (XV)
-color /XV #C7B8A8
+color /XV #C7CBDB
 # CGI-79 (XW)
 color /XW #5FB491
 # CIR (XX)
-color /XX #C7CBDB
+color /XX #615483
 # CRIPT (XY)
-color /XY #615483
+color /XY #6A90A0
 show nucleic

@@ -84,7 +84,7 @@ color #383.1/G #303030
 # U12 snRNA
 color #383.1/H #71C562
 # SCNM1
-color #383.1/v #547083
+color #383.1/v #A0916A
 # SF3B1
 color #383.1/1 #487957
 # SF3B2
@@ -132,9 +132,9 @@ color #383.1/V #2C54DD
 # SRM160
 color #383.1/8 #6E96C4
 # CRIPT
-color #383.1/0 #615483
+color #383.1/0 #6A90A0
 # C7ORF64
-color #383.1/I #89ACB3
+color #383.1/I #C7B8A8
 # ARMC7
 color #383.1/K #546383
 # Named selections for subcomplexes using original deposited chain IDs.

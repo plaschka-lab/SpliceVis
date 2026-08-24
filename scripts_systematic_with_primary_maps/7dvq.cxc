@@ -93,7 +93,7 @@ color #383.1/M #303030
 # U11/U12 snRNP: U12 snRNA
 color #383.1/12 #71C562
 # other: SCNM1
-color #383.1/XA8 #547083
+color #383.1/XA8 #A0916A
 # U2/SF3B: SF3B1
 color #383.1/2A #487957
 # U2/SF3B: SF3B2
@@ -141,9 +141,9 @@ color #383.1/J5 #2C54DD
 # other: SRM160
 color #383.1/XBI #6E96C4
 # other: CRIPT
-color #383.1/XY #615483
+color #383.1/XY #6A90A0
 # other: C7ORF64
-color #383.1/XN #89ACB3
+color #383.1/XN #C7B8A8
 # other: ARMC7
 color #383.1/XA #546383
 # Named selections for systematic-chain subcomplexes.

@@ -81,7 +81,7 @@ color #341.1/SF #B0C4DE
 # Sm ring: SNRPG
 color #341.1/SG #B0C4DE
 # other: SCNM1
-color #341.1/XA8 #547083
+color #341.1/XA8 #A0916A
 # Named selections for systematic-chain subcomplexes.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
