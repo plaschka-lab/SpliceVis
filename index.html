@@ -85,14 +85,14 @@
     .molstar-workbench { display:grid; grid-template-columns:minmax(430px,1fr) minmax(250px,320px); gap:10px; align-items:stretch; }
     .molstar-toolbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
     .molstar-status { color:var(--muted); font-size:12px; }
-    .molstar-viewer { width:100%; height:clamp(420px,44vh,680px); min-height:420px; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; position:relative; }
+    .molstar-viewer { width:100%; height:clamp(420px,44vh,680px); min-height:420px; border:0; border-radius:10px; background:#fff; overflow:hidden; position:relative; }
+    .molstar-viewer .msp-plugin-content { border:0 !important; }
     .molstar-viewer:empty::before { content:"Select a structure to load the interactive model."; position:absolute; inset:0; display:grid; place-items:center; padding:24px; text-align:center; color:var(--muted); }
     .molstar-selection-sidebar { display:grid; align-content:start; gap:10px; min-width:0; max-height:clamp(420px,44vh,680px); overflow:auto; }
     .molstar-selection-tabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; }
     .molstar-selection-tab { min-height:30px; justify-content:center; border-radius:999px; font-size:12px; }
     .molstar-selection-tab.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:800; }
     .molstar-selection-section { border:1px solid var(--line); border-radius:8px; background:#fff; padding:8px; }
-    .molstar-selection-sidebar[data-active-selection="rna"] [data-molstar-section="protein"], .molstar-selection-sidebar[data-active-selection="protein"] [data-molstar-section="rna"] { display:none; }
     .molstar-selection-section h3 { margin:0 0 6px; color:var(--ink); font-size:12px; font-weight:820; }
     .molstar-selection-section .section-note { margin:0 0 8px; color:var(--muted); font-size:11px; line-height:1.25; }
     .molstar-legend { display:flex; flex-wrap:wrap; gap:6px; max-height:220px; overflow:auto; }
@@ -113,6 +113,8 @@
     .molstar-options > summary::after { content:"+"; float:right; color:#0b5cab; }
     .molstar-options[open] > summary::after { content:"-"; }
     .molstar-options-body { padding:0 10px 10px; }
+    .inline-toggle { display:inline-flex; align-items:center; gap:6px; margin:0; color:var(--muted); font-size:12px; font-weight:700; cursor:pointer; }
+    .inline-toggle input { width:auto; min-height:0; margin:0; }
     .rna-2d-img { display:block; width:100%; max-height:520px; object-fit:contain; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .table-thumbnail { display:block; width:64px; height:64px; object-fit:contain; border:1px solid var(--line); border-radius:6px; background:#fff; }
     .preview-cell { width:78px; min-width:78px; }
@@ -151,7 +153,7 @@
     .empty-state strong { display:block; color:var(--ink); margin-bottom:4px; }
     .filter-chips, .quick-filters, .rna-feature-results { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
     .filter-chip, .quick-filter { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); padding:4px 9px; font-size:12px; min-height:26px; }
-    .filter-chip { background:#eef6ff; border-color:#b8d7f4; color:#0b5cab; }
+    .filter-chip { background:#fff; border-color:#cbd6e1; color:#0b5cab; }
     .quick-filter.active { background:#e7f6ee; border-color:#acd9bf; color:var(--good); font-weight:700; }
     .rna-badge-cell { min-width:112px; }
     .rna-feature-picker { display:grid; grid-template-columns:minmax(240px,560px) minmax(0,1fr); gap:10px; align-items:end; margin-bottom:10px; }
@@ -233,9 +235,9 @@
     tbody tr { transition:background .12s ease; }
     /* Extreme workbench prototype: cycle-first atlas, not table-first dashboard. */
     body { background:#eef2f5; }
-    .app { display:grid; grid-template-columns:330px minmax(0,1fr); min-height:100vh; }
-    aside { position:sticky; top:0; height:100vh; max-width:none; margin:0; padding:22px 18px; overflow:auto; border-right:1px solid #d7dee6; background:#f9fafb; box-shadow:8px 0 28px rgba(31,37,45,.05); }
-    main { max-width:none; padding:24px 28px 36px; }
+    .app { display:grid; grid-template-columns:280px minmax(0,1fr); min-height:100vh; }
+    aside { position:sticky; top:0; height:100vh; max-width:none; margin:0; padding:20px 14px; overflow:auto; border-right:1px solid #d7dee6; background:#f9fafb; box-shadow:8px 0 28px rgba(31,37,45,.05); }
+    main { max-width:none; margin:0; padding:22px 22px 34px; }
     .brand-block { display:block; margin:0 0 18px; }
     .brand-block h1 { font-size:31px; line-height:1; margin-bottom:10px; }
     .filter-panel { display:grid; grid-template-columns:1fr; gap:8px; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
@@ -265,30 +267,26 @@
     .quiet-tab strong { font-weight:700; }
     .helper-panel { margin-top:16px; padding-top:14px; border-top:1px solid #e1e6ec; }
     .helper-panel[open] { display:block; padding:14px 0 0; border:0; border-top:1px solid #e1e6ec; border-radius:0; background:transparent; }
-    .topbar { display:block; margin:0 0 16px; }
+    .topbar { display:block; margin:0 0 8px; }
     .hero-copy { display:block; max-width:900px; }
-    .hero-copy h1 { font-size:29px; line-height:1.08; max-width:760px; margin:4px 0 6px; }
-    .stats { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
+    .hero-copy h1, .hero-copy .eyebrow { display:none; }
+    .topbar .subtle { font-size:12px; font-weight:650; }
+    .stats { display:none; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
     .stat { display:inline-flex; align-items:baseline; gap:6px; width:auto; min-width:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
     .stat strong { font-size:15px; }
     .stat + .stat::before { content:"/"; color:#a0aab5; margin-right:2px; }
-    .atlas-grid { display:grid; grid-template-columns:minmax(680px,1fr) minmax(390px,470px); gap:16px; align-items:start; }
-    .atlas-main { display:grid; gap:12px; min-width:0; }
-    .structure-browser { position:sticky; top:24px; min-width:0; }
-    .cycle-panel, .selected-panel, .active-filter-panel, .workspace > .panel, .structure-browser { border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(31,37,45,.06); }
-    .cycle-panel { margin-top:0; }
-    .cycle-panel > summary.panel-head { cursor:pointer; list-style:none; }
-    .cycle-panel > summary.panel-head::-webkit-details-marker { display:none; }
-    .cycle-panel > summary.panel-head::after { content:"+"; color:#0b5cab; font-size:18px; }
-    .cycle-panel[open] > summary.panel-head::after { content:"-"; }
-    .cycle-panel .panel-body { display:grid; grid-template-columns:minmax(260px,340px) minmax(0,1fr); gap:14px; align-items:center; min-height:0; padding:10px 14px 12px; }
+    .atlas-grid { display:grid; grid-template-columns:1fr; gap:14px; align-items:start; }
+    .cycle-browser-panel { --cycle-visual-height:clamp(430px,44vh,480px); min-width:0; height:clamp(650px,64vh,720px); display:flex; flex-direction:column; }
+    .cycle-browser-panel .panel-body { display:grid; grid-template-columns:minmax(590px,.92fr) minmax(520px,1.08fr); grid-template-areas:"cycle list" "context list" "filters list"; grid-template-rows:var(--cycle-visual-height) minmax(0,96px) auto; gap:8px 18px; flex:1 1 auto; min-height:0; padding:10px 14px 12px; overflow:hidden; }
+    .cycle-panel, .selected-panel, .active-filter-panel, .workspace > .panel, .cycle-browser-panel { border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(31,37,45,.06); }
     .cycle { overflow:hidden; }
     .cycle-art { max-width:790px; }
-    .atlas-main .cycle { display:grid; place-items:center; }
-    .atlas-main .cycle-art { max-width:340px; width:min(100%,340px); transform:none; }
-    .cycle-context { display:grid; grid-template-columns:minmax(86px,.22fr) minmax(0,1fr); gap:4px 12px; padding-left:14px; border-left:1px solid #e1e6ec; font-size:12px; color:var(--muted); }
+    .cycle-browser-panel .cycle { grid-area:cycle; display:grid; align-items:center; justify-items:center; min-height:var(--cycle-visual-height); height:var(--cycle-visual-height); overflow:hidden; }
+    .cycle-browser-panel .cycle-art { width:auto; height:100%; max-width:100%; max-height:100%; margin:0 auto; transform:none; }
+    .cycle-context { grid-area:context; align-self:start; display:grid; grid-template-columns:auto minmax(0,1fr) auto minmax(0,1fr); gap:4px 10px; min-width:0; max-height:96px; overflow:auto; padding:8px 4px 0 0; border-top:1px solid #e8edf3; font-size:12px; color:var(--muted); }
     .cycle-context strong { color:var(--ink); font-size:13px; }
-    .cycle-context .context-label { font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:0; font-size:11px; }
+    .cycle-context .context-label { margin-top:0; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:0; font-size:11px; }
+    .cycle-context .context-title { grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:6px; align-items:baseline; color:var(--ink); font-size:14px; font-weight:850; }
     .cycle-context .context-line { min-width:0; }
     .selected-panel { position:relative; top:auto; }
     .selected-panel .panel-body { padding:16px; }
@@ -296,9 +294,13 @@
     .selected-panel .actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:10px 0 0; }
     .selected-panel .actions button, .selected-panel .actions a { justify-content:center; border-radius:7px; }
     .selected-panel .actions a.report-link { grid-column:1 / -1; }
-    .selected-panel .molstar-viewer { height:clamp(500px,56vh,760px); min-height:500px; }
-    .selected-panel .molstar-selection-sidebar { max-height:clamp(500px,56vh,760px); }
-    .selected-panel .molstar-feature-list, .selected-panel .molstar-legend { max-height:330px; }
+    .selected-panel .molstar-workbench { grid-template-columns:minmax(760px,1fr) minmax(300px,380px); }
+    .selected-panel .molstar-viewer { height:clamp(560px,62vh,820px); min-height:560px; }
+    .selected-panel .molstar-selection-sidebar { max-height:clamp(560px,62vh,820px); }
+    .selected-panel .molstar-feature-list, .selected-panel .molstar-legend { max-height:360px; }
+    .selected-panel .molstar-feature-controls { grid-template-columns:1fr 1fr; gap:6px; }
+    .selected-panel .molstar-feature-controls button { grid-column:1 / -1; min-height:28px; padding:4px 8px; }
+    .selected-panel .molstar-feature-list { max-height:180px; }
     .selected-panel .molstar-toolbar { align-items:center; padding-top:2px; }
     .selected-panel details.detail-section { border:0; border-radius:0; background:transparent; margin-top:8px; }
     .selected-panel details.detail-section > summary { display:flex; align-items:center; justify-content:space-between; list-style:none; min-height:36px; padding:8px 0; border-top:1px solid #e1e6ec; color:var(--muted); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0; }
@@ -314,27 +316,50 @@
     .active-filter-panel[hidden] { display:none; }
     .active-filter-panel .panel-body { min-height:0; padding:10px 12px; }
     .active-filter-panel .reset-button { width:auto; min-height:28px; padding:4px 9px; margin-left:auto; }
+    .cycle-browser-panel .active-filter-panel { grid-area:filters; align-self:start; margin:0; border:0; border-radius:0; background:transparent; box-shadow:none; padding-top:2px; }
+    .cycle-browser-panel .active-filter-panel .panel-body { display:flex; flex-wrap:wrap; gap:6px; align-items:center; padding:0; }
+    .cycle-browser-panel .active-filter-panel strong { color:var(--muted); font-size:11px; text-transform:uppercase; }
+    .cycle-browser-panel .filter-hint { display:none; }
+    .cycle-browser-panel .active-filter-panel .reset-button { margin-left:0; min-height:26px; padding:3px 8px; background:#fff; border-color:#cbd6e1; color:#4d5866; }
     .workspace { margin-top:0; }
     .workspace > .panel .panel-head { padding:14px 16px; }
-    .structure-browser .panel-head { padding:12px 14px; }
-    .structure-browser .table-wrap { max-height:calc(100vh - 126px); overflow:auto; }
-    .structure-browser table { display:block; border:0; }
-    .structure-browser thead { display:none; }
-    .structure-browser tbody { display:grid; gap:7px; padding:10px; }
-    .structure-browser tr { display:grid; grid-template-columns:58px minmax(0,1fr); gap:2px 9px; padding:10px; border:1px solid var(--line); border-radius:10px; background:#fff; cursor:pointer; }
-    .structure-browser tr.selected { border-color:#8cbff0; background:#f0f7ff; }
-    .structure-browser td { display:none; border:0; padding:0; }
+    .structure-browser { grid-area:list; min-height:0; display:flex; flex-direction:column; }
+    .structure-list-head { display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:2px; }
+    .structure-list-head h3 { margin:0; font-size:13px; }
+    .structure-browser .table-wrap { flex:1 1 auto; min-height:260px; overflow:auto; margin-top:6px; border-top:1px solid #e8edf3; }
+    .structure-browser table { display:table; width:100%; border-collapse:collapse; border:0; table-layout:fixed; font-size:11px; }
+    .structure-browser thead { display:table-header-group; }
+    .structure-browser tbody { display:table-row-group; padding:0; }
+    .structure-browser th { position:sticky; top:0; z-index:1; padding:7px 6px; border-bottom:1px solid #dfe6ee; background:#fff; color:var(--muted); font-size:10px; font-weight:800; text-transform:uppercase; line-height:1.2; }
+    .structure-browser tr { display:table-row; padding:0; border:0; border-radius:0; background:transparent; cursor:pointer; }
+    .structure-browser tr.selected td { background:#f2f8ff; }
+    .structure-browser td { display:table-cell; padding:7px 6px; border:0; border-bottom:1px solid #edf1f5; vertical-align:top; line-height:1.25; }
+    .structure-browser td.empty-state { display:table-cell; padding:14px 6px; }
     .row-card-meta { display:none; }
-    .structure-browser td:nth-child(1), .structure-browser td:nth-child(4) { display:block; }
-    .structure-browser td:nth-child(1) { grid-row:1 / span 3; grid-column:1; font-size:13px; font-weight:800; }
-    .structure-browser td:nth-child(4) { grid-column:2; font-weight:750; line-height:1.25; }
-    .structure-browser .row-card-meta { display:block; margin-top:4px; color:var(--muted); font-size:12px; font-weight:500; }
-    .structure-browser .truncate { white-space:normal; overflow:visible; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+    .structure-browser th:nth-child(1), .structure-browser td:nth-child(1) { width:52px; }
+    .structure-browser th:nth-child(4), .structure-browser td:nth-child(4) { width:auto; }
+    .structure-browser th:nth-child(5), .structure-browser td:nth-child(5) { width:72px; }
+    .structure-browser th:nth-child(6), .structure-browser td:nth-child(6) { width:58px; text-align:right; }
+    .structure-browser th:nth-child(7), .structure-browser td:nth-child(7) { width:46px; text-align:right; }
+    .structure-browser th:nth-child(8), .structure-browser td:nth-child(8) { width:56px; text-align:right; }
+    .structure-browser th:nth-child(2), .structure-browser td:nth-child(2), .structure-browser th:nth-child(3), .structure-browser td:nth-child(3), .structure-browser th:nth-child(9), .structure-browser td:nth-child(9), .structure-browser th:nth-child(10), .structure-browser td:nth-child(10), .structure-browser th:nth-child(11), .structure-browser td:nth-child(11), .structure-browser th:nth-child(12), .structure-browser td:nth-child(12) { display:none; }
+    .structure-browser .row-card-meta { display:block; margin-top:4px; color:var(--muted); font-size:10px; line-height:1.25; font-weight:550; }
+    .structure-browser .truncate { white-space:normal; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.25; max-height:2.5em; }
     .table-wrap { max-height:720px; }
     table { font-size:12px; }
     th, td { padding:7px 8px; }
     .compact-filter-panel { display:none; }
-    @media (max-width:1300px) { .app { grid-template-columns:1fr; } aside { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line); } .filter-panel { grid-template-columns:1fr; } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .atlas-grid, .hero-copy { grid-template-columns:1fr; } .structure-browser, .selected-panel { position:static; } .cycle-panel .panel-body { min-height:0; } }
+    .sidebar-toggle { width:100%; min-height:34px; margin:0 0 12px; border:1px solid var(--line); border-radius:8px; background:#fff; color:#4d5866; font-size:12px; font-weight:750; }
+    .app.sidebar-collapsed { grid-template-columns:58px minmax(0,1fr); }
+    .app.sidebar-collapsed aside { padding:12px 8px; overflow:hidden; }
+    .app.sidebar-collapsed aside > :not(.sidebar-toggle) { display:none; }
+    .app.sidebar-collapsed .sidebar-toggle { min-height:110px; padding:8px 4px; writing-mode:vertical-rl; text-orientation:mixed; }
+    .structure-only .app { display:block; }
+    .structure-only aside, .structure-only .topbar, .structure-only .stats, .structure-only .cycle-browser-panel, .structure-only .compact-filter-panel { display:none !important; }
+    .structure-only main { margin:0; padding:16px; }
+    .structure-only .selected-panel { margin:0; }
+    @media (max-width:1300px) { .app { grid-template-columns:1fr; } aside { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--line); } .app.sidebar-collapsed { grid-template-columns:1fr; } .app.sidebar-collapsed aside { height:auto; padding:10px 12px; } .app.sidebar-collapsed .sidebar-toggle { min-height:34px; writing-mode:horizontal-tb; } .filter-panel { grid-template-columns:1fr; } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .atlas-grid, .hero-copy { grid-template-columns:1fr; } .cycle-browser-panel, .selected-panel { position:static; max-height:none; } .cycle-browser-panel .panel-body { overflow:visible; } .cycle-panel .panel-body { min-height:0; } }
+    @media (max-width:1150px) { .cycle-browser-panel { height:auto; max-height:none; } .cycle-browser-panel .panel-body { grid-template-columns:1fr; grid-template-areas:"cycle" "context" "filters" "list"; grid-template-rows:auto; } .cycle-browser-panel .cycle { height:auto; min-height:0; justify-items:center; } .cycle-browser-panel .cycle-art { width:100%; height:auto; max-width:520px; margin:0 auto; } .structure-browser .table-wrap { max-height:360px; } .selected-panel .molstar-workbench { grid-template-columns:1fr; } .selected-panel .molstar-viewer { min-height:520px; height:58vh; } }
     @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
     @media (max-width:900px) { .molstar-workbench { grid-template-columns:1fr; } .molstar-selection-sidebar { max-height:none; } }
     @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open], .tabs, .cycle-panel .panel-body { grid-template-columns:1fr; } .cycle-context { border-left:0; border-top:1px solid #e1e6ec; padding-left:0; padding-top:10px; } .hero-copy h1 { font-size:25px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
@@ -343,12 +368,13 @@
 <body>
   <div class="app">
     <aside>
+      <button type="button" class="sidebar-toggle" id="sidebarToggle" title="Collapse or expand the navigation sidebar">Hide sidebar</button>
       <div class="brand-block">
         <h1>SpliceVis</h1>
         <div class="subtle">Explore deposited spliceosome structures, inspect color-coded 3D previews, and copy ready-to-run ChimeraX scripts.</div>
       </div>
       <div class="filter-panel">
-        <div class="field search-field"><label for="search">Find structures</label><input id="search" type="search" placeholder="PDB, protein, RNA, author"></div>
+        <div class="field search-field"><label for="search">Find structures</label><input id="search" type="search" placeholder="PDB, state, author, species"></div>
         <details class="refine-panel">
           <summary>Refine results</summary>
           <div class="refine-grid">
@@ -356,7 +382,7 @@
             <div class="field"><label for="family">State</label><select id="family"></select></div>
             <div class="field"><label for="species">Species</label><select id="species"></select></div>
             <div class="field"><label for="rnaFeatureFilter">RNA feature</label><select id="rnaFeatureFilter"></select></div>
-            <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="pdb">PDB</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
+            <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="pdb">PDB</option><option value="title">Title</option><option value="state">State</option><option value="species">Species</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
           </div>
         </details>
       </div>
@@ -383,11 +409,20 @@
       <div id="structuresView">
         <section class="stats" id="stats"></section>
         <section class="atlas-grid">
-          <div class="atlas-main">
-            <details class="panel cycle-panel" open><summary class="panel-head"><h2>Splicing Cycle</h2><span class="subtle">click a state to filter structures</span></summary><div class="panel-body"><div class="cycle" id="cycle"></div><div class="cycle-context" id="cycleContext"></div></div></details>
-            <div class="panel selected-panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
-            <section class="panel active-filter-panel" id="activeFilterPanel" hidden><div class="panel-body"><strong>Filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
-            <details class="panel compact-filter-panel"><summary class="panel-head"><h2>Advanced RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></summary><div class="panel-body"><div class="rna-feature-picker">
+          <section class="cycle-browser-panel panel">
+            <div class="panel-head"><h2>Browse Structures</h2><label class="inline-toggle" title="When enabled, clicking a structure row opens a clean selected-structure panel in a new browser tab."><input id="openPanelOnly" type="checkbox"> open selected panel in new tab</label></div>
+            <div class="panel-body">
+              <div class="cycle" id="cycle"></div>
+              <div class="cycle-context" id="cycleContext"></div>
+              <section class="active-filter-panel" id="activeFilterPanel" hidden><div class="panel-body"><strong>Filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
+              <section class="structure-browser">
+                <div class="structure-list-head"><h3>Associated Structures</h3><span class="subtle" id="tableCount"></span></div>
+                <div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Res.</th><th data-sort="year">Year</th><th data-sort="chains">Chains</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
+              </section>
+            </div>
+          </section>
+          <div class="panel selected-panel"><div class="panel-head"><h2>Selected Structure</h2><span class="subtle" id="selectedId"></span></div><div class="panel-body" id="detail"></div></div>
+          <details class="panel compact-filter-panel"><summary class="panel-head"><h2>Advanced RNA Feature Filters</h2><span class="subtle">search annotated feature names or use presets</span></summary><div class="panel-body"><div class="rna-feature-picker">
               <div class="field"><label for="rnaFeatureQuickSearch">Search Or Choose RNA Feature</label><input id="rnaFeatureQuickSearch" type="search" placeholder="5SS, branch, exon, U6"></div>
               <div class="subtle">Matching feature filters appear below; click one to apply it.</div>
             </div><div class="rna-feature-results" id="rnaFeatureQuickResults"></div><div class="quick-filters" id="rnaQuickFilters">
@@ -398,10 +433,6 @@
               <button type="button" class="quick-filter" data-rna-feature="feature:branch_point_adenosine">Branch A</button>
               <button type="button" class="quick-filter" data-rna-feature="feature:U6_ACAGAGA_box">U6 ACAGAGA</button>
             </div></div></details>
-          </div>
-          <section class="workspace structure-browser panel">
-            <div class="panel-head"><h2>Structures</h2><span class="subtle" id="tableCount"></span></div><div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Resolution</th><th data-sort="year">Year</th><th data-sort="chains">Chain count</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
-          </section>
         </section>
       </div>
       <div id="proximityView" hidden>
@@ -478,9 +509,9 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     let proteinLookup = [];
     let rnaFeatureDefinitions = [];
     let rnaFeatureConsistency = [];
-    const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null };
+    const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, openPanelInNewTab:false, panelOnly:false };
     const els = {};
-    for (const id of ["search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
+    for (const id of ["sidebarToggle","openPanelOnly","search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U2 snRNP","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const NODE_POS = [[280,100],[130,250],[205,410],[400,292],[365,535],[540,535],[705,515],[850,465],[990,390],[1110,295],[1190,190],[1150,92],[880,100],[735,100],[590,100]];
@@ -491,6 +522,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     function esc(v){return String(v ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
     function attr(v){return esc(v);}
     function unique(values){return [...new Set(values.filter(Boolean))].sort();}
+    function formatResolution(value){
+      if(value === null || value === undefined || value === "") return "";
+      const number = Number.parseFloat(value);
+      return Number.isFinite(number) ? number.toFixed(1) : String(value);
+    }
     async function init(){
       const response = await fetch("data/structures.json");
       if (!response.ok) throw new Error(`Could not load data/structures.json: ${response.status}`);
@@ -506,7 +542,12 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       rnaFeatureConsistency = payload.rna_feature_consistency || [];
       records = DATA.records;
       proteinLookup = DATA.protein_lookup;
-      state.selected = (records.find(r=>String(r.pdb_id).toLowerCase()==="5zya") || records[0])?.pdb_id || "";
+      const params = new URLSearchParams(window.location.search);
+      const panelPdb = String(params.get("panel") || params.get("structure") || "").trim().toLowerCase();
+      const panelRecord = panelPdb ? records.find(r=>String(r.pdb_id).toLowerCase()===panelPdb) : null;
+      state.panelOnly = Boolean(panelRecord);
+      if(state.panelOnly) document.body.classList.add("structure-only");
+      state.selected = (panelRecord || records.find(r=>String(r.pdb_id).toLowerCase()==="6ah0") || records.find(r=>String(r.pdb_id).toLowerCase()==="5zya") || records[0])?.pdb_id || "";
       molstarAutoPreviewEnabled = Boolean(state.selected);
       els.family.innerHTML = '<option value="all">All states</option>' + STAGES.map(s=>`<option value="${attr(s)}">${esc(s)}</option>`).join("");
       els.species.innerHTML = '<option value="all">All species</option>' + unique(records.map(r=>r.species)).map(s=>`<option>${esc(s)}</option>`).join("");
@@ -516,7 +557,27 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       populateProximitySpecies();
       renderRnaFeatureQuickSelect();
       bind();
+      renderSidebarState();
       render();
+    }
+    function renderSidebarState(){
+      const app = document.querySelector(".app");
+      if(!app || !els.sidebarToggle) return;
+      app.classList.toggle("sidebar-collapsed", state.sidebarCollapsed);
+      els.sidebarToggle.textContent = state.sidebarCollapsed ? "Show sidebar" : "Hide sidebar";
+      els.sidebarToggle.setAttribute("aria-expanded", String(!state.sidebarCollapsed));
+      requestAnimationFrame(fitCycleArt);
+    }
+    function fitCycleArt(){
+      const art = els.cycle?.querySelector(".cycle-art");
+      if(!art || !els.cycle) return;
+      const box = els.cycle.getBoundingClientRect();
+      if(!box.width || !box.height) return;
+      const ratio = 1578 / 1391;
+      const width = Math.floor(Math.min(box.width, box.height * ratio));
+      const height = Math.floor(width / ratio);
+      art.style.width = `${width}px`;
+      art.style.height = `${height}px`;
     }
     function populateProteinComplexFilter(){
       const values = new Set();
@@ -539,6 +600,9 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       els.proximitySpecies.innerHTML = '<option value="all">All species</option>' + unique(records.map(r=>r.species)).map(s=>`<option value="${attr(s)}">${esc(s)}</option>`).join("");
     }
     function bind(){
+      els.sidebarToggle.addEventListener("click",()=>{state.sidebarCollapsed=!state.sidebarCollapsed; renderSidebarState();});
+      window.addEventListener("resize",()=>requestAnimationFrame(fitCycleArt));
+      els.openPanelOnly.addEventListener("change",()=>{state.openPanelInNewTab=els.openPanelOnly.checked;});
       els.search.addEventListener("input",()=>{state.query=els.search.value.trim().toLowerCase(); render();});
       els.searchMode.addEventListener("change",()=>{state.mode=els.searchMode.value; render();});
       els.family.addEventListener("change",()=>{state.family=els.family.value; state.cyclePdbIds=[]; state.cyclePdbLabel=""; render();});
@@ -555,7 +619,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       els.localRepoPath.addEventListener("input",()=>{state.localRepoPath=els.localRepoPath.value.trim(); render();});
       els.sortBy.addEventListener("change",()=>{state.sortBy=els.sortBy.value; state.sortDir = ["year","chains","proteins","resolution"].includes(state.sortBy) ? "desc" : "asc"; render();});
       els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); render();});
-      document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(!th)return; const key=th.dataset.sort; if(state.sortBy===key) state.sortDir=state.sortDir==="asc"?"desc":"asc"; else { state.sortBy=key; state.sortDir=["year","chains","proteins","resolution"].includes(key)?"desc":"asc"; } els.sortBy.value = ["state","title","species"].includes(key) ? "pathway" : key; render();});
+      document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(!th)return; const key=th.dataset.sort; if(state.sortBy===key) state.sortDir=state.sortDir==="asc"?"desc":"asc"; else { state.sortBy=key; state.sortDir=["year","chains","proteins","resolution"].includes(key)?"desc":"asc"; } if([...els.sortBy.options].some(option=>option.value===key)) els.sortBy.value = key; render();});
       els.runProximitySearch.addEventListener("click", runProximitySearch);
       els.copyProximityCxc.addEventListener("click",async()=>copyText(await proximityChimeraXScript(), els.copyProximityCxc));
       els.downloadProximityCsv.addEventListener("click", downloadProximityCsv);
@@ -808,6 +872,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       if(!svg){ els.cycle.innerHTML='<div class="subtle">Splicing cycle SVG was not embedded during dashboard generation.</div>'; return; }
       const hotspots=cycleHotspots();
       els.cycle.innerHTML = `<div class="cycle-art" aria-label="Splicing cycle pathway filter">${svg}${hotspots.map((item,i)=>{ const count=cycleHotspotCount(item, rows); const active=cycleHotspotActive(item); const label=item.pdbs ? `${item.label}: show ${item.pdbs.map(id=>id.toUpperCase()).join(", ")}` : `${item.label}: show ${count} structures`; return `<button type="button" class="cycle-hotspot ${active?"active":""} ${count?"":"empty-stage"}" data-cycle-hotspot="${i}" style="${cycleHotspotStyle(item)}" title="${attr(label)}" aria-label="${attr(label)}"></button>`; }).join("")}</div>`;
+      fitCycleArt();
       for(const button of els.cycle.querySelectorAll("[data-cycle-hotspot]")) button.addEventListener("click",()=>activateCycleHotspot(hotspots[Number(button.dataset.cycleHotspot)]));
     }
     function renderCycle(rows){
@@ -857,13 +922,15 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     }
     function renderCycleContext(rows){
       if(!els.cycleContext) return;
-      const selectedRecord = records.find(r=>r.pdb_id===state.selected);
-      const stage = state.family !== "all" ? state.family : selectedRecord?.state || "";
-      const guide = stateGuideFor(stage);
-      const count = stage ? rows.filter(r=>r.state===stage).length : rows.length;
-      const context = guide?.composition || guide?.notes || "Click a state in the cycle to filter the structure list; selecting a row keeps the same 3D viewer and script controls.";
+      const shownRows = filtered();
+      const explicitStage = state.family !== "all" ? state.family : "";
+      const stage = explicitStage || state.cyclePdbLabel || "";
+      const guide = explicitStage ? stateGuideFor(explicitStage) : null;
+      const countLabel = `${shownRows.length} shown`;
+      const title = stage || "All pathway states";
+      const context = guide?.composition || guide?.notes || (state.cyclePdbLabel ? "Curated structures grouped in this pathway hotspot." : "Click a state in the cycle to filter the associated structures below; selecting a row opens the 3D viewer and ChimeraX controls.");
       const transition = guide?.transition || guide?.helicases || "";
-      els.cycleContext.innerHTML = `<div class="context-label">${esc(stage || "All states")}</div><div class="context-line"><strong>${esc(stage || "Current result set")}</strong> <span class="subtle">${stage ? `${count} shown` : `${rows.length} shown`}</span></div><div class="context-label">Context</div><div class="context-line">${esc(context)}</div>${transition && transition !== context ? `<div class="context-label">Transition</div><div class="context-line">${esc(transition)}</div>` : ""}`;
+      els.cycleContext.innerHTML = `<div class="context-title"><span>${esc(title)}</span><span class="subtle">${esc(countLabel)}</span></div><div class="context-label">Context</div><div class="context-line">${esc(context)}</div>${transition && transition !== context ? `<div class="context-label">Transition</div><div class="context-line">${esc(transition)}</div>` : ""}`;
     }
     function cycleNode(stage,x,y,count){
       const active = state.family===stage ? " active" : "";
@@ -918,17 +985,26 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         els.rows.innerHTML = `<tr><td colspan="12" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
         return;
       }
-      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.state, r.resolution ? `${r.resolution} A` : "", r.year].filter(Boolean).join(" / "); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td>${esc(r.state)}</td><td>${esc(r.resolution||"")}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
+      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td>${esc(r.state)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
       for (const row of els.rows.querySelectorAll("tr")) {
         row.addEventListener("click", event => {
           const button = event.target.closest("[data-compare]");
           if (button) { toggleCompare(button.dataset.compare); event.stopPropagation(); return; }
+          if(state.openPanelInNewTab){
+            window.open(structurePanelUrl(row.dataset.pdb), "_blank", "noopener");
+            return;
+          }
           state.selected = row.dataset.pdb;
           molstarAutoPreviewEnabled = true;
           render();
           autoLoadMolstarForSelected();
         });
       }
+    }
+    function structurePanelUrl(pdbId){
+      const url = new URL(window.location.href);
+      url.searchParams.set("panel", String(pdbId || "").toLowerCase());
+      return url.toString();
     }
     const proximityLoadPromises = new Map();
     window.SPLICEOSOME_PROXIMITY = window.SPLICEOSOME_PROXIMITY || {};
@@ -1194,11 +1270,9 @@ ${await scriptFor(record,"no_maps")}
       const legend = molstarLegend(r);
       const hasFeatures = Boolean((r.molstar_feature_selections || []).length);
       const hasLegend = Boolean(legend);
-      const activeSelection = hasFeatures ? "rna" : "protein";
-      const tabs = hasFeatures && hasLegend ? `<div class="molstar-selection-tabs"><button type="button" class="molstar-selection-tab active" data-selection-tab="rna" onclick="switchMolstarSelectionTab('rna')">RNA elements</button><button type="button" class="molstar-selection-tab" data-selection-tab="protein" onclick="switchMolstarSelectionTab('protein')">Protein colors</button></div>` : "";
       const features = hasFeatures ? `<section class="molstar-selection-section" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
-      const legendBlock = hasLegend ? `<section class="molstar-selection-section" data-molstar-section="protein"><h3>Protein color legend</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><div class="molstar-legend">${legend}</div></section>` : "";
-      const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar" data-active-selection="${attr(activeSelection)}">${tabs}${features}${legendBlock}</aside>` : "";
+      const legendBlock = hasLegend ? `<section class="molstar-selection-section" data-molstar-section="protein"><h3>Proteins</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><div class="molstar-legend">${legend}</div></section>` : "";
+      const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar">${features}${legendBlock}</aside>` : "";
       return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div></div>`;
     }
     function switchMolstarSelectionTab(tab){
@@ -1252,6 +1326,7 @@ ${await scriptFor(record,"no_maps")}
         viewer.setAttribute("sequence-panel", "false");
         viewer.setAttribute("pdbe-link", "");
         viewer.setAttribute("loading-overlay", "");
+        viewer.setAttribute("lighting", "flat");
         viewer.setAttribute("subscribe-events", "false");
         viewer.setAttribute("bg-color-r", "255");
         viewer.setAttribute("bg-color-g", "255");
@@ -1263,6 +1338,7 @@ ${await scriptFor(record,"no_maps")}
         state.molstarPdbId = r.pdb_id;
         await new Promise(resolve=>setTimeout(resolve, 3500));
         if(state.selected !== requestedPdbId) return;
+        await applyMolstarIllustrativeStyle();
         try{
           await applyMolstarColors();
         }catch(colorError){
@@ -1303,6 +1379,35 @@ ${await scriptFor(record,"no_maps")}
       const viewer = document.querySelector("#molstarViewer pdbe-molstar");
       if(viewer) state.molstarViewer = viewer;
       return state.molstarViewer;
+    }
+    async function applyMolstarIllustrativeStyle(){
+      const viewer = currentMolstarViewerElement();
+      const plugin = viewer?.viewerInstance?.plugin;
+      const component = plugin?.managers?.structure?.component;
+      const canvas = plugin?.canvas3d;
+      if(!component || !canvas) return false;
+      try{
+        const options = component.state?.options || {};
+        await component.setOptions({...options, ignoreLight:true});
+        const postprocessing = canvas.props?.postprocessing || {};
+        const existingOutlineParams = postprocessing.outline?.name === "on" ? postprocessing.outline.params || {} : {};
+        const existingOcclusionParams = postprocessing.occlusion?.name === "on" ? postprocessing.occlusion.params || {} : {};
+        canvas.setProps({postprocessing:{
+          outline:{
+            name:"on",
+            params:{...existingOutlineParams, scale:.65, color:0, threshold:existingOutlineParams.threshold ?? .33, includeTransparent:true}
+          },
+          occlusion:{
+            name:"on",
+            params:Object.keys(existingOcclusionParams).length ? existingOcclusionParams : {multiScale:{name:"off",params:{}},radius:5,bias:.8,blurKernelSize:15,blurDepthBias:.5,samples:32,resolutionScale:1,color:0,transparentThreshold:.4}
+          },
+          shadow:{name:"off",params:{}}
+        }});
+        return true;
+      }catch(error){
+        console.warn("Could not apply Mol* illustrative style", error);
+        return false;
+      }
     }
     async function applyMolstarColors(){
       const r = records.find(item=>item.pdb_id===state.molstarPdbId || item.pdb_id===state.selected);
@@ -1446,10 +1551,6 @@ ${await scriptFor(record,"no_maps")}
     function renderDetail(r){
       if(!r){ els.detail.innerHTML='<div class="subtle">No structure selected.</div>'; return; }
       els.selectedId.textContent = r.pdb_id.toUpperCase();
-      const componentSwatch = item => item.color_hex ? `<span class="component-swatch" style="background:${attr(item.color_hex)}" title="${attr(item.color_hex)}"></span>` : "";
-      const proteins = r.proteins.map(p=>`<span class="chip" title="${attr([p.name,p.gene].filter(Boolean).join("; "))}">${componentSwatch(p)}<strong>${esc(p.display_name||p.gene||p.name)}</strong><br><span class="subtle">${esc(p.chains)}</span></span>`).join("");
-      const rnas = r.rnas.map(x=>`<span class="chip" title="${attr([x.name,x.gene].filter(Boolean).join("; "))}">${componentSwatch(x)}<strong>${esc(x.display_name||x.name)}</strong><br><span class="subtle">${esc(x.chains)}</span></span>`).join("");
-      const thumbnail = r.thumbnail && r.thumbnail.image ? `<h3>Thumbnail</h3><img class="thumbnail-img" src="${attr(r.thumbnail.image)}" alt="ChimeraX thumbnail" loading="lazy">` : "";
       const systematicAvailable = Boolean(r.script_systematic_path);
       const selectedScriptMode = state.chainMode === "systematic" && systematicAvailable ? "systematic" : "original";
       if (state.chainMode === "systematic" && !systematicAvailable) state.chainMode = "original";
@@ -1458,9 +1559,9 @@ ${await scriptFor(record,"no_maps")}
       const primaryMapButton = primaryMapAvailable ? `<button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy ChimeraX script with primary map</button>` : "";
       const compositeButtons = (r.composite_groups||[]).map(group => `<button onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')}">Copy split-assembly ChimeraX script: ${esc(group.label || group.composite_id)}</button>`).join("");
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
-      const scriptBlock = `${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy script without maps</button>${primaryMapButton}${compositeButtons}</div>`;
+      const scriptBlock = `${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script without maps</button>${primaryMapButton}${compositeButtons}</div>`;
       const resourceBlock = `${externalLinks(r)}<div class="actions secondary-actions">${reportIssueLink(r)}</div>`;
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(r.resolution||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("ChimeraX scripts", scriptBlock, true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("Components", `<h3>Proteins (${r.protein_count})</h3><div class="mini-list"><div class="chips">${proteins || '<span class="subtle">None listed</span>'}</div></div><h3>RNAs (${r.rna_count})</h3><div class="mini-list"><div class="chips">${rnas || '<span class="subtle">None listed</span>'}</div></div>`)}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("ChimeraX scripts", scriptBlock, true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
       renderMolstarFeatureButtons();
       scriptFor(r, "no_maps").then(text => {
         const preview = document.getElementById("scriptPreview");
