@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #311; target model: #311.1; RNA labels: #311.2.
+# Structure group: #315; target model: #315.1; RNA labels: #315.2.
 
-open 8h6l id 311.9 name 8H6L_anchor
-open 7evn id 311.1 name 7EVN
-rename #311 U2_snRNP_7evn_structure
+open 8h6l id 315.9 name 8H6L_anchor
+open 7evn id 315.1 name 7EVN
+rename #315 U2_snRNP_7evn_structure
 
 # Align on SF3B1.
-matchmaker #311.1/C to #311.9/2G
-close #311.9
+matchmaker #315.1/C to #315.9/2G
+close #315.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,22 +40,22 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3B5
-color #311.1/B #92BB8F
+color #315.1/B #92BB8F
 # SF3B1
-color #311.1/C #487957
+color #315.1/C #487957
 # PHF5A
-color #311.1/D #375A40
+color #315.1/D #375A40
 # SF3B3
-color #311.1/A #6A9064
+color #315.1/A #6A9064
 # DDX42
-color #311.1/E #479061
+color #315.1/E #479061
 # Named selections for subcomplexes using original deposited chain IDs.
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7EVN_U2_snRNP #311.1/E
+name pdb_7EVN_U2_snRNP #315.1/E
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7EVN_U2_SF3B #311.1/A,B,C,D
+name pdb_7EVN_U2_SF3B #315.1/A,B,C,D
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

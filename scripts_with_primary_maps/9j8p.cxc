@@ -1,0 +1,116 @@
+# Lightweight ChimeraX script for 9J8P
+# Models are downloaded directly by ChimeraX from the PDB.
+# Primary maps, when requested, are downloaded directly from EMDB.
+# Original deposited chain identifiers are used.
+
+# Shared anchor frame: 8H6L
+# Structure group: #329; target model: #329.1; RNA labels: #329.2.
+
+open 8h6l id 329.9 name 8H6L_anchor
+open 9j8p id 329.1 name 9J8P
+open emdb:61237 id 329.3.1 name U6_snRNA_biogenesis_9j8p_EMD-61237_primary_map
+rename #329 U6_snRNA_biogenesis_9j8p_structure
+
+# No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
+close #329.9
+
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# U6 snRNA
+color #329.1/B #EF4444
+# Named selections for subcomplexes using original deposited chain IDs.
+# U6 snRNP
+# selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name pdb_9J8P_U6_snRNP #329.1/B
+# other
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_9J8P_other #329.1/A
+# Named selections for resolved snRNA functional regions.
+# U6 snRNA 5' terminal stem-loop: residues 1-30, reference-alignment, high confidence
+# selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_5prime_terminal_stem_loop","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_5_terminal_stem_loop #329.1/B:1-30
+# U6 snRNA U2/U6 helix I partner: residues 35-60, motif-neighborhood, medium confidence
+# selector_meta {"color":"#D0183C","family":"RNA","feature":"U6_U2_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_U2_helix_I_partner #329.1/B:35-60
+# U6 snRNA 5' splice-site upstream contact: residues 38-49, motif-neighborhood, medium confidence
+# selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_5SS_upstream_contact #329.1/B:38-49
+# U6 snRNA ACAGAGA box: residues 41-47, sequence-motif, high confidence
+# selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_ACAGAGA_box #329.1/B:41-47
+# U6 snRNA internal stem-loop: residues 79-106, motif-neighborhood, low confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_ISL #329.1/B:79-106
+# U6 snRNA AGC catalytic triad: residues 92-94, sequence-motif, medium confidence
+# selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_AGC_catalytic_triad #329.1/B:92-94
+# U6 snRNA LSm site: residues 97-106, terminal-region, low confidence
+# selector_meta {"color":"#E33A55","family":"RNA","feature":"U6_LSm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNA_biogenesis_9J8P_U6_LSm_site #329.1/B:97-106
+# RNA feature nucleotide display.
+select #329.1 & nucleic
+nucleotides sel atoms
+select clear
+# U6 5' terminal SL: residues 1-30
+color #329.1/B:1-30 #DC143C
+select #329.1/B:1-30
+nucleotides sel fill
+select clear
+# U2/U6 helix I: residues 35-60
+color #329.1/B:35-60 #D0183C
+select #329.1/B:35-60
+nucleotides sel fill
+select clear
+# U6 5'SS contact: residues 38-49
+color #329.1/B:38-49 #E01842
+select #329.1/B:38-49
+nucleotides sel fill
+select clear
+# U6 ACAGAGA: residues 41-47
+color #329.1/B:41-47 #DC143C
+select #329.1/B:41-47
+nucleotides sel fill
+select clear
+# U6 ISL: residues 79-106
+color #329.1/B:79-106 #D61A3D
+select #329.1/B:79-106
+nucleotides sel fill
+select clear
+# U6 AGC triad: residues 92-94
+color #329.1/B:92-94 #C91236
+select #329.1/B:92-94
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #329.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9j8p_rna_labels.py
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9j8p_selection_browser.py
+view
+show nucleic

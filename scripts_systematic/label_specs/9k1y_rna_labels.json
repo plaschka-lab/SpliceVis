@@ -1,8 +1,8 @@
 {
-  "structure_model_id": "317.1",
-  "label_group_model_id": "317.2",
+  "structure_model_id": "321.1",
+  "label_group_model_id": "321.2",
   "cleanup_model_ids": [
-    "317.1.90"
+    "321.1.90"
   ],
   "label_group_name": "RNA_feature_labels",
   "height": 3.35,
@@ -104,42 +104,42 @@
       "index": 1,
       "selector_name": "U2_snRNP_9K1Y_branch_region",
       "feature": "branch_point_region",
-      "atomspec": "#317.1/I:36",
+      "atomspec": "#321.1/I:36",
       "text": "BP region (res. 25-48)",
       "color": "#303030",
       "model_name": "label_01_BP_region_res_25_48",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",
-      "category_model_id": "317.2.1",
-      "label_model_id": "317.2.1.1",
+      "category_model_id": "321.2.1",
+      "label_model_id": "321.2.1.1",
       "default_visible": true
     },
     {
       "index": 2,
       "selector_name": "U2_snRNP_9K1Y_branch_A",
       "feature": "branch_point_adenosine",
-      "atomspec": "#317.1/I:36",
+      "atomspec": "#321.1/I:36",
       "text": "BP-A (res. 36)",
       "color": "#303030",
       "model_name": "label_02_BP_A_res_36",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",
-      "category_model_id": "317.2.1",
-      "label_model_id": "317.2.1.2",
+      "category_model_id": "321.2.1",
+      "label_model_id": "321.2.1.2",
       "default_visible": true
     },
     {
       "index": 3,
       "selector_name": "U2_snRNP_9K1Y_U2_branchpoint_pairing_region",
       "feature": "U2_branchpoint_pairing_region",
-      "atomspec": "#317.1/2:6",
+      "atomspec": "#321.1/2:6",
       "text": "U2 BP pairing (res. 2-11)",
       "color": "#0B6E2D",
       "model_name": "label_03_U2_BP_pairing_res_2_11",
       "category_key": "snRNA_pre_mRNA_regions",
       "category_name": "snRNA-pre-mRNA regions",
-      "category_model_id": "317.2.2",
-      "label_model_id": "317.2.2.1",
+      "category_model_id": "321.2.2",
+      "label_model_id": "321.2.2.1",
       "default_visible": true
     }
   ]

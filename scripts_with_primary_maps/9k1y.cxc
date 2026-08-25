@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #317; target model: #317.1; RNA labels: #317.2.
+# Structure group: #321; target model: #321.1; RNA labels: #321.2.
 
-open 8h6l id 317.9 name 8H6L_anchor
-open 9k1y id 317.1 name 9K1Y
-open emdb:61984 id 317.3.1 name U2_snRNP_9k1y_EMD-61984_primary_map
-rename #317 U2_snRNP_9k1y_structure
+open 8h6l id 321.9 name 8H6L_anchor
+open 9k1y id 321.1 name 9K1Y
+open emdb:61984 id 321.3.1 name U2_snRNP_9k1y_EMD-61984_primary_map
+rename #321 U2_snRNP_9k1y_structure
 
 # Align on SF3B1.
-matchmaker #317.1/C to #317.9/2G bring #317.3.1
-close #317.9
+matchmaker #321.1/C to #321.9/2G bring #321.3.1
+close #321.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,54 +41,54 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3B1
-color #317.1/C #487957
+color #321.1/C #487957
 # PHF5A
-color #317.1/D #375A40
+color #321.1/D #375A40
 # SF3B3
-color #317.1/A #6A9064
+color #321.1/A #6A9064
 # SF3B5
-color #317.1/B #92BB8F
+color #321.1/B #92BB8F
 # INTRON
-color #317.1/G #303030
+color #321.1/G #303030
 # U2 snRNA
-color #317.1/H #71C562
+color #321.1/H #71C562
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_9K1Y_RNA_substrate #317.1/G
+name pdb_9K1Y_RNA_substrate #321.1/G
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9K1Y_U2_snRNP #317.1/H
+name pdb_9K1Y_U2_snRNP #321.1/H
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9K1Y_U2_SF3B #317.1/A,B,C,D
+name pdb_9K1Y_U2_SF3B #321.1/A,B,C,D
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues 25-48, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1Y_substrate #317.1/G:25-48
+name U2_snRNP_9K1Y_substrate #321.1/G:25-48
 # branch point region: residues 25-48, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1Y_branch_region #317.1/G:25-48
+name U2_snRNP_9K1Y_branch_region #321.1/G:25-48
 # branch point adenosine: residues 36, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1Y_branch_A #317.1/G:36
+name U2_snRNP_9K1Y_branch_A #321.1/G:36
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA branchpoint pairing region: residues 2-11, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_9K1Y_U2_branchpoint_pairing_region #317.1/H:2-11
+name U2_snRNP_9K1Y_U2_branchpoint_pairing_region #321.1/H:2-11
 # RNA feature nucleotide display.
-select #317.1 & nucleic
+select #321.1 & nucleic
 nucleotides sel atoms
 select clear
 # BP region: residues 25-48
 # BP-A: residues 36
 # U2 BP pairing: residues 2-11
-color #317.1/H:2-11 #0B6E2D
-select #317.1/H:2-11
+color #321.1/H:2-11 #0B6E2D
+select #321.1/H:2-11
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #317.2.
+# Labels are created as independent grouped models under #321.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9k1y_rna_labels.py
 # Searchable named selection browser.

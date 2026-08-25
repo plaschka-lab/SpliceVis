@@ -1,0 +1,79 @@
+# Lightweight ChimeraX script for 4PKD
+# Models are downloaded directly by ChimeraX from the PDB.
+# Primary maps, when requested, are downloaded directly from EMDB.
+# Original deposited chain identifiers are used.
+
+# Shared anchor frame: 8H6L
+# Structure group: #304; target model: #304.1; RNA labels: #304.2.
+
+open 8h6l id 304.9 name 8H6L_anchor
+open 4pkd id 304.1 name 4PKD
+rename #304 U1_snRNP_4pkd_structure
+
+# No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
+close #304.9
+
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# U1 snRNA
+color #304.1/V #D46BB8
+# SNRNP70
+color #304.1/B #8C3D78
+# Named selections for subcomplexes using original deposited chain IDs.
+# U1 snRNP
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_4PKD_U1_snRNP #304.1/B,V
+# Named selections for resolved snRNA functional regions.
+# U1 snRNA 5' splice-site recognition region: residues 59-68, review-region, medium confidence
+# selector_meta {"color":"#B66AAE","family":"RNA","feature":"U1_5prime_5SS_recognition","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
+name U1_snRNP_4PKD_U1_5_5SS_recognition #304.1/V:59-68
+# U1 snRNA stem-loop 1: residues 69-103, review-region, low confidence
+# selector_meta {"color":"#BF72B7","family":"RNA","feature":"U1_SL1","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name U1_snRNP_4PKD_U1_SL1 #304.1/V:69-103
+# RNA feature nucleotide display.
+select #304.1 & nucleic
+nucleotides sel atoms
+select clear
+# U1 5'SS recog.: residues 59-68
+color #304.1/V:59-68 #B66AAE
+select #304.1/V:59-68
+nucleotides sel fill
+select clear
+# U1 SL1: residues 69-103
+color #304.1/V:69-103 #BF72B7
+select #304.1/V:69-103
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #304.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/4pkd_rna_labels.py
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/4pkd_selection_browser.py
+view
+show nucleic

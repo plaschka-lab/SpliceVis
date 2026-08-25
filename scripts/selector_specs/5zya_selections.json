@@ -1,7 +1,7 @@
 {
   "pdb_id": "5zya",
-  "structure_model_id": "301.1",
-  "structure_group_id": "301",
+  "structure_model_id": "305.1",
+  "structure_group_id": "305",
   "selectors": [
     {
       "name": "pdb_5ZYA_U2_SF3B",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U2/SF3B",
-      "atomspec": "#301.1/A,B,C,D",
+      "atomspec": "#305.1/A,B,C,D",
       "family": "Protein/RNP groups",
       "group": "U2/SF3B groups",
       "group_key": "",

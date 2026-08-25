@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #369; target model: #369.1; RNA labels: #369.2.
+# Structure group: #376; target model: #376.1; RNA labels: #376.2.
 
-open 8h6l id 369.9 name 8H6L_anchor
-open 7abh id 369.1 name 7ABH
-open emdb:11696 id 369.3.1 name pre_Bact_7abh_EMD-11696_primary_map
-rename #369 pre_Bact_7abh_structure
+open 8h6l id 376.9 name 8H6L_anchor
+open 7abh id 376.1 name 7ABH
+open emdb:11696 id 376.3.1 name pre_Bact_7abh_EMD-11696_primary_map
+rename #376 pre_Bact_7abh_structure
 
 # Align on SF3B1.
-matchmaker #369.1/u to #369.9/2G bring #369.3.1
-close #369.9
+matchmaker #376.1/u to #376.9/2G bring #376.3.1
+close #376.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,100 +41,100 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # CDC5L
-color #369.1/L #DAA520
+color #376.1/L #DAA520
 # PHF5A
-color #369.1/y #375A40
+color #376.1/y #375A40
 # mRNA
-color #369.1/Z #303030
+color #376.1/Z #303030
 # SF3A2
-color #369.1/F #75A074
+color #376.1/F #75A074
 # SF3A3
-color #369.1/4 #9BCF91
+color #376.1/4 #9BCF91
 # SF3B1
-color #369.1/u #487957
+color #376.1/u #487957
 # SF3B2
-color #369.1/T #49926C
+color #376.1/T #49926C
 # SF3B3
-color #369.1/E #6A9064
+color #376.1/E #6A9064
 # SF3B4
-color #369.1/w #77B088
+color #376.1/w #77B088
 # SF3B5
-color #369.1/x #92BB8F
+color #376.1/x #92BB8F
 # SF3B6
-color #369.1/z #ADCEA0
+color #376.1/z #ADCEA0
 # SNIP1
-color #369.1/0 #89BFC8
+color #376.1/0 #89BFC8
 # CGI-79
-color #369.1/1 #5FB491
+color #376.1/1 #5FB491
 # SRM160
-color #369.1/Y #6E96C4
+color #376.1/Y #6E96C4
 # U2 snRNA
-color #369.1/2 #71C562
+color #376.1/2 #71C562
 # BTCD
-color #369.1/7 #BBA681
+color #376.1/7 #BBA681
 # Named selections for subcomplexes using original deposited chain IDs.
 # NTC/PRP19
 # selector_meta {"color":"#F4BF67","family":"Protein/RNP groups","group":"NTC/NTR groups","kind":"subcomplex"}
-name pdb_7ABH_NTC_PRP19 #369.1/L
+name pdb_7ABH_NTC_PRP19 #376.1/L
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_7ABH_RNA_substrate #369.1/Z
+name pdb_7ABH_RNA_substrate #376.1/Z
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7ABH_U2_snRNP #369.1/2
+name pdb_7ABH_U2_snRNP #376.1/2
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7ABH_U2_SF3B #369.1/4,E,F,T,u,w,x,y,z
+name pdb_7ABH_U2_SF3B #376.1/4,E,F,T,u,w,x,y,z
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_7ABH_other #369.1/0,1,7,Y
+name pdb_7ABH_other #376.1/0,1,7,Y
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues 141-168, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABH_substrate #369.1/Z:141-168
+name pre_Bact_7ABH_substrate #376.1/Z:141-168
 # intron: residues 141-168, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABH_intron #369.1/Z:141-168
+name pre_Bact_7ABH_intron #376.1/Z:141-168
 # branch point region: residues 141-168, u2-branch-region-basepair, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABH_branch_region #369.1/Z:141-168
+name pre_Bact_7ABH_branch_region #376.1/Z:141-168
 # polypyrimidine tract: residues 161-168, sequence-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"polypyrimidine_tract","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABH_PPT #369.1/Z:161-168
+name pre_Bact_7ABH_PPT #376.1/Z:161-168
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 29-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name pre_Bact_7ABH_U2_U6_helix_I_partner #369.1/2:29-30
+name pre_Bact_7ABH_U2_U6_helix_I_partner #376.1/2:29-30
 # U2 snRNA branchpoint pairing region: residues 32-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name pre_Bact_7ABH_U2_branchpoint_pairing_region #369.1/2:32-41
+name pre_Bact_7ABH_U2_branchpoint_pairing_region #376.1/2:32-41
 # U2 snRNA stem IIa: residues 46-65, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name pre_Bact_7ABH_U2_stem_IIa #369.1/2:46-65
+name pre_Bact_7ABH_U2_stem_IIa #376.1/2:46-65
 # RNA feature nucleotide display.
-select #369.1 & nucleic
+select #376.1 & nucleic
 nucleotides sel atoms
 select clear
 # intron: residues 141-168
 # BP region: residues 141-168
 # PPT: residues 161-168
 # U2/U6 helix I: residues 29-30
-color #369.1/2:29-30 #047857
-select #369.1/2:29-30
+color #376.1/2:29-30 #047857
+select #376.1/2:29-30
 nucleotides sel fill
 select clear
 # U2 BP pairing: residues 32-41
-color #369.1/2:32-41 #0B6E2D
-select #369.1/2:32-41
+color #376.1/2:32-41 #0B6E2D
+select #376.1/2:32-41
 nucleotides sel fill
 select clear
 # U2 stem IIa: residues 46-65
-color #369.1/2:46-65 #167A38
-select #369.1/2:46-65
+color #376.1/2:46-65 #167A38
+select #376.1/2:46-65
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #369.2.
+# Labels are created as independent grouped models under #376.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/7abh_rna_labels.py
 # Searchable named selection browser.

@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #320; target model: #320.1; RNA labels: #320.2.
+# Structure group: #324; target model: #324.1; RNA labels: #324.2.
 
-open 8h6l id 320.9 name 8H6L_anchor
-open 9ze3 id 320.1 name 9ZE3
-open emdb:74090 id 320.3.1 name U2_snRNP_9ze3_EMD-74090_primary_map
-rename #320 U2_snRNP_9ze3_structure
+open 8h6l id 324.9 name 8H6L_anchor
+open 9ze3 id 324.1 name 9ZE3
+open emdb:74090 id 324.3.1 name U2_snRNP_9ze3_EMD-74090_primary_map
+rename #324 U2_snRNP_9ze3_structure
 
 # Align on SF3B1.
-matchmaker #320.1/B1 to #320.9/2G bring #320.3.1
-close #320.9
+matchmaker #324.1/B1 to #324.9/2G bring #324.3.1
+close #324.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,74 +41,74 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # NAM8
-color #320.1/A #C7A6BE
+color #324.1/A #C7A6BE
 # DHX15
-color #320.1/B #663399
+color #324.1/B #663399
 # KIAA0332
-color #320.1/C #9FD0B7
+color #324.1/C #9FD0B7
 # U2 snRNA
-color #320.1/2 #71C562
+color #324.1/2 #71C562
 # PHF5A
-color #320.1/H #375A40
+color #324.1/H #375A40
 # mRNA
-color #320.1/R #303030
+color #324.1/R #303030
 # SF3B1
-color #320.1/B1 #487957
+color #324.1/B1 #487957
 # SF3B2
-color #320.1/B2 #49926C
+color #324.1/B2 #49926C
 # SF3B3
-color #320.1/B3 #6A9064
+color #324.1/B3 #6A9064
 # SF3B4
-color #320.1/B4 #77B088
+color #324.1/B4 #77B088
 # SF3B5
-color #320.1/B5 #92BB8F
+color #324.1/B5 #92BB8F
 # SF3B6
-color #320.1/B6 #ADCEA0
+color #324.1/B6 #ADCEA0
 # SF3A1
-color #320.1/A1 #55947F
+color #324.1/A1 #55947F
 # SF3A2
-color #320.1/A2 #75A074
+color #324.1/A2 #75A074
 # SF3A3
-color #320.1/A3 #9BCF91
+color #324.1/A3 #9BCF91
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_9ZE3_RNA_substrate #320.1/R
+name pdb_9ZE3_RNA_substrate #324.1/R
 # U1 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
-name pdb_9ZE3_U1_snRNP #320.1/A
+name pdb_9ZE3_U1_snRNP #324.1/A
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9ZE3_U2_snRNP #320.1/2,B
+name pdb_9ZE3_U2_snRNP #324.1/2,B
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9ZE3_U2_SF3B #320.1/A1,A2,A3,B1,B2,B3,B4,B5,B6,H
+name pdb_9ZE3_U2_SF3B #324.1/A1,A2,A3,B1,B2,B3,B4,B5,B6,H
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9ZE3_other #320.1/C
+name pdb_9ZE3_other #324.1/C
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues -18-25, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9ZE3_substrate #320.1/R:-18-25
+name U2_snRNP_9ZE3_substrate #324.1/R:-18-25
 # branch point region: residues -7--3, u2-branch-region-basepair, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9ZE3_branch_region #320.1/R:-7--3
+name U2_snRNP_9ZE3_branch_region #324.1/R:-7--3
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA branchpoint pairing region: residues 32-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_9ZE3_U2_branchpoint_pairing_region #320.1/2:32-41
+name U2_snRNP_9ZE3_U2_branchpoint_pairing_region #324.1/2:32-41
 # RNA feature nucleotide display.
-select #320.1 & nucleic
+select #324.1 & nucleic
 nucleotides sel atoms
 select clear
 # BP region: residues -7--3
 # U2 BP pairing: residues 32-41
-color #320.1/2:32-41 #0B6E2D
-select #320.1/2:32-41
+color #324.1/2:32-41 #0B6E2D
+select #324.1/2:32-41
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #320.2.
+# Labels are created as independent grouped models under #324.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9ze3_rna_labels.py
 # Searchable named selection browser.

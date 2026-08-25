@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #309; target model: #309.1; RNA labels: #309.2.
+# Structure group: #313; target model: #313.1; RNA labels: #313.2.
 
-open 8h6l id 309.9 name 8H6L_anchor
-open 7q4p id 309.1 name 7Q4P
-open emdb:13812 id 309.3.1 name U2_snRNP_7q4p_EMD-13812_primary_map
-rename #309 U2_snRNP_7q4p_structure
+open 8h6l id 313.9 name 8H6L_anchor
+open 7q4p id 313.1 name 7Q4P
+open emdb:13812 id 313.3.1 name U2_snRNP_7q4p_EMD-13812_primary_map
+rename #313 U2_snRNP_7q4p_structure
 
 # Align on SF3B1.
-matchmaker #309.1/A to #309.9/2G bring #309.3.1
-close #309.9
+matchmaker #313.1/A to #313.9/2G bring #313.3.1
+close #313.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,59 +41,59 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3A2
-color #309.1/1 #75A074
+color #313.1/1 #75A074
 # U2 snRNA
-color #309.1/2 #71C562
+color #313.1/2 #71C562
 # SF3A3
-color #309.1/9 #9BCF91
+color #313.1/9 #9BCF91
 # SF3B1
-color #309.1/A #487957
+color #313.1/A #487957
 # SF3B2
-color #309.1/B #49926C
+color #313.1/B #49926C
 # SF3B3
-color #309.1/C #6A9064
+color #313.1/C #6A9064
 # SF3B5
-color #309.1/E #92BB8F
+color #313.1/E #92BB8F
 # PHF5A
-color #309.1/G #375A40
+color #313.1/G #375A40
 # Named selections for subcomplexes using original deposited chain IDs.
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7Q4P_U2_snRNP #309.1/2
+name pdb_7Q4P_U2_snRNP #313.1/2
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7Q4P_U2_SF3B #309.1/1,9,A,B,C,E,G
+name pdb_7Q4P_U2_SF3B #313.1/1,9,A,B,C,E,G
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-27, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U2_snRNP_7Q4P_U2_U6_helix_I_partner #309.1/2:26-27
+name U2_snRNP_7Q4P_U2_U6_helix_I_partner #313.1/2:26-27
 # U2 snRNA branchpoint pairing region: residues 34-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_7Q4P_U2_branchpoint_pairing_region #309.1/2:34-41
+name U2_snRNP_7Q4P_U2_branchpoint_pairing_region #313.1/2:34-41
 # U2 snRNA stem IIa: residues 46-64, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name U2_snRNP_7Q4P_U2_stem_IIa #309.1/2:46-64
+name U2_snRNP_7Q4P_U2_stem_IIa #313.1/2:46-64
 # RNA feature nucleotide display.
-select #309.1 & nucleic
+select #313.1 & nucleic
 nucleotides sel atoms
 select clear
 # U2/U6 helix I: residues 26-27
-color #309.1/2:26-27 #047857
-select #309.1/2:26-27
+color #313.1/2:26-27 #047857
+select #313.1/2:26-27
 nucleotides sel fill
 select clear
 # U2 BP pairing: residues 34-41
-color #309.1/2:34-41 #0B6E2D
-select #309.1/2:34-41
+color #313.1/2:34-41 #0B6E2D
+select #313.1/2:34-41
 nucleotides sel fill
 select clear
 # U2 stem IIa: residues 46-64
-color #309.1/2:46-64 #167A38
-select #309.1/2:46-64
+color #313.1/2:46-64 #167A38
+select #313.1/2:46-64
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #309.2.
+# Labels are created as independent grouped models under #313.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/7q4p_rna_labels.py
 # Searchable named selection browser.

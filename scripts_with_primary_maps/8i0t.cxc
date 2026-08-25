@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #388; target model: #388.1; RNA labels: #388.2.
+# Structure group: #395; target model: #395.1; RNA labels: #395.2.
 
-open 8h6l id 388.9 name 8H6L_anchor
-open 8i0t id 388.1 name 8I0T
-open emdb:35109 id 388.3.1 name Bact_8i0t_EMD-35109_primary_map
-rename #388 Bact_8i0t_structure
+open 8h6l id 395.9 name 8H6L_anchor
+open 8i0t id 395.1 name 8I0T
+open emdb:35109 id 395.3.1 name Bact_8i0t_EMD-35109_primary_map
+rename #395 Bact_8i0t_structure
 
 # Align on PRPF8.
-matchmaker #388.1/A to #388.9/5B bring #388.3.1
-close #388.9
+matchmaker #395.1/A to #395.9/5B bring #395.3.1
+close #395.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,220 +41,220 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # PRPF8
-color #388.1/A #BFC3E8
+color #395.1/A #BFC3E8
 # U5 snRNA
-color #388.1/B #4F9FD3
+color #395.1/B #4F9FD3
 # EFTUD2
-color #388.1/C #6495ED
+color #395.1/C #6495ED
 # SNRNP200
-color #388.1/D #AFEEEE
+color #395.1/D #AFEEEE
 # PRP8BP
-color #388.1/E #E2F3F4
+color #395.1/E #E2F3F4
 # U6 snRNA
-color #388.1/F #EF4444
+color #395.1/F #EF4444
 # mRNA
-color #388.1/G #303030
+color #395.1/G #303030
 # U2 snRNA
-color #388.1/H #71C562
+color #395.1/H #71C562
 # SYF1
-color #388.1/I #FF957B
+color #395.1/I #FF957B
 # CRNKL1
-color #388.1/J #FFC388
+color #395.1/J #FFC388
 # RNF113
-color #388.1/K #6C46CE
+color #395.1/K #6C46CE
 # CDC5L
-color #388.1/L #DAA520
+color #395.1/L #DAA520
 # BUD31
-color #388.1/N #FFF584
+color #395.1/N #FFF584
 # RBM22
-color #388.1/O #DE9A52
+color #395.1/O #DE9A52
 # CWC15
-color #388.1/P #FFDEAD
+color #395.1/P #FFDEAD
 # AQR
-color #388.1/Q #FFDAB9
+color #395.1/Q #FFDAB9
 # SNW1
-color #388.1/R #D49F96
+color #395.1/R #D49F96
 # PPIL1
-color #388.1/S #EEE8AA
+color #395.1/S #EEE8AA
 # PLRG1
-color #388.1/T #F4A460
+color #395.1/T #F4A460
 # SRRM2
-color #388.1/U #BDD6F0
+color #395.1/U #BDD6F0
 # CWC22
-color #388.1/V #2C54DD
+color #395.1/V #2C54DD
 # PRPF17
-color #388.1/W #FFF7C9
+color #395.1/W #FFF7C9
 # DBP2
-color #388.1/X #E3B296
+color #395.1/X #E3B296
 # PPIL4
-color #388.1/Y #547083
+color #395.1/Y #547083
 # BCAS2
-color #388.1/Z #FFDAB9
+color #395.1/Z #FFDAB9
 # SF3B1
-color #388.1/1 #487957
+color #395.1/1 #487957
 # SF3B3
-color #388.1/3 #6A9064
+color #395.1/3 #6A9064
 # SNRPB2
-color #388.1/p #DAF7A6
+color #395.1/p #DAF7A6
 # SF3A3
-color #388.1/w #9BCF91
+color #395.1/w #9BCF91
 # SF3B2
-color #388.1/2 #49926C
+color #395.1/2 #49926C
 # SF3B4
-color #388.1/4 #77B088
+color #395.1/4 #77B088
 # PHF5A
-color #388.1/7 #375A40
+color #395.1/7 #375A40
 # SF3B5
-color #388.1/5 #92BB8F
+color #395.1/5 #92BB8F
 # PPIE
-color #388.1/y #FFFFE0
+color #395.1/y #FFFFE0
 # SF3A2
-color #388.1/v #75A074
+color #395.1/v #75A074
 # SNRPA1
-color #388.1/o #58D68D
+color #395.1/o #58D68D
 # U5-Sm SNRPD2
-color #388.1/c #B0C4DE
+color #395.1/c #B0C4DE
 # U2-Sm SNRPD2
-color #388.1/h #D5F5E3
+color #395.1/h #D5F5E3
 # U5-Sm SNRPF
-color #388.1/d #B0C4DE
+color #395.1/d #B0C4DE
 # U2-Sm SNRPF
-color #388.1/i #D5F5E3
+color #395.1/i #D5F5E3
 # U5-Sm SNRPB
-color #388.1/a #B0C4DE
+color #395.1/a #B0C4DE
 # U2-Sm SNRPB
-color #388.1/m #D5F5E3
+color #395.1/m #D5F5E3
 # U5-Sm SNRPD3
-color #388.1/g #B0C4DE
+color #395.1/g #B0C4DE
 # U2-Sm SNRPD3
-color #388.1/l #D5F5E3
+color #395.1/l #D5F5E3
 # U5-Sm SNRPG
-color #388.1/f #B0C4DE
+color #395.1/f #B0C4DE
 # U2-Sm SNRPG
-color #388.1/k #D5F5E3
+color #395.1/k #D5F5E3
 # U5-Sm SNRPE
-color #388.1/e #B0C4DE
+color #395.1/e #B0C4DE
 # U2-Sm SNRPE
-color #388.1/j #D5F5E3
+color #395.1/j #D5F5E3
 # U5-Sm SNRPD1
-color #388.1/b #B0C4DE
+color #395.1/b #B0C4DE
 # U2-Sm SNRPD1
-color #388.1/n #D5F5E3
+color #395.1/n #D5F5E3
 # SF3A1
-color #388.1/u #55947F
+color #395.1/u #55947F
 # PRPF19
-color #388.1/q #FFFFAB
+color #395.1/q #FFFFAB
 # PRPF19
-color #388.1/r #FFFFAB
+color #395.1/r #FFFFAB
 # PRPF19
-color #388.1/s #FFFFAB
+color #395.1/s #FFFFAB
 # PRPF19
-color #388.1/t #FFFFAB
+color #395.1/t #FFFFAB
 # PPIL2
-color #388.1/9 #B12F50
+color #395.1/9 #B12F50
 # Named selections for subcomplexes using original deposited chain IDs.
 # EJC/mRNP
 # selector_meta {"color":"#EAA439","family":"Protein/RNP groups","group":"EJC/mRNP groups","kind":"subcomplex"}
-name pdb_8I0T_EJC_mRNP #388.1/V
+name pdb_8I0T_EJC_mRNP #395.1/V
 # NTC/NTR related
 # selector_meta {"color":"#F4BF67","family":"Protein/RNP groups","group":"NTC/NTR groups","kind":"subcomplex"}
-name pdb_8I0T_NTC_NTR_related #388.1/I,J,N,O,Q,R,S,y
+name pdb_8I0T_NTC_NTR_related #395.1/I,J,N,O,Q,R,S,y
 # NTC/PRP19
 # selector_meta {"color":"#F4BF67","family":"Protein/RNP groups","group":"NTC/NTR groups","kind":"subcomplex"}
-name pdb_8I0T_NTC_PRP19 #388.1/L,P,T,Z,q,r,s,t
+name pdb_8I0T_NTC_PRP19 #395.1/L,P,T,Z,q,r,s,t
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_8I0T_RNA_substrate #388.1/G
+name pdb_8I0T_RNA_substrate #395.1/G
 # SR proteins
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8I0T_SR_proteins #388.1/U
+name pdb_8I0T_SR_proteins #395.1/U
 # Second step factors
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8I0T_Second_step_factors #388.1/W
+name pdb_8I0T_Second_step_factors #395.1/W
 # U2 Sm ring
 # selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8I0T_U2_Sm_ring #388.1/h,i,j,k,l,m,n
+name pdb_8I0T_U2_Sm_ring #395.1/h,i,j,k,l,m,n
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8I0T_U2_snRNP #388.1/H,o,p
+name pdb_8I0T_U2_snRNP #395.1/H,o,p
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8I0T_U2_SF3B #388.1/1,2,3,4,5,7,u,v,w
+name pdb_8I0T_U2_SF3B #395.1/1,2,3,4,5,7,u,v,w
 # U5 Sm ring
 # selector_meta {"color":"#BFC3E8","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_8I0T_U5_Sm_ring #388.1/a,b,c,d,e,f,g
+name pdb_8I0T_U5_Sm_ring #395.1/a,b,c,d,e,f,g
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_8I0T_U5_snRNP #388.1/A,B,C,D,E
+name pdb_8I0T_U5_snRNP #395.1/A,B,C,D,E
 # U6 snRNP
 # selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
-name pdb_8I0T_U6_snRNP #388.1/F
+name pdb_8I0T_U6_snRNP #395.1/F
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8I0T_other #388.1/9,K,X,Y
+name pdb_8I0T_other #395.1/9,K,X,Y
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -12-0, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_5exon #388.1/G:-12-0
+name Bact_8I0T_5exon #395.1/G:-12-0
 # substrate RNA: residues -12-24;83-117, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_substrate #388.1/G:-12-24,83-117
+name Bact_8I0T_substrate #395.1/G:-12-24,83-117
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_5SS #388.1/G:1-6
+name Bact_8I0T_5SS #395.1/G:1-6
 # intron: residues 1-24;83-117, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_intron #388.1/G:1-24,83-117
+name Bact_8I0T_intron #395.1/G:1-24,83-117
 # branch point region: residues 91-95; 92-98, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_branch_region #388.1/G:91-95|#388.1/G:92-98
+name Bact_8I0T_branch_region #395.1/G:91-95|#395.1/G:92-98
 # branch point adenosine: residues 97, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_branch_A #388.1/G:97
+name Bact_8I0T_branch_A #395.1/G:97
 # polypyrimidine tract: residues 103-116, sequence-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"polypyrimidine_tract","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_8I0T_PPT #388.1/G:103-116
+name Bact_8I0T_PPT #395.1/G:103-116
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U2_U6_helix_I_partner #388.1/H:26-30
+name Bact_8I0T_U2_U6_helix_I_partner #395.1/H:26-30
 # U2 snRNA branchpoint pairing region: residues 32-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U2_branchpoint_pairing_region #388.1/H:32-41
+name Bact_8I0T_U2_branchpoint_pairing_region #395.1/H:32-41
 # U2 snRNA stem IIa: residues 46-65;68-74;78-80, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name Bact_8I0T_U2_stem_IIa #388.1/H:46-65,68-74,78-80
+name Bact_8I0T_U2_stem_IIa #395.1/H:46-65,68-74,78-80
 # U2 snRNA Sm site: residues 99-105, sequence-motif, medium confidence
 # selector_meta {"color":"#2F8B4D","family":"RNA","feature":"U2_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U2_Sm_site #388.1/H:99-105
+name Bact_8I0T_U2_Sm_site #395.1/H:99-105
 # U5 snRNA loop I: residues 38-42, sequence-motif, medium confidence
 # selector_meta {"color":"#1B3CD0","family":"RNA","feature":"U5_loop_I","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U5_loop_I #388.1/B:38-42
+name Bact_8I0T_U5_loop_I #395.1/B:38-42
 # U6 snRNA 5' terminal stem-loop: residues 1-30, reference-alignment, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_5prime_terminal_stem_loop","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name Bact_8I0T_U6_5_terminal_stem_loop #388.1/F:1-30
+name Bact_8I0T_U6_5_terminal_stem_loop #395.1/F:1-30
 # U6 snRNA U2/U6 helix I partner: residues 35-60, motif-neighborhood, medium confidence
 # selector_meta {"color":"#D0183C","family":"RNA","feature":"U6_U2_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U6_U2_helix_I_partner #388.1/F:35-60
+name Bact_8I0T_U6_U2_helix_I_partner #395.1/F:35-60
 # U6 snRNA 5' splice-site upstream contact: residues 38-49, motif-neighborhood, medium confidence
 # selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U6_5SS_upstream_contact #388.1/F:38-49
+name Bact_8I0T_U6_5SS_upstream_contact #395.1/F:38-49
 # U6 snRNA ACAGAGA box: residues 41-47, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name Bact_8I0T_U6_ACAGAGA_box #388.1/F:41-47
+name Bact_8I0T_U6_ACAGAGA_box #395.1/F:41-47
 # U6 snRNA internal stem-loop: residues 79-97, motif-neighborhood, low confidence
 # selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name Bact_8I0T_U6_ISL #388.1/F:79-97
+name Bact_8I0T_U6_ISL #395.1/F:79-97
 # U6 snRNA AGC catalytic triad: residues 92-94, sequence-motif, medium confidence
 # selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
-name Bact_8I0T_U6_AGC_catalytic_triad #388.1/F:92-94
+name Bact_8I0T_U6_AGC_catalytic_triad #395.1/F:92-94
 # RNA feature nucleotide display.
-select #388.1 & nucleic
+select #395.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -12-0
-color #388.1/G:-12-0 #FF8C00
-select #388.1/G:-12-0
+color #395.1/G:-12-0 #FF8C00
+select #395.1/G:-12-0
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
@@ -263,57 +263,57 @@ select clear
 # BP-A: residues 97
 # PPT: residues 103-116
 # U2/U6 helix I: residues 26-30
-color #388.1/H:26-30 #047857
-select #388.1/H:26-30
+color #395.1/H:26-30 #047857
+select #395.1/H:26-30
 nucleotides sel fill
 select clear
 # U2 BP pairing: residues 32-41
-color #388.1/H:32-41 #0B6E2D
-select #388.1/H:32-41
+color #395.1/H:32-41 #0B6E2D
+select #395.1/H:32-41
 nucleotides sel fill
 select clear
 # U2 stem IIa: residues 46-65;68-74;78-80
-color #388.1/H:46-65,68-74,78-80 #167A38
-select #388.1/H:46-65,68-74,78-80
+color #395.1/H:46-65,68-74,78-80 #167A38
+select #395.1/H:46-65,68-74,78-80
 nucleotides sel fill
 select clear
 # U5 loop I: residues 38-42
-color #388.1/B:38-42 #1B3CD0
-select #388.1/B:38-42
+color #395.1/B:38-42 #1B3CD0
+select #395.1/B:38-42
 nucleotides sel fill
 select clear
 # U6 5' terminal SL: residues 1-30
-color #388.1/F:1-30 #DC143C
-select #388.1/F:1-30
+color #395.1/F:1-30 #DC143C
+select #395.1/F:1-30
 nucleotides sel fill
 select clear
 # U2/U6 helix I: residues 35-60
-color #388.1/F:35-60 #D0183C
-select #388.1/F:35-60
+color #395.1/F:35-60 #D0183C
+select #395.1/F:35-60
 nucleotides sel fill
 select clear
 # U6 5'SS contact: residues 38-49
-color #388.1/F:38-49 #E01842
-select #388.1/F:38-49
+color #395.1/F:38-49 #E01842
+select #395.1/F:38-49
 nucleotides sel fill
 select clear
 # U6 ACAGAGA: residues 41-47
-color #388.1/F:41-47 #DC143C
-select #388.1/F:41-47
+color #395.1/F:41-47 #DC143C
+select #395.1/F:41-47
 nucleotides sel fill
 select clear
 # U6 ISL: residues 79-97
-color #388.1/F:79-97 #D61A3D
-select #388.1/F:79-97
+color #395.1/F:79-97 #D61A3D
+select #395.1/F:79-97
 nucleotides sel fill
 select clear
 # U6 AGC triad: residues 92-94
-color #388.1/F:92-94 #C91236
-select #388.1/F:92-94
+color #395.1/F:92-94 #C91236
+select #395.1/F:92-94
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #388.2.
+# Labels are created as independent grouped models under #395.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8i0t_rna_labels.py
 # Searchable named selection browser.

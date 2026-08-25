@@ -1,0 +1,166 @@
+# Lightweight ChimeraX script for 3CW1
+# Models are downloaded directly by ChimeraX from the PDB.
+# Primary maps, when requested, are downloaded directly from EMDB.
+# Original deposited chain identifiers are used.
+
+# Shared anchor frame: 8H6L
+# Structure group: #301; target model: #301.1; RNA labels: #301.2.
+
+open 8h6l id 301.9 name 8H6L_anchor
+open 3cw1 id 301.1 name 3CW1
+rename #301 U1_snRNP_3cw1_structure
+
+# No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
+close #301.9
+
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# U1 snRNA
+color #301.1/V #D46BB8
+# U1 snRNA
+color #301.1/v #D46BB8
+# U1 snRNA
+color #301.1/w #D46BB8
+# U1 snRNA
+color #301.1/x #D46BB8
+# U1-Sm SNRPD3
+color #301.1/D #EAD7E8
+# U1-Sm SNRPD3
+color #301.1/S #EAD7E8
+# U1-Sm SNRPD3
+color #301.1/T #EAD7E8
+# U1-Sm SNRPD3
+color #301.1/U #EAD7E8
+# U1-Sm SNRPB
+color #301.1/A #EAD7E8
+# U1-Sm SNRPB
+color #301.1/H #EAD7E8
+# U1-Sm SNRPB
+color #301.1/I #EAD7E8
+# U1-Sm SNRPB
+color #301.1/J #EAD7E8
+# U1-Sm SNRPD1
+color #301.1/B #EAD7E8
+# U1-Sm SNRPD1
+color #301.1/M #EAD7E8
+# U1-Sm SNRPD1
+color #301.1/N #EAD7E8
+# U1-Sm SNRPD1
+color #301.1/O #EAD7E8
+# U1-Sm SNRPD2
+color #301.1/C #EAD7E8
+# U1-Sm SNRPD2
+color #301.1/P #EAD7E8
+# U1-Sm SNRPD2
+color #301.1/Q #EAD7E8
+# U1-Sm SNRPD2
+color #301.1/R #EAD7E8
+# U1-Sm SNRPF
+color #301.1/1 #EAD7E8
+# U1-Sm SNRPF
+color #301.1/2 #EAD7E8
+# U1-Sm SNRPF
+color #301.1/F #EAD7E8
+# U1-Sm SNRPF
+color #301.1/Z #EAD7E8
+# U1-Sm SNRPE
+color #301.1/E #EAD7E8
+# U1-Sm SNRPE
+color #301.1/W #EAD7E8
+# U1-Sm SNRPE
+color #301.1/X #EAD7E8
+# U1-Sm SNRPE
+color #301.1/Y #EAD7E8
+# U1-Sm SNRPG
+color #301.1/3 #EAD7E8
+# U1-Sm SNRPG
+color #301.1/4 #EAD7E8
+# U1-Sm SNRPG
+color #301.1/5 #EAD7E8
+# U1-Sm SNRPG
+color #301.1/G #EAD7E8
+# SNRNP70
+color #301.1/6 #8C3D78
+# SNRNP70
+color #301.1/7 #8C3D78
+# SNRNP70
+color #301.1/8 #8C3D78
+# SNRNP70
+color #301.1/K #8C3D78
+# SNRPC
+color #301.1/0 #D7A3CF
+# SNRPC
+color #301.1/9 #D7A3CF
+# SNRPC
+color #301.1/L #D7A3CF
+# SNRPC
+color #301.1/l #D7A3CF
+# Named selections for subcomplexes using original deposited chain IDs.
+# U1 Sm ring
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_3CW1_U1_Sm_ring #301.1/1,2,3,4,5,A,B,C,D,E,F,G,H,I,J,M,N,O,P,Q,R,S,T,U,W,X,Y,Z
+# U1 snRNP
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_3CW1_U1_snRNP #301.1/0,6,7,8,9,K,L,V,l,v,w,x
+# Named selections for resolved snRNA functional regions.
+# U1 snRNA 5' splice-site recognition region: residues 1-10; 201-210; 401-410; 601-610, review-region, medium confidence
+# selector_meta {"color":"#B66AAE","family":"RNA","feature":"U1_5prime_5SS_recognition","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
+name U1_snRNP_3CW1_U1_5_5SS_recognition #301.1/V:1-10|#301.1/v:201-210|#301.1/w:401-410|#301.1/x:601-610
+# U1 snRNA stem-loop 1: residues 11-45; 211-245; 411-445; 611-645, review-region, low confidence
+# selector_meta {"color":"#BF72B7","family":"RNA","feature":"U1_SL1","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name U1_snRNP_3CW1_U1_SL1 #301.1/V:11-45|#301.1/v:211-245|#301.1/w:411-445|#301.1/x:611-645
+# U1 snRNA stem-loop 2: residues 246,247,248,249,250,251,252,253,254,255,256,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321; 446,447,448,449,450,451,452,453,454,455,456,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521; 46,47,48,49,50,51,52,53,54,55,56,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; 646,647,648,649,650,651,652,653,654,655,656,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721, review-region, low confidence
+# selector_meta {"color":"#AD62A6","family":"RNA","feature":"U1_SL2","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name U1_snRNP_3CW1_U1_SL2 #301.1/V:46,47,48,49,50,51,52,53,54,55,56,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121|#301.1/v:246,247,248,249,250,251,252,253,254,255,256,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321|#301.1/w:446,447,448,449,450,451,452,453,454,455,456,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521|#301.1/x:646,647,648,649,650,651,652,653,654,655,656,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721
+# RNA feature nucleotide display.
+select #301.1 & nucleic
+nucleotides sel atoms
+select clear
+# U1 5'SS recog.: residues 1-10; 201-210; 401-410; 601-610
+color #301.1/V:1-10|#301.1/v:201-210|#301.1/w:401-410|#301.1/x:601-610 #B66AAE
+select #301.1/V:1-10|#301.1/v:201-210|#301.1/w:401-410|#301.1/x:601-610
+nucleotides sel fill
+select clear
+# U1 SL1: residues 11-45; 211-245; 411-445; 611-645
+color #301.1/V:11-45|#301.1/v:211-245|#301.1/w:411-445|#301.1/x:611-645 #BF72B7
+select #301.1/V:11-45|#301.1/v:211-245|#301.1/w:411-445|#301.1/x:611-645
+nucleotides sel fill
+select clear
+# U1 SL2: residues 246,247,248,249,250,251,252,253,254,255,256,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321; 446,447,448,449,450,451,452,453,454,455,456,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521; 46,47,48,49,50,51,52,53,54,55,56,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121; 646,647,648,649,650,651,652,653,654,655,656,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721
+color #301.1/V:46,47,48,49,50,51,52,53,54,55,56,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121|#301.1/v:246,247,248,249,250,251,252,253,254,255,256,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321|#301.1/w:446,447,448,449,450,451,452,453,454,455,456,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521|#301.1/x:646,647,648,649,650,651,652,653,654,655,656,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721 #AD62A6
+select #301.1/V:46,47,48,49,50,51,52,53,54,55,56,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121|#301.1/v:246,247,248,249,250,251,252,253,254,255,256,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321|#301.1/w:446,447,448,449,450,451,452,453,454,455,456,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521|#301.1/x:646,647,648,649,650,651,652,653,654,655,656,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #301.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/3cw1_rna_labels.py
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/3cw1_selection_browser.py
+view
+show nucleic

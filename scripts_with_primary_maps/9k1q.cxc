@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #314; target model: #314.1; RNA labels: #314.2.
+# Structure group: #318; target model: #318.1; RNA labels: #318.2.
 
-open 8h6l id 314.9 name 8H6L_anchor
-open 9k1q id 314.1 name 9K1Q
-open emdb:61978 id 314.3.1 name U2_snRNP_9k1q_EMD-61978_primary_map
-rename #314 U2_snRNP_9k1q_structure
+open 8h6l id 318.9 name 8H6L_anchor
+open 9k1q id 318.1 name 9K1Q
+open emdb:61978 id 318.3.1 name U2_snRNP_9k1q_EMD-61978_primary_map
+rename #318 U2_snRNP_9k1q_structure
 
 # Align on SF3B1.
-matchmaker #314.1/C to #314.9/2G bring #314.3.1
-close #314.9
+matchmaker #318.1/C to #318.9/2G bring #318.3.1
+close #318.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,28 +41,28 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3B1
-color #314.1/C #487957
+color #318.1/C #487957
 # PHF5A
-color #314.1/D #375A40
+color #318.1/D #375A40
 # SF3B3
-color #314.1/A #6A9064
+color #318.1/A #6A9064
 # SF3B5
-color #314.1/B #92BB8F
+color #318.1/B #92BB8F
 # mRNA
-color #314.1/G #303030
+color #318.1/G #303030
 # mRNA
-color #314.1/H #303030
+color #318.1/H #303030
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_9K1Q_RNA_substrate #314.1/G,H
+name pdb_9K1Q_RNA_substrate #318.1/G,H
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9K1Q_U2_SF3B #314.1/A,B,C,D
+name pdb_9K1Q_U2_SF3B #318.1/A,B,C,D
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues 26-34; 31-52, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1Q_substrate #314.1/G:31-52|#314.1/H:26-34
+name U2_snRNP_9K1Q_substrate #318.1/G:31-52|#318.1/H:26-34
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

@@ -1,8 +1,8 @@
 {
-  "structure_model_id": "321.1",
-  "label_group_model_id": "321.2",
+  "structure_model_id": "325.1",
+  "label_group_model_id": "325.2",
   "cleanup_model_ids": [
-    "321.1.90"
+    "325.1.90"
   ],
   "label_group_name": "RNA_feature_labels",
   "height": 3.35,
@@ -104,28 +104,28 @@
       "index": 1,
       "selector_name": "U2_snRNP_9ZEC_branch_region",
       "feature": "branch_point_region",
-      "atomspec": "#321.1/R:-4",
+      "atomspec": "#325.1/R:-4",
       "text": "BP region (res. -7--2)",
       "color": "#303030",
       "model_name": "label_01_BP_region_res_7_2",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",
-      "category_model_id": "321.2.1",
-      "label_model_id": "321.2.1.1",
+      "category_model_id": "325.2.1",
+      "label_model_id": "325.2.1.1",
       "default_visible": true
     },
     {
       "index": 2,
       "selector_name": "U2_snRNP_9ZEC_U2_branchpoint_pairing_region",
       "feature": "U2_branchpoint_pairing_region",
-      "atomspec": "#321.1/2:36",
+      "atomspec": "#325.1/2:36",
       "text": "U2 BP pairing (res. 32-41)",
       "color": "#0B6E2D",
       "model_name": "label_02_U2_BP_pairing_res_32_41",
       "category_key": "snRNA_pre_mRNA_regions",
       "category_name": "snRNA-pre-mRNA regions",
-      "category_model_id": "321.2.2",
-      "label_model_id": "321.2.2.1",
+      "category_model_id": "325.2.2",
+      "label_model_id": "325.2.2.1",
       "default_visible": true
     }
   ]

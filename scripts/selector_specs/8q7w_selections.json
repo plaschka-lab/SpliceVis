@@ -1,7 +1,7 @@
 {
   "pdb_id": "8q7w",
-  "structure_model_id": "439.1",
-  "structure_group_id": "439",
+  "structure_model_id": "446.1",
+  "structure_group_id": "446",
   "selectors": [
     {
       "name": "pdb_8Q7W_U4_U6_snRNP",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U4/U6 snRNP",
-      "atomspec": "#439.1/E",
+      "atomspec": "#446.1/E",
       "family": "Protein/RNP groups",
       "group": "U4/U6 groups",
       "group_key": "",
@@ -23,7 +23,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U5 Sm ring",
-      "atomspec": "#439.1/a,b,c,d,e,f,g",
+      "atomspec": "#446.1/a,b,c,d,e,f,g",
       "family": "Protein/RNP groups",
       "group": "U5 snRNP groups",
       "group_key": "",
@@ -37,7 +37,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U5 snRNP",
-      "atomspec": "#439.1/5,A,B,C,D,F,G",
+      "atomspec": "#446.1/5,A,B,C,D,F,G",
       "family": "Protein/RNP groups",
       "group": "U5 snRNP groups",
       "group_key": "",
@@ -51,16 +51,16 @@
       "category": "snRNA feature",
       "section": "Named selections for resolved snRNA functional regions.",
       "comment": "U5 snRNA loop I: residues 38, sequence-motif, medium confidence",
-      "atomspec": "#439.1/5:38",
+      "atomspec": "#446.1/5:38",
       "family": "RNA",
       "group": "snRNA-pre-mRNA regions",
       "group_key": "snRNA_pre_mRNA_regions",
       "kind": "rna_feature",
       "feature": "U5_loop_I",
       "color": "#1B3CD0",
-      "label_model_id": "439.2.1.1",
-      "label_category_model_id": "439.2.1",
-      "label_group_model_id": "439.2",
+      "label_model_id": "446.2.1.1",
+      "label_category_model_id": "446.2.1",
+      "label_group_model_id": "446.2",
       "label_default_visible": "true"
     }
   ]

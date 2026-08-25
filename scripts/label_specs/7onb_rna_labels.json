@@ -1,8 +1,8 @@
 {
-  "structure_model_id": "305.1",
-  "label_group_model_id": "305.2",
+  "structure_model_id": "309.1",
+  "label_group_model_id": "309.2",
   "cleanup_model_ids": [
-    "305.1.90"
+    "309.1.90"
   ],
   "label_group_name": "RNA_feature_labels",
   "height": 3.35,
@@ -104,42 +104,42 @@
       "index": 1,
       "selector_name": "U2_snRNP_7ONB_branch_region",
       "feature": "branch_point_region",
-      "atomspec": "#305.1/G:136",
+      "atomspec": "#309.1/G:136",
       "text": "BP region (res. 129-142)",
       "color": "#303030",
       "model_name": "label_01_BP_region_res_129_142",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",
-      "category_model_id": "305.2.1",
-      "label_model_id": "305.2.1.1",
+      "category_model_id": "309.2.1",
+      "label_model_id": "309.2.1.1",
       "default_visible": true
     },
     {
       "index": 2,
       "selector_name": "U2_snRNP_7ONB_U2_branchpoint_pairing_region",
       "feature": "U2_branchpoint_pairing_region",
-      "atomspec": "#305.1/H:38",
+      "atomspec": "#309.1/H:38",
       "text": "U2 BP pairing (res. 34-41)",
       "color": "#0B6E2D",
       "model_name": "label_02_U2_BP_pairing_res_34_41",
       "category_key": "snRNA_pre_mRNA_regions",
       "category_name": "snRNA-pre-mRNA regions",
-      "category_model_id": "305.2.2",
-      "label_model_id": "305.2.2.1",
+      "category_model_id": "309.2.2",
+      "label_model_id": "309.2.2.1",
       "default_visible": true
     },
     {
       "index": 3,
       "selector_name": "U2_snRNP_7ONB_U2_stem_IIa",
       "feature": "U2_stem_IIa",
-      "atomspec": "#305.1/H:56",
+      "atomspec": "#309.1/H:56",
       "text": "U2 stem IIa (res. 46-65)",
       "color": "#167A38",
       "model_name": "label_03_U2_stem_IIa_res_46_65",
       "category_key": "internal_stem_loops",
       "category_name": "internal stem loops",
-      "category_model_id": "305.2.3",
-      "label_model_id": "305.2.3.1",
+      "category_model_id": "309.2.3",
+      "label_model_id": "309.2.3.1",
       "default_visible": false
     }
   ]

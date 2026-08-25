@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #310; target model: #310.1; RNA labels: #310.2.
+# Structure group: #314; target model: #314.1; RNA labels: #314.2.
 
-open 8h6l id 310.9 name 8H6L_anchor
-open 8hk1 id 310.1 name 8HK1
-rename #310 U2_snRNP_8hk1_structure
+open 8h6l id 314.9 name 8H6L_anchor
+open 8hk1 id 314.1 name 8HK1
+rename #314 U2_snRNP_8hk1_structure
 
 # Align on SF3B1.
-matchmaker #310.1/1 to #310.9/2G
-close #310.9
+matchmaker #314.1/1 to #314.9/2G
+close #314.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,91 +40,91 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # U2 snRNA
-color #310.1/H #71C562
+color #314.1/H #71C562
 # SF3B1
-color #310.1/1 #487957
+color #314.1/1 #487957
 # SF3B2
-color #310.1/2 #49926C
+color #314.1/2 #49926C
 # SF3B3
-color #310.1/3 #6A9064
+color #314.1/3 #6A9064
 # SF3B4
-color #310.1/4 #77B088
+color #314.1/4 #77B088
 # SF3B5
-color #310.1/5 #92BB8F
+color #314.1/5 #92BB8F
 # PHF5A
-color #310.1/6 #375A40
+color #314.1/6 #375A40
 # SF3A1
-color #310.1/A #55947F
+color #314.1/A #55947F
 # SF3A2
-color #310.1/B #75A074
+color #314.1/B #75A074
 # SF3A3
-color #310.1/C #9BCF91
+color #314.1/C #9BCF91
 # HTATSF1
-color #310.1/D #7DBF82
+color #314.1/D #7DBF82
 # DDX42
-color #310.1/E #479061
+color #314.1/E #479061
 # SNRPA1
-color #310.1/F #58D68D
+color #314.1/F #58D68D
 # SNRPB2
-color #310.1/G #DAF7A6
+color #314.1/G #DAF7A6
 # U2-Sm SNRPD2
-color #310.1/a #D5F5E3
+color #314.1/a #D5F5E3
 # U2-Sm SNRPF
-color #310.1/b #D5F5E3
+color #314.1/b #D5F5E3
 # U2-Sm SNRPE
-color #310.1/c #D5F5E3
+color #314.1/c #D5F5E3
 # U2-Sm SNRPG
-color #310.1/d #D5F5E3
+color #314.1/d #D5F5E3
 # U2-Sm SNRPD3
-color #310.1/e #D5F5E3
+color #314.1/e #D5F5E3
 # U2-Sm SNRPB
-color #310.1/f #D5F5E3
+color #314.1/f #D5F5E3
 # U2-Sm SNRPD1
-color #310.1/g #D5F5E3
+color #314.1/g #D5F5E3
 # Named selections for subcomplexes using original deposited chain IDs.
 # U2 Sm ring
 # selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8HK1_U2_Sm_ring #310.1/a,b,c,d,e,f,g
+name pdb_8HK1_U2_Sm_ring #314.1/a,b,c,d,e,f,g
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8HK1_U2_snRNP #310.1/D,E,F,G,H
+name pdb_8HK1_U2_snRNP #314.1/D,E,F,G,H
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8HK1_U2_SF3B #310.1/1,2,3,4,5,6,A,B,C
+name pdb_8HK1_U2_SF3B #314.1/1,2,3,4,5,6,A,B,C
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U2_snRNP_8HK1_U2_U6_helix_I_partner #310.1/H:26-30
+name U2_snRNP_8HK1_U2_U6_helix_I_partner #314.1/H:26-30
 # U2 snRNA branchpoint pairing region: residues 32-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_8HK1_U2_branchpoint_pairing_region #310.1/H:32-41
+name U2_snRNP_8HK1_U2_branchpoint_pairing_region #314.1/H:32-41
 # U2 snRNA stem IIa: residues 46-65;69-73;81-82, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name U2_snRNP_8HK1_U2_stem_IIa #310.1/H:46-65,69-73,81-82
+name U2_snRNP_8HK1_U2_stem_IIa #314.1/H:46-65,69-73,81-82
 # U2 snRNA Sm site: residues 99-105, sequence-motif, medium confidence
 # selector_meta {"color":"#2F8B4D","family":"RNA","feature":"U2_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U2_snRNP_8HK1_U2_Sm_site #310.1/H:99-105
+name U2_snRNP_8HK1_U2_Sm_site #314.1/H:99-105
 # RNA feature nucleotide display.
-select #310.1 & nucleic
+select #314.1 & nucleic
 nucleotides sel atoms
 select clear
 # U2/U6 helix I: residues 26-30
-color #310.1/H:26-30 #047857
-select #310.1/H:26-30
+color #314.1/H:26-30 #047857
+select #314.1/H:26-30
 nucleotides sel fill
 select clear
 # U2 BP pairing: residues 32-41
-color #310.1/H:32-41 #0B6E2D
-select #310.1/H:32-41
+color #314.1/H:32-41 #0B6E2D
+select #314.1/H:32-41
 nucleotides sel fill
 select clear
 # U2 stem IIa: residues 46-65;69-73;81-82
-color #310.1/H:46-65,69-73,81-82 #167A38
-select #310.1/H:46-65,69-73,81-82
+color #314.1/H:46-65,69-73,81-82 #167A38
+select #314.1/H:46-65,69-73,81-82
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #310.2.
+# Labels are created as independent grouped models under #314.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8hk1_rna_labels.py
 # Searchable named selection browser.

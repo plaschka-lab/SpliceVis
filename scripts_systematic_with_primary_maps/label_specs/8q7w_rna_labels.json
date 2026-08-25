@@ -1,8 +1,8 @@
 {
-  "structure_model_id": "439.1",
-  "label_group_model_id": "439.2",
+  "structure_model_id": "446.1",
+  "label_group_model_id": "446.2",
   "cleanup_model_ids": [
-    "439.1.90"
+    "446.1.90"
   ],
   "label_group_name": "RNA_feature_labels",
   "height": 3.35,
@@ -104,14 +104,14 @@
       "index": 1,
       "selector_name": "U5_recycling_8Q7W_U5_loop_I",
       "feature": "U5_loop_I",
-      "atomspec": "#439.1/5:38",
+      "atomspec": "#446.1/5:38",
       "text": "U5 loop I (res. 38)",
       "color": "#1B3CD0",
       "model_name": "label_01_U5_loop_I_res_38",
       "category_key": "snRNA_pre_mRNA_regions",
       "category_name": "snRNA-pre-mRNA regions",
-      "category_model_id": "439.2.1",
-      "label_model_id": "439.2.1.1",
+      "category_model_id": "446.2.1",
+      "label_model_id": "446.2.1.1",
       "default_visible": true
     }
   ]

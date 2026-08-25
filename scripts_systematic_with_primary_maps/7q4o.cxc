@@ -4,24 +4,24 @@
 # Deposited chains are renamed in-session to systematic project IDs.
 
 # Shared anchor frame: 8H6L
-# Structure group: #308; target model: #308.1; RNA labels: #308.2.
+# Structure group: #312; target model: #312.1; RNA labels: #312.2.
 
-open 8h6l id 308.9 name 8H6L_anchor
+open 8h6l id 312.9 name 8H6L_anchor
 # Rename 8H6L_anchor chains to systematic project IDs.
 # Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
-changechains #308.9 2A,2B,2C,2D,2E,2F,2G,2H,2I,2J,2K,2L,2M,2a,2b,2c,2d,2e,2f,2g,4A,4B,4C,4D,4E,4F,4G,4H,4I,4J,4Z,4a,4b,4c,4d,4e,4f,4g,5A,5B,5C,5D,5E,5a,5b,5c,5d,5e,5f,5g,6A,6a,6b,6c,6d,6e,6f,6g,A TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049,TMP050,TMP051,TMP052,TMP053,TMP054,TMP055,TMP056,TMP057,TMP058,TMP059 log false
-changechains #308.9 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049,TMP050,TMP051,TMP052,TMP053,TMP054,TMP055,TMP056,TMP057,TMP058,TMP059 2,2K,2L,2H,2I,2J,2A,2B,2C,2D,2F,2G,2E,2SB,2S1,2S2,2SF,2SE,2SG,2S3,4,4A,4B,4C,4D,6B,5D,X4,XAD,5H,XBC,4SB,4S1,4S2,4SF,4SE,4SG,4S3,5,5A,5C,5B,5E,5SB,5S1,5S2,5SF,5SE,5SG,5S3,6,6L2,6L3,6L4,6L5,6L6,6L7,6L8,M log false
-open 7q4o id 308.1 name 7Q4O
+changechains #312.9 2A,2B,2C,2D,2E,2F,2G,2H,2I,2J,2K,2L,2M,2a,2b,2c,2d,2e,2f,2g,4A,4B,4C,4D,4E,4F,4G,4H,4I,4J,4Z,4a,4b,4c,4d,4e,4f,4g,5A,5B,5C,5D,5E,5a,5b,5c,5d,5e,5f,5g,6A,6a,6b,6c,6d,6e,6f,6g,A TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049,TMP050,TMP051,TMP052,TMP053,TMP054,TMP055,TMP056,TMP057,TMP058,TMP059 log false
+changechains #312.9 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012,TMP013,TMP014,TMP015,TMP016,TMP017,TMP018,TMP019,TMP020,TMP021,TMP022,TMP023,TMP024,TMP025,TMP026,TMP027,TMP028,TMP029,TMP030,TMP031,TMP032,TMP033,TMP034,TMP035,TMP036,TMP037,TMP038,TMP039,TMP040,TMP041,TMP042,TMP043,TMP044,TMP045,TMP046,TMP047,TMP048,TMP049,TMP050,TMP051,TMP052,TMP053,TMP054,TMP055,TMP056,TMP057,TMP058,TMP059 2,2K,2L,2H,2I,2J,2A,2B,2C,2D,2F,2G,2E,2SB,2S1,2S2,2SF,2SE,2SG,2S3,4,4A,4B,4C,4D,6B,5D,X4,XAE,5H,XBD,4SB,4S1,4S2,4SF,4SE,4SG,4S3,5,5A,5C,5B,5E,5SB,5S1,5S2,5SF,5SE,5SG,5S3,6,6L2,6L3,6L4,6L5,6L6,6L7,6L8,M log false
+open 7q4o id 312.1 name 7Q4O
 # Rename 7Q4O chains to systematic project IDs.
 # Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
-changechains #308.1 1,2,9,A,B,C,E,F,G,h TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010 log false
-changechains #308.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010 2I,2,2J,2A,2B,2C,2E,2F,2G,M log false
-open emdb:13811 id 308.3.1 name U2_snRNP_7q4o_EMD-13811_primary_map
-rename #308 U2_snRNP_7q4o_structure
+changechains #312.1 1,2,9,A,B,C,E,F,G,h TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010 log false
+changechains #312.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010 2I,2,2J,2A,2B,2C,2E,2F,2G,M log false
+open emdb:13811 id 312.3.1 name U2_snRNP_7q4o_EMD-13811_primary_map
+rename #312 U2_snRNP_7q4o_structure
 
 # Align on SF3B1.
-matchmaker #308.1/2A to #308.9/2A bring #308.3.1
-close #308.9
+matchmaker #312.1/2A to #312.9/2A bring #312.3.1
+close #312.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -49,35 +49,35 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # U2/SF3B: SF3A2
-color #308.1/2I #75A074
+color #312.1/2I #75A074
 # U2 snRNP: U2 snRNA
-color #308.1/2 #71C562
+color #312.1/2 #71C562
 # U2/SF3B: SF3A3
-color #308.1/2J #9BCF91
+color #312.1/2J #9BCF91
 # U2/SF3B: SF3B1
-color #308.1/2A #487957
+color #312.1/2A #487957
 # U2/SF3B: SF3B2
-color #308.1/2B #49926C
+color #312.1/2B #49926C
 # U2/SF3B: SF3B3
-color #308.1/2C #6A9064
+color #312.1/2C #6A9064
 # U2/SF3B: SF3B5
-color #308.1/2E #92BB8F
+color #312.1/2E #92BB8F
 # U2/SF3B: SF3B6
-color #308.1/2F #ADCEA0
+color #312.1/2F #ADCEA0
 # U2/SF3B: PHF5A
-color #308.1/2G #375A40
+color #312.1/2G #375A40
 # RNA/substrate: mRNA
-color #308.1/M #303030
+color #312.1/M #303030
 # Named selections for systematic-chain subcomplexes.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_7Q4O_RNA_substrate #308.1/M
+name pdb_7Q4O_RNA_substrate #312.1/M
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7Q4O_U2_snRNP #308.1/2
+name pdb_7Q4O_U2_snRNP #312.1/2
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_7Q4O_U2_SF3B #308.1/2A,2B,2C,2E,2F,2G,2I,2J
+name pdb_7Q4O_U2_SF3B #312.1/2A,2B,2C,2E,2F,2G,2I,2J
 
 # Model-independent named selections for all renamed systematic-chain models.
 # Disassembly factors
@@ -109,10 +109,10 @@ name spliceosome_Second_step_factors /C1,C2,C3
 name spliceosome_Sm_ring /SA,SAA,SAB,SAC,SB,SBA,SBB,SC,SCA,SCB,SD,SDA,SDB,SE,SEA,SEB,SEC,SF,SFA,SFB,SFC,SG,SGA,SGB
 # U1 Sm ring
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
-name spliceosome_U1_Sm_ring /1S1,1S2,1S3,1SB,1SE,1SF,1SG
+name spliceosome_U1_Sm_ring /1S1,1S1A,1S1B,1S1C,1S1D,1S2,1S2A,1S2B,1S2C,1S2D,1S3,1S3A,1S3B,1S3C,1S3D,1SB,1SBA,1SBB,1SBC,1SBD,1SE,1SEA,1SEB,1SEC,1SED,1SF,1SFA,1SFB,1SFC,1SFD,1SG,1SGA,1SGB,1SGC,1SGD
 # U1 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
-name spliceosome_U1_snRNP /1,1A,1B,1C,1D,1E,1G,1H,1I,1J,1K
+name spliceosome_U1_snRNP /1,1A,1AA,1AB,1AC,1AD,1B,1BA,1BB,1C,1CA,1CB,1CC,1CD,1D,1E,1G,1H,1I,1J,1K,1R1,1R2,1R3,1R4
 # U11/U12 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
 name spliceosome_U11_U12_snRNP /11,12
@@ -151,50 +151,50 @@ name spliceosome_U6_LSm /6L2,6L3,6L4,6L5,6L6,6L7,6L8
 name spliceosome_U6_snRNP /6,6R1,6R2
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAKA,XAKB,XAL,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBCA,XBCB,XBD,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBXA,XBXB,XBY,XBZ,XCA,XCB,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
+name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBY,XBZA,XBZB,XCA,XCB,XCC,XCD,XCE,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 # Named selections for resolved substrate RNA features.
 # branch point region: residues 1-13, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7Q4O_branch_region #308.1/M:1-13
+name U2_snRNP_7Q4O_branch_region #312.1/M:1-13
 # substrate RNA: residues 1-13, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7Q4O_substrate #308.1/M:1-13
+name U2_snRNP_7Q4O_substrate #312.1/M:1-13
 # branch point adenosine: residues 10, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7Q4O_branch_A #308.1/M:10
+name U2_snRNP_7Q4O_branch_A #312.1/M:10
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 29-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U2_snRNP_7Q4O_U2_U6_helix_I_partner #308.1/2:29-30
+name U2_snRNP_7Q4O_U2_U6_helix_I_partner #312.1/2:29-30
 # U2 snRNA branchpoint pairing region: residues 32-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_7Q4O_U2_branchpoint_pairing_region #308.1/2:32-41
+name U2_snRNP_7Q4O_U2_branchpoint_pairing_region #312.1/2:32-41
 # U2 snRNA stem IIa: residues 46-63, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name U2_snRNP_7Q4O_U2_stem_IIa #308.1/2:46-63
+name U2_snRNP_7Q4O_U2_stem_IIa #312.1/2:46-63
 # RNA feature nucleotide display.
-select #308.1 & nucleic
+select #312.1 & nucleic
 nucleotides sel atoms
 select clear
 # BP region: residues 1-13
 # BP-A: residues 10
 # U2/U6 helix I: residues 29-30
-color #308.1/2:29-30 #047857
-select #308.1/2:29-30
+color #312.1/2:29-30 #047857
+select #312.1/2:29-30
 nucleotides sel fill
 select clear
 # U2 BP pairing: residues 32-41
-color #308.1/2:32-41 #0B6E2D
-select #308.1/2:32-41
+color #312.1/2:32-41 #0B6E2D
+select #312.1/2:32-41
 nucleotides sel fill
 select clear
 # U2 stem IIa: residues 46-63
-color #308.1/2:46-63 #167A38
-select #308.1/2:46-63
+color #312.1/2:46-63 #167A38
+select #312.1/2:46-63
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #308.2.
+# Labels are created as independent grouped models under #312.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic_with_primary_maps/label_scripts/7q4o_rna_labels.py
 # Searchable named selection browser.

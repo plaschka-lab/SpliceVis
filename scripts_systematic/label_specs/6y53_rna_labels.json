@@ -1,8 +1,8 @@
 {
-  "structure_model_id": "302.1",
-  "label_group_model_id": "302.2",
+  "structure_model_id": "306.1",
+  "label_group_model_id": "306.2",
   "cleanup_model_ids": [
-    "302.1.90"
+    "306.1.90"
   ],
   "label_group_name": "RNA_feature_labels",
   "height": 3.35,
@@ -104,14 +104,14 @@
       "index": 1,
       "selector_name": "U2_snRNP_6Y53_U2_stem_IIa",
       "feature": "U2_stem_IIa",
-      "atomspec": "#302.1/2:71",
+      "atomspec": "#306.1/2:71",
       "text": "U2 stem IIa (res. 69-73;81-82)",
       "color": "#167A38",
       "model_name": "label_01_U2_stem_IIa_res_69_73_81_82",
       "category_key": "internal_stem_loops",
       "category_name": "internal stem loops",
-      "category_model_id": "302.2.1",
-      "label_model_id": "302.2.1.1",
+      "category_model_id": "306.2.1",
+      "label_model_id": "306.2.1.1",
       "default_visible": false
     }
   ]

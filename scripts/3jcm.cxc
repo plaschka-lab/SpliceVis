@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #332; target model: #332.1; RNA labels: #332.2.
+# Structure group: #339; target model: #339.1; RNA labels: #339.2.
 
-open 8h6l id 332.9 name 8H6L_anchor
-open 3jcm id 332.1 name 3JCM
-rename #332 tri_snRNP_3jcm_structure
+open 8h6l id 339.9 name 8H6L_anchor
+open 3jcm id 339.1 name 3JCM
+rename #339 tri_snRNP_3jcm_structure
 
 # Align on PRPF8.
-matchmaker #332.1/A to #332.9/5B
-close #332.9
+matchmaker #339.1/A to #339.9/5B
+close #339.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,216 +40,216 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # PRPF8
-color #332.1/A #BFC3E8
+color #339.1/A #BFC3E8
 # PRPF4
-color #332.1/B #E2C496
+color #339.1/B #E2C496
 # PRPF31
-color #332.1/I #DFD570
+color #339.1/I #DFD570
 # PRPF6
-color #332.1/G #CFA785
+color #339.1/G #CFA785
 # PRPF3
-color #332.1/K #E1DD1B
+color #339.1/K #E1DD1B
 # TXNL4A
-color #332.1/L #C3BA7A
+color #339.1/L #C3BA7A
 # NHP2L1
-color #332.1/M #A89264
+color #339.1/M #A89264
 # EFTUD2
-color #332.1/H #6495ED
+color #339.1/H #6495ED
 # SNRNP200
-color #332.1/N #AFEEEE
+color #339.1/N #AFEEEE
 # SNRPD3
-color #332.1/J #B0C4DE
+color #339.1/J #B0C4DE
 # SNRPD3
-color #332.1/R #B0C4DE
+color #339.1/R #B0C4DE
 # SNRPB
-color #332.1/O #B0C4DE
+color #339.1/O #B0C4DE
 # SNRPB
-color #332.1/S #B0C4DE
+color #339.1/S #B0C4DE
 # SNRPD1
-color #332.1/P #B0C4DE
+color #339.1/P #B0C4DE
 # SNRPD1
-color #332.1/T #B0C4DE
+color #339.1/T #B0C4DE
 # SNRPD2
-color #332.1/Q #B0C4DE
+color #339.1/Q #B0C4DE
 # SNRPD2
-color #332.1/U #B0C4DE
+color #339.1/U #B0C4DE
 # SNRPE
-color #332.1/V #B0C4DE
+color #339.1/V #B0C4DE
 # SNRPE
-color #332.1/Y #B0C4DE
+color #339.1/Y #B0C4DE
 # SNRPF
-color #332.1/W #B0C4DE
+color #339.1/W #B0C4DE
 # SNRPF
-color #332.1/Z #B0C4DE
+color #339.1/Z #B0C4DE
 # SNRPG
-color #332.1/X #B0C4DE
+color #339.1/X #B0C4DE
 # SNRPG
-color #332.1/a #B0C4DE
+color #339.1/a #B0C4DE
 # LSM8
-color #332.1/b #F4A3A8
+color #339.1/b #F4A3A8
 # LSM2
-color #332.1/c #F4A3A8
+color #339.1/c #F4A3A8
 # LSM3
-color #332.1/d #F4A3A8
+color #339.1/d #F4A3A8
 # LSM6
-color #332.1/e #F4A3A8
+color #339.1/e #F4A3A8
 # LSM5
-color #332.1/f #F4A3A8
+color #339.1/f #F4A3A8
 # LSM7
-color #332.1/g #F4A3A8
+color #339.1/g #F4A3A8
 # LSM4
-color #332.1/h #F4A3A8
+color #339.1/h #F4A3A8
 # mRNA
-color #332.1/C #303030
+color #339.1/C #303030
 # U6 snRNA
-color #332.1/D #EF4444
+color #339.1/D #EF4444
 # U4 snRNA
-color #332.1/E #F2D94E
+color #339.1/E #F2D94E
 # U5 snRNA
-color #332.1/F #4F9FD3
+color #339.1/F #4F9FD3
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_3JCM_RNA_substrate #332.1/C
+name pdb_3JCM_RNA_substrate #339.1/C
 # Sm ring
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_3JCM_Sm_ring #332.1/J,O,P,Q,R,S,T,U,V,W,X,Y,Z,a
+name pdb_3JCM_Sm_ring #339.1/J,O,P,Q,R,S,T,U,V,W,X,Y,Z,a
 # U4 snRNP
 # selector_meta {"color":"#D8C800","family":"Protein/RNP groups","group":"U4 snRNP groups","kind":"subcomplex"}
-name pdb_3JCM_U4_snRNP #332.1/E
+name pdb_3JCM_U4_snRNP #339.1/E
 # U4/U6 snRNP
 # selector_meta {"color":"#C3BA7A","family":"Protein/RNP groups","group":"U4/U6 groups","kind":"subcomplex"}
-name pdb_3JCM_U4_U6_snRNP #332.1/B,I,K,L,M
+name pdb_3JCM_U4_U6_snRNP #339.1/B,I,K,L,M
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_3JCM_U5_snRNP #332.1/A,F,G,H,N
+name pdb_3JCM_U5_snRNP #339.1/A,F,G,H,N
 # U6 LSm
 # selector_meta {"color":"#FECACA","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
-name pdb_3JCM_U6_LSm #332.1/b,c,d,e,f,g,h
+name pdb_3JCM_U6_LSm #339.1/b,c,d,e,f,g,h
 # U6 snRNP
 # selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
-name pdb_3JCM_U6_snRNP #332.1/D
+name pdb_3JCM_U6_snRNP #339.1/D
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -6-4, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_5exon #332.1/C:-6-4
+name U5_tri_snRNP_3JCM_5exon #339.1/C:-6-4
 # substrate RNA: residues -6-13, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_substrate #332.1/C:-6-13
+name U5_tri_snRNP_3JCM_substrate #339.1/C:-6-13
 # 5' splice site: residues 5-10, network-scored-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_5SS #332.1/C:5-10
+name U5_tri_snRNP_3JCM_5SS #339.1/C:5-10
 # intron from 5' splice site: residues 5-13, five-ss-inference, low confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_intron #332.1/C:5-13
+name U5_tri_snRNP_3JCM_intron #339.1/C:5-13
 # Named selections for resolved snRNA functional regions.
 # U4 snRNA U4/U6 stem I partner: residues 1-18, reference-alignment, high confidence
 # selector_meta {"color":"#D8C800","family":"RNA","feature":"U4_U6_stem_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U4_U6_stem_I_partner #332.1/E:1-18
+name U5_tri_snRNP_3JCM_U4_U6_stem_I_partner #339.1/E:1-18
 # U4 snRNA U4/U6 stem II partner: residues 57-64, reference-alignment, high confidence
 # selector_meta {"color":"#E0CF1A","family":"RNA","feature":"U4_U6_stem_II_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U4_U6_stem_II_partner #332.1/E:57-64
+name U5_tri_snRNP_3JCM_U4_U6_stem_II_partner #339.1/E:57-64
 # U4 snRNA Brr2 loading region: residues 60-64, review-region, low confidence
 # selector_meta {"color":"#F0DF2E","family":"RNA","feature":"U4_Brr2_loading_region","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U4_Brr2_loading_region #332.1/E:60-64
+name U5_tri_snRNP_3JCM_U4_Brr2_loading_region #339.1/E:60-64
 # U4 snRNA Sm site: residues 144-150, sequence-motif, medium confidence
 # selector_meta {"color":"#F5E85A","family":"RNA","feature":"U4_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U4_Sm_site #332.1/E:144-150
+name U5_tri_snRNP_3JCM_U4_Sm_site #339.1/E:144-150
 # U5 snRNA loop I: residues 53, sequence-motif, medium confidence
 # selector_meta {"color":"#1B3CD0","family":"RNA","feature":"U5_loop_I","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U5_loop_I #332.1/F:53
+name U5_tri_snRNP_3JCM_U5_loop_I #339.1/F:53
 # U6 snRNA U2/U6 helix I partner: residues 44-52;56-66, motif-neighborhood, medium confidence
 # selector_meta {"color":"#D0183C","family":"RNA","feature":"U6_U2_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_U2_helix_I_partner #332.1/D:44-52,56-66
+name U5_tri_snRNP_3JCM_U6_U2_helix_I_partner #339.1/D:44-52,56-66
 # U6 snRNA 5' splice-site upstream contact: residues 44-52, motif-neighborhood, medium confidence
 # selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_5SS_upstream_contact #332.1/D:44-52
+name U5_tri_snRNP_3JCM_U6_5SS_upstream_contact #339.1/D:44-52
 # U6 snRNA internal stem-loop: residues 46-52;56-73, motif-neighborhood, low confidence
 # selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_ISL #332.1/D:46-52,56-73
+name U5_tri_snRNP_3JCM_U6_ISL #339.1/D:46-52,56-73
 # U6 snRNA ACAGAGA box: residues 47-52, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_ACAGAGA_box #332.1/D:47-52
+name U5_tri_snRNP_3JCM_U6_ACAGAGA_box #339.1/D:47-52
 # U6 snRNA U4/U6 stem II partner: residues 56-68, reference-alignment, high confidence
 # selector_meta {"color":"#E01842","family":"RNA","feature":"U6_U4_stem_II_partner","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_U4_stem_II_partner #332.1/D:56-68
+name U5_tri_snRNP_3JCM_U6_U4_stem_II_partner #339.1/D:56-68
 # U6 snRNA AGC catalytic triad: residues 59-61, sequence-motif, medium confidence
 # selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_AGC_catalytic_triad #332.1/D:59-61
+name U5_tri_snRNP_3JCM_U6_AGC_catalytic_triad #339.1/D:59-61
 # U6 snRNA U4/U6 stem I partner: residues 70-80, reference-alignment, high confidence
 # selector_meta {"color":"#D9183E","family":"RNA","feature":"U6_U4_stem_I_partner","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_U4_stem_I_partner #332.1/D:70-80
+name U5_tri_snRNP_3JCM_U6_U4_stem_I_partner #339.1/D:70-80
 # U6 snRNA LSm site: residues 108-111, terminal-region, low confidence
 # selector_meta {"color":"#E33A55","family":"RNA","feature":"U6_LSm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_U6_LSm_site #332.1/D:108-111
+name U5_tri_snRNP_3JCM_U6_LSm_site #339.1/D:108-111
 # RNA feature nucleotide display.
-select #332.1 & nucleic
+select #339.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -6-4
-color #332.1/C:-6-4 #FF8C00
-select #332.1/C:-6-4
+color #339.1/C:-6-4 #FF8C00
+select #339.1/C:-6-4
 nucleotides sel fill
 select clear
 # 5'SS: residues 5-10
 # intron: residues 5-13
 # U4/U6 stem I: residues 1-18
-color #332.1/E:1-18 #D8C800
-select #332.1/E:1-18
+color #339.1/E:1-18 #D8C800
+select #339.1/E:1-18
 nucleotides sel fill
 select clear
 # U4/U6 stem II: residues 57-64
-color #332.1/E:57-64 #E0CF1A
-select #332.1/E:57-64
+color #339.1/E:57-64 #E0CF1A
+select #339.1/E:57-64
 nucleotides sel fill
 select clear
 # U4 Brr2 region: residues 60-64
-color #332.1/E:60-64 #F0DF2E
-select #332.1/E:60-64
+color #339.1/E:60-64 #F0DF2E
+select #339.1/E:60-64
 nucleotides sel fill
 select clear
 # U5 loop I: residues 53
-color #332.1/F:53 #1B3CD0
-select #332.1/F:53
+color #339.1/F:53 #1B3CD0
+select #339.1/F:53
 nucleotides sel fill
 select clear
 # U2/U6 helix I: residues 44-52;56-66
-color #332.1/D:44-52,56-66 #D0183C
-select #332.1/D:44-52,56-66
+color #339.1/D:44-52,56-66 #D0183C
+select #339.1/D:44-52,56-66
 nucleotides sel fill
 select clear
 # U6 5'SS contact: residues 44-52
-color #332.1/D:44-52 #E01842
-select #332.1/D:44-52
+color #339.1/D:44-52 #E01842
+select #339.1/D:44-52
 nucleotides sel fill
 select clear
 # U6 ISL: residues 46-52;56-73
-color #332.1/D:46-52,56-73 #D61A3D
-select #332.1/D:46-52,56-73
+color #339.1/D:46-52,56-73 #D61A3D
+select #339.1/D:46-52,56-73
 nucleotides sel fill
 select clear
 # U6 ACAGAGA: residues 47-52
-color #332.1/D:47-52 #DC143C
-select #332.1/D:47-52
+color #339.1/D:47-52 #DC143C
+select #339.1/D:47-52
 nucleotides sel fill
 select clear
 # U4/U6 stem II: residues 56-68
-color #332.1/D:56-68 #E01842
-select #332.1/D:56-68
+color #339.1/D:56-68 #E01842
+select #339.1/D:56-68
 nucleotides sel fill
 select clear
 # U6 AGC triad: residues 59-61
-color #332.1/D:59-61 #C91236
-select #332.1/D:59-61
+color #339.1/D:59-61 #C91236
+select #339.1/D:59-61
 nucleotides sel fill
 select clear
 # U4/U6 stem I: residues 70-80
-color #332.1/D:70-80 #D9183E
-select #332.1/D:70-80
+color #339.1/D:70-80 #D9183E
+select #339.1/D:70-80
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #332.2.
+# Labels are created as independent grouped models under #339.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/3jcm_rna_labels.py
 # Searchable named selection browser.

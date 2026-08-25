@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #302; target model: #302.1; RNA labels: #302.2.
+# Structure group: #306; target model: #306.1; RNA labels: #306.2.
 
-open 8h6l id 302.9 name 8H6L_anchor
-open 6y53 id 302.1 name 6Y53
-rename #302 U2_snRNP_6y53_structure
+open 8h6l id 306.9 name 8H6L_anchor
+open 6y53 id 306.1 name 6Y53
+rename #306 U2_snRNP_6y53_structure
 
 # Align on SF3B1.
-matchmaker #302.1/u to #302.9/2G
-close #302.9
+matchmaker #306.1/u to #306.9/2G
+close #306.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,71 +40,71 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SNRPA1
-color #302.1/a #58D68D
+color #306.1/a #58D68D
 # SNRPB2
-color #302.1/b #DAF7A6
+color #306.1/b #DAF7A6
 # SF3B6
-color #302.1/z #ADCEA0
+color #306.1/z #ADCEA0
 # DDX46
-color #302.1/p #5BAE8A
+color #306.1/p #5BAE8A
 # SF3A1
-color #302.1/6 #55947F
+color #306.1/6 #55947F
 # SF3A2
-color #302.1/7 #75A074
+color #306.1/7 #75A074
 # SF3A3
-color #302.1/9 #9BCF91
+color #306.1/9 #9BCF91
 # SF3B4
-color #302.1/o #77B088
+color #306.1/o #77B088
 # U2-Sm SNRPB
-color #302.1/m #D5F5E3
+color #306.1/m #D5F5E3
 # U2-Sm SNRPG
-color #302.1/k #D5F5E3
+color #306.1/k #D5F5E3
 # U2-Sm SNRPD1
-color #302.1/n #D5F5E3
+color #306.1/n #D5F5E3
 # U2-Sm SNRPD2
-color #302.1/h #D5F5E3
+color #306.1/h #D5F5E3
 # U2-Sm SNRPD3
-color #302.1/l #D5F5E3
+color #306.1/l #D5F5E3
 # U2-Sm SNRPE
-color #302.1/j #D5F5E3
+color #306.1/j #D5F5E3
 # U2-Sm SNRPF
-color #302.1/i #D5F5E3
+color #306.1/i #D5F5E3
 # HTATSF1
-color #302.1/q #7DBF82
+color #306.1/q #7DBF82
 # SF3B2
-color #302.1/8 #49926C
+color #306.1/8 #49926C
 # SF3B1
-color #302.1/u #487957
+color #306.1/u #487957
 # U2 snRNA
-color #302.1/2 #71C562
+color #306.1/2 #71C562
 # Named selections for subcomplexes using original deposited chain IDs.
 # U2 Sm ring
 # selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_6Y53_U2_Sm_ring #302.1/h,i,j,k,l,m,n
+name pdb_6Y53_U2_Sm_ring #306.1/h,i,j,k,l,m,n
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_6Y53_U2_snRNP #302.1/2,a,b,p,q
+name pdb_6Y53_U2_snRNP #306.1/2,a,b,p,q
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_6Y53_U2_SF3B #302.1/6,7,8,9,o,u,z
+name pdb_6Y53_U2_SF3B #306.1/6,7,8,9,o,u,z
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA stem IIa: residues 69-73;81-82, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name U2_snRNP_6Y53_U2_stem_IIa #302.1/2:69-73,81-82
+name U2_snRNP_6Y53_U2_stem_IIa #306.1/2:69-73,81-82
 # U2 snRNA Sm site: residues 99-105, sequence-motif, medium confidence
 # selector_meta {"color":"#2F8B4D","family":"RNA","feature":"U2_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U2_snRNP_6Y53_U2_Sm_site #302.1/2:99-105
+name U2_snRNP_6Y53_U2_Sm_site #306.1/2:99-105
 # RNA feature nucleotide display.
-select #302.1 & nucleic
+select #306.1 & nucleic
 nucleotides sel atoms
 select clear
 # U2 stem IIa: residues 69-73;81-82
-color #302.1/2:69-73,81-82 #167A38
-select #302.1/2:69-73,81-82
+color #306.1/2:69-73,81-82 #167A38
+select #306.1/2:69-73,81-82
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #302.2.
+# Labels are created as independent grouped models under #306.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/6y53_rna_labels.py
 # Searchable named selection browser.

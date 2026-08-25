@@ -1,0 +1,76 @@
+# Lightweight ChimeraX script for 6ASO
+# Models are downloaded directly by ChimeraX from the PDB.
+# Primary maps, when requested, are downloaded directly from EMDB.
+# Original deposited chain identifiers are used.
+
+# Shared anchor frame: 8H6L
+# Structure group: #328; target model: #328.1; RNA labels: #328.2.
+
+open 8h6l id 328.9 name 8H6L_anchor
+open 6aso id 328.1 name 6ASO
+rename #328 U6_snRNP_6aso_structure
+
+# No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
+close #328.9
+
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# LSM2
+color #328.1/B #F4A3A8
+# LSM3
+color #328.1/C #F4A3A8
+# LSM4
+color #328.1/D #F4A3A8
+# LSM5
+color #328.1/E #F4A3A8
+# LSM6
+color #328.1/F #F4A3A8
+# LSM7
+color #328.1/G #F4A3A8
+# LSM8
+color #328.1/H #F4A3A8
+# mRNA
+color #328.1/I #303030
+# Named selections for subcomplexes using original deposited chain IDs.
+# RNA/substrate
+# selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
+name pdb_6ASO_RNA_substrate #328.1/I
+# U6 LSm
+# selector_meta {"color":"#FECACA","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name pdb_6ASO_U6_LSm #328.1/B,C,D,E,F,G,H
+# other
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_6ASO_other #328.1/A
+# Named selections for resolved substrate RNA features.
+# substrate RNA: residues 33-79;81-98;109-113, component, medium confidence, validation not_applicable
+# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name U6_snRNP_6ASO_substrate #328.1/I:33-79,81-98,109-113
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/6aso_selection_browser.py
+view
+show nucleic

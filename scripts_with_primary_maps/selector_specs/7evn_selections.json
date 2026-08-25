@@ -1,7 +1,7 @@
 {
   "pdb_id": "7evn",
-  "structure_model_id": "311.1",
-  "structure_group_id": "311",
+  "structure_model_id": "315.1",
+  "structure_group_id": "315",
   "selectors": [
     {
       "name": "pdb_7EVN_U2_snRNP",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U2 snRNP",
-      "atomspec": "#311.1/E",
+      "atomspec": "#315.1/E",
       "family": "Protein/RNP groups",
       "group": "U2/SF3B groups",
       "group_key": "",
@@ -23,7 +23,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U2/SF3B",
-      "atomspec": "#311.1/A,B,C,D",
+      "atomspec": "#315.1/A,B,C,D",
       "family": "Protein/RNP groups",
       "group": "U2/SF3B groups",
       "group_key": "",

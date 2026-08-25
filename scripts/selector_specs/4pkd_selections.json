@@ -1,0 +1,57 @@
+{
+  "pdb_id": "4pkd",
+  "structure_model_id": "304.1",
+  "structure_group_id": "304",
+  "selectors": [
+    {
+      "name": "pdb_4PKD_U1_snRNP",
+      "label": "U1 snRNP",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "U1 snRNP",
+      "atomspec": "#304.1/B,V",
+      "family": "Protein/RNP groups",
+      "group": "U1 snRNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#B66AAE"
+    },
+    {
+      "name": "U1_snRNP_4PKD_U1_5_5SS_recognition",
+      "label": "U1 snRNA 5' splice-site recognition region",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U1 snRNA 5' splice-site recognition region: residues 59-68, review-region, medium confidence",
+      "atomspec": "#304.1/V:59-68",
+      "family": "RNA",
+      "group": "snRNA-pre-mRNA regions",
+      "group_key": "snRNA_pre_mRNA_regions",
+      "kind": "rna_feature",
+      "feature": "U1_5prime_5SS_recognition",
+      "color": "#B66AAE",
+      "label_model_id": "304.2.1.1",
+      "label_category_model_id": "304.2.1",
+      "label_group_model_id": "304.2",
+      "label_default_visible": "true"
+    },
+    {
+      "name": "U1_snRNP_4PKD_U1_SL1",
+      "label": "U1 snRNA stem-loop 1",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U1 snRNA stem-loop 1: residues 69-103, review-region, low confidence",
+      "atomspec": "#304.1/V:69-103",
+      "family": "RNA",
+      "group": "internal stem loops",
+      "group_key": "internal_stem_loops",
+      "kind": "rna_feature",
+      "feature": "U1_SL1",
+      "color": "#BF72B7",
+      "label_model_id": "304.2.2.1",
+      "label_category_model_id": "304.2.2",
+      "label_group_model_id": "304.2",
+      "label_default_visible": ""
+    }
+  ]
+}

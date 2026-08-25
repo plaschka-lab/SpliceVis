@@ -1,7 +1,7 @@
 {
   "pdb_id": "8q7v",
-  "structure_model_id": "438.1",
-  "structure_group_id": "438",
+  "structure_model_id": "445.1",
+  "structure_group_id": "445",
   "selectors": [
     {
       "name": "pdb_8Q7V_U5_Sm_ring",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U5 Sm ring",
-      "atomspec": "#438.1/a,b,c,d,e,f,g",
+      "atomspec": "#445.1/a,b,c,d,e,f,g",
       "family": "Protein/RNP groups",
       "group": "U5 snRNP groups",
       "group_key": "",
@@ -23,7 +23,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U5 snRNP",
-      "atomspec": "#438.1/5,A,B,C,D,F,G,H",
+      "atomspec": "#445.1/5,A,B,C,D,F,G,H",
       "family": "Protein/RNP groups",
       "group": "U5 snRNP groups",
       "group_key": "",
@@ -37,16 +37,16 @@
       "category": "snRNA feature",
       "section": "Named selections for resolved snRNA functional regions.",
       "comment": "U5 snRNA loop I: residues 38, sequence-motif, medium confidence",
-      "atomspec": "#438.1/5:38",
+      "atomspec": "#445.1/5:38",
       "family": "RNA",
       "group": "snRNA-pre-mRNA regions",
       "group_key": "snRNA_pre_mRNA_regions",
       "kind": "rna_feature",
       "feature": "U5_loop_I",
       "color": "#1B3CD0",
-      "label_model_id": "438.2.1.1",
-      "label_category_model_id": "438.2.1",
-      "label_group_model_id": "438.2",
+      "label_model_id": "445.2.1.1",
+      "label_category_model_id": "445.2.1",
+      "label_group_model_id": "445.2",
       "label_default_visible": "true"
     }
   ]

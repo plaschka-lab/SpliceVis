@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #329; target model: #329.1; RNA labels: #329.2.
+# Structure group: #336; target model: #336.1; RNA labels: #336.2.
 
-open 8h6l id 329.9 name 8H6L_anchor
-open 5gao id 329.1 name 5GAO
-rename #329 tri_snRNP_5gao_structure
+open 8h6l id 336.9 name 8H6L_anchor
+open 5gao id 336.1 name 5GAO
+rename #336 tri_snRNP_5gao_structure
 
 # Align on PRPF8.
-matchmaker #329.1/A to #329.9/5B
-close #329.9
+matchmaker #336.1/A to #336.9/5B
+close #336.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,41 +40,41 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SNRPB
-color #329.1/k #B0C4DE
+color #336.1/k #B0C4DE
 # SNRPD1
-color #329.1/l #B0C4DE
+color #336.1/l #B0C4DE
 # SNRPD2
-color #329.1/m #B0C4DE
+color #336.1/m #B0C4DE
 # SNRPD3
-color #329.1/n #B0C4DE
+color #336.1/n #B0C4DE
 # SNRPE
-color #329.1/p #B0C4DE
+color #336.1/p #B0C4DE
 # SNRPF
-color #329.1/q #B0C4DE
+color #336.1/q #B0C4DE
 # SNRPG
-color #329.1/r #B0C4DE
+color #336.1/r #B0C4DE
 # SART1
-color #329.1/E #D6937B
+color #336.1/E #D6937B
 # SNRNP200
-color #329.1/B #AFEEEE
+color #336.1/B #AFEEEE
 # mRNA
-color #329.1/V #303030
+color #336.1/V #303030
 # PRPF8
-color #329.1/A #BFC3E8
+color #336.1/A #BFC3E8
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_5GAO_RNA_substrate #329.1/V
+name pdb_5GAO_RNA_substrate #336.1/V
 # Sm ring
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_5GAO_Sm_ring #329.1/k,l,m,n,p,q,r
+name pdb_5GAO_Sm_ring #336.1/k,l,m,n,p,q,r
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_5GAO_U5_snRNP #329.1/A,B,E
+name pdb_5GAO_U5_snRNP #336.1/A,B,E
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues 73-104;128-152, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_5GAO_substrate #329.1/V:73-104,128-152
+name U5_tri_snRNP_5GAO_substrate #336.1/V:73-104,128-152
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #436; target model: #436.1; RNA labels: #436.2.
+# Structure group: #443; target model: #443.1; RNA labels: #443.2.
 
-open 8h6l id 436.9 name 8H6L_anchor
-open 7os2 id 436.1 name 7OS2
-open emdb:13046 id 436.3.1 name U5_recycling_7os2_EMD-13046_primary_map
-rename #436 U5_recycling_7os2_structure
+open 8h6l id 443.9 name 8H6L_anchor
+open 7os2 id 443.1 name 7OS2
+open emdb:13046 id 443.3.1 name U5_recycling_7os2_EMD-13046_primary_map
+rename #443 U5_recycling_7os2_structure
 
 # Align on PRPF8.
-matchmaker #436.1/J to #436.9/5B bring #436.3.1
-close #436.9
+matchmaker #443.1/J to #443.9/5B bring #443.3.1
+close #443.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,18 +41,18 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SNRNP200
-color #436.1/B #AFEEEE
+color #443.1/B #AFEEEE
 # C9orf78
-color #436.1/C #D9CCFF
+color #443.1/C #D9CCFF
 # PRPF8
-color #436.1/J #BFC3E8
+color #443.1/J #BFC3E8
 # Named selections for subcomplexes using original deposited chain IDs.
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_7OS2_U5_snRNP #436.1/B,J
+name pdb_7OS2_U5_snRNP #443.1/B,J
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_7OS2_other #436.1/C
+name pdb_7OS2_other #443.1/C
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

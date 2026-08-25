@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #323; target model: #323.1; RNA labels: #323.2.
+# Structure group: #330; target model: #330.1; RNA labels: #330.2.
 
-open 8h6l id 323.9 name 8H6L_anchor
-open 6n7p id 323.1 name 6N7P
-open emdb:0360 id 323.3.1 name E_complex_6n7p_EMD-0360_primary_map
-rename #323 E_complex_6n7p_structure
+open 8h6l id 330.9 name 8H6L_anchor
+open 6n7p id 330.1 name 6N7P
+open emdb:0360 id 330.3.1 name E_complex_6n7p_EMD-0360_primary_map
+rename #330 E_complex_6n7p_structure
 
 # No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
-close #323.9
+close #330.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,119 +40,119 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SNRNP70
-color #323.1/A #8C3D78
+color #330.1/A #8C3D78
 # SNRPC
-color #323.1/B #D7A3CF
+color #330.1/B #D7A3CF
 # SNRPA
-color #323.1/C #C07AB6
+color #330.1/C #C07AB6
 # PRP42
-color #323.1/D #7F5BA6
+color #330.1/D #7F5BA6
 # PRPF39
-color #323.1/E #E1B8D9
+color #330.1/E #E1B8D9
 # NAM8
-color #323.1/F #C7A6BE
+color #330.1/F #C7A6BE
 # SNU56
-color #323.1/G #D65B96
+color #330.1/G #D65B96
 # SNU71
-color #323.1/H #A95A9B
+color #330.1/H #A95A9B
 # LUC7L
-color #323.1/I #B03372
+color #330.1/I #B03372
 # PRPF40A
-color #323.1/J #BA6FA8
+color #330.1/J #BA6FA8
 # U1-Sm SNRPB
-color #323.1/K #EAD7E8
+color #330.1/K #EAD7E8
 # U1-Sm SNRPD1
-color #323.1/L #EAD7E8
+color #330.1/L #EAD7E8
 # U1-Sm SNRPD2
-color #323.1/M #EAD7E8
+color #330.1/M #EAD7E8
 # U1-Sm SNRPD3
-color #323.1/N #EAD7E8
+color #330.1/N #EAD7E8
 # U1-Sm SNRPE
-color #323.1/O #EAD7E8
+color #330.1/O #EAD7E8
 # U1-Sm SNRPF
-color #323.1/P #EAD7E8
+color #330.1/P #EAD7E8
 # U1-Sm SNRPG
-color #323.1/Q #EAD7E8
+color #330.1/Q #EAD7E8
 # U1 snRNA
-color #323.1/R #D46BB8
+color #330.1/R #D46BB8
 # mRNA
-color #323.1/r #303030
+color #330.1/r #303030
 # CBP80
-color #323.1/X #B29876
+color #330.1/X #B29876
 # CBP20
-color #323.1/Y #547596
+color #330.1/Y #547596
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_6N7P_RNA_substrate #323.1/r
+name pdb_6N7P_RNA_substrate #330.1/r
 # U1 Sm ring
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
-name pdb_6N7P_U1_Sm_ring #323.1/K,L,M,N,O,P,Q
+name pdb_6N7P_U1_Sm_ring #330.1/K,L,M,N,O,P,Q
 # U1 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
-name pdb_6N7P_U1_snRNP #323.1/A,B,C,D,E,F,G,H,I,J,R
+name pdb_6N7P_U1_snRNP #330.1/A,B,C,D,E,F,G,H,I,J,R
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_6N7P_other #323.1/X,Y
+name pdb_6N7P_other #330.1/X,Y
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -9--1, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_6N7P_5exon #323.1/r:-9--1
+name E_complex_6N7P_5exon #330.1/r:-9--1
 # substrate RNA: residues -9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_6N7P_substrate #323.1/r:-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13
+name E_complex_6N7P_substrate #330.1/r:-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_6N7P_5SS #323.1/r:1-6
+name E_complex_6N7P_5SS #330.1/r:1-6
 # intron: residues 1-13, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_6N7P_intron #323.1/r:1-13
+name E_complex_6N7P_intron #330.1/r:1-13
 # Named selections for resolved snRNA functional regions.
 # U1 snRNA 5' splice-site recognition region: residues 1-10, review-region, medium confidence
 # selector_meta {"color":"#B66AAE","family":"RNA","feature":"U1_5prime_5SS_recognition","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name E_complex_6N7P_U1_5_5SS_recognition #323.1/R:1-10
+name E_complex_6N7P_U1_5_5SS_recognition #330.1/R:1-10
 # U1 snRNA stem-loop 1: residues 11-26;34-45, review-region, low confidence
 # selector_meta {"color":"#BF72B7","family":"RNA","feature":"U1_SL1","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name E_complex_6N7P_U1_SL1 #323.1/R:11-26,34-45
+name E_complex_6N7P_U1_SL1 #330.1/R:11-26,34-45
 # U1 snRNA stem-loop 2: residues 46-95, review-region, low confidence
 # selector_meta {"color":"#AD62A6","family":"RNA","feature":"U1_SL2","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name E_complex_6N7P_U1_SL2 #323.1/R:46-95
+name E_complex_6N7P_U1_SL2 #330.1/R:46-95
 # U1 snRNA Sm site: residues 224-230; 241-247; 553-559, sequence-motif, medium confidence
 # selector_meta {"color":"#C783BF","family":"RNA","feature":"U1_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name E_complex_6N7P_U1_Sm_site #323.1/R:224-230|#323.1/R:241-247|#323.1/R:553-559
+name E_complex_6N7P_U1_Sm_site #330.1/R:224-230|#330.1/R:241-247|#330.1/R:553-559
 # RNA feature nucleotide display.
-select #323.1 & nucleic
+select #330.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -9--1
-color #323.1/r:-9--1 #FF8C00
-select #323.1/r:-9--1
+color #330.1/r:-9--1 #FF8C00
+select #330.1/r:-9--1
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-13
 # U1 5'SS recog.: residues 1-10
-color #323.1/R:1-10 #B66AAE
-select #323.1/R:1-10
+color #330.1/R:1-10 #B66AAE
+select #330.1/R:1-10
 nucleotides sel fill
 select clear
 # U1 SL1: residues 11-26;34-45
-color #323.1/R:11-26,34-45 #BF72B7
-select #323.1/R:11-26,34-45
+color #330.1/R:11-26,34-45 #BF72B7
+select #330.1/R:11-26,34-45
 nucleotides sel fill
 select clear
 # U1 SL2: residues 46-95
-color #323.1/R:46-95 #AD62A6
-select #323.1/R:46-95
+color #330.1/R:46-95 #AD62A6
+select #330.1/R:46-95
 nucleotides sel fill
 select clear
 # U1 Sm site: residues 224-230; 241-247; 553-559
-color #323.1/R:224-230|#323.1/R:241-247|#323.1/R:553-559 #C783BF
-select #323.1/R:224-230|#323.1/R:241-247|#323.1/R:553-559
+color #330.1/R:224-230|#330.1/R:241-247|#330.1/R:553-559 #C783BF
+select #330.1/R:224-230|#330.1/R:241-247|#330.1/R:553-559
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #323.2.
+# Labels are created as independent grouped models under #330.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/6n7p_rna_labels.py
 # Searchable named selection browser.

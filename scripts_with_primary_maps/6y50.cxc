@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #304; target model: #304.1; RNA labels: #304.2.
+# Structure group: #308; target model: #308.1; RNA labels: #308.2.
 
-open 8h6l id 304.9 name 8H6L_anchor
-open 6y50 id 304.1 name 6Y50
-open emdb:10688 id 304.3.1 name U2_snRNP_6y50_EMD-10688_primary_map
-rename #304 U2_snRNP_6y50_structure
+open 8h6l id 308.9 name 8H6L_anchor
+open 6y50 id 308.1 name 6Y50
+open emdb:10688 id 308.3.1 name U2_snRNP_6y50_EMD-10688_primary_map
+rename #308 U2_snRNP_6y50_structure
 
 # Align on SF3B1.
-matchmaker #304.1/u to #304.9/2G bring #304.3.1
-close #304.9
+matchmaker #308.1/u to #308.9/2G bring #308.3.1
+close #308.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,61 +41,61 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3A3
-color #304.1/9 #9BCF91
+color #308.1/9 #9BCF91
 # PHF5A
-color #304.1/y #375A40
+color #308.1/y #375A40
 # SF3B5
-color #304.1/x #92BB8F
+color #308.1/x #92BB8F
 # SF3B2
-color #304.1/8 #49926C
+color #308.1/8 #49926C
 # SF3B3
-color #304.1/v #6A9064
+color #308.1/v #6A9064
 # SF3B1
-color #304.1/u #487957
+color #308.1/u #487957
 # U2 snRNA
-color #304.1/2 #71C562
+color #308.1/2 #71C562
 # HTATSF1
-color #304.1/q #7DBF82
+color #308.1/q #7DBF82
 # DDX46
-color #304.1/p #5BAE8A
+color #308.1/p #5BAE8A
 # Named selections for subcomplexes using original deposited chain IDs.
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_6Y50_U2_snRNP #304.1/2,p,q
+name pdb_6Y50_U2_snRNP #308.1/2,p,q
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_6Y50_U2_SF3B #304.1/8,9,u,v,x,y
+name pdb_6Y50_U2_SF3B #308.1/8,9,u,v,x,y
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U2_snRNP_6Y50_U2_U6_helix_I_partner #304.1/2:26-30
+name U2_snRNP_6Y50_U2_U6_helix_I_partner #308.1/2:26-30
 # U2 snRNA branchpoint pairing region: residues 32-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_6Y50_U2_branchpoint_pairing_region #304.1/2:32-41
+name U2_snRNP_6Y50_U2_branchpoint_pairing_region #308.1/2:32-41
 # U2 snRNA stem IIa: residues 46-65, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name U2_snRNP_6Y50_U2_stem_IIa #304.1/2:46-65
+name U2_snRNP_6Y50_U2_stem_IIa #308.1/2:46-65
 # RNA feature nucleotide display.
-select #304.1 & nucleic
+select #308.1 & nucleic
 nucleotides sel atoms
 select clear
 # U2/U6 helix I: residues 26-30
-color #304.1/2:26-30 #047857
-select #304.1/2:26-30
+color #308.1/2:26-30 #047857
+select #308.1/2:26-30
 nucleotides sel fill
 select clear
 # U2 BP pairing: residues 32-41
-color #304.1/2:32-41 #0B6E2D
-select #304.1/2:32-41
+color #308.1/2:32-41 #0B6E2D
+select #308.1/2:32-41
 nucleotides sel fill
 select clear
 # U2 stem IIa: residues 46-65
-color #304.1/2:46-65 #167A38
-select #304.1/2:46-65
+color #308.1/2:46-65 #167A38
+select #308.1/2:46-65
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #304.2.
+# Labels are created as independent grouped models under #308.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/6y50_rna_labels.py
 # Searchable named selection browser.

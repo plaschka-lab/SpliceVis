@@ -1,0 +1,63 @@
+{
+  "pdb_id": "5vsu",
+  "structure_model_id": "327.1",
+  "structure_group_id": "327",
+  "selectors": [
+    {
+      "name": "pdb_5VSU_RNA_substrate",
+      "label": "RNA/substrate",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "RNA/substrate",
+      "atomspec": "#327.1/I",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#303030"
+    },
+    {
+      "name": "pdb_5VSU_U6_LSm",
+      "label": "U6 LSm",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "U6 LSm",
+      "atomspec": "#327.1/B,C,D,E,F,G,H",
+      "family": "Protein/RNP groups",
+      "group": "U6 snRNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#FECACA"
+    },
+    {
+      "name": "pdb_5VSU_other",
+      "label": "other",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "other",
+      "atomspec": "#327.1/A",
+      "family": "Protein/RNP groups",
+      "group": "other protein/RNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#9CA3AF"
+    },
+    {
+      "name": "U6_snRNP_5VSU_substrate",
+      "label": "substrate RNA",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "substrate RNA: residues 34-79;81-102;108-112, component, medium confidence, validation not_applicable",
+      "atomspec": "#327.1/I:34-79,81-102,108-112",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "substrate",
+      "color": "#303030"
+    }
+  ]
+}

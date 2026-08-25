@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #316; target model: #316.1; RNA labels: #316.2.
+# Structure group: #320; target model: #320.1; RNA labels: #320.2.
 
-open 8h6l id 316.9 name 8H6L_anchor
-open 9k1w id 316.1 name 9K1W
-rename #316 U2_snRNP_9k1w_structure
+open 8h6l id 320.9 name 8H6L_anchor
+open 9k1w id 320.1 name 9K1W
+rename #320 U2_snRNP_9k1w_structure
 
 # Align on SF3B1.
-matchmaker #316.1/C to #316.9/2G
-close #316.9
+matchmaker #320.1/C to #320.9/2G
+close #320.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,54 +40,54 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3B1
-color #316.1/C #487957
+color #320.1/C #487957
 # PHF5A
-color #316.1/D #375A40
+color #320.1/D #375A40
 # SF3B3
-color #316.1/A #6A9064
+color #320.1/A #6A9064
 # SF3B5
-color #316.1/B #92BB8F
+color #320.1/B #92BB8F
 # INTRON
-color #316.1/G #303030
+color #320.1/G #303030
 # U2 snRNA
-color #316.1/H #71C562
+color #320.1/H #71C562
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_9K1W_RNA_substrate #316.1/G
+name pdb_9K1W_RNA_substrate #320.1/G
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9K1W_U2_snRNP #316.1/H
+name pdb_9K1W_U2_snRNP #320.1/H
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9K1W_U2_SF3B #316.1/A,B,C,D
+name pdb_9K1W_U2_SF3B #320.1/A,B,C,D
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues 27-48, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1W_substrate #316.1/G:27-48
+name U2_snRNP_9K1W_substrate #320.1/G:27-48
 # branch point region: residues 27-48, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1W_branch_region #316.1/G:27-48
+name U2_snRNP_9K1W_branch_region #320.1/G:27-48
 # branch point adenosine: residues 36, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1W_branch_A #316.1/G:36
+name U2_snRNP_9K1W_branch_A #320.1/G:36
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA branchpoint pairing region: residues 2-11, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name U2_snRNP_9K1W_U2_branchpoint_pairing_region #316.1/H:2-11
+name U2_snRNP_9K1W_U2_branchpoint_pairing_region #320.1/H:2-11
 # RNA feature nucleotide display.
-select #316.1 & nucleic
+select #320.1 & nucleic
 nucleotides sel atoms
 select clear
 # BP region: residues 27-48
 # BP-A: residues 36
 # U2 BP pairing: residues 2-11
-color #316.1/H:2-11 #0B6E2D
-select #316.1/H:2-11
+color #320.1/H:2-11 #0B6E2D
+select #320.1/H:2-11
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #316.2.
+# Labels are created as independent grouped models under #320.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9k1w_rna_labels.py
 # Searchable named selection browser.

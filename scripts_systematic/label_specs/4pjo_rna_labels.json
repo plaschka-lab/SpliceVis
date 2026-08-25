@@ -1,0 +1,174 @@
+{
+  "structure_model_id": "303.1",
+  "label_group_model_id": "303.2",
+  "cleanup_model_ids": [
+    "303.1.90"
+  ],
+  "label_group_name": "RNA_feature_labels",
+  "height": 3.35,
+  "size": 144,
+  "background": "none",
+  "outline_color": "#ffffff",
+  "outline_offsets": [
+    [
+      -0.085,
+      0,
+      0
+    ],
+    [
+      0.085,
+      0,
+      0
+    ],
+    [
+      0,
+      -0.085,
+      0
+    ],
+    [
+      0,
+      0.085,
+      0
+    ],
+    [
+      -0.06,
+      -0.06,
+      0
+    ],
+    [
+      -0.06,
+      0.06,
+      0
+    ],
+    [
+      0.06,
+      -0.06,
+      0
+    ],
+    [
+      0.06,
+      0.06,
+      0
+    ],
+    [
+      -0.052,
+      0,
+      0
+    ],
+    [
+      0.052,
+      0,
+      0
+    ],
+    [
+      0,
+      -0.052,
+      0
+    ],
+    [
+      0,
+      0.052,
+      0
+    ],
+    [
+      -0.037,
+      -0.037,
+      0
+    ],
+    [
+      -0.037,
+      0.037,
+      0
+    ],
+    [
+      0.037,
+      -0.037,
+      0
+    ],
+    [
+      0.037,
+      0.037,
+      0
+    ]
+  ],
+  "default_visible_category_keys": [
+    "pre_mRNA_features",
+    "snRNA_pre_mRNA_regions"
+  ],
+  "default_visible_category_names": [
+    "pre-mRNA features",
+    "snRNA-pre-mRNA regions"
+  ],
+  "labels": [
+    {
+      "index": 1,
+      "selector_name": "U1_snRNP_4PJO_5exon",
+      "feature": "exon_5",
+      "atomspec": "#303.1/MA:2",
+      "text": "5' exon (res. 1-2)",
+      "color": "#FF8C00",
+      "model_name": "label_01_5_exon_res_1_2",
+      "category_key": "pre_mRNA_features",
+      "category_name": "pre-mRNA features",
+      "category_model_id": "303.2.1",
+      "label_model_id": "303.2.1.1",
+      "default_visible": true
+    },
+    {
+      "index": 2,
+      "selector_name": "U1_snRNP_4PJO_5SS",
+      "feature": "five_prime_splice_site",
+      "atomspec": "#303.1/MA:6",
+      "text": "? 5'SS (res. 3-8)",
+      "color": "#303030",
+      "model_name": "label_02_5_SS_res_3_8",
+      "category_key": "pre_mRNA_features",
+      "category_name": "pre-mRNA features",
+      "category_model_id": "303.2.1",
+      "label_model_id": "303.2.1.2",
+      "default_visible": true
+    },
+    {
+      "index": 3,
+      "selector_name": "U1_snRNP_4PJO_intron",
+      "feature": "intron",
+      "atomspec": "#303.1/MA:6",
+      "text": "intron (res. 3-10)",
+      "color": "#303030",
+      "model_name": "label_03_intron_res_3_10",
+      "category_key": "pre_mRNA_features",
+      "category_name": "pre-mRNA features",
+      "category_model_id": "303.2.1",
+      "label_model_id": "303.2.1.3",
+      "default_visible": true
+    },
+    {
+      "index": 4,
+      "selector_name": "U1_snRNP_4PJO_U1_5_5SS_recognition",
+      "feature": "U1_5prime_5SS_recognition",
+      "atomspec": "#303.1/1R1:6",
+      "text": "U1 5'SS recog. (res. 1-10)",
+      "color": "#B66AAE",
+      "model_name": "label_04_U1_5_SS_recog_res_1_10",
+      "category_key": "snRNA_pre_mRNA_regions",
+      "category_name": "snRNA-pre-mRNA regions",
+      "category_model_id": "303.2.2",
+      "label_model_id": "303.2.2.1",
+      "default_visible": true
+    },
+    {
+      "index": 5,
+      "selector_name": "U1_snRNP_4PJO_U1_SL1",
+      "feature": "U1_SL1",
+      "atomspec": "#303.1/1R1:11",
+      "text": "U1 SL1 (res. 11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,122,123,124,125,126,127,128,129,130,131,132,133,134,135)",
+      "color": "#BF72B7",
+      "model_name": "label_05_U1_SL1_res_11_12_13_14_15_16_17_18_19_20_21_22_23_24_25_26_27_28_29_30_31_122_123_124_125_126_127_128_129_130_131_132_133_134_135",
+      "category_key": "internal_stem_loops",
+      "category_name": "internal stem loops",
+      "category_model_id": "303.2.3",
+      "label_model_id": "303.2.3.1",
+      "default_visible": false
+    }
+  ]
+}

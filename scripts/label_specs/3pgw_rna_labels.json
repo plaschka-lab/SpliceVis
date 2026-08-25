@@ -1,0 +1,146 @@
+{
+  "structure_model_id": "302.1",
+  "label_group_model_id": "302.2",
+  "cleanup_model_ids": [
+    "302.1.90"
+  ],
+  "label_group_name": "RNA_feature_labels",
+  "height": 3.35,
+  "size": 144,
+  "background": "none",
+  "outline_color": "#ffffff",
+  "outline_offsets": [
+    [
+      -0.085,
+      0,
+      0
+    ],
+    [
+      0.085,
+      0,
+      0
+    ],
+    [
+      0,
+      -0.085,
+      0
+    ],
+    [
+      0,
+      0.085,
+      0
+    ],
+    [
+      -0.06,
+      -0.06,
+      0
+    ],
+    [
+      -0.06,
+      0.06,
+      0
+    ],
+    [
+      0.06,
+      -0.06,
+      0
+    ],
+    [
+      0.06,
+      0.06,
+      0
+    ],
+    [
+      -0.052,
+      0,
+      0
+    ],
+    [
+      0.052,
+      0,
+      0
+    ],
+    [
+      0,
+      -0.052,
+      0
+    ],
+    [
+      0,
+      0.052,
+      0
+    ],
+    [
+      -0.037,
+      -0.037,
+      0
+    ],
+    [
+      -0.037,
+      0.037,
+      0
+    ],
+    [
+      0.037,
+      -0.037,
+      0
+    ],
+    [
+      0.037,
+      0.037,
+      0
+    ]
+  ],
+  "default_visible_category_keys": [
+    "pre_mRNA_features",
+    "snRNA_pre_mRNA_regions"
+  ],
+  "default_visible_category_names": [
+    "pre-mRNA features",
+    "snRNA-pre-mRNA regions"
+  ],
+  "labels": [
+    {
+      "index": 1,
+      "selector_name": "U1_snRNP_3PGW_U1_5_5SS_recognition",
+      "feature": "U1_5prime_5SS_recognition",
+      "atomspec": "#302.1/N:6",
+      "text": "U1 5'SS recog. (res. 2-10)",
+      "color": "#B66AAE",
+      "model_name": "label_01_U1_5_SS_recog_res_2_10",
+      "category_key": "snRNA_pre_mRNA_regions",
+      "category_name": "snRNA-pre-mRNA regions",
+      "category_model_id": "302.2.1",
+      "label_model_id": "302.2.1.1",
+      "default_visible": true
+    },
+    {
+      "index": 2,
+      "selector_name": "U1_snRNP_3PGW_U1_SL1",
+      "feature": "U1_SL1",
+      "atomspec": "#302.1/N:28",
+      "text": "U1 SL1 (res. 11-45)",
+      "color": "#BF72B7",
+      "model_name": "label_02_U1_SL1_res_11_45",
+      "category_key": "internal_stem_loops",
+      "category_name": "internal stem loops",
+      "category_model_id": "302.2.2",
+      "label_model_id": "302.2.2.1",
+      "default_visible": false
+    },
+    {
+      "index": 3,
+      "selector_name": "U1_snRNP_3PGW_U1_SL2",
+      "feature": "U1_SL2",
+      "atomspec": "#302.1/N:70",
+      "text": "U1 SL2 (res. 46-95)",
+      "color": "#AD62A6",
+      "model_name": "label_03_U1_SL2_res_46_95",
+      "category_key": "internal_stem_loops",
+      "category_name": "internal stem loops",
+      "category_model_id": "302.2.2",
+      "label_model_id": "302.2.2.2",
+      "default_visible": false
+    }
+  ]
+}

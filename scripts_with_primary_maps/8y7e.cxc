@@ -4,16 +4,16 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #341; target model: #341.1; RNA labels: #341.2.
+# Structure group: #348; target model: #348.1; RNA labels: #348.2.
 
-open 8h6l id 341.9 name 8H6L_anchor
-open 8y7e id 341.1 name 8Y7E
-open emdb:39013 id 341.3.1 name pre_B_8y7e_EMD-39013_primary_map
-rename #341 pre_B_8y7e_structure
+open 8h6l id 348.9 name 8H6L_anchor
+open 8y7e id 348.1 name 8Y7E
+open emdb:39013 id 348.3.1 name pre_B_8y7e_EMD-39013_primary_map
+rename #348 pre_B_8y7e_structure
 
 # Align on SF3B1.
-matchmaker #341.1/1 to #341.9/2G bring #341.3.1
-close #341.9
+matchmaker #348.1/1 to #348.9/2G bring #348.3.1
+close #348.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -41,85 +41,85 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # mRNA
-color #341.1/A #303030
+color #348.1/A #303030
 # SF3B1
-color #341.1/1 #487957
+color #348.1/1 #487957
 # SF3B2
-color #341.1/2 #49926C
+color #348.1/2 #49926C
 # SF3B3
-color #341.1/3 #6A9064
+color #348.1/3 #6A9064
 # SF3B4
-color #341.1/4 #77B088
+color #348.1/4 #77B088
 # SF3B6
-color #341.1/5 #ADCEA0
+color #348.1/5 #ADCEA0
 # PHF5A
-color #341.1/6 #375A40
+color #348.1/6 #375A40
 # SF3B5
-color #341.1/7 #92BB8F
+color #348.1/7 #92BB8F
 # U12 snRNA
-color #341.1/H #71C562
+color #348.1/H #71C562
 # U2-Sm SNRPD3
-color #341.1/h #D5F5E3
+color #348.1/h #D5F5E3
 # U2-Sm SNRPB
-color #341.1/i #D5F5E3
+color #348.1/i #D5F5E3
 # U2-Sm SNRPD1
-color #341.1/j #D5F5E3
+color #348.1/j #D5F5E3
 # U2-Sm SNRPD2
-color #341.1/k #D5F5E3
+color #348.1/k #D5F5E3
 # U2-Sm SNRPE
-color #341.1/l #D5F5E3
+color #348.1/l #D5F5E3
 # U2-Sm SNRPF
-color #341.1/m #D5F5E3
+color #348.1/m #D5F5E3
 # U2-Sm SNRPG
-color #341.1/n #D5F5E3
+color #348.1/n #D5F5E3
 # SCNM1
-color #341.1/v #A0916A
+color #348.1/v #A0916A
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_8Y7E_RNA_substrate #341.1/A
+name pdb_8Y7E_RNA_substrate #348.1/A
 # U11/U12 snRNP
 # selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
-name pdb_8Y7E_U11_U12_snRNP #341.1/H
+name pdb_8Y7E_U11_U12_snRNP #348.1/H
 # U2 Sm ring
 # selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8Y7E_U2_Sm_ring #341.1/h,i,j,k,l,m,n
+name pdb_8Y7E_U2_Sm_ring #348.1/h,i,j,k,l,m,n
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_8Y7E_U2_SF3B #341.1/1,2,3,4,5,6,7
+name pdb_8Y7E_U2_SF3B #348.1/1,2,3,4,5,6,7
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_8Y7E_other #341.1/v
+name pdb_8Y7E_other #348.1/v
 # Named selections for resolved substrate RNA features.
 # substrate RNA: residues 193-222, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8Y7E_substrate #341.1/A:193-222
+name pre_B_8Y7E_substrate #348.1/A:193-222
 # branch point region: residues 193-222, u2-branch-region-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8Y7E_branch_region #341.1/A:193-222
+name pre_B_8Y7E_branch_region #348.1/A:193-222
 # branch point adenosine: residues 203, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8Y7E_branch_A #341.1/A:203
+name pre_B_8Y7E_branch_A #348.1/A:203
 # Named selections for resolved snRNA functional regions.
 # U12 snRNA branchpoint pairing region: residues 16-26, reference-alignment, high confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U12_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
-name pre_B_8Y7E_U12_branchpoint_pairing_region #341.1/H:16-26
+name pre_B_8Y7E_U12_branchpoint_pairing_region #348.1/H:16-26
 # U12 snRNA Sm site: residues 75-81, sequence-motif, medium confidence
 # selector_meta {"color":"#2F8B4D","family":"RNA","feature":"U12_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name pre_B_8Y7E_U12_Sm_site #341.1/H:75-81
+name pre_B_8Y7E_U12_Sm_site #348.1/H:75-81
 # RNA feature nucleotide display.
-select #341.1 & nucleic
+select #348.1 & nucleic
 nucleotides sel atoms
 select clear
 # BP region: residues 193-222
 # BP-A: residues 203
 # U12 BP pairing: residues 16-26
-color #341.1/H:16-26 #0B6E2D
-select #341.1/H:16-26
+color #348.1/H:16-26 #0B6E2D
+select #348.1/H:16-26
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #341.2.
+# Labels are created as independent grouped models under #348.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8y7e_rna_labels.py
 # Searchable named selection browser.

@@ -1,7 +1,7 @@
 {
   "pdb_id": "9k1o",
-  "structure_model_id": "313.1",
-  "structure_group_id": "313",
+  "structure_model_id": "317.1",
+  "structure_group_id": "317",
   "selectors": [
     {
       "name": "pdb_9K1O_RNA_substrate",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "RNA/substrate",
-      "atomspec": "#313.1/G,H",
+      "atomspec": "#317.1/G,H",
       "family": "RNA",
       "group": "pre-mRNA features",
       "group_key": "",
@@ -23,7 +23,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U2/SF3B",
-      "atomspec": "#313.1/A,B,C,D",
+      "atomspec": "#317.1/A,B,C,D",
       "family": "Protein/RNP groups",
       "group": "U2/SF3B groups",
       "group_key": "",
@@ -37,7 +37,7 @@
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
       "comment": "substrate RNA: residues 1-21; 11-23, component, medium confidence, validation not_applicable",
-      "atomspec": "#313.1/G:11-23|#313.1/H:1-21",
+      "atomspec": "#317.1/G:11-23|#317.1/H:1-21",
       "family": "RNA",
       "group": "pre-mRNA features",
       "group_key": "pre_mRNA_features",
