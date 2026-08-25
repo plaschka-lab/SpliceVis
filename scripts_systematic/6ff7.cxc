@@ -296,9 +296,9 @@ name Bact_6FF7_5SS #388.1/M:243-248
 # intron from 5' splice site: residues 243-262;380-397, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_6FF7_intron #388.1/M:243-262,380-397
-# branch point region: residues 380-397, u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 386-395, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_6FF7_branch_region #388.1/M:380-397
+name Bact_6FF7_branch_region #388.1/M:386-395
 # branch point adenosine: residues 394, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_6FF7_branch_A #388.1/M:394
@@ -344,7 +344,7 @@ nucleotides sel fill
 select clear
 # 5'SS: residues 243-248
 # intron: residues 243-262;380-397
-# BP region: residues 380-397
+# BP region: residues 386-395
 # BP-A: residues 394
 # U2/U6 helix I: residues 26-30
 color #388.1/2:26-30 #047857

@@ -259,9 +259,9 @@ name P_5YLZ_substrate #426.1/I:-13--1,1-15,282-304,345-355
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_5SS #426.1/I:1-6
-# branch point region: residues 282-304, u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 294-303, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_5YLZ_branch_region #426.1/I:282-304
+name P_5YLZ_branch_region #426.1/I:294-303
 # branch point adenosine: residues 301, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_branch_A #426.1/I:301
@@ -317,7 +317,7 @@ select clear
 # intron: residues -13--1;1-15;282-304;345-355
 # lariat: residues -13--1;1-15;282-304;345-355
 # 5'SS: residues 1-6
-# BP region: residues 282-304
+# BP region: residues 294-303
 # BP-A: residues 301
 # 3'SS: residues 348-350
 # 3' exon: residues 351-355

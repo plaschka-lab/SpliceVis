@@ -276,9 +276,9 @@ name C_8I0V_5SS #413.1/M:1-6
 # intron: residues 1-31;83-117, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0V_intron #413.1/M:1-31,83-117
-# branch point region: residues 90-95; 92-98, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 92-98, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_8I0V_branch_region #413.1/M:90-95|#413.1/M:92-98
+name C_8I0V_branch_region #413.1/M:92-98
 # branch point adenosine: residues 97, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0V_branch_A #413.1/M:97
@@ -330,7 +330,7 @@ nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-31;83-117
-# BP region: residues 90-95; 92-98
+# BP region: residues 92-98
 # BP-A: residues 97
 # PPT: residues 103-116
 # U2/U6 helix I: residues 26-30

@@ -176,9 +176,9 @@ name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA
 # substrate RNA: residues 193-222, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8Y7E_substrate #348.1/M:193-222
-# branch point region: residues 193-222, u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 195-206, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8Y7E_branch_region #348.1/M:193-222
+name pre_B_8Y7E_branch_region #348.1/M:195-206
 # branch point adenosine: residues 203, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8Y7E_branch_A #348.1/M:203
@@ -193,7 +193,7 @@ name pre_B_8Y7E_U12_Sm_site #348.1/12:75-81
 select #348.1 & nucleic
 nucleotides sel atoms
 select clear
-# BP region: residues 193-222
+# BP region: residues 195-206
 # BP-A: residues 203
 # U12 BP pairing: residues 16-26
 color #348.1/12:16-26 #0B6E2D

@@ -508,24 +508,6 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "B_8QZS_branch_region",
-      "label": "branch point region",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "branch point region: residues 29-43, u2-branch-region-basepair, high confidence, validation validated",
-      "atomspec": "#373.1/MA:29-43",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "branch_point_region",
-      "color": "#303030",
-      "label_model_id": "373.2.1.1",
-      "label_category_model_id": "373.2.1",
-      "label_group_model_id": "373.2",
-      "label_default_visible": "true"
-    },
-    {
       "name": "B_8QZS_substrate",
       "label": "substrate RNA",
       "category": "substrate RNA feature",
@@ -538,6 +520,24 @@
       "kind": "rna_feature",
       "feature": "substrate",
       "color": "#303030"
+    },
+    {
+      "name": "B_8QZS_branch_region",
+      "label": "branch point region",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "branch point region: residues 35-43, network-scored-motif, high confidence, validation validated",
+      "atomspec": "#373.1/MA:35-43",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "branch_point_region",
+      "color": "#303030",
+      "label_model_id": "373.2.1.1",
+      "label_category_model_id": "373.2.1",
+      "label_group_model_id": "373.2",
+      "label_default_visible": "true"
     },
     {
       "name": "B_8QZS_branch_A",

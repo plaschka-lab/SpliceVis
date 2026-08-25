@@ -101,9 +101,9 @@ name U2_snRNP_7OQB_substrate #310.1/I:246-268
 # intron: residues 246-268, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U2_snRNP_7OQB_intron #310.1/I:246-268
-# branch point region: residues 246-268, u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 260-267, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7OQB_branch_region #310.1/I:246-268
+name U2_snRNP_7OQB_branch_region #310.1/I:260-267
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA branchpoint pairing region: residues 33-42, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
@@ -116,7 +116,7 @@ select #310.1 & nucleic
 nucleotides sel atoms
 select clear
 # intron: residues 246-268
-# BP region: residues 246-268
+# BP region: residues 260-267
 # U2 BP pairing: residues 33-42
 color #310.1/2:33-42 #0B6E2D
 select #310.1/2:33-42

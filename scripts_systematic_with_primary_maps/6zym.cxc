@@ -215,9 +215,9 @@ name C_6ZYM_5SS #410.1/MA:59-64
 # intron: residues 59-79;141-160, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_6ZYM_intron #410.1/MA:59-79,141-160
-# branch point region: residues 141-160, u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 145-156, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_6ZYM_branch_region #410.1/MA:141-160
+name C_6ZYM_branch_region #410.1/MA:145-156
 # branch point adenosine: residues 155, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_6ZYM_branch_A #410.1/MA:155
@@ -252,7 +252,7 @@ nucleotides sel atoms
 select clear
 # 5'SS: residues 59-64
 # intron: residues 59-79;141-160
-# BP region: residues 141-160
+# BP region: residues 145-156
 # BP-A: residues 155
 # 5' exon: residues 46-58
 color #410.1/MB:46-58 #FF8C00

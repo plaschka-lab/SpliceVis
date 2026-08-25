@@ -243,9 +243,9 @@ name ILS_disassembly_6ID0_5SS #434.1/M:1-6
 # intron: residues 1-31;116-154, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_6ID0_intron #434.1/M:1-31,116-154
-# branch point region: residues 138-143; 139-145, network-scored-motif/u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 139-145, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_6ID0_branch_region #434.1/M:138-143|#434.1/M:139-145
+name ILS_disassembly_6ID0_branch_region #434.1/M:139-145
 # branch point adenosine: residues 144, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_6ID0_branch_A #434.1/M:144
@@ -292,7 +292,7 @@ nucleotides sel atoms
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-31;116-154
-# BP region: residues 138-143; 139-145
+# BP region: residues 139-145
 # BP-A: residues 144
 # PPT: residues 150-154
 # U2/U6 helix I: residues 26-30

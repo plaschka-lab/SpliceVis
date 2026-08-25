@@ -206,9 +206,9 @@ name P_6QDV_intron #427.1/I:1-20,83-101,111-113
 # intron lariat: residues 1-20;83-101;111-113, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron_lariat","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_6QDV_intron_lariat #427.1/I:1-20,83-101,111-113
-# branch point region: residues 83-101, u2-branch-region-basepair, high confidence, validation validated
+# branch point region: residues 93-99, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_6QDV_branch_region #427.1/I:83-101
+name P_6QDV_branch_region #427.1/I:93-99
 # branch point adenosine: residues 97, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_6QDV_branch_A #427.1/I:97
@@ -274,7 +274,7 @@ select clear
 # 5'SS: residues 1-6
 # intron: residues 1-20;83-101;111-113
 # lariat: residues 1-20;83-101;111-113
-# BP region: residues 83-101
+# BP region: residues 93-99
 # BP-A: residues 97
 # 3'SS: residues 111-113
 # U2/U6 helix I: residues 26-30
