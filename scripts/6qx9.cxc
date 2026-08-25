@@ -140,7 +140,7 @@ color #347.1/63 #F4A3A8
 # U2 snRNA
 color #347.1/2 #71C562
 # SF3B3
-color #347.1/B3 #6A9064
+color #347.1/B3 #487957
 # U1-Sm SNRPG
 color #347.1/1g #EAD7E8
 # U2-Sm SNRPG
@@ -180,7 +180,7 @@ color #347.1/65 #F4A3A8
 # SNRNP200
 color #347.1/5B #AFEEEE
 # SF3B1
-color #347.1/B1 #487957
+color #347.1/B1 #D5EAD0
 # Named selections for subcomplexes using original deposited chain IDs.
 # RNA-binding
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}

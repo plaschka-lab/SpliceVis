@@ -43,11 +43,11 @@ color byhetero
 # SF3B5
 color #305.1/B #92BB8F
 # SF3B1
-color #305.1/C #487957
+color #305.1/C #D5EAD0
 # PHF5A
 color #305.1/D #375A40
 # SF3B3
-color #305.1/A #6A9064
+color #305.1/A #487957
 # Named selections for subcomplexes using original deposited chain IDs.
 # U2/SF3B
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}

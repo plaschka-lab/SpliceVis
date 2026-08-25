@@ -41,7 +41,7 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3B1
-color #310.1/O #487957
+color #310.1/O #D5EAD0
 # mRNA
 color #310.1/I #303030
 # SF3A2
@@ -55,7 +55,7 @@ color #310.1/S #375A40
 # SF3B2
 color #310.1/Q #49926C
 # SF3B3
-color #310.1/P #6A9064
+color #310.1/P #487957
 # SF3B4
 color #310.1/R #77B088
 # SF3B5

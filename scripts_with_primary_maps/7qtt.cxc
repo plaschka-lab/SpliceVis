@@ -41,11 +41,11 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # SF3B3
-color #391.1/A #6A9064
+color #391.1/A #487957
 # SF3B5
 color #391.1/B #92BB8F
 # SF3B1
-color #391.1/C #487957
+color #391.1/C #D5EAD0
 # PHF5A
 color #391.1/D #375A40
 # SF3B2

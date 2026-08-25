@@ -51,7 +51,7 @@ color byhetero
 # U5 snRNP: PRP8BP
 color #378.1/5E #E2F3F4
 # U2/SF3B: SF3B3
-color #378.1/2C #6A9064
+color #378.1/2C #487957
 # U5 Sm ring: U5-Sm SNRPF
 color #378.1/5SF #B0C4DE
 # U2 Sm ring: U2-Sm SNRPF
@@ -157,7 +157,7 @@ color #378.1/2I #75A074
 # U2/SF3B: SF3A3
 color #378.1/2J #9BCF91
 # U2/SF3B: SF3B1
-color #378.1/2A #487957
+color #378.1/2A #D5EAD0
 # U2/SF3B: SF3B2
 color #378.1/2B #49926C
 # Named selections for systematic-chain subcomplexes.

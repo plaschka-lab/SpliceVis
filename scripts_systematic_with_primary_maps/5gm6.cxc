@@ -59,7 +59,7 @@ color #382.1/MA #303030
 # RNA/substrate: mRNA
 color #382.1/MB #303030
 # U2/SF3B: SF3B3
-color #382.1/2C #6A9064
+color #382.1/2C #487957
 # U2/SF3B: SF3B2
 color #382.1/2B #49926C
 # U2/SF3B: SF3A2
@@ -101,7 +101,7 @@ color #382.1/X1 #806ED8
 # NTC/PRP19: CDC5L
 color #382.1/N2 #DAA520
 # U2/SF3B: SF3B1
-color #382.1/2A #487957
+color #382.1/2A #D5EAD0
 # NTC/NTR related: CRNKL1
 color #382.1/NR #FFC388
 # SR proteins: SRRM2

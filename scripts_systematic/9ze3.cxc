@@ -60,11 +60,11 @@ color #324.1/2G #375A40
 # RNA/substrate: mRNA
 color #324.1/M #303030
 # U2/SF3B: SF3B1
-color #324.1/2A #487957
+color #324.1/2A #D5EAD0
 # U2/SF3B: SF3B2
 color #324.1/2B #49926C
 # U2/SF3B: SF3B3
-color #324.1/2C #6A9064
+color #324.1/2C #487957
 # U2/SF3B: SF3B4
 color #324.1/2D #77B088
 # U2/SF3B: SF3B5
