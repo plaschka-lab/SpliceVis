@@ -282,8 +282,8 @@
     .stat strong { font-size:15px; }
     .stat + .stat::before { content:"/"; color:#a0aab5; margin-right:2px; }
     .atlas-grid { display:grid; grid-template-columns:1fr; gap:14px; align-items:start; }
-    .cycle-browser-panel { --cycle-visual-height:clamp(430px,44vh,480px); min-width:0; height:clamp(650px,64vh,720px); display:flex; flex-direction:column; }
-    .cycle-browser-panel .panel-body { display:grid; grid-template-columns:minmax(590px,.92fr) minmax(520px,1.08fr); grid-template-areas:"cycle list" "context list" "filters list"; grid-template-rows:var(--cycle-visual-height) minmax(0,96px) auto; gap:8px 18px; flex:1 1 auto; min-height:0; padding:10px 14px 12px; overflow:hidden; }
+    .cycle-browser-panel { --cycle-visual-height:clamp(620px,60vh,700px); min-width:0; height:clamp(780px,76vh,850px); display:flex; flex-direction:column; }
+    .cycle-browser-panel .panel-body { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(420px,.70fr); grid-template-areas:"cycle list" "context list" "filters list"; grid-template-rows:var(--cycle-visual-height) minmax(0,96px) auto; gap:8px 16px; flex:1 1 auto; min-height:0; padding:12px 14px; overflow:hidden; }
     .cycle-panel, .selected-panel, .active-filter-panel, .workspace > .panel, .cycle-browser-panel { border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(31,37,45,.06); }
     .cycle { overflow:hidden; }
     .cycle-art { max-width:790px; }
@@ -336,8 +336,11 @@
     .workspace { margin-top:0; }
     .workspace > .panel .panel-head { padding:14px 16px; }
     .structure-browser { grid-area:list; min-height:0; display:flex; flex-direction:column; }
-    .structure-list-head { display:flex; align-items:center; justify-content:space-between; gap:10px; padding-top:2px; }
+    .structure-list-head { display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:28px; padding-top:2px; }
     .structure-list-head h3 { margin:0; font-size:13px; }
+    .structure-list-tools { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:6px 10px; min-width:0; }
+    .structure-list-tools .inline-toggle { white-space:nowrap; color:var(--muted); font-size:11px; font-weight:700; }
+    .structure-list-tools .inline-toggle input { width:13px; height:13px; margin:0; }
     .structure-browser .table-wrap { flex:1 1 auto; min-height:260px; overflow:auto; margin-top:6px; border-top:1px solid #e8edf3; }
     .structure-browser table { display:table; width:100%; border-collapse:collapse; border:0; table-layout:fixed; font-size:11px; }
     .structure-browser thead { display:table-header-group; }
@@ -432,13 +435,12 @@
         <section class="stats" id="stats"></section>
         <section class="atlas-grid">
           <section class="cycle-browser-panel panel">
-            <div class="panel-head"><h2>Browse Structures</h2><label class="inline-toggle" title="When enabled, clicking a structure row opens a clean selected-structure panel in a new browser tab."><input id="openPanelOnly" type="checkbox"> open selected panel in new tab</label></div>
             <div class="panel-body">
               <div class="cycle" id="cycle"></div>
               <div class="cycle-context" id="cycleContext"></div>
               <section class="active-filter-panel" id="activeFilterPanel" hidden><div class="panel-body"><strong>Filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
               <section class="structure-browser">
-                <div class="structure-list-head"><h3>Associated Structures</h3><span class="subtle" id="tableCount"></span></div>
+                <div class="structure-list-head"><h3>Associated Structures</h3><div class="structure-list-tools"><span class="subtle" id="tableCount"></span><label class="inline-toggle" title="When enabled, clicking a structure row opens a clean selected-structure panel in a new browser tab."><input id="openPanelOnly" type="checkbox"> Open structure in new tab</label></div></div>
                 <div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Res.</th><th data-sort="year">Year</th><th data-sort="chains">Chains</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
               </section>
             </div>
