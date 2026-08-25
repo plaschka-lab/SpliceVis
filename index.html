@@ -298,8 +298,14 @@
     .selected-panel .panel-body { padding:16px; }
     .selected-panel .detail-meta { margin-top:6px; }
     .selected-panel .actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:10px 0 0; }
-    .selected-panel .actions button, .selected-panel .actions a { justify-content:center; border-radius:7px; }
+    .selected-panel .actions button, .selected-panel .actions a { justify-content:center; min-height:28px; padding:4px 9px; border-color:#dfe6ee; border-radius:999px; background:#fff; color:#27313d; font-size:12px; font-weight:700; line-height:1.2; box-shadow:none; }
+    .selected-panel .actions button:hover, .selected-panel .actions a:hover { border-color:#b9c6d5; background:#f8fafc; }
     .selected-panel .actions a.report-link { grid-column:1 / -1; }
+    .selected-panel .external-links { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 0; }
+    .selected-panel .external-links a { flex:0 0 auto; min-height:26px; padding:3px 9px; color:#0b5cab; }
+    .selected-panel .secondary-actions { display:flex; margin-top:10px; }
+    .selected-panel .secondary-actions a.report-link { flex:0 0 auto; min-height:27px; padding:4px 10px; border-color:#efc2b6; background:#fff8f5; color:#9f3a22; }
+    .selected-panel .secondary-actions a.report-link:hover { background:#fff1eb; border-color:#e5a995; }
     .selected-panel .molstar-workbench { grid-template-columns:minmax(760px,1fr) minmax(300px,380px); }
     .selected-panel .molstar-viewer { height:clamp(560px,62vh,820px); min-height:560px; }
     .selected-panel .molstar-selection-sidebar { max-height:clamp(560px,62vh,820px); }
@@ -863,6 +869,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     }
     function cycleHotspots(){
       return [
+        {stage:"U1 snRNP", label:"U1 snRNP", x:13.1, y:16.8, w:9.2, h:8.8},
         {stage:"U2 snRNP", label:"U2 snRNP", x:26.2, y:27.0, w:13.8, h:12.0},
         {stage:"E complex", label:"E complex", x:9.2, y:22.3, w:10.6, h:8.2},
         {stage:"A complex", label:"A complex", x:6.7, y:35.7, w:18.4, h:10.8},
