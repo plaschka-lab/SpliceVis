@@ -109,10 +109,12 @@ color #401.1/c #2C54DD
 color #401.1/d #EEE8AA
 # TFIP11
 color #401.1/m #FF69B4
+# DHX35
+color #401.1/z #78184A
 # Named selections for subcomplexes using original deposited chain IDs.
 # Disassembly factors
 # selector_meta {"color":"#FF69B4","family":"Protein/RNP groups","group":"disassembly factors","kind":"subcomplex"}
-name pdb_9ESH_Disassembly_factors #401.1/m
+name pdb_9ESH_Disassembly_factors #401.1/m,z
 # EJC/mRNP
 # selector_meta {"color":"#EAA439","family":"Protein/RNP groups","group":"EJC/mRNP groups","kind":"subcomplex"}
 name pdb_9ESH_EJC_mRNP #401.1/c
@@ -151,7 +153,7 @@ name pdb_9ESH_U5_snRNP #401.1/5,A,B,C
 name pdb_9ESH_U6_snRNP #401.1/6
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9ESH_other #401.1/f,r,y,z
+name pdb_9ESH_other #401.1/f,r,y
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -15-0, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
