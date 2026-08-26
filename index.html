@@ -648,7 +648,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       if(els.sidebarToggle) els.sidebarToggle.addEventListener("click",()=>{state.sidebarCollapsed=!state.sidebarCollapsed; renderSidebarState();});
       window.addEventListener("resize",()=>requestAnimationFrame(fitCycleArt));
       els.openPanelOnly.addEventListener("change",()=>{state.openPanelInNewTab=els.openPanelOnly.checked;});
-      els.search.addEventListener("input",()=>{state.query=els.search.value.trim().toLowerCase(); render();});
+      els.search.addEventListener("input",()=>{
+        state.query=els.search.value.trim().toLowerCase();
+        if(state.query){ state.family="all"; state.cyclePdbIds=[]; state.cyclePdbLabel=""; els.family.value="all"; }
+        render();
+      });
       els.searchMode.addEventListener("change",()=>{state.mode=els.searchMode.value; render();});
       els.family.addEventListener("change",()=>{state.family=els.family.value; state.cyclePdbIds=[]; state.cyclePdbLabel=""; render();});
       els.species.addEventListener("change",()=>{state.species=els.species.value; render();});
@@ -682,6 +686,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         component:[...r.proteins.map(p=>`${p.gene} ${p.name}`),...r.rnas.map(x=>x.name),...(r.substrate_features||[]).map(x=>`${x.feature} ${x.label} ${x.feature_sequence}`),...(r.snrna_features||[]).map(x=>`${x.snrna} ${x.feature} ${x.label} ${x.feature_sequence}`)],
         all:[r.pdb_id,r.title,r.state,r.species,r.paper_title,r.abstract,r.doi,r.pubmed_id,r.journal,r.authors,...r.proteins.map(p=>`${p.gene} ${p.name}`),...r.rnas.map(x=>x.name),...(r.substrate_features||[]).map(x=>`${x.feature} ${x.label} ${x.feature_sequence}`),...(r.snrna_features||[]).map(x=>`${x.snrna} ${x.feature} ${x.label} ${x.feature_sequence}`)]
       };
+    }
+    function exactStageForQuery(query){
+      const needle=String(query||"").trim().toLowerCase();
+      if(!needle)return "";
+      return STAGES.find(stage=>{const label=stage.toLowerCase(); return needle===label || needle===label.replace(/\s+complex$/,"") || needle===label.split("/")[0];}) || "";
     }
     function rnaFeatureOk(r){
       const value = state.rnaFeature;
@@ -776,12 +785,15 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       return Boolean(state.query || state.family!=="all" || state.cyclePdbIds.length || state.species!=="all" || state.rnaFeature!=="all");
     }
     function filtered(options = {}){
+      const exactStage=exactStageForQuery(state.query);
       return records.filter(r=>{
-        const parts = fieldsFor(r)[state.mode] || fieldsFor(r).all;
+        const fields = fieldsFor(r);
+        const parts = state.mode === "all" ? fields.all : [...fields.structure, ...(fields[state.mode] || [])];
         const hay = parts.join(" ").toLowerCase();
         const familyOk = options.ignoreFamily || state.family==="all" || r.state===state.family;
         const cycleOk = options.ignoreCyclePdb || !state.cyclePdbIds.length || state.cyclePdbIds.includes(String(r.pdb_id || "").toLowerCase());
-        return (!state.query || hay.includes(state.query)) && familyOk && cycleOk && (state.species==="all" || r.species===state.species) && rnaFeatureOk(r);
+        const queryOk = !state.query || (exactStage ? r.state===exactStage : hay.includes(state.query));
+        return queryOk && familyOk && cycleOk && (state.species==="all" || r.species===state.species) && rnaFeatureOk(r);
       }).sort((a,b)=>{
         let value = 0;
         if(state.sortBy==="resolution") value = (parseFloat(a.resolution)||99)-(parseFloat(b.resolution)||99);
