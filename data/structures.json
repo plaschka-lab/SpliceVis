@@ -113235,7 +113235,7 @@
     {
       "pdb_id": "8q91",
       "title": "Structure of the human 20S U5 snRNP core",
-      "state": "U5/tri-snRNP",
+      "state": "U5 recycling",
       "species": "Human",
       "species_code": "HUMAN",
       "resolution": "3.1",
@@ -113550,7 +113550,7 @@
     {
       "pdb_id": "8rc0",
       "title": "Structure of the human 20S U5 snRNP",
-      "state": "U5/tri-snRNP",
+      "state": "U5 recycling",
       "species": "Human",
       "species_code": "HUMAN",
       "resolution": "3.2",

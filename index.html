@@ -145,6 +145,7 @@
     .compare-toggle { border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); padding:3px 7px; font-size:12px; }
     .compare-toggle.active { background:#eaf4ff; border-color:#9fc6ef; color:#0b5cab; font-weight:700; }
     .badge-row { display:flex; flex-wrap:wrap; gap:5px; align-items:center; }
+    .badge.minor-spliceosome { background:#fdf0f7; border-color:#e7a8c9; color:#92275d; font-weight:700; }
     .active-filter-panel { margin-bottom:14px; }
     .active-filter-panel .panel-body { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; }
     .active-filter-panel strong { font-size:13px; }
@@ -1043,7 +1044,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         els.rows.innerHTML = `<tr><td colspan="12" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
         return;
       }
-      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()" style="color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td>${esc(r.state)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
+      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()" style="color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
       for (const row of els.rows.querySelectorAll("tr")) {
         row.addEventListener("click", event => {
           const button = event.target.closest("[data-compare]");
@@ -1202,6 +1203,12 @@ ${await scriptFor(record,"no_maps")}
       if(substrateCount) bits.push(`<span class="badge good">mRNA ${substrateCount}</span>`);
       if(snrnaCount) bits.push(`<span class="badge good">snRNA ${snrnaCount}</span>`);
       return `<div class="badge-row">${bits.join("") || '<span class="badge">none</span>'}</div>`;
+    }
+    function isMinorSpliceosome(r){
+      return /\bminor\b/i.test([r?.title, r?.paper_title].filter(Boolean).join(" "));
+    }
+    function minorSpliceosomeBadge(r){
+      return isMinorSpliceosome(r) ? '<span class="badge minor-spliceosome">minor spliceosome</span>' : "";
     }
     function curationBadges(r, includeRna=true){
       const c=r.curation||{}; const flags=c.flags||[]; const confidence=c.overall_confidence||"";
@@ -1622,7 +1629,7 @@ ${await scriptFor(record,"no_maps")}
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
       const scriptBlock = `${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script without maps</button>${primaryMapButton}${compositeButtons}</div>`;
       const resourceBlock = `${externalLinks(r)}<div class="actions secondary-actions">${reportIssueLink(r)}</div>`;
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span><span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("ChimeraX scripts", scriptBlock, true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span>${minorSpliceosomeBadge(r)}<span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("ChimeraX scripts", scriptBlock, true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("RNA Annotations", rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
       renderMolstarFeatureButtons();
       scriptFor(r, "no_maps").then(text => {
         const preview = document.getElementById("scriptPreview");
