@@ -239,7 +239,7 @@
     .app { display:block; min-height:100vh; }
     aside { position:sticky; top:0; z-index:20; max-width:none; margin:0; padding:12px 22px; overflow:visible; border:0; border-bottom:1px solid #d7dee6; background:rgba(249,250,251,.96); box-shadow:0 8px 28px rgba(31,37,45,.06); backdrop-filter:blur(10px); }
     main { max-width:none; margin:0; padding:16px 22px 34px; }
-    .brand-block { display:grid; grid-template-columns:minmax(180px,260px) minmax(360px,780px) auto; gap:16px; align-items:center; margin:0; }
+    .brand-block { display:grid; grid-template-columns:minmax(180px,260px) minmax(360px,780px) auto auto; gap:12px; align-items:center; margin:0; }
     .brand-copy { min-width:0; }
     .brand-block h1 { font-size:27px; line-height:1; margin-bottom:4px; }
     .filter-panel { display:block; min-width:0; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; }
@@ -249,6 +249,8 @@
     .filter-actions { display:grid; grid-template-columns:1fr auto; gap:8px; align-items:center; }
     .tools-drawer { position:relative; justify-self:end; }
     .tools-drawer > summary { display:inline-flex; align-items:center; gap:8px; min-height:42px; padding:9px 14px; border:1px solid var(--line); border-radius:999px; background:#fff; color:#27313d; font-weight:800; cursor:pointer; list-style:none; box-shadow:0 1px 2px rgba(31,37,45,.05); }
+    .components-nav-button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:9px 14px; border:1px solid var(--line); border-radius:999px; background:#fff; color:#27313d; font-weight:800; white-space:nowrap; box-shadow:0 1px 2px rgba(31,37,45,.05); }
+    .components-nav-button.active { border-color:#9fc6ef; background:#eaf4ff; color:#0b5cab; }
     .tools-drawer > summary::-webkit-details-marker { display:none; }
     .tools-drawer > summary::after { content:"+"; color:#0b5cab; font-size:16px; line-height:1; }
     .tools-drawer[open] > summary::after { content:"-"; }
@@ -372,8 +374,9 @@
     .structure-only .app > aside, .structure-only .topbar, .structure-only .stats, .structure-only .cycle-browser-panel, .structure-only .compact-filter-panel { display:none !important; }
     .structure-only main { margin:0; padding:16px; }
     .structure-only .selected-panel { margin:0; }
-    @media (max-width:1300px) { .brand-block { grid-template-columns:minmax(160px,220px) minmax(300px,1fr) auto; } .tools-drawer-body { grid-template-columns:1fr; } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .atlas-grid, .hero-copy { grid-template-columns:1fr; } .cycle-browser-panel, .selected-panel { position:static; max-height:none; } .cycle-browser-panel .panel-body { overflow:visible; } .cycle-panel .panel-body { min-height:0; } }
+    @media (max-width:1300px) { .brand-block { grid-template-columns:minmax(160px,220px) minmax(300px,1fr) auto auto; } .tools-drawer-body { grid-template-columns:1fr; } .tabs { grid-template-columns:repeat(2,minmax(220px,1fr)); } .atlas-grid, .hero-copy { grid-template-columns:1fr; } .cycle-browser-panel, .selected-panel { position:static; max-height:none; } .cycle-browser-panel .panel-body { overflow:visible; } .cycle-panel .panel-body { min-height:0; } }
     @media (max-width:1150px) { .cycle-browser-panel { height:auto; max-height:none; } .cycle-browser-panel .panel-body { grid-template-columns:1fr; grid-template-areas:"cycle" "context" "filters" "list"; grid-template-rows:auto; } .cycle-browser-panel .cycle { height:auto; min-height:0; justify-items:center; } .cycle-browser-panel .cycle-art { width:100%; height:auto; max-width:520px; margin:0 auto; } .structure-browser .table-wrap { max-height:360px; } .selected-panel .molstar-workbench { grid-template-columns:1fr; } .selected-panel .molstar-viewer { min-height:520px; height:58vh; } }
+    @media (max-width:1000px) { .brand-block { grid-template-columns:minmax(180px,240px) minmax(300px,1fr); } .components-nav-button, .tools-drawer { justify-self:stretch; } .tools-drawer > summary { justify-content:center; width:100%; } }
     @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
     @media (max-width:900px) { .molstar-workbench { grid-template-columns:1fr; } .molstar-selection-sidebar { max-height:none; } }
     @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open], .tabs, .cycle-panel .panel-body, .refine-grid { grid-template-columns:1fr; } .tools-drawer { justify-self:stretch; } .tools-drawer > summary { justify-content:center; width:100%; } .tools-drawer-body { left:0; right:auto; width:calc(100vw - 24px); } .cycle-context { border-left:0; border-top:1px solid #e1e6ec; padding-left:0; padding-top:10px; } .hero-copy h1 { font-size:25px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
@@ -388,8 +391,9 @@
           <div class="subtle">Explore deposited spliceosome structures, inspect color-coded 3D previews, and copy ready-to-run ChimeraX scripts.</div>
         </div>
         <div class="field search-field"><label for="search">Find structures</label><input id="search" type="search" placeholder="PDB, state, author, species"></div>
+        <button id="componentsNavButton" class="components-nav-button" type="button">Components and colors</button>
         <details class="tools-drawer">
-          <summary>Tools and Documentation</summary>
+          <summary>More tools and documentation</summary>
           <div class="tools-drawer-body">
             <div class="drawer-section">
               <h3>Refine Results</h3>
@@ -409,7 +413,6 @@
               <nav class="tabs link-rail" id="tabs" aria-label="Dashboard sections">
                 <button type="button" class="tab-button active" data-tab="structures"><strong>Atlas</strong><span>Cycle, 3D preview, ChimeraX scripts</span></button>
                 <button type="button" class="tab-button" data-tab="proximity"><strong>Residue proximity</strong><span>Search contacts across structures</span></button>
-                <button type="button" class="tab-button" data-tab="proteins"><strong>Components and colors</strong><span>Aliases, homologs, palettes</span></button>
                 <button type="button" class="tab-button" data-tab="documentation"><strong>Methods and install</strong><span>Curation logic, offline copy</span></button>
                 <button type="button" class="tab-button quiet-tab" data-tab="help"><strong>Help and feedback</strong><span>Badges, conventions, issue reporting</span></button>
                 <button type="button" class="tab-button quiet-tab" data-tab="rnaElements"><strong>RNA element guide</strong><span>Functions and remodelers</span></button>
@@ -536,7 +539,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     let rnaFeatureConsistency = [];
     const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, openPanelInNewTab:false, panelOnly:false };
     const els = {};
-    for (const id of ["sidebarToggle","openPanelOnly","search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
+    for (const id of ["sidebarToggle","componentsNavButton","openPanelOnly","search","searchMode","family","species","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U1 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const STATE_COLORS = {
@@ -647,6 +650,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     }
     function bind(){
       if(els.sidebarToggle) els.sidebarToggle.addEventListener("click",()=>{state.sidebarCollapsed=!state.sidebarCollapsed; renderSidebarState();});
+      if(els.componentsNavButton) els.componentsNavButton.addEventListener("click",()=>showStartTab("proteins"));
       window.addEventListener("resize",()=>requestAnimationFrame(fitCycleArt));
       els.openPanelOnly.addEventListener("change",()=>{state.openPanelInNewTab=els.openPanelOnly.checked;});
       els.search.addEventListener("input",()=>{
@@ -668,7 +672,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       els.helperSource.addEventListener("change",()=>{state.helperSource=els.helperSource.value; render();});
       els.localRepoPath.addEventListener("input",()=>{state.localRepoPath=els.localRepoPath.value.trim(); render();});
       els.sortBy.addEventListener("change",()=>{state.sortBy=els.sortBy.value; state.sortDir = ["year","chains","proteins","resolution"].includes(state.sortBy) ? "desc" : "asc"; render();});
-      els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); render();});
+      els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab==="proteins"); const drawer=b.closest(".tools-drawer"); if(drawer) drawer.open=false; render();});
       document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(!th)return; const key=th.dataset.sort; if(state.sortBy===key) state.sortDir=state.sortDir==="asc"?"desc":"asc"; else { state.sortBy=key; state.sortDir=["year","chains","proteins","resolution"].includes(key)?"desc":"asc"; } if([...els.sortBy.options].some(option=>option.value===key)) els.sortBy.value = key; render();});
       els.runProximitySearch.addEventListener("click", runProximitySearch);
       els.copyProximityCxc.addEventListener("click",async()=>copyText(await proximityChimeraXScript(), els.copyProximityCxc));
@@ -811,6 +815,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       });
     }
     function render(){
+      if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab === "proteins");
       els.structuresView.hidden = state.activeTab !== "structures";
       els.proximityView.hidden = state.activeTab !== "proximity";
       els.rnaFeaturesView.hidden = state.activeTab !== "rnaFeatures";
@@ -1596,6 +1601,9 @@ ${await scriptFor(record,"no_maps")}
     function showStartTab(tab){
       state.activeTab = tab;
       for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x.dataset.tab===tab);
+      if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",tab==="proteins");
+      const drawer=document.querySelector(".tools-drawer");
+      if(drawer) drawer.open=false;
       render();
       window.scrollTo({top:0, behavior:"smooth"});
     }
@@ -1714,9 +1722,9 @@ ${await scriptFor(record,"no_maps")}
       els.proteinComplexGuide.innerHTML = (DATA.guides.protein_complexes || []).map(item=>`<div class="doc-section"><h3>${esc(item.name||"")}</h3><div class="kv">${fields.map(field=>`<div>${esc(field.replace(/_/g," "))}</div><div>${esc(item[field]||"n/a")}</div>`).join("")}</div>${proteinComplexPaletteHtml(item.name||"")}</div>`).join("") || '<div class="subtle">No guide entries available.</div>';
     }
     function proteinComplexPaletteHtml(name){
-      const rows = proteinLookup.filter(p=>p.color_hex && proteinMatchesComplexName(p,name)).sort((a,b)=>String(a.class_family||"").localeCompare(String(b.class_family||"")) || String(a.color_key||a.human_gene||"").localeCompare(String(b.color_key||b.human_gene||"")));
+      const rows = proteinLookup.filter(p=>p.color_hex && proteinMatchesComplexName(p,name)).sort((a,b)=>String(a.class_family||"").localeCompare(String(b.class_family||"")) || String(a.display_name||a.color_key||a.human_gene||"").localeCompare(String(b.display_name||b.color_key||b.human_gene||"")));
       if(!rows.length) return '<div class="subtle" style="margin-top:10px">No protein colors currently assigned to this guide category.</div>';
-      return `<div class="palette-row" aria-label="Color palette used for ${attr(name)}">${rows.slice(0,28).map(p=>`<span class="palette-chip" title="${attr([p.color_key||p.human_gene||"",p.class_family||"",p.color_hex].join(" "))}"><span class="swatch" style="background:${attr(p.color_hex)}"></span><span>${esc(p.color_key||p.human_gene||"")}</span></span>`).join("")}${rows.length>28?`<span class="subtle">+${rows.length-28} more</span>`:""}</div>`;
+      return `<div class="palette-row" aria-label="Color palette used for ${attr(name)}">${rows.slice(0,28).map(p=>`<span class="palette-chip" title="${attr([p.display_name||p.color_key||p.human_gene||"",p.class_family||"",p.color_hex].join(" "))}"><span class="swatch" style="background:${attr(p.color_hex)}"></span><span>${esc(p.display_name||p.color_key||p.human_gene||"")}</span></span>`).join("")}${rows.length>28?`<span class="subtle">+${rows.length-28} more</span>`:""}</div>`;
     }
     function proteinMatchesComplexName(p, name){
       const hay = proteinAssociationText(p);
@@ -1748,11 +1756,11 @@ ${await scriptFor(record,"no_maps")}
     }
     function renderProteins(){
       const q = state.query;
-      const rows = proteinLookup.filter(p=>proteinComplexMatches(p) && (!q || [p.human_gene,p.protein_name,p.class_family,p.aliases?.join(" "),systematicChainText(p),homologItems(p).map(h=>`${h.species_code} ${h.gene}`).join(" ")].join(" ").toLowerCase().includes(q)));
+      const rows = proteinLookup.filter(p=>proteinComplexMatches(p) && (!q || [p.display_name,p.human_gene,p.protein_name,p.class_family,p.aliases?.join(" "),systematicChainText(p),homologItems(p).map(h=>`${h.species_code} ${h.gene} ${h.entry||""}`).join(" ")].join(" ").toLowerCase().includes(q)));
       const resolved = rows.filter(p=>(p.seen_in_pdb_ids||[]).length);
       const referenceOnly = rows.filter(p=>!(p.seen_in_pdb_ids||[]).length);
       els.proteinCount.textContent = `${resolved.length} resolved; ${referenceOnly.length} reference-only`;
-      const rowHtml = p=>{ const color=p.color_hex||""; const homologs=homologItems(p).map(h=>`${esc(h.species_code)}: ${esc(h.gene)}`).join("<br>"); const sysIds=systematicChainHtml(p); return `<tr><td><strong>${esc(p.human_gene||p.color_key||"")}</strong><br><span class="subtle">${esc(p.protein_name||"")}</span></td><td>${esc(p.class_family||"")}</td><td>${esc((p.aliases||[]).join("; "))}</td><td>${color?`<span class="swatch" style="background:${attr(color)}"></span>${esc(color)} <button class="copy-button" onclick="copyText('${attr(color)}', this)">Copy</button>`:""}</td><td>${sysIds || '<span class="subtle">n/a</span>'}</td><td>${homologs}</td><td>${esc((p.seen_in_pdb_ids||[]).slice(0,10).join("; "))}</td></tr>`; };
+      const rowHtml = p=>{ const color=p.color_hex||""; const homologs=homologItems(p).map(h=>`${esc(h.species_code)}: ${esc(h.gene)}`).join("<br>"); const sysIds=systematicChainHtml(p); return `<tr><td><strong>${esc(p.display_name||p.human_gene||p.color_key||"")}</strong><br><span class="subtle">${esc(p.protein_name||"")}</span></td><td>${esc(p.class_family||"")}</td><td>${esc((p.aliases||[]).join("; "))}</td><td>${color?`<span class="swatch" style="background:${attr(color)}"></span>${esc(color)} <button class="copy-button" onclick="copyText('${attr(color)}', this)">Copy</button>`:""}</td><td>${sysIds || '<span class="subtle">n/a</span>'}</td><td>${homologs}</td><td>${esc((p.seen_in_pdb_ids||[]).slice(0,10).join("; "))}</td></tr>`; };
       els.proteinRows.innerHTML = resolved.map(rowHtml).join("") + (referenceOnly.length ? `<tr><td colspan="7"><details><summary><strong>${referenceOnly.length} reference-only proteins</strong> <span class="subtle">listed in reference/color tables but not resolved in the current PDB set</span></summary><table class="mini-table"><tbody>${referenceOnly.map(rowHtml).join("")}</tbody></table></details></td></tr>` : "");
     }
     function systematicChainIds(p){
@@ -1781,7 +1789,7 @@ ${await scriptFor(record,"no_maps")}
       return state.proteinComplex === "all" || p.class_family === state.proteinComplex || (p.canonical_chain_ids || []).some(c=>c.subcomplex === state.proteinComplex);
     }
     function proteinAssociationText(p){
-      return [p.human_gene,p.protein_name,p.class_family,p.color_key,(p.aliases||[]).join(" "),(p.canonical_chain_ids||[]).map(c=>[c.identity||c.canonical_identity,c.subcomplex,c.chain_id].join(" ")).join(" ")].join(" ").toLowerCase();
+      return [p.display_name,p.human_gene,p.protein_name,p.class_family,p.color_key,(p.aliases||[]).join(" "),(p.canonical_chain_ids||[]).map(c=>[c.identity||c.canonical_identity,c.subcomplex,c.chain_id].join(" ")).join(" ")].join(" ").toLowerCase();
     }
     init().catch(error => {
       document.body.innerHTML = `<main style="padding:24px;font:14px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.45;max-width:760px"><h1>Could not load dashboard data</h1><p>${esc(error.message)}</p><p>This dashboard loads structure metadata, Mol* color selections, and clickable RNA feature definitions from <code>data/structures.json</code>. Open it through a local web server from the repository root, not directly as a <code>file://</code> URL.</p><pre style="padding:12px;background:#f3f5f7;border:1px solid #d8dee6;border-radius:8px;overflow:auto">cd /Users/matthias.vorlaender/Library/CloudStorage/OneDrive-VBC/spliceosome-cryoem-dashboard
