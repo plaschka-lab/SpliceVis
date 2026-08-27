@@ -1,7 +1,7 @@
 {
   "pdb_id": "7px3",
-  "structure_model_id": "442.1",
-  "structure_group_id": "442",
+  "structure_model_id": "440.1",
+  "structure_group_id": "440",
   "selectors": [
     {
       "name": "pdb_7PX3_U5_snRNP",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U5 snRNP",
-      "atomspec": "#442.1/B,J,T",
+      "atomspec": "#440.1/B,J,T",
       "family": "Protein/RNP groups",
       "group": "U5 snRNP groups",
       "group_key": "",

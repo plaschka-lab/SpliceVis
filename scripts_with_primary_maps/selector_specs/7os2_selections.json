@@ -1,7 +1,7 @@
 {
   "pdb_id": "7os2",
-  "structure_model_id": "443.1",
-  "structure_group_id": "443",
+  "structure_model_id": "441.1",
+  "structure_group_id": "441",
   "selectors": [
     {
       "name": "pdb_7OS2_U5_snRNP",
@@ -9,7 +9,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "U5 snRNP",
-      "atomspec": "#443.1/B,J",
+      "atomspec": "#441.1/B,J",
       "family": "Protein/RNP groups",
       "group": "U5 snRNP groups",
       "group_key": "",
@@ -23,7 +23,7 @@
       "category": "subcomplex",
       "section": "Named selections for subcomplexes using original deposited chain IDs.",
       "comment": "other",
-      "atomspec": "#443.1/C",
+      "atomspec": "#441.1/C",
       "family": "Protein/RNP groups",
       "group": "other protein/RNP groups",
       "group_key": "",

@@ -265,7 +265,7 @@ def open_selection_browser(session, spec_path: str) -> None:
     session.logger.info(f"Opened spliceosome named selection browser with {len(selectors)} entries.")
 
 # Embedded named-selection specification for remote execution from GitHub.
-_EMBEDDED_SPEC_JSON = '{\n  "pdb_id": "7px3",\n  "selectors": [\n    {\n      "atomspec": "#442.1/B,J,T",\n      "category": "subcomplex",\n      "color": "#0000CD",\n      "comment": "U5 snRNP",\n      "family": "Protein/RNP groups",\n      "feature": "",\n      "group": "U5 snRNP groups",\n      "group_key": "",\n      "kind": "subcomplex",\n      "label": "U5 snRNP",\n      "name": "pdb_7PX3_U5_snRNP",\n      "section": "Named selections for subcomplexes using original deposited chain IDs."\n    }\n  ],\n  "structure_group_id": "442",\n  "structure_model_id": "442.1"\n}'
+_EMBEDDED_SPEC_JSON = '{\n  "pdb_id": "7px3",\n  "selectors": [\n    {\n      "atomspec": "#440.1/B,J,T",\n      "category": "subcomplex",\n      "color": "#0000CD",\n      "comment": "U5 snRNP",\n      "family": "Protein/RNP groups",\n      "feature": "",\n      "group": "U5 snRNP groups",\n      "group_key": "",\n      "kind": "subcomplex",\n      "label": "U5 snRNP",\n      "name": "pdb_7PX3_U5_snRNP",\n      "section": "Named selections for subcomplexes using original deposited chain IDs."\n    }\n  ],\n  "structure_group_id": "440",\n  "structure_model_id": "440.1"\n}'
 _EMBEDDED_SPEC = json.loads(_EMBEDDED_SPEC_JSON)
 
 import os as _os

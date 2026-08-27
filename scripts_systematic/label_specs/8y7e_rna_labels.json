@@ -1,8 +1,8 @@
 {
-  "structure_model_id": "348.1",
-  "label_group_model_id": "348.2",
+  "structure_model_id": "346.1",
+  "label_group_model_id": "346.2",
   "cleanup_model_ids": [
-    "348.1.90"
+    "346.1.90"
   ],
   "label_group_name": "RNA_feature_labels",
   "height": 3.35,
@@ -104,42 +104,42 @@
       "index": 1,
       "selector_name": "pre_B_8Y7E_branch_region",
       "feature": "branch_point_region",
-      "atomspec": "#348.1/M:200",
+      "atomspec": "#346.1/M:200",
       "text": "BP region (res. 195-206)",
       "color": "#303030",
       "model_name": "label_01_BP_region_res_195_206",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",
-      "category_model_id": "348.2.1",
-      "label_model_id": "348.2.1.1",
+      "category_model_id": "346.2.1",
+      "label_model_id": "346.2.1.1",
       "default_visible": true
     },
     {
       "index": 2,
       "selector_name": "pre_B_8Y7E_branch_A",
       "feature": "branch_point_adenosine",
-      "atomspec": "#348.1/M:203",
+      "atomspec": "#346.1/M:203",
       "text": "BP-A (res. 203)",
       "color": "#303030",
       "model_name": "label_02_BP_A_res_203",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",
-      "category_model_id": "348.2.1",
-      "label_model_id": "348.2.1.2",
+      "category_model_id": "346.2.1",
+      "label_model_id": "346.2.1.2",
       "default_visible": true
     },
     {
       "index": 3,
       "selector_name": "pre_B_8Y7E_U12_branchpoint_pairing_region",
       "feature": "U12_branchpoint_pairing_region",
-      "atomspec": "#348.1/12:21",
+      "atomspec": "#346.1/12:21",
       "text": "U12 BP pairing (res. 16-26)",
       "color": "#0B6E2D",
       "model_name": "label_03_U12_BP_pairing_res_16_26",
       "category_key": "snRNA_pre_mRNA_regions",
       "category_name": "snRNA-pre-mRNA regions",
-      "category_model_id": "348.2.2",
-      "label_model_id": "348.2.2.1",
+      "category_model_id": "346.2.2",
+      "label_model_id": "346.2.2.1",
       "default_visible": true
     }
   ]
