@@ -612,6 +612,24 @@
       "label_default_visible": "true"
     },
     {
+      "name": "C_8I0W_5exon",
+      "label": "5' exon",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "5' exon: residues -23--1, manual-review-addition, high confidence, validation validated",
+      "atomspec": "#412.1/MB:-23--1",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "exon_5",
+      "color": "#FF8C00",
+      "label_model_id": "412.2.1.6",
+      "label_category_model_id": "412.2.1",
+      "label_group_model_id": "412.2",
+      "label_default_visible": "true"
+    },
+    {
       "name": "C_8I0W_U2_U6_helix_I_partner",
       "label": "U2 snRNA U2/U6 helix I partner",
       "category": "snRNA feature",

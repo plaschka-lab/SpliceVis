@@ -292,6 +292,9 @@ name C_8I0W_branch_A #412.1/MA:97
 # polypyrimidine tract: residues 103-107, sequence-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"polypyrimidine_tract","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0W_PPT #412.1/MA:103-107
+# 5' exon: residues -23--1, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name C_8I0W_5exon #412.1/MB:-23--1
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
@@ -335,6 +338,11 @@ select clear
 # BP region: residues 92-99
 # BP-A: residues 97
 # PPT: residues 103-107
+# 5' exon: residues -23--1
+color #412.1/MB:-23--1 #FF8C00
+select #412.1/MB:-23--1
+nucleotides sel fill
+select clear
 # U2/U6 helix I: residues 26-30
 color #412.1/2:26-30 #047857
 select #412.1/2:26-30
