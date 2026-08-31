@@ -158,6 +158,10 @@ name pdb_9L5T_U6_snRNP #403.1/6
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_9L5T_other #403.1/CY,D,F
+# Named selections for resolved substrate RNA features.
+# 5' exon: residues -7--1, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name BstarD_complex_9L5T_5exon #403.1/8:-7--1
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
@@ -186,6 +190,11 @@ name BstarD_complex_9L5T_U6_AGC_catalytic_triad #403.1/6:46-48
 # RNA feature nucleotide display.
 select #403.1 & nucleic
 nucleotides sel atoms
+select clear
+# 5' exon: residues -7--1
+color #403.1/8:-7--1 #FF8C00
+select #403.1/8:-7--1
+nucleotides sel fill
 select clear
 # U2/U6 helix I: residues 26-30
 color #403.1/2:26-30 #047857

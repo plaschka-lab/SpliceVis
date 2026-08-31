@@ -172,6 +172,24 @@
       "color": "#9CA3AF"
     },
     {
+      "name": "BstarD_complex_9L5T_5exon",
+      "label": "5' exon",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "5' exon: residues -7--1, manual-review-addition, high confidence, validation validated",
+      "atomspec": "#403.1/8:-7--1",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "exon_5",
+      "color": "#FF8C00",
+      "label_model_id": "403.2.1.1",
+      "label_category_model_id": "403.2.1",
+      "label_group_model_id": "403.2",
+      "label_default_visible": "true"
+    },
+    {
       "name": "BstarD_complex_9L5T_U2_U6_helix_I_partner",
       "label": "U2 snRNA U2/U6 helix I partner",
       "category": "snRNA feature",
@@ -184,8 +202,8 @@
       "kind": "rna_feature",
       "feature": "U2_U6_helix_I_partner",
       "color": "#047857",
-      "label_model_id": "403.2.1.1",
-      "label_category_model_id": "403.2.1",
+      "label_model_id": "403.2.2.1",
+      "label_category_model_id": "403.2.2",
       "label_group_model_id": "403.2",
       "label_default_visible": ""
     },
@@ -202,8 +220,8 @@
       "kind": "rna_feature",
       "feature": "U2_branchpoint_pairing_region",
       "color": "#0B6E2D",
-      "label_model_id": "403.2.2.1",
-      "label_category_model_id": "403.2.2",
+      "label_model_id": "403.2.3.1",
+      "label_category_model_id": "403.2.3",
       "label_group_model_id": "403.2",
       "label_default_visible": "true"
     },
@@ -220,8 +238,8 @@
       "kind": "rna_feature",
       "feature": "U5_loop_I",
       "color": "#1B3CD0",
-      "label_model_id": "403.2.2.2",
-      "label_category_model_id": "403.2.2",
+      "label_model_id": "403.2.3.2",
+      "label_category_model_id": "403.2.3",
       "label_group_model_id": "403.2",
       "label_default_visible": "true"
     },
@@ -238,8 +256,8 @@
       "kind": "rna_feature",
       "feature": "U6_U2_helix_I_partner",
       "color": "#D0183C",
-      "label_model_id": "403.2.1.2",
-      "label_category_model_id": "403.2.1",
+      "label_model_id": "403.2.2.2",
+      "label_category_model_id": "403.2.2",
       "label_group_model_id": "403.2",
       "label_default_visible": ""
     },
@@ -256,8 +274,8 @@
       "kind": "rna_feature",
       "feature": "U6_5SS_upstream_contact",
       "color": "#E01842",
-      "label_model_id": "403.2.2.3",
-      "label_category_model_id": "403.2.2",
+      "label_model_id": "403.2.3.3",
+      "label_category_model_id": "403.2.3",
       "label_group_model_id": "403.2",
       "label_default_visible": "true"
     },
@@ -274,8 +292,8 @@
       "kind": "rna_feature",
       "feature": "U6_ISL",
       "color": "#D61A3D",
-      "label_model_id": "403.2.3.1",
-      "label_category_model_id": "403.2.3",
+      "label_model_id": "403.2.4.1",
+      "label_category_model_id": "403.2.4",
       "label_group_model_id": "403.2",
       "label_default_visible": ""
     },
@@ -292,8 +310,8 @@
       "kind": "rna_feature",
       "feature": "U6_ACAGAGA_box",
       "color": "#DC143C",
-      "label_model_id": "403.2.4.1",
-      "label_category_model_id": "403.2.4",
+      "label_model_id": "403.2.5.1",
+      "label_category_model_id": "403.2.5",
       "label_group_model_id": "403.2",
       "label_default_visible": ""
     },
@@ -310,8 +328,8 @@
       "kind": "rna_feature",
       "feature": "U6_AGC_catalytic_triad",
       "color": "#C91236",
-      "label_model_id": "403.2.5.1",
-      "label_category_model_id": "403.2.5",
+      "label_model_id": "403.2.6.1",
+      "label_category_model_id": "403.2.6",
       "label_group_model_id": "403.2",
       "label_default_visible": ""
     }

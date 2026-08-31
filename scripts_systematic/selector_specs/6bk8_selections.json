@@ -508,6 +508,42 @@
       "color": "#9CA3AF"
     },
     {
+      "name": "P_6BK8_5exon",
+      "label": "5' exon",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "5' exon: residues -13--1, manual-review-addition, high confidence, validation validated",
+      "atomspec": "#423.1/MA:-13--1",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "exon_5",
+      "color": "#FF8C00",
+      "label_model_id": "423.2.1.1",
+      "label_category_model_id": "423.2.1",
+      "label_group_model_id": "423.2",
+      "label_default_visible": "true"
+    },
+    {
+      "name": "P_6BK8_ligated_exons",
+      "label": "ligated exons",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "ligated exons: residues -13--1,1-21, manual-review-addition, high confidence, validation validated",
+      "atomspec": "#423.1/MA:-13--1,1-21",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "ligated_exons",
+      "color": "#FF8C00",
+      "label_model_id": "423.2.1.2",
+      "label_category_model_id": "423.2.1",
+      "label_group_model_id": "423.2",
+      "label_default_visible": "true"
+    },
+    {
       "name": "P_6BK8_substrate",
       "label": "substrate RNA",
       "category": "substrate RNA feature",
@@ -522,6 +558,24 @@
       "color": "#303030"
     },
     {
+      "name": "P_6BK8_3exon",
+      "label": "3' exon",
+      "category": "substrate RNA feature",
+      "section": "Named selections for resolved substrate RNA features.",
+      "comment": "3' exon: residues 1-21, manual-review-addition, high confidence, validation validated",
+      "atomspec": "#423.1/MA:1-21",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "pre_mRNA_features",
+      "kind": "rna_feature",
+      "feature": "exon_3",
+      "color": "#D97706",
+      "label_model_id": "423.2.1.3",
+      "label_category_model_id": "423.2.1",
+      "label_group_model_id": "423.2",
+      "label_default_visible": "true"
+    },
+    {
       "name": "P_6BK8_5SS",
       "label": "5' splice site",
       "category": "substrate RNA feature",
@@ -534,7 +588,7 @@
       "kind": "rna_feature",
       "feature": "five_prime_splice_site",
       "color": "#303030",
-      "label_model_id": "423.2.1.1",
+      "label_model_id": "423.2.1.4",
       "label_category_model_id": "423.2.1",
       "label_group_model_id": "423.2",
       "label_default_visible": "true"
@@ -552,7 +606,7 @@
       "kind": "rna_feature",
       "feature": "intron",
       "color": "#303030",
-      "label_model_id": "423.2.1.2",
+      "label_model_id": "423.2.1.5",
       "label_category_model_id": "423.2.1",
       "label_group_model_id": "423.2",
       "label_default_visible": "true"
@@ -570,7 +624,7 @@
       "kind": "rna_feature",
       "feature": "branch_point_region",
       "color": "#303030",
-      "label_model_id": "423.2.1.3",
+      "label_model_id": "423.2.1.6",
       "label_category_model_id": "423.2.1",
       "label_group_model_id": "423.2",
       "label_default_visible": "true"
@@ -588,7 +642,7 @@
       "kind": "rna_feature",
       "feature": "branch_point_adenosine",
       "color": "#303030",
-      "label_model_id": "423.2.1.4",
+      "label_model_id": "423.2.1.7",
       "label_category_model_id": "423.2.1",
       "label_group_model_id": "423.2",
       "label_default_visible": "true"
@@ -606,7 +660,7 @@
       "kind": "rna_feature",
       "feature": "three_prime_splice_site",
       "color": "#303030",
-      "label_model_id": "423.2.1.5",
+      "label_model_id": "423.2.1.8",
       "label_category_model_id": "423.2.1",
       "label_group_model_id": "423.2",
       "label_default_visible": "true"

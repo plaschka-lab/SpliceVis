@@ -188,6 +188,9 @@ name pdb_7W5A_other #419.1/X,Z,z
 # substrate RNA: residues -13--1; 1-31;69-103;117-132, component, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5A_substrate #419.1/4:-13--1|#419.1/G:1-31,69-103,117-132
+# 5' exon: residues -13--1, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name Cstar_7W5A_5exon #419.1/4:-13--1
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5A_5SS #419.1/G:1-6
@@ -246,6 +249,11 @@ name Cstar_7W5A_U6_AGC_catalytic_triad #419.1/F:92-94
 # RNA feature nucleotide display.
 select #419.1 & nucleic
 nucleotides sel atoms
+select clear
+# 5' exon: residues -13--1
+color #419.1/4:-13--1 #FF8C00
+select #419.1/4:-13--1
+nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-31;69-103;117-120

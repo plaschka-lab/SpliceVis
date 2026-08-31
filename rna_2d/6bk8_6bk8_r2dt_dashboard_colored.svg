@@ -747,6 +747,53 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <rect x="960.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /e -&gt; MA</text>
 <polyline points="1015.0,988.6 1036.5,988.6 1058.0,988.6 1079.5,988.6 1101.1,988.6 1122.6,988.6 1144.1,988.6 1165.6,988.6 1187.1,988.6 1208.6,988.6 1230.2,988.6 1251.7,988.6 1273.2,988.6 1294.7,988.6 1316.2,988.6 1337.7,988.6 1359.2,988.6 1380.8,988.6 1402.3,988.6 1423.8,988.6 1445.3,988.6 1466.8,988.6 1488.3,988.6 1509.8,988.6 1531.4,988.6 1552.9,988.6 1574.4,988.6 1595.9,988.6 1617.4,988.6 1638.9,988.6 1660.5,988.6 1682.0,988.6 1703.5,988.6 1725.0,988.6" class="backbone"/>
+<circle cx="1015.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1036.5" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1058.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1079.5" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1101.1" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1122.6" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1144.1" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1165.6" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1187.1" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1208.6" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1230.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1251.7" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1273.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1015.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1036.5" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1058.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1079.5" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1101.1" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1122.6" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1144.1" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1165.6" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1187.1" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1208.6" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1230.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1251.7" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1273.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1294.7" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1316.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1337.7" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1359.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1380.8" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1402.3" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1423.8" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1445.3" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1466.8" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1488.3" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1509.8" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1531.4" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1552.9" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1574.4" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1595.9" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1617.4" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1638.9" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1660.5" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1682.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1703.5" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
+<circle cx="1725.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.28"><title>ligated exons; confidence high</title></circle>
 <circle cx="1015.0" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1036.5" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1058.0" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -781,6 +828,27 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1682.0" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1703.5" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1725.0" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
+<circle cx="1294.7" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1316.2" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1337.7" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1359.2" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1380.8" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1402.3" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1423.8" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1445.3" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1466.8" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1488.3" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1509.8" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1531.4" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1552.9" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1574.4" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1595.9" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1617.4" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1638.9" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1660.5" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1682.0" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1703.5" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
+<circle cx="1725.0" cy="988.6" r="9.2" fill="#D97706" opacity="0.28"><title>3&#x27; exon; confidence high</title></circle>
 <text x="1015.0" y="988.6" class="base" fill="#303030"><title>/e seq 1 auth -13</title>U</text>
 <text x="1036.5" y="988.6" class="base" fill="#303030"><title>/e seq 2 auth -12</title>U</text>
 <text x="1058.0" y="988.6" class="base" fill="#303030"><title>/e seq 3 auth -11</title>U</text>
@@ -818,6 +886,12 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1682.0" y="988.6" class="base" fill="#303030"><title>/e seq 32 auth 19</title>U</text>
 <text x="1703.5" y="988.6" class="base" fill="#303030"><title>/e seq 33 auth 20</title>A</text>
 <text x="1725.0" y="988.6" class="base" fill="#303030"><title>/e seq 34 auth 21</title>U</text>
+<path d="M1144.1,988.6 L1187.6,968.3" class="feature-callout" stroke="#FF8C00" opacity="0.60"/>
+<text x="1187.6" y="968.3" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -13--1</text>
+<path d="M1370.0,988.6 L1413.5,968.3" class="feature-callout" stroke="#FF8C00" opacity="0.60"/>
+<text x="1413.5" y="968.3" class="feature-label" text-anchor="start" fill="#FF8C00">ligated exons nt -13--1,1-21</text>
+<path d="M1509.8,988.6 L1553.4,1008.9" class="feature-callout" stroke="#D97706" opacity="0.60"/>
+<text x="1553.4" y="1008.9" class="feature-label" text-anchor="start" fill="#D97706">3&#x27; exon nt 1-21</text>
 <rect x="70.0" y="1342.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="1370.0" class="label" style="font-size:16px;fill:#303030">mRNA /i -&gt; MB</text>
 <polyline points="125.0,1663.1 141.0,1663.1 157.0,1663.1 173.0,1663.1 189.0,1663.1 205.0,1663.1 220.9,1663.1 236.9,1663.1 252.9,1663.1 268.9,1663.1 284.9,1663.1 300.9,1663.1 316.9,1663.1 332.9,1663.1 348.9,1663.1 364.9,1663.1 380.9,1663.1 396.8,1663.1 412.8,1663.1 428.8,1663.1 444.8,1663.1 460.8,1663.1 476.8,1663.1 492.8,1663.1 508.8,1663.1 524.8,1663.1 540.8,1663.1 556.8,1663.1 572.7,1663.1 588.7,1663.1 604.7,1663.1 620.7,1663.1 636.7,1663.1 652.7,1663.1 668.7,1663.1 657.3,1652.0 654.7,1636.2 662.1,1622.0 657.1,1606.8 652.0,1591.6 644.9,1577.3 655.0,1564.9 670.5,1568.9 673.3,1584.6 678.3,1599.8 683.3,1615.0 697.7,1622.0 705.1,1636.2 702.5,1652.0 691.1,1663.1 707.1,1663.1 723.1,1663.1 739.1,1663.1 755.0,1663.1 771.0,1663.1 787.0,1663.1 803.0,1663.1 819.0,1663.1 835.0,1663.1" class="backbone"/>
@@ -1061,36 +1135,42 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M407.5,1663.1 Q551.6,519.0 695.6,564.0" class="inter" stroke-width="2.4"><title>i:16-22 to 2:42-47; 6 FR3D interactions; cWW</title></path>
 <path d="M561.3,1663.1 Q572.5,519.0 583.7,564.0" class="inter" stroke-width="2.6"><title>i:25-32 to 2:33-39; 7 FR3D interactions; cWW</title></path>
 <text x="70" y="1989.0" class="label" style="font-size:15px">Feature overlays</text>
-<circle cx="77.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="90.0" y="2015.0" class="small">substrate</text>
-<circle cx="287.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="300.0" y="2015.0" class="small">five prime splice site</text>
+<circle cx="77.0" cy="2011.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<text x="90.0" y="2015.0" class="small">exon 5</text>
+<circle cx="287.0" cy="2011.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<text x="300.0" y="2015.0" class="small">ligated exons</text>
 <circle cx="497.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="510.0" y="2015.0" class="small">intron</text>
-<circle cx="707.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="720.0" y="2015.0" class="small">branch point region</text>
+<text x="510.0" y="2015.0" class="small">substrate</text>
+<circle cx="707.0" cy="2011.0" r="7" fill="#D97706" opacity="0.28"/>
+<text x="720.0" y="2015.0" class="small">exon 3</text>
 <circle cx="917.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="930.0" y="2015.0" class="small">branch point adenosine</text>
+<text x="930.0" y="2015.0" class="small">five prime splice site</text>
 <circle cx="1127.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="1140.0" y="2015.0" class="small">three prime splice site</text>
-<circle cx="1337.0" cy="2011.0" r="7" fill="#047857" opacity="0.28"/>
-<text x="1350.0" y="2015.0" class="small">U2 U6 helix I partner</text>
-<circle cx="1547.0" cy="2011.0" r="7" fill="#0b6e2d" opacity="0.28"/>
-<text x="1560.0" y="2015.0" class="small">U2 branchpoint pairing region</text>
-<circle cx="77.0" cy="2034.0" r="7" fill="#167a38" opacity="0.28"/>
-<text x="90.0" y="2038.0" class="small">U2 stem IIa</text>
-<circle cx="287.0" cy="2034.0" r="7" fill="#1b3cd0" opacity="0.28"/>
-<text x="300.0" y="2038.0" class="small">U5 loop I</text>
-<circle cx="497.0" cy="2034.0" r="7" fill="#dc143c" opacity="0.28"/>
-<text x="510.0" y="2038.0" class="small">U6 5prime terminal stem loop</text>
-<circle cx="707.0" cy="2034.0" r="7" fill="#d0183c" opacity="0.28"/>
-<text x="720.0" y="2038.0" class="small">U6 U2 helix I partner</text>
-<circle cx="917.0" cy="2034.0" r="7" fill="#e01842" opacity="0.28"/>
-<text x="930.0" y="2038.0" class="small">U6 5SS upstream contact</text>
-<circle cx="1127.0" cy="2034.0" r="7" fill="#d61a3d" opacity="0.28"/>
-<text x="1140.0" y="2038.0" class="small">U6 ISL</text>
-<circle cx="1337.0" cy="2034.0" r="7" fill="#dc143c" opacity="0.28"/>
-<text x="1350.0" y="2038.0" class="small">U6 ACAGAGA box</text>
-<circle cx="1547.0" cy="2034.0" r="7" fill="#c91236" opacity="0.28"/>
-<text x="1560.0" y="2038.0" class="small">U6 AGC catalytic triad</text>
+<text x="1140.0" y="2015.0" class="small">intron</text>
+<circle cx="1337.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="1350.0" y="2015.0" class="small">branch point region</text>
+<circle cx="1547.0" cy="2011.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="1560.0" y="2015.0" class="small">branch point adenosine</text>
+<circle cx="77.0" cy="2034.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="90.0" y="2038.0" class="small">three prime splice site</text>
+<circle cx="287.0" cy="2034.0" r="7" fill="#047857" opacity="0.28"/>
+<text x="300.0" y="2038.0" class="small">U2 U6 helix I partner</text>
+<circle cx="497.0" cy="2034.0" r="7" fill="#0b6e2d" opacity="0.28"/>
+<text x="510.0" y="2038.0" class="small">U2 branchpoint pairing region</text>
+<circle cx="707.0" cy="2034.0" r="7" fill="#167a38" opacity="0.28"/>
+<text x="720.0" y="2038.0" class="small">U2 stem IIa</text>
+<circle cx="917.0" cy="2034.0" r="7" fill="#1b3cd0" opacity="0.28"/>
+<text x="930.0" y="2038.0" class="small">U5 loop I</text>
+<circle cx="1127.0" cy="2034.0" r="7" fill="#dc143c" opacity="0.28"/>
+<text x="1140.0" y="2038.0" class="small">U6 5prime terminal stem loop</text>
+<circle cx="1337.0" cy="2034.0" r="7" fill="#d0183c" opacity="0.28"/>
+<text x="1350.0" y="2038.0" class="small">U6 U2 helix I partner</text>
+<circle cx="1547.0" cy="2034.0" r="7" fill="#e01842" opacity="0.28"/>
+<text x="1560.0" y="2038.0" class="small">U6 5SS upstream contact</text>
+<circle cx="77.0" cy="2057.0" r="7" fill="#d61a3d" opacity="0.28"/>
+<text x="90.0" y="2061.0" class="small">U6 ISL</text>
+<circle cx="287.0" cy="2057.0" r="7" fill="#dc143c" opacity="0.28"/>
+<text x="300.0" y="2061.0" class="small">U6 ACAGAGA box</text>
+<circle cx="497.0" cy="2057.0" r="7" fill="#c91236" opacity="0.28"/>
+<text x="510.0" y="2061.0" class="small">U6 AGC catalytic triad</text>
 </svg>

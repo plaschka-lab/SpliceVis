@@ -5,7 +5,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 </style>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="70" y="40" class="label">7W59 RNA 2D panel using R2DT layouts</text>
-<text x="70" y="63" class="small">stage U2 snRNP; Human; 3.6 A; 2022</text>
+<text x="70" y="63" class="small">Human; 3.6 A; 2022</text>
 <text x="70" y="80" class="small">Per-chain R2DT/RNApuzzler layouts; dashed backbones mark unresolved sequence-record residues; inter-RNA base pairs are clustered from FR3D output.</text>
 <rect x="70.0" y="92.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="120.0" class="label" style="font-size:16px;fill:#71C562">U2 snRNA /H -&gt; 2</text>
@@ -698,6 +698,19 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1606.7" cy="987.8" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1665.8" cy="987.8" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1725.0" cy="987.8" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
+<circle cx="1015.0" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1074.2" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1133.3" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1192.5" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1251.7" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1310.8" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1370.0" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1429.2" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1488.3" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1547.5" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1606.7" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1665.8" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1725.0" cy="987.8" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
 <text x="1015.0" y="987.8" class="base" fill="#303030"><title>/4 seq 34 auth -13</title>C</text>
 <text x="1074.2" y="987.8" class="base" fill="#303030"><title>/4 seq 35 auth -12</title>G</text>
 <text x="1133.3" y="987.8" class="base" fill="#303030"><title>/4 seq 36 auth -11</title>G</text>
@@ -712,6 +725,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1606.7" y="987.8" class="base" fill="#303030"><title>/4 seq 44 auth -3</title>A</text>
 <text x="1665.8" y="987.8" class="base" fill="#303030"><title>/4 seq 45 auth -2</title>C</text>
 <text x="1725.0" y="987.8" class="base" fill="#303030"><title>/4 seq 46 auth -1</title>G</text>
+<path d="M1370.0,987.8 L1413.5,967.5" class="feature-callout" stroke="#FF8C00" opacity="0.60"/>
+<text x="1413.5" y="967.5" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -13--1</text>
 <rect x="70.0" y="1342.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="1370.0" class="label" style="font-size:16px;fill:#303030">mRNA /G -&gt; MB</text>
 <polyline points="125.0,1613.8 133.8,1613.8 142.5,1613.8 151.3,1613.8 160.1,1613.8 168.8,1613.8 177.6,1613.8 186.4,1613.8 195.1,1613.8 203.9,1613.8 212.7,1613.8 221.4,1613.8 230.2,1613.8 239.0,1613.8 247.7,1613.8 256.5,1613.8 265.2,1613.8 274.0,1613.8 282.8,1613.8 291.5,1613.8 300.3,1613.8 309.1,1613.8 317.8,1613.8 326.6,1613.8 335.4,1613.8 344.1,1613.8 352.9,1613.8 361.7,1613.8 370.4,1613.8 379.2,1613.8 388.0,1613.8 396.7,1613.8 405.5,1613.8 414.3,1613.8 423.0,1613.8 431.8,1613.8 440.6,1613.8 449.3,1613.8 458.1,1613.8 466.9,1613.8 475.6,1613.8 484.4,1613.8 493.1,1613.8 501.9,1613.8 510.7,1613.8 519.4,1613.8 528.2,1613.8 537.0,1613.8 545.7,1613.8 554.5,1613.8 563.3,1613.8 572.0,1613.8 580.8,1613.8 589.6,1613.8 598.3,1613.8 607.1,1613.8 615.9,1613.8 624.6,1613.8 633.4,1613.8 642.2,1613.8 650.9,1613.8 659.7,1613.8 668.5,1613.8 677.2,1613.8 686.0,1613.8 694.8,1613.8 703.5,1613.8 712.3,1613.8 721.0,1613.8 729.8,1613.8 738.6,1613.8 747.3,1613.8 756.1,1613.8 764.9,1613.8 773.6,1613.8 782.4,1613.8 791.2,1613.8 799.9,1613.8 808.7,1613.8 817.5,1613.8 826.2,1613.8 835.0,1613.8" class="backbone"/>
@@ -1030,40 +1045,42 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="70.0" y="2015.0" class="small">? label prefix = uncertain RNA-feature assignment; inspect validation notes before interpretation.</text>
 <circle cx="77.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="90.0" y="2039.0" class="small">substrate</text>
-<circle cx="287.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="300.0" y="2039.0" class="small">five prime splice site</text>
+<circle cx="287.0" cy="2035.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<text x="300.0" y="2039.0" class="small">exon 5</text>
 <circle cx="497.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="510.0" y="2039.0" class="small">intron</text>
+<text x="510.0" y="2039.0" class="small">five prime splice site</text>
 <circle cx="707.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="720.0" y="2039.0" class="small">branch point region</text>
+<text x="720.0" y="2039.0" class="small">intron</text>
 <circle cx="917.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="930.0" y="2039.0" class="small">branch point adenosine</text>
+<text x="930.0" y="2039.0" class="small">branch point region</text>
 <circle cx="1127.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="1140.0" y="2039.0" class="small">polypyrimidine tract</text>
+<text x="1140.0" y="2039.0" class="small">branch point adenosine</text>
 <circle cx="1337.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="1350.0" y="2039.0" class="small">three prime splice site</text>
-<circle cx="1547.0" cy="2035.0" r="7" fill="#D97706" opacity="0.28"/>
-<text x="1560.0" y="2039.0" class="small">exon 3</text>
-<circle cx="77.0" cy="2058.0" r="7" fill="#047857" opacity="0.28"/>
-<text x="90.0" y="2062.0" class="small">U2 U6 helix I partner</text>
-<circle cx="287.0" cy="2058.0" r="7" fill="#0b6e2d" opacity="0.28"/>
-<text x="300.0" y="2062.0" class="small">U2 branchpoint pairing region</text>
-<circle cx="497.0" cy="2058.0" r="7" fill="#167a38" opacity="0.28"/>
-<text x="510.0" y="2062.0" class="small">U2 stem IIa</text>
-<circle cx="707.0" cy="2058.0" r="7" fill="#2f8b4d" opacity="0.28"/>
-<text x="720.0" y="2062.0" class="small">U2 Sm site</text>
-<circle cx="917.0" cy="2058.0" r="7" fill="#1b3cd0" opacity="0.28"/>
-<text x="930.0" y="2062.0" class="small">U5 loop I</text>
-<circle cx="1127.0" cy="2058.0" r="7" fill="#dc143c" opacity="0.28"/>
-<text x="1140.0" y="2062.0" class="small">U6 5prime terminal stem loop</text>
-<circle cx="1337.0" cy="2058.0" r="7" fill="#d0183c" opacity="0.28"/>
-<text x="1350.0" y="2062.0" class="small">U6 U2 helix I partner</text>
-<circle cx="1547.0" cy="2058.0" r="7" fill="#e01842" opacity="0.28"/>
-<text x="1560.0" y="2062.0" class="small">U6 5SS upstream contact</text>
-<circle cx="77.0" cy="2081.0" r="7" fill="#dc143c" opacity="0.28"/>
-<text x="90.0" y="2085.0" class="small">U6 ACAGAGA box</text>
-<circle cx="287.0" cy="2081.0" r="7" fill="#d61a3d" opacity="0.28"/>
-<text x="300.0" y="2085.0" class="small">U6 ISL</text>
-<circle cx="497.0" cy="2081.0" r="7" fill="#c91236" opacity="0.28"/>
-<text x="510.0" y="2085.0" class="small">U6 AGC catalytic triad</text>
+<text x="1350.0" y="2039.0" class="small">polypyrimidine tract</text>
+<circle cx="1547.0" cy="2035.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="1560.0" y="2039.0" class="small">three prime splice site</text>
+<circle cx="77.0" cy="2058.0" r="7" fill="#D97706" opacity="0.28"/>
+<text x="90.0" y="2062.0" class="small">exon 3</text>
+<circle cx="287.0" cy="2058.0" r="7" fill="#047857" opacity="0.28"/>
+<text x="300.0" y="2062.0" class="small">U2 U6 helix I partner</text>
+<circle cx="497.0" cy="2058.0" r="7" fill="#0b6e2d" opacity="0.28"/>
+<text x="510.0" y="2062.0" class="small">U2 branchpoint pairing region</text>
+<circle cx="707.0" cy="2058.0" r="7" fill="#167a38" opacity="0.28"/>
+<text x="720.0" y="2062.0" class="small">U2 stem IIa</text>
+<circle cx="917.0" cy="2058.0" r="7" fill="#2f8b4d" opacity="0.28"/>
+<text x="930.0" y="2062.0" class="small">U2 Sm site</text>
+<circle cx="1127.0" cy="2058.0" r="7" fill="#1b3cd0" opacity="0.28"/>
+<text x="1140.0" y="2062.0" class="small">U5 loop I</text>
+<circle cx="1337.0" cy="2058.0" r="7" fill="#dc143c" opacity="0.28"/>
+<text x="1350.0" y="2062.0" class="small">U6 5prime terminal stem loop</text>
+<circle cx="1547.0" cy="2058.0" r="7" fill="#d0183c" opacity="0.28"/>
+<text x="1560.0" y="2062.0" class="small">U6 U2 helix I partner</text>
+<circle cx="77.0" cy="2081.0" r="7" fill="#e01842" opacity="0.28"/>
+<text x="90.0" y="2085.0" class="small">U6 5SS upstream contact</text>
+<circle cx="287.0" cy="2081.0" r="7" fill="#dc143c" opacity="0.28"/>
+<text x="300.0" y="2085.0" class="small">U6 ACAGAGA box</text>
+<circle cx="497.0" cy="2081.0" r="7" fill="#d61a3d" opacity="0.28"/>
+<text x="510.0" y="2085.0" class="small">U6 ISL</text>
+<circle cx="707.0" cy="2081.0" r="7" fill="#c91236" opacity="0.28"/>
+<text x="720.0" y="2085.0" class="small">U6 AGC catalytic triad</text>
 </svg>

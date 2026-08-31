@@ -222,9 +222,9 @@ name B_8QZS_branch_region #371.1/Z:35-43
 # branch point adenosine: residues 41, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8QZS_branch_A #371.1/Z:41
-# 5' exon: residues -3--1, five-ss-inference, medium confidence, validation not_applicable
+# 5' exon: residues -3--1, five-ss-inference/manual-review-addition, high/medium confidence, validation not_applicable/validated
 # selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_8QZS_5exon #371.1/z1:-3--1
+name B_8QZS_5exon #371.1/z1:-3--1|#371.1/z2:-3--1
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8QZS_5SS #371.1/z1:1-6
@@ -290,8 +290,8 @@ select clear
 # BP region: residues 35-43
 # BP-A: residues 41
 # 5' exon: residues -3--1
-color #371.1/z1:-3--1 #FF8C00
-select #371.1/z1:-3--1
+color #371.1/z1:-3--1|#371.1/z2:-3--1 #FF8C00
+select #371.1/z1:-3--1|#371.1/z2:-3--1
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6

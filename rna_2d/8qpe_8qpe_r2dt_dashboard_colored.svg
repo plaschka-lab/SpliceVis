@@ -515,6 +515,9 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <rect x="70.0" y="1342.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="1370.0" class="label" style="font-size:16px;fill:#303030">mRNA /z2 -&gt; MB</text>
 <polyline points="125.0,1609.3 361.7,1609.3 598.3,1609.3 835.0,1609.3" class="backbone"/>
+<circle cx="125.0" cy="1609.3" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="361.7" cy="1609.3" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="598.3" cy="1609.3" r="9.2" fill="#FF8C00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
 <circle cx="125.0" cy="1609.3" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="361.7" cy="1609.3" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="598.3" cy="1609.3" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -523,6 +526,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="361.7" y="1609.3" class="base" fill="#303030"><title>/z2 seq 2 auth -2</title>A</text>
 <text x="598.3" y="1609.3" class="base" fill="#303030"><title>/z2 seq 3 auth -1</title>G</text>
 <text x="835.0" y="1609.3" class="base" fill="#303030"><title>/z2 seq 4 auth 1</title>G</text>
+<path d="M361.7,1609.3 L341.4,1565.8" class="feature-callout" stroke="#FF8C00" opacity="0.60"/>
+<text x="341.4" y="1565.8" class="feature-label" text-anchor="end" fill="#FF8C00">5&#x27; exon nt -3--1</text>
 <path d="M311.9,506.8 Q469.8,461.8 627.6,988.7" class="inter" stroke-width="4.4"><title>4:2-17 to 6:58-73; 15 FR3D interactions; cWW</title></path>
 <path d="M714.4,506.8 Q574.7,461.8 434.9,988.7" class="inter" stroke-width="2.4"><title>4:55-61 to 6:51-57; 6 FR3D interactions; cWW</title></path>
 <path d="M1262.6,179.7 Q1156.5,134.7 1050.5,987.6" class="inter" stroke-width="1.5"><title>5:41-42 to z1:1-2; 2 FR3D interactions; cWW</title></path>
