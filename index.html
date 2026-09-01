@@ -107,6 +107,14 @@
     .molstar-feature-button { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); min-height:28px; padding:4px 9px; font-size:12px; max-width:270px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .molstar-feature-button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:700; }
     .molstar-feature-button .component-swatch { margin-right:5px; }
+    .rna-alignment-panel { display:grid; gap:8px; padding-top:10px; border-top:1px solid var(--soft-line); }
+    .rna-alignment-heading { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:8px 16px; }
+    .rna-alignment-heading h3 { margin:0 0 2px; font-size:13px; }
+    .rna-alignment-actions, .rna-alignment-tabs { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+    .rna-alignment-actions a, .rna-alignment-actions button, .rna-alignment-tabs button { display:inline-flex; align-items:center; min-height:26px; padding:3px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); text-decoration:none; font:inherit; font-size:12px; cursor:pointer; }
+    .rna-alignment-actions a:hover, .rna-alignment-actions button:hover, .rna-alignment-tabs button:hover { border-color:#9fc6ef; background:#f5faff; color:#0b5cab; }
+    .rna-alignment-tabs button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:750; }
+    .rna-alignment-frame { display:block; width:100%; height:390px; border:0; background:#fff; }
     .molstar-options { margin-top:8px; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .molstar-options > summary { cursor:pointer; list-style:none; padding:8px 10px; color:var(--muted); font-size:12px; font-weight:750; }
     .molstar-options > summary::-webkit-details-marker { display:none; }
@@ -1262,7 +1270,7 @@ ${await scriptFor(record,"no_maps")}
       return /\bminor\b/i.test([r?.title, r?.paper_title].filter(Boolean).join(" "));
     }
     function minorSpliceosomeBadge(r){
-      return isMinorSpliceosome(r) ? '<span class="badge minor-spliceosome">minor spliceosome</span>' : "";
+      return isMinorSpliceosome(r) ? '<span class="badge minor-spliceosome" title="Minor spliceosome">minor</span>' : "";
     }
     function curationBadges(r, includeRna=true){
       const c=r.curation||{}; const flags=c.flags||[]; const confidence=c.overall_confidence||"";
@@ -1387,6 +1395,48 @@ ${await scriptFor(record,"no_maps")}
       const groups = unique(features.map(x=>x.group));
       return `<div class="molstar-feature-box"><div class="molstar-feature-controls"><div class="field"><label for="molstarFeatureGroup">Feature group</label><select id="molstarFeatureGroup" onchange="renderMolstarFeatureButtons()"><option value="all">All feature groups</option>${groups.map(g=>`<option value="${attr(g)}">${esc(g)}</option>`).join("")}</select></div><div class="field"><label for="molstarFeatureSearch">Find feature</label><input id="molstarFeatureSearch" type="search" placeholder="branch, 5SS, U6" oninput="renderMolstarFeatureButtons()"></div><button type="button" onclick="clearMolstarFeature()" title="Clear Mol* feature highlight and refocus the full structure.">Clear feature</button></div><div class="molstar-feature-list" id="molstarFeatureList"></div></div>`;
     }
+    function structureAlignmentItems(r){
+      const byPath = new Map();
+      for(const substrate of (r.substrate_types || [])){
+        for(const alignment of (substrate.pairwise_alignments || [])){
+          if(!alignment.alignment_html || byPath.has(alignment.alignment_html)) continue;
+          byPath.set(alignment.alignment_html, {
+            html: alignment.alignment_html,
+            fasta: alignment.alignment_fasta || "",
+            label: substrate.reference_label || substrate.family || substrate.type || "pre-mRNA",
+          });
+        }
+      }
+      return [...byPath.values()];
+    }
+    function alignmentViewerUrl(path){
+      if(state.chainMode!=="systematic") return path;
+      const separator=String(path).includes("?")?"&":"?";
+      return `${path}${separator}chain_ids=systematic`;
+    }
+    function rnaAlignmentPanel(r){
+      const items = structureAlignmentItems(r);
+      if(!items.length) return "";
+      const first = items[0];
+      const firstUrl = alignmentViewerUrl(first.html);
+      const tabs = items.length > 1 ? `<div class="rna-alignment-tabs">${items.map((item,index)=>`<button type="button" class="${index===0?"active":""}" data-alignment-index="${index}" onclick="changeRnaAlignment(this)">${esc(item.label)}</button>`).join("")}</div>` : "";
+      return `<section class="rna-alignment-panel"><div class="rna-alignment-heading"><div><h3>Pre-mRNA sequence alignment</h3><div class="subtle">Annotated reference and all deposited substrate chains. Click a modelled nucleotide or drag a range to focus it in Mol*.</div></div><div class="rna-alignment-actions"><a id="rnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full view</a>${first.fasta?`<a id="rnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}<button type="button" onclick="copyRnaAlignmentChimeraX(this)" title="Copy a command that opens this interactive alignment in the ChimeraX Help Viewer.">Copy ChimeraX viewer command</button></div></div>${tabs}<iframe id="rnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} pre-mRNA sequence alignment`)}" loading="eager"></iframe></section>`;
+    }
+    function changeRnaAlignment(button){
+      const items=structureAlignmentItems(currentMolstarRecord()),item=items[Number(button.dataset.alignmentIndex)];
+      if(!item) return;
+      const viewerUrl=alignmentViewerUrl(item.html);
+      document.getElementById("rnaAlignmentFrame").src=viewerUrl;
+      document.getElementById("rnaAlignmentOpen").href=viewerUrl;
+      const fasta=document.getElementById("rnaAlignmentFasta");
+      if(fasta && item.fasta) fasta.href=item.fasta;
+      document.querySelectorAll(".rna-alignment-tabs button").forEach(tab=>tab.classList.toggle("active",tab===button));
+    }
+    async function copyRnaAlignmentChimeraX(button){
+      const frame=document.getElementById("rnaAlignmentFrame");
+      if(!frame) return;
+      await copyText(`open ${new URL(frame.getAttribute("src"),window.location.href).href}`,button);
+    }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
       const legend = molstarLegend(r);
@@ -1395,7 +1445,7 @@ ${await scriptFor(record,"no_maps")}
       const features = hasFeatures ? `<section class="molstar-selection-section" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
       const legendBlock = hasLegend ? `<section class="molstar-selection-section" data-molstar-section="protein"><h3>Proteins</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><div class="molstar-legend">${legend}</div></section>` : "";
       const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar">${features}${legendBlock}</aside>` : "";
-      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div></div>`;
+      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${rnaAlignmentPanel(r)}</div>`;
     }
     function switchMolstarSelectionTab(tab){
       const value = tab === "protein" ? "protein" : "rna";
@@ -1599,6 +1649,44 @@ ${await scriptFor(record,"no_maps")}
       await instance.visual.highlight({data: queries, color: feature.color || "#FFFF00"});
       if(status) status.textContent = `Focused ${feature.label} (${feature.chain}:${feature.residue_ranges}).`;
     }
+    function compactNumericRanges(values){
+      const ordered=[...new Set(values.map(Number).filter(Number.isFinite))].sort((a,b)=>a-b),ranges=[];
+      if(!ordered.length) return ranges;
+      let start=ordered[0],previous=ordered[0];
+      for(const value of ordered.slice(1)){
+        if(value===previous+1){ previous=value; continue; }
+        ranges.push([start,previous]); start=previous=value;
+      }
+      ranges.push([start,previous]);
+      return ranges;
+    }
+    async function focusMolstarAlignmentSelection(payload){
+      const r=currentMolstarRecord(),status=document.getElementById("molstarStatus");
+      if(!r || String(payload.pdb_id||"").toLowerCase()!==String(r.pdb_id||"").toLowerCase()) return;
+      const validChains=new Set((r.rnas||[]).flatMap(item=>String(item.chains||"").split(/;\s*/)).filter(Boolean));
+      if(!validChains.has(String(payload.chain||""))) return;
+      const ranges=compactNumericRanges(Array.isArray(payload.auth_residues)?payload.auth_residues:[]);
+      if(!ranges.length) return;
+      if(!currentMolstarViewerElement() || state.molstarPdbId!==state.selected) await loadMolstarForSelected();
+      const viewer=currentMolstarViewerElement(),instance=viewer&&viewer.viewerInstance;
+      if(!instance||!instance.visual){ if(status) status.textContent="Mol* viewer is not ready yet."; return; }
+      const queries=ranges.map(([start,end])=>({auth_asym_id:payload.chain,beg_auth_seq_id:start,end_auth_seq_id:end,color:"#00A6C8",focus:true}));
+      await instance.visual.focus(queries);
+      await instance.visual.highlight({data:queries,color:"#00A6C8"});
+      clearMolstarLegendActive();
+      document.querySelectorAll(".molstar-feature-button").forEach(item=>item.classList.remove("active"));
+      if(status) status.textContent=`Focused ${payload.label||`${r.pdb_id.toUpperCase()} chain ${payload.chain}`}.`;
+    }
+    window.addEventListener("message",event=>{
+      const payload=event.data;
+      if(!payload||payload.source!=="splicevis-rna-alignment") return;
+      const frame=document.getElementById("rnaAlignmentFrame");
+      if(frame&&event.source!==frame.contentWindow) return;
+      focusMolstarAlignmentSelection(payload).catch(error=>{
+        const status=document.getElementById("molstarStatus");
+        if(status) status.textContent=`Mol* alignment selection failed: ${error.message}`;
+      });
+    });
     function molstarLegendItems(r){
       const groups = [];
       const byKey = new Map();

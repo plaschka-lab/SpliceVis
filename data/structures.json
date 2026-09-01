@@ -1014,8 +1014,8 @@
             {
               "chain": "I",
               "member": "6g90:I",
-              "alignment_html": "rna_references/6g90_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/6g90_I_vs_ubc4_mv_253.aligned.fasta"
+              "alignment_html": "rna_references/6g90_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/6g90_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -2004,8 +2004,8 @@
             {
               "chain": "I",
               "member": "7oqe:I",
-              "alignment_html": "rna_references/7oqe_I_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/7oqe_I_vs_act1_mv_679.aligned.fasta"
+              "alignment_html": "rna_references/7oqe_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/7oqe_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -4306,8 +4306,8 @@
             {
               "chain": "I",
               "member": "5nrl:I",
-              "alignment_html": "rna_references/5nrl_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5nrl_I_vs_ubc4_mv_253.aligned.fasta"
+              "alignment_html": "rna_references/5nrl_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5nrl_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -5788,8 +5788,8 @@
             {
               "chain": "Y",
               "member": "5o9z:Y",
-              "alignment_html": "rna_references/5o9z_Y_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5o9z_Y_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/5o9z_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5o9z_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -8823,8 +8823,8 @@
             {
               "chain": "G",
               "member": "6ahd:G",
-              "alignment_html": "rna_references/6ahd_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6ahd_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/6ahd_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6ahd_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -12956,8 +12956,8 @@
             {
               "chain": "Z",
               "member": "8q7n:Z",
-              "alignment_html": "rna_references/8q7n_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8q7n_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8q7n_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8q7n_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -14529,8 +14529,8 @@
             {
               "chain": "Z",
               "member": "8qo9:Z",
-              "alignment_html": "rna_references/8qo9_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8qo9_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8qo9_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8qo9_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -16247,8 +16247,8 @@
             {
               "chain": "Z",
               "member": "8qzs:Z",
-              "alignment_html": "rna_references/8qzs_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8qzs_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8qzs_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8qzs_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         },
@@ -17526,8 +17526,8 @@
             {
               "chain": "B",
               "member": "6j6g:B",
-              "alignment_html": "rna_references/6j6g_B_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/6j6g_B_vs_act1_mv_679.aligned.fasta"
+              "alignment_html": "rna_references/6j6g_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/6j6g_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -18670,8 +18670,8 @@
             {
               "chain": "B",
               "member": "6j6h:B",
-              "alignment_html": "rna_references/6j6h_B_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/6j6h_B_vs_act1_mv_679.aligned.fasta"
+              "alignment_html": "rna_references/6j6h_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/6j6h_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -19814,8 +19814,8 @@
             {
               "chain": "B",
               "member": "6j6n:B",
-              "alignment_html": "rna_references/6j6n_B_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/6j6n_B_vs_ubc4_mv_253.aligned.fasta"
+              "alignment_html": "rna_references/6j6n_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/6j6n_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -20971,8 +20971,8 @@
             {
               "chain": "B",
               "member": "6j6q:B",
-              "alignment_html": "rna_references/6j6q_B_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/6j6q_B_vs_ubc4_mv_253.aligned.fasta"
+              "alignment_html": "rna_references/6j6q_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/6j6q_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -28012,8 +28012,8 @@
             {
               "chain": "9",
               "member": "5lqw:9",
-              "alignment_html": "rna_references/5lqw_9_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/5lqw_9_vs_act1_mv_679.aligned.fasta"
+              "alignment_html": "rna_references/5lqw_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/5lqw_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -29422,8 +29422,8 @@
             {
               "chain": "G",
               "member": "5z56:G",
-              "alignment_html": "rna_references/5z56_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5z56_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/5z56_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5z56_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -30821,8 +30821,8 @@
             {
               "chain": "G",
               "member": "5z57:G",
-              "alignment_html": "rna_references/5z57_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5z57_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/5z57_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5z57_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -32100,8 +32100,8 @@
             {
               "chain": "G",
               "member": "5z58:G",
-              "alignment_html": "rna_references/5z58_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5z58_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/5z58_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5z58_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -33129,8 +33129,8 @@
             {
               "chain": "Z",
               "member": "6ff4:Z",
-              "alignment_html": "rna_references/6ff4_Z_vs_pm5_10_410.modelled.html",
-              "alignment_fasta": "rna_references/6ff4_Z_vs_pm5_10_410.aligned.fasta"
+              "alignment_html": "rna_references/6ff4_vs_pm5_10_410.modelled.html",
+              "alignment_fasta": "rna_references/6ff4_vs_pm5_10_410.aligned.fasta"
             }
           ]
         }
@@ -34483,8 +34483,8 @@
             {
               "chain": "Z",
               "member": "6ff7:Z",
-              "alignment_html": "rna_references/6ff7_Z_vs_pm5_10_410.modelled.html",
-              "alignment_fasta": "rna_references/6ff7_Z_vs_pm5_10_410.aligned.fasta"
+              "alignment_html": "rna_references/6ff7_vs_pm5_10_410.modelled.html",
+              "alignment_fasta": "rna_references/6ff7_vs_pm5_10_410.aligned.fasta"
             }
           ]
         }
@@ -38223,8 +38223,8 @@
             {
               "chain": "g",
               "member": "7qtt:g",
-              "alignment_html": "rna_references/7qtt_g_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7qtt_g_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7qtt_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7qtt_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -39660,8 +39660,8 @@
             {
               "chain": "g",
               "member": "8ch6:g",
-              "alignment_html": "rna_references/8ch6_g_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8ch6_g_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8ch6_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8ch6_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -41068,8 +41068,8 @@
             {
               "chain": "G",
               "member": "8i0r:G",
-              "alignment_html": "rna_references/8i0r_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0r_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8i0r_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0r_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -42393,8 +42393,8 @@
             {
               "chain": "G",
               "member": "8i0s:G",
-              "alignment_html": "rna_references/8i0s_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0s_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8i0s_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0s_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -43772,8 +43772,8 @@
             {
               "chain": "G",
               "member": "8i0t:G",
-              "alignment_html": "rna_references/8i0t_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0t_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8i0t_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0t_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -45112,8 +45112,8 @@
             {
               "chain": "G",
               "member": "8i0u:G",
-              "alignment_html": "rna_references/8i0u_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0u_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8i0u_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0u_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -46416,8 +46416,8 @@
             {
               "chain": "G",
               "member": "8i0v:G",
-              "alignment_html": "rna_references/8i0v_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0v_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8i0v_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0v_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -48811,10 +48811,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "5lj3:E",
-              "alignment_html": "rna_references/5lj3_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5lj3_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "E; I",
+              "member": "5lj3:E; 5lj3:I",
+              "alignment_html": "rna_references/5lj3_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5lj3_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -48842,10 +48842,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "5lj3:I",
-              "alignment_html": "rna_references/5lj3_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5lj3_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "E; I",
+              "member": "5lj3:E; 5lj3:I",
+              "alignment_html": "rna_references/5lj3_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5lj3_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -50018,10 +50018,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "5lj5:E",
-              "alignment_html": "rna_references/5lj5_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5lj5_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "E; I",
+              "member": "5lj5:E; 5lj5:I",
+              "alignment_html": "rna_references/5lj5_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5lj5_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -50049,10 +50049,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "5lj5:I",
-              "alignment_html": "rna_references/5lj5_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5lj5_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "E; I",
+              "member": "5lj5:E; 5lj5:I",
+              "alignment_html": "rna_references/5lj5_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5lj5_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -51417,8 +51417,8 @@
             {
               "chain": "G",
               "member": "5yzg:G",
-              "alignment_html": "rna_references/5yzg_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5yzg_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/5yzg_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5yzg_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -52356,16 +52356,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "Y",
-              "member": "6zym:Y",
-              "alignment_html": "rna_references/6zym_Y_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6zym_Y_vs_minx_m3_324.aligned.fasta"
-            },
-            {
-              "chain": "Z",
-              "member": "6zym:Z",
-              "alignment_html": "rna_references/6zym_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6zym_Z_vs_minx_m3_324.aligned.fasta"
+              "chain": "Y; Z",
+              "member": "6zym:Y; 6zym:Z",
+              "alignment_html": "rna_references/6zym_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6zym_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -53246,8 +53240,8 @@
             {
               "chain": "Y",
               "member": "7a5p:Y",
-              "alignment_html": "rna_references/7a5p_Y_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7a5p_Y_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7a5p_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7a5p_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -54399,10 +54393,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "7b9v:E",
-              "alignment_html": "rna_references/7b9v_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/7b9v_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E",
+              "member": "7b9v:I; 7b9v:E",
+              "alignment_html": "rna_references/7b9v_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/7b9v_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -54430,10 +54424,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "7b9v:I",
-              "alignment_html": "rna_references/7b9v_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/7b9v_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E",
+              "member": "7b9v:I; 7b9v:E",
+              "alignment_html": "rna_references/7b9v_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/7b9v_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -55827,10 +55821,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "G",
-              "member": "8i0w:G",
-              "alignment_html": "rna_references/8i0w_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0w_G_vs_minx_m3_324.aligned.fasta"
+              "chain": "G; 6",
+              "member": "8i0w:G; 8i0w:6",
+              "alignment_html": "rna_references/8i0w_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0w_vs_minx_m3_324.aligned.fasta"
             }
           ]
         },
@@ -55858,10 +55852,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "6",
-              "member": "8i0w:6",
-              "alignment_html": "rna_references/8i0w_6_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0w_6_vs_minx_m3_324.aligned.fasta"
+              "chain": "G; 6",
+              "member": "8i0w:G; 8i0w:6",
+              "alignment_html": "rna_references/8i0w_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0w_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -56941,10 +56935,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "5mps:I",
-              "alignment_html": "rna_references/5mps_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5mps_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E",
+              "member": "5mps:I; 5mps:E",
+              "alignment_html": "rna_references/5mps_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5mps_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -56972,10 +56966,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "5mps:E",
-              "alignment_html": "rna_references/5mps_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5mps_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E",
+              "member": "5mps:I; 5mps:E",
+              "alignment_html": "rna_references/5mps_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5mps_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -58232,10 +58226,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "5mq0:I",
-              "alignment_html": "rna_references/5mq0_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5mq0_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E; 3",
+              "member": "5mq0:I; 5mq0:E; 5mq0:3",
+              "alignment_html": "rna_references/5mq0_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5mq0_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -58263,10 +58257,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "5mq0:E",
-              "alignment_html": "rna_references/5mq0_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5mq0_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E; 3",
+              "member": "5mq0:I; 5mq0:E; 5mq0:3",
+              "alignment_html": "rna_references/5mq0_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5mq0_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -58294,10 +58288,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "3",
-              "member": "5mq0:3",
-              "alignment_html": "rna_references/5mq0_3_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/5mq0_3_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E; 3",
+              "member": "5mq0:I; 5mq0:E; 5mq0:3",
+              "alignment_html": "rna_references/5mq0_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/5mq0_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -59485,16 +59479,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "Y",
-              "member": "5mqf:Y",
-              "alignment_html": "rna_references/5mqf_Y_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5mqf_Y_vs_minx_m3_324.aligned.fasta"
-            },
-            {
-              "chain": "Z",
-              "member": "5mqf:Z",
-              "alignment_html": "rna_references/5mqf_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5mqf_Z_vs_minx_m3_324.aligned.fasta"
+              "chain": "Y; Z",
+              "member": "5mqf:Y; 5mqf:Z",
+              "alignment_html": "rna_references/5mqf_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5mqf_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -62287,8 +62275,8 @@
             {
               "chain": "G",
               "member": "5xjc:G",
-              "alignment_html": "rna_references/5xjc_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/5xjc_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/5xjc_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/5xjc_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -63673,10 +63661,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "4",
-              "member": "7w59:4",
-              "alignment_html": "rna_references/7w59_4_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7w59_4_vs_minx_m3_324.aligned.fasta"
+              "chain": "4; G",
+              "member": "7w59:4; 7w59:G",
+              "alignment_html": "rna_references/7w59_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7w59_vs_minx_m3_324.aligned.fasta"
             }
           ]
         },
@@ -63704,10 +63692,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "G",
-              "member": "7w59:G",
-              "alignment_html": "rna_references/7w59_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7w59_G_vs_minx_m3_324.aligned.fasta"
+              "chain": "4; G",
+              "member": "7w59:4; 7w59:G",
+              "alignment_html": "rna_references/7w59_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7w59_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -65144,10 +65132,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "4",
-              "member": "7w5a:4",
-              "alignment_html": "rna_references/7w5a_4_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7w5a_4_vs_minx_m3_324.aligned.fasta"
+              "chain": "4; G",
+              "member": "7w5a:4; 7w5a:G",
+              "alignment_html": "rna_references/7w5a_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7w5a_vs_minx_m3_324.aligned.fasta"
             }
           ]
         },
@@ -65175,10 +65163,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "G",
-              "member": "7w5a:G",
-              "alignment_html": "rna_references/7w5a_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7w5a_G_vs_minx_m3_324.aligned.fasta"
+              "chain": "4; G",
+              "member": "7w5a:4; 7w5a:G",
+              "alignment_html": "rna_references/7w5a_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7w5a_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -66628,10 +66616,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "4",
-              "member": "7w5b:4",
-              "alignment_html": "rna_references/7w5b_4_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7w5b_4_vs_minx_m3_324.aligned.fasta"
+              "chain": "4; G",
+              "member": "7w5b:4; 7w5b:G",
+              "alignment_html": "rna_references/7w5b_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7w5b_vs_minx_m3_324.aligned.fasta"
             }
           ]
         },
@@ -66659,10 +66647,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "G",
-              "member": "7w5b:G",
-              "alignment_html": "rna_references/7w5b_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7w5b_G_vs_minx_m3_324.aligned.fasta"
+              "chain": "4; G",
+              "member": "7w5b:4; 7w5b:G",
+              "alignment_html": "rna_references/7w5b_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7w5b_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -68135,10 +68123,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_PM5_full-PPT_478-nt_pre-mRNA_pm5_478.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "8c6j:E",
-              "alignment_html": "rna_references/8c6j_E_vs_pm5_478.modelled.html",
-              "alignment_fasta": "rna_references/8c6j_E_vs_pm5_478.aligned.fasta"
+              "chain": "E; I",
+              "member": "8c6j:E; 8c6j:I",
+              "alignment_html": "rna_references/8c6j_vs_pm5_478.modelled.html",
+              "alignment_fasta": "rna_references/8c6j_vs_pm5_478.aligned.fasta"
             }
           ]
         },
@@ -68166,10 +68154,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_PM5_full-PPT_478-nt_pre-mRNA_pm5_478.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "8c6j:I",
-              "alignment_html": "rna_references/8c6j_I_vs_pm5_478.modelled.html",
-              "alignment_fasta": "rna_references/8c6j_I_vs_pm5_478.aligned.fasta"
+              "chain": "E; I",
+              "member": "8c6j:E; 8c6j:I",
+              "alignment_html": "rna_references/8c6j_vs_pm5_478.modelled.html",
+              "alignment_fasta": "rna_references/8c6j_vs_pm5_478.aligned.fasta"
             }
           ]
         }
@@ -69692,8 +69680,8 @@
             {
               "chain": "r",
               "member": "6n7p:r",
-              "alignment_html": "rna_references/6n7p_r_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/6n7p_r_vs_ubc4_mv_253.aligned.fasta"
+              "alignment_html": "rna_references/6n7p_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/6n7p_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -70673,8 +70661,8 @@
             {
               "chain": "r",
               "member": "6n7r:r",
-              "alignment_html": "rna_references/6n7r_r_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/6n7r_r_vs_act1_mv_679.aligned.fasta"
+              "alignment_html": "rna_references/6n7r_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/6n7r_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -73822,8 +73810,8 @@
             {
               "chain": "G",
               "member": "6id0:G",
-              "alignment_html": "rna_references/6id0_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6id0_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/6id0_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6id0_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -74997,8 +74985,8 @@
             {
               "chain": "G",
               "member": "6id1:G",
-              "alignment_html": "rna_references/6id1_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6id1_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/6id1_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6id1_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -83289,10 +83277,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_ACT1_679-nt_pre-mRNA_act1_mv_679.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "e",
-              "member": "6bk8:e",
-              "alignment_html": "rna_references/6bk8_e_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/6bk8_e_vs_act1_mv_679.aligned.fasta"
+              "chain": "e; i",
+              "member": "6bk8:e; 6bk8:i",
+              "alignment_html": "rna_references/6bk8_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/6bk8_vs_act1_mv_679.aligned.fasta"
             }
           ]
         },
@@ -83320,10 +83308,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_ACT1_679-nt_pre-mRNA_act1_mv_679.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "i",
-              "member": "6bk8:i",
-              "alignment_html": "rna_references/6bk8_i_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/6bk8_i_vs_act1_mv_679.aligned.fasta"
+              "chain": "e; i",
+              "member": "6bk8:e; 6bk8:i",
+              "alignment_html": "rna_references/6bk8_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/6bk8_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -84809,10 +84797,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "6exn:E",
-              "alignment_html": "rna_references/6exn_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/6exn_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "E; I",
+              "member": "6exn:E; 6exn:I",
+              "alignment_html": "rna_references/6exn_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/6exn_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -84840,10 +84828,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "6exn:I",
-              "alignment_html": "rna_references/6exn_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/6exn_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "E; I",
+              "member": "6exn:E; 6exn:I",
+              "alignment_html": "rna_references/6exn_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/6exn_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -86195,8 +86183,8 @@
             {
               "chain": "G",
               "member": "6icz:G",
-              "alignment_html": "rna_references/6icz_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6icz_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/6icz_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6icz_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -87747,10 +87735,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "6qdv:E",
-              "alignment_html": "rna_references/6qdv_E_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6qdv_E_vs_minx_m3_324.aligned.fasta"
+              "chain": "E; I",
+              "member": "6qdv:E; 6qdv:I",
+              "alignment_html": "rna_references/6qdv_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6qdv_vs_minx_m3_324.aligned.fasta"
             }
           ]
         },
@@ -87778,10 +87766,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "6qdv:I",
-              "alignment_html": "rna_references/6qdv_I_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6qdv_I_vs_minx_m3_324.aligned.fasta"
+              "chain": "E; I",
+              "member": "6qdv:E; 6qdv:I",
+              "alignment_html": "rna_references/6qdv_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6qdv_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -89296,10 +89284,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "E",
-              "member": "9dtr:E",
-              "alignment_html": "rna_references/9dtr_E_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/9dtr_E_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E",
+              "member": "9dtr:I; 9dtr:E",
+              "alignment_html": "rna_references/9dtr_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/9dtr_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         },
@@ -89327,10 +89315,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_UBC4_253-nt_pre-mRNA_ubc4_mv_253.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "I",
-              "member": "9dtr:I",
-              "alignment_html": "rna_references/9dtr_I_vs_ubc4_mv_253.modelled.html",
-              "alignment_fasta": "rna_references/9dtr_I_vs_ubc4_mv_253.aligned.fasta"
+              "chain": "I; E",
+              "member": "9dtr:I; 9dtr:E",
+              "alignment_html": "rna_references/9dtr_vs_ubc4_mv_253.modelled.html",
+              "alignment_fasta": "rna_references/9dtr_vs_ubc4_mv_253.aligned.fasta"
             }
           ]
         }
@@ -90831,10 +90819,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "EX",
-              "member": "9fmd:EX",
-              "alignment_html": "rna_references/9fmd_EX_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/9fmd_EX_vs_minx_m3_324.aligned.fasta"
+              "chain": "EX; IN",
+              "member": "9fmd:EX; 9fmd:IN",
+              "alignment_html": "rna_references/9fmd_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/9fmd_vs_minx_m3_324.aligned.fasta"
             }
           ]
         },
@@ -90862,10 +90850,10 @@
           "reference_projection_table": "rna_references/substrate_type_reference_MINX-M3_324-nt_pre-mRNA_minx_m3_324.reference_to_structure_projection.csv",
           "pairwise_alignments": [
             {
-              "chain": "IN",
-              "member": "9fmd:IN",
-              "alignment_html": "rna_references/9fmd_IN_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/9fmd_IN_vs_minx_m3_324.aligned.fasta"
+              "chain": "EX; IN",
+              "member": "9fmd:EX; 9fmd:IN",
+              "alignment_html": "rna_references/9fmd_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/9fmd_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -97731,8 +97719,8 @@
             {
               "chain": "G",
               "member": "7onb:G",
-              "alignment_html": "rna_references/7onb_G_vs_minx_a3ss_5ss_229.modelled.html",
-              "alignment_fasta": "rna_references/7onb_G_vs_minx_a3ss_5ss_229.aligned.fasta"
+              "alignment_html": "rna_references/7onb_vs_minx_a3ss_5ss_229.modelled.html",
+              "alignment_fasta": "rna_references/7onb_vs_minx_a3ss_5ss_229.aligned.fasta"
             }
           ]
         }
@@ -98290,8 +98278,8 @@
             {
               "chain": "I",
               "member": "7oqb:I",
-              "alignment_html": "rna_references/7oqb_I_vs_act1_mv_679.modelled.html",
-              "alignment_fasta": "rna_references/7oqb_I_vs_act1_mv_679.aligned.fasta"
+              "alignment_html": "rna_references/7oqb_vs_act1_mv_679.modelled.html",
+              "alignment_fasta": "rna_references/7oqb_vs_act1_mv_679.aligned.fasta"
             }
           ]
         }
@@ -114702,8 +114690,8 @@
             {
               "chain": "G",
               "member": "6ah0:G",
-              "alignment_html": "rna_references/6ah0_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/6ah0_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/6ah0_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/6ah0_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -116391,8 +116379,8 @@
             {
               "chain": "I",
               "member": "6qx9:I",
-              "alignment_html": "rna_references/6qx9_I_vs_adml_253.modelled.html",
-              "alignment_fasta": "rna_references/6qx9_I_vs_adml_253.aligned.fasta"
+              "alignment_html": "rna_references/6qx9_vs_adml_253.modelled.html",
+              "alignment_fasta": "rna_references/6qx9_vs_adml_253.aligned.fasta"
             }
           ]
         }
@@ -126053,8 +126041,8 @@
             {
               "chain": "Z",
               "member": "8qxd:Z",
-              "alignment_html": "rna_references/8qxd_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8qxd_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8qxd_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8qxd_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         }
@@ -127632,8 +127620,8 @@
             {
               "chain": "Z",
               "member": "8r08:Z",
-              "alignment_html": "rna_references/8r08_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8r08_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8r08_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8r08_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         },
@@ -129261,8 +129249,8 @@
             {
               "chain": "Z",
               "member": "8r09:Z",
-              "alignment_html": "rna_references/8r09_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8r09_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8r09_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8r09_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         },
@@ -130898,8 +130886,8 @@
             {
               "chain": "Z",
               "member": "8r0a:Z",
-              "alignment_html": "rna_references/8r0a_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8r0a_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8r0a_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8r0a_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         },
@@ -132499,8 +132487,8 @@
             {
               "chain": "Z",
               "member": "8r0b:Z",
-              "alignment_html": "rna_references/8r0b_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8r0b_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8r0b_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8r0b_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         },
@@ -134063,8 +134051,8 @@
             {
               "chain": "Z",
               "member": "8rm5:Z",
-              "alignment_html": "rna_references/8rm5_Z_vs_minx_cross_exon_2024_210.modelled.html",
-              "alignment_fasta": "rna_references/8rm5_Z_vs_minx_cross_exon_2024_210.aligned.fasta"
+              "alignment_html": "rna_references/8rm5_vs_minx_cross_exon_2024_210.modelled.html",
+              "alignment_fasta": "rna_references/8rm5_vs_minx_cross_exon_2024_210.aligned.fasta"
             }
           ]
         },
@@ -136514,8 +136502,8 @@
             {
               "chain": "Z",
               "member": "7aav:Z",
-              "alignment_html": "rna_references/7aav_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7aav_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7aav_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7aav_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -137138,8 +137126,8 @@
             {
               "chain": "Z",
               "member": "7abf:Z",
-              "alignment_html": "rna_references/7abf_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7abf_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7abf_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7abf_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -138432,8 +138420,8 @@
             {
               "chain": "Z",
               "member": "7abg:Z",
-              "alignment_html": "rna_references/7abg_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7abg_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7abg_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7abg_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -139087,8 +139075,8 @@
             {
               "chain": "Z",
               "member": "7abh:Z",
-              "alignment_html": "rna_references/7abh_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7abh_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7abh_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7abh_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -140383,8 +140371,8 @@
             {
               "chain": "Z",
               "member": "7abi:Z",
-              "alignment_html": "rna_references/7abi_Z_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/7abi_Z_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/7abi_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/7abi_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -141725,8 +141713,8 @@
             {
               "chain": "G",
               "member": "8i0p:G",
-              "alignment_html": "rna_references/8i0p_G_vs_minx_m3_324.modelled.html",
-              "alignment_fasta": "rna_references/8i0p_G_vs_minx_m3_324.aligned.fasta"
+              "alignment_html": "rna_references/8i0p_vs_minx_m3_324.modelled.html",
+              "alignment_fasta": "rna_references/8i0p_vs_minx_m3_324.aligned.fasta"
             }
           ]
         }
@@ -142440,8 +142428,8 @@
             {
               "chain": "Z",
               "member": "9r3d:Z",
-              "alignment_html": "rna_references/9r3d_Z_vs_pm5_478.modelled.html",
-              "alignment_fasta": "rna_references/9r3d_Z_vs_pm5_478.aligned.fasta"
+              "alignment_html": "rna_references/9r3d_vs_pm5_478.modelled.html",
+              "alignment_fasta": "rna_references/9r3d_vs_pm5_478.aligned.fasta"
             }
           ]
         }
@@ -143806,8 +143794,8 @@
             {
               "chain": "Z",
               "member": "9r8v:Z",
-              "alignment_html": "rna_references/9r8v_Z_vs_pm5_10_410.modelled.html",
-              "alignment_fasta": "rna_references/9r8v_Z_vs_pm5_10_410.aligned.fasta"
+              "alignment_html": "rna_references/9r8v_vs_pm5_10_410.modelled.html",
+              "alignment_fasta": "rna_references/9r8v_vs_pm5_10_410.aligned.fasta"
             }
           ]
         }
