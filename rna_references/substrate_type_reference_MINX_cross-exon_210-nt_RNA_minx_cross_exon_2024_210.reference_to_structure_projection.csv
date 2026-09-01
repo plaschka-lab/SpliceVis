@@ -1,85 +1,85 @@
-member,pdb_id,chain,feature,label,reference_start,reference_end,query_label_seq_ranges,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
-8qxd:Z,8qxd,Z,intron,upstream intron,1,64,1-15,0.2344,1.0000,1-15,0.2344,partial
-8qxd:Z,8qxd,Z,branch_point_region,branch point region,36,42,8-14,1.0000,1.0000,8-14,1.0000,complete
-8qxd:Z,8qxd,Z,branch_point_adenosine,branch point adenosine,41,41,13,1.0000,1.0000,13,1.0000,complete
-8qxd:Z,8qxd,Z,polypyrimidine_tract,polypyrimidine tract,45,58,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,three_prime_splice_site,upstream 3' splice site,62,64,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,exon_3,exon-defined exon,65,100,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,five_prime_splice_site,downstream 5' splice site,101,106,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,downstream_intron_segment,downstream intron segment,101,116,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,ms2_aptamer,MS2 aptamer 1,117,135,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,ms2_aptamer,MS2 aptamer 2,149,167,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,ms2_aptamer,MS2 aptamer 3,180,198,,0.0000,,,0.0000,absent
-8qxd:Z,8qxd,Z,technical_tail,MS2 cassette tail,199,210,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,intron,upstream intron,1,64,1-15,0.2344,1.0000,1-15,0.2344,partial
-8qzs:Z,8qzs,Z,branch_point_region,branch point region,36,42,8-14,1.0000,1.0000,8-14,1.0000,complete
-8qzs:Z,8qzs,Z,branch_point_adenosine,branch point adenosine,41,41,13,1.0000,1.0000,13,1.0000,complete
-8qzs:Z,8qzs,Z,polypyrimidine_tract,polypyrimidine tract,45,58,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,three_prime_splice_site,upstream 3' splice site,62,64,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,exon_3,exon-defined exon,65,100,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,five_prime_splice_site,downstream 5' splice site,101,106,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,downstream_intron_segment,downstream intron segment,101,116,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,ms2_aptamer,MS2 aptamer 1,117,135,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,ms2_aptamer,MS2 aptamer 2,149,167,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,ms2_aptamer,MS2 aptamer 3,180,198,,0.0000,,,0.0000,absent
-8qzs:Z,8qzs,Z,technical_tail,MS2 cassette tail,199,210,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,intron,upstream intron,1,64,1-15,0.2344,1.0000,1-15,0.2344,partial
-8r08:Z,8r08,Z,branch_point_region,branch point region,36,42,8-14,1.0000,1.0000,8-14,1.0000,complete
-8r08:Z,8r08,Z,branch_point_adenosine,branch point adenosine,41,41,13,1.0000,1.0000,13,1.0000,complete
-8r08:Z,8r08,Z,polypyrimidine_tract,polypyrimidine tract,45,58,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,three_prime_splice_site,upstream 3' splice site,62,64,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,exon_3,exon-defined exon,65,100,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,five_prime_splice_site,downstream 5' splice site,101,106,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,downstream_intron_segment,downstream intron segment,101,116,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,ms2_aptamer,MS2 aptamer 1,117,135,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,ms2_aptamer,MS2 aptamer 2,149,167,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,ms2_aptamer,MS2 aptamer 3,180,198,,0.0000,,,0.0000,absent
-8r08:Z,8r08,Z,technical_tail,MS2 cassette tail,199,210,,0.0000,,,0.0000,absent
-8r09:Z,8r09,Z,intron,upstream intron,1,64,138-201,1.0000,1.0000,166-180,0.2344,complete
-8r09:Z,8r09,Z,branch_point_region,branch point region,36,42,173-179,1.0000,1.0000,173-179,1.0000,complete
-8r09:Z,8r09,Z,branch_point_adenosine,branch point adenosine,41,41,178,1.0000,1.0000,178,1.0000,complete
-8r09:Z,8r09,Z,polypyrimidine_tract,polypyrimidine tract,45,58,182-195,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,three_prime_splice_site,upstream 3' splice site,62,64,199-201,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,exon_3,exon-defined exon,65,100,202-237,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,five_prime_splice_site,downstream 5' splice site,101,106,238-243,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,downstream_intron_segment,downstream intron segment,101,116,238-253,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,ms2_aptamer,MS2 aptamer 1,117,135,254-272,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,ms2_aptamer,MS2 aptamer 2,149,167,286-304,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,ms2_aptamer,MS2 aptamer 3,180,198,317-335,1.0000,1.0000,,0.0000,complete
-8r09:Z,8r09,Z,technical_tail,MS2 cassette tail,199,210,336-347,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,intron,upstream intron,1,64,138-201,1.0000,1.0000,166-180,0.2344,complete
-8r0a:Z,8r0a,Z,branch_point_region,branch point region,36,42,173-179,1.0000,1.0000,173-179,1.0000,complete
-8r0a:Z,8r0a,Z,branch_point_adenosine,branch point adenosine,41,41,178,1.0000,1.0000,178,1.0000,complete
-8r0a:Z,8r0a,Z,polypyrimidine_tract,polypyrimidine tract,45,58,182-195,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,three_prime_splice_site,upstream 3' splice site,62,64,199-201,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,exon_3,exon-defined exon,65,100,202-237,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,five_prime_splice_site,downstream 5' splice site,101,106,238-243,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,downstream_intron_segment,downstream intron segment,101,116,238-253,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,ms2_aptamer,MS2 aptamer 1,117,135,254-272,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,ms2_aptamer,MS2 aptamer 2,149,167,286-304,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,ms2_aptamer,MS2 aptamer 3,180,198,317-335,1.0000,1.0000,,0.0000,complete
-8r0a:Z,8r0a,Z,technical_tail,MS2 cassette tail,199,210,336-347,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,intron,upstream intron,1,64,138-201,1.0000,1.0000,166-180,0.2344,complete
-8r0b:Z,8r0b,Z,branch_point_region,branch point region,36,42,173-179,1.0000,1.0000,173-179,1.0000,complete
-8r0b:Z,8r0b,Z,branch_point_adenosine,branch point adenosine,41,41,178,1.0000,1.0000,178,1.0000,complete
-8r0b:Z,8r0b,Z,polypyrimidine_tract,polypyrimidine tract,45,58,182-195,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,three_prime_splice_site,upstream 3' splice site,62,64,199-201,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,exon_3,exon-defined exon,65,100,202-237,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,five_prime_splice_site,downstream 5' splice site,101,106,238-243,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,downstream_intron_segment,downstream intron segment,101,116,238-253,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,ms2_aptamer,MS2 aptamer 1,117,135,254-272,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,ms2_aptamer,MS2 aptamer 2,149,167,286-304,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,ms2_aptamer,MS2 aptamer 3,180,198,317-335,1.0000,1.0000,,0.0000,complete
-8r0b:Z,8r0b,Z,technical_tail,MS2 cassette tail,199,210,336-347,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,intron,upstream intron,1,64,138-201,1.0000,1.0000,166-180,0.2344,complete
-8rm5:Z,8rm5,Z,branch_point_region,branch point region,36,42,173-179,1.0000,1.0000,173-179,1.0000,complete
-8rm5:Z,8rm5,Z,branch_point_adenosine,branch point adenosine,41,41,178,1.0000,1.0000,178,1.0000,complete
-8rm5:Z,8rm5,Z,polypyrimidine_tract,polypyrimidine tract,45,58,182-195,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,three_prime_splice_site,upstream 3' splice site,62,64,199-201,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,exon_3,exon-defined exon,65,100,202-237,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,five_prime_splice_site,downstream 5' splice site,101,106,238-243,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,downstream_intron_segment,downstream intron segment,101,116,238-253,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,ms2_aptamer,MS2 aptamer 1,117,135,254-272,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,ms2_aptamer,MS2 aptamer 2,149,167,286-304,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,ms2_aptamer,MS2 aptamer 3,180,198,317-335,1.0000,1.0000,,0.0000,complete
-8rm5:Z,8rm5,Z,technical_tail,MS2 cassette tail,199,210,336-347,1.0000,1.0000,,0.0000,complete
+member,pdb_id,chain,feature,label,reference_start,reference_end,reference_feature_sequence,query_label_seq_ranges,projected_query_sequence,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
+8qxd:Z,8qxd,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1-15,GAUGUCAUACUUAUC,0.2344,1.0000,1-15,0.2344,partial
+8qxd:Z,8qxd,Z,branch_point_region,branch point region,36,42,UACUUAU,8-14,UACUUAU,1.0000,1.0000,8-14,1.0000,complete
+8qxd:Z,8qxd,Z,branch_point_adenosine,branch point adenosine,41,41,A,13,A,1.0000,1.0000,13,1.0000,complete
+8qxd:Z,8qxd,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8qxd:Z,8qxd,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1-15,GAUGUCAUACUUAUC,0.2344,1.0000,1-15,0.2344,partial
+8qzs:Z,8qzs,Z,branch_point_region,branch point region,36,42,UACUUAU,8-14,UACUUAU,1.0000,1.0000,8-14,1.0000,complete
+8qzs:Z,8qzs,Z,branch_point_adenosine,branch point adenosine,41,41,A,13,A,1.0000,1.0000,13,1.0000,complete
+8qzs:Z,8qzs,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8qzs:Z,8qzs,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1-15,GAUGUCAUACUUAUC,0.2344,1.0000,1-15,0.2344,partial
+8r08:Z,8r08,Z,branch_point_region,branch point region,36,42,UACUUAU,8-14,UACUUAU,1.0000,1.0000,8-14,1.0000,complete
+8r08:Z,8r08,Z,branch_point_adenosine,branch point adenosine,41,41,A,13,A,1.0000,1.0000,13,1.0000,complete
+8r08:Z,8r08,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,,,0.0000,,,0.0000,absent
+8r08:Z,8r08,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,,,0.0000,,,0.0000,absent
+8r09:Z,8r09,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,138-201,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1.0000,1.0000,166-180,0.2344,complete
+8r09:Z,8r09,Z,branch_point_region,branch point region,36,42,UACUUAU,173-179,UACUUAU,1.0000,1.0000,173-179,1.0000,complete
+8r09:Z,8r09,Z,branch_point_adenosine,branch point adenosine,41,41,A,178,A,1.0000,1.0000,178,1.0000,complete
+8r09:Z,8r09,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,182-195,UGUCCCUUUUUUUU,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,199-201,CAG,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,202-237,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,238-243,GUGGGG,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,238-253,GUGGGGAUCCAAUAUC,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,254-272,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,286-304,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,317-335,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r09:Z,8r09,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,336-347,GAAUUCUCUAGA,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,138-201,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1.0000,1.0000,166-180,0.2344,complete
+8r0a:Z,8r0a,Z,branch_point_region,branch point region,36,42,UACUUAU,173-179,UACUUAU,1.0000,1.0000,173-179,1.0000,complete
+8r0a:Z,8r0a,Z,branch_point_adenosine,branch point adenosine,41,41,A,178,A,1.0000,1.0000,178,1.0000,complete
+8r0a:Z,8r0a,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,182-195,UGUCCCUUUUUUUU,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,199-201,CAG,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,202-237,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,238-243,GUGGGG,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,238-253,GUGGGGAUCCAAUAUC,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,254-272,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,286-304,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,317-335,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r0a:Z,8r0a,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,336-347,GAAUUCUCUAGA,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,138-201,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1.0000,1.0000,166-180,0.2344,complete
+8r0b:Z,8r0b,Z,branch_point_region,branch point region,36,42,UACUUAU,173-179,UACUUAU,1.0000,1.0000,173-179,1.0000,complete
+8r0b:Z,8r0b,Z,branch_point_adenosine,branch point adenosine,41,41,A,178,A,1.0000,1.0000,178,1.0000,complete
+8r0b:Z,8r0b,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,182-195,UGUCCCUUUUUUUU,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,199-201,CAG,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,202-237,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,238-243,GUGGGG,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,238-253,GUGGGGAUCCAAUAUC,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,254-272,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,286-304,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,317-335,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8r0b:Z,8r0b,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,336-347,GAAUUCUCUAGA,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,intron,upstream intron,1,64,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,138-201,GGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1.0000,1.0000,166-180,0.2344,complete
+8rm5:Z,8rm5,Z,branch_point_region,branch point region,36,42,UACUUAU,173-179,UACUUAU,1.0000,1.0000,173-179,1.0000,complete
+8rm5:Z,8rm5,Z,branch_point_adenosine,branch point adenosine,41,41,A,178,A,1.0000,1.0000,178,1.0000,complete
+8rm5:Z,8rm5,Z,polypyrimidine_tract,polypyrimidine tract,45,58,UGUCCCUUUUUUUU,182-195,UGUCCCUUUUUUUU,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,three_prime_splice_site,upstream 3' splice site,62,64,CAG,199-201,CAG,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,exon_3,exon-defined exon,65,100,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,202-237,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCA,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,five_prime_splice_site,downstream 5' splice site,101,106,GUGGGG,238-243,GUGGGG,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,downstream_intron_segment,downstream intron segment,101,116,GUGGGGAUCCAAUAUC,238-253,GUGGGGAUCCAAUAUC,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,ms2_aptamer,MS2 aptamer 1,117,135,CGUACACCAUCAGGGUACG,254-272,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,ms2_aptamer,MS2 aptamer 2,149,167,CGUACACCAUCAGGGUACG,286-304,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,ms2_aptamer,MS2 aptamer 3,180,198,CGUACACCAUCAGGGUACG,317-335,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+8rm5:Z,8rm5,Z,technical_tail,MS2 cassette tail,199,210,GAAUUCUCUAGA,336-347,GAAUUCUCUAGA,1.0000,1.0000,,0.0000,complete

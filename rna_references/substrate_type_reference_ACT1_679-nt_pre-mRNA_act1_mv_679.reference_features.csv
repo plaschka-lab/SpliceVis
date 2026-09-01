@@ -1,0 +1,11 @@
+feature,label,start,end,support_count,member_count,note
+exon_5,5' exon,1,192,,,"feature=exon_5; support=2/6; selected from projected family annotations; members=6j6g:B, 6j6h:B; evidence=manual curation by Matthias Vorländer; confidence=high"
+ms2_aptamer,MS2 aptamer 1,10,28,,,Exact 19-nt MS2 coat-protein aptamer sequence.; evidence=exact MS2 M3 sequence match; confidence=high
+ms2_aptamer,MS2 aptamer 2,42,60,,,Exact 19-nt MS2 coat-protein aptamer sequence.; evidence=exact MS2 M3 sequence match; confidence=high
+ms2_aptamer,MS2 aptamer 3,73,91,,,Exact 19-nt MS2 coat-protein aptamer sequence.; evidence=exact MS2 M3 sequence match; confidence=high
+five_prime_splice_site,5' splice site,193,198,,,"feature=five_prime_splice_site; support=3/6;selected from projected family annotations; members=5lqw:9, 6j6g:B, 6j6h:B; evidence=manual curation by Matthias Vorländer; confidence=high"
+intron,intron,193,501,,,"feature=intron; support=3/6; selected from projected family annotations; members=5lqw:9, 6j6g:B, 6j6h:B; evidence=manual curation by Matthias Vorländer; confidence=high"
+branch_point_region,branch point region,450,460,,,"feature=branch_point_region; support=2/6; selectedfrom projected family annotations; members=6j6g:B, 6j6h:B; evidence=manual curation by Matthias Vorländer; confidence=high"
+branch_point_adenosine,branch point adenosine,458,458,,,feature=branch_point_adenosine; support=3/6;anchored to the unique budding-yeast UACUAAC branch-site consensus; evidence=manual curation by Matthias Vorländer; confidence=high
+three_prime_splice_site,3' SS,499,501,,,evidence=manual curation by Matthias Vorländer; confidence=high
+exon_3,3' exon,502,679,,,evidence=manual curation by Matthias Vorländer; confidence=high

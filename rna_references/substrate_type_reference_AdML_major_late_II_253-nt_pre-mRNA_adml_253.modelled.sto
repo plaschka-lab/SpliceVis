@@ -1,6 +1,6 @@
 # STOCKHOLM 1.0
 #=GF CC MODEL annotation: M=modelled coordinate residue; .=present in sequence record but unresolved; -=alignment gap
-REFERENCE  GAAUAGAAGUAUAGUGCCGUUCUUUUGAGCGGCCUAUUACCCAAGCUUGGCGUUCGUCCUCACUCUCUUCCGCAUCGCUGUCUGCGAGGGCCAGCUGUUGGGGUGAGU----------------------------------------CUGAUCAGCUUGUUGACCAGCUCGGCGGUGACCUGCACGUCUAGGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGU
-6qx9:I     ----------------------------------------------------------------------------------------------------GGGUGAGUACNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGCU-------------------UUCGUGCUGACC----------------------------------------------------------------------------------------------------------------
-#=GR 6qx9:I MODEL ----------------------------------------------------------------------------------------------------MMMMMMMMMM.....................................MMM-------------------MMMMMMMMMMMM----------------------------------------------------------------------------------------------------------------
+REFERENCE  GAAUAGAAGUAUAGUGCCGUUCUUUUGAGCGGCCUAUUACCCAAGCUUGGCGUUCGUCCUCACUCUCUUCCGCAUCGCUGUCUGCGAGGGCCAGCUGUUGGGGUGAGUCUGAUCAGCUUGUUGACCAGCUCGGCGGUGACCUGCACGUCUAGGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGU
+6qx9:I     GGGU--GAGUACNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGCUUUCGUGCUGACC---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#=GR 6qx9:I MODEL MMMM--MMMMMM.....................................MMMMMMMMMMMMMMM---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
