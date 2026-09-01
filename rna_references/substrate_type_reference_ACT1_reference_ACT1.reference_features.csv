@@ -1,0 +1,6 @@
+feature,label,start,end,support_count,member_count,note
+exon_5,5' exon,1,192,2,6,"selected from projected family annotations; members=6j6g:B, 6j6h:B"
+five_prime_splice_site,5' splice site,193,198,3,6,"selected from projected family annotations; members=5lqw:9, 6j6g:B, 6j6h:B"
+intron,intron,193,601,3,6,"selected from projected family annotations; members=5lqw:9, 6j6g:B, 6j6h:B"
+branch_point_region,branch point region,450,460,2,6,"selected from projected family annotations; members=6j6g:B, 6j6h:B"
+branch_point_adenosine,branch point adenosine,458,458,3,6,anchored to the unique budding-yeast UACUAAC branch-site consensus
