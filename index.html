@@ -585,7 +585,9 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       return Number.isFinite(number) ? number.toFixed(1) : String(value);
     }
     async function init(){
-      const response = await fetch("data/structures.json");
+      const response = await fetch("data/structures.json?v=20260901-rna-alignment-v2", {
+        cache: "no-cache",
+      });
       if (!response.ok) throw new Error(`Could not load data/structures.json: ${response.status}`);
       const payload = await response.json();
       DATA.records = payload.records || payload;
