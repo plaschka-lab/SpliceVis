@@ -1,0 +1,31 @@
+member,pdb_id,chain,feature,label,reference_start,reference_end,query_label_seq_ranges,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
+6ff4:Z,6ff4,Z,technical_leader,5' affinity tag and linker,1,116,1-116,1.0000,1.0000,,0.0000,complete
+6ff4:Z,6ff4,Z,ms2_aptamer,MS2 aptamer 1,23,41,23-41,1.0000,1.0000,,0.0000,complete
+6ff4:Z,6ff4,Z,ms2_aptamer,MS2 aptamer 2,55,73,55-73,1.0000,1.0000,,0.0000,complete
+6ff4:Z,6ff4,Z,ms2_aptamer,MS2 aptamer 3,86,104,86-104,1.0000,1.0000,,0.0000,complete
+6ff4:Z,6ff4,Z,exon_5,5' exon,117,242,117-242,1.0000,1.0000,233-242,0.0794,complete
+6ff4:Z,6ff4,Z,five_prime_splice_site,5' splice site,243,248,243-248,1.0000,1.0000,243-248,1.0000,complete
+6ff4:Z,6ff4,Z,intron,intron,243,410,243-410,1.0000,1.0000,"243-262,380-397",0.2262,complete
+6ff4:Z,6ff4,Z,branch_point_region,branch point region,388,394,388-394,1.0000,1.0000,388-394,1.0000,complete
+6ff4:Z,6ff4,Z,branch_point_adenosine,branch point adenosine,394,394,394,1.0000,1.0000,394,1.0000,complete
+6ff4:Z,6ff4,Z,polypyrimidine_tract,10-nt polypyrimidine tract,401,410,401-410,1.0000,1.0000,,0.0000,complete
+6ff7:Z,6ff7,Z,technical_leader,5' affinity tag and linker,1,116,1-116,1.0000,1.0000,,0.0000,complete
+6ff7:Z,6ff7,Z,ms2_aptamer,MS2 aptamer 1,23,41,23-41,1.0000,1.0000,,0.0000,complete
+6ff7:Z,6ff7,Z,ms2_aptamer,MS2 aptamer 2,55,73,55-73,1.0000,1.0000,,0.0000,complete
+6ff7:Z,6ff7,Z,ms2_aptamer,MS2 aptamer 3,86,104,86-104,1.0000,1.0000,,0.0000,complete
+6ff7:Z,6ff7,Z,exon_5,5' exon,117,242,117-242,1.0000,1.0000,233-242,0.0794,complete
+6ff7:Z,6ff7,Z,five_prime_splice_site,5' splice site,243,248,243-248,1.0000,1.0000,243-248,1.0000,complete
+6ff7:Z,6ff7,Z,intron,intron,243,410,243-301,0.3512,1.0000,"243-262,271-288",0.2262,partial
+6ff7:Z,6ff7,Z,branch_point_region,branch point region,388,394,279-285,1.0000,1.0000,279-285,1.0000,complete
+6ff7:Z,6ff7,Z,branch_point_adenosine,branch point adenosine,394,394,285,1.0000,1.0000,285,1.0000,complete
+6ff7:Z,6ff7,Z,polypyrimidine_tract,10-nt polypyrimidine tract,401,410,292-301,1.0000,1.0000,,0.0000,complete
+9r8v:Z,9r8v,Z,technical_leader,5' affinity tag and linker,1,116,1-116,1.0000,1.0000,,0.0000,complete
+9r8v:Z,9r8v,Z,ms2_aptamer,MS2 aptamer 1,23,41,23-41,1.0000,1.0000,,0.0000,complete
+9r8v:Z,9r8v,Z,ms2_aptamer,MS2 aptamer 2,55,73,55-73,1.0000,1.0000,,0.0000,complete
+9r8v:Z,9r8v,Z,ms2_aptamer,MS2 aptamer 3,86,104,86-104,1.0000,1.0000,,0.0000,complete
+9r8v:Z,9r8v,Z,exon_5,5' exon,117,242,117-242,1.0000,1.0000,234-242,0.0714,complete
+9r8v:Z,9r8v,Z,five_prime_splice_site,5' splice site,243,248,243-248,1.0000,1.0000,243-248,1.0000,complete
+9r8v:Z,9r8v,Z,intron,intron,243,410,243-410,1.0000,0.9940,"243-262,382-396",0.2083,complete
+9r8v:Z,9r8v,Z,branch_point_region,branch point region,388,394,388-394,1.0000,1.0000,388-394,1.0000,complete
+9r8v:Z,9r8v,Z,branch_point_adenosine,branch point adenosine,394,394,394,1.0000,1.0000,394,1.0000,complete
+9r8v:Z,9r8v,Z,polypyrimidine_tract,10-nt polypyrimidine tract,401,410,401-410,1.0000,1.0000,,0.0000,complete

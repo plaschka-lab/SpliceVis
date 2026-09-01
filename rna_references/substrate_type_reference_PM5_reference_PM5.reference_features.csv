@@ -1,6 +1,0 @@
-feature,label,start,end,support_count,member_count,note
-exon_5,5' exon,1,242,2,5,"selected from projected family annotations; members=6ff4:Z, 9r8v:Z"
-five_prime_splice_site,5' splice site,243,248,3,5,"selected from projected family annotations; members=6ff4:Z, 8c6j:I, 9r8v:Z"
-intron,intron from 5' splice site,243,478,2,5,"selected from projected family annotations; members=6ff4:Z, 8c6j:I"
-branch_point_region,branch point region,386,395,1,5,selected from projected family annotations; members=6ff7:Z
-branch_point_adenosine,branch point adenosine,394,394,3,5,"selected from projected family annotations; members=6ff4:Z, 6ff7:Z, 9r8v:Z"

@@ -1,0 +1,508 @@
+member,pdb_id,chain,feature,label,reference_start,reference_end,query_label_seq_ranges,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
+5mqf:Y,5mqf,Y,exon_5,5' exon,1,58,1-58,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+5mqf:Y,5mqf,Y,intron,intron,59,178,59-178,1.0000,1.0000,"59-67,135-157",0.2667,complete
+5mqf:Y,5mqf,Y,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+5mqf:Y,5mqf,Y,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+5mqf:Y,5mqf,Y,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+5mqf:Y,5mqf,Y,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,47-58,0.2069,complete
+5mqf:Z,5mqf,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,intron,intron,59,178,59-178,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+5mqf:Z,5mqf,Z,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,exon_5,5' exon,1,58,1-58,1.0000,1.0000,49-58,0.1724,complete
+5o9z:Y,5o9z,Y,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+5o9z:Y,5o9z,Y,intron,intron,59,178,59-178,1.0000,0.9917,"59-75,142-160",0.3000,complete
+5o9z:Y,5o9z,Y,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+5o9z:Y,5o9z,Y,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+5o9z:Y,5o9z,Y,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+5o9z:Y,5o9z,Y,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+5xjc:G,5xjc,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,"39-44,50-61",0.3103,complete
+5xjc:G,5xjc,G,five_prime_splice_site,5' splice site,59,64,63-68,1.0000,1.0000,63-68,1.0000,complete
+5xjc:G,5xjc,G,intron,intron,59,178,"63-106,154-229",1.0000,0.9833,"63-93,178-212",0.5500,complete
+5xjc:G,5xjc,G,branch_point_region,branch point region,150,156,201-207,1.0000,1.0000,201-207,1.0000,complete
+5xjc:G,5xjc,G,branch_point_adenosine,branch point adenosine,155,155,206,1.0000,1.0000,206,1.0000,complete
+5xjc:G,5xjc,G,polypyrimidine_tract,polypyrimidine tract,161,172,212-223,1.0000,1.0000,212,0.0833,complete
+5xjc:G,5xjc,G,three_prime_splice_site,3' splice site,176,178,227-229,1.0000,0.6667,,0.0000,complete
+5xjc:G,5xjc,G,exon_3,3' exon,179,224,230-275,1.0000,1.0000,,0.0000,complete
+5xjc:G,5xjc,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+5xjc:G,5xjc,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+5xjc:G,5xjc,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+5xjc:G,5xjc,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+5xjc:G,5xjc,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+5yzg:G,5yzg,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,"39-44,50-61",0.3103,complete
+5yzg:G,5yzg,G,five_prime_splice_site,5' splice site,59,64,63-68,1.0000,1.0000,63-68,1.0000,complete
+5yzg:G,5yzg,G,intron,intron,59,178,"63-106,154-229",1.0000,0.9833,"63-93,178-216",0.5833,complete
+5yzg:G,5yzg,G,branch_point_region,branch point region,150,156,201-207,1.0000,1.0000,201-207,1.0000,complete
+5yzg:G,5yzg,G,branch_point_adenosine,branch point adenosine,155,155,206,1.0000,1.0000,206,1.0000,complete
+5yzg:G,5yzg,G,polypyrimidine_tract,polypyrimidine tract,161,172,212-223,1.0000,1.0000,212-216,0.4167,complete
+5yzg:G,5yzg,G,three_prime_splice_site,3' splice site,176,178,227-229,1.0000,0.6667,,0.0000,complete
+5yzg:G,5yzg,G,exon_3,3' exon,179,224,230-275,1.0000,1.0000,,0.0000,complete
+5yzg:G,5yzg,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+5yzg:G,5yzg,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+5yzg:G,5yzg,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+5yzg:G,5yzg,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+5yzg:G,5yzg,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+5z56:G,5z56,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,50-61,0.2069,complete
+5z56:G,5z56,G,five_prime_splice_site,5' splice site,59,64,62-67,1.0000,1.0000,62-67,1.0000,complete
+5z56:G,5z56,G,intron,intron,59,178,"62-105,153-228",1.0000,0.9833,"62-92,191-224",0.5417,complete
+5z56:G,5z56,G,branch_point_region,branch point region,150,156,200-206,1.0000,1.0000,200-206,1.0000,complete
+5z56:G,5z56,G,branch_point_adenosine,branch point adenosine,155,155,205,1.0000,1.0000,205,1.0000,complete
+5z56:G,5z56,G,polypyrimidine_tract,polypyrimidine tract,161,172,211-222,1.0000,1.0000,211-222,1.0000,complete
+5z56:G,5z56,G,three_prime_splice_site,3' splice site,176,178,226-228,1.0000,0.6667,,0.0000,complete
+5z56:G,5z56,G,exon_3,3' exon,179,224,229-274,1.0000,1.0000,,0.0000,complete
+5z56:G,5z56,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+5z56:G,5z56,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+5z56:G,5z56,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+5z56:G,5z56,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+5z56:G,5z56,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+5z57:G,5z57,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,50-61,0.2069,complete
+5z57:G,5z57,G,five_prime_splice_site,5' splice site,59,64,62-67,1.0000,1.0000,62-67,1.0000,complete
+5z57:G,5z57,G,intron,intron,59,178,"62-105,153-228",1.0000,0.9833,"62-92,191-224",0.5417,complete
+5z57:G,5z57,G,branch_point_region,branch point region,150,156,200-206,1.0000,1.0000,200-206,1.0000,complete
+5z57:G,5z57,G,branch_point_adenosine,branch point adenosine,155,155,205,1.0000,1.0000,205,1.0000,complete
+5z57:G,5z57,G,polypyrimidine_tract,polypyrimidine tract,161,172,211-222,1.0000,1.0000,211-222,1.0000,complete
+5z57:G,5z57,G,three_prime_splice_site,3' splice site,176,178,226-228,1.0000,0.6667,,0.0000,complete
+5z57:G,5z57,G,exon_3,3' exon,179,224,229-274,1.0000,1.0000,,0.0000,complete
+5z57:G,5z57,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+5z57:G,5z57,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+5z57:G,5z57,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+5z57:G,5z57,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+5z57:G,5z57,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+5z58:G,5z58,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,50-61,0.2069,complete
+5z58:G,5z58,G,five_prime_splice_site,5' splice site,59,64,62-67,1.0000,1.0000,62-67,1.0000,complete
+5z58:G,5z58,G,intron,intron,59,178,"62-105,153-228",1.0000,0.9833,"62-92,191-224",0.5417,complete
+5z58:G,5z58,G,branch_point_region,branch point region,150,156,200-206,1.0000,1.0000,200-206,1.0000,complete
+5z58:G,5z58,G,branch_point_adenosine,branch point adenosine,155,155,205,1.0000,1.0000,205,1.0000,complete
+5z58:G,5z58,G,polypyrimidine_tract,polypyrimidine tract,161,172,211-222,1.0000,1.0000,211-222,1.0000,complete
+5z58:G,5z58,G,three_prime_splice_site,3' splice site,176,178,226-228,1.0000,0.6667,,0.0000,complete
+5z58:G,5z58,G,exon_3,3' exon,179,224,229-274,1.0000,1.0000,,0.0000,complete
+5z58:G,5z58,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+5z58:G,5z58,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+5z58:G,5z58,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+5z58:G,5z58,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+5z58:G,5z58,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6ah0:G,6ah0,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,,0.0000,complete
+6ah0:G,6ah0,G,five_prime_splice_site,5' splice site,59,64,62-67,1.0000,1.0000,,0.0000,complete
+6ah0:G,6ah0,G,intron,intron,59,178,"62-105,153-228",1.0000,0.9833,183-224,0.3500,complete
+6ah0:G,6ah0,G,branch_point_region,branch point region,150,156,200-206,1.0000,1.0000,200-206,1.0000,complete
+6ah0:G,6ah0,G,branch_point_adenosine,branch point adenosine,155,155,205,1.0000,1.0000,205,1.0000,complete
+6ah0:G,6ah0,G,polypyrimidine_tract,polypyrimidine tract,161,172,211-222,1.0000,1.0000,211-222,1.0000,complete
+6ah0:G,6ah0,G,three_prime_splice_site,3' splice site,176,178,226-228,1.0000,0.6667,,0.0000,complete
+6ah0:G,6ah0,G,exon_3,3' exon,179,224,229-274,1.0000,1.0000,,0.0000,complete
+6ah0:G,6ah0,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6ah0:G,6ah0,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6ah0:G,6ah0,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6ah0:G,6ah0,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6ah0:G,6ah0,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6ahd:G,6ahd,G,exon_5,5' exon,1,58,"1-3,7-61",1.0000,0.9828,50-61,0.2069,complete
+6ahd:G,6ahd,G,five_prime_splice_site,5' splice site,59,64,62-67,1.0000,1.0000,62-67,1.0000,complete
+6ahd:G,6ahd,G,intron,intron,59,178,"62-105,153-228",1.0000,0.9833,"62-84,183-224",0.5417,complete
+6ahd:G,6ahd,G,branch_point_region,branch point region,150,156,200-206,1.0000,1.0000,200-206,1.0000,complete
+6ahd:G,6ahd,G,branch_point_adenosine,branch point adenosine,155,155,205,1.0000,1.0000,205,1.0000,complete
+6ahd:G,6ahd,G,polypyrimidine_tract,polypyrimidine tract,161,172,211-222,1.0000,1.0000,211-222,1.0000,complete
+6ahd:G,6ahd,G,three_prime_splice_site,3' splice site,176,178,226-228,1.0000,0.6667,,0.0000,complete
+6ahd:G,6ahd,G,exon_3,3' exon,179,224,229-274,1.0000,1.0000,,0.0000,complete
+6ahd:G,6ahd,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6ahd:G,6ahd,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6ahd:G,6ahd,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6ahd:G,6ahd,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6ahd:G,6ahd,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6icz:G,6icz,G,exon_5,5' exon,1,58,"1,3-59",1.0000,0.9483,48-59,0.2069,complete
+6icz:G,6icz,G,five_prime_splice_site,5' splice site,59,64,61-66,1.0000,1.0000,61-66,1.0000,complete
+6icz:G,6icz,G,intron,intron,59,178,"61-104,152-227",1.0000,0.9917,"61-91,176-210,222-227",0.6000,complete
+6icz:G,6icz,G,branch_point_region,branch point region,150,156,199-205,1.0000,1.0000,199-205,1.0000,complete
+6icz:G,6icz,G,branch_point_adenosine,branch point adenosine,155,155,204,1.0000,1.0000,204,1.0000,complete
+6icz:G,6icz,G,polypyrimidine_tract,polypyrimidine tract,161,172,210-221,1.0000,1.0000,210,0.0833,complete
+6icz:G,6icz,G,three_prime_splice_site,3' splice site,176,178,225-227,1.0000,1.0000,225-227,1.0000,complete
+6icz:G,6icz,G,exon_3,3' exon,179,224,228-273,1.0000,1.0000,,0.0000,complete
+6icz:G,6icz,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6icz:G,6icz,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6icz:G,6icz,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6icz:G,6icz,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6icz:G,6icz,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6id0:G,6id0,G,exon_5,5' exon,1,58,"1,3-59",1.0000,0.9483,,0.0000,complete
+6id0:G,6id0,G,five_prime_splice_site,5' splice site,59,64,60-65,1.0000,1.0000,60-65,1.0000,complete
+6id0:G,6id0,G,intron,intron,59,178,"60-103,151-226",1.0000,0.9917,"60-90,175-213",0.5833,complete
+6id0:G,6id0,G,branch_point_region,branch point region,150,156,198-204,1.0000,1.0000,198-204,1.0000,complete
+6id0:G,6id0,G,branch_point_adenosine,branch point adenosine,155,155,203,1.0000,1.0000,203,1.0000,complete
+6id0:G,6id0,G,polypyrimidine_tract,polypyrimidine tract,161,172,209-220,1.0000,1.0000,209-213,0.4167,complete
+6id0:G,6id0,G,three_prime_splice_site,3' splice site,176,178,224-226,1.0000,1.0000,,0.0000,complete
+6id0:G,6id0,G,exon_3,3' exon,179,224,227-272,1.0000,1.0000,,0.0000,complete
+6id0:G,6id0,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6id0:G,6id0,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6id0:G,6id0,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6id0:G,6id0,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6id0:G,6id0,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6id1:G,6id1,G,exon_5,5' exon,1,58,"1,3-59",1.0000,0.9483,,0.0000,complete
+6id1:G,6id1,G,five_prime_splice_site,5' splice site,59,64,60-65,1.0000,1.0000,60-65,1.0000,complete
+6id1:G,6id1,G,intron,intron,59,178,"60-103,151-226",1.0000,0.9917,"60-89,177-214",0.5667,complete
+6id1:G,6id1,G,branch_point_region,branch point region,150,156,198-204,1.0000,1.0000,198-204,1.0000,complete
+6id1:G,6id1,G,branch_point_adenosine,branch point adenosine,155,155,203,1.0000,1.0000,203,1.0000,complete
+6id1:G,6id1,G,polypyrimidine_tract,polypyrimidine tract,161,172,209-220,1.0000,1.0000,209-214,0.5000,complete
+6id1:G,6id1,G,three_prime_splice_site,3' splice site,176,178,224-226,1.0000,1.0000,,0.0000,complete
+6id1:G,6id1,G,exon_3,3' exon,179,224,227-272,1.0000,1.0000,,0.0000,complete
+6id1:G,6id1,G,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6id1:G,6id1,G,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6id1:G,6id1,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6id1:G,6id1,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6id1:G,6id1,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,exon_5,5' exon,1,58,1-12,0.2069,1.0000,1-12,0.2069,partial
+6qdv:E,6qdv,E,five_prime_splice_site,5' splice site,59,64,13-14,0.3333,0.5000,13-14,0.3333,partial
+6qdv:E,6qdv,E,intron,intron,59,178,13-14,0.0167,0.5000,13-14,0.0167,partial
+6qdv:E,6qdv,E,branch_point_region,branch point region,150,156,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,branch_point_adenosine,branch point adenosine,155,155,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,polypyrimidine_tract,polypyrimidine tract,161,172,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,three_prime_splice_site,3' splice site,176,178,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,exon_3,3' exon,179,224,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6qdv:E,6qdv,E,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,exon_5,5' exon,1,58,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,five_prime_splice_site,5' splice site,59,64,1-6,1.0000,1.0000,1-6,1.0000,complete
+6qdv:I,6qdv,I,intron,intron,59,178,"1-21,81-101,113",0.3583,0.9767,"1-20,83-101,113",0.3333,partial
+6qdv:I,6qdv,I,branch_point_region,branch point region,150,156,92-98,1.0000,1.0000,92-98,1.0000,complete
+6qdv:I,6qdv,I,branch_point_adenosine,branch point adenosine,155,155,97,1.0000,1.0000,97,1.0000,complete
+6qdv:I,6qdv,I,polypyrimidine_tract,polypyrimidine tract,161,172,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,three_prime_splice_site,3' splice site,176,178,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,exon_3,3' exon,179,224,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+6qdv:I,6qdv,I,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+6zym:Y,6zym,Y,exon_5,5' exon,1,58,1-58,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+6zym:Y,6zym,Y,intron,intron,59,178,59-178,1.0000,0.9917,"59-79,141-160",0.3417,complete
+6zym:Y,6zym,Y,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+6zym:Y,6zym,Y,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+6zym:Y,6zym,Y,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+6zym:Y,6zym,Y,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,46-58,0.2241,complete
+6zym:Z,6zym,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,intron,intron,59,178,59-178,1.0000,0.9917,,0.0000,complete
+6zym:Z,6zym,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+6zym:Z,6zym,Z,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,exon_5,5' exon,1,58,1-58,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,intron,intron,59,178,59-178,1.0000,0.9917,"80-94,127-140",0.2417,complete
+7a5p:Y,7a5p,Y,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+7a5p:Y,7a5p,Y,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+7aav:Z,7aav,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,50-58,0.1552,complete
+7aav:Z,7aav,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+7aav:Z,7aav,Z,intron,intron,59,178,59-178,1.0000,0.9917,59-78,0.1667,complete
+7aav:Z,7aav,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,,0.0000,complete
+7aav:Z,7aav,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,,0.0000,complete
+7aav:Z,7aav,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+7aav:Z,7aav,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7aav:Z,7aav,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7aav:Z,7aav,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+7aav:Z,7aav,Z,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+7aav:Z,7aav,Z,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7aav:Z,7aav,Z,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7aav:Z,7aav,Z,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+7abf:Z,7abf,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,50-58,0.1552,complete
+7abf:Z,7abf,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+7abf:Z,7abf,Z,intron,intron,59,178,59-178,1.0000,0.9917,59-78,0.1667,complete
+7abf:Z,7abf,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,,0.0000,complete
+7abf:Z,7abf,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,,0.0000,complete
+7abf:Z,7abf,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+7abf:Z,7abf,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7abf:Z,7abf,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7abf:Z,7abf,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+7abf:Z,7abf,Z,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+7abf:Z,7abf,Z,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7abf:Z,7abf,Z,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7abf:Z,7abf,Z,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+7abg:Z,7abg,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,50-58,0.1552,complete
+7abg:Z,7abg,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+7abg:Z,7abg,Z,intron,intron,59,178,59-178,1.0000,0.9917,"59-78,141-158",0.3167,complete
+7abg:Z,7abg,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+7abg:Z,7abg,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+7abg:Z,7abg,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,,0.0000,complete
+7abg:Z,7abg,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7abg:Z,7abg,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7abg:Z,7abg,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+7abg:Z,7abg,Z,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+7abg:Z,7abg,Z,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7abg:Z,7abg,Z,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7abg:Z,7abg,Z,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+7abh:Z,7abh,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,,0.0000,complete
+7abh:Z,7abh,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,,0.0000,complete
+7abh:Z,7abh,Z,intron,intron,59,178,59-178,1.0000,0.9917,141-168,0.2333,complete
+7abh:Z,7abh,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+7abh:Z,7abh,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+7abh:Z,7abh,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,161-168,0.6667,complete
+7abh:Z,7abh,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7abh:Z,7abh,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7abh:Z,7abh,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+7abh:Z,7abh,Z,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+7abh:Z,7abh,Z,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7abh:Z,7abh,Z,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7abh:Z,7abh,Z,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+7abi:Z,7abi,Z,exon_5,5' exon,1,58,1-58,1.0000,1.0000,50-58,0.1552,complete
+7abi:Z,7abi,Z,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+7abi:Z,7abi,Z,intron,intron,59,178,59-178,1.0000,0.9917,"59-78,141-168",0.4000,complete
+7abi:Z,7abi,Z,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+7abi:Z,7abi,Z,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+7abi:Z,7abi,Z,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,161-168,0.6667,complete
+7abi:Z,7abi,Z,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7abi:Z,7abi,Z,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7abi:Z,7abi,Z,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+7abi:Z,7abi,Z,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+7abi:Z,7abi,Z,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+7abi:Z,7abi,Z,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+7abi:Z,7abi,Z,technical_tail,MS2 cassette tail,313,324,313-324,1.0000,1.0000,,0.0000,complete
+7qtt:g,7qtt,g,exon_5,5' exon,1,58,1-58,1.0000,1.0000,45-58,0.2414,complete
+7qtt:g,7qtt,g,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+7qtt:g,7qtt,g,intron,intron,59,178,59-178,1.0000,0.9917,"59-85,141-175",0.5167,complete
+7qtt:g,7qtt,g,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+7qtt:g,7qtt,g,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+7qtt:g,7qtt,g,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,161-172,1.0000,complete
+7qtt:g,7qtt,g,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+7qtt:g,7qtt,g,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+7qtt:g,7qtt,g,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+7qtt:g,7qtt,g,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+7qtt:g,7qtt,g,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+7qtt:g,7qtt,g,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+7qtt:g,7qtt,g,technical_tail,MS2 cassette tail,313,324,313-319,0.5833,1.0000,,0.0000,partial
+7w59:G,7w59,G,exon_5,5' exon,1,58,,0.0000,,,0.0000,absent
+7w59:G,7w59,G,five_prime_splice_site,5' splice site,59,64,1-6,1.0000,1.0000,1-6,1.0000,complete
+7w59:G,7w59,G,intron,intron,59,178,1-120,1.0000,0.9917,"1-31,69-103,117-120",0.5833,complete
+7w59:G,7w59,G,branch_point_region,branch point region,150,156,92-98,1.0000,1.0000,92-98,1.0000,complete
+7w59:G,7w59,G,branch_point_adenosine,branch point adenosine,155,155,97,1.0000,1.0000,97,1.0000,complete
+7w59:G,7w59,G,polypyrimidine_tract,polypyrimidine tract,161,172,103-114,1.0000,1.0000,103,0.0833,complete
+7w59:G,7w59,G,three_prime_splice_site,3' splice site,176,178,118-120,1.0000,1.0000,118-120,1.0000,complete
+7w59:G,7w59,G,exon_3,3' exon,179,224,121-166,1.0000,1.0000,121-132,0.2609,complete
+7w59:G,7w59,G,technical_linker,MS2 cassette linker,225,230,167-172,1.0000,1.0000,,0.0000,complete
+7w59:G,7w59,G,ms2_aptamer,MS2 aptamer 1,231,249,173-174,0.1053,1.0000,,0.0000,partial
+7w59:G,7w59,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7w59:G,7w59,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7w59:G,7w59,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+7w5a:G,7w5a,G,exon_5,5' exon,1,58,,0.0000,,,0.0000,absent
+7w5a:G,7w5a,G,five_prime_splice_site,5' splice site,59,64,1-6,1.0000,1.0000,1-6,1.0000,complete
+7w5a:G,7w5a,G,intron,intron,59,178,1-120,1.0000,0.9917,"1-31,69-103,117-120",0.5833,complete
+7w5a:G,7w5a,G,branch_point_region,branch point region,150,156,92-98,1.0000,1.0000,92-98,1.0000,complete
+7w5a:G,7w5a,G,branch_point_adenosine,branch point adenosine,155,155,97,1.0000,1.0000,97,1.0000,complete
+7w5a:G,7w5a,G,polypyrimidine_tract,polypyrimidine tract,161,172,103-114,1.0000,1.0000,103,0.0833,complete
+7w5a:G,7w5a,G,three_prime_splice_site,3' splice site,176,178,118-120,1.0000,1.0000,118-120,1.0000,complete
+7w5a:G,7w5a,G,exon_3,3' exon,179,224,121-166,1.0000,1.0000,121-132,0.2609,complete
+7w5a:G,7w5a,G,technical_linker,MS2 cassette linker,225,230,167-172,1.0000,1.0000,,0.0000,complete
+7w5a:G,7w5a,G,ms2_aptamer,MS2 aptamer 1,231,249,173-174,0.1053,1.0000,,0.0000,partial
+7w5a:G,7w5a,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7w5a:G,7w5a,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7w5a:G,7w5a,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+7w5b:G,7w5b,G,exon_5,5' exon,1,58,,0.0000,,,0.0000,absent
+7w5b:G,7w5b,G,five_prime_splice_site,5' splice site,59,64,1-6,1.0000,1.0000,1-6,1.0000,complete
+7w5b:G,7w5b,G,intron,intron,59,178,1-120,1.0000,0.9917,"1-31,69-103,117-120",0.5833,complete
+7w5b:G,7w5b,G,branch_point_region,branch point region,150,156,92-98,1.0000,1.0000,92-98,1.0000,complete
+7w5b:G,7w5b,G,branch_point_adenosine,branch point adenosine,155,155,97,1.0000,1.0000,97,1.0000,complete
+7w5b:G,7w5b,G,polypyrimidine_tract,polypyrimidine tract,161,172,103-114,1.0000,1.0000,103,0.0833,complete
+7w5b:G,7w5b,G,three_prime_splice_site,3' splice site,176,178,118-120,1.0000,1.0000,118-120,1.0000,complete
+7w5b:G,7w5b,G,exon_3,3' exon,179,224,121-166,1.0000,1.0000,121-132,0.2609,complete
+7w5b:G,7w5b,G,technical_linker,MS2 cassette linker,225,230,167-172,1.0000,1.0000,,0.0000,complete
+7w5b:G,7w5b,G,ms2_aptamer,MS2 aptamer 1,231,249,173-174,0.1053,1.0000,,0.0000,partial
+7w5b:G,7w5b,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+7w5b:G,7w5b,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+7w5b:G,7w5b,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8ch6:g,8ch6,g,exon_5,5' exon,1,58,1-58,1.0000,1.0000,45-58,0.2414,complete
+8ch6:g,8ch6,g,five_prime_splice_site,5' splice site,59,64,59-64,1.0000,1.0000,59-64,1.0000,complete
+8ch6:g,8ch6,g,intron,intron,59,178,59-178,1.0000,0.9917,"59-85,141-175",0.5167,complete
+8ch6:g,8ch6,g,branch_point_region,branch point region,150,156,150-156,1.0000,1.0000,150-156,1.0000,complete
+8ch6:g,8ch6,g,branch_point_adenosine,branch point adenosine,155,155,155,1.0000,1.0000,155,1.0000,complete
+8ch6:g,8ch6,g,polypyrimidine_tract,polypyrimidine tract,161,172,161-172,1.0000,1.0000,161-172,1.0000,complete
+8ch6:g,8ch6,g,three_prime_splice_site,3' splice site,176,178,176-178,1.0000,1.0000,,0.0000,complete
+8ch6:g,8ch6,g,exon_3,3' exon,179,224,179-224,1.0000,1.0000,,0.0000,complete
+8ch6:g,8ch6,g,technical_linker,MS2 cassette linker,225,230,225-230,1.0000,0.8333,,0.0000,complete
+8ch6:g,8ch6,g,ms2_aptamer,MS2 aptamer 1,231,249,231-249,1.0000,1.0000,,0.0000,complete
+8ch6:g,8ch6,g,ms2_aptamer,MS2 aptamer 2,263,281,263-281,1.0000,1.0000,,0.0000,complete
+8ch6:g,8ch6,g,ms2_aptamer,MS2 aptamer 3,294,312,294-312,1.0000,1.0000,,0.0000,complete
+8ch6:g,8ch6,g,technical_tail,MS2 cassette tail,313,324,313-319,0.5833,1.0000,,0.0000,partial
+8i0p:G,8i0p,G,exon_5,5' exon,1,58,1-46,0.7931,0.9565,38-46,0.1552,partial
+8i0p:G,8i0p,G,five_prime_splice_site,5' splice site,59,64,47-52,1.0000,1.0000,47-52,1.0000,complete
+8i0p:G,8i0p,G,intron,intron,59,178,47-166,1.0000,0.9917,"47-66,129-162",0.4500,complete
+8i0p:G,8i0p,G,branch_point_region,branch point region,150,156,138-144,1.0000,1.0000,138-144,1.0000,complete
+8i0p:G,8i0p,G,branch_point_adenosine,branch point adenosine,155,155,143,1.0000,1.0000,143,1.0000,complete
+8i0p:G,8i0p,G,polypyrimidine_tract,polypyrimidine tract,161,172,149-160,1.0000,1.0000,149-160,1.0000,complete
+8i0p:G,8i0p,G,three_prime_splice_site,3' splice site,176,178,164-166,1.0000,1.0000,,0.0000,complete
+8i0p:G,8i0p,G,exon_3,3' exon,179,224,167-212,1.0000,1.0000,,0.0000,complete
+8i0p:G,8i0p,G,technical_linker,MS2 cassette linker,225,230,213-218,1.0000,1.0000,,0.0000,complete
+8i0p:G,8i0p,G,ms2_aptamer,MS2 aptamer 1,231,249,219-220,0.1053,1.0000,,0.0000,partial
+8i0p:G,8i0p,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0p:G,8i0p,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0p:G,8i0p,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8i0r:G,8i0r,G,exon_5,5' exon,1,58,1-46,0.7931,0.9565,34-46,0.2241,partial
+8i0r:G,8i0r,G,five_prime_splice_site,5' splice site,59,64,47-52,1.0000,1.0000,47-52,1.0000,complete
+8i0r:G,8i0r,G,intron,intron,59,178,47-166,1.0000,0.9917,"47-70,129-162",0.4833,complete
+8i0r:G,8i0r,G,branch_point_region,branch point region,150,156,138-144,1.0000,1.0000,138-144,1.0000,complete
+8i0r:G,8i0r,G,branch_point_adenosine,branch point adenosine,155,155,143,1.0000,1.0000,143,1.0000,complete
+8i0r:G,8i0r,G,polypyrimidine_tract,polypyrimidine tract,161,172,149-160,1.0000,1.0000,149-160,1.0000,complete
+8i0r:G,8i0r,G,three_prime_splice_site,3' splice site,176,178,164-166,1.0000,1.0000,,0.0000,complete
+8i0r:G,8i0r,G,exon_3,3' exon,179,224,167-212,1.0000,1.0000,,0.0000,complete
+8i0r:G,8i0r,G,technical_linker,MS2 cassette linker,225,230,213-218,1.0000,1.0000,,0.0000,complete
+8i0r:G,8i0r,G,ms2_aptamer,MS2 aptamer 1,231,249,219-220,0.1053,1.0000,,0.0000,partial
+8i0r:G,8i0r,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0r:G,8i0r,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0r:G,8i0r,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8i0s:G,8i0s,G,exon_5,5' exon,1,58,1-46,0.7931,0.9565,34-46,0.2241,partial
+8i0s:G,8i0s,G,five_prime_splice_site,5' splice site,59,64,47-52,1.0000,1.0000,47-52,1.0000,complete
+8i0s:G,8i0s,G,intron,intron,59,178,47-166,1.0000,0.9917,"47-70,129-163",0.4917,complete
+8i0s:G,8i0s,G,branch_point_region,branch point region,150,156,138-144,1.0000,1.0000,138-144,1.0000,complete
+8i0s:G,8i0s,G,branch_point_adenosine,branch point adenosine,155,155,143,1.0000,1.0000,143,1.0000,complete
+8i0s:G,8i0s,G,polypyrimidine_tract,polypyrimidine tract,161,172,149-160,1.0000,1.0000,149-160,1.0000,complete
+8i0s:G,8i0s,G,three_prime_splice_site,3' splice site,176,178,164-166,1.0000,1.0000,,0.0000,complete
+8i0s:G,8i0s,G,exon_3,3' exon,179,224,167-212,1.0000,1.0000,,0.0000,complete
+8i0s:G,8i0s,G,technical_linker,MS2 cassette linker,225,230,213-218,1.0000,1.0000,,0.0000,complete
+8i0s:G,8i0s,G,ms2_aptamer,MS2 aptamer 1,231,249,219-220,0.1053,1.0000,,0.0000,partial
+8i0s:G,8i0s,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0s:G,8i0s,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0s:G,8i0s,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8i0t:G,8i0t,G,exon_5,5' exon,1,58,1-46,0.7931,0.9565,34-46,0.2241,partial
+8i0t:G,8i0t,G,five_prime_splice_site,5' splice site,59,64,47-52,1.0000,1.0000,47-52,1.0000,complete
+8i0t:G,8i0t,G,intron,intron,59,178,47-166,1.0000,0.9917,"47-70,129-163",0.4917,complete
+8i0t:G,8i0t,G,branch_point_region,branch point region,150,156,138-144,1.0000,1.0000,138-144,1.0000,complete
+8i0t:G,8i0t,G,branch_point_adenosine,branch point adenosine,155,155,143,1.0000,1.0000,143,1.0000,complete
+8i0t:G,8i0t,G,polypyrimidine_tract,polypyrimidine tract,161,172,149-160,1.0000,1.0000,149-160,1.0000,complete
+8i0t:G,8i0t,G,three_prime_splice_site,3' splice site,176,178,164-166,1.0000,1.0000,,0.0000,complete
+8i0t:G,8i0t,G,exon_3,3' exon,179,224,167-212,1.0000,1.0000,,0.0000,complete
+8i0t:G,8i0t,G,technical_linker,MS2 cassette linker,225,230,213-218,1.0000,1.0000,,0.0000,complete
+8i0t:G,8i0t,G,ms2_aptamer,MS2 aptamer 1,231,249,219-220,0.1053,1.0000,,0.0000,partial
+8i0t:G,8i0t,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0t:G,8i0t,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0t:G,8i0t,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8i0u:G,8i0u,G,exon_5,5' exon,1,58,1-46,0.7931,0.9565,34-46,0.2241,partial
+8i0u:G,8i0u,G,five_prime_splice_site,5' splice site,59,64,47-52,1.0000,1.0000,47-52,1.0000,complete
+8i0u:G,8i0u,G,intron,intron,59,178,47-166,1.0000,0.9917,"47-77,129-163",0.5500,complete
+8i0u:G,8i0u,G,branch_point_region,branch point region,150,156,138-144,1.0000,1.0000,138-144,1.0000,complete
+8i0u:G,8i0u,G,branch_point_adenosine,branch point adenosine,155,155,143,1.0000,1.0000,143,1.0000,complete
+8i0u:G,8i0u,G,polypyrimidine_tract,polypyrimidine tract,161,172,149-160,1.0000,1.0000,149-160,1.0000,complete
+8i0u:G,8i0u,G,three_prime_splice_site,3' splice site,176,178,164-166,1.0000,1.0000,,0.0000,complete
+8i0u:G,8i0u,G,exon_3,3' exon,179,224,167-212,1.0000,1.0000,,0.0000,complete
+8i0u:G,8i0u,G,technical_linker,MS2 cassette linker,225,230,213-218,1.0000,1.0000,,0.0000,complete
+8i0u:G,8i0u,G,ms2_aptamer,MS2 aptamer 1,231,249,219-220,0.1053,1.0000,,0.0000,partial
+8i0u:G,8i0u,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0u:G,8i0u,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0u:G,8i0u,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8i0v:G,8i0v,G,exon_5,5' exon,1,58,1-46,0.7931,0.9565,34-46,0.2241,partial
+8i0v:G,8i0v,G,five_prime_splice_site,5' splice site,59,64,47-52,1.0000,1.0000,47-52,1.0000,complete
+8i0v:G,8i0v,G,intron,intron,59,178,47-166,1.0000,0.9917,"47-77,129-163",0.5500,complete
+8i0v:G,8i0v,G,branch_point_region,branch point region,150,156,138-144,1.0000,1.0000,138-144,1.0000,complete
+8i0v:G,8i0v,G,branch_point_adenosine,branch point adenosine,155,155,143,1.0000,1.0000,143,1.0000,complete
+8i0v:G,8i0v,G,polypyrimidine_tract,polypyrimidine tract,161,172,149-160,1.0000,1.0000,149-160,1.0000,complete
+8i0v:G,8i0v,G,three_prime_splice_site,3' splice site,176,178,164-166,1.0000,1.0000,,0.0000,complete
+8i0v:G,8i0v,G,exon_3,3' exon,179,224,167-212,1.0000,1.0000,,0.0000,complete
+8i0v:G,8i0v,G,technical_linker,MS2 cassette linker,225,230,213-218,1.0000,1.0000,,0.0000,complete
+8i0v:G,8i0v,G,ms2_aptamer,MS2 aptamer 1,231,249,219-220,0.1053,1.0000,,0.0000,partial
+8i0v:G,8i0v,G,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0v:G,8i0v,G,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0v:G,8i0v,G,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8i0w:6,8i0w,6,exon_5,5' exon,1,58,,0.0000,,,0.0000,absent
+8i0w:6,8i0w,6,five_prime_splice_site,5' splice site,59,64,1-6,1.0000,1.0000,1-6,1.0000,complete
+8i0w:6,8i0w,6,intron,intron,59,178,1-120,1.0000,0.9917,"1-31,69-107",0.5833,complete
+8i0w:6,8i0w,6,branch_point_region,branch point region,150,156,92-98,1.0000,1.0000,92-98,1.0000,complete
+8i0w:6,8i0w,6,branch_point_adenosine,branch point adenosine,155,155,97,1.0000,1.0000,97,1.0000,complete
+8i0w:6,8i0w,6,polypyrimidine_tract,polypyrimidine tract,161,172,103-114,1.0000,1.0000,103-107,0.4167,complete
+8i0w:6,8i0w,6,three_prime_splice_site,3' splice site,176,178,118-120,1.0000,1.0000,,0.0000,complete
+8i0w:6,8i0w,6,exon_3,3' exon,179,224,121-166,1.0000,1.0000,,0.0000,complete
+8i0w:6,8i0w,6,technical_linker,MS2 cassette linker,225,230,167-172,1.0000,1.0000,,0.0000,complete
+8i0w:6,8i0w,6,ms2_aptamer,MS2 aptamer 1,231,249,173-174,0.1053,1.0000,,0.0000,partial
+8i0w:6,8i0w,6,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+8i0w:6,8i0w,6,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+8i0w:6,8i0w,6,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+8q7n:Z,8q7n,Z,exon_5,5' exon,1,58,24-81,1.0000,1.0000,72-81,0.1724,complete
+8q7n:Z,8q7n,Z,five_prime_splice_site,5' splice site,59,64,82-87,1.0000,1.0000,82-87,1.0000,complete
+8q7n:Z,8q7n,Z,intron,intron,59,178,82-201,1.0000,0.9917,82-102,0.1750,complete
+8q7n:Z,8q7n,Z,branch_point_region,branch point region,150,156,173-179,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,branch_point_adenosine,branch point adenosine,155,155,178,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,polypyrimidine_tract,polypyrimidine tract,161,172,184-195,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,three_prime_splice_site,3' splice site,176,178,199-201,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,exon_3,3' exon,179,224,202-247,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,technical_linker,MS2 cassette linker,225,230,248-253,1.0000,0.8333,,0.0000,complete
+8q7n:Z,8q7n,Z,ms2_aptamer,MS2 aptamer 1,231,249,254-272,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,ms2_aptamer,MS2 aptamer 2,263,281,286-304,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,ms2_aptamer,MS2 aptamer 3,294,312,317-335,1.0000,1.0000,,0.0000,complete
+8q7n:Z,8q7n,Z,technical_tail,MS2 cassette tail,313,324,336-347,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,exon_5,5' exon,1,58,24-81,1.0000,1.0000,72-81,0.1724,complete
+8qo9:Z,8qo9,Z,five_prime_splice_site,5' splice site,59,64,82-87,1.0000,1.0000,82-87,1.0000,complete
+8qo9:Z,8qo9,Z,intron,intron,59,178,82-201,1.0000,0.9917,"82-102,166-180",0.3000,complete
+8qo9:Z,8qo9,Z,branch_point_region,branch point region,150,156,173-179,1.0000,1.0000,173-179,1.0000,complete
+8qo9:Z,8qo9,Z,branch_point_adenosine,branch point adenosine,155,155,178,1.0000,1.0000,178,1.0000,complete
+8qo9:Z,8qo9,Z,polypyrimidine_tract,polypyrimidine tract,161,172,184-195,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,three_prime_splice_site,3' splice site,176,178,199-201,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,exon_3,3' exon,179,224,202-247,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,technical_linker,MS2 cassette linker,225,230,248-253,1.0000,0.8333,,0.0000,complete
+8qo9:Z,8qo9,Z,ms2_aptamer,MS2 aptamer 1,231,249,254-272,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,ms2_aptamer,MS2 aptamer 2,263,281,286-304,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,ms2_aptamer,MS2 aptamer 3,294,312,317-335,1.0000,1.0000,,0.0000,complete
+8qo9:Z,8qo9,Z,technical_tail,MS2 cassette tail,313,324,336-347,1.0000,1.0000,,0.0000,complete
+9fmd:EX,9fmd,EX,exon_5,5' exon,1,58,1-12,0.2069,1.0000,1-12,0.2069,partial
+9fmd:EX,9fmd,EX,five_prime_splice_site,5' splice site,59,64,13-14,0.3333,0.5000,13-14,0.3333,partial
+9fmd:EX,9fmd,EX,intron,intron,59,178,13-14,0.0167,0.5000,13-14,0.0167,partial
+9fmd:EX,9fmd,EX,branch_point_region,branch point region,150,156,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,branch_point_adenosine,branch point adenosine,155,155,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,polypyrimidine_tract,polypyrimidine tract,161,172,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,three_prime_splice_site,3' splice site,176,178,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,exon_3,3' exon,179,224,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+9fmd:EX,9fmd,EX,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,exon_5,5' exon,1,58,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,five_prime_splice_site,5' splice site,59,64,1-6,1.0000,1.0000,1-6,1.0000,complete
+9fmd:IN,9fmd,IN,intron,intron,59,178,"1-21,81-101,113",0.3583,0.9767,"1-21,84-101,113",0.3333,partial
+9fmd:IN,9fmd,IN,branch_point_region,branch point region,150,156,92-98,1.0000,1.0000,92-98,1.0000,complete
+9fmd:IN,9fmd,IN,branch_point_adenosine,branch point adenosine,155,155,97,1.0000,1.0000,97,1.0000,complete
+9fmd:IN,9fmd,IN,polypyrimidine_tract,polypyrimidine tract,161,172,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,three_prime_splice_site,3' splice site,176,178,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,exon_3,3' exon,179,224,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,technical_linker,MS2 cassette linker,225,230,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,ms2_aptamer,MS2 aptamer 1,231,249,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,ms2_aptamer,MS2 aptamer 2,263,281,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,ms2_aptamer,MS2 aptamer 3,294,312,,0.0000,,,0.0000,absent
+9fmd:IN,9fmd,IN,technical_tail,MS2 cassette tail,313,324,,0.0000,,,0.0000,absent

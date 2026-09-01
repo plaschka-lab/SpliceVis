@@ -1,5 +1,0 @@
-member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
-9k1o:G,9k1o,G,23,13,0.5652,11-23
-9k1o:H,9k1o,H,22,21,0.9545,1-21
-9k1q:G,9k1q,G,101,22,0.2178,31-52
-9k1q:H,9k1q,H,101,9,0.0891,26-34

@@ -1,0 +1,101 @@
+LOCUS       PM5-10_410-nt_pr         410 bp    RNA              UNK 01-JAN-1980
+DEFINITION  PM5-10 410-nt pre-mRNA; substrate_type_reference;
+            reference=pm5_10_410; source=Bessonov et al. 2010; members=3.
+ACCESSION   PM5-10_410-nt_pr
+VERSION     PM5-10_410-nt_pr
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..116
+                     /label="5' affinity tag and linker"
+                     /note="feature=technical_leader; Contains three MS2
+                     aptamers; evidence=Bessonov et al. 2010 Figure 1;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#94A3B8"
+                     /ApEinfo_revcolor="#94A3B8"
+     misc_feature    23..41
+                     /label="MS2 aptamer 1"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    55..73
+                     /label="MS2 aptamer 2"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    86..104
+                     /label="MS2 aptamer 3"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    117..242
+                     /label="5' exon"
+                     /note="feature=exon_5; 126-nt exon; evidence=Bessonov et
+                     al. 2010 Figure 1;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#FF8C00"
+                     /ApEinfo_revcolor="#FF8C00"
+     misc_feature    243..248
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; GUAUGU;
+                     evidence=Bessonov et al. 2010 Figure 1;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    243..410
+                     /label="intron"
+                     /note="feature=intron; Ends after 10 nt of PPT;
+                     evidence=Bessonov et al. 2010 Figure 1;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    388..394
+                     /label="branch point region"
+                     /note="feature=branch_point_region; UUACUGA;
+                     evidence=Bessonov et al. 2010 Figure 1 and structural
+                     assignment;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    394
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; Branch adenosine;
+                     evidence=Bessonov et al. 2010 Figure 1 and structural
+                     assignment;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    401..410
+                     /label="10-nt polypyrimidine tract"
+                     /note="feature=polypyrimidine_tract; Published PM5-10
+                     endpoint; evidence=Bessonov et al. 2010 Figure 1;
+                     source=https://rnajournal.cshlp.org/content/16/12/2384.full
+                     ; confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 gaauacaagc ucauccgaua uccguacacc aucaggguac gagcuagccc auggcguaca
+       61 ccaucagggu acgacuagua gaucucguac accaucaggg uacggaauuc ucuagagucg
+      121 aggaggacau cucagcaaaa gagaagcugc ugcgggcguc ggaggacgag cgggaccggg
+      181 ugcuggagga gcugcacaag gcagaggaca gccugcuggc ugccgacgag accgccgcca
+      241 agguauguau caagcuuaca agacagcuuu aaggagacca auagaaacug ggcaugugga
+      301 gacagagaag acucuuggcc ucgagaaacc uguaacugga augugugugg agugugacug
+      361 auagaacacu accugauucu uauguauuua cugaccugug uuuuuuugcu
+//

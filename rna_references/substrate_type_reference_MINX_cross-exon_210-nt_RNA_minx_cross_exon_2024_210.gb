@@ -1,0 +1,121 @@
+LOCUS       MINX_cross-exon_         210 bp    RNA              UNK 01-JAN-1980
+DEFINITION  MINX cross-exon 210-nt RNA; substrate_type_reference;
+            reference=minx_cross_exon_2024_210; source=Zhang et al. 2024;
+            members=7.
+ACCESSION   MINX_cross-exon_
+VERSION     MINX_cross-exon_
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..64
+                     /label="upstream intron"
+                     /note="feature=intron; Published 64-nt upstream intron
+                     segment; evidence=Zhang et al. 2024 Figure 1 and Methods;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    36..42
+                     /label="branch point region"
+                     /note="feature=branch_point_region; UACUUAU; evidence=Zhang
+                     et al. 2024 construct architecture and sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    41
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; Branch adenosine in
+                     the retained upstream intron; evidence=Zhang et al. 2024
+                     construct architecture and sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    45..58
+                     /label="polypyrimidine tract"
+                     /note="feature=polypyrimidine_tract; Pyrimidine-rich
+                     interval before the upstream 3-prime splice site;
+                     evidence=Zhang et al. 2024 construct architecture and
+                     sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    62..64
+                     /label="upstream 3' splice site"
+                     /note="feature=three_prime_splice_site; CAG at the upstream
+                     intron end; evidence=Zhang et al. 2024 construct
+                     architecture and sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    65..100
+                     /label="exon-defined exon"
+                     /note="feature=exon_3; Truncated ADML-derived exon;
+                     evidence=Zhang et al. 2024 construct architecture and
+                     sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#D97706"
+                     /ApEinfo_revcolor="#D97706"
+     misc_feature    101..106
+                     /label="downstream 5' splice site"
+                     /note="feature=five_prime_splice_site; GUGGGG at the
+                     downstream exon-intron junction; evidence=Zhang et al. 2024
+                     construct architecture and sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    101..116
+                     /label="downstream intron segment"
+                     /note="feature=downstream_intron_segment; Sequence from the
+                     downstream 5-prime splice site to the first exact MS2
+                     aptamer; evidence=Zhang et al. 2024 construct architecture
+                     and sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
+                     confidence=medium"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    117..135
+                     /label="MS2 aptamer 1"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    149..167
+                     /label="MS2 aptamer 2"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    180..198
+                     /label="MS2 aptamer 3"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    199..210
+                     /label="MS2 cassette tail"
+                     /note="feature=technical_tail; Sequence after the third
+                     aptamer core; evidence=Zhou et al. 2002 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#94A3B8"
+                     /ApEinfo_revcolor="#94A3B8"
+ORIGIN
+        1 gggcgcagua guccaggguu uccuugauga ugucauacuu auccuguccc uuuuuuuucc
+       61 acagcucgcg guugaggaca aacucuucgc ggucuuucca guggggaucc aauauccgua
+      121 caccaucagg guacgagcua gcccauggcg uacaccauca ggguacgacu aguagaucuc
+      181 guacaccauc aggguacgga auucucuaga
+//

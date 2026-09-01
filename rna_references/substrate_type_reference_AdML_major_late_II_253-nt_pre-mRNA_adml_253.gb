@@ -1,0 +1,81 @@
+LOCUS       AdML_major_late_         253 bp    RNA              UNK 01-JAN-1980
+DEFINITION  AdML major late II 253-nt pre-mRNA; substrate_type_reference;
+            reference=adml_253; source=Wansink et al. 1994; members=1.
+ACCESSION   AdML_major_late_
+VERSION     AdML_major_late_
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..102
+                     /label="5' exon"
+                     /note="feature=exon_5; Printed exon length;
+                     evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#FF8C00"
+                     /ApEinfo_revcolor="#FF8C00"
+     misc_feature    103..108
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; GUGAGU at the intron
+                     start; evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    103..215
+                     /label="intron"
+                     /note="feature=intron; Printed 113-nt intron;
+                     evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    187..193
+                     /label="branch point region"
+                     /note="feature=branch_point_region; UACUUAU;
+                     evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    192
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; Italic underlined
+                     branch adenosine; evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    199..210
+                     /label="polypyrimidine tract"
+                     /note="feature=polypyrimidine_tract; Underlined
+                     pyrimidine-rich interval; evidence=Wansink et al. 1994
+                     Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    213..215
+                     /label="3' splice site"
+                     /note="feature=three_prime_splice_site; CAG at the intron
+                     end; evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    216..253
+                     /label="3' exon"
+                     /note="feature=exon_3; Printed 38-nt exon length;
+                     evidence=Wansink et al. 1994 Figure 2;
+                     source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#D97706"
+                     /ApEinfo_revcolor="#D97706"
+ORIGIN
+        1 gaauagaagu auagugccgu ucuuuugagc ggccuauuac ccaagcuugg cguucguccu
+       61 cacucucuuc cgcaucgcug ucugcgaggg ccagcuguug gggugagucu gaucagcuug
+      121 uugaccagcu cggcggugac cugcacgucu agggcgcagu aguccagggu uuccuugaug
+      181 augucauacu uauccugucc cuuuuuuuuc cacagcucgc gguugaggac aaacucuucg
+      241 cggucuuucc agu
+//

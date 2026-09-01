@@ -1,9 +1,0 @@
-feature,label,start,end,support_count,member_count,note
-exon_5,5' exon,1,81,8,45,"selected from projected family annotations; members=5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G, 6ahd:G, 8q7n:Z, 8qo9:Z"
-five_prime_splice_site,5' splice site,82,87,30,45,"selected from projected family annotations; members=5mqf:Y, 5o9z:Y, 5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G, 6ahd:G, 6icz:G, 6id0:G, 6id1:G, 6zym:Y, 7aav:Z, 7abf:Z, 7abg:Z, 7abi:Z, 7qtt:g, 7w59:G, 7w5a:G, 7w5b:G"
-intron,intron,82,201,11,45,"selected from projected family annotations; members=7aav:Z, 7abf:Z, 7abg:Z, 7abh:Z, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G, 8i0w:6"
-branch_point_region,branch point region,173,179,9,45,"selected from projected family annotations; members=5mqf:Y, 7abg:Z, 7abi:Z, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G"
-branch_point_adenosine,branch point adenosine,178,178,21,45,"selected from projected family annotations; members=5mqf:Y, 5o9z:Y, 6zym:Y, 7abg:Z, 7abi:Z, 7qtt:g, 7w59:G, 7w5a:G, 7w5b:G, 8ch6:g, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G, 8i0w:6, 8qo9:Z, 8r09:Z, 8r0a:Z"
-polypyrimidine_tract,polypyrimidine tract,184,197,11,45,"selected from projected family annotations; members=7abh:Z, 7w59:G, 7w5a:G, 7w5b:G, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G, 8i0w:6"
-three_prime_splice_site,3' splice site,199,201,3,45,"selected from projected family annotations; members=7w59:G, 7w5a:G, 7w5b:G"
-exon_3,3' exon,202,347,3,45,"selected from projected family annotations; members=7w59:G, 7w5a:G, 7w5b:G"

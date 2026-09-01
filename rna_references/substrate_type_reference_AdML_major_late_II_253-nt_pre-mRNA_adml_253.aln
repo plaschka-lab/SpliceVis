@@ -1,0 +1,13 @@
+CLUSTAL W reference-guided alignment
+
+REFERENCE  GAAUAGAAGUAUAGUGCCGUUCUUUUGAGCGGCCUAUUACCCAAGCUUGGCGUUCGUCCUCACUCUCUUCCGCAUCGCUG
+6qx9:I     --------------------------------------------------------------------------------
+
+REFERENCE  UCUGCGAGGGCCAGCUGUUGGGGUGAGU----------------------------------------CUGAUCAGCUUG
+6qx9:I     --------------------GGGUGAGUACNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNGCU----------
+
+REFERENCE  UUGACCAGCUCGGCGGUGACCUGCACGUCUAGGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCC
+6qx9:I     ---------UUCGUGCUGACC-----------------------------------------------------------
+
+REFERENCE  CUUUUUUUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGU
+6qx9:I     -----------------------------------------------------

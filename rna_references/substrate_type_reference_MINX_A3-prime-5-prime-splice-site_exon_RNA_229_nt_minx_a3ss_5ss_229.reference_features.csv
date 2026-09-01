@@ -1,0 +1,14 @@
+feature,label,start,end,support_count,member_count,note
+technical_leader,transcription leader,1,10,,,Sequence before the published 54-nt upstream intron segment; evidence=Cretu et al. 2021 Methods and deposited sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=medium
+intron,upstream intron,11,64,,,Published 54-nt MINX intron segment upstream of the 3-prime splice site; evidence=Cretu et al. 2021 Methods; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+branch_point_region,branch point region,36,42,,,UACUUAU; evidence=Cretu et al. 2021 construct sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+branch_point_adenosine,branch point adenosine,41,41,,,Branch adenosine in the retained upstream intron; evidence=Cretu et al. 2021 construct sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+polypyrimidine_tract,polypyrimidine tract,45,58,,,Pyrimidine-rich interval before the 3-prime splice site; evidence=Cretu et al. 2021 construct sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+three_prime_splice_site,upstream 3' splice site,62,64,,,CAG; evidence=Cretu et al. 2021 construct sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+exon_3,exon-defined exon,65,103,,,Second MINX exon; evidence=Cretu et al. 2021 Methods and deposited sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+five_prime_splice_site,strong downstream 5' splice site,104,109,,,GUAAGU; evidence=Cretu et al. 2021 Methods and deposited sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=high
+downstream_intron_segment,downstream intron and linker,104,140,,,Sequence between downstream 5-prime splice site and first exact MS2 aptamer; evidence=Cretu et al. 2021 Methods and deposited sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC8302644/; confidence=medium
+ms2_aptamer,MS2 aptamer 1,141,159,,,Exact 19-nt MS2 coat-protein aptamer; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 2,173,191,,,Exact 19-nt MS2 coat-protein aptamer; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 3,204,222,,,Exact 19-nt MS2 coat-protein aptamer; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+technical_tail,MS2 cassette tail,223,229,,,Sequence after the third aptamer core; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high

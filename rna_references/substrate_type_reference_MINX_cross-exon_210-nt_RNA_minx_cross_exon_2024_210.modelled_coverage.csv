@@ -1,0 +1,8 @@
+member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
+8qxd:Z,8qxd,Z,15,15,1.0000,1-15
+8qzs:Z,8qzs,Z,15,15,1.0000,1-15
+8r08:Z,8r08,Z,15,15,1.0000,1-15
+8r09:Z,8r09,Z,347,15,0.0432,166-180
+8r0a:Z,8r0a,Z,347,15,0.0432,166-180
+8r0b:Z,8r0b,Z,347,15,0.0432,166-180
+8rm5:Z,8rm5,Z,347,15,0.0432,166-180

@@ -1,0 +1,9 @@
+feature,label,start,end,support_count,member_count,note
+exon_5,5' exon,1,102,,,Printed exon length; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+five_prime_splice_site,5' splice site,103,108,,,GUGAGU at the intron start; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+intron,intron,103,215,,,Printed 113-nt intron; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+branch_point_region,branch point region,187,193,,,UACUUAU; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+branch_point_adenosine,branch point adenosine,192,192,,,Italic underlined branch adenosine; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+polypyrimidine_tract,polypyrimidine tract,199,210,,,Underlined pyrimidine-rich interval; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+three_prime_splice_site,3' splice site,213,215,,,CAG at the intron end; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high
+exon_3,3' exon,216,253,,,Printed 38-nt exon length; evidence=Wansink et al. 1994 Figure 2; source=https://pubmed.ncbi.nlm.nih.gov/8072491/; confidence=high

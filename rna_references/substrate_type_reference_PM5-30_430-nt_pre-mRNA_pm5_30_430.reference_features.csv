@@ -1,0 +1,11 @@
+feature,label,start,end,support_count,member_count,note
+technical_leader,5' affinity tag and linker,1,116,,,Contains three MS2 aptamers; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
+ms2_aptamer,MS2 aptamer 1,23,41,,,Exact 19-nt MS2 coat-protein aptamer; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 2,55,73,,,Exact 19-nt MS2 coat-protein aptamer; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 3,86,104,,,Exact 19-nt MS2 coat-protein aptamer; evidence=Zhou et al. 2002 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+exon_5,5' exon,117,242,,,126-nt exon; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
+five_prime_splice_site,5' splice site,243,248,,,GUAUGU; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
+intron,intron,243,430,,,Ends after 30 nt of PPT; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
+branch_point_region,branch point region,388,394,,,UUACUGA; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
+branch_point_adenosine,branch point adenosine,394,394,,,Branch adenosine; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
+polypyrimidine_tract,30-nt polypyrimidine tract,401,430,,,Published PM5-30 endpoint; evidence=Bessonov et al. 2010 Figure 1; source=https://rnajournal.cshlp.org/content/16/12/2384.full; confidence=high
