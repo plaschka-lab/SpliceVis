@@ -1,0 +1,59 @@
+LOCUS       UBC4_reference           253 bp    RNA              UNK 01-JAN-1980
+DEFINITION  UBC4 reference; substrate_type_reference; reference=6n7p:r;
+            members=3.
+ACCESSION   UBC4_reference
+VERSION     UBC4_reference
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..22
+                     /label="5' exon"
+                     /note="feature=exon_5; support=3/3; merged overlapping
+                     projected intervals; projected by global alignment;
+                     members=6n7p:r; projected by global alignment;
+                     members=6j6n:B, 6j6q:B"
+                     /ApEinfo_fwdcolor="#FF8C00"
+                     /ApEinfo_revcolor="#FF8C00"
+     misc_feature    23..28
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; support=1/3;
+                     projected by global alignment; members=6n7p:r"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    23..253
+                     /label="intron"
+                     /note="feature=intron; support=3/3; merged overlapping
+                     projected intervals; projected by global alignment;
+                     members=6n7p:r; projected by global alignment;
+                     members=6j6n:B, 6j6q:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    122..127
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; support=2/3;
+                     projected by global alignment; members=6j6n:B, 6j6q:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    189..198
+                     /label="branch point region"
+                     /note="feature=branch_point_region; support=2/3; merged
+                     overlapping projected intervals; projected by global
+                     alignment; members=6j6n:B; projected by global alignment;
+                     members=6j6q:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    196
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; support=2/3;
+                     projected by global alignment; members=6j6n:B, 6j6q:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 gggaacuaag ugaucuagaa agguaugucu aaaguuaugg ccacguuuca aaugcgugcu
+       61 uuuuuuuuaa aacuuaugcu cuuauuuacu aacaaaauca acaugcuauu gaacuagaga
+      121 uccaccuacu ucauguucag ccgguccagg auccgauauc cguacaccau caggguacga
+      181 gcuagcccau ggcguacacc aucaggguac gacuaguaga ucucguacac caucagggua
+      241 cggaauucuc uag
+//

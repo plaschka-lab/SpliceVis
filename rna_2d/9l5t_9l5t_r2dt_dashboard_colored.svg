@@ -485,20 +485,22 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M566.2,1035.5 Q533.0,318.6 499.7,363.6" class="inter" stroke-width="1.8"><title>6:46-48 to 2:19-21; 3 FR3D interactions; cWW</title></path>
 <path d="M777.7,1035.5 Q500.6,318.6 223.6,363.6" class="inter" stroke-width="3.1"><title>6:81-90 to 2:2-10; 9 FR3D interactions; cWW</title></path>
 <text x="70" y="1364.0" class="label" style="font-size:15px">Feature overlays</text>
-<circle cx="77.0" cy="1386.0" r="7" fill="#047857" opacity="0.28"/>
-<text x="90.0" y="1390.0" class="small">U2 U6 helix I partner</text>
-<circle cx="287.0" cy="1386.0" r="7" fill="#0b6e2d" opacity="0.28"/>
-<text x="300.0" y="1390.0" class="small">U2 branchpoint pairing region</text>
-<circle cx="497.0" cy="1386.0" r="7" fill="#1b3cd0" opacity="0.28"/>
-<text x="510.0" y="1390.0" class="small">U5 loop I</text>
-<circle cx="707.0" cy="1386.0" r="7" fill="#d0183c" opacity="0.28"/>
-<text x="720.0" y="1390.0" class="small">U6 U2 helix I partner</text>
-<circle cx="917.0" cy="1386.0" r="7" fill="#e01842" opacity="0.28"/>
-<text x="930.0" y="1390.0" class="small">U6 5SS upstream contact</text>
-<circle cx="1127.0" cy="1386.0" r="7" fill="#d61a3d" opacity="0.28"/>
-<text x="1140.0" y="1390.0" class="small">U6 ISL</text>
-<circle cx="1337.0" cy="1386.0" r="7" fill="#dc143c" opacity="0.28"/>
-<text x="1350.0" y="1390.0" class="small">U6 ACAGAGA box</text>
-<circle cx="1547.0" cy="1386.0" r="7" fill="#c91236" opacity="0.28"/>
-<text x="1560.0" y="1390.0" class="small">U6 AGC catalytic triad</text>
+<circle cx="77.0" cy="1386.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<text x="90.0" y="1390.0" class="small">exon 5</text>
+<circle cx="287.0" cy="1386.0" r="7" fill="#047857" opacity="0.28"/>
+<text x="300.0" y="1390.0" class="small">U2 U6 helix I partner</text>
+<circle cx="497.0" cy="1386.0" r="7" fill="#0b6e2d" opacity="0.28"/>
+<text x="510.0" y="1390.0" class="small">U2 branchpoint pairing region</text>
+<circle cx="707.0" cy="1386.0" r="7" fill="#1b3cd0" opacity="0.28"/>
+<text x="720.0" y="1390.0" class="small">U5 loop I</text>
+<circle cx="917.0" cy="1386.0" r="7" fill="#d0183c" opacity="0.28"/>
+<text x="930.0" y="1390.0" class="small">U6 U2 helix I partner</text>
+<circle cx="1127.0" cy="1386.0" r="7" fill="#e01842" opacity="0.28"/>
+<text x="1140.0" y="1390.0" class="small">U6 5SS upstream contact</text>
+<circle cx="1337.0" cy="1386.0" r="7" fill="#d61a3d" opacity="0.28"/>
+<text x="1350.0" y="1390.0" class="small">U6 ISL</text>
+<circle cx="1547.0" cy="1386.0" r="7" fill="#dc143c" opacity="0.28"/>
+<text x="1560.0" y="1390.0" class="small">U6 ACAGAGA box</text>
+<circle cx="77.0" cy="1409.0" r="7" fill="#c91236" opacity="0.28"/>
+<text x="90.0" y="1413.0" class="small">U6 AGC catalytic triad</text>
 </svg>

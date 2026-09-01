@@ -13,6 +13,8 @@ Lightweight static dashboard for copying ChimeraX scripts for spliceosome cryo-E
 - Systematic-chain script variants use model-scoped two-step `changechains` commands through temporary safe-harbor IDs; no renamed CIF files are bundled.
 - GUI ChimeraX scripts fetch a small named-selection browser from GitHub for search, select, zoom, and RNA-label toggle actions.
 
+The **Refine** control beside the main search adds state, species, pre-mRNA substrate-family, RNA-feature, and sort filters without permanently occupying the atlas workspace. Recurrent substrates are assigned conservatively from deposited construct names, manual curation, exact sequence or intron matches, and high-identity alignment to named references. Ambiguous substrate-like RNAs remain explicitly review-required. GenBank reference sequences for supported recurrent substrate families can be downloaded from a structure's RNA Annotations panel and opened or edited in SnapGene; feature intervals are included where the current curation supports them.
+
 ## Fully local model-only copy
 
 For offline work, clone the repository and run the setup helper. It copies the dashboard assets and downloads uncompressed mmCIF coordinate files into a local folder. EM maps are not included by default.

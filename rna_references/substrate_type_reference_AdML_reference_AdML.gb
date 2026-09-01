@@ -1,0 +1,44 @@
+LOCUS       AdML_reference            62 bp    RNA              UNK 01-JAN-1980
+DEFINITION  AdML reference; substrate_type_reference; reference=6qx9:I;
+            members=1.
+ACCESSION   AdML_reference
+VERSION     AdML_reference
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..2
+                     /label="5' exon"
+                     /note="feature=exon_5; support=1/1; projected by global
+                     alignment; members=6qx9:I"
+                     /ApEinfo_fwdcolor="#FF8C00"
+                     /ApEinfo_revcolor="#FF8C00"
+     misc_feature    3..8
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; support=1/1;
+                     projected by global alignment; members=6qx9:I"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    3..62
+                     /label="intron from 5' splice site"
+                     /note="feature=intron; support=1/1; projected by global
+                     alignment; members=6qx9:I"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    55..62
+                     /label="branch point region"
+                     /note="feature=branch_point_region; support=1/1; projected
+                     by global alignment; members=6qx9:I"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    60
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; support=1/1;
+                     projected by global alignment; members=6qx9:I"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 gggugaguac nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnngcu uucgugcuga
+       61 cc
+//

@@ -1,0 +1,75 @@
+LOCUS       ACT1_reference           679 bp    RNA              UNK 01-JAN-1980
+DEFINITION  ACT1 reference; substrate_type_reference; reference=6j6h:B;
+            members=4.
+ACCESSION   ACT1_reference
+VERSION     ACT1_reference
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..192
+                     /label="5' exon"
+                     /note="feature=exon_5; support=4/4; merged overlapping
+                     projected intervals; projected by global alignment;
+                     members=6j6g:B, 6j6h:B; projected by global alignment;
+                     members=7oqe:I; projected by global alignment;
+                     members=5lqw:9"
+                     /ApEinfo_fwdcolor="#FF8C00"
+                     /ApEinfo_revcolor="#FF8C00"
+     misc_feature    24..39
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; support=1/4;
+                     projected by global alignment; members=7oqe:I"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    24..679
+                     /label="intron"
+                     /note="feature=intron; support=4/4; merged overlapping
+                     projected intervals; projected by global alignment;
+                     members=7oqe:I; projected by global alignment;
+                     members=5lqw:9, 6j6g:B, 6j6h:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    193..198
+                     /label="5' splice site"
+                     /note="feature=five_prime_splice_site; support=3/4;
+                     projected by global alignment; members=5lqw:9, 6j6g:B,
+                     6j6h:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    450..460
+                     /label="branch point region"
+                     /note="feature=branch_point_region; support=3/4; merged
+                     overlapping projected intervals; projected by global
+                     alignment; members=6j6g:B, 6j6h:B; projected by global
+                     alignment; members=5lqw:9"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    458
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; support=3/4;
+                     projected by global alignment; members=5lqw:9, 6j6g:B,
+                     6j6h:B"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    467..526
+                     /label="branch point region"
+                     /note="feature=branch_point_region; support=1/4; projected
+                     by global alignment; members=7oqe:I"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 gagagauucc guacaccauc aggguacgag cuagcccaug gcguacacca ucaggguacg
+       61 acuaguagau cucguacacc aucaggguac ggaauucucu agagugucga cggauccccc
+      121 uuuuagauuu uucacgcuua cugcuuuuuu cuucccaaga ucgaaaauuu acugaauuaa
+      181 caauggauuc ugguauguuc uagcgcuugc accaucccau uuaacuguaa gaagaauugc
+      241 acggucccaa uugcucgaga gauuucucuu uuaccuuuuu uuacuauuuu ucacucuccc
+      301 auaaccuccu auauugacug aucuguaaua accacgauau uauuggaaua aauaggggcu
+      361 ugaaauuugg aaaaaaaaaa aaaacugaaa uauuuucgug auaagugaua gugauauucu
+      421 ucuuuuauuu gcuacuguua cuaagucuca uguacuaaca ucgauugcuu cauucuuuuu
+      481 guugcuauau uauauguuua gagguugcug cuuugguuau ugauaacggu ucugguaugu
+      541 guaaagccgg uuuugccggu gacgacgcuc cucgugcugu cuucccaucu aucgucggua
+      601 gaccaagaca ccaagguauc auggucggua ugggucaaaa agacuccuac guuggugaug
+      661 aagcucaauc caagagagg
+//
