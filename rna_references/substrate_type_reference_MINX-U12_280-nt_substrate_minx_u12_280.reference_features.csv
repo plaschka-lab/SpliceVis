@@ -1,0 +1,12 @@
+feature,label,start,end,support_count,member_count,note
+exon_5,5' exon,1,57,,,Ends immediately before the structurally validated U12-type 5-prime splice-site recognition segment; evidence=Bai et al. 2024 and deposited sequence; source=https://pubmed.ncbi.nlm.nih.gov/38484052/; confidence=high
+five_prime_splice_site,U12-type 5' splice-site recognition segment,58,67,,,Full 10-nt substrate segment recognized by U11 or U6atac; evidence=Bai et al. 2024 and structural pairing in 8Y6O and 7DVQ; source=https://pubmed.ncbi.nlm.nih.gov/38484052/; confidence=high
+intron,U12-type intron fragment,58,280,,,Construct terminates shortly after the branch region and lacks a 3-prime splice site; evidence=Bai et al. 2024 and deposited sequence; source=https://pubmed.ncbi.nlm.nih.gov/38484052/; confidence=high
+technical_linker,MS2 cassette linker,109,114,,,Six nucleotides before the first exact aptamer core; evidence=exact MINX-M3 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 1,115,133,,,Exact 19-nt MS2 coat-protein aptamer; evidence=exact MINX-M3 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 2,147,165,,,Exact 19-nt MS2 coat-protein aptamer; evidence=exact MINX-M3 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+ms2_aptamer,MS2 aptamer 3,178,196,,,Exact 19-nt MS2 coat-protein aptamer; evidence=exact MINX-M3 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+technical_tail,MS2 cassette tail,197,208,,,Sequence after the third aptamer core; evidence=exact MINX-M3 cassette sequence; source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/; confidence=high
+branch_point_region,U12-type branch point region,252,263,,,Branch region validated by the U12 branch helix; evidence=Bai et al. 2024 and structural U12 pairing in 8Y7E and 7DVQ; source=https://pubmed.ncbi.nlm.nih.gov/38484052/; confidence=high
+branch_point_adenosine,branch point adenosine,260,260,,,Structurally validated bulged branch-point adenosine; evidence=Bai et al. 2024 and structural validation in 8Y7E and 7DVQ; source=https://pubmed.ncbi.nlm.nih.gov/38484052/; confidence=high
+downstream_intron_segment,post-branch intron segment,264,280,,,The construct ends before a 3-prime splice site; evidence=Bai et al. 2024 and deposited sequence; source=https://pubmed.ncbi.nlm.nih.gov/38484052/; confidence=high

@@ -1,0 +1,4 @@
+member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
+7dvq:G,7dvq,G,142,63,0.4437,"9-39,110-141"
+8y6o:A,8y6o,A,280,13,0.0464,56-68
+8y7e:A,8y7e,A,280,30,0.1071,250-279

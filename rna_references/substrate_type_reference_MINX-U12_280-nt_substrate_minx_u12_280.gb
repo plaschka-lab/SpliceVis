@@ -1,0 +1,113 @@
+LOCUS       MINX-U12_280-nt_         280 bp    RNA              UNK 01-JAN-1980
+DEFINITION  MINX-U12 280-nt substrate; substrate_type_reference;
+            reference=minx_u12_280; source=Bai et al. 2024; structural
+            validation in 8Y6O 8Y7E and 7DVQ; members=3.
+ACCESSION   MINX-U12_280-nt_
+VERSION     MINX-U12_280-nt_
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..57
+                     /label="5' exon"
+                     /note="feature=exon_5; Ends immediately before the
+                     structurally validated U12-type 5-prime splice-site
+                     recognition segment; evidence=Bai et al. 2024 and deposited
+                     sequence; source=https://pubmed.ncbi.nlm.nih.gov/38484052/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
+     misc_feature    58..67
+                     /label="U12-type 5' splice-site recognition segment"
+                     /note="feature=five_prime_splice_site; Full 10-nt substrate
+                     segment recognized by U11 or U6atac; evidence=Bai et al.
+                     2024 and structural pairing in 8Y6O and 7DVQ;
+                     source=https://pubmed.ncbi.nlm.nih.gov/38484052/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    58..280
+                     /label="U12-type intron fragment"
+                     /note="feature=intron; Construct terminates shortly after
+                     the branch region and lacks a 3-prime splice site;
+                     evidence=Bai et al. 2024 and deposited sequence;
+                     source=https://pubmed.ncbi.nlm.nih.gov/38484052/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    109..114
+                     /label="MS2 cassette linker"
+                     /note="feature=technical_linker; Six nucleotides before the
+                     first exact aptamer core; evidence=exact MINX-M3 cassette
+                     sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#94A3B8"
+                     /ApEinfo_revcolor="#94A3B8"
+     misc_feature    115..133
+                     /label="MS2 aptamer 1"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=exact MINX-M3 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    147..165
+                     /label="MS2 aptamer 2"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=exact MINX-M3 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    178..196
+                     /label="MS2 aptamer 3"
+                     /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
+                     aptamer; evidence=exact MINX-M3 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#64748B"
+                     /ApEinfo_revcolor="#64748B"
+     misc_feature    197..208
+                     /label="MS2 cassette tail"
+                     /note="feature=technical_tail; Sequence after the third
+                     aptamer core; evidence=exact MINX-M3 cassette sequence;
+                     source=https://pmc.ncbi.nlm.nih.gov/articles/PMC129422/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#94A3B8"
+                     /ApEinfo_revcolor="#94A3B8"
+     misc_feature    252..263
+                     /label="U12-type branch point region"
+                     /note="feature=branch_point_region; Branch region validated
+                     by the U12 branch helix; evidence=Bai et al. 2024 and
+                     structural U12 pairing in 8Y7E and 7DVQ;
+                     source=https://pubmed.ncbi.nlm.nih.gov/38484052/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    260
+                     /label="branch point adenosine"
+                     /note="feature=branch_point_adenosine; Structurally
+                     validated bulged branch-point adenosine; evidence=Bai et
+                     al. 2024 and structural validation in 8Y7E and 7DVQ;
+                     source=https://pubmed.ncbi.nlm.nih.gov/38484052/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    264..280
+                     /label="post-branch intron segment"
+                     /note="feature=downstream_intron_segment; The construct
+                     ends before a 3-prime splice site; evidence=Bai et al. 2024
+                     and deposited sequence;
+                     source=https://pubmed.ncbi.nlm.nih.gov/38484052/;
+                     confidence=high"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 gaauacacgg aauucgagcu cgcccacucu uggaucggaa acccgucggc cuccgaaaua
+       61 uccuuuucua gcauguagaa cugguuaccu gcagcccaag cuugcugcga uauccguaca
+      121 ccaucagggu acgagcuagc ccauggcgua caccaucagg guacgacuag uagaucucgu
+      181 acaccaucag gguacggaau ucucuagaca cgucuagggc gcaguagucc aggguuuccu
+      241 ugaugauguc auauccuuaa cucauugucc cuuuuuuuuc
+//
