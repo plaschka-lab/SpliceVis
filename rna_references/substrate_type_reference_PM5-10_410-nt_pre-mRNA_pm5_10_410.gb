@@ -46,8 +46,8 @@ FEATURES             Location/Qualifiers
                      al. 2010 Figure 1;
                      source=https://rnajournal.cshlp.org/content/16/12/2384.full
                      ; confidence=high"
-                     /ApEinfo_fwdcolor="#FF8C00"
-                     /ApEinfo_revcolor="#FF8C00"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
      misc_feature    243..248
                      /label="5' splice site"
                      /note="feature=five_prime_splice_site; GUAUGU;

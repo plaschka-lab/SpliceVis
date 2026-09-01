@@ -167,11 +167,8 @@ name pdb_8Y6O_U5_snRNP #347.1/B,C,D,E,F,G,S
 name pdb_8Y6O_other #347.1/H,R,W,X,Y,Z
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -1-0, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8Y6O_5exon #347.1/A:-1-0
-# substrate RNA: residues -1-11, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8Y6O_substrate #347.1/A:-1-11
 # 5' splice site: residues 1-10, minor-snrna-basepair, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8Y6O_5SS #347.1/A:1-10
@@ -217,7 +214,7 @@ select #347.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -1-0
-color #347.1/A:-1-0 #FF8C00
+color #347.1/A:-1-0 #FF9D00
 select #347.1/A:-1-0
 nucleotides sel fill
 select clear
@@ -361,9 +358,6 @@ name pdb_8Y7E_U2_SF3B #346.1/1,2,3,4,5,6,7
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_8Y7E_other #346.1/v
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 193-222, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8Y7E_substrate #346.1/A:193-222
 # branch point region: residues 195-206, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8Y7E_branch_region #346.1/A:195-206

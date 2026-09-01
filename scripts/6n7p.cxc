@@ -95,11 +95,8 @@ name pdb_6N7P_U1_snRNP #330.1/A,B,C,D,E,F,G,H,I,J,R
 name pdb_6N7P_other #330.1/X,Y
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -9--1, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name E_complex_6N7P_5exon #330.1/r:-9--1
-# substrate RNA: residues -9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name E_complex_6N7P_substrate #330.1/r:-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10,11,12,13
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name E_complex_6N7P_5SS #330.1/r:1-6
@@ -124,7 +121,7 @@ select #330.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -9--1
-color #330.1/r:-9--1 #FF8C00
+color #330.1/r:-9--1 #FF9D00
 select #330.1/r:-9--1
 nucleotides sel fill
 select clear

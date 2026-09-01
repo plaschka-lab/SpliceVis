@@ -157,7 +157,7 @@ name pdb_9L5S_U6_snRNP #402.1/6
 name pdb_9L5S_other #402.1/CV,CY,F
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -10--1, manual-review-addition, high confidence, validation validated
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name BstarD_complex_9L5S_5exon #402.1/8:-10--1
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
@@ -192,7 +192,7 @@ select #402.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -10--1
-color #402.1/8:-10--1 #FF8C00
+color #402.1/8:-10--1 #FF9D00
 select #402.1/8:-10--1
 nucleotides sel fill
 select clear

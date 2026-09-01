@@ -60,8 +60,8 @@ FEATURES             Location/Qualifiers
                      sequence;
                      source=https://pmc.ncbi.nlm.nih.gov/articles/PMC11208138/;
                      confidence=high"
-                     /ApEinfo_fwdcolor="#D97706"
-                     /ApEinfo_revcolor="#D97706"
+                     /ApEinfo_fwdcolor="#C65D00"
+                     /ApEinfo_revcolor="#C65D00"
      misc_feature    101..106
                      /label="downstream 5' splice site"
                      /note="feature=five_prime_splice_site; GUGGGG at the

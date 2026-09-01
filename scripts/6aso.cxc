@@ -52,22 +52,51 @@ color #328.1/F #F4A3A8
 color #328.1/G #F4A3A8
 # LSM8
 color #328.1/H #F4A3A8
-# mRNA
-color #328.1/I #303030
+# U6 snRNA
+color #328.1/I #EF4444
 # Named selections for subcomplexes using original deposited chain IDs.
-# RNA/substrate
-# selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_6ASO_RNA_substrate #328.1/I
 # U6 LSm
 # selector_meta {"color":"#FECACA","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
 name pdb_6ASO_U6_LSm #328.1/B,C,D,E,F,G,H
+# U6 snRNP
+# selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name pdb_6ASO_U6_snRNP #328.1/I
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_6ASO_other #328.1/A
-# Named selections for resolved substrate RNA features.
-# substrate RNA: residues 33-79;81-98;109-113, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U6_snRNP_6ASO_substrate #328.1/I:33-79,81-98,109-113
+# Named selections for resolved snRNA functional regions.
+# U6 snRNA U2/U6 helix I partner: residues 41-66, motif-neighborhood, medium confidence
+# selector_meta {"color":"#D0183C","family":"RNA","feature":"U6_U2_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name U6_snRNP_6ASO_U6_U2_helix_I_partner #328.1/I:41-66
+# U6 snRNA 5' splice-site upstream contact: residues 44-55, motif-neighborhood, medium confidence
+# selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNP_6ASO_U6_5SS_upstream_contact #328.1/I:44-55
+# U6 snRNA ACAGAGA box: residues 47-53, sequence-motif, high confidence
+# selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNP_6ASO_U6_ACAGAGA_box #328.1/I:47-53
+# RNA feature nucleotide display.
+select #328.1 & nucleic
+nucleotides sel atoms
+select clear
+# U2/U6 helix I: residues 41-66
+color #328.1/I:41-66 #D0183C
+select #328.1/I:41-66
+nucleotides sel fill
+select clear
+# U6 5'SS contact: residues 44-55
+color #328.1/I:44-55 #E01842
+select #328.1/I:44-55
+nucleotides sel fill
+select clear
+# U6 ACAGAGA: residues 47-53
+color #328.1/I:47-53 #DC143C
+select #328.1/I:47-53
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #328.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/6aso_rna_labels.py
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

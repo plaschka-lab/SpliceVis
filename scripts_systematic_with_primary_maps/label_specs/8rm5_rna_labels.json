@@ -134,7 +134,7 @@
       "feature": "exon_5",
       "atomspec": "#362.1/MB:-2",
       "text": "5' exon (res. -3--1)",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "model_name": "label_03_5_exon_res_3_1",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",

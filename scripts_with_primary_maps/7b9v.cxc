@@ -163,11 +163,8 @@ name pdb_7B9V_U6_snRNP #411.1/6
 name pdb_7B9V_other #411.1/F,J,K,O,Q,W,X,Y,Z,a
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -14--1, component-name, high confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_7B9V_5exon #411.1/E:-14--1
-# substrate RNA: residues -14--1; 1-17;55-92, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_7B9V_substrate #411.1/E:-14--1|#411.1/I:1-17,55-92
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_7B9V_5SS #411.1/I:1-6
@@ -216,7 +213,7 @@ select #411.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -14--1
-color #411.1/E:-14--1 #FF8C00
+color #411.1/E:-14--1 #FF9D00
 select #411.1/E:-14--1
 nucleotides sel fill
 select clear

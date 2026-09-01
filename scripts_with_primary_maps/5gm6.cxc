@@ -46,10 +46,10 @@ color #380.1/A #BFC3E8
 color #380.1/B #AFEEEE
 # EFTUD2
 color #380.1/C #6495ED
-# mRNA
-color #380.1/D #303030
-# mRNA
-color #380.1/E #303030
+# U5 snRNA
+color #380.1/D #4F9FD3
+# U6 snRNA
+color #380.1/E #EF4444
 # SF3B3
 color #380.1/F #487957
 # SF3B2
@@ -142,7 +142,7 @@ name pdb_5GM6_NTC_NTR_related #380.1/P,Q,R,T,d,f,v
 name pdb_5GM6_NTC_PRP19 #380.1/O,S,c,o,p,q,r,t
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_5GM6_RNA_substrate #380.1/D,E,M,N
+name pdb_5GM6_RNA_substrate #380.1/M,N
 # SR proteins
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_5GM6_SR_proteins #380.1/X
@@ -160,24 +160,24 @@ name pdb_5GM6_U2_snRNP #380.1/L
 name pdb_5GM6_U2_SF3B #380.1/F,G,H,I,J,K,e
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_5GM6_U5_snRNP #380.1/A,B,C
+name pdb_5GM6_U5_snRNP #380.1/A,B,C,D
+# U6 snRNP
+# selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name pdb_5GM6_U6_snRNP #380.1/E
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_5GM6_other #380.1/U,V,W,Y,a,b
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 1-103; 28-55;60-127;163-183; 468-475;479-484;487-522; 90-114, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_5GM6_substrate #380.1/D:28-55,60-127,163-183|#380.1/E:1-103|#380.1/M:468-475,479-484,487-522|#380.1/N:90-114
-# branch point region: residues 493-503; 72-76, network-scored-motif, high/review confidence, validation uncertain/validated uncertain validation
+# branch point region: residues 493-503, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_5GM6_branch_region #380.1/D:72-76|#380.1/M:493-503
+name Bact_5GM6_branch_region #380.1/M:493-503
 # branch point adenosine: residues 501, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_5GM6_branch_A #380.1/M:501
 # 5' exon: residues 90-99, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_5GM6_5exon #380.1/N:90-99
-# 5' splice site: residues 100-105, network-scored-motif, medium confidence, validation validated
+# 5' splice site: residues 100-105, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_5GM6_5SS #380.1/N:100-105
 # intron from 5' splice site: residues 100-114, five-ss-inference, low confidence, validation not_applicable
@@ -193,14 +193,38 @@ name Bact_5GM6_U2_branchpoint_pairing_region #380.1/L:33-42
 # U2 snRNA stem IIa: residues 46-66, review-region, low confidence
 # selector_meta {"color":"#167A38","family":"RNA","feature":"U2_stem_IIa","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
 name Bact_5GM6_U2_stem_IIa #380.1/L:46-66
+# U5 snRNA loop I: residues 53-55, sequence-motif, medium confidence
+# selector_meta {"color":"#1B3CD0","family":"RNA","feature":"U5_loop_I","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
+name Bact_5GM6_U5_loop_I #380.1/D:53-55
+# U6 snRNA 5' terminal stem-loop: residues 1-30, reference-alignment, high confidence
+# selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_5prime_terminal_stem_loop","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name Bact_5GM6_U6_5_terminal_stem_loop #380.1/E:1-30
+# U6 snRNA U2/U6 helix I partner: residues 41-66, motif-neighborhood, medium confidence
+# selector_meta {"color":"#D0183C","family":"RNA","feature":"U6_U2_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name Bact_5GM6_U6_U2_helix_I_partner #380.1/E:41-66
+# U6 snRNA 5' splice-site upstream contact: residues 44-55, motif-neighborhood, medium confidence
+# selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name Bact_5GM6_U6_5SS_upstream_contact #380.1/E:44-55
+# U6 snRNA internal stem-loop: residues 46-73, motif-neighborhood, low confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name Bact_5GM6_U6_ISL #380.1/E:46-73
+# U6 snRNA ACAGAGA box: residues 47-53, sequence-motif, high confidence
+# selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name Bact_5GM6_U6_ACAGAGA_box #380.1/E:47-53
+# U6 snRNA AGC catalytic triad: residues 59-61, sequence-motif, medium confidence
+# selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
+name Bact_5GM6_U6_AGC_catalytic_triad #380.1/E:59-61
+# U6 snRNA LSm site: residues 103, terminal-region, low confidence
+# selector_meta {"color":"#E33A55","family":"RNA","feature":"U6_LSm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name Bact_5GM6_U6_LSm_site #380.1/E:103
 # RNA feature nucleotide display.
 select #380.1 & nucleic
 nucleotides sel atoms
 select clear
-# BP region: residues 493-503; 72-76
+# BP region: residues 493-503
 # BP-A: residues 501
 # 5' exon: residues 90-99
-color #380.1/N:90-99 #FF8C00
+color #380.1/N:90-99 #FF9D00
 select #380.1/N:90-99
 nucleotides sel fill
 select clear
@@ -219,6 +243,41 @@ select clear
 # U2 stem IIa: residues 46-66
 color #380.1/L:46-66 #167A38
 select #380.1/L:46-66
+nucleotides sel fill
+select clear
+# U5 loop I: residues 53-55
+color #380.1/D:53-55 #1B3CD0
+select #380.1/D:53-55
+nucleotides sel fill
+select clear
+# U6 5' terminal SL: residues 1-30
+color #380.1/E:1-30 #DC143C
+select #380.1/E:1-30
+nucleotides sel fill
+select clear
+# U2/U6 helix I: residues 41-66
+color #380.1/E:41-66 #D0183C
+select #380.1/E:41-66
+nucleotides sel fill
+select clear
+# U6 5'SS contact: residues 44-55
+color #380.1/E:44-55 #E01842
+select #380.1/E:44-55
+nucleotides sel fill
+select clear
+# U6 ISL: residues 46-73
+color #380.1/E:46-73 #D61A3D
+select #380.1/E:46-73
+nucleotides sel fill
+select clear
+# U6 ACAGAGA: residues 47-53
+color #380.1/E:47-53 #DC143C
+select #380.1/E:47-53
+nucleotides sel fill
+select clear
+# U6 AGC triad: residues 59-61
+color #380.1/E:59-61 #C91236
+select #380.1/E:59-61
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.

@@ -208,20 +208,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "C_8I0W_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues -23--18;-12--1; 1-31;69-107, component, medium confidence, validation not_applicable",
-      "atomspec": "#412.1/6:1-31,69-107|#412.1/G:-23--18,-12--1",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "C_8I0W_branch_region",
       "label": "branch point region",
       "category": "substrate RNA feature",
@@ -287,7 +273,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "412.2.1.6",
       "label_category_model_id": "412.2.1",
       "label_group_model_id": "412.2",

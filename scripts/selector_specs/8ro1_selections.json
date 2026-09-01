@@ -194,20 +194,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "ILS_disassembly_8RO1_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 1-2;10-28;40-51, component, medium confidence, validation not_applicable",
-      "atomspec": "#435.1/IN:1-2,10-28,40-51",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "ILS_disassembly_8RO1_U2_U6_helix_I_partner",
       "label": "U2 snRNA U2/U6 helix I partner",
       "category": "snRNA feature",

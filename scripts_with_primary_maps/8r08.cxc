@@ -226,9 +226,9 @@ name pdb_8R08_U6_LSm #358.1/62,63,64,65,66,67,68
 # selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
 name pdb_8R08_U6_snRNP #358.1/6
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 29-43; 3-7, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8R08_substrate #358.1/Z:29-43|#358.1/Z1:3-7
+# intron: residues 29-43, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name pre_B_8R08_intron #358.1/Z:29-43
 # branch point region: residues 36-43, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8R08_branch_region #358.1/Z:36-43
@@ -297,6 +297,7 @@ name pre_B_8R08_U6_LSm_site #358.1/6:102-106
 select #358.1 & nucleic
 nucleotides sel atoms
 select clear
+# intron: residues 29-43
 # BP region: residues 36-43
 # BP-A: residues 41
 # U1 SL1: residues 12-46

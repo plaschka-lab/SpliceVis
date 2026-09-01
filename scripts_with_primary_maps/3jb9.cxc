@@ -165,9 +165,6 @@ name ILS_disassembly_3JB9_5SS #430.1/O:100-105
 # intron from 5' splice site: residues 100-107, five-ss-inference, low confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_3JB9_intron #430.1/O:100-107
-# substrate RNA: residues 100-107; 492-504, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_3JB9_substrate #430.1/O:100-107|#430.1/Q:492-504
 # branch point region: residues 496-502, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_3JB9_branch_region #430.1/Q:496-502

@@ -283,9 +283,6 @@ name spliceosome_U6_snRNP /6,6R1,6R2
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBYA,XBYB,XBZ,XCA,XCB,XCC,XCD,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues -3,-2,-1,1,2,3,4,5,6,7,8; 29-43, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_B_8R0A_substrate #360.1/MA:29-43|#360.1/MB:-3,-2,-1,1,2,3,4,5,6,7,8
 # intron: residues 1-8; 29-43, five-ss-inference/splice-site-inference, low/medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8R0A_intron #360.1/MA:29-43|#360.1/MB:1-8
@@ -296,7 +293,7 @@ name pre_B_8R0A_branch_region #360.1/MA:36-43
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8R0A_branch_A #360.1/MA:41
 # 5' exon: residues -3--1, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8R0A_5exon #360.1/MB:-3--1
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
@@ -361,7 +358,7 @@ select clear
 # BP region: residues 36-43
 # BP-A: residues 41
 # 5' exon: residues -3--1
-color #360.1/MB:-3--1 #FF8C00
+color #360.1/MB:-3--1 #FF9D00
 select #360.1/MB:-3--1
 nucleotides sel fill
 select clear

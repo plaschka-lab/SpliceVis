@@ -177,11 +177,8 @@ name pdb_7W59_U6_snRNP #418.1/F
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_7W59_other #418.1/X
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues -13--1; 1-31;69-103;117-132, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_7W59_substrate #418.1/4:-13--1|#418.1/G:1-31,69-103,117-132
 # 5' exon: residues -13--1, manual-review-addition, high confidence, validation validated
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W59_5exon #418.1/4:-13--1
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
@@ -189,9 +186,9 @@ name Cstar_7W59_5SS #418.1/G:1-6
 # intron: residues 1-31;69-103;117-120, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W59_intron #418.1/G:1-31,69-103,117-120
-# branch point region: residues 93-99, network-scored-motif, high confidence, validation validated
+# branch point region: residues 92-98, network-scored-motif; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_7W59_branch_region #418.1/G:93-99
+name Cstar_7W59_branch_region #418.1/G:92-98
 # branch point adenosine: residues 97, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W59_branch_A #418.1/G:97
@@ -202,7 +199,7 @@ name Cstar_7W59_PPT #418.1/G:103
 # selector_meta {"color":"#303030","family":"RNA","feature":"three_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W59_3SS #418.1/G:118-120
 # 3' exon: residues 121-132, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#D97706","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#C65D00","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W59_3exon #418.1/G:121-132
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
@@ -243,18 +240,18 @@ select #418.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -13--1
-color #418.1/4:-13--1 #FF8C00
+color #418.1/4:-13--1 #FF9D00
 select #418.1/4:-13--1
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-31;69-103;117-120
-# BP region: residues 93-99
+# BP region: residues 92-98
 # BP-A: residues 97
 # PPT: residues 103
 # 3'SS: residues 118-120
 # 3' exon: residues 121-132
-color #418.1/G:121-132 #D97706
+color #418.1/G:121-132 #C65D00
 select #418.1/G:121-132
 nucleotides sel fill
 select clear

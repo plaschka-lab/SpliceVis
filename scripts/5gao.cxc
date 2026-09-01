@@ -57,24 +57,56 @@ color #336.1/r #B0C4DE
 color #336.1/E #D6937B
 # SNRNP200
 color #336.1/B #AFEEEE
-# mRNA
-color #336.1/V #303030
+# U4 snRNA
+color #336.1/V #F2D94E
 # PRPF8
 color #336.1/A #BFC3E8
 # Named selections for subcomplexes using original deposited chain IDs.
-# RNA/substrate
-# selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_5GAO_RNA_substrate #336.1/V
 # Sm ring
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_5GAO_Sm_ring #336.1/k,l,m,n,p,q,r
+# U4 snRNP
+# selector_meta {"color":"#D8C800","family":"Protein/RNP groups","group":"U4 snRNP groups","kind":"subcomplex"}
+name pdb_5GAO_U4_snRNP #336.1/V
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
 name pdb_5GAO_U5_snRNP #336.1/A,B,E
-# Named selections for resolved substrate RNA features.
-# substrate RNA: residues 73-104;128-152, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_5GAO_substrate #336.1/V:73-104,128-152
+# Named selections for resolved snRNA functional regions.
+# U4 snRNA U4/U6 stem I partner: residues 73-89, review-region, low confidence
+# selector_meta {"color":"#D8C800","family":"RNA","feature":"U4_U6_stem_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name U5_tri_snRNP_5GAO_U4_U6_stem_I_partner #336.1/V:73-89
+# U4 snRNA U4/U6 stem II partner: residues 128-139, review-region, low confidence
+# selector_meta {"color":"#E0CF1A","family":"RNA","feature":"U4_U6_stem_II_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name U5_tri_snRNP_5GAO_U4_U6_stem_II_partner #336.1/V:128-139
+# U4 snRNA Brr2 loading region: residues 128-152, review-region, low confidence
+# selector_meta {"color":"#F0DF2E","family":"RNA","feature":"U4_Brr2_loading_region","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U5_tri_snRNP_5GAO_U4_Brr2_loading_region #336.1/V:128-152
+# U4 snRNA Sm site: residues 144-150, sequence-motif, medium confidence
+# selector_meta {"color":"#F5E85A","family":"RNA","feature":"U4_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U5_tri_snRNP_5GAO_U4_Sm_site #336.1/V:144-150
+# RNA feature nucleotide display.
+select #336.1 & nucleic
+nucleotides sel atoms
+select clear
+# U4/U6 stem I: residues 73-89
+color #336.1/V:73-89 #D8C800
+select #336.1/V:73-89
+nucleotides sel fill
+select clear
+# U4/U6 stem II: residues 128-139
+color #336.1/V:128-139 #E0CF1A
+select #336.1/V:128-139
+nucleotides sel fill
+select clear
+# U4 Brr2 region: residues 128-152
+color #336.1/V:128-152 #F0DF2E
+select #336.1/V:128-152
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #336.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/5gao_rna_labels.py
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

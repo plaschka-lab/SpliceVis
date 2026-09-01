@@ -172,11 +172,8 @@ name pdb_8I0P_U6_snRNP #377.1/F
 name pdb_8I0P_other #377.1/8,9,K,X,Y,Z,z
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -8-0, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_8I0P_5exon #377.1/G:-8-0
-# substrate RNA: residues -8-20;83-116, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_8I0P_substrate #377.1/G:-8-20,83-116
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_8I0P_5SS #377.1/G:1-6
@@ -231,7 +228,7 @@ select #377.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -8-0
-color #377.1/G:-8-0 #FF8C00
+color #377.1/G:-8-0 #FF9D00
 select #377.1/G:-8-0
 nucleotides sel fill
 select clear

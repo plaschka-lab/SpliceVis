@@ -194,20 +194,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "ILS_disassembly_3JB9_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 100-107; 492-504, component, medium confidence, validation not_applicable",
-      "atomspec": "#430.1/O:100-107|#430.1/Q:492-504",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "ILS_disassembly_3JB9_branch_region",
       "label": "branch point region",
       "category": "substrate RNA feature",

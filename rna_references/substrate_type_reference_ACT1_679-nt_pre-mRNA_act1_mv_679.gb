@@ -1,7 +1,7 @@
 LOCUS       ACT1_679-nt_pre-         679 bp    RNA              UNK 01-JAN-1980
 DEFINITION  ACT1 679-nt pre-mRNA; substrate_type_reference;
             reference=act1_mv_679; source=manual curation by Matthias Vorländer;
-            members=6.
+            members=8.
 ACCESSION   ACT1_679-nt_pre-
 VERSION     ACT1_679-nt_pre-
 KEYWORDS    .
@@ -15,8 +15,8 @@ FEATURES             Location/Qualifiers
                      selected from projected family annotations; members=6j6g:B,
                      6j6h:B; evidence=manual curation by Matthias Vorländer;
                      confidence=high"
-                     /ApEinfo_fwdcolor="#FF8C00"
-                     /ApEinfo_revcolor="#FF8C00"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
      misc_feature    10..28
                      /label="MS2 aptamer 1"
                      /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein
@@ -83,8 +83,8 @@ FEATURES             Location/Qualifiers
                      /label="3' exon"
                      /note="feature=exon_3; evidence=manual curation by Matthias
                      Vorländer; confidence=high"
-                     /ApEinfo_fwdcolor="#D97706"
-                     /ApEinfo_revcolor="#D97706"
+                     /ApEinfo_fwdcolor="#C65D00"
+                     /ApEinfo_revcolor="#C65D00"
 ORIGIN
         1 gagagauucc guacaccauc aggguacgag cuagcccaug gcguacacca ucaggguacg
        61 acuaguagau cucguacacc aucaggguac ggaauucucu agagugucga cggauccccc

@@ -183,7 +183,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "424.2.1.1",
       "label_category_model_id": "424.2.1",
       "label_group_model_id": "424.2",
@@ -224,20 +224,6 @@
       "label_category_model_id": "424.2.1",
       "label_group_model_id": "424.2",
       "label_default_visible": "true"
-    },
-    {
-      "name": "P_5YLZ_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues -13--1;1-15;282-304;345-355, component, medium confidence, validation not_applicable",
-      "atomspec": "#424.1/E:-13--1,1-15,282-304,345-355",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
     },
     {
       "name": "P_5YLZ_5SS",
@@ -323,7 +309,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_3",
-      "color": "#D97706",
+      "color": "#C65D00",
       "label_model_id": "424.2.1.8",
       "label_category_model_id": "424.2.1",
       "label_group_model_id": "424.2",

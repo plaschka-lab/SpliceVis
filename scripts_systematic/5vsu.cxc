@@ -15,7 +15,7 @@ open 5vsu id 327.1 name 5VSU
 # Rename 5VSU chains to systematic project IDs.
 # Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
 changechains #327.1 A,B,C,D,E,F,G,H,I TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 log false
-changechains #327.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 XB9,6L2,6L3,6L4,6L5,6L6,6L7,6L8,M log false
+changechains #327.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 XB9,6L2,6L3,6L4,6L5,6L6,6L7,6L8,6 log false
 rename #327 U6_snRNP_5vsu_structure
 
 # No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
@@ -60,15 +60,15 @@ color #327.1/6L6 #F4A3A8
 color #327.1/6L7 #F4A3A8
 # U6 LSm: LSM8
 color #327.1/6L8 #F4A3A8
-# RNA/substrate: mRNA
-color #327.1/M #303030
+# U6 snRNP: U6 snRNA
+color #327.1/6 #EF4444
 # Named selections for systematic-chain subcomplexes.
-# RNA/substrate
-# selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_5VSU_RNA_substrate #327.1/M
 # U6 LSm
 # selector_meta {"color":"#FECACA","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
 name pdb_5VSU_U6_LSm #327.1/6L2,6L3,6L4,6L5,6L6,6L7,6L8
+# U6 snRNP
+# selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name pdb_5VSU_U6_snRNP #327.1/6
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_5VSU_other #327.1/XB9
@@ -146,10 +146,39 @@ name spliceosome_U6_snRNP /6,6R1,6R2
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBYA,XBYB,XBZ,XCA,XCB,XCC,XCD,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
-# Named selections for resolved substrate RNA features.
-# substrate RNA: residues 34-79;81-102;108-112, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U6_snRNP_5VSU_substrate #327.1/M:34-79,81-102,108-112
+# Named selections for resolved snRNA functional regions.
+# U6 snRNA U2/U6 helix I partner: residues 41-66, motif-neighborhood, medium confidence
+# selector_meta {"color":"#D0183C","family":"RNA","feature":"U6_U2_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name U6_snRNP_5VSU_U6_U2_helix_I_partner #327.1/6:41-66
+# U6 snRNA 5' splice-site upstream contact: residues 44-55, motif-neighborhood, medium confidence
+# selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNP_5VSU_U6_5SS_upstream_contact #327.1/6:44-55
+# U6 snRNA ACAGAGA box: residues 47-53, sequence-motif, high confidence
+# selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name U6_snRNP_5VSU_U6_ACAGAGA_box #327.1/6:47-53
+# RNA feature nucleotide display.
+select #327.1 & nucleic
+nucleotides sel atoms
+select clear
+# U2/U6 helix I: residues 41-66
+color #327.1/6:41-66 #D0183C
+select #327.1/6:41-66
+nucleotides sel fill
+select clear
+# U6 5'SS contact: residues 44-55
+color #327.1/6:44-55 #E01842
+select #327.1/6:44-55
+nucleotides sel fill
+select clear
+# U6 ACAGAGA: residues 47-53
+color #327.1/6:47-53 #DC143C
+select #327.1/6:47-53
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #327.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic/label_scripts/5vsu_rna_labels.py
 # Searchable named selection browser.
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.

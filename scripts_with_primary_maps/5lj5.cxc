@@ -164,20 +164,17 @@ name pdb_5LJ5_U6_snRNP #407.1/V
 name pdb_5LJ5_other #407.1/F,Q,x
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -16--1, component-name, high confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5LJ5_5exon #407.1/E:-16--1
-# substrate RNA: residues -16--1; 1-10;54-76, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_5LJ5_substrate #407.1/E:-16--1|#407.1/I:1-10,54-76
 # 5' splice site: residues 1-6, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5LJ5_5SS #407.1/I:1-6
 # intron from 5' splice site: residues 1-10;54-76, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5LJ5_intron #407.1/I:1-10,54-76
-# branch point region: residues 66-72, network-scored-motif, high confidence, validation validated
+# branch point region: residues 65-71, network-scored-motif; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_5LJ5_branch_region #407.1/I:66-72
+name C_5LJ5_branch_region #407.1/I:65-71
 # branch point adenosine: residues 70, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5LJ5_branch_A #407.1/I:70
@@ -217,13 +214,13 @@ select #407.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -16--1
-color #407.1/E:-16--1 #FF8C00
+color #407.1/E:-16--1 #FF9D00
 select #407.1/E:-16--1
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-10;54-76
-# BP region: residues 66-72
+# BP region: residues 65-71
 # BP-A: residues 70
 # U2/U6 helix I: residues 26-30
 color #407.1/Z:26-30 #047857

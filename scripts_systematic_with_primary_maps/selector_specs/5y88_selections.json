@@ -548,20 +548,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "ILS_disassembly_5Y88_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 1-15;492-504, component, medium confidence, validation not_applicable",
-      "atomspec": "#431.1/I:1-15,492-504",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "ILS_disassembly_5Y88_branch_region",
       "label": "branch point region",
       "category": "substrate RNA feature",

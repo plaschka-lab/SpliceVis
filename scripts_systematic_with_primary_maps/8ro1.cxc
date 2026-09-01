@@ -261,9 +261,6 @@ name ILS_disassembly_8RO1_intron #435.1/I:1-2,10-28,40-51
 # intron lariat: residues 1-2;10-28;40-51, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron_lariat","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_8RO1_intron_lariat #435.1/I:1-2,10-28,40-51
-# substrate RNA: residues 1-2;10-28;40-51, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_8RO1_substrate #435.1/I:1-2,10-28,40-51
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}

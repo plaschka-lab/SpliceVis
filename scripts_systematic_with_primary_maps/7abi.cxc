@@ -270,11 +270,8 @@ name spliceosome_U6_snRNP /6,6R1,6R2
 name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBYA,XBYB,XBZ,XCA,XCB,XCC,XCD,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues 50-58, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_7ABI_5exon #376.1/M:50-58
-# substrate RNA: residues 50-78;141-168, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABI_substrate #376.1/M:50-78,141-168
 # 5' splice site: residues 59-64, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_7ABI_5SS #376.1/M:59-64
@@ -287,6 +284,9 @@ name pre_Bact_7ABI_branch_region #376.1/M:150-156
 # branch point adenosine: residues 155, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_7ABI_branch_A #376.1/M:155
+# polypyrimidine tract: residues 161-168, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"polypyrimidine_tract","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name pre_Bact_7ABI_PPT #376.1/M:161-168
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
@@ -326,7 +326,7 @@ select #376.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 50-58
-color #376.1/M:50-58 #FF8C00
+color #376.1/M:50-58 #FF9D00
 select #376.1/M:50-58
 nucleotides sel fill
 select clear
@@ -334,6 +334,7 @@ select clear
 # intron: residues 59-78;141-168
 # BP region: residues 150-156
 # BP-A: residues 155
+# PPT: residues 161-168
 # U2/U6 helix I: residues 26-30
 color #376.1/2:26-30 #047857
 select #376.1/2:26-30

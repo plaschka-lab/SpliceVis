@@ -198,9 +198,6 @@ name C_8I0W_5SS #412.1/6:1-6
 # intron: residues 1-31;69-107, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0W_intron #412.1/6:1-31,69-107
-# substrate RNA: residues -23--18;-12--1; 1-31;69-107, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_8I0W_substrate #412.1/6:1-31,69-107|#412.1/G:-23--18,-12--1
 # branch point region: residues 92-99, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0W_branch_region #412.1/6:92-99
@@ -211,7 +208,7 @@ name C_8I0W_branch_A #412.1/6:97
 # selector_meta {"color":"#303030","family":"RNA","feature":"polypyrimidine_tract","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0W_PPT #412.1/6:103-107
 # 5' exon: residues -23--1, manual-review-addition, high confidence, validation validated
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_8I0W_5exon #412.1/G:-23--1
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
@@ -257,7 +254,7 @@ select clear
 # BP-A: residues 97
 # PPT: residues 103-107
 # 5' exon: residues -23--1
-color #412.1/G:-23--1 #FF8C00
+color #412.1/G:-23--1 #FF9D00
 select #412.1/G:-23--1
 nucleotides sel fill
 select clear

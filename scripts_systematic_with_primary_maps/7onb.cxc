@@ -156,12 +156,12 @@ name spliceosome_U6_snRNP /6,6R1,6R2
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBYA,XBYB,XBZ,XCA,XCB,XCC,XCD,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 129-142, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7ONB_substrate #309.1/M:129-142
-# branch point region: residues 129-142, u2-branch-region-basepair, high confidence, validation validated
+# intron: residues 129-142, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name U2_snRNP_7ONB_intron #309.1/M:129-142
+# branch point region: residues 139-142, u2-branch-region-basepair; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7ONB_branch_region #309.1/M:129-142
+name U2_snRNP_7ONB_branch_region #309.1/M:139-142
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA branchpoint pairing region: residues 34-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
@@ -173,7 +173,8 @@ name U2_snRNP_7ONB_U2_stem_IIa #309.1/2:46-65
 select #309.1 & nucleic
 nucleotides sel atoms
 select clear
-# BP region: residues 129-142
+# intron: residues 129-142
+# BP region: residues 139-142
 # U2 BP pairing: residues 34-41
 color #309.1/2:34-41 #0B6E2D
 select #309.1/2:34-41

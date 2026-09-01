@@ -250,9 +250,6 @@ name ILS_disassembly_8RO0_intron #434.1/XAM:10-28
 # intron lariat: residues 10-28, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron_lariat","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_8RO0_intron_lariat #434.1/XAM:10-28
-# substrate RNA: residues 10-28, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_8RO0_substrate #434.1/XAM:10-28
 # Named selections for resolved snRNA functional regions.
 # U5 snRNA loop I: residues 41-45, sequence-motif, medium confidence
 # selector_meta {"color":"#1B3CD0","family":"RNA","feature":"U5_loop_I","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}

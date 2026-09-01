@@ -99,25 +99,11 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "333.2.1.1",
       "label_category_model_id": "333.2.1",
       "label_group_model_id": "333.2",
       "label_default_visible": "true"
-    },
-    {
-      "name": "A_complex_7OQE_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues -2,-1,1,2,3,4,5,6,7,8;103-128;130-156;246-268, component, medium confidence, validation not_applicable",
-      "atomspec": "#333.1/I:-2,-1,1,2,3,4,5,6,7,8,103-128,130-156,246-268",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
     },
     {
       "name": "A_complex_7OQE_5SS",

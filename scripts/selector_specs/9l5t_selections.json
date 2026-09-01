@@ -183,7 +183,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "403.2.1.1",
       "label_category_model_id": "403.2.1",
       "label_group_model_id": "403.2",

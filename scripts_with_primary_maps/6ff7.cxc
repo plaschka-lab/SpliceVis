@@ -204,11 +204,8 @@ name pdb_6FF7_U6_snRNP #386.1/6
 name pdb_6FF7_other #386.1/0,1,3,Y,q,s,t
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues 233-242, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_6FF7_5exon #386.1/Z:233-242
-# substrate RNA: residues 233-262;380-397, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_6FF7_substrate #386.1/Z:233-262,380-397
 # 5' splice site: residues 243-248, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_6FF7_5SS #386.1/Z:243-248
@@ -257,7 +254,7 @@ select #386.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 233-242
-color #386.1/Z:233-242 #FF8C00
+color #386.1/Z:233-242 #FF9D00
 select #386.1/Z:233-242
 nucleotides sel fill
 select clear

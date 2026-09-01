@@ -1,5 +1,7 @@
 member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
 5lqw:9,5lqw,9,572,54,0.0944,"66-94,345-369"
+6bk8:e,6bk8,e,34,34,1.0000,1-34
+6bk8:i,6bk8,i,59,59,1.0000,1-59
 6j6g:B,6j6g,B,679,60,0.0884,"180-209,439-468"
 6j6h:B,6j6h,B,679,60,0.0884,"180-209,439-468"
 6n7r:r,6n7r,r,240,63,0.2625,178-240

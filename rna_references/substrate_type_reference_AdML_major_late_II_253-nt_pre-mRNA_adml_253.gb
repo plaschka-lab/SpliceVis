@@ -14,8 +14,8 @@ FEATURES             Location/Qualifiers
                      evidence=Wansink et al. 1994 Figure 2;
                      source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
                      confidence=high"
-                     /ApEinfo_fwdcolor="#FF8C00"
-                     /ApEinfo_revcolor="#FF8C00"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
      misc_feature    103..108
                      /label="5' splice site"
                      /note="feature=five_prime_splice_site; GUGAGU at the intron
@@ -70,8 +70,8 @@ FEATURES             Location/Qualifiers
                      evidence=Wansink et al. 1994 Figure 2;
                      source=https://pubmed.ncbi.nlm.nih.gov/8072491/;
                      confidence=high"
-                     /ApEinfo_fwdcolor="#D97706"
-                     /ApEinfo_revcolor="#D97706"
+                     /ApEinfo_fwdcolor="#C65D00"
+                     /ApEinfo_revcolor="#C65D00"
 ORIGIN
         1 gaauagaagu auagugccgu ucuuuugagc ggccuauuac ccaagcuugg cguucguccu
        61 cacucucuuc cgcaucgcug ucugcgaggg ccagcuguug gggugagucu gaucagcuug

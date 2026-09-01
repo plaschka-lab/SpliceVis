@@ -15,8 +15,8 @@ FEATURES             Location/Qualifiers
                      selected fromprojected family annotations; members=6j6n:B,
                      6j6q:B; evidence=manual curation by Matthias Vorländer;
                      confidence=high"
-                     /ApEinfo_fwdcolor="#FF8C00"
-                     /ApEinfo_revcolor="#FF8C00"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
      misc_feature    23..28
                      /label="5' splice site"
                      /note="feature=five_prime_splice_site;
@@ -68,8 +68,8 @@ FEATURES             Location/Qualifiers
                      selected fromprojected family annotations; members=9dtr:E;
                      evidence=manual curation by Matthias Vorländer;
                      confidence=high"
-                     /ApEinfo_fwdcolor="#D97706"
-                     /ApEinfo_revcolor="#D97706"
+                     /ApEinfo_fwdcolor="#C65D00"
+                     /ApEinfo_revcolor="#C65D00"
      misc_feature    161..179
                      /label="MS2 aptamer 1"
                      /note="feature=ms2_aptamer; Exact 19-nt MS2 coat-protein

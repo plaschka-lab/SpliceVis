@@ -169,11 +169,8 @@ name pdb_7DCO_U6_snRNP #387.1/F
 name pdb_7DCO_other #387.1/2,5,M,P,T,X,Y,Z,a,c,h,n,o,p,x,y,z
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues 74-99, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_7DCO_5exon #387.1/G:74-99
-# substrate RNA: residues 74-115;468-475;479-484;486-525;528-536, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_7DCO_substrate #387.1/G:74-115,468-475,479-484,486-525,528-536
 # 5' splice site: residues 100-105, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_7DCO_5SS #387.1/G:100-105
@@ -225,7 +222,7 @@ select #387.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 74-99
-color #387.1/G:74-99 #FF8C00
+color #387.1/G:74-99 #FF9D00
 select #387.1/G:74-99
 nucleotides sel fill
 select clear

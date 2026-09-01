@@ -109,11 +109,8 @@ name pdb_8Q7N_U6_snRNP #367.1/6
 name pdb_8Q7N_other #367.1/I,K,T,X,r,s
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues 49-58, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8Q7N_5exon #367.1/Z:49-58
-# substrate RNA: residues 49-79, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_8Q7N_substrate #367.1/Z:49-79
 # 5' splice site: residues 59-64, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_8Q7N_5SS #367.1/Z:59-64
@@ -156,7 +153,7 @@ select #367.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 49-58
-color #367.1/Z:49-58 #FF8C00
+color #367.1/Z:49-58 #FF9D00
 select #367.1/Z:49-58
 nucleotides sel fill
 select clear

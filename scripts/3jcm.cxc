@@ -131,11 +131,8 @@ name pdb_3JCM_U6_LSm #339.1/b,c,d,e,f,g,h
 name pdb_3JCM_U6_snRNP #339.1/D
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -6-4, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U5_tri_snRNP_3JCM_5exon #339.1/C:-6-4
-# substrate RNA: residues -6-13, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U5_tri_snRNP_3JCM_substrate #339.1/C:-6-13
 # 5' splice site: residues 5-10, network-scored-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U5_tri_snRNP_3JCM_5SS #339.1/C:5-10
@@ -187,7 +184,7 @@ select #339.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -6-4
-color #339.1/C:-6-4 #FF8C00
+color #339.1/C:-6-4 #FF9D00
 select #339.1/C:-6-4
 nucleotides sel fill
 select clear

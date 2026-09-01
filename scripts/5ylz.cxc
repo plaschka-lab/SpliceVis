@@ -162,7 +162,7 @@ name pdb_5YLZ_U6_snRNP #424.1/D
 name pdb_5YLZ_other #424.1/U
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -13--1, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_5exon #424.1/E:-13--1
 # intron: residues -13--1;1-15;282-304;345-355, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
@@ -170,9 +170,6 @@ name P_5YLZ_intron #424.1/E:-13--1,1-15,282-304,345-355
 # intron lariat: residues -13--1;1-15;282-304;345-355, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron_lariat","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_intron_lariat #424.1/E:-13--1,1-15,282-304,345-355
-# substrate RNA: residues -13--1;1-15;282-304;345-355, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_5YLZ_substrate #424.1/E:-13--1,1-15,282-304,345-355
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_5SS #424.1/E:1-6
@@ -186,7 +183,7 @@ name P_5YLZ_branch_A #424.1/E:301
 # selector_meta {"color":"#303030","family":"RNA","feature":"three_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_3SS #424.1/E:348-350
 # 3' exon: residues 351-355, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#D97706","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#C65D00","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name P_5YLZ_3exon #424.1/E:351-355
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
@@ -227,7 +224,7 @@ select #424.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -13--1
-color #424.1/E:-13--1 #FF8C00
+color #424.1/E:-13--1 #FF9D00
 select #424.1/E:-13--1
 nucleotides sel fill
 select clear
@@ -238,7 +235,7 @@ select clear
 # BP-A: residues 301
 # 3'SS: residues 348-350
 # 3' exon: residues 351-355
-color #424.1/E:351-355 #D97706
+color #424.1/E:351-355 #C65D00
 select #424.1/E:351-355
 nucleotides sel fill
 select clear

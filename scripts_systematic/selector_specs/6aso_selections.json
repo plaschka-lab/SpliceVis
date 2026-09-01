@@ -4,20 +4,6 @@
   "structure_group_id": "328",
   "selectors": [
     {
-      "name": "pdb_6ASO_RNA_substrate",
-      "label": "RNA/substrate",
-      "category": "subcomplex",
-      "section": "Named selections for systematic-chain subcomplexes.",
-      "comment": "RNA/substrate",
-      "atomspec": "#328.1/M",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "",
-      "kind": "subcomplex",
-      "feature": "",
-      "color": "#303030"
-    },
-    {
       "name": "pdb_6ASO_U6_LSm",
       "label": "U6 LSm",
       "category": "subcomplex",
@@ -30,6 +16,20 @@
       "kind": "subcomplex",
       "feature": "",
       "color": "#FECACA"
+    },
+    {
+      "name": "pdb_6ASO_U6_snRNP",
+      "label": "U6 snRNP",
+      "category": "subcomplex",
+      "section": "Named selections for systematic-chain subcomplexes.",
+      "comment": "U6 snRNP",
+      "atomspec": "#328.1/6",
+      "family": "Protein/RNP groups",
+      "group": "U6 snRNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#DC143C"
     },
     {
       "name": "pdb_6ASO_other",
@@ -382,18 +382,58 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "U6_snRNP_6ASO_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 33-79;81-98;109-113, component, medium confidence, validation not_applicable",
-      "atomspec": "#328.1/M:33-79,81-98,109-113",
+      "name": "U6_snRNP_6ASO_U6_U2_helix_I_partner",
+      "label": "U6 snRNA U2/U6 helix I partner",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA U2/U6 helix I partner: residues 41-66, motif-neighborhood, medium confidence",
+      "atomspec": "#328.1/6:41-66",
       "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
+      "group": "snRNA-snRNA interacting regions",
+      "group_key": "snRNA_snRNA_regions",
       "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
+      "feature": "U6_U2_helix_I_partner",
+      "color": "#D0183C",
+      "label_model_id": "328.2.1.1",
+      "label_category_model_id": "328.2.1",
+      "label_group_model_id": "328.2",
+      "label_default_visible": ""
+    },
+    {
+      "name": "U6_snRNP_6ASO_U6_5SS_upstream_contact",
+      "label": "U6 snRNA 5' splice-site upstream contact",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA 5' splice-site upstream contact: residues 44-55, motif-neighborhood, medium confidence",
+      "atomspec": "#328.1/6:44-55",
+      "family": "RNA",
+      "group": "other snRNA regions",
+      "group_key": "other_snRNA_regions",
+      "kind": "rna_feature",
+      "feature": "U6_5SS_upstream_contact",
+      "color": "#E01842",
+      "label_model_id": "328.2.2.1",
+      "label_category_model_id": "328.2.2",
+      "label_group_model_id": "328.2",
+      "label_default_visible": "true"
+    },
+    {
+      "name": "U6_snRNP_6ASO_U6_ACAGAGA_box",
+      "label": "U6 snRNA ACAGAGA box",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA ACAGAGA box: residues 47-53, sequence-motif, high confidence",
+      "atomspec": "#328.1/6:47-53",
+      "family": "RNA",
+      "group": "other snRNA regions",
+      "group_key": "other_snRNA_regions",
+      "kind": "rna_feature",
+      "feature": "U6_ACAGAGA_box",
+      "color": "#DC143C",
+      "label_model_id": "328.2.3.1",
+      "label_category_model_id": "328.2.3",
+      "label_group_model_id": "328.2",
+      "label_default_visible": ""
     }
   ]
 }

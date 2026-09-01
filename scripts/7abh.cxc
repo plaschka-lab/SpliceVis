@@ -88,9 +88,6 @@ name pdb_7ABH_U2_SF3B #374.1/4,E,F,T,u,w,x,y,z
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_7ABH_other #374.1/0,1,7,Y
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 141-168, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name pre_Bact_7ABH_substrate #374.1/Z:141-168
 # intron: residues 141-168, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_Bact_7ABH_intron #374.1/Z:141-168

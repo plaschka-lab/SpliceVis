@@ -1,3 +1,4 @@
 member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
 8c6j:E,8c6j,E,242,24,0.0992,219-242
 8c6j:I,8c6j,I,235,84,0.3574,"1-22,132-193"
+9r3d:Z,9r3d,Z,29,29,1.0000,1-29

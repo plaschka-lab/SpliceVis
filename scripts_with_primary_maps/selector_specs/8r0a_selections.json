@@ -172,20 +172,6 @@
       "color": "#DC143C"
     },
     {
-      "name": "pre_B_8R0A_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues -3,-2,-1,1,2,3,4,5,6,7,8; 29-43, component, medium confidence, validation not_applicable",
-      "atomspec": "#360.1/Z:29-43|#360.1/z:-3,-2,-1,1,2,3,4,5,6,7,8",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "pre_B_8R0A_intron",
       "label": "intron",
       "category": "substrate RNA feature",
@@ -251,7 +237,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "360.2.1.4",
       "label_category_model_id": "360.2.1",
       "label_group_model_id": "360.2",

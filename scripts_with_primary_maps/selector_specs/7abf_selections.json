@@ -99,25 +99,11 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "373.2.1.1",
       "label_category_model_id": "373.2.1",
       "label_group_model_id": "373.2",
       "label_default_visible": "true"
-    },
-    {
-      "name": "pre_Bact_7ABF_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 50-78, component, medium confidence, validation not_applicable",
-      "atomspec": "#373.1/Z:50-78",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
     },
     {
       "name": "pre_Bact_7ABF_5SS",

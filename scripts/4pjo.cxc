@@ -138,11 +138,8 @@ name pdb_4PJO_U1_Sm_ring #303.1/A,B,C,D,E,F,G,O,P,Q,R,S,T,U,a,b,c,d,e,f,g,o,p,q,
 name pdb_4PJO_U1_snRNP #303.1/1,2,3,4,K,L,M,N,k,l,m,n
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues 1-2, five-ss-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U1_snRNP_4PJO_5exon #303.1/X:1-2|#303.1/Y:1-2|#303.1/x:1-2|#303.1/y:1-2
-# substrate RNA: residues 1-10, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U1_snRNP_4PJO_substrate #303.1/X:1-10|#303.1/Y:1-10|#303.1/x:1-10|#303.1/y:1-10
 # 5' splice site: residues 3-8, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U1_snRNP_4PJO_5SS #303.1/X:3-8|#303.1/Y:3-8|#303.1/x:3-8|#303.1/y:3-8
@@ -161,7 +158,7 @@ select #303.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 1-2
-color #303.1/X:1-2|#303.1/Y:1-2|#303.1/x:1-2|#303.1/y:1-2 #FF8C00
+color #303.1/X:1-2|#303.1/Y:1-2|#303.1/x:1-2|#303.1/y:1-2 #FF9D00
 select #303.1/X:1-2|#303.1/Y:1-2|#303.1/x:1-2|#303.1/y:1-2
 nucleotides sel fill
 select clear

@@ -71,9 +71,6 @@ name pdb_7Q4O_U2_snRNP #312.1/2
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
 name pdb_7Q4O_U2_SF3B #312.1/1,9,A,B,C,E,F,G
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 1-13, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7Q4O_substrate #312.1/h:1-13
 # branch point region: residues 2-12, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U2_snRNP_7Q4O_branch_region #312.1/h:2-12

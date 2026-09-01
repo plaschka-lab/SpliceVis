@@ -194,9 +194,6 @@ name B_5NRL_5SS #363.1/I:6
 # intron: residues 6-8;51-53;57-79, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_5NRL_intron #363.1/I:6-8,51-53,57-79
-# substrate RNA: residues 6-8;51-53;57-79, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_5NRL_substrate #363.1/I:6-8,51-53,57-79
 # branch point region: residues 62-72, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_5NRL_branch_region #363.1/I:62-72

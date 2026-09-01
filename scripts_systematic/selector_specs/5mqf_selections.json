@@ -494,20 +494,6 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "Cstar_5MQF_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 47-58; 59-67;135-157, component, medium confidence, validation not_applicable",
-      "atomspec": "#416.1/IA:59-67,135-157|#416.1/IB:47-58",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "Cstar_5MQF_5SS",
       "label": "5' splice site",
       "category": "substrate RNA feature",
@@ -591,7 +577,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "416.2.1.5",
       "label_category_model_id": "416.2.1",
       "label_group_model_id": "416.2",

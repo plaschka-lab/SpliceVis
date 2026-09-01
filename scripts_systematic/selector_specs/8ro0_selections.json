@@ -516,20 +516,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "ILS_disassembly_8RO0_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 10-28, component, medium confidence, validation not_applicable",
-      "atomspec": "#434.1/XAM:10-28",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "ILS_disassembly_8RO0_U5_loop_I",
       "label": "U5 snRNA loop I",
       "category": "snRNA feature",

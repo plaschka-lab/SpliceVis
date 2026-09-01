@@ -3,23 +3,29 @@ CLUSTAL W reference-guided alignment
 REFERENCE  GAAUACAAGCUCAUCCGAUAUCCGUACACCAUCAGGGUACGAGCUAGCCCAUGGCGUACACCAUCAGGGUACGACUAGUA
 8c6j:E     GAAUACAAGCUCAUCCGAUAUCCGUACACCAUCAGGGUACGAGCUAGCCCAUGGCGUACACCAUCAGGGUACGACUAGUA
 8c6j:I     G-------------------------------------------------------------------------------
+9r3d:Z     G-------------------------------------------------------------------------------
 
 REFERENCE  GAUCUCGUACACCAUCAGGGUACGGAAUUCUCUAGAGUCGAGGAGGACAUCUCAGCAAAAGAGAAGCUGCUGCGGGCGUC
 8c6j:E     GAUCUCGUACACCAUCAGGGUACGGAAUUCUCUAGAGUCGAGGAGGACAUCUCAGCAAAAGAGAAGCUGCUGCGGGCGUC
 8c6j:I     --------------------------------------------------------------------------------
+9r3d:Z     --------------------------------------------------------------------------------
 
 REFERENCE  GGAGGACGAGCGGGACCGGGUGCUGGAGGAGCUGCACAAGGCAGAGGACAGCCUGCUGGCUGCCGACGAGACCGCCGCCA
 8c6j:E     GGAGGACGAGCGGGACCGGGUGCUGGAGGAGCUGCACAAGGCAGAGGACAGCCUGCUGGCUGCCGACGAGACCGCCGCCA
 8c6j:I     --------------------------------------------------------------------------------
+9r3d:Z     --------------------------------------------------------------------------CCGCCA
 
 REFERENCE  AGGUAUGUAUCAAGCUUACAAGACAGCUUUAAGGAGACCAAUAGAAACUGGGCAUGUGGAGACAGAGAAGACUCUUGGCC
 8c6j:E     AG------------------------------------------------------------------------------
 8c6j:I     ---UAUGUAUCAAGCUUACAAGACAGCUUUAAGGAGACCAAUAGAAACUGGGCAUGUGGAGACAGAGAAGACUCUUGGCC
+9r3d:Z     AGGUAUGUAUCAAGCUUACAAG----------------------------------------------------------
 
 REFERENCE  UCGAGAAACCUGUAACUGGAAUGUGUGUGGAGUGUGACUGAUAGAACACUACCUGAUUCUUAUGUAUUUACUGACCUGUG
 8c6j:E     --------------------------------------------------------------------------------
 8c6j:I     UCGAGAAACCUGUAACUGGAAUGUGUGUGGAGUGUGACUGAUAGAACACUACCUGAUUCUUAUGUAUUUACUGACCUGUG
+9r3d:Z     --------------------------------------------------------------------------------
 
 REFERENCE  UUUUUUUGCUACUUUUUUUCUUUUCUCCCCUUCCCCUUUCCCUAUUUUUUUUCUUGCCCUGAUCCGGAAUUUGGAUCC
 8c6j:E     ------------------------------------------------------------------------------
 8c6j:I     UUUUUUUGCUACUUUUUUUCUUUUCUCCCCUUCCCCUUUCCCUAUUUUUUUUCUUGCCCUGAUCCGGAAUUUGGAUC-
+9r3d:Z     ------------------------------------------------------------------------------

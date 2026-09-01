@@ -208,20 +208,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "B_5NRL_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 6-8;51-53;57-79, component, medium confidence, validation not_applicable",
-      "atomspec": "#363.1/I:6-8,51-53,57-79",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "B_5NRL_branch_region",
       "label": "branch point region",
       "category": "substrate RNA feature",

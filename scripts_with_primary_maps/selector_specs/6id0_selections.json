@@ -130,20 +130,6 @@
       "color": "#DC143C"
     },
     {
-      "name": "ILS_disassembly_6ID0_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 1-31;116-154, component, medium confidence, validation not_applicable",
-      "atomspec": "#432.1/G:1-31,116-154",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "ILS_disassembly_6ID0_5SS",
       "label": "5' splice site",
       "category": "substrate RNA feature",

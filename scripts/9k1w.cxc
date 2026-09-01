@@ -62,9 +62,6 @@ name pdb_9K1W_U2_snRNP #320.1/H
 # selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
 name pdb_9K1W_U2_SF3B #320.1/A,B,C,D
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 27-48, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9K1W_substrate #320.1/G:27-48
 # branch point region: residues 28-38, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U2_snRNP_9K1W_branch_region #320.1/G:28-38

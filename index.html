@@ -457,7 +457,7 @@
               <section class="active-filter-panel" id="activeFilterPanel" hidden><div class="panel-body"><strong>Filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
               <section class="structure-browser">
                 <div class="structure-list-head"><h3>Associated Structures</h3><div class="structure-list-tools"><span class="subtle" id="tableCount"></span><label class="inline-toggle" title="When enabled, clicking a structure row opens a clean selected-structure panel in a new browser tab."><input id="openPanelOnly" type="checkbox"> Open structure in new tab</label></div></div>
-                <div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="resolution">Res.</th><th data-sort="year">Year</th><th data-sort="chains">Chains</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
+                <div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="substrate">(pre-)mRNA type</th><th data-sort="resolution">Res.</th><th data-sort="year">Year</th><th data-sort="chains">Chains</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
               </section>
             </div>
           </section>
@@ -826,6 +826,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         else if(state.sortBy==="species") value = String(a.species).localeCompare(String(b.species));
         else if(state.sortBy==="title") value = String(a.title).localeCompare(String(b.title));
         else if(state.sortBy==="state") value = String(a.state).localeCompare(String(b.state));
+        else if(state.sortBy==="substrate") value = substrateTypeLabel(a).localeCompare(substrateTypeLabel(b));
         else value = (ORDER[a.state]??99)-(ORDER[b.state]??99) || a.pdb_id.localeCompare(b.pdb_id);
         if(value === 0) value = a.pdb_id.localeCompare(b.pdb_id);
         return state.sortDir === "desc" ? -value : value;
@@ -1089,10 +1090,10 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         const message = hasActiveStructureFilters()
           ? "No deposited structures match the current filters. Clear the active filter chips above or press Reset to broaden the search."
           : "No deposited structures are available for this view.";
-        els.rows.innerHTML = `<tr><td colspan="12" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
+        els.rows.innerHTML = `<tr><td colspan="13" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
         return;
       }
-      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()" style="color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
+      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); const substrate=substrateTypeLabel(r); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()" style="color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}</td><td title="${attr(substrate)}">${esc(substrate)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
       for (const row of els.rows.querySelectorAll("tr")) {
         row.addEventListener("click", event => {
           const button = event.target.closest("[data-compare]");
@@ -1107,6 +1108,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
           autoLoadMolstarForSelected();
         });
       }
+    }
+    function substrateTypeLabel(r){
+      const values=unique((r.substrate_types||[]).map(item=>item.family||item.type).filter(Boolean));
+      if(!values.length) return "none";
+      return values.map(value=>value==="Other/unspecified substrate"?"Unspecified":value).join(", ");
     }
     function structurePanelUrl(pdbId){
       const url = new URL(window.location.href);
@@ -1716,25 +1722,31 @@ ${await scriptFor(record,"no_maps")}
       const grouped=new Map();
       for(const item of items){
         const key=`${item.type}|${item.family}`;
-        const group=grouped.get(key)||{...item,chains:[],names:[]};
+        const group=grouped.get(key)||{...item,chains:[],names:[],pairwiseAlignments:[]};
         group.chains.push(item.chains||"");
         group.names.push(item.molecule_name||"");
+        group.pairwiseAlignments.push(...(item.pairwise_alignments||[]));
         grouped.set(key,group);
       }
       return `<h3>Pre-mRNA substrate</h3><div class="mini-list">${[...grouped.values()].map(item=>{
-        const links=[
-          item.reference_genbank?`<a href="${attr(item.reference_genbank)}" download title="Download the annotated GenBank reference for inspection or editing in SnapGene.">GenBank</a>`:"",
-          item.reference_alignment_html?`<a href="${attr(item.reference_alignment_html)}" target="_blank" rel="noopener" title="Open the construct alignment with modelled and unresolved residues distinguished.">Coverage MSA</a>`:"",
-          item.reference_alignment?`<a href="${attr(item.reference_alignment)}" download title="Download the construct multiple-sequence alignment in Clustal format.">Clustal</a>`:"",
-          item.reference_alignment_stockholm?`<a href="${attr(item.reference_alignment_stockholm)}" download title="Download the Stockholm alignment with a per-structure MODEL mask.">Stockholm mask</a>`:"",
-          item.reference_modelled_coverage?`<a href="${attr(item.reference_modelled_coverage)}" download title="Download modelled-residue coverage and ranges for every structure chain.">Coverage table</a>`:"",
-          item.reference_feature_table?`<a href="${attr(item.reference_feature_table)}" download title="Download the curated, nonredundant reference-feature intervals.">Reference features</a>`:"",
-          item.reference_projection_table?`<a href="${attr(item.reference_projection_table)}" download title="Download literature-curated reference features projected onto each deposited polymer sequence for audit.">Structure projections</a>`:""
+        const pairwise=unique(item.pairwiseAlignments.map(value=>JSON.stringify(value))).map(value=>JSON.parse(value));
+        const primaryLinks=[
+          item.reference_genbank?`<a href="${attr(item.reference_genbank)}" download title="Download the annotated reference sequence and features for SnapGene.">Annotated reference (GenBank)</a>`:"",
+          item.reference_alignment_html?`<a href="${attr(item.reference_alignment_html)}" target="_blank" rel="noopener" title="Open the family-wide reference alignment with modelled and unresolved residues distinguished.">Family alignment</a>`:"",
+          ...pairwise.map(alignment=>alignment.alignment_html?`<a href="${attr(alignment.alignment_html)}" target="_blank" rel="noopener">Chain ${esc(alignment.chain)} vs reference</a>`:""),
+          ...pairwise.map(alignment=>alignment.alignment_fasta?`<a href="${attr(alignment.alignment_fasta)}" download>Chain ${esc(alignment.chain)} aligned FASTA</a>`:"")
+        ].filter(Boolean).join(" · ");
+        const advancedLinks=[
+          item.reference_alignment?`<a href="${attr(item.reference_alignment)}" download>Family MSA (Clustal)</a>`:"",
+          item.reference_alignment_stockholm?`<a href="${attr(item.reference_alignment_stockholm)}" download>Model mask (Stockholm)</a>`:"",
+          item.reference_modelled_coverage?`<a href="${attr(item.reference_modelled_coverage)}" download>Modelled-residue coverage</a>`:"",
+          item.reference_feature_table?`<a href="${attr(item.reference_feature_table)}" download>Reference feature table</a>`:"",
+          item.reference_projection_table?`<a href="${attr(item.reference_projection_table)}" download>All structure projections</a>`:""
         ].filter(Boolean).join(" · ");
         const reference=item.reference_label
           ? ` Curated reference: ${item.reference_url?`<a href="${attr(item.reference_url)}" target="_blank" rel="noopener">${esc(item.reference_label)}</a>`:esc(item.reference_label)}${item.reference_source?` (${esc(item.reference_source)})`:""}.`
           : " No curated construct-level reference is assigned.";
-        return `<div><strong>${esc(item.type||item.family)}</strong> ${confidenceBadge(item.confidence)}${links?` <span class="reference-links">${links}</span>`:""}<br><span class="subtle">Family: ${esc(item.family||"unassigned")}; deposited chain(s): ${esc(unique(item.chains.flatMap(value=>String(value).split(/;\s*/))).join(", ")||"n/a")}. ${esc(item.evidence||"")}${reference}</span></div>`;
+        return `<div><strong>${esc(item.type||item.family)}</strong> ${confidenceBadge(item.confidence)}${primaryLinks?` <span class="reference-links">${primaryLinks}</span>`:""}<br><span class="subtle">Family: ${esc(item.family||"unassigned")}; deposited chain(s): ${esc(unique(item.chains.flatMap(value=>String(value).split(/;\s*/))).join(", ")||"n/a")}. ${esc(item.evidence||"")}${reference}</span>${advancedLinks?`<br><label class="inline-toggle"><input type="checkbox" onchange="this.parentElement.nextElementSibling.hidden=!this.checked"> Advanced files</label><span class="reference-links" hidden>${advancedLinks}</span>`:""}</div>`;
       }).join("")}</div>`;
     }
     function substratePanel(items){

@@ -146,9 +146,6 @@ name pdb_9S2F_other #439.1/WD,Z
 # intron: residues 11-20, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name DIS_9S2F_intron #439.1/IN:11-20
-# substrate RNA: residues 11-20, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name DIS_9S2F_substrate #439.1/IN:11-20
 # Named selections for resolved snRNA functional regions.
 # U5 snRNA loop I: residues 38-42, sequence-motif, medium confidence
 # selector_meta {"color":"#1B3CD0","family":"RNA","feature":"U5_loop_I","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}

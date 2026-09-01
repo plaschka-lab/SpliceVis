@@ -154,9 +154,6 @@ name pdb_6ID1_U5_snRNP #433.1/A,B,C,E
 # selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
 name pdb_6ID1_U6_snRNP #433.1/F
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 1-30;118-155, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_6ID1_substrate #433.1/G:1-30,118-155
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_6ID1_5SS #433.1/G:1-6

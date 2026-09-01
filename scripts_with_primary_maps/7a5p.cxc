@@ -172,9 +172,6 @@ name pdb_7A5P_U6_snRNP #410.1/6
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_7A5P_other #410.1/8,p,r,x,z
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 80-94;127-140, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_7A5P_substrate #410.1/Y:80-94,127-140
 # intron: residues 80-94;127-140, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_7A5P_intron #410.1/Y:80-94,127-140

@@ -161,9 +161,6 @@ name ILS_disassembly_9S2E_5SS #438.1/IN:1-6
 # intron: residues 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name ILS_disassembly_9S2E_intron #438.1/IN:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67
-# substrate RNA: residues 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name ILS_disassembly_9S2E_substrate #438.1/IN:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}

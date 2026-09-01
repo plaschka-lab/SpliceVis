@@ -366,20 +366,6 @@
       "kind": "subcomplex",
       "feature": "",
       "color": "#9CA3AF"
-    },
-    {
-      "name": "U2_snRNP_9K1Q_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 26-34; 31-52, component, medium confidence, validation not_applicable",
-      "atomspec": "#318.1/MA:31-52|#318.1/MB:26-34",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
     }
   ]
 }

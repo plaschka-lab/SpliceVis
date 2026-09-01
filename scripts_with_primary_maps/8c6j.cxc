@@ -205,20 +205,23 @@ name pdb_8C6J_U6_snRNP #421.1/6
 name pdb_8C6J_other #421.1/4,C3,CD,CF,CN,CT,F,G,Z,j,z
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues -24--1, component-name, high confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_8C6J_5exon #421.1/E:-24--1
-# substrate RNA: residues -24--1; 1-22;132-193, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_8C6J_substrate #421.1/E:-24--1|#421.1/I:1-22,132-193
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_8C6J_5SS #421.1/I:1-6
 # intron: residues 1-22;132-193, component-name, high confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_8C6J_intron #421.1/I:1-22,132-193
-# branch point region: residues 147-151, network-scored-motif, high confidence, validation validated
+# branch point region: residues 146-152, network-scored-motif; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_8C6J_branch_region #421.1/I:147-151
+name Cstar_8C6J_branch_region #421.1/I:146-152
+# branch point adenosine: residues 152, network-scored-motif; manual-review-correction, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name Cstar_8C6J_branch_A #421.1/I:152
+# polypyrimidine tract: residues 159-193, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"polypyrimidine_tract","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name Cstar_8C6J_PPT #421.1/I:159-193
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
 # selector_meta {"color":"#047857","family":"RNA","feature":"U2_U6_helix_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
@@ -261,13 +264,15 @@ select #421.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -24--1
-color #421.1/E:-24--1 #FF8C00
+color #421.1/E:-24--1 #FF9D00
 select #421.1/E:-24--1
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-22;132-193
-# BP region: residues 147-151
+# BP region: residues 146-152
+# BP-A: residues 152
+# PPT: residues 159-193
 # U2/U6 helix I: residues 26-30
 color #421.1/2:26-30 #047857
 select #421.1/2:26-30

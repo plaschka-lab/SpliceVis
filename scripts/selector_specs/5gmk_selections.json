@@ -183,25 +183,11 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "406.2.1.1",
       "label_category_model_id": "406.2.1",
       "label_group_model_id": "406.2",
       "label_default_visible": "true"
-    },
-    {
-      "name": "C_5GMK_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 100-114; 482-510; 87-99, component, medium confidence, validation not_applicable",
-      "atomspec": "#406.1/B:87-99|#406.1/M:482-510|#406.1/N:100-114",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
     },
     {
       "name": "C_5GMK_intron",

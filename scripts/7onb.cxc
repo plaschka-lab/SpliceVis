@@ -73,12 +73,12 @@ name pdb_7ONB_U2_SF3B #309.1/A,B,C,D,I,K,M,N
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_7ONB_other #309.1/F
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 129-142, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7ONB_substrate #309.1/G:129-142
-# branch point region: residues 129-142, u2-branch-region-basepair, high confidence, validation validated
+# intron: residues 129-142, manual-review-addition, high confidence, validation validated
+# selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+name U2_snRNP_7ONB_intron #309.1/G:129-142
+# branch point region: residues 139-142, u2-branch-region-basepair; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_7ONB_branch_region #309.1/G:129-142
+name U2_snRNP_7ONB_branch_region #309.1/G:139-142
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA branchpoint pairing region: residues 34-41, sequence-motif-neighborhood, medium confidence
 # selector_meta {"color":"#0B6E2D","family":"RNA","feature":"U2_branchpoint_pairing_region","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
@@ -90,7 +90,8 @@ name U2_snRNP_7ONB_U2_stem_IIa #309.1/H:46-65
 select #309.1 & nucleic
 nucleotides sel atoms
 select clear
-# BP region: residues 129-142
+# intron: residues 129-142
+# BP region: residues 139-142
 # U2 BP pairing: residues 34-41
 color #309.1/H:34-41 #0B6E2D
 select #309.1/H:34-41

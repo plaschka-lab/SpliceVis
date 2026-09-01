@@ -57,25 +57,11 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "303.2.1.1",
       "label_category_model_id": "303.2.1",
       "label_group_model_id": "303.2",
       "label_default_visible": "true"
-    },
-    {
-      "name": "U1_snRNP_4PJO_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 1-10, component, medium confidence, validation not_applicable",
-      "atomspec": "#303.1/X:1-10|#303.1/Y:1-10|#303.1/x:1-10|#303.1/y:1-10",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
     },
     {
       "name": "U1_snRNP_4PJO_5SS",

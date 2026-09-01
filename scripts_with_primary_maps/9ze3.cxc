@@ -87,9 +87,6 @@ name pdb_9ZE3_U2_SF3B #324.1/A1,A2,A3,B1,B2,B3,B4,B5,B6,H
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_9ZE3_other #324.1/C
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues -18-25, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name U2_snRNP_9ZE3_substrate #324.1/R:-18-25
 # branch point region: residues -7--3, u2-branch-region-basepair, medium confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name U2_snRNP_9ZE3_branch_region #324.1/R:-7--3

@@ -1,6 +1,6 @@
 LOCUS       PM5_full-PPT_478         478 bp    RNA              UNK 01-JAN-1980
 DEFINITION  PM5 full-PPT 478-nt pre-mRNA; substrate_type_reference;
-            reference=pm5_478; source=Bessonov et al. 2010; members=2.
+            reference=pm5_478; source=Bessonov et al. 2010; members=3.
 ACCESSION   PM5_full-PPT_478
 VERSION     PM5_full-PPT_478
 KEYWORDS    .
@@ -49,8 +49,8 @@ FEATURES             Location/Qualifiers
                      Haselbach et al. 2018;
                      source=https://rnajournal.cshlp.org/content/16/12/2384.full
                      ; confidence=high"
-                     /ApEinfo_fwdcolor="#FF8C00"
-                     /ApEinfo_revcolor="#FF8C00"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
      misc_feature    243..248
                      /label="5' splice site"
                      /note="feature=five_prime_splice_site; GUAUGU;

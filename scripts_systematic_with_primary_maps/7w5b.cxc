@@ -270,11 +270,8 @@ name spliceosome_U6_snRNP /6,6R1,6R2
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBYA,XBYB,XBZ,XCA,XCB,XCC,XCD,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues -13--1; 1-31;116-150;164-179, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_7W5B_substrate #420.1/MA:-13--1|#420.1/MB:1-31,116-150,164-179
 # 5' exon: residues -13--1, manual-review-addition, high confidence, validation validated
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5B_5exon #420.1/MA:-13--1
 # 5' splice site: residues 1-6, network-scored-motif, medium confidence, validation uncertain uncertain validation
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
@@ -282,9 +279,9 @@ name Cstar_7W5B_5SS #420.1/MB:1-6
 # intron: residues 1-31;116-150;164-167, splice-site-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5B_intron #420.1/MB:1-31,116-150,164-167
-# branch point region: residues 140-146, network-scored-motif, high confidence, validation validated
+# branch point region: residues 139-145, network-scored-motif; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Cstar_7W5B_branch_region #420.1/MB:140-146
+name Cstar_7W5B_branch_region #420.1/MB:139-145
 # branch point adenosine: residues 144, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5B_branch_A #420.1/MB:144
@@ -295,7 +292,7 @@ name Cstar_7W5B_PPT #420.1/MB:150
 # selector_meta {"color":"#303030","family":"RNA","feature":"three_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5B_3SS #420.1/MB:165-167
 # 3' exon: residues 168-179, splice-site-inference, medium confidence, validation not_applicable
-# selector_meta {"color":"#D97706","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#C65D00","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Cstar_7W5B_3exon #420.1/MB:168-179
 # Named selections for resolved snRNA functional regions.
 # U2 snRNA U2/U6 helix I partner: residues 26-30, review-region, high confidence
@@ -336,18 +333,18 @@ select #420.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues -13--1
-color #420.1/MA:-13--1 #FF8C00
+color #420.1/MA:-13--1 #FF9D00
 select #420.1/MA:-13--1
 nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-31;116-150;164-167
-# BP region: residues 140-146
+# BP region: residues 139-145
 # BP-A: residues 144
 # PPT: residues 150
 # 3'SS: residues 165-167
 # 3' exon: residues 168-179
-color #420.1/MB:168-179 #D97706
+color #420.1/MB:168-179 #C65D00
 select #420.1/MB:168-179
 nucleotides sel fill
 select clear

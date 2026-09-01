@@ -168,11 +168,8 @@ name pdb_5GMK_U6_snRNP #406.1/E
 name pdb_5GMK_other #406.1/G
 # Named selections for resolved substrate RNA features.
 # 5' exon: residues 87-99, component-name, high confidence, validation not_applicable
-# selector_meta {"color":"#FF8C00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
+# selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5GMK_5exon #406.1/B:87-99
-# substrate RNA: residues 100-114; 482-510; 87-99, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name C_5GMK_substrate #406.1/B:87-99|#406.1/M:482-510|#406.1/N:100-114
 # intron: residues 100-114; 482-510, component-name/five-ss-inference, high/low confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name C_5GMK_intron #406.1/M:482-510|#406.1/N:100-114
@@ -224,7 +221,7 @@ select #406.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 87-99
-color #406.1/B:87-99 #FF8C00
+color #406.1/B:87-99 #FF9D00
 select #406.1/B:87-99
 nucleotides sel fill
 select clear

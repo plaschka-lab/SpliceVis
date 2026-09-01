@@ -60,20 +60,6 @@
       "color": "#6DBE70"
     },
     {
-      "name": "U2_snRNP_7OQB_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 246-268, component, medium confidence, validation not_applicable",
-      "atomspec": "#310.1/I:246-268",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "U2_snRNP_7OQB_intron",
       "label": "intron",
       "category": "substrate RNA feature",

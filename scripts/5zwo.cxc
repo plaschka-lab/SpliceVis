@@ -193,9 +193,6 @@ name pdb_5ZWO_U6_snRNP #365.1/F
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
 name pdb_5ZWO_other #365.1/0,9,X,Y,Z
 # Named selections for resolved substrate RNA features.
-# substrate RNA: residues 463-522, component, medium confidence, validation not_applicable
-# selector_meta {"color":"#303030","family":"RNA","feature":"substrate","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name B_5ZWO_substrate #365.1/G:463-522
 # branch point region: residues 493-503, network-scored-motif, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_region","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name B_5ZWO_branch_region #365.1/G:493-503

@@ -102,20 +102,6 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "A_complex_7VPX_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues -1-8; 27-41, component, medium confidence, validation not_applicable",
-      "atomspec": "#334.1/I:27-41|#334.1/K:-1-8",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "A_complex_7VPX_branch_region",
       "label": "branch point region",
       "category": "substrate RNA feature",
@@ -145,7 +131,7 @@
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
       "feature": "exon_5",
-      "color": "#FF8C00",
+      "color": "#FF9D00",
       "label_model_id": "334.2.1.2",
       "label_category_model_id": "334.2.1",
       "label_group_model_id": "334.2",

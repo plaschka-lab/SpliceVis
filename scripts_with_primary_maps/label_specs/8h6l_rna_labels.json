@@ -162,7 +162,7 @@
       "feature": "exon_defined_exon",
       "atomspec": "#370.1/A:104",
       "text": "exon (res. 102-107)",
-      "color": "#FF8C00",
+      "color": "#E67E00",
       "model_name": "label_05_exon_res_102_107",
       "category_key": "pre_mRNA_features",
       "category_name": "pre-mRNA features",

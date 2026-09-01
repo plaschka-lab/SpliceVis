@@ -536,18 +536,22 @@
       "color": "#9CA3AF"
     },
     {
-      "name": "pre_B_8R08_substrate",
-      "label": "substrate RNA",
+      "name": "pre_B_8R08_intron",
+      "label": "intron",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 29-43; 3-7, component, medium confidence, validation not_applicable",
-      "atomspec": "#358.1/MA:29-43|#358.1/MB:3-7",
+      "comment": "intron: residues 29-43, manual-review-addition, high confidence, validation validated",
+      "atomspec": "#358.1/MA:29-43",
       "family": "RNA",
       "group": "pre-mRNA features",
       "group_key": "pre_mRNA_features",
       "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
+      "feature": "intron",
+      "color": "#303030",
+      "label_model_id": "358.2.1.1",
+      "label_category_model_id": "358.2.1",
+      "label_group_model_id": "358.2",
+      "label_default_visible": "true"
     },
     {
       "name": "pre_B_8R08_branch_region",
@@ -562,7 +566,7 @@
       "kind": "rna_feature",
       "feature": "branch_point_region",
       "color": "#303030",
-      "label_model_id": "358.2.1.1",
+      "label_model_id": "358.2.1.2",
       "label_category_model_id": "358.2.1",
       "label_group_model_id": "358.2",
       "label_default_visible": "true"
@@ -580,7 +584,7 @@
       "kind": "rna_feature",
       "feature": "branch_point_adenosine",
       "color": "#303030",
-      "label_model_id": "358.2.1.2",
+      "label_model_id": "358.2.1.3",
       "label_category_model_id": "358.2.1",
       "label_group_model_id": "358.2",
       "label_default_visible": "true"

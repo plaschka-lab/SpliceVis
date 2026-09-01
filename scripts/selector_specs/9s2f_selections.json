@@ -148,20 +148,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "DIS_9S2F_substrate",
-      "label": "substrate RNA",
-      "category": "substrate RNA feature",
-      "section": "Named selections for resolved substrate RNA features.",
-      "comment": "substrate RNA: residues 11-20, component, medium confidence, validation not_applicable",
-      "atomspec": "#439.1/IN:11-20",
-      "family": "RNA",
-      "group": "pre-mRNA features",
-      "group_key": "pre_mRNA_features",
-      "kind": "rna_feature",
-      "feature": "substrate",
-      "color": "#303030"
-    },
-    {
       "name": "DIS_9S2F_U5_loop_I",
       "label": "U5 snRNA loop I",
       "category": "snRNA feature",
