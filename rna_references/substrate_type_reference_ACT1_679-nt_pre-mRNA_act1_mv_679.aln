@@ -22,8 +22,8 @@ REFERENCE  ACCAUCAGGGUACGGAAUUCUCUAGAGUGUCGACGGAUCCCCCUUUUAGAUUUUUCACGCUUACUGCUU
 
 REFERENCE  AGAUCGAAAAUUUACUGAAUUAACAAUGGAUUCUGGUAUGUUCUAGCGCUUGCACCAUCCCAUUUAACUGUAAGAAGAAU
 5lqw:9     AGAUCGAAAAUUUACUGAAUUAACAAUGGAUUCUGGUAUGUUCUAGCGCUUGCACCAUCCCAUUUAACUGUAAGAAGAAU
-6bk8:e     --------------------------------------------------------------------------------
-6bk8:i     --------------------------------------------------------------------------------
+6bk8:e     ----------------------UUUAAUAAAAAAA---------------------------------------------
+6bk8:i     -----------------------------------GUAUGU---------------------------------------
 6j6g:B     AGAUCGAAAAUUUACUGAAUUAACAAUGGAUUCUGGUAUGUUCUAGCGCUUGCACCAUCCCAUUUAACUGUAAGAAGAAU
 6j6h:B     AGAUCGAAAAUUUACUGAAUUAACAAUGGAUUCUGGUAUGUUCUAGCGCUUGCACCAUCCCAUUUAACUGUAAGAAGAAU
 6n7r:r     AGAUCGAAAAUUUACUGAAUUAACAAUGGAUUCUGGUAUGUUCNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
@@ -33,7 +33,7 @@ REFERENCE  AGAUCGAAAAUUUACUGAAUUAACAAUGGAUUCUGGUAUGUUCUAGCGCUUGCACCAUCCCAUUUAACU
 REFERENCE  UGCACGGUCCCAAUUGCUCGAG-------------------------------------------------------AGA
 5lqw:9     UGCACGGUCCCAAUUGCUCGAG-------------------------------------------------------AGA
 6bk8:e     --------------------------------------------------------------------------------
-6bk8:i     ---------------------------------------------------------------------------GUAUG
+6bk8:i     -------------------------------------------------------------------------------A
 6j6g:B     UGCACGGUCCCAAUUGCUCGAG-------------------------------------------------------AGA
 6j6h:B     UGCACGGUCCCAAUUGCUCGAG-------------------------------------------------------AGA
 6n7r:r     NNNNNNNNNNNNNNNN----------------------------------------------------------------
@@ -42,8 +42,8 @@ REFERENCE  UGCACGGUCCCAAUUGCUCGAG-----------------------------------------------
 
 REFERENCE  UUUCUCUUUUACCUUUUUUUACUAUUUUUCACUCUCCCAUAACCUCCUAUAUUGACUGAUCUGUAAUAACCACGAUAUUA
 5lqw:9     UUUCUCUUUUACCUUUUUUUACUAUUUUUCACUCUCCCAUAACCUCCUAUAUUGACUGAUCUGUAAUAACCACGAUAUUA
-6bk8:e     ------UUUAAUAAAAAAAGUAUAUUUUUUUUUUUUUUAU----------------------------------------
-6bk8:i     UAUUUAUUUUAGAACUAGUUACUAACAUUUUUUUUUUAAAAAAUAAUUAUAUAG--------------------------
+6bk8:e     --------------------------------------------------------------------------------
+6bk8:i     UUUAUUUUAGAACU------------------------------------------------------------------
 6j6g:B     UUUCUCUUUUACCUUUUUUUACUAUUUUUCACUCUCCCAUAACCUCCUAUAUUGACUGAUCUGUAAUAACCACGAUAUUA
 6j6h:B     UUUCUCUUUUACCUUUUUUUACUAUUUUUCACUCUCCCAUAACCUCCUAUAUUGACUGAUCUGUAAUAACCACGAUAUUA
 6n7r:r     --------------------------------------------------------------------------------
@@ -62,8 +62,8 @@ REFERENCE  UUGGAAUAAAUAGGGGCUUGAAAUUUGGAAAAAAAAAAAAAACUGAAAUAUUUUCGUGAUAAGUGAUAG
 
 REFERENCE  UUUUAUUUGCUACUGUUACUAAGUCUCAUGUACUAACAUCGAUUGCUUCAUUCUUUUUGUUGCUAUAUUAUAUGUUUAGA
 5lqw:9     UUUUAUUUGCUACUGUUACUAAGUCUCAUGUACUAACAUCGAUUGCUUCAUUCUUUUUGUUGCUAUAUUAUAUGUUUAGA
-6bk8:e     --------------------------------------------------------------------------------
-6bk8:i     --------------------------------------------------------------------------------
+6bk8:e     -------------------------------------------------------------------------------G
+6bk8:i     ---------------------------AGUUACUAACAU--------------UUUUUUUUUAAAAAAUAAUUAUAUAG-
 6j6g:B     UUUUAUUUGCUACUGUUACUAAGUCUCAUGUACUAACAUCGAUUGCUUCAUUCUUUUUGUUGCUAUAUUAUAUGUUUAGA
 6j6h:B     UUUUAUUUGCUACUGUUACUAAGUCUCAUGUACUAACAUCGAUUGCUUCAUUCUUUUUGUUGCUAUAUUAUAUGUUUAGA
 6n7r:r     --------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ REFERENCE  UUUUAUUUGCUACUGUUACUAAGUCUCAUGUACUAACAUCGAUUGCUUCAUUCUUUUUGUUGCUAUAUU
 
 REFERENCE  GGUUGCUGCUUUGGUUAUUGAUAACGGUUCUGGUAUGUGUAAAGCCGGUUUUGCCGGUGACGACGCUCCUCGUGCUGUCU
 5lqw:9     GGUUGCUGCUUUGGUUAUUGAUAACGGUUCUGGUAUGUGUAAAGCCGGUUUUGCCGGUGACGACGCUCCUCGUGCUGUCU
-6bk8:e     --------------------------------------------------------------------------------
+6bk8:e     UAUAUUUUUUUUUUUUUUAU------------------------------------------------------------
 6bk8:i     --------------------------------------------------------------------------------
 6j6g:B     GGUUGCUGCUUUGGUUAUUGAUAACGGUUCUGGUAUGUGUAAAGCCGGUUUUGCCGGUGACGACGCUCCUCGUGCUGUCU
 6j6h:B     GGUUGCUGCUUUGGUUAUUGAUAACGGUUCUGGUAUGUGUAAAGCCGGUUUUGCCGGUGACGACGCUCCUCGUGCUGUCU
