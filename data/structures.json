@@ -1220,7 +1220,9 @@
           "entity_id": "11",
           "chains": "I",
           "molecule_name": "Yeast UBC4 pre-mRNA (mutant)",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -2296,7 +2298,9 @@
           "entity_id": "2",
           "chains": "I",
           "molecule_name": "ACT1 pre-mRNA (delta BS-A)",
-          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_ACT1_reference_ACT1.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_ACT1_reference_ACT1.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -3279,7 +3283,9 @@
           "entity_id": "22",
           "chains": "I",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -3289,7 +3295,9 @@
           "entity_id": "23",
           "chains": "K",
           "molecule_name": "5SS",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -4692,7 +4700,9 @@
           "entity_id": "16",
           "chains": "I",
           "molecule_name": "Yeast UBC4 gene for ubiquitin-conjugating enzyme",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -6205,7 +6215,9 @@
           "entity_id": "39",
           "chains": "Y",
           "molecule_name": "MINX pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -7647,7 +7659,9 @@
           "entity_id": "28",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -9474,7 +9488,9 @@
           "entity_id": "5",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -11141,7 +11157,9 @@
           "entity_id": "1",
           "chains": "A",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -12742,7 +12760,9 @@
           "entity_id": "1",
           "chains": "A",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -13709,7 +13729,9 @@
           "entity_id": "11",
           "chains": "Z",
           "molecule_name": "MINX pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -15313,7 +15335,9 @@
           "entity_id": "39",
           "chains": "Z",
           "molecule_name": "MINX pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -17161,7 +17185,9 @@
           "entity_id": "15",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -17171,7 +17197,9 @@
           "entity_id": "46",
           "chains": "z1",
           "molecule_name": "Oligo 1",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -17181,7 +17209,9 @@
           "entity_id": "47",
           "chains": "z2",
           "molecule_name": "Oligo 2",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -18443,7 +18473,9 @@
           "entity_id": "16",
           "chains": "B",
           "molecule_name": "ACT1 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_ACT1_reference_ACT1.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_ACT1_reference_ACT1.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -19618,7 +19650,9 @@
           "entity_id": "16",
           "chains": "B",
           "molecule_name": "ACT1 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_ACT1_reference_ACT1.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_ACT1_reference_ACT1.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -20793,7 +20827,9 @@
           "entity_id": "16",
           "chains": "B",
           "molecule_name": "UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -21981,7 +22017,9 @@
           "entity_id": "16",
           "chains": "B",
           "molecule_name": "UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -22997,7 +23035,9 @@
           "entity_id": "1",
           "chains": "1",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -23990,7 +24030,9 @@
           "entity_id": "39",
           "chains": "1",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -24893,7 +24935,9 @@
           "entity_id": "37",
           "chains": "8",
           "molecule_name": "Unknown mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -25845,7 +25889,9 @@
           "entity_id": "38",
           "chains": "8",
           "molecule_name": "Unknown mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -26850,7 +26896,9 @@
           "entity_id": "1",
           "chains": "1",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -28085,7 +28133,9 @@
           "entity_id": "4",
           "chains": "D",
           "molecule_name": "Saccharomyces cerevisiae strain CDRDR_sf_H chromosome VII sequence",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -28095,7 +28145,9 @@
           "entity_id": "5",
           "chains": "E",
           "molecule_name": "Saccharomyces cerevisiae strain T.52_2H chromosome XII sequence",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -28105,7 +28157,9 @@
           "entity_id": "12",
           "chains": "N",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -28115,7 +28169,9 @@
           "entity_id": "13",
           "chains": "M",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -29099,7 +29155,9 @@
           "entity_id": "31",
           "chains": "9",
           "molecule_name": "actin pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_ACT1_reference_ACT1.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_ACT1_reference_ACT1.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -30750,7 +30808,9 @@
           "entity_id": "14",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -32390,7 +32450,9 @@
           "entity_id": "14",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -33910,7 +33972,9 @@
           "entity_id": "14",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -34970,7 +35034,9 @@
           "entity_id": "21",
           "chains": "Z",
           "molecule_name": "pre mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_PM5_reference_PM5.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_PM5_reference_PM5.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -36355,7 +36421,9 @@
           "entity_id": "21",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_PM5_reference_PM5.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_PM5_reference_PM5.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -37769,7 +37837,9 @@
           "entity_id": "13",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -39014,7 +39084,9 @@
           "entity_id": "14",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -40378,7 +40450,9 @@
           "entity_id": "27",
           "chains": "g",
           "molecule_name": "MINX",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -42007,7 +42081,9 @@
           "entity_id": "38",
           "chains": "g",
           "molecule_name": "MINX-M3",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -43446,7 +43522,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -44802,7 +44880,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -46212,7 +46292,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -47583,7 +47665,9 @@
           "entity_id": "6",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -48918,7 +49002,9 @@
           "entity_id": "6",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -50256,7 +50342,9 @@
           "entity_id": "6",
           "chains": "M",
           "molecule_name": "Intron_BPS",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -50266,7 +50354,9 @@
           "entity_id": "7",
           "chains": "B",
           "molecule_name": "5'-Exon",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -50276,7 +50366,9 @@
           "entity_id": "8",
           "chains": "N",
           "molecule_name": "5'-Splicing Site",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -51468,7 +51560,9 @@
           "entity_id": "2",
           "chains": "E",
           "molecule_name": "Exon 1 (5' exon) of UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -51478,7 +51572,9 @@
           "entity_id": "3",
           "chains": "I",
           "molecule_name": "Intron of UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -52724,7 +52820,9 @@
           "entity_id": "2",
           "chains": "E",
           "molecule_name": "Exon 1 (5' exon) of UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -52734,7 +52832,9 @@
           "entity_id": "3",
           "chains": "I",
           "molecule_name": "Intron of UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -54141,7 +54241,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -55152,7 +55254,9 @@
           "entity_id": "19",
           "chains": "Y; Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -56065,7 +56169,9 @@
           "entity_id": "20",
           "chains": "Y",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -57290,7 +57396,9 @@
           "entity_id": "8",
           "chains": "E",
           "molecule_name": "5' exon of UBC4 mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -57300,7 +57408,9 @@
           "entity_id": "12",
           "chains": "I",
           "molecule_name": "Branched intron and 3' exon of UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -58772,7 +58882,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "MINX family",
@@ -58782,7 +58894,9 @@
           "entity_id": "8",
           "chains": "6",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -59935,7 +60049,9 @@
           "entity_id": "1",
           "chains": "I",
           "molecule_name": "Yeast UBC4 gene for ubiquitin-conjugating enzyme",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -59945,7 +60061,9 @@
           "entity_id": "2",
           "chains": "E",
           "molecule_name": "UBC4 gene exon",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -61314,7 +61432,9 @@
           "entity_id": "1",
           "chains": "I",
           "molecule_name": "Yeast UBC4 gene for ubiquitin-conjugating enzyme",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -61324,7 +61444,9 @@
           "entity_id": "2",
           "chains": "E",
           "molecule_name": "5'-EXON OF UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -61334,7 +61456,9 @@
           "entity_id": "34",
           "chains": "3",
           "molecule_name": "3'-EXON OF UBC4 pre-mRNA, BOUND BY PRP22 HELICASE",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -62595,7 +62719,9 @@
           "entity_id": "32",
           "chains": "Y; Z",
           "molecule_name": "MINX pre-mRNA (intron)",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -64156,7 +64282,9 @@
           "entity_id": "11",
           "chains": "B",
           "molecule_name": "5'-exon",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -64166,7 +64294,9 @@
           "entity_id": "12",
           "chains": "N",
           "molecule_name": "5'-intron-lariat",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -64176,7 +64306,9 @@
           "entity_id": "16",
           "chains": "M",
           "molecule_name": "3'-intron-lariat",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -64186,7 +64318,9 @@
           "entity_id": "33",
           "chains": "b",
           "molecule_name": "3'-exon-intron",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -65538,7 +65672,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -67001,7 +67137,9 @@
           "entity_id": "4",
           "chains": "4",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "MINX family",
@@ -67011,7 +67149,9 @@
           "entity_id": "5",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -68526,7 +68666,9 @@
           "entity_id": "6",
           "chains": "4",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "MINX family",
@@ -68536,7 +68678,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -70064,7 +70208,9 @@
           "entity_id": "7",
           "chains": "4",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "MINX family",
@@ -70074,7 +70220,9 @@
           "entity_id": "8",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -71542,7 +71690,9 @@
           "entity_id": "19",
           "chains": "E",
           "molecule_name": "PM5 5' Exon",
-          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_PM5_reference_PM5.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_PM5_reference_PM5.projected_features.csv"
         },
         {
           "type": "PM5",
@@ -71552,7 +71702,9 @@
           "entity_id": "23",
           "chains": "I",
           "molecule_name": "PM5 Intron",
-          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_PM5_reference_PM5.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_PM5_reference_PM5.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -72432,7 +72584,9 @@
           "entity_id": "33",
           "chains": "IN",
           "molecule_name": "Intron",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -73240,7 +73394,9 @@
           "entity_id": "19",
           "chains": "r",
           "molecule_name": "UBC4 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -74557,7 +74713,9 @@
           "entity_id": "18",
           "chains": "r",
           "molecule_name": "ACT1 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_ACT1_reference_ACT1.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_ACT1_reference_ACT1.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -75551,7 +75709,9 @@
           "entity_id": "15",
           "chains": "O",
           "molecule_name": "RNA (5'-R(P*GP*UP*AP*UP*GP*UP*AP*U)-3')",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -75561,7 +75721,9 @@
           "entity_id": "16",
           "chains": "Q",
           "molecule_name": "RNA (5'-R(P*UP*UP*UP*AP*UP*AP*CP*UP*AP*AP*CP*AP*C)-3')",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -76668,7 +76830,9 @@
           "entity_id": "5",
           "chains": "E",
           "molecule_name": "Intron lariat",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -77833,7 +77997,9 @@
           "entity_id": "16",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -79039,7 +79205,9 @@
           "entity_id": "16",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -80060,7 +80228,9 @@
           "entity_id": "36",
           "chains": "In",
           "molecule_name": "Intron lariat RNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -81160,7 +81330,9 @@
           "entity_id": "10",
           "chains": "IN",
           "molecule_name": "Intron lariat RNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -82182,7 +82354,9 @@
           "entity_id": "29",
           "chains": "IN",
           "molecule_name": "INTRON",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -83197,7 +83371,9 @@
           "entity_id": "37",
           "chains": "7",
           "molecule_name": "Unknown mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -84886,7 +85062,9 @@
           "entity_id": "13",
           "chains": "IN",
           "molecule_name": "Intron",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -86220,7 +86398,9 @@
           "entity_id": "5",
           "chains": "E",
           "molecule_name": "mRNA/intron lariat",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -88342,7 +88522,9 @@
           "entity_id": "4",
           "chains": "e",
           "molecule_name": "RNA (34-MER)",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Other/unspecified substrate",
@@ -88352,7 +88534,9 @@
           "entity_id": "5",
           "chains": "i",
           "molecule_name": "RNA (59-MER)",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -90051,7 +90235,9 @@
           "entity_id": "7",
           "chains": "E",
           "molecule_name": "Ligated exons: UBC4 mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -90061,7 +90247,9 @@
           "entity_id": "9",
           "chains": "I",
           "molecule_name": "Intron lariat: UBC4 RNA",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -91455,7 +91643,9 @@
           "entity_id": "10",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -93149,7 +93339,9 @@
           "entity_id": "11",
           "chains": "E",
           "molecule_name": "Ligated exons: MINX mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "MINX",
@@ -93159,7 +93351,9 @@
           "entity_id": "15",
           "chains": "I",
           "molecule_name": "Intron lariat: MINX RNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -94877,7 +95071,9 @@
           "entity_id": "7",
           "chains": "E",
           "molecule_name": "UBC4 mRNA spliced exons",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         },
         {
           "type": "UBC4",
@@ -94887,7 +95083,9 @@
           "entity_id": "10",
           "chains": "I",
           "molecule_name": "UBC4 lariat-intron",
-          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_UBC4_reference_UBC4.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_UBC4_reference_UBC4.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_UBC4_reference_UBC4.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -96531,7 +96729,9 @@
           "entity_id": "17",
           "chains": "EX",
           "molecule_name": "Exon",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "MINX",
@@ -96541,7 +96741,9 @@
           "entity_id": "21",
           "chains": "IN",
           "molecule_name": "INTRON",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -100773,7 +100975,9 @@
           "entity_id": "11",
           "chains": "X; Y; x; y",
           "molecule_name": "RNA (5'-R(*AP*GP*GP*UP*AP*AP*GP*UP*CP*C)-3')",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -103569,7 +103773,9 @@
           "entity_id": "6",
           "chains": "G",
           "molecule_name": "MINX",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -104154,7 +104360,9 @@
           "entity_id": "2",
           "chains": "I",
           "molecule_name": "ACT1 pre-mRNA (delta-BS-A)",
-          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_ACT1_reference_ACT1.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_ACT1_reference_ACT1.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_ACT1_reference_ACT1.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -104928,7 +105136,9 @@
           "entity_id": "10",
           "chains": "h",
           "molecule_name": "BPS oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -106081,7 +106291,9 @@
           "entity_id": "5",
           "chains": "G",
           "molecule_name": "23-nt histone H2a mRNA element",
-          "reference_genbank": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.projected_features.csv"
         },
         {
           "type": "Histone H2A RNA",
@@ -106091,7 +106303,9 @@
           "entity_id": "6",
           "chains": "H",
           "molecule_name": "22-nt histone H2a mRNA element",
-          "reference_genbank": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -106365,7 +106579,9 @@
           "entity_id": "5",
           "chains": "G; H",
           "molecule_name": "101-nt histone H2a mRNA element",
-          "reference_genbank": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_Histone_H2A_RNA_reference_Histone_H2A_RNA.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -106701,7 +106917,9 @@
           "entity_id": "5",
           "chains": "G",
           "molecule_name": "pre-mRNA intron",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -107052,7 +107270,9 @@
           "entity_id": "5",
           "chains": "G",
           "molecule_name": "pre-mRNA intron",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -107403,7 +107623,9 @@
           "entity_id": "5",
           "chains": "G",
           "molecule_name": "pre-mRNA intron",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -107834,7 +108056,9 @@
           "entity_id": "4",
           "chains": "R",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -108224,7 +108448,9 @@
           "entity_id": "3",
           "chains": "R",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -108653,7 +108879,9 @@
           "entity_id": "6",
           "chains": "R",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -109056,7 +109284,9 @@
           "entity_id": "13",
           "chains": "R",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -109461,7 +109691,9 @@
           "entity_id": "13",
           "chains": "R",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -112688,7 +112920,9 @@
           "entity_id": "24",
           "chains": "C",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -115333,7 +115567,9 @@
           "entity_id": "10",
           "chains": "V",
           "molecule_name": "Saccharomyces cerevisiae strain UOA_M2 chromosome 5 sequence",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -118848,7 +119084,9 @@
           "entity_id": "28",
           "chains": "G",
           "molecule_name": "pre-mRNA-BPS",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -119725,7 +119963,9 @@
           "entity_id": "1",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -121077,7 +121317,9 @@
           "entity_id": "19",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -122797,7 +123039,9 @@
           "entity_id": "8",
           "chains": "I",
           "molecule_name": "AdML pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_AdML_reference_AdML.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_AdML_reference_AdML.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_AdML_reference_AdML.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_AdML_reference_AdML.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -124451,7 +124695,9 @@
           "entity_id": "1",
           "chains": "A",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -126000,7 +126246,9 @@
           "entity_id": "1",
           "chains": "A",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -126943,7 +127191,9 @@
           "entity_id": "14",
           "chains": "z",
           "molecule_name": "5'ss RNA oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -129016,7 +129266,9 @@
           "entity_id": "14",
           "chains": "z",
           "molecule_name": "5'ss oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -129857,7 +130109,9 @@
           "entity_id": "17",
           "chains": "z",
           "molecule_name": "5'ss oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -130820,7 +131074,9 @@
           "entity_id": "13",
           "chains": "z1",
           "molecule_name": "oligo1",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -130830,7 +131086,9 @@
           "entity_id": "14",
           "chains": "z2",
           "molecule_name": "oligo2",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -131658,7 +131916,9 @@
           "entity_id": "12",
           "chains": "z",
           "molecule_name": "5'ss oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -133033,7 +133293,9 @@
           "entity_id": "17",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -134638,7 +134900,9 @@
           "entity_id": "9",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -134648,7 +134912,9 @@
           "entity_id": "21",
           "chains": "Z1",
           "molecule_name": "oligo 1",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -136368,7 +136634,9 @@
           "entity_id": "10",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -136378,7 +136646,9 @@
           "entity_id": "43",
           "chains": "z",
           "molecule_name": "5'ss oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -138106,7 +138376,9 @@
           "entity_id": "10",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -138116,7 +138388,9 @@
           "entity_id": "11",
           "chains": "z",
           "molecule_name": "5'ss oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -139818,7 +140092,9 @@
           "entity_id": "16",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -139828,7 +140104,9 @@
           "entity_id": "17",
           "chains": "z",
           "molecule_name": "5'ss oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -141518,7 +141796,9 @@
           "entity_id": "10",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         },
         {
           "type": "Synthetic splice-site/branch-site oligo",
@@ -141528,7 +141808,9 @@
           "entity_id": "32",
           "chains": "z",
           "molecule_name": "5'SS oligo",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -142731,7 +143013,9 @@
           "entity_id": "1",
           "chains": "A",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -143395,7 +143679,9 @@
           "entity_id": "1",
           "chains": "A",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -144047,7 +144333,9 @@
           "entity_id": "7",
           "chains": "Z",
           "molecule_name": "MINX M3 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -144697,7 +144985,9 @@
           "entity_id": "13",
           "chains": "Z",
           "molecule_name": "MINX M3 RNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -146022,7 +146312,9 @@
           "entity_id": "24",
           "chains": "Z",
           "molecule_name": "MINX M3 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -146703,7 +146995,9 @@
           "entity_id": "3",
           "chains": "Z",
           "molecule_name": "MINX M3 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -147991,7 +148285,9 @@
           "entity_id": "36",
           "chains": "Z",
           "molecule_name": "MINX M3 pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -149364,7 +149660,9 @@
           "entity_id": "7",
           "chains": "G",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_MINX_family_reference_MINX_family.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -150105,7 +150403,9 @@
           "entity_id": "10",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": ""
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_feature_table": ""
         }
       ],
       "substrate_type_summary": {
@@ -151502,7 +151802,9 @@
           "entity_id": "37",
           "chains": "Z",
           "molecule_name": "pre-mRNA",
-          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb"
+          "reference_genbank": "rna_references/substrate_type_reference_PM5_reference_PM5.gb",
+          "reference_alignment": "rna_references/substrate_type_reference_PM5_reference_PM5.aln",
+          "reference_feature_table": "rna_references/substrate_type_reference_PM5_reference_PM5.projected_features.csv"
         }
       ],
       "substrate_type_summary": {
@@ -169466,98 +169768,180 @@
         "stage": "Isolated snRNP reference",
         "composition": "U1 snRNA, the Sm core, and U1-specific proteins form the particle that first recognizes the 5' splice site.",
         "transition": "U1 snRNP is recruited to pre-mRNA during E-complex formation and is released during activation.",
-        "notes": "These entries are isolated or minimal U1 snRNP reference structures, not assembled spliceosome intermediates."
+        "notes": "These entries are isolated or minimal U1 snRNP reference structures, not assembled spliceosome intermediates.",
+        "hover_rna": "U1 snRNA with its Sm core and U1-specific proteins.",
+        "hover_helicase": "None in the isolated particle.",
+        "hover_change": "U1 recognizes the 5' splice site in E complex."
       },
       {
         "name": "U2 snRNP",
         "stage": "Isolated snRNP reference",
         "composition": "U2 snRNA, the Sm core, SF3A/SF3B modules, and associated remodeling factors define branch-region recognition capacity.",
         "transition": "U2 snRNP joins the E complex to form A complex.",
-        "notes": "The dashboard keeps isolated U2 snRNP entries separate from A-complex spliceosomes."
+        "notes": "The dashboard keeps isolated U2 snRNP entries separate from A-complex spliceosomes.",
+        "hover_rna": "U2 snRNA with SF3A/SF3B and the Sm core.",
+        "hover_helicase": "Prp5/DDX46 promotes productive branch-site engagement.",
+        "hover_change": "U2 recruitment converts E complex to A complex."
       },
       {
         "name": "U6 snRNP",
         "stage": "Isolated snRNP reference",
         "composition": "U6 snRNA is bound by the LSm2-8 ring and Prp24/SART3-family factors before U4/U6 assembly.",
         "transition": "Mature U6 snRNP enters the U4/U6 di-snRNP and then the U4/U6.U5 tri-snRNP.",
-        "notes": "These structures report isolated U6 snRNP architecture rather than a spliceosome-cycle intermediate."
+        "notes": "These structures report isolated U6 snRNP architecture rather than a spliceosome-cycle intermediate.",
+        "hover_rna": "U6 snRNA bound by LSm and Prp24/SART3-family factors.",
+        "hover_helicase": "Assembly and recycling factors remodel U6 before tri-snRNP formation.",
+        "hover_change": "U6 joins U4 and then the U4/U6.U5 tri-snRNP."
       },
       {
         "name": "U6 snRNA biogenesis",
         "stage": "snRNA maturation reference",
         "composition": "U6 snRNA-associated processing factors act before mature U6 snRNP assembly.",
         "transition": "Processed U6 snRNA is passed into LSm/Prp24- or SART3-associated snRNP assembly states.",
-        "notes": "This category is used for U6-processing structures that are informative for spliceosome biology but are not spliceosome intermediates."
+        "notes": "This category is used for U6-processing structures that are informative for spliceosome biology but are not spliceosome intermediates.",
+        "hover_rna": "Processing factors act on immature U6 snRNA.",
+        "hover_helicase": "RNA-processing and assembly factors mature U6.",
+        "hover_change": "Mature U6 enters the snRNP assembly pool."
       },
       {
         "name": "E complex",
         "stage": "Early recognition",
         "composition": "U1 snRNP recognizes the 5' splice site while SF1/BBP and U2AF define the branch region, polypyrimidine tract, and 3' splice site.",
         "transition": "Prp5/DDX46 and Sub2/UAP56/DDX39B help convert this early recognition state into a U2-containing prespliceosome.",
-        "notes": "U2 is not yet stably incorporated in the canonical E complex; this is why the cycle cartoon shows U1 and substrate, but not U2, at this stage."
+        "notes": "U2 is not yet stably incorporated in the canonical E complex; this is why the cycle cartoon shows U1 and substrate, but not U2, at this stage.",
+        "hover_rna": "U1 pairs with the 5' splice site; SF1/BBP and U2AF recognize downstream intron signals.",
+        "hover_helicase": "Prp5/DDX46 and Sub2/DDX39B support U2 recruitment.",
+        "hover_change": "Stable U2 branch-site pairing forms A complex."
       },
       {
         "name": "A complex",
         "stage": "Prespliceosome",
         "composition": "U2 snRNP joins and pairs with the branch site, with the branch-point adenosine bulged from the U2-branch helix.",
         "transition": "The preassembled U4/U6.U5 tri-snRNP is recruited to form pre-B.",
-        "notes": "This is the first major stage in the diagram where U2 is shown as part of the assembling spliceosome."
+        "notes": "This is the first major stage in the diagram where U2 is shown as part of the assembling spliceosome.",
+        "hover_rna": "U1 binds the 5' splice site and U2 forms the branch helix with a bulged branch A.",
+        "hover_helicase": "Prp5/DDX46 supports branch-site proofreading.",
+        "hover_change": "Tri-snRNP recruitment forms pre-B."
       },
       {
         "name": "pre-B complex",
         "stage": "Tri-snRNP recruitment",
         "composition": "U1, U2, U4/U6, and U5 are present; U6 remains sequestered by U4.",
         "transition": "Prp28/DDX23 promotes transfer of the 5' splice site from U1 to U6.",
-        "notes": "The complex is fully assembled but not catalytically active."
+        "notes": "The complex is fully assembled but not catalytically active.",
+        "hover_rna": "U1, U2 and U4/U6.U5 are present; U6 remains paired with U4.",
+        "hover_helicase": "Prp28/DDX23 promotes transfer of the 5' splice site from U1 to U6.",
+        "hover_change": "U1 release produces B complex."
       },
       {
         "name": "B complex",
         "stage": "Pre-catalytic spliceosome",
         "composition": "U2, U5, U4/U6, and the transferred 5' splice-site/U6 interaction are present after U1 release.",
         "transition": "Brr2/SNRNP200 unwinds U4/U6 to release U4 and enable U2/U6 catalytic RNA network formation.",
-        "notes": "B complex precedes activation and still lacks the mature catalytic RNA core."
+        "notes": "B complex precedes activation and still lacks the mature catalytic RNA core.",
+        "hover_rna": "U2 and U4/U6.U5 are present; the 5' splice site has transferred to U6.",
+        "hover_helicase": "Brr2/SNRNP200 unwinds U4/U6.",
+        "hover_change": "U4 release initiates spliceosome activation."
       },
       {
         "name": "pre-Bact complex",
         "stage": "Early spliceosome activation intermediate",
         "composition": "BRR2/SNRNP200-driven U4/U6 unwinding has released U4 and most U4/U6-specific and LSm proteins. U2, U5, U6, and recruited activation factors form an assembling core, but PRP8 remains open and the mature U2/U6 catalytic RNA network is incomplete.",
         "transition": "Stepwise U2 and U6 rearrangements form U2/U6 helix I and the U6 catalytic triplex; closure of the PRP8 cavity completes the transition to mature Bact. The 2024 series places KIN17 release and recruitment of CWC22, SRRM2, CWC27, RNF113A, and PRP2 at the pre-Bact-to-Bact-I transition.",
-        "notes": "Townsend et al. resolved pre-Bact-1 and pre-Bact-2 (PDB 7ABF/7ABG and 7AAV/7ABH/7ABI; Science 2020, doi:10.1126/science.abc3753). Zhan et al. resolved a later pre-Bact state (PDB 8I0P) followed by Bact-I to Bact-IV and post-Bact (Nature Communications 2024, doi:10.1038/s41467-024-50785-0)."
+        "notes": "Townsend et al. resolved pre-Bact-1 and pre-Bact-2 (PDB 7ABF/7ABG and 7AAV/7ABH/7ABI; Science 2020, doi:10.1126/science.abc3753). Zhan et al. resolved a later pre-Bact state (PDB 8I0P) followed by Bact-I to Bact-IV and post-Bact (Nature Communications 2024, doi:10.1038/s41467-024-50785-0).",
+        "hover_rna": "U4 has left, but the U2/U6 catalytic RNA network is still assembling.",
+        "hover_helicase": "Brr2/SNRNP200-driven activation continues.",
+        "hover_change": "U2/U6 folding and PRP8 closure produce mature Bact."
       },
       {
         "name": "Bact complex",
         "stage": "Activated spliceosome",
         "composition": "U4 has left; U2/U6 and U5 form the activated RNA-protein core with NTC/NTR factors.",
         "transition": "Prp2/DHX16 remodels the branch region and licenses first-step catalysis.",
-        "notes": "Unlike pre-Bact, mature Bact contains the folded U2/U6 catalytic RNA network and a closed PRP8 cavity, while the branch site remains too distant from the 5' splice site for branching."
+        "notes": "Unlike pre-Bact, mature Bact contains the folded U2/U6 catalytic RNA network and a closed PRP8 cavity, while the branch site remains too distant from the 5' splice site for branching.",
+        "hover_rna": "U2/U6 and U5 form the activated RNA core; the branch site is not yet docked for catalysis.",
+        "hover_helicase": "Prp2/DHX16 remodels the branch region.",
+        "hover_change": "Branch-site docking generates B*."
       },
       {
         "name": "B*D complex",
         "stage": "Quality-control discard intermediate",
         "composition": "A catalytically defective or rejected activated spliceosome retains the U2/U6-U5 core but follows a discard branch rather than productive branching.",
         "transition": "DHX35 and associated quality-control factors redirect the stalled B* assembly toward disassembly instead of the C-complex pathway.",
-        "notes": "B*D is shown outside the productive cycle because it is a discard product, not an obligatory intermediate between B* and C."
+        "notes": "B*D is shown outside the productive cycle because it is a discard product, not an obligatory intermediate between B* and C.",
+        "hover_rna": "A rejected activated complex retains the U2/U6-U5 core.",
+        "hover_helicase": "DHX35 promotes quality-control discard.",
+        "hover_change": "The complex exits the productive pathway for disassembly."
       },
       {
-        "name": "B* and C complex",
-        "stage": "First catalytic step",
-        "composition": "The branch point is positioned for attack on the 5' splice site, producing the cleaved 5' exon and intron lariat intermediate.",
-        "transition": "Prp16/DHX38 remodels the spliceosome after branching toward the second-step conformation.",
-        "notes": "C complex denotes the post-branching, pre-exon-ligation catalytic state."
+        "name": "B* complex",
+        "stage": "Catalytically activated spliceosome",
+        "composition": "The branch-point adenosine is docked near the 5' splice site within the U2/U6-U5 catalytic core.",
+        "transition": "The first transesterification reaction forms the cleaved 5' exon and intron lariat intermediate.",
+        "notes": "B* is the productive first-step conformation and is distinct from the B*D quality-control discard state.",
+        "hover_rna": "The bulged branch A is docked beside the U6-bound 5' splice site.",
+        "hover_helicase": "Prp2/DHX16 action precedes this state.",
+        "hover_change": "Branching produces the C complex."
       },
       {
-        "name": "C* and P complex",
-        "stage": "Second catalytic step and products",
-        "composition": "The 3' splice site and exons are positioned for exon ligation, yielding spliced mRNA and a lariat intron product.",
-        "transition": "Prp22/DHX8 acts around exon ligation and mRNA release.",
-        "notes": "P complex is post-catalytic and retains the intron lariat spliceosome before disassembly."
+        "name": "C complex",
+        "stage": "Post-branching spliceosome",
+        "composition": "The 5' exon is cleaved and the intron forms a lariat at the branch-point adenosine.",
+        "transition": "Prp16/DHX38 remodels the catalytic center to permit 3' splice-site docking.",
+        "notes": "C complex is post-branching but precedes the exon-ligation conformation.",
+        "hover_rna": "The 5' exon is cleaved and the intron forms a branch-A lariat.",
+        "hover_helicase": "Prp16/DHX38 remodels the catalytic center.",
+        "hover_change": "3' splice-site docking produces C*."
       },
       {
-        "name": "ILS, DIS, and recycling",
-        "stage": "Intron-lariat spliceosome, debranched intron spliceosome, and snRNP recycling",
-        "composition": "The intron-lariat spliceosome retains U2/U5/U6 components and disassembly factors before progressing into the debranched intron spliceosome as the first recycling state and then U5 recycling.",
-        "transition": "Prp43/DHX15 with Ntr1/TFIP11 and Ntr2/GCFC promotes spliceosome disassembly and recycling.",
-        "notes": "DIS is shown as a separate first recycling-state bin when deposited debranched intron spliceosome structures are present."
+        "name": "C* complex",
+        "stage": "Catalytic pre-exon-ligation spliceosome",
+        "composition": "The 3' splice site is docked next to the 5' exon while U5 loop I aligns the exon ends.",
+        "transition": "Exon ligation produces spliced mRNA and the post-catalytic P complex.",
+        "notes": "C* is the productive second-step conformation.",
+        "hover_rna": "The 3' splice site is docked and U5 aligns the two exon ends.",
+        "hover_helicase": "Prp16/DHX38 action enables the second-step conformation.",
+        "hover_change": "Exon ligation produces P complex."
+      },
+      {
+        "name": "P complex",
+        "stage": "Post-catalytic spliceosome",
+        "composition": "Ligated mRNA and the intron lariat remain associated with the U2/U5/U6 catalytic core.",
+        "transition": "Prp22/DHX8 promotes mRNA release before conversion to an intron-lariat spliceosome.",
+        "notes": "The lariat intron remains bound after the ligated exon product is formed.",
+        "hover_rna": "Ligated mRNA and the lariat intron remain associated with the catalytic core.",
+        "hover_helicase": "Prp22/DHX8 promotes mRNA release.",
+        "hover_change": "mRNA release produces the intron-lariat spliceosome."
+      },
+      {
+        "name": "ILS",
+        "stage": "Intron-lariat spliceosome",
+        "composition": "The lariat intron remains associated with U2, U5, U6 and disassembly factors after mRNA release.",
+        "transition": "Prp43/DHX15 with Ntr1/TFIP11 and Ntr2/GCFC drives dismantling and component release.",
+        "notes": "ILS precedes debranching and late recycling states.",
+        "hover_rna": "The lariat intron remains bound to U2/U5/U6 after mRNA release.",
+        "hover_helicase": "Prp43/DHX15 with TFIP11/Ntr1 and GCFC/Ntr2 drives disassembly.",
+        "hover_change": "Debranching and dismantling lead to DIS and recycling."
+      },
+      {
+        "name": "DIS",
+        "stage": "Debranched intron spliceosome",
+        "composition": "A debranched intron remains associated with late spliceosomal and recycling factors.",
+        "transition": "Continued disassembly releases reusable snRNP and protein components.",
+        "notes": "DIS is the first recycling state in the dashboard pathway.",
+        "hover_rna": "A debranched intron remains associated with late spliceosomal factors.",
+        "hover_helicase": "Prp43/DHX15-dependent disassembly continues.",
+        "hover_change": "Reusable snRNP and protein components return to the pool."
+      },
+      {
+        "name": "U5 recycling",
+        "stage": "Recycling particle",
+        "composition": "U5 snRNP is captured with recycling chaperones after spliceosome disassembly.",
+        "transition": "U5 components are restored to an assembly-competent snRNP pool.",
+        "notes": "These are recycling assemblies rather than catalytic spliceosomes.",
+        "hover_rna": "U5 snRNP is associated with recycling chaperones.",
+        "hover_helicase": "Recycling factors restore an assembly-competent particle.",
+        "hover_change": "U5 returns to the snRNP pool."
       }
     ]
   },

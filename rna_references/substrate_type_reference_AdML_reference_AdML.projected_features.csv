@@ -1,0 +1,6 @@
+member,feature,label,start,end,coverage,confidence,method
+6qx9:I,exon_5,5' exon,1,2,1.000,medium,five-ss-inference
+6qx9:I,five_prime_splice_site,5' splice site,3,8,1.000,high,network-scored-motif
+6qx9:I,intron,intron from 5' splice site,3,62,1.000,medium,five-ss-inference
+6qx9:I,branch_point_region,branch point region,55,62,1.000,high,network-scored-motif
+6qx9:I,branch_point_adenosine,branch point adenosine,60,60,1.000,high,network-scored-motif

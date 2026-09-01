@@ -1,0 +1,14 @@
+member,feature,label,start,end,coverage,confidence,method
+6j6n:B,exon_5,5' exon,1,121,0.908,medium,splice-site-inference
+6j6n:B,five_prime_splice_site,5' splice site,122,127,1.000,high,network-scored-motif
+6j6n:B,intron,intron,122,225,0.958,medium,splice-site-inference
+6j6n:B,branch_point_region,branch point region,189,198,0.909,high,network-scored-motif
+6j6n:B,branch_point_adenosine,branch point adenosine,196,196,1.000,high,network-scored-motif
+6j6q:B,exon_5,5' exon,1,121,0.908,medium,splice-site-inference
+6j6q:B,five_prime_splice_site,5' splice site,122,127,1.000,high,network-scored-motif
+6j6q:B,intron,intron,122,225,0.958,medium,splice-site-inference
+6j6q:B,branch_point_region,branch point region,191,198,1.000,high,network-scored-motif
+6j6q:B,branch_point_adenosine,branch point adenosine,196,196,1.000,high,network-scored-motif
+6n7p:r,exon_5,5' exon,1,22,1.000,medium,splice-site-inference
+6n7p:r,five_prime_splice_site,5' splice site,23,28,1.000,high,network-scored-motif
+6n7p:r,intron,intron,23,253,1.000,medium,splice-site-inference

@@ -1,0 +1,20 @@
+member,feature,label,start,end,coverage,confidence,method
+5lqw:9,exon_5,5' exon,107,192,1.000,medium,splice-site-inference
+5lqw:9,five_prime_splice_site,5' splice site,193,198,1.000,high,network-scored-motif
+5lqw:9,intron,intron,193,601,1.000,medium,splice-site-inference
+5lqw:9,branch_point_region,branch point region,453,459,1.000,high,network-scored-motif
+5lqw:9,branch_point_adenosine,branch point adenosine,458,458,1.000,high,network-scored-motif
+6j6g:B,exon_5,5' exon,1,192,1.000,medium,splice-site-inference
+6j6g:B,five_prime_splice_site,5' splice site,193,198,1.000,high,network-scored-motif
+6j6g:B,intron,intron,193,601,1.000,medium,splice-site-inference
+6j6g:B,branch_point_region,branch point region,450,460,1.000,high,network-scored-motif
+6j6g:B,branch_point_adenosine,branch point adenosine,458,458,1.000,high,network-scored-motif
+6j6h:B,exon_5,5' exon,1,192,1.000,medium,splice-site-inference
+6j6h:B,five_prime_splice_site,5' splice site,193,198,1.000,high,network-scored-motif
+6j6h:B,intron,intron,193,601,1.000,medium,splice-site-inference
+6j6h:B,branch_point_region,branch point region,450,460,1.000,high,network-scored-motif
+6j6h:B,branch_point_adenosine,branch point adenosine,458,458,1.000,high,network-scored-motif
+7oqe:I,exon_5,5' exon,2,23,1.000,medium,splice-site-inference
+7oqe:I,five_prime_splice_site,5' splice site,24,39,1.000,high,network-scored-motif
+7oqe:I,intron,intron,24,679,1.000,medium,splice-site-inference
+7oqe:I,branch_point_region,branch point region,467,526,1.000,high,network-scored-motif

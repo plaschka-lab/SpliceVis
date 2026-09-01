@@ -1,0 +1,151 @@
+member,feature,label,start,end,coverage,confidence,method
+5mqf:Y,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+5mqf:Y,intron,intron,82,238,1.000,medium,splice-site-inference
+5mqf:Y,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+5mqf:Y,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+5mqf:Z,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+5o9z:Y,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+5o9z:Y,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+5o9z:Y,intron,intron,82,346,1.000,medium,splice-site-inference
+5o9z:Y,branch_point_region,branch point region,168,179,1.000,high,network-scored-motif; manual-review-correction
+5o9z:Y,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif; manual-review-correction
+5xjc:G,exon_5,5' exon,1,81,0.984,medium,splice-site-inference
+5xjc:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+5xjc:G,intron,intron,82,331,0.961,medium,splice-site-inference
+5xjc:G,branch_point_region,branch point region,249,253,0.714,high,network-scored-motif
+5xjc:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+5xjc:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+5yzg:G,exon_5,5' exon,1,81,0.984,medium,splice-site-inference
+5yzg:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+5yzg:G,intron,intron,82,331,0.961,medium,splice-site-inference
+5yzg:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+5yzg:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+5z56:G,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
+5z56:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+5z56:G,intron,intron,82,331,0.961,medium,splice-site-inference
+5z56:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+5z56:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+5z57:G,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
+5z57:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+5z57:G,intron,intron,82,331,0.961,medium,splice-site-inference
+5z57:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+5z57:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+5z58:G,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
+5z58:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+5z58:G,intron,intron,82,331,0.961,medium,splice-site-inference
+5z58:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+5z58:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+6ah0:G,intron,intron,82,331,0.961,medium,splice-site-inference
+6ah0:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+6ah0:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+6ahd:G,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
+6ahd:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+6ahd:G,intron,intron,82,331,0.961,medium,splice-site-inference
+6ahd:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+6ahd:G,polypyrimidine_tract,polypyrimidine tract,256,269,0.857,medium,sequence-motif
+6icz:G,exon_5,5' exon,2,81,0.983,medium,splice-site-inference
+6icz:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+6icz:G,intron,intron,82,274,0.958,medium,splice-site-inference
+6icz:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif; manual-review-correction
+6icz:G,polypyrimidine_tract,polypyrimidine tract,256,271,1.000,medium,sequence-motif
+6icz:G,three_prime_splice_site,3' splice site,272,274,1.000,medium,network-scored-motif
+6id0:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+6id0:G,intron,intron,82,331,0.966,medium,splice-site-inference
+6id0:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+6id0:G,polypyrimidine_tract,polypyrimidine tract,256,271,1.000,medium,sequence-motif
+6id1:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+6id1:G,intron,intron,82,331,0.966,medium,splice-site-inference
+6id1:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
+6id1:G,polypyrimidine_tract,polypyrimidine tract,256,271,1.000,medium,sequence-motif
+6zym:Y,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+6zym:Y,intron,intron,82,346,1.000,medium,splice-site-inference
+6zym:Y,branch_point_region,branch point region,168,179,1.000,high,network-scored-motif
+6zym:Y,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+6zym:Z,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+7a5p:Y,intron,intron,82,346,1.000,medium,splice-site-inference
+7aav:Z,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+7aav:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+7aav:Z,intron,intron,82,287,1.000,medium,splice-site-inference
+7abf:Z,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+7abf:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+7abf:Z,intron,intron,82,287,1.000,medium,splice-site-inference
+7abg:Z,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+7abg:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+7abg:Z,intron,intron,82,287,1.000,medium,splice-site-inference
+7abg:Z,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif; manual-review-correction
+7abg:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif; manual-review-correction
+7abh:Z,intron,intron,82,287,1.000,medium,splice-site-inference
+7abh:Z,branch_point_region,branch point region,164,191,1.000,medium,u2-branch-region-basepair
+7abh:Z,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+7abi:Z,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+7abi:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+7abi:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+7abi:Z,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+7abi:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+7onb:G,branch_point_region,branch point region,55,96,1.000,high,u2-branch-region-basepair
+7qtt:g,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+7qtt:g,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+7qtt:g,intron,intron,82,329,1.000,medium,splice-site-inference
+7qtt:g,branch_point_region,branch point region,172,180,1.000,high,network-scored-motif
+7qtt:g,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+7vpx:I,branch_point_region,branch point region,36,52,1.000,high,five-ss-inference; manual-review-correction
+8ch6:g,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
+8ch6:g,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8ch6:g,intron,intron,82,329,1.000,medium,splice-site-inference
+8ch6:g,branch_point_region,branch point region,172,179,1.000,high,network-scored-motif
+8ch6:g,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0p:G,exon_5,5' exon,13,81,1.000,medium,splice-site-inference
+8i0p:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0p:G,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0p:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+8i0p:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0p:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8i0r:G,exon_5,5' exon,13,81,1.000,medium,splice-site-inference
+8i0r:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0r:G,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0r:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+8i0r:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0r:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8i0s:G,exon_5,5' exon,13,81,1.000,medium,splice-site-inference
+8i0s:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0s:G,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0s:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+8i0s:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0s:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8i0t:G,exon_5,5' exon,13,81,1.000,medium,splice-site-inference
+8i0t:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0t:G,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0t:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+8i0t:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0t:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8i0u:G,exon_5,5' exon,13,81,1.000,medium,splice-site-inference
+8i0u:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0u:G,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0u:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+8i0u:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0u:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8i0v:G,exon_5,5' exon,13,81,1.000,medium,splice-site-inference
+8i0v:G,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0v:G,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0v:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
+8i0v:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0v:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8q7n:Z,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
+8q7n:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8q7n:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+8qo9:Z,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
+8qo9:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8qo9:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+8qo9:Z,branch_point_region,branch point region,172,180,1.000,high,network-scored-motif
+8qo9:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8r09:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+8r09:Z,branch_point_region,branch point region,172,180,1.000,high,network-scored-motif
+8r09:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8r0a:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+8r0a:Z,branch_point_region,branch point region,173,180,1.000,high,network-scored-motif
+8r0a:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8r0b:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+8r0b:Z,branch_point_region,branch point region,173,180,1.000,high,network-scored-motif
+8r0b:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8rm5:Z,intron,intron,82,346,1.000,medium,splice-site-inference
+8rm5:Z,branch_point_region,branch point region,166,180,1.000,medium,u2-branch-region-basepair
