@@ -8,8 +8,9 @@
 .legend,.feature-index{display:flex;gap:8px 14px;flex-wrap:wrap;margin:12px 0}.legend span{display:inline-flex;align-items:center;gap:6px}.swatch{width:18px;height:14px;border:1px solid #b8c2cd;border-radius:2px}.swatch.modelled,.modelled{color:#102a43;background:#cfe8ff;font-weight:700}.swatch.unresolved,.unresolved{color:#929daa;background:#f1f4f7}.gap{color:#c5ccd5}.reference{color:#20242a;font-weight:700}.feature-chip{display:inline-flex;align-items:center;gap:6px;color:#46515e;font-size:12px}.feature-chip i{width:11px;height:11px;border:1px solid rgba(20,28,36,.28);border-radius:2px}.feature-chip strong{font-weight:650;color:#687382}
 .alignment-panel{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}.scroll-shell{overflow-x:auto;overflow-y:visible;padding:8px 0 14px}.wrap-shell{padding:2px 0}.alignment-block{margin:12px 0 20px}.block-heading{display:flex;justify-content:space-between;gap:16px;margin-bottom:6px;color:#697583;font-size:11px;font-weight:700}.track-grid,.alignment-row{display:grid;grid-template-columns:var(--label-width) max-content;gap:12px;align-items:start}.track-label,.member{position:sticky;left:0;z-index:5;min-height:20px;padding-right:8px;background:#fff;color:#596574;font:700 11px ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}.track-content{position:relative;font:13px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0}.feature-lane{position:relative;height:36px}.feature-bar{position:absolute;top:2px;height:15px;border:1px solid rgba(21,29,37,.48);min-width:1px}.feature-name{position:absolute;top:19px;left:50%;transform:translateX(-50%);color:#303944;font:600 11px system-ui;white-space:nowrap}.alignment-feature-map{margin:7px 0 12px}.alignment-row{min-height:20px;line-height:1.5}.alignment-row code{font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0;white-space:pre}.continuous .track-label,.continuous .member{box-shadow:8px 0 8px -10px #334155}.residue-cell{display:inline-block;width:1ch}.residue-cell.selectable{cursor:crosshair}.residue-cell.selectable:hover,.residue-cell.selection-preview{background:#ffe568;color:#17212b;outline:1px solid #d6a900}.selection-status{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0;padding:8px 10px;border:1px solid #b9d6ee;border-radius:6px;background:#f4f9fd;color:#29465d;font-size:12px}.selection-status[hidden]{display:none}.selection-status a,.selection-status button{border:1px solid #9dbbd4;border-radius:5px;background:#fff;color:#155f96;padding:4px 8px;text-decoration:none;font:600 12px system-ui;cursor:pointer}
 .coverage-wrap{overflow:auto}.coverage{border-collapse:collapse;width:max-content;min-width:720px;margin-top:8px;font-size:12px}.coverage th,.coverage td{padding:7px 9px;border-bottom:1px solid #e3e8ee;text-align:left}.coverage th{position:sticky;top:47px;background:#f7f9fb}.coverage code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.empty{padding:18px;color:var(--muted)}
-html.embedded main{padding:8px 10px}html.embedded h1,html.embedded .intro,html.embedded .coverage-section{display:none}html.embedded h2{margin-top:10px}html.embedded .toolbar{margin:0 -10px 10px;padding:6px 10px}html.embedded .legend,html.embedded .feature-index{margin:8px 0}
-html.chimerax main{padding:4px 6px}html.chimerax h1,html.chimerax h2,html.chimerax .intro,html.chimerax .toolbar,html.chimerax .legend,html.chimerax .feature-index,html.chimerax .selection-status,html.chimerax .coverage-section{display:none}html.chimerax .alignment-panel{border:0}html.chimerax .scroll-shell{padding:0 0 6px}html.chimerax .alignment-block{margin:2px 0 8px}
+.chimerax-help{display:none}
+html.embedded main{padding:0}html.embedded h1,html.embedded h2,html.embedded .intro,html.embedded .toolbar,html.embedded .coverage-section{display:none}html.embedded .alignment-panel{border-top:0}html.embedded .scroll-shell{padding-top:0}html.embedded .alignment-block{margin-top:2px}html.embedded .legend,html.embedded .feature-index{margin:6px 10px}html.embedded .selection-status{margin:6px 10px;padding:4px 0;border:0;background:transparent}html.embedded .selection-status a,html.embedded .selection-status button{display:none}
+html.chimerax main{padding:4px 6px}html.chimerax h1,html.chimerax h2,html.chimerax .intro,html.chimerax .toolbar,html.chimerax .legend,html.chimerax .feature-index,html.chimerax .selection-status,html.chimerax .coverage-section{display:none}html.chimerax .chimerax-help{display:block;margin:0 0 5px;color:#586574;font-size:11px;line-height:1.35}html.chimerax .alignment-panel{border:0}html.chimerax .scroll-shell{padding:0 0 6px}html.chimerax .alignment-block{margin:2px 0 8px}
 @media(max-width:700px){:root{--label-width:105px}main{padding:14px}.toolbar{margin:16px -14px;padding:7px 14px;gap:10px;flex-wrap:wrap}.track-content,.alignment-row code{font-size:12px}.feature-name{font-size:10px}}
 </style></head><body><main>
 <h1>6G90 vs UBC4 253-nt pre-mRNA</h1>
@@ -17,6 +18,7 @@ html.chimerax main{padding:4px 6px}html.chimerax h1,html.chimerax h2,html.chimer
 <div class="toolbar"><div class="control"><span class="control-label">View</span><div class="segments" role="group" aria-label="Sequence layout"><button type="button" data-view="continuous" class="active">Continuous</button><button type="button" data-view="wrap">Wrap</button></div></div><label class="control"><span class="control-label">Bases per line</span><select id="lineWidth" disabled><option>60</option><option>100</option><option selected>120</option><option>160</option></select></label></div>
 <h2>Multiple-sequence alignment</h2>
 <p class="intro">Feature positions are projected from reference coordinates onto alignment columns. Click a modelled nucleotide, or drag across a modelled range in one deposited chain, to focus it in the dashboard Mol* viewer.</p>
+<p class="chimerax-help">Click a blue modelled nucleotide, or drag across one deposited chain, to select and focus the corresponding residue(s) in ChimeraX.</p>
 <div id="alignment" class="alignment-panel"></div>
 <div id="selectionStatus" class="selection-status" hidden><strong id="selectionLabel"></strong><span id="selectionCommand"></span><a id="chimeraxLink" href="#" title="Runs the selection command when this page is open in the ChimeraX Help Viewer">Focus in ChimeraX</a><button type="button" id="copyChimerax">Copy ChimeraX command</button></div>
 <div class="legend"><span><i class="swatch modelled"></i>modelled</span><span><i class="swatch unresolved"></i>sequence record, not modelled</span><span><i class="swatch gap"></i>alignment gap</span></div>
@@ -30,6 +32,13 @@ const lineWidth=document.getElementById("lineWidth");
 const queryParams=new URLSearchParams(window.location.search),preferSystematic=queryParams.get("chain_ids")==="systematic",chimeraxMode=queryParams.get("viewer")==="chimerax";
 let viewMode="continuous",dragStart=null,dragEnd=null,lastSelection=null;
 const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+function reportHeight(){
+  if(window.parent===window)return;
+  const main=document.querySelector("main");
+  const visibleChildren=[...(main?.children||[])].filter(element=>getComputedStyle(element).display!=="none");
+  const contentBottom=Math.max(150,...visibleChildren.map(element=>element.getBoundingClientRect().bottom));
+  window.parent.postMessage({source:"splicevis-rna-alignment-resize",height:Math.ceil(contentBottom+2)},"*");
+}
 function featureLanes(features,startKey="start",endKey="end"){
   const lanes=[];
   for(const feature of features.filter(item=>item[startKey]&&item[endKey]).sort((a,b)=>a[startKey]-b[startKey]||b[endKey]-a[endKey])){
@@ -79,6 +88,7 @@ function render(){
     lineWidth.disabled=false;
   }
   bindResidueSelection();
+  requestAnimationFrame(reportHeight);
 }
 function numericAuth(value){return /^-?\d+$/.test(String(value))?Number(value):null}
 function compactRanges(values){
@@ -107,6 +117,7 @@ function finishSelection(){
   const commandUrl=`cxcmd:${encodeURIComponent(command)}`;
   lastSelection={command,payload};document.getElementById("selectionStatus").hidden=false;document.getElementById("selectionLabel").textContent=payload.label;document.getElementById("selectionCommand").textContent=`sequence positions ${lo}-${hi}; ChimeraX ${modelPrefix}/${chimeraxChain}`;document.getElementById("chimeraxLink").href=commandUrl;
   if(window.parent!==window)window.parent.postMessage(payload,"*");
+  requestAnimationFrame(reportHeight);
   if(chimeraxMode)window.location.href=commandUrl;
   dragStart=dragEnd=null;
 }

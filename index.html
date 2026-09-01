@@ -107,14 +107,17 @@
     .molstar-feature-button { border:1px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); min-height:28px; padding:4px 9px; font-size:12px; max-width:270px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .molstar-feature-button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:700; }
     .molstar-feature-button .component-swatch { margin-right:5px; }
-    .rna-alignment-panel { display:grid; gap:8px; padding-top:10px; border-top:1px solid var(--soft-line); }
-    .rna-alignment-heading { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:8px 16px; }
-    .rna-alignment-heading h3 { margin:0 0 2px; font-size:13px; }
-    .rna-alignment-actions, .rna-alignment-tabs { display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
-    .rna-alignment-actions a, .rna-alignment-actions button, .rna-alignment-tabs button { display:inline-flex; align-items:center; min-height:26px; padding:3px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); text-decoration:none; font:inherit; font-size:12px; cursor:pointer; }
-    .rna-alignment-actions a:hover, .rna-alignment-actions button:hover, .rna-alignment-tabs button:hover { border-color:#9fc6ef; background:#f5faff; color:#0b5cab; }
-    .rna-alignment-tabs button.active { border-color:#0b5cab; background:#eef6ff; color:#0b5cab; font-weight:750; }
-    .rna-alignment-frame { display:block; width:100%; height:390px; border:0; background:#fff; }
+    .rna-alignment-panel { display:grid; gap:2px; padding-top:2px; border-top:1px solid var(--soft-line); }
+    .rna-alignment-frame { display:block; width:100%; height:300px; border:0; background:#fff; }
+    .rna-alignment-footer { display:flex; justify-content:flex-end; align-items:center; gap:10px; min-height:24px; padding:1px 4px 0; color:var(--muted); font-size:11px; }
+    .rna-alignment-footer a { color:var(--muted); text-decoration:none; }
+    .rna-alignment-footer a:hover { color:#0b5cab; text-decoration:underline; }
+    .rna-alignment-select { height:24px; max-width:220px; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); font:inherit; font-size:11px; }
+    .rna-alignment-help { position:relative; display:inline-flex; }
+    .rna-alignment-help > button { width:20px; height:20px; padding:0; border:1px solid #b7c2cf; border-radius:50%; background:#fff; color:#536170; font:700 11px system-ui; cursor:help; }
+    .rna-alignment-help-text { position:absolute; right:0; bottom:calc(100% + 6px); z-index:30; display:none; width:min(330px,80vw); padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:#fff; box-shadow:0 8px 24px rgba(30,45,60,.14); color:#445160; line-height:1.4; }
+    .rna-alignment-help-text strong { display:block; margin-bottom:3px; color:var(--ink); }
+    .rna-alignment-help:hover .rna-alignment-help-text, .rna-alignment-help:focus-within .rna-alignment-help-text { display:block; }
     .molstar-options { margin-top:8px; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .molstar-options > summary { cursor:pointer; list-style:none; padding:8px 10px; color:var(--muted); font-size:12px; font-weight:750; }
     .molstar-options > summary::-webkit-details-marker { display:none; }
@@ -1421,25 +1424,18 @@ ${await scriptFor(record,"no_maps")}
       if(!items.length) return "";
       const first = items[0];
       const firstUrl = alignmentViewerUrl(first.html);
-      const tabs = items.length > 1 ? `<div class="rna-alignment-tabs">${items.map((item,index)=>`<button type="button" class="${index===0?"active":""}" data-alignment-index="${index}" onclick="changeRnaAlignment(this)">${esc(item.label)}</button>`).join("")}</div>` : "";
-      return `<section class="rna-alignment-panel"><div class="rna-alignment-heading"><div><h3>Pre-mRNA sequence alignment</h3><div class="subtle">Annotated reference and all deposited substrate chains. Click a modelled nucleotide or drag a range to focus it in Mol*.</div></div><div class="rna-alignment-actions"><a id="rnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full view</a>${first.fasta?`<a id="rnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}<button type="button" onclick="copyRnaAlignmentChimeraX(this)" title="Copy a command that opens this interactive alignment in the ChimeraX Help Viewer.">Copy ChimeraX viewer command</button></div></div>${tabs}<iframe id="rnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} pre-mRNA sequence alignment`)}" loading="eager"></iframe></section>`;
+      const chooser = items.length > 1 ? `<select class="rna-alignment-select" aria-label="Reference alignment" onchange="changeRnaAlignment(this)">${items.map((item,index)=>`<option value="${index}">${esc(item.label)}</option>`).join("")}</select>` : "";
+      const help = `<span class="rna-alignment-help"><button type="button" aria-label="Sequence alignment help">?</button><span class="rna-alignment-help-text" role="tooltip"><strong>Sequence alignment</strong>Feature tracks are projected from the annotated reference. Blue bases are modelled; grey bases are present in the sequence record but unresolved. Click a modelled base, or drag a range within one chain, to focus it in Mol*.</span></span>`;
+      return `<section class="rna-alignment-panel"><iframe id="rnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} pre-mRNA sequence alignment`)}" loading="eager"></iframe><div class="rna-alignment-footer">${chooser}${help}<a id="rnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full alignment</a>${first.fasta?`<a id="rnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}</div></section>`;
     }
-    function changeRnaAlignment(button){
-      const items=structureAlignmentItems(currentMolstarRecord()),item=items[Number(button.dataset.alignmentIndex)];
+    function changeRnaAlignment(control){
+      const items=structureAlignmentItems(currentMolstarRecord()),item=items[Number(control.value)];
       if(!item) return;
       const viewerUrl=alignmentViewerUrl(item.html);
       document.getElementById("rnaAlignmentFrame").src=viewerUrl;
       document.getElementById("rnaAlignmentOpen").href=viewerUrl;
       const fasta=document.getElementById("rnaAlignmentFasta");
       if(fasta && item.fasta) fasta.href=item.fasta;
-      document.querySelectorAll(".rna-alignment-tabs button").forEach(tab=>tab.classList.toggle("active",tab===button));
-    }
-    async function copyRnaAlignmentChimeraX(button){
-      const frame=document.getElementById("rnaAlignmentFrame");
-      if(!frame) return;
-      const viewerUrl=new URL(frame.getAttribute("src"),window.location.href);
-      viewerUrl.searchParams.set("viewer","chimerax");
-      await copyText(`open ${viewerUrl.href}`,button);
     }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
@@ -1683,8 +1679,15 @@ ${await scriptFor(record,"no_maps")}
     }
     window.addEventListener("message",event=>{
       const payload=event.data;
-      if(!payload||payload.source!=="splicevis-rna-alignment") return;
       const frame=document.getElementById("rnaAlignmentFrame");
+      if(payload?.source==="splicevis-rna-alignment-resize"){
+        if(frame&&event.source===frame.contentWindow){
+          const height=Math.max(150,Math.min(460,Number(payload.height)||300));
+          frame.style.height=`${Math.ceil(height)}px`;
+        }
+        return;
+      }
+      if(!payload||payload.source!=="splicevis-rna-alignment") return;
       if(frame&&event.source!==frame.contentWindow) return;
       focusMolstarAlignmentSelection(payload).catch(error=>{
         const status=document.getElementById("molstarStatus");
