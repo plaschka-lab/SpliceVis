@@ -1,6 +1,6 @@
 LOCUS       PM5_reference            478 bp    RNA              UNK 01-JAN-1980
 DEFINITION  PM5 reference; substrate_type_reference; reference=6ff4:Z;
-            members=3.
+            members=5.
 ACCESSION   PM5_reference
 VERSION     PM5_reference
 KEYWORDS    .
@@ -10,47 +10,34 @@ SOURCE      .
 FEATURES             Location/Qualifiers
      misc_feature    1..242
                      /label="5' exon"
-                     /note="feature=exon_5; support=3/3; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=6ff4:Z, 9r8v:Z; projected by global alignment;
-                     members=6ff7:Z"
+                     /note="feature=exon_5; support=2/5; selected from projected
+                     family annotations; members=6ff4:Z, 9r8v:Z"
                      /ApEinfo_fwdcolor="#FF8C00"
                      /ApEinfo_revcolor="#FF8C00"
      misc_feature    243..248
                      /label="5' splice site"
-                     /note="feature=five_prime_splice_site; support=2/3;
-                     projected by global alignment; members=6ff4:Z, 9r8v:Z"
+                     /note="feature=five_prime_splice_site; support=3/5;
+                     selected from projected family annotations; members=6ff4:Z,
+                     8c6j:I, 9r8v:Z"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
      misc_feature    243..478
                      /label="intron from 5' splice site"
-                     /note="feature=intron; support=3/3; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=9r8v:Z; projected by global alignment;
-                     members=6ff4:Z; projected by global alignment;
-                     members=6ff7:Z"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
-     misc_feature    266..289
-                     /label="5' splice site"
-                     /note="feature=five_prime_splice_site; support=1/3;
-                     projected by global alignment; members=6ff7:Z"
+                     /note="feature=intron; support=2/5; selected from projected
+                     family annotations; members=6ff4:Z, 8c6j:I"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
      misc_feature    386..395
                      /label="branch point region"
-                     /note="feature=branch_point_region; support=3/3; merged
-                     overlapping projected intervals; projected by global
-                     alignment; members=6ff7:Z; projected by global alignment;
-                     members=6ff4:Z; projected by global alignment;
-                     members=9r8v:Z"
+                     /note="feature=branch_point_region; support=1/5; selected
+                     from projected family annotations; members=6ff7:Z"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
      misc_feature    394
                      /label="branch point adenosine"
-                     /note="feature=branch_point_adenosine; support=3/3;
-                     projected by global alignment; members=6ff4:Z, 6ff7:Z,
-                     9r8v:Z"
+                     /note="feature=branch_point_adenosine; support=3/5;
+                     selected from projected family annotations; members=6ff4:Z,
+                     6ff7:Z, 9r8v:Z"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
 ORIGIN

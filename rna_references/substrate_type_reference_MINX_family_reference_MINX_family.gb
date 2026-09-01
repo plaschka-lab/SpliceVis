@@ -1,6 +1,6 @@
 LOCUS       MINX_family_refe         347 bp    RNA              UNK 01-JAN-1980
 DEFINITION  MINX family reference; substrate_type_reference; reference=8rm5:Z;
-            members=37.
+            members=45.
 ACCESSION   MINX_family_refe
 VERSION     MINX_family_refe
 KEYWORDS    .
@@ -10,111 +10,66 @@ SOURCE      .
 FEATURES             Location/Qualifiers
      misc_feature    1..81
                      /label="5' exon"
-                     /note="feature=exon_5; support=24/37; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G, 6ahd:G,
-                     8q7n:Z, 8qo9:Z; projected by global alignment;
-                     members=6icz:G; projected by global alignment;
-                     members=8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G;
-                     projected by global alignment; members=5mqf:Z, 5o9z:Y,
-                     6zym:Z, 7aav:Z, 7abf:Z, 7abg:Z, 7abi:Z, 7qtt:g, 8ch6:g"
+                     /note="feature=exon_5; support=8/45; selected from
+                     projected family annotations; members=5xjc:G, 5yzg:G,
+                     5z56:G, 5z57:G, 5z58:G, 6ahd:G, 8q7n:Z, 8qo9:Z"
                      /ApEinfo_fwdcolor="#FF8C00"
                      /ApEinfo_revcolor="#FF8C00"
-     misc_feature    36..52
-                     /label="branch point region"
-                     /note="feature=branch_point_region; support=1/37; projected
-                     by global alignment; members=7vpx:I"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
-     misc_feature    55..96
-                     /label="branch point region"
-                     /note="feature=branch_point_region; support=1/37; projected
-                     by global alignment; members=7onb:G"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
      misc_feature    82..87
                      /label="5' splice site"
-                     /note="feature=five_prime_splice_site; support=26/37;
-                     projected by global alignment; members=5mqf:Y, 5o9z:Y,
-                     5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G, 6ahd:G, 6icz:G,
-                     6id0:G, 6id1:G, 6zym:Y, 7aav:Z, 7abf:Z, 7abg:Z, 7abi:Z,
-                     7qtt:g, 8ch6:g, 8i0p:G, 8i0r:G"
+                     /note="feature=five_prime_splice_site; support=30/45;
+                     selected from projected family annotations; members=5mqf:Y,
+                     5o9z:Y, 5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G, 6ahd:G,
+                     6icz:G, 6id0:G, 6id1:G, 6zym:Y, 7aav:Z, 7abf:Z, 7abg:Z,
+                     7abi:Z, 7qtt:g, 7w59:G, 7w5a:G, 7w5b:G"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
-     misc_feature    82..238
+     misc_feature    82..201
                      /label="intron"
-                     /note="feature=intron; support=33/37; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=5mqf:Y; projected by global alignment;
-                     members=6icz:G; projected by global alignment;
-                     members=7aav:Z, 7abf:Z, 7abg:Z, 7abh:Z, 8i0p:G, 8i0r:G,
-                     8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G; projected by global
-                     alignment; members=7qtt:g, 8ch6:g; projected by global
-                     alignment; members=5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G,
-                     6ah0:G, 6ahd:G, 6id0:G, 6id1:G; projected by global
-                     alignment; members=5o9z:Y, 6zym:Y, 7a5p:Y, 7abi:Z, 8q7n:Z,
-                     8qo9:Z, 8r09:Z, 8r0a:Z, 8r0b:Z, 8rm5:Z"
+                     /note="feature=intron; support=11/45; selected from
+                     projected family annotations; members=7aav:Z, 7abf:Z,
+                     7abg:Z, 7abh:Z, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G,
+                     8i0v:G, 8i0w:6"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
-     misc_feature    172..180
+     misc_feature    173..179
                      /label="branch point region"
-                     /note="feature=branch_point_region; support=19/37; merged
-                     overlapping projected intervals; projected by global
-                     alignment; members=7abh:Z; projected by global alignment;
-                     members=8rm5:Z; projected by global alignment;
-                     members=5o9z:Y, 6zym:Y; projected by global alignment;
-                     members=8ch6:g; projected by global alignment;
-                     members=7qtt:g, 8qo9:Z, 8r09:Z; projected by global
-                     alignment; members=5mqf:Y, 7abg:Z, 7abi:Z, 8i0p:G, 8i0r:G,
-                     8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G; projected by global
-                     alignment; members=8r0a:Z, 8r0b:Z"
+                     /note="feature=branch_point_region; support=9/45; selected
+                     from projected family annotations; members=5mqf:Y, 7abg:Z,
+                     7abi:Z, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
      misc_feature    178
                      /label="branch point adenosine"
-                     /note="feature=branch_point_adenosine; support=17/37;
-                     projected by global alignment; members=5mqf:Y, 5o9z:Y,
-                     6zym:Y, 7abg:Z, 7abi:Z, 7qtt:g, 8ch6:g, 8i0p:G, 8i0r:G,
-                     8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G, 8qo9:Z, 8r09:Z, 8r0a:Z,
-                     8r0b:Z"
+                     /note="feature=branch_point_adenosine; support=21/45;
+                     selected from projected family annotations; members=5mqf:Y,
+                     5o9z:Y, 6zym:Y, 7abg:Z, 7abi:Z, 7qtt:g, 7w59:G, 7w5a:G,
+                     7w5b:G, 8ch6:g, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G,
+                     8i0v:G, 8i0w:6, 8qo9:Z, 8r09:Z, 8r0a:Z"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
      misc_feature    184..197
                      /label="polypyrimidine tract"
-                     /note="feature=polypyrimidine_tract; support=7/37;
-                     projected by global alignment; members=7abh:Z, 8i0p:G,
-                     8i0r:G, 8i0s:G, 8i0t:G, 8i0u:G, 8i0v:G"
+                     /note="feature=polypyrimidine_tract; support=11/45;
+                     selected from projected family annotations; members=7abh:Z,
+                     7w59:G, 7w5a:G, 7w5b:G, 8i0p:G, 8i0r:G, 8i0s:G, 8i0t:G,
+                     8i0u:G, 8i0v:G, 8i0w:6"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
-     misc_feature    249..253
-                     /label="branch point region"
-                     /note="feature=branch_point_region; support=1/37; projected
-                     by global alignment; members=5xjc:G"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
-     misc_feature    251
-                     /label="branch point adenosine"
-                     /note="feature=branch_point_adenosine; support=10/37;
-                     projected by global alignment; members=5xjc:G, 5yzg:G,
-                     5z56:G, 5z57:G, 5z58:G, 6ah0:G, 6ahd:G, 6icz:G, 6id0:G,
-                     6id1:G"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
-     misc_feature    256..269
-                     /label="polypyrimidine tract"
-                     /note="feature=polypyrimidine_tract; support=10/37; merged
-                     overlapping projected intervals; projected by global
-                     alignment; members=5xjc:G, 5yzg:G, 5z56:G, 5z57:G, 5z58:G,
-                     6ah0:G, 6ahd:G; projected by global alignment;
-                     members=6icz:G, 6id0:G, 6id1:G"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
-     misc_feature    272..274
+     misc_feature    199..201
                      /label="3' splice site"
-                     /note="feature=three_prime_splice_site; support=1/37;
-                     projected by global alignment; members=6icz:G"
+                     /note="feature=three_prime_splice_site; support=3/45;
+                     selected from projected family annotations; members=7w59:G,
+                     7w5a:G, 7w5b:G"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
+     misc_feature    202..347
+                     /label="3' exon"
+                     /note="feature=exon_3; support=3/45; selected from
+                     projected family annotations; members=7w59:G, 7w5a:G,
+                     7w5b:G"
+                     /ApEinfo_fwdcolor="#D97706"
+                     /ApEinfo_revcolor="#D97706"
 ORIGIN
         1 gguaccuaau acgacucacu auagggagac ggaauucgag cucgcccacu cuuggaucgg
        61 aaacccgucg gccuccgaac gguaagagcc uagcauguag aacugguuac cugcagccca

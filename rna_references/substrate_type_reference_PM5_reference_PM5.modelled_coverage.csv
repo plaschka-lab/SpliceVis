@@ -1,0 +1,6 @@
+member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
+6ff4:Z,6ff4,Z,478,48,0.1004,"233-262,380-397"
+6ff7:Z,6ff7,Z,369,48,0.1301,"233-262,271-288"
+8c6j:E,8c6j,E,242,24,0.0992,219-242
+8c6j:I,8c6j,I,235,84,0.3574,"1-22,132-193"
+9r8v:Z,9r8v,Z,410,44,0.1073,"234-262,382-396"

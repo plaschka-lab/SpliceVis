@@ -1,0 +1,12 @@
+# STOCKHOLM 1.0
+#=GF CC MODEL annotation: M=modelled coordinate residue; .=present in sequence record but unresolved; -=alignment gap
+REFERENCE  GGGCAACGCGGCCCGCGACAACAAGAAGACGCGCAUCAUCCCGCGCCACCUGCAGCUGGCCAUCCGCAACGACGAGGAGCUCAACAAGCUGCUGGGCAAAG
+9k1o:G     --------------------AC----A-A----CA--A------G--A-----A----G--A--CG---CG-C----A--U---C-A-----U------A-
+#=GR 9k1o:G MODEL --------------------..----.-.----..--.------.--.-----.----M--M--MM---MM-M----M--M---M-M-----M------M-
+9k1o:H     --------------------AC----A-A----CA--A------G--A-----A----G--A--CG---CG-C----A--U---C-A-----U--------
+#=GR 9k1o:H MODEL --------------------MM----M-M----MM--M------M--M-----M----M--M--MM---MM-M----M--M---M-M-----.--------
+9k1q:G     GGGCAACGCGGCCCGCGACAACAAGAAGACGCGCAUCAUCCCGCGCCACCUGCAGCUGGCCAUCCGCAACGACGAGGAGCUCAACAAGCUGCUGGGCAAAG
+#=GR 9k1q:G MODEL ..............................MMMMMMMMMMMMMMMMMMMMMM.................................................
+9k1q:H     GGGCAACGCGGCCCGCGACAACAAGAAGACGCGCAUCAUCCCGCGCCACCUGCAGCUGGCCAUCCGCAACGACGAGGAGCUCAACAAGCUGCUGGGCAAAG
+#=GR 9k1q:H MODEL .........................MMMMMMMMM...................................................................
+//

@@ -1,0 +1,2 @@
+member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
+6qx9:I,6qx9,I,62,25,0.4032,"1-10,48-62"

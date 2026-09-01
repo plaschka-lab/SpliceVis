@@ -14,6 +14,11 @@ member,feature,label,start,end,coverage,confidence,method
 6j6h:B,intron,intron,193,601,1.000,medium,splice-site-inference
 6j6h:B,branch_point_region,branch point region,450,460,1.000,high,network-scored-motif
 6j6h:B,branch_point_adenosine,branch point adenosine,458,458,1.000,high,network-scored-motif
+6n7r:r,exon_5,5' exon,3,615,1.000,medium,five-ss-inference
+6n7r:r,five_prime_splice_site,5' splice site,616,624,1.000,high,network-scored-motif
+6n7r:r,intron,intron from 5' splice site,616,679,1.000,low,five-ss-inference
+7oqb:I,intron,intron,193,679,1.000,medium,splice-site-inference
+7oqb:I,branch_point_region,branch point region,467,526,1.000,high,network-scored-motif
 7oqe:I,exon_5,5' exon,2,23,1.000,medium,splice-site-inference
 7oqe:I,five_prime_splice_site,5' splice site,24,39,1.000,high,network-scored-motif
 7oqe:I,intron,intron,24,679,1.000,medium,splice-site-inference

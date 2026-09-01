@@ -1,6 +1,6 @@
 LOCUS       UBC4_reference           253 bp    RNA              UNK 01-JAN-1980
 DEFINITION  UBC4 reference; substrate_type_reference; reference=6n7p:r;
-            members=3.
+            members=20.
 ACCESSION   UBC4_reference
 VERSION     UBC4_reference
 KEYWORDS    .
@@ -10,46 +10,51 @@ SOURCE      .
 FEATURES             Location/Qualifiers
      misc_feature    1..22
                      /label="5' exon"
-                     /note="feature=exon_5; support=3/3; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=6n7p:r; projected by global alignment;
-                     members=6j6n:B, 6j6q:B"
+                     /note="feature=exon_5; support=2/20; selected from
+                     projected family annotations; members=6j6n:B, 6j6q:B"
                      /ApEinfo_fwdcolor="#FF8C00"
                      /ApEinfo_revcolor="#FF8C00"
      misc_feature    23..28
                      /label="5' splice site"
-                     /note="feature=five_prime_splice_site; support=1/3;
-                     projected by global alignment; members=6n7p:r"
+                     /note="feature=five_prime_splice_site; support=9/20;
+                     selected from projected family annotations; members=5lj3:I,
+                     5lj5:I, 5mps:I, 5mq0:I, 5nrl:I, 6exn:I, 6n7p:r, 7b9v:I,
+                     9dtr:I"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
-     misc_feature    23..253
+     misc_feature    23..117
                      /label="intron"
-                     /note="feature=intron; support=3/3; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=6n7p:r; projected by global alignment;
-                     members=6j6n:B, 6j6q:B"
+                     /note="feature=intron; support=5/20; selected from
+                     projected family annotations; members=5nrl:I, 6exn:I,
+                     6n7p:r, 7b9v:I, 9dtr:I"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
-     misc_feature    122..127
-                     /label="5' splice site"
-                     /note="feature=five_prime_splice_site; support=2/3;
-                     projected by global alignment; members=6j6n:B, 6j6q:B"
-                     /ApEinfo_fwdcolor="#303030"
-                     /ApEinfo_revcolor="#303030"
-     misc_feature    189..198
+     misc_feature    87..93
                      /label="branch point region"
-                     /note="feature=branch_point_region; support=2/3; merged
-                     overlapping projected intervals; projected by global
-                     alignment; members=6j6n:B; projected by global alignment;
-                     members=6j6q:B"
+                     /note="feature=branch_point_region; support=6/20; anchored
+                     to the unique budding-yeast UACUAAC branch-site consensus"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
-     misc_feature    196
+     misc_feature    92
                      /label="branch point adenosine"
-                     /note="feature=branch_point_adenosine; support=2/3;
-                     projected by global alignment; members=6j6n:B, 6j6q:B"
+                     /note="feature=branch_point_adenosine; support=6/20;
+                     anchored to the unique budding-yeast UACUAAC branch-site
+                     consensus"
                      /ApEinfo_fwdcolor="#303030"
                      /ApEinfo_revcolor="#303030"
+     misc_feature    115..117
+                     /label="3' splice site"
+                     /note="feature=three_prime_splice_site; support=2/20;
+                     re-anchored to the first downstream budding-yeast YAG after
+                     the branch site"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    118..253
+                     /label="3' exon"
+                     /note="feature=exon_3; support=1/20; selected from
+                     projected family annotations; members=9dtr:E"
+                     /ApEinfo_fwdcolor="#D97706"
+                     /ApEinfo_revcolor="#D97706"
 ORIGIN
         1 gggaacuaag ugaucuagaa agguaugucu aaaguuaugg ccacguuuca aaugcgugcu
        61 uuuuuuuuaa aacuuaugcu cuuauuuacu aacaaaauca acaugcuauu gaacuagaga

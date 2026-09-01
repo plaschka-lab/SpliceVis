@@ -1,6 +1,6 @@
 LOCUS       Histone_H2A_RNA_         101 bp    RNA              UNK 01-JAN-1980
 DEFINITION  Histone H2A RNA reference; substrate_type_reference;
-            reference=9k1q:H; members=2.
+            reference=9k1q:H; members=4.
 ACCESSION   Histone_H2A_RNA_
 VERSION     Histone_H2A_RNA_
 KEYWORDS    .

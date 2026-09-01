@@ -9,6 +9,10 @@ member,feature,label,start,end,coverage,confidence,method
 6ff7:Z,intron,intron from 5' splice site,266,478,1.000,medium,five-ss-inference
 6ff7:Z,branch_point_region,branch point region,386,395,1.000,high,network-scored-motif
 6ff7:Z,branch_point_adenosine,branch point adenosine,394,394,1.000,high,network-scored-motif
+8c6j:E,exon_5,5' exon,1,474,1.000,high,component-name
+8c6j:I,five_prime_splice_site,5' splice site,243,248,1.000,medium,network-scored-motif
+8c6j:I,intron,intron,243,478,1.000,high,component-name
+8c6j:I,branch_point_region,branch point region,389,393,1.000,high,network-scored-motif
 9r8v:Z,exon_5,5' exon,1,242,1.000,medium,five-ss-inference
 9r8v:Z,five_prime_splice_site,5' splice site,243,248,1.000,high,network-scored-motif
 9r8v:Z,intron,intron from 5' splice site,243,476,1.000,low,five-ss-inference

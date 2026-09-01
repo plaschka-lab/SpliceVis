@@ -57,6 +57,15 @@ member,feature,label,start,end,coverage,confidence,method
 6id1:G,intron,intron,82,331,0.966,medium,splice-site-inference
 6id1:G,branch_point_adenosine,branch point adenosine,251,251,1.000,high,network-scored-motif
 6id1:G,polypyrimidine_tract,polypyrimidine tract,256,271,1.000,medium,sequence-motif
+6qdv:E,exon_5,5' exon,299,336,1.000,high,auth-residue-numbering
+6qdv:E,ligated_exons,ligated exons,299,344,1.000,high,component-name
+6qdv:E,exon_3,3' exon,343,344,1.000,high,auth-residue-numbering
+6qdv:I,five_prime_splice_site,5' splice site,106,137,1.000,medium,network-scored-motif
+6qdv:I,intron,intron,106,346,1.000,high,component-name
+6qdv:I,intron_lariat,intron lariat,106,346,1.000,high,component-name
+6qdv:I,branch_point_region,branch point region,305,324,1.000,high,network-scored-motif
+6qdv:I,branch_point_adenosine,branch point adenosine,313,313,1.000,high,network-scored-motif
+6qdv:I,three_prime_splice_site,3' splice site,343,346,1.000,medium,network-scored-motif
 6zym:Y,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
 6zym:Y,intron,intron,82,346,1.000,medium,splice-site-inference
 6zym:Y,branch_point_region,branch point region,168,179,1.000,high,network-scored-motif
@@ -89,6 +98,27 @@ member,feature,label,start,end,coverage,confidence,method
 7qtt:g,branch_point_region,branch point region,172,180,1.000,high,network-scored-motif
 7qtt:g,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
 7vpx:I,branch_point_region,branch point region,36,52,1.000,high,five-ss-inference; manual-review-correction
+7w59:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+7w59:G,intron,intron,82,201,1.000,medium,splice-site-inference
+7w59:G,branch_point_region,branch point region,174,180,1.000,high,network-scored-motif
+7w59:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+7w59:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+7w59:G,three_prime_splice_site,3' splice site,199,201,1.000,medium,network-scored-motif
+7w59:G,exon_3,3' exon,202,346,1.000,medium,splice-site-inference
+7w5a:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+7w5a:G,intron,intron,82,201,1.000,medium,splice-site-inference
+7w5a:G,branch_point_region,branch point region,174,180,1.000,high,network-scored-motif
+7w5a:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+7w5a:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+7w5a:G,three_prime_splice_site,3' splice site,199,201,1.000,medium,network-scored-motif
+7w5a:G,exon_3,3' exon,202,346,1.000,medium,splice-site-inference
+7w5b:G,five_prime_splice_site,5' splice site,82,87,1.000,medium,network-scored-motif
+7w5b:G,intron,intron,82,201,1.000,medium,splice-site-inference
+7w5b:G,branch_point_region,branch point region,174,180,1.000,high,network-scored-motif
+7w5b:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+7w5b:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+7w5b:G,three_prime_splice_site,3' splice site,199,201,1.000,medium,network-scored-motif
+7w5b:G,exon_3,3' exon,202,346,1.000,medium,splice-site-inference
 8ch6:g,exon_5,5' exon,24,81,1.000,medium,splice-site-inference
 8ch6:g,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
 8ch6:g,intron,intron,82,329,1.000,medium,splice-site-inference
@@ -130,6 +160,11 @@ member,feature,label,start,end,coverage,confidence,method
 8i0v:G,branch_point_region,branch point region,173,179,1.000,high,network-scored-motif
 8i0v:G,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
 8i0v:G,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
+8i0w:6,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
+8i0w:6,intron,intron,82,287,1.000,medium,splice-site-inference
+8i0w:6,branch_point_region,branch point region,173,180,1.000,high,network-scored-motif
+8i0w:6,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
+8i0w:6,polypyrimidine_tract,polypyrimidine tract,184,197,1.000,medium,sequence-motif
 8q7n:Z,exon_5,5' exon,1,81,1.000,medium,splice-site-inference
 8q7n:Z,five_prime_splice_site,5' splice site,82,87,1.000,high,network-scored-motif
 8q7n:Z,intron,intron,82,346,1.000,medium,splice-site-inference
@@ -149,3 +184,10 @@ member,feature,label,start,end,coverage,confidence,method
 8r0b:Z,branch_point_adenosine,branch point adenosine,178,178,1.000,high,network-scored-motif
 8rm5:Z,intron,intron,82,346,1.000,medium,splice-site-inference
 8rm5:Z,branch_point_region,branch point region,166,180,1.000,medium,u2-branch-region-basepair
+9fmd:EX,exon_5,5' exon,299,336,1.000,high,auth-residue-numbering
+9fmd:EX,exon_3,3' exon,343,344,1.000,high,auth-residue-numbering
+9fmd:IN,five_prime_splice_site,5' splice site,106,137,1.000,medium,network-scored-motif
+9fmd:IN,intron,intron,106,346,1.000,high,component-name
+9fmd:IN,branch_point_region,branch point region,301,319,1.000,high,network-scored-motif
+9fmd:IN,branch_point_adenosine,branch point adenosine,313,313,1.000,high,network-scored-motif
+9fmd:IN,three_prime_splice_site,3' splice site,343,346,1.000,medium,network-scored-motif
