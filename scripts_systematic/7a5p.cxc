@@ -289,5 +289,7 @@ open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_syste
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic/selection_browser_scripts/7a5p_selection_browser.py
+# Compact annotated pre-mRNA alignment; clicking modelled residues focuses them in ChimeraX.
+open https://plaschka-lab.github.io/SpliceVis/rna_references/7a5p_vs_minx_m3_324.modelled.html?viewer=chimerax&chain_ids=systematic
 view
 show nucleic

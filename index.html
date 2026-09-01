@@ -1437,7 +1437,9 @@ ${await scriptFor(record,"no_maps")}
     async function copyRnaAlignmentChimeraX(button){
       const frame=document.getElementById("rnaAlignmentFrame");
       if(!frame) return;
-      await copyText(`open ${new URL(frame.getAttribute("src"),window.location.href).href}`,button);
+      const viewerUrl=new URL(frame.getAttribute("src"),window.location.href);
+      viewerUrl.searchParams.set("viewer","chimerax");
+      await copyText(`open ${viewerUrl.href}`,button);
     }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
