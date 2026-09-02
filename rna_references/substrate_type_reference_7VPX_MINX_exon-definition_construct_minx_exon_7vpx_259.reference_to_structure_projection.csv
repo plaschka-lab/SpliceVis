@@ -1,0 +1,13 @@
+member,pdb_id,chain,feature,label,reference_start,reference_end,reference_feature_sequence,query_label_seq_ranges,projected_query_sequence,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
+7vpx:I,7vpx,I,intron,upstream intron,1,66,GGGAGUGCAGUAGUCCAGGGUUUCCUUGAAGCUUUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1-66,GGGAGUGCAGUAGUCCAGGGUUUCCUUGAAGCUUUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,1.0000,1.0000,27-41,0.2273,complete
+7vpx:I,7vpx,I,branch_point_region,branch point region,27,43,UGAAGCUUUCAUACUUA,27-43,UGAAGCUUUCAUACUUA,1.0000,1.0000,27-41,0.8824,complete
+7vpx:I,7vpx,I,branch_point_adenosine,branch point adenosine,43,43,A,43,A,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,polypyrimidine_tract,polypyrimidine tract,51,62,CCUUUUUUUUCC,51-62,CCUUUUUUUUCC,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,three_prime_splice_site,upstream 3' splice site,64,66,CAG,64-66,CAG,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,exon_defined_exon,exon-defined exon,67,105,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCGAACG,67-105,CUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCGAACG,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,five_prime_splice_site,downstream 5' splice site,106,111,GUAAGA,106-111,GUAAGA,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,downstream_intron_segment,downstream intron segment,106,159,GUAAGAGCCUAGCAUGUAGAACCUUGGGAUCCGAAUACGGUACCAUCCGAUAUC,106-159,GUAAGAGCCUAGCAUGUAGAACCUUGGGAUCCGAAUACGGUACCAUCCGAUAUC,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,ms2_aptamer,MS2 aptamer 1,160,178,CGUACACCAUCAGGGUACG,160-178,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,ms2_aptamer,MS2 aptamer 2,192,210,CGUACACCAUCAGGGUACG,192-210,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,ms2_aptamer,MS2 aptamer 3,223,241,CGUACACCAUCAGGGUACG,223-241,CGUACACCAUCAGGGUACG,1.0000,1.0000,,0.0000,complete
+7vpx:I,7vpx,I,technical_tail,MS2 cassette tail,242,259,GAAUUCUCUAGAGUCGAG,242-259,GAAUUCUCUAGAGUCGAG,1.0000,1.0000,,0.0000,complete
