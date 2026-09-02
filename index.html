@@ -70,6 +70,15 @@
     .badge.warn { background:#fff4d9; color:#7a4e00; border-color:#e4c16a; }
     .badge.bad { background:#fde8e6; color:#b42318; border-color:#efb4ad; }
     .badge.review { background:#f4edff; color:#5b2a86; border-color:#d4b7f0; }
+    .flag-badge-details { position:relative; display:inline-flex; }
+    .flag-badge-details > summary { list-style:none; cursor:help; }
+    .flag-badge-details > summary::-webkit-details-marker { display:none; }
+    .flag-popover { position:absolute; left:0; top:calc(100% + 6px); z-index:40; display:none; width:min(340px,80vw); padding:9px 11px; border:1px solid #efb4ad; border-radius:7px; background:#fff; box-shadow:0 10px 28px rgba(31,37,45,.16); color:var(--ink); white-space:normal; }
+    .flag-badge-details:hover .flag-popover, .flag-badge-details:focus-within .flag-popover, .flag-badge-details[open] .flag-popover { display:block; }
+    .flag-popover strong { display:block; margin-bottom:5px; font-size:12px; }
+    .flag-popover ul { margin:0; padding-left:17px; }
+    .flag-popover li { margin:3px 0; font-size:12px; line-height:1.35; }
+    .flag-popover .flag-metric { display:block; color:var(--muted); }
     .legend-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:9px 16px; font-size:12px; }
     .legend-item { display:flex; align-items:flex-start; gap:8px; min-width:0; }
     .legend-item .badge { flex:0 0 auto; margin-top:1px; }
@@ -1291,13 +1300,30 @@ ${await scriptFor(record,"no_maps")}
     function minorSpliceosomeBadge(r){
       return isMinorSpliceosome(r) ? '<span class="badge minor-spliceosome" title="Minor spliceosome">minor</span>' : "";
     }
+    function flagSupportingMetric(flag,r){
+      const value=String(flag||"").toLowerCase(),q=r.quality||{};
+      if(value.includes("validation geometry") && q.geometry_quality) return `Geometry quality metric: ${q.geometry_quality}.`;
+      if(value.includes("ramachandran") && q.rama_outliers_percent) return `Ramachandran outliers: ${q.rama_outliers_percent}%.`;
+      if(value.includes("rna suite") && q.rna_suite_outliers_percent) return `RNA suite outliers: ${q.rna_suite_outliers_percent}%.`;
+      if(value.includes("low resolution")) return `Reported resolution: ${formatResolution(r.resolution)||q.map_resolution_A||"not available"} A.`;
+      if(value.includes("local/non-pdb")) return "This is a local or non-PDB model rather than a public deposited entry.";
+      return "See Curation and Quality for the supporting audit values.";
+    }
+    function flagBadge(r,interactive=false){
+      const flags=r.curation?.flags||[];
+      if(!flags.length) return "";
+      const label=`${flags.length} flag${flags.length===1?"":"s"}`;
+      const hover=flags.map(flag=>`${flag}\n${flagSupportingMetric(flag,r)}`).join("\n\n");
+      if(!interactive) return `<span class="badge bad" title="${attr(hover)}">${label}</span>`;
+      return `<details class="flag-badge-details"><summary class="badge bad" title="${attr(hover)}">${label}</summary><div class="flag-popover"><strong>Curation and validation flags</strong><ul>${flags.map(flag=>`<li>${esc(flag)}<span class="flag-metric">${esc(flagSupportingMetric(flag,r))}</span></li>`).join("")}</ul></div></details>`;
+    }
     function curationBadges(r, includeRna=true){
       const c=r.curation||{}; const flags=c.flags||[]; const confidence=c.overall_confidence||"";
       const bits=[];
       if(confidence) bits.push(`<span class="badge ${confidence==="high"?"good":confidence==="review"?"review":confidence==="low"?"bad":"warn"}">${esc(confidence)}</span>`);
       if(includeRna && (r.substrate_features||[]).length) bits.push('<span class="badge good">(pre-)mRNA features annotated</span>');
       if(includeRna && (r.snrna_features||[]).length) bits.push('<span class="badge good">snRNA features annotated</span>');
-      if(flags.length) bits.push(`<span class="badge bad">${flags.length} flag${flags.length===1?"":"s"}</span>`);
+      if(flags.length) bits.push(flagBadge(r,includeRna));
       return `<div class="badge-row">${bits.join("") || '<span class="badge">n/a</span>'}</div>`;
     }
     function toggleCompare(pdbId){
