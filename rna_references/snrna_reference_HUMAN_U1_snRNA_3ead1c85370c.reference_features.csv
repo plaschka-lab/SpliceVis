@@ -1,0 +1,4 @@
+feature,label,start,end,support_count,member_count,note
+U1_5prime_5SS_recognition,5' splice-site recognition region,1,10,12,14,"projected by global alignment; members=3cw1:V, 3cw1:v, 3cw1:w, 3cw1:x, 3pgw:N, 3pgw:R, 4pjo:1, 4pjo:2, 4pjo:3, 4pjo:4, 6qx9:1, 7vpx:L"
+U1_SL1,stem-loop 1,11,45,13,14,"merged overlapping projected intervals; projected by global alignment; members=3cw1:V, 3cw1:v, 3cw1:w, 3cw1:x, 3pgw:N, 3pgw:R, 6qx9:1, 7vpx:L; projected by global alignment; members=4pjo:1, 4pjo:2, 4pjo:3, 4pjo:4; projected by global alignment; members=8r08:1"
+U1_SL2,stem-loop 2,46,95,9,14,"merged overlapping projected intervals; projected by global alignment; members=3pgw:N, 3pgw:R, 6qx9:1, 7vpx:L; projected by global alignment; members=3cw1:V, 3cw1:v, 3cw1:w, 3cw1:x; projected by global alignment; members=8r08:1"

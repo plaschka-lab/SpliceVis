@@ -1,0 +1,38 @@
+LOCUS       HUMAN_U6atac_snR         125 bp    RNA              UNK 01-JAN-1980
+DEFINITION  HUMAN_U6atac snRNA; snrna_reference; reference=8y6o:K; members=2.
+ACCESSION   HUMAN_U6atac_snR
+VERSION     HUMAN_U6atac_snR
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    11..17
+                     /label="5' splice-site recognition region"
+                     /note="feature=U6atac_5prime_5SS_recognition; support=1/2;
+                     projected by global alignment; members=7dvq:F"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    23..29
+                     /label="U6atac/U12 helix I partner"
+                     /note="feature=U6atac_U12_helix_I_partner; support=2/2;
+                     projected by global alignment; members=7dvq:F, 8y6o:K"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    26..28
+                     /label="AGC catalytic triad"
+                     /note="feature=U6atac_AGC_catalytic_triad; support=2/2;
+                     projected by global alignment; members=7dvq:F, 8y6o:K"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    52..65
+                     /label="internal stem-loop"
+                     /note="feature=U6atac_ISL; support=2/2; projected by global
+                     alignment; members=7dvq:F, 8y6o:K"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 guguuguaug aaaggagaga agguuagcac uccccuugac aaggauggaa gaggcccucg
+       61 ggccugacaa cacgcauacg guuaaggcau ugccaccuac uucguggcau cuaaccaucg
+      121 uuuuu
+//

@@ -1,0 +1,4 @@
+feature,label,start,end,support_count,member_count,note
+U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,20,25,"projected by global alignment; members=5gm6:L, 5gmk:L, 5lj3:Z, 5lj5:Z, 5lqw:2, 5mps:2, 5mq0:2, 5nrl:2, 5wsg:L, 5y88:F, 5ylz:F, 6bk8:2, 6exn:2, 6j6g:L, 6j6h:L, 6j6n:L, 6j6q:L, 7b9v:2, 7dco:H, 9dtr:2"
+U2_branchpoint_pairing_region,branchpoint pairing region,33,42,25,25,"projected by global alignment; members=5gm6:L, 5gmk:L, 5lj3:Z, 5lj5:Z, 5lqw:2, 5mps:2, 5mq0:2, 5nrl:2, 5wsg:L, 5y88:F, 5ylz:F, 5zwm:H, 5zwo:H, 6bk8:2, 6exn:2, 6g90:2, 6j6g:L, 6j6h:L, 6j6n:L, 6j6q:L"
+U2_stem_IIa,stem IIa,46,80,23,25,"projected by global alignment; members=5gm6:L, 5gmk:L, 5lj3:Z, 5lj5:Z, 5lqw:2, 5mps:2, 5mq0:2, 5nrl:2, 5wsg:L, 5ylz:F, 5zwm:H, 5zwo:H, 6bk8:2, 6exn:2, 6j6g:L, 6j6h:L, 6j6n:L, 6j6q:L, 7b9v:2, 7dco:H"

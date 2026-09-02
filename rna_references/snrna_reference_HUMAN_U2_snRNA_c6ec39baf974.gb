@@ -1,0 +1,53 @@
+LOCUS       HUMAN_U2_snRNA           188 bp    RNA              UNK 01-JAN-1980
+DEFINITION  HUMAN_U2 snRNA; snrna_reference; reference=9r8v:2; members=70.
+ACCESSION   HUMAN_U2_snRNA
+VERSION     HUMAN_U2_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    26..30
+                     /label="U2/U6 helix I partner"
+                     /note="feature=U2_U6_helix_I_partner; support=54/70; merged
+                     overlapping projected intervals; projected by global
+                     alignment; members=5mqf:2, 5xjc:H, 5yzg:H, 5z56:H, 5z57:H,
+                     5z58:H, 6ah0:H, 6ahd:H, 6ff4:2, 6ff7:2, 6icz:H, 6id0:H,
+                     6id1:H, 6qdv:2, 6y50:2, 6y5q:2, 6zym:2, 7aav:2, 7abh:2,
+                     7abi:2; projected by global alignment; members=8qxd:2"
+                     /ApEinfo_fwdcolor="#047857"
+                     /ApEinfo_revcolor="#047857"
+     misc_feature    32..41
+                     /label="branchpoint pairing region"
+                     /note="feature=U2_branchpoint_pairing_region;
+                     support=66/70; projected by global alignment;
+                     members=5mqf:2, 5o9z:2, 5xjc:H, 5yzg:H, 5z56:H, 5z57:H,
+                     5z58:H, 6ah0:H, 6ahd:H, 6ff4:2, 6ff7:2, 6icz:H, 6id0:H,
+                     6id1:H, 6qdv:2, 6qx9:2, 6y50:2, 6y5q:2, 6zym:2, 7abg:2"
+                     /ApEinfo_fwdcolor="#0B6E2D"
+                     /ApEinfo_revcolor="#0B6E2D"
+     misc_feature    46..80
+                     /label="stem IIa"
+                     /note="feature=U2_stem_IIa; support=56/70; merged
+                     overlapping projected intervals; projected by global
+                     alignment; members=5mqf:2, 5o9z:2, 5xjc:H, 5yzg:H, 5z56:H,
+                     5z57:H, 5z58:H, 6ah0:H, 6ahd:H, 6ff4:2, 6ff7:2, 6icz:H,
+                     6id0:H, 6id1:H, 6qdv:2, 6qx9:2, 6y50:2, 6y53:2, 6y5q:2,
+                     7abg:2; projected by global alignment; members=8qxd:2"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    99..105
+                     /label="Sm site"
+                     /note="feature=U2_Sm_site; support=49/70; projected by
+                     global alignment; members=5mqf:2, 5o9z:2, 5xjc:H, 5yzg:H,
+                     5z56:H, 5z57:H, 5z58:H, 6ah0:H, 6ahd:H, 6icz:H, 6id0:H,
+                     6id1:H, 6qdv:2, 6qx9:2, 6y53:2, 6y5q:2, 7a5p:2, 7abg:2,
+                     7abi:2, 7evo:H"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 aucgcuucuc ggccuuuugg cuaagaucaa guguaguauc uguucuuauc aguuuaauau
+       61 cugauacguc cucuauccga ggacaauaua uuaaauggau uuuuggagca gggagaugga
+      121 auaggagcuu gcuccgucca cuccacgcau cgaccuggua uugcaguacc uccaggaacg
+      181 gugcaccc
+//

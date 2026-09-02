@@ -1,0 +1,41 @@
+LOCUS       HUMAN_U1_snRNA           164 bp    RNA              UNK 01-JAN-1980
+DEFINITION  HUMAN_U1 snRNA; snrna_reference; reference=7vpx:L; members=14.
+ACCESSION   HUMAN_U1_snRNA
+VERSION     HUMAN_U1_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..10
+                     /label="5' splice-site recognition region"
+                     /note="feature=U1_5prime_5SS_recognition; support=12/14;
+                     projected by global alignment; members=3cw1:V, 3cw1:v,
+                     3cw1:w, 3cw1:x, 3pgw:N, 3pgw:R, 4pjo:1, 4pjo:2, 4pjo:3,
+                     4pjo:4, 6qx9:1, 7vpx:L"
+                     /ApEinfo_fwdcolor="#B66AAE"
+                     /ApEinfo_revcolor="#B66AAE"
+     misc_feature    11..45
+                     /label="stem-loop 1"
+                     /note="feature=U1_SL1; support=13/14; merged overlapping
+                     projected intervals; projected by global alignment;
+                     members=3cw1:V, 3cw1:v, 3cw1:w, 3cw1:x, 3pgw:N, 3pgw:R,
+                     6qx9:1, 7vpx:L; projected by global alignment;
+                     members=4pjo:1, 4pjo:2, 4pjo:3, 4pjo:4; projected by global
+                     alignment; members=8r08:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    46..95
+                     /label="stem-loop 2"
+                     /note="feature=U1_SL2; support=9/14; merged overlapping
+                     projected intervals; projected by global alignment;
+                     members=3pgw:N, 3pgw:R, 6qx9:1, 7vpx:L; projected by global
+                     alignment; members=3cw1:V, 3cw1:v, 3cw1:w, 3cw1:x;
+                     projected by global alignment; members=8r08:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 auacuuaccu ggcaggggag auaccaugau cacgaaggug guuuucccag ggcgaggcuu
+       61 auccauugca cuccggaugu gcugaccccu gcgauuuccc caaauguggg aaacucgacu
+      121 gcauaauuug ugguaguggg ggacugcguu cgcgcuuucc ccug
+//

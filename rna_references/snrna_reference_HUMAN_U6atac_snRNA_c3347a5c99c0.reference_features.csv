@@ -1,0 +1,5 @@
+feature,label,start,end,support_count,member_count,note
+U6atac_5prime_5SS_recognition,5' splice-site recognition region,11,17,1,2,projected by global alignment; members=7dvq:F
+U6atac_U12_helix_I_partner,U6atac/U12 helix I partner,23,29,2,2,"projected by global alignment; members=7dvq:F, 8y6o:K"
+U6atac_AGC_catalytic_triad,AGC catalytic triad,26,28,2,2,"projected by global alignment; members=7dvq:F, 8y6o:K"
+U6atac_ISL,internal stem-loop,52,65,2,2,"projected by global alignment; members=7dvq:F, 8y6o:K"

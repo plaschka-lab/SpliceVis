@@ -1030,6 +1030,26 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "YEAST_U1 snRNA",
+          "species_code": "YEAST",
+          "chains": "1",
+          "members": "6g90:1",
+          "alignment_html": "rna_references/6g90_vs_YEAST_U1.modelled.html",
+          "alignment_fasta": "rna_references/6g90_vs_YEAST_U1.aligned.fasta"
+        },
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "6g90:2",
+          "alignment_html": "rna_references/6g90_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6g90_vs_YEAST_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -2020,6 +2040,26 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "YEAST_U1 snRNA",
+          "species_code": "YEAST",
+          "chains": "1",
+          "members": "7oqe:1",
+          "alignment_html": "rna_references/7oqe_vs_YEAST_U1.modelled.html",
+          "alignment_fasta": "rna_references/7oqe_vs_YEAST_U1.aligned.fasta"
+        },
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "7oqe:2",
+          "alignment_html": "rna_references/7oqe_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/7oqe_vs_YEAST_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -2969,6 +3009,26 @@
         "review_required": "False",
         "evidence": "manual curation from the published MINX-exon construct schematic; manual curation of the separate U1-bound downstream 5'SS fragment from the published MINX-exon construct"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "L",
+          "members": "7vpx:L",
+          "alignment_html": "rna_references/7vpx_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/7vpx_vs_HUMAN_U1.aligned.fasta"
+        },
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7vpx:H",
+          "alignment_html": "rna_references/7vpx_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7vpx_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -4336,6 +4396,44 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "5nrl:2",
+          "alignment_html": "rna_references/5nrl_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5nrl_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "4",
+          "members": "5nrl:4",
+          "alignment_html": "rna_references/5nrl_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/5nrl_vs_YEAST_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "5nrl:5",
+          "alignment_html": "rna_references/5nrl_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5nrl_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "5nrl:6",
+          "alignment_html": "rna_references/5nrl_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5nrl_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -5818,6 +5916,44 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "5o9z:2",
+          "alignment_html": "rna_references/5o9z_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5o9z_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "5o9z:4",
+          "alignment_html": "rna_references/5o9z_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/5o9z_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "5o9z:5",
+          "alignment_html": "rna_references/5o9z_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5o9z_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "5o9z:6",
+          "alignment_html": "rna_references/5o9z_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5o9z_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -7227,6 +7363,44 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aau0325): pre-B/B spliceosomes purified from yeast in the absence of an added defined substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "H",
+          "members": "5zwo:H",
+          "alignment_html": "rna_references/5zwo_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5zwo_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "I",
+          "members": "5zwo:I",
+          "alignment_html": "rna_references/5zwo_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/5zwo_vs_YEAST_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "B",
+          "members": "5zwo:B",
+          "alignment_html": "rna_references/5zwo_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5zwo_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "F",
+          "members": "5zwo:F",
+          "alignment_html": "rna_references/5zwo_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5zwo_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -8853,6 +9027,44 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "6ahd:H",
+          "alignment_html": "rna_references/6ahd_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6ahd_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "I",
+          "members": "6ahd:I",
+          "alignment_html": "rna_references/6ahd_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/6ahd_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "6ahd:B",
+          "alignment_html": "rna_references/6ahd_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6ahd_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "6ahd:F",
+          "alignment_html": "rna_references/6ahd_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6ahd_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -10482,6 +10694,44 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:38658629): paper specifies a 144-nt synthetic adenovirus-derived RNA with a 55-nt exon bracketed by partial introns"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2A",
+          "members": "8h6k:2A",
+          "alignment_html": "rna_references/8h6k_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8h6k_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4A",
+          "members": "8h6k:4A",
+          "alignment_html": "rna_references/8h6k_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8h6k_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5A",
+          "members": "8h6k:5A",
+          "alignment_html": "rna_references/8h6k_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8h6k_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6A",
+          "members": "8h6k:6A",
+          "alignment_html": "rna_references/8h6k_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8h6k_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -12045,6 +12295,44 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:38658629): paper specifies a 144-nt synthetic adenovirus-derived RNA with a 55-nt exon bracketed by partial introns"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2A",
+          "members": "8h6l:2A",
+          "alignment_html": "rna_references/8h6l_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8h6l_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4A",
+          "members": "8h6l:4A",
+          "alignment_html": "rna_references/8h6l_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8h6l_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5A",
+          "members": "8h6l:5A",
+          "alignment_html": "rna_references/8h6l_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8h6l_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6A",
+          "members": "8h6l:6A",
+          "alignment_html": "rna_references/8h6l_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8h6l_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -12986,6 +13274,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8q7n:4",
+          "alignment_html": "rna_references/8q7n_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8q7n_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8q7n:5",
+          "alignment_html": "rna_references/8q7n_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8q7n_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8q7n:6",
+          "alignment_html": "rna_references/8q7n_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8q7n_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -14559,6 +14876,44 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8qo9:2",
+          "alignment_html": "rna_references/8qo9_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8qo9_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qo9:4",
+          "alignment_html": "rna_references/8qo9_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qo9_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qo9:5",
+          "alignment_html": "rna_references/8qo9_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qo9_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qo9:6",
+          "alignment_html": "rna_references/8qo9_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qo9_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -16325,6 +16680,44 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps; deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8qzs:2",
+          "alignment_html": "rna_references/8qzs_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8qzs_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qzs:4",
+          "alignment_html": "rna_references/8qzs_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qzs_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qzs:5",
+          "alignment_html": "rna_references/8qzs_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qzs_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qzs:6",
+          "alignment_html": "rna_references/8qzs_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qzs_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -17556,6 +17949,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "6j6g:L",
+          "alignment_html": "rna_references/6j6g_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6j6g_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "6j6g:D",
+          "alignment_html": "rna_references/6j6g_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/6j6g_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "6j6g:E",
+          "alignment_html": "rna_references/6j6g_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6j6g_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -18700,6 +19122,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "6j6h:L",
+          "alignment_html": "rna_references/6j6h_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6j6h_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "6j6h:D",
+          "alignment_html": "rna_references/6j6h_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/6j6h_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "6j6h:E",
+          "alignment_html": "rna_references/6j6h_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6j6h_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -19844,6 +20295,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "6j6n:L",
+          "alignment_html": "rna_references/6j6n_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6j6n_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "6j6n:D",
+          "alignment_html": "rna_references/6j6n_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/6j6n_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "6j6n:E",
+          "alignment_html": "rna_references/6j6n_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6j6n_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -21001,6 +21481,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "6j6q:L",
+          "alignment_html": "rna_references/6j6q_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6j6q_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "6j6q:D",
+          "alignment_html": "rna_references/6j6q_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/6j6q_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "6j6q:E",
+          "alignment_html": "rna_references/6j6q_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6j6q_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -21984,6 +22493,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -22944,6 +23454,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -23853,6 +24364,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -24811,6 +25323,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -25783,6 +26296,7 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (manual:Plaschka-lab curation): manual project curation of the native S. pombe quality-control spliceosome"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -26969,6 +27483,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aag0291): spliceosomes isolated directly from yeast nuclei rather than assembled on a defined transcript"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "5gm6:L",
+          "alignment_html": "rna_references/5gm6_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5gm6_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "5gm6:D",
+          "alignment_html": "rna_references/5gm6_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5gm6_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "5gm6:E",
+          "alignment_html": "rna_references/5gm6_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5gm6_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -28042,6 +28585,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "5lqw:2",
+          "alignment_html": "rna_references/5lqw_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5lqw_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "5lqw:5",
+          "alignment_html": "rna_references/5lqw_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5lqw_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "5lqw:6",
+          "alignment_html": "rna_references/5lqw_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5lqw_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -29452,6 +30024,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "5z56:H",
+          "alignment_html": "rna_references/5z56_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5z56_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "5z56:B",
+          "alignment_html": "rna_references/5z56_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5z56_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "5z56:F",
+          "alignment_html": "rna_references/5z56_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5z56_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -30851,6 +31452,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "5z57:H",
+          "alignment_html": "rna_references/5z57_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5z57_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "5z57:B",
+          "alignment_html": "rna_references/5z57_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5z57_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "5z57:F",
+          "alignment_html": "rna_references/5z57_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5z57_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -32130,6 +32760,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "5z58:H",
+          "alignment_html": "rna_references/5z58_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5z58_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "5z58:B",
+          "alignment_html": "rna_references/5z58_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5z58_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "5z58:F",
+          "alignment_html": "rna_references/5z58_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5z58_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -33159,6 +33818,35 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6ff4:2",
+          "alignment_html": "rna_references/6ff4_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6ff4_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "6ff4:5",
+          "alignment_html": "rna_references/6ff4_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6ff4_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "6ff4:6",
+          "alignment_html": "rna_references/6ff4_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6ff4_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -34513,6 +35201,35 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6ff7:2",
+          "alignment_html": "rna_references/6ff7_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6ff7_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "6ff7:5",
+          "alignment_html": "rna_references/6ff7_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6ff7_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "6ff7:6",
+          "alignment_html": "rna_references/6ff7_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6ff7_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -35874,6 +36591,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.abe8863): Prp2-loaded spliceosomes were isolated from yeast with endogenous pre-mRNA"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "H",
+          "members": "7dco:H",
+          "alignment_html": "rna_references/7dco_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/7dco_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "B",
+          "members": "7dco:B",
+          "alignment_html": "rna_references/7dco_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/7dco_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "F",
+          "members": "7dco:F",
+          "alignment_html": "rna_references/7dco_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/7dco_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -37088,6 +37834,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:33509932): paper identifies the substrate as MINX-U12 truncated 18 nt downstream of the branch point"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U12 snRNA",
+          "reference_label": "HUMAN_U12 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7dvq:H",
+          "alignment_html": "rna_references/7dvq_vs_HUMAN_U12.modelled.html",
+          "alignment_fasta": "rna_references/7dvq_vs_HUMAN_U12.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "7dvq:B",
+          "alignment_html": "rna_references/7dvq_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7dvq_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6atac snRNA",
+          "reference_label": "HUMAN_U6atac snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "7dvq:F",
+          "alignment_html": "rna_references/7dvq_vs_HUMAN_U6atac.modelled.html",
+          "alignment_fasta": "rna_references/7dvq_vs_HUMAN_U6atac.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U12_U6atac_helix_I_partner",
@@ -38260,6 +39035,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "f",
+          "members": "7qtt:f",
+          "alignment_html": "rna_references/7qtt_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7qtt_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "e",
+          "members": "7qtt:e",
+          "alignment_html": "rna_references/7qtt_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7qtt_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "d",
+          "members": "7qtt:d",
+          "alignment_html": "rna_references/7qtt_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7qtt_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -39697,6 +40501,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "f",
+          "members": "8ch6:f",
+          "alignment_html": "rna_references/8ch6_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8ch6_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "e",
+          "members": "8ch6:e",
+          "alignment_html": "rna_references/8ch6_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8ch6_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "d",
+          "members": "8ch6:d",
+          "alignment_html": "rna_references/8ch6_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8ch6_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -41105,6 +41938,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0r:H",
+          "alignment_html": "rna_references/8i0r_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0r_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0r:B",
+          "alignment_html": "rna_references/8i0r_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0r_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0r:F",
+          "alignment_html": "rna_references/8i0r_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0r_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -42430,6 +43292,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0s:H",
+          "alignment_html": "rna_references/8i0s_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0s_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0s:B",
+          "alignment_html": "rna_references/8i0s_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0s_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0s:F",
+          "alignment_html": "rna_references/8i0s_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0s_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -43809,6 +44700,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0t:H",
+          "alignment_html": "rna_references/8i0t_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0t_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0t:B",
+          "alignment_html": "rna_references/8i0t_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0t_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0t:F",
+          "alignment_html": "rna_references/8i0t_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0t_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -45149,6 +46069,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0u:H",
+          "alignment_html": "rna_references/8i0u_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0u_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0u:B",
+          "alignment_html": "rna_references/8i0u_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0u_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0u:F",
+          "alignment_html": "rna_references/8i0u_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0u_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -46453,6 +47402,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0v:H",
+          "alignment_html": "rna_references/8i0v_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0v_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0v:B",
+          "alignment_html": "rna_references/8i0v_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0v_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0v:F",
+          "alignment_html": "rna_references/8i0v_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0v_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -47728,6 +48706,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aag2235): spliceosomes isolated directly from yeast nuclei rather than assembled on a defined transcript"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "5gmk:L",
+          "alignment_html": "rna_references/5gmk_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5gmk_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "5gmk:D",
+          "alignment_html": "rna_references/5gmk_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5gmk_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "5gmk:E",
+          "alignment_html": "rna_references/5gmk_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5gmk_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -48881,6 +49888,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "Z",
+          "members": "5lj3:Z",
+          "alignment_html": "rna_references/5lj3_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5lj3_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "U",
+          "members": "5lj3:U",
+          "alignment_html": "rna_references/5lj3_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5lj3_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "V",
+          "members": "5lj3:V",
+          "alignment_html": "rna_references/5lj3_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5lj3_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -50088,6 +51124,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "Z",
+          "members": "5lj5:Z",
+          "alignment_html": "rna_references/5lj5_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5lj5_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "U",
+          "members": "5lj5:U",
+          "alignment_html": "rna_references/5lj5_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5lj5_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "V",
+          "members": "5lj5:V",
+          "alignment_html": "rna_references/5lj5_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5lj5_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -51454,6 +52519,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "5yzg:H",
+          "alignment_html": "rna_references/5yzg_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5yzg_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "5yzg:B",
+          "alignment_html": "rna_references/5yzg_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5yzg_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "5yzg:F",
+          "alignment_html": "rna_references/5yzg_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5yzg_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -52395,6 +53489,35 @@
         "review_required": "False",
         "evidence": "exact full-sequence match to an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6zym:2",
+          "alignment_html": "rna_references/6zym_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6zym_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "6zym:5",
+          "alignment_html": "rna_references/6zym_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6zym_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "6zym:6",
+          "alignment_html": "rna_references/6zym_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6zym_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -53277,6 +54400,35 @@
         "review_required": "False",
         "evidence": "exact full-sequence match to an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7a5p:2",
+          "alignment_html": "rna_references/7a5p_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7a5p_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "7a5p:5",
+          "alignment_html": "rna_references/7a5p_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7a5p_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "7a5p:6",
+          "alignment_html": "rna_references/7a5p_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7a5p_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_Sm_site",
@@ -54463,6 +55615,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "7b9v:2",
+          "alignment_html": "rna_references/7b9v_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/7b9v_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "7b9v:5",
+          "alignment_html": "rna_references/7b9v_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/7b9v_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "7b9v:6",
+          "alignment_html": "rna_references/7b9v_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/7b9v_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -55891,6 +57072,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate; same-structure propagation from a uniquely assigned MINX family entity; reference alignment identity=0.977, query coverage=0.957"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0w:H",
+          "alignment_html": "rna_references/8i0w_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0w_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0w:B",
+          "alignment_html": "rna_references/8i0w_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0w_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0w:F",
+          "alignment_html": "rna_references/8i0w_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0w_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -57005,6 +58215,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "5mps:2",
+          "alignment_html": "rna_references/5mps_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5mps_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "5mps:5",
+          "alignment_html": "rna_references/5mps_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5mps_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "5mps:6",
+          "alignment_html": "rna_references/5mps_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5mps_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -58327,6 +59566,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "5mq0:2",
+          "alignment_html": "rna_references/5mq0_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5mq0_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "5mq0:5",
+          "alignment_html": "rna_references/5mq0_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5mq0_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "5mq0:6",
+          "alignment_html": "rna_references/5mq0_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5mq0_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -59518,6 +60786,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "5mqf:2",
+          "alignment_html": "rna_references/5mqf_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5mqf_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "5mqf:5",
+          "alignment_html": "rna_references/5mqf_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5mqf_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "5mqf:6",
+          "alignment_html": "rna_references/5mqf_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5mqf_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -61001,6 +62298,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aak9979): spliceosomes isolated directly from yeast nuclei rather than assembled on a defined transcript"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "L",
+          "members": "5wsg:L",
+          "alignment_html": "rna_references/5wsg_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5wsg_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "5wsg:D",
+          "alignment_html": "rna_references/5wsg_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5wsg_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "5wsg:E",
+          "alignment_html": "rna_references/5wsg_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5wsg_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -62312,6 +63638,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "5xjc:H",
+          "alignment_html": "rna_references/5xjc_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/5xjc_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "5xjc:B",
+          "alignment_html": "rna_references/5xjc_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/5xjc_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "5xjc:F",
+          "alignment_html": "rna_references/5xjc_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/5xjc_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -63731,6 +65086,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=1.000, shorter-sequence coverage=1.000; same-structure propagation from a uniquely assigned MINX family entity; reference alignment identity=0.977, query coverage=0.957"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7w59:H",
+          "alignment_html": "rna_references/7w59_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7w59_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "7w59:B",
+          "alignment_html": "rna_references/7w59_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7w59_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "7w59:F",
+          "alignment_html": "rna_references/7w59_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7w59_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -65202,6 +66586,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=1.000, shorter-sequence coverage=1.000; same-structure propagation from a uniquely assigned MINX family entity; reference alignment identity=0.977, query coverage=0.957"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7w5a:H",
+          "alignment_html": "rna_references/7w5a_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7w5a_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "7w5a:B",
+          "alignment_html": "rna_references/7w5a_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7w5a_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "7w5a:F",
+          "alignment_html": "rna_references/7w5a_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7w5a_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -66686,6 +68099,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=1.000, shorter-sequence coverage=1.000; same-structure propagation from a uniquely assigned MINX family entity; reference alignment identity=0.977, query coverage=0.957"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7w5b:H",
+          "alignment_html": "rna_references/7w5b_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7w5b_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "7w5b:B",
+          "alignment_html": "rna_references/7w5b_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7w5b_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "7w5b:F",
+          "alignment_html": "rna_references/7w5b_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7w5b_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -68193,6 +69635,35 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8c6j:2",
+          "alignment_html": "rna_references/8c6j_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8c6j_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8c6j:5",
+          "alignment_html": "rna_references/8c6j_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8c6j_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8c6j:6",
+          "alignment_html": "rna_references/8c6j_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8c6j_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -69040,6 +70511,26 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "9s2f:5",
+          "alignment_html": "rna_references/9s2f_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/9s2f_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "9s2f:6",
+          "alignment_html": "rna_references/9s2f_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/9s2f_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -69717,6 +71208,17 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "YEAST_U1 snRNA",
+          "species_code": "YEAST",
+          "chains": "R",
+          "members": "6n7p:R",
+          "alignment_html": "rna_references/6n7p_vs_YEAST_U1.modelled.html",
+          "alignment_fasta": "rna_references/6n7p_vs_YEAST_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -70698,6 +72200,17 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "YEAST_U1 snRNA",
+          "species_code": "YEAST",
+          "chains": "R",
+          "members": "6n7r:R",
+          "alignment_html": "rna_references/6n7r_vs_YEAST_U1.modelled.html",
+          "alignment_fasta": "rna_references/6n7r_vs_YEAST_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -71644,6 +73157,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -72713,6 +74227,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1016/j.cell.2017.08.029): native yeast intron-lariat spliceosome purification"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "F",
+          "members": "5y88:F",
+          "alignment_html": "rna_references/5y88_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5y88_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "B",
+          "members": "5y88:B",
+          "alignment_html": "rna_references/5y88_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5y88_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "x; D",
+          "members": "5y88:x; 5y88:D",
+          "alignment_html": "rna_references/5y88_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5y88_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -73847,6 +75390,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.995, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "6id0:H",
+          "alignment_html": "rna_references/6id0_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6id0_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "6id0:B",
+          "alignment_html": "rna_references/6id0_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6id0_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "6id0:F",
+          "alignment_html": "rna_references/6id0_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6id0_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -75022,6 +76594,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.995, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "6id1:H",
+          "alignment_html": "rna_references/6id1_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6id1_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "6id1:B",
+          "alignment_html": "rna_references/6id1_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6id1_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "6id1:F",
+          "alignment_html": "rna_references/6id1_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6id1_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -76010,6 +77611,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -77067,6 +78669,7 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -78051,6 +79654,35 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8ro2:2",
+          "alignment_html": "rna_references/8ro2_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8ro2_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8ro2:5",
+          "alignment_html": "rna_references/8ro2_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8ro2_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8ro2:6",
+          "alignment_html": "rna_references/8ro2_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8ro2_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -79072,6 +80704,7 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:40016598): spliceosomes were affinity-purified from C. thermophilum mycelium without an added transcript"
       },
+      "snrna_alignments": [],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -80428,6 +82061,35 @@
         "review_required": "False",
         "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9s2e:2",
+          "alignment_html": "rna_references/9s2e_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9s2e_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "9s2e:5",
+          "alignment_html": "rna_references/9s2e_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/9s2e_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "9s2e:6",
+          "alignment_html": "rna_references/9s2e_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/9s2e_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -81714,6 +83376,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1016/j.cell.2017.10.038): native yeast post-catalytic spliceosome purification"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "F",
+          "members": "5ylz:F",
+          "alignment_html": "rna_references/5ylz_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5ylz_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "B",
+          "members": "5ylz:B",
+          "alignment_html": "rna_references/5ylz_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5ylz_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "5ylz:D",
+          "alignment_html": "rna_references/5ylz_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5ylz_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -83347,6 +85038,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:29146870): paper reports accumulation and structural analysis of ligated ACT1 exons and the corresponding intron lariat"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "6bk8:2",
+          "alignment_html": "rna_references/6bk8_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6bk8_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "6bk8:5",
+          "alignment_html": "rna_references/6bk8_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/6bk8_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "6bk8:6",
+          "alignment_html": "rna_references/6bk8_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6bk8_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -84867,6 +86587,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "6exn:2",
+          "alignment_html": "rna_references/6exn_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/6exn_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "6exn:5",
+          "alignment_html": "rna_references/6exn_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/6exn_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "6exn:6",
+          "alignment_html": "rna_references/6exn_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6exn_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -86220,6 +87969,35 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.995, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "6icz:H",
+          "alignment_html": "rna_references/6icz_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6icz_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "6icz:B",
+          "alignment_html": "rna_references/6icz_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6icz_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "6icz:F",
+          "alignment_html": "rna_references/6icz_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6icz_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -87805,6 +89583,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6qdv:2",
+          "alignment_html": "rna_references/6qdv_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6qdv_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "6qdv:5",
+          "alignment_html": "rna_references/6qdv_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6qdv_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "6qdv:6",
+          "alignment_html": "rna_references/6qdv_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6qdv_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -89354,6 +91161,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "9dtr:2",
+          "alignment_html": "rna_references/9dtr_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/9dtr_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "5",
+          "members": "9dtr:5",
+          "alignment_html": "rna_references/9dtr_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/9dtr_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "6",
+          "members": "9dtr:6",
+          "alignment_html": "rna_references/9dtr_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/9dtr_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -90889,6 +92725,35 @@
         "review_required": "False",
         "evidence": "exact full-sequence match to an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9fmd:2",
+          "alignment_html": "rna_references/9fmd_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9fmd_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "9fmd:5",
+          "alignment_html": "rna_references/9fmd_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/9fmd_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "9fmd:6",
+          "alignment_html": "rna_references/9fmd_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/9fmd_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -92625,6 +94490,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "V; v; w; x",
+          "members": "3cw1:V; 3cw1:v; 3cw1:w; 3cw1:x",
+          "alignment_html": "rna_references/3cw1_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/3cw1_vs_HUMAN_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -93173,6 +95049,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "N; R",
+          "members": "3pgw:N; 3pgw:R",
+          "alignment_html": "rna_references/3pgw_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/3pgw_vs_HUMAN_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -94971,6 +96858,17 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "1; 2; 3; 4",
+          "members": "4pjo:1; 4pjo:2; 4pjo:3; 4pjo:4",
+          "alignment_html": "rna_references/4pjo_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/4pjo_vs_HUMAN_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -95239,6 +97137,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "V",
+          "members": "4pkd:V",
+          "alignment_html": "rna_references/4pkd_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/4pkd_vs_HUMAN_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -95416,6 +97325,7 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [],
       "snrna_features": [],
       "script_path": "scripts/5zya.cxc",
       "script_systematic_path": "scripts_systematic/5zya.cxc",
@@ -95688,6 +97598,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6y50:2",
+          "alignment_html": "rna_references/6y50_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6y50_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -96124,6 +98045,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6y53:2",
+          "alignment_html": "rna_references/6y53_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6y53_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_stem_IIa",
@@ -96624,6 +98556,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6y5q:2",
+          "alignment_html": "rna_references/6y5q_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6y5q_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -96848,6 +98791,7 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [],
       "snrna_features": [],
       "script_path": "scripts/7evn.cxc",
       "script_systematic_path": "scripts_systematic/7evn.cxc",
@@ -97303,6 +99247,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7evo:H",
+          "alignment_html": "rna_references/7evo_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7evo_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -97756,6 +99711,17 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "7onb:H",
+          "alignment_html": "rna_references/7onb_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7onb_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -98315,6 +100281,17 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "2",
+          "members": "7oqb:2",
+          "alignment_html": "rna_references/7oqb_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/7oqb_vs_YEAST_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -98616,6 +100593,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7q3l:2",
+          "alignment_html": "rna_references/7q3l_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7q3l_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -99048,6 +101036,17 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7q4o:2",
+          "alignment_html": "rna_references/7q4o_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7q4o_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -99350,6 +101349,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7q4p:2",
+          "alignment_html": "rna_references/7q4p_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7q4p_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -99848,6 +101858,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8hk1:H",
+          "alignment_html": "rna_references/8hk1_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8hk1_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -100135,6 +102156,7 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [],
       "snrna_features": [],
       "script_path": "scripts/9k1o.cxc",
       "script_systematic_path": "scripts_systematic/9k1o.cxc",
@@ -100335,6 +102357,7 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [],
       "snrna_features": [],
       "script_path": "scripts/9k1q.cxc",
       "script_systematic_path": "scripts_systematic/9k1q.cxc",
@@ -100638,6 +102661,17 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:40795960): paper methods specify a synthetic intron-U2 snRNA mimetic"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "9k1r:H",
+          "alignment_html": "rna_references/9k1r_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9k1r_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -100956,6 +102990,17 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:40795960): paper methods specify a synthetic intron-U2 snRNA mimetic"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "9k1w:H",
+          "alignment_html": "rna_references/9k1w_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9k1w_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -101274,6 +103319,17 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:40795960): paper methods specify a synthetic intron-U2 snRNA mimetic"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "9k1y:H",
+          "alignment_html": "rna_references/9k1y_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9k1y_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -101672,6 +103728,17 @@
         "review_required": "False",
         "evidence": "depositor title or paper explicitly identifies endogenous RNA"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9ze0:2",
+          "alignment_html": "rna_references/9ze0_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9ze0_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -102029,6 +104096,17 @@
         "review_required": "False",
         "evidence": "depositor title or paper explicitly identifies endogenous RNA"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9ze2:2",
+          "alignment_html": "rna_references/9ze2_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9ze2_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -102425,6 +104503,17 @@
         "review_required": "False",
         "evidence": "depositor title or paper explicitly identifies endogenous RNA"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9ze3:2",
+          "alignment_html": "rna_references/9ze3_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9ze3_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -102795,6 +104884,17 @@
         "review_required": "False",
         "evidence": "depositor title or paper explicitly identifies endogenous RNA"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9zec:2",
+          "alignment_html": "rna_references/9zec_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9zec_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -103167,6 +105267,17 @@
         "review_required": "False",
         "evidence": "depositor title or paper explicitly identifies endogenous RNA"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9zed:2",
+          "alignment_html": "rna_references/9zed_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9zed_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -103323,6 +105434,7 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [],
       "snrna_features": [],
       "script_path": "scripts/7os2.cxc",
       "script_systematic_path": "scripts_systematic/7os2.cxc",
@@ -103464,6 +105576,7 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [],
       "snrna_features": [],
       "script_path": "scripts/7px3.cxc",
       "script_systematic_path": "scripts_systematic/7px3.cxc",
@@ -103781,6 +105894,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8q7q:5",
+          "alignment_html": "rna_references/8q7q_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8q7q_vs_HUMAN_U5.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -104113,6 +106237,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8q7v:5",
+          "alignment_html": "rna_references/8q7v_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8q7v_vs_HUMAN_U5.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -104447,6 +106582,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8q7w:5",
+          "alignment_html": "rna_references/8q7w_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8q7w_vs_HUMAN_U5.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -104781,6 +106927,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8q7x:5",
+          "alignment_html": "rna_references/8q7x_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8q7x_vs_HUMAN_U5.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -105099,6 +107256,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8q91:5",
+          "alignment_html": "rna_references/8q91_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8q91_vs_HUMAN_U5.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -105430,6 +107598,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8rc0:5",
+          "alignment_html": "rna_references/8rc0_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8rc0_vs_HUMAN_U5.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -106313,6 +108492,35 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aad6466): deposited 20-nt pre-mRNA fragment in an isolated tri-snRNP"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "E",
+          "members": "3jcm:E",
+          "alignment_html": "rna_references/3jcm_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/3jcm_vs_YEAST_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "F",
+          "members": "3jcm:F",
+          "alignment_html": "rna_references/3jcm_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/3jcm_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "D",
+          "members": "3jcm:D",
+          "alignment_html": "rna_references/3jcm_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/3jcm_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -107210,6 +109418,35 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "M",
+          "members": "3jcr:M",
+          "alignment_html": "rna_references/3jcr_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/3jcr_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "3jcr:H",
+          "alignment_html": "rna_references/3jcr_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/3jcr_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "N",
+          "members": "3jcr:N",
+          "alignment_html": "rna_references/3jcr_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/3jcr_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -107635,6 +109872,26 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "U",
+          "members": "5gam:U",
+          "alignment_html": "rna_references/5gam_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5gam_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "W",
+          "members": "5gam:W",
+          "alignment_html": "rna_references/5gam_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5gam_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -108423,6 +110680,35 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "V",
+          "members": "5gan:V",
+          "alignment_html": "rna_references/5gan_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/5gan_vs_YEAST_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "U",
+          "members": "5gan:U",
+          "alignment_html": "rna_references/5gan_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5gan_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "W",
+          "members": "5gan:W",
+          "alignment_html": "rna_references/5gan_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5gan_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -108904,6 +111190,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "V",
+          "members": "5gao:V",
+          "alignment_html": "rna_references/5gao_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/5gao_vs_YEAST_U4.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_Brr2_loading_region",
@@ -109375,6 +111672,35 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "V",
+          "members": "5gap:V",
+          "alignment_html": "rna_references/5gap_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/5gap_vs_YEAST_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "U",
+          "members": "5gap:U",
+          "alignment_html": "rna_references/5gap_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5gap_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "W",
+          "members": "5gap:W",
+          "alignment_html": "rna_references/5gap_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5gap_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -110242,6 +112568,35 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "6qw6:4",
+          "alignment_html": "rna_references/6qw6_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/6qw6_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "6qw6:5",
+          "alignment_html": "rna_references/6qw6_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6qw6_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "6qw6:6",
+          "alignment_html": "rna_references/6qw6_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6qw6_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -110639,6 +112994,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "9j8p:B",
+          "alignment_html": "rna_references/9j8p_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/9j8p_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U6_5prime_terminal_stem_loop",
@@ -111011,6 +113377,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "I",
+          "members": "5vsu:I",
+          "alignment_html": "rna_references/5vsu_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5vsu_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U6_U2_helix_I_partner",
@@ -111323,6 +113700,17 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "I",
+          "members": "6aso:I",
+          "alignment_html": "rna_references/6aso_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/6aso_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U6_U2_helix_I_partner",
@@ -112495,6 +114883,44 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aau0325): pre-B/B spliceosomes purified from yeast in the absence of an added defined substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "YEAST_U2 snRNA",
+          "species_code": "YEAST",
+          "chains": "H",
+          "members": "5zwm:H",
+          "alignment_html": "rna_references/5zwm_vs_YEAST_U2.modelled.html",
+          "alignment_fasta": "rna_references/5zwm_vs_YEAST_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "YEAST_U4 snRNA",
+          "species_code": "YEAST",
+          "chains": "I",
+          "members": "5zwm:I",
+          "alignment_html": "rna_references/5zwm_vs_YEAST_U4.modelled.html",
+          "alignment_fasta": "rna_references/5zwm_vs_YEAST_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "YEAST_U5 snRNA",
+          "species_code": "YEAST",
+          "chains": "B",
+          "members": "5zwm:B",
+          "alignment_html": "rna_references/5zwm_vs_YEAST_U5.modelled.html",
+          "alignment_fasta": "rna_references/5zwm_vs_YEAST_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "YEAST_U6 snRNA",
+          "species_code": "YEAST",
+          "chains": "F",
+          "members": "5zwm:F",
+          "alignment_html": "rna_references/5zwm_vs_YEAST_U6.modelled.html",
+          "alignment_fasta": "rna_references/5zwm_vs_YEAST_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -113339,6 +115765,17 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (doi:10.1126/science.aau0325): pre-B/B spliceosomes purified from yeast in the absence of an added defined substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "YEAST_U1 snRNA",
+          "species_code": "YEAST",
+          "chains": "P",
+          "members": "5zwn:P",
+          "alignment_html": "rna_references/5zwn_vs_YEAST_U1.modelled.html",
+          "alignment_fasta": "rna_references/5zwn_vs_YEAST_U1.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -114665,6 +117102,44 @@
         "review_required": "False",
         "evidence": "local sequence alignment to named reference: identity=0.991, shorter-sequence coverage=0.961"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "6ah0:H",
+          "alignment_html": "rna_references/6ah0_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6ah0_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "I",
+          "members": "6ah0:I",
+          "alignment_html": "rna_references/6ah0_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/6ah0_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "6ah0:B",
+          "alignment_html": "rna_references/6ah0_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6ah0_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "6ah0:F",
+          "alignment_html": "rna_references/6ah0_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6ah0_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -116354,6 +118829,53 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "1",
+          "members": "6qx9:1",
+          "alignment_html": "rna_references/6qx9_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/6qx9_vs_HUMAN_U1.aligned.fasta"
+        },
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "6qx9:2",
+          "alignment_html": "rna_references/6qx9_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/6qx9_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "6qx9:4",
+          "alignment_html": "rna_references/6qx9_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/6qx9_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "6qx9:5",
+          "alignment_html": "rna_references/6qx9_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/6qx9_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "6qx9:6",
+          "alignment_html": "rna_references/6qx9_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/6qx9_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_5prime_5SS_recognition",
@@ -117970,6 +120492,44 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:38658629): paper specifies a 144-nt synthetic adenovirus-derived RNA with a 55-nt exon bracketed by partial introns"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2A",
+          "members": "8h6e:2A",
+          "alignment_html": "rna_references/8h6e_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8h6e_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4A",
+          "members": "8h6e:4A",
+          "alignment_html": "rna_references/8h6e_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8h6e_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5A",
+          "members": "8h6e:5A",
+          "alignment_html": "rna_references/8h6e_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8h6e_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6A",
+          "members": "8h6e:6A",
+          "alignment_html": "rna_references/8h6e_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8h6e_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -119486,6 +122046,44 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:38658629): paper specifies a 144-nt synthetic adenovirus-derived RNA with a 55-nt exon bracketed by partial introns"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2A",
+          "members": "8h6j:2A",
+          "alignment_html": "rna_references/8h6j_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8h6j_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4A",
+          "members": "8h6j:4A",
+          "alignment_html": "rna_references/8h6j_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8h6j_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5A",
+          "members": "8h6j:5A",
+          "alignment_html": "rna_references/8h6j_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8h6j_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6A",
+          "members": "8h6j:6A",
+          "alignment_html": "rna_references/8h6j_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8h6j_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -120346,6 +122944,35 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qoz:4",
+          "alignment_html": "rna_references/8qoz_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qoz_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qoz:5",
+          "alignment_html": "rna_references/8qoz_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qoz_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qoz:6",
+          "alignment_html": "rna_references/8qoz_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qoz_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -120935,6 +123562,35 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qp8:4",
+          "alignment_html": "rna_references/8qp8_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qp8_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qp8:5",
+          "alignment_html": "rna_references/8qp8_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qp8_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qp8:6",
+          "alignment_html": "rna_references/8qp8_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qp8_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -121537,6 +124193,35 @@
         "review_required": "False",
         "evidence": ""
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qp9:4",
+          "alignment_html": "rna_references/8qp9_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qp9_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qp9:5",
+          "alignment_html": "rna_references/8qp9_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qp9_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qp9:6",
+          "alignment_html": "rna_references/8qp9_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qp9_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -122285,6 +124970,35 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qpa:4",
+          "alignment_html": "rna_references/8qpa_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qpa_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qpa:5",
+          "alignment_html": "rna_references/8qpa_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qpa_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qpa:6",
+          "alignment_html": "rna_references/8qpa_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qpa_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -123033,6 +125747,35 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qpb:4",
+          "alignment_html": "rna_references/8qpb_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qpb_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qpb:5",
+          "alignment_html": "rna_references/8qpb_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qpb_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qpb:6",
+          "alignment_html": "rna_references/8qpb_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qpb_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -123883,6 +126626,35 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qpe:4",
+          "alignment_html": "rna_references/8qpe_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qpe_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qpe:5",
+          "alignment_html": "rna_references/8qpe_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qpe_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qpe:6",
+          "alignment_html": "rna_references/8qpe_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qpe_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -124628,6 +127400,35 @@
         "review_required": "False",
         "evidence": "deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qpk:4",
+          "alignment_html": "rna_references/8qpk_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qpk_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qpk:5",
+          "alignment_html": "rna_references/8qpk_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qpk_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qpk:6",
+          "alignment_html": "rna_references/8qpk_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qpk_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U4_U6_stem_I_partner",
@@ -126016,6 +128817,44 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8qxd:2",
+          "alignment_html": "rna_references/8qxd_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8qxd_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8qxd:4",
+          "alignment_html": "rna_references/8qxd_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8qxd_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8qxd:5",
+          "alignment_html": "rna_references/8qxd_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8qxd_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8qxd:6",
+          "alignment_html": "rna_references/8qxd_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8qxd_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -127619,6 +130458,53 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps; deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U1 snRNA",
+          "reference_label": "HUMAN_U1 snRNA",
+          "species_code": "HUMAN",
+          "chains": "1",
+          "members": "8r08:1",
+          "alignment_html": "rna_references/8r08_vs_HUMAN_U1.modelled.html",
+          "alignment_fasta": "rna_references/8r08_vs_HUMAN_U1.aligned.fasta"
+        },
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8r08:2",
+          "alignment_html": "rna_references/8r08_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8r08_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8r08:4",
+          "alignment_html": "rna_references/8r08_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8r08_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8r08:5",
+          "alignment_html": "rna_references/8r08_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8r08_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8r08:6",
+          "alignment_html": "rna_references/8r08_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8r08_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U1_SL1",
@@ -129248,6 +132134,44 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps; deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8r09:2",
+          "alignment_html": "rna_references/8r09_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8r09_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8r09:4",
+          "alignment_html": "rna_references/8r09_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8r09_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8r09:5",
+          "alignment_html": "rna_references/8r09_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8r09_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8r09:6",
+          "alignment_html": "rna_references/8r09_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8r09_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -130885,6 +133809,44 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps; deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8r0a:2",
+          "alignment_html": "rna_references/8r0a_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8r0a_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8r0a:4",
+          "alignment_html": "rna_references/8r0a_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8r0a_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8r0a:5",
+          "alignment_html": "rna_references/8r0a_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8r0a_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8r0a:6",
+          "alignment_html": "rna_references/8r0a_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8r0a_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -132486,6 +135448,44 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps; deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8r0b:2",
+          "alignment_html": "rna_references/8r0b_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8r0b_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8r0b:4",
+          "alignment_html": "rna_references/8r0b_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8r0b_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8r0b:5",
+          "alignment_html": "rna_references/8r0b_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8r0b_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8r0b:6",
+          "alignment_html": "rna_references/8r0b_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8r0b_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -134050,6 +137050,44 @@
         "review_required": "False",
         "evidence": "construct identity specified by the cross-exon study; deposited polymer may retain author-numbering gaps; deposited oligonucleotide or splice-site description"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "8rm5:2",
+          "alignment_html": "rna_references/8rm5_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8rm5_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U4 snRNA",
+          "reference_label": "HUMAN_U4 snRNA",
+          "species_code": "HUMAN",
+          "chains": "4",
+          "members": "8rm5:4",
+          "alignment_html": "rna_references/8rm5_vs_HUMAN_U4.modelled.html",
+          "alignment_fasta": "rna_references/8rm5_vs_HUMAN_U4.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "8rm5:5",
+          "alignment_html": "rna_references/8rm5_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8rm5_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "8rm5:6",
+          "alignment_html": "rna_references/8rm5_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8rm5_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -135227,6 +138265,26 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:38484052): paper identifies the minor pre-B substrate as MINX-U12"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8y6o:B",
+          "alignment_html": "rna_references/8y6o_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8y6o_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6atac snRNA",
+          "reference_label": "HUMAN_U6atac snRNA",
+          "species_code": "HUMAN",
+          "chains": "K",
+          "members": "8y6o:K",
+          "alignment_html": "rna_references/8y6o_vs_HUMAN_U6atac.modelled.html",
+          "alignment_fasta": "rna_references/8y6o_vs_HUMAN_U6atac.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U11_5prime_5SS_recognition",
@@ -135865,6 +138923,17 @@
         "review_required": "False",
         "evidence": "publication/manual evidence (pmid:38484052): paper identifies the minor pre-B substrate as MINX-U12"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U12 snRNA",
+          "reference_label": "HUMAN_U12 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8y7e:H",
+          "alignment_html": "rna_references/8y7e_vs_HUMAN_U12.modelled.html",
+          "alignment_fasta": "rna_references/8y7e_vs_HUMAN_U12.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U12_branchpoint_pairing_region",
@@ -136491,6 +139560,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7aav:2",
+          "alignment_html": "rna_references/7aav_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7aav_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "7aav:5",
+          "alignment_html": "rna_references/7aav_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7aav_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "7aav:6",
+          "alignment_html": "rna_references/7aav_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7aav_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -137115,6 +140213,26 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "7abf:5",
+          "alignment_html": "rna_references/7abf_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7abf_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "7abf:6",
+          "alignment_html": "rna_references/7abf_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7abf_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -138409,6 +141527,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7abg:2",
+          "alignment_html": "rna_references/7abg_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7abg_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "7abg:5",
+          "alignment_html": "rna_references/7abg_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7abg_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "7abg:6",
+          "alignment_html": "rna_references/7abg_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7abg_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_branchpoint_pairing_region",
@@ -139064,6 +142211,17 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7abh:2",
+          "alignment_html": "rna_references/7abh_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7abh_vs_HUMAN_U2.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -140360,6 +143518,35 @@
         "review_required": "False",
         "evidence": "explicit deposited component, structure, or paper name"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "7abi:2",
+          "alignment_html": "rna_references/7abi_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/7abi_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "7abi:5",
+          "alignment_html": "rna_references/7abi_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/7abi_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "7abi:6",
+          "alignment_html": "rna_references/7abi_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/7abi_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -141702,6 +144889,35 @@
         "review_required": "False",
         "evidence": "exact match to an annotated intron from an explicitly named substrate"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "H",
+          "members": "8i0p:H",
+          "alignment_html": "rna_references/8i0p_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/8i0p_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "B",
+          "members": "8i0p:B",
+          "alignment_html": "rna_references/8i0p_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/8i0p_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "F",
+          "members": "8i0p:F",
+          "alignment_html": "rna_references/8i0p_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/8i0p_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",
@@ -142417,6 +145633,26 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "9r3d:5",
+          "alignment_html": "rna_references/9r3d_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/9r3d_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "9r3d:6",
+          "alignment_html": "rna_references/9r3d_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/9r3d_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U5_loop_I",
@@ -143783,6 +147019,35 @@
         "review_required": "False",
         "evidence": "construct identity assigned from the structure's primary publication"
       },
+      "snrna_alignments": [
+        {
+          "snrna": "U2 snRNA",
+          "reference_label": "HUMAN_U2 snRNA",
+          "species_code": "HUMAN",
+          "chains": "2",
+          "members": "9r8v:2",
+          "alignment_html": "rna_references/9r8v_vs_HUMAN_U2.modelled.html",
+          "alignment_fasta": "rna_references/9r8v_vs_HUMAN_U2.aligned.fasta"
+        },
+        {
+          "snrna": "U5 snRNA",
+          "reference_label": "HUMAN_U5 snRNA",
+          "species_code": "HUMAN",
+          "chains": "5",
+          "members": "9r8v:5",
+          "alignment_html": "rna_references/9r8v_vs_HUMAN_U5.modelled.html",
+          "alignment_fasta": "rna_references/9r8v_vs_HUMAN_U5.aligned.fasta"
+        },
+        {
+          "snrna": "U6 snRNA",
+          "reference_label": "HUMAN_U6 snRNA",
+          "species_code": "HUMAN",
+          "chains": "6",
+          "members": "9r8v:6",
+          "alignment_html": "rna_references/9r8v_vs_HUMAN_U6.modelled.html",
+          "alignment_fasta": "rna_references/9r8v_vs_HUMAN_U6.aligned.fasta"
+        }
+      ],
       "snrna_features": [
         {
           "feature": "U2_U6_helix_I_partner",

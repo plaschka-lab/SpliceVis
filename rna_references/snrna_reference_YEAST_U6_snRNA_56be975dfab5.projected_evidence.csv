@@ -1,0 +1,184 @@
+member,feature,label,start,end,coverage,confidence,method
+3jcm:D,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+3jcm:D,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+3jcm:D,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+3jcm:D,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+3jcm:D,U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,1.000,high,reference-alignment
+3jcm:D,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+3jcm:D,U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,1.000,high,reference-alignment
+3jcm:D,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5gan:W,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5gan:W,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5gan:W,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5gan:W,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5gan:W,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5gan:W,U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,1.000,high,reference-alignment
+5gan:W,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5gan:W,U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,1.000,high,reference-alignment
+5gan:W,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5gap:W,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5gap:W,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5gap:W,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5gap:W,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5gap:W,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5gap:W,U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,1.000,high,reference-alignment
+5gap:W,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5gap:W,U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,1.000,high,reference-alignment
+5gm6:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5gm6:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5gm6:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5gm6:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5gm6:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5gm6:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5gm6:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5gmk:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5gmk:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5gmk:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5gmk:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5gmk:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5gmk:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5gmk:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5lj3:V,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5lj3:V,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5lj3:V,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5lj3:V,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5lj3:V,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5lj3:V,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5lj5:V,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5lj5:V,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5lj5:V,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5lj5:V,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5lj5:V,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5lj5:V,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5lqw:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5lqw:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5lqw:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5lqw:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5lqw:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5lqw:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5mps:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5mps:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5mps:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5mps:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5mps:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5mps:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5mps:6,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5mq0:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5mq0:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5mq0:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5mq0:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5mq0:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5mq0:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5mq0:6,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5nrl:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5nrl:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5nrl:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5nrl:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5nrl:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5nrl:6,U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,1.000,high,reference-alignment
+5nrl:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5nrl:6,U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,1.000,high,reference-alignment
+5nrl:6,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5vsu:I,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5vsu:I,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5vsu:I,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5wsg:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5wsg:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5wsg:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5wsg:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5wsg:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5wsg:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5wsg:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5y88:D,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5y88:D,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5y88:D,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5y88:D,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5y88:D,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5y88:D,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5ylz:D,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+5ylz:D,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5ylz:D,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5ylz:D,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5ylz:D,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5ylz:D,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5ylz:D,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5zwm:F,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,0.900,high,reference-alignment
+5zwm:F,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5zwm:F,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5zwm:F,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5zwm:F,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5zwm:F,U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,1.000,high,reference-alignment
+5zwm:F,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5zwm:F,U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,1.000,high,reference-alignment
+5zwm:F,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+5zwo:F,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,0.900,high,reference-alignment
+5zwo:F,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+5zwo:F,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+5zwo:F,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+5zwo:F,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+5zwo:F,U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,1.000,high,reference-alignment
+5zwo:F,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+5zwo:F,U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,1.000,high,reference-alignment
+5zwo:F,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+6aso:I,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6aso:I,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6aso:I,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6bk8:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+6bk8:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6bk8:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6bk8:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+6bk8:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6bk8:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+6exn:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+6exn:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6exn:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6exn:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+6exn:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6exn:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+6j6g:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+6j6g:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6j6g:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6j6g:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+6j6g:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6j6g:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+6j6g:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+6j6h:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+6j6h:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6j6h:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6j6h:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+6j6h:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6j6h:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+6j6h:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+6j6n:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+6j6n:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6j6n:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6j6n:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+6j6n:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6j6n:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+6j6n:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+6j6q:E,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+6j6q:E,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+6j6q:E,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+6j6q:E,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+6j6q:E,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+6j6q:E,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+6j6q:E,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+7b9v:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+7b9v:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+7b9v:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+7b9v:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+7b9v:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+7b9v:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+7dco:F,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+7dco:F,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+7dco:F,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+7dco:F,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+7dco:F,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+7dco:F,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif
+7dco:F,U6_LSm_site,LSm site,103,112,1.000,low,terminal-region
+9dtr:6,U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,1.000,high,reference-alignment
+9dtr:6,U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,1.000,medium,motif-neighborhood
+9dtr:6,U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,1.000,medium,motif-neighborhood
+9dtr:6,U6_ISL,internal stem-loop,46,73,1.000,low,motif-neighborhood
+9dtr:6,U6_ACAGAGA_box,ACAGAGA box,47,53,1.000,high,sequence-motif
+9dtr:6,U6_AGC_catalytic_triad,AGC catalytic triad,59,61,1.000,medium,sequence-motif

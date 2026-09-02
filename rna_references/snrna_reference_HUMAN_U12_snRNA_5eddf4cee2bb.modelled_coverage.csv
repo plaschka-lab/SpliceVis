@@ -1,0 +1,3 @@
+member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
+7dvq:H,7dvq,H,150,63,0.4200,"1-51,73-84"
+8y7e:H,8y7e,H,150,50,0.3333,"14-51,73-84"

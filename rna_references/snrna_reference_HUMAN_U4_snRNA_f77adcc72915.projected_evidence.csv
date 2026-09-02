@@ -1,0 +1,97 @@
+member,feature,label,start,end,coverage,confidence,method
+3jcr:M,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+3jcr:M,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+3jcr:M,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+3jcr:M,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+5o9z:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+5o9z:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+5o9z:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+5o9z:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+6ah0:I,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+6ah0:I,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+6ah0:I,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+6ah0:I,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+6ahd:I,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+6ahd:I,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+6ahd:I,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+6ahd:I,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+6qw6:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+6qw6:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+6qw6:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+6qw6:4,U4_Sm_site,Sm site,118,124,1.000,medium,sequence-motif
+6qx9:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+6qx9:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+6qx9:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+6qx9:4,U4_Sm_site,Sm site,118,124,1.000,medium,sequence-motif
+8h6e:4A,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8h6e:4A,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8h6e:4A,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8h6e:4A,U4_Sm_site,Sm site,118,124,1.000,medium,sequence-motif
+8h6j:4A,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8h6j:4A,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8h6j:4A,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8h6j:4A,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8h6k:4A,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8h6k:4A,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8h6k:4A,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8h6k:4A,U4_Sm_site,Sm site,118,124,1.000,medium,sequence-motif
+8h6l:4A,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8h6l:4A,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8h6l:4A,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8h6l:4A,U4_Sm_site,Sm site,118,124,1.000,medium,sequence-motif
+8q7n:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8q7n:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8q7n:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qo9:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qo9:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qo9:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qo9:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8qoz:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qoz:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qoz:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qp8:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qp8:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qp8:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qp9:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qp9:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qp9:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qpa:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qpa:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qpa:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qpb:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qpb:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qpb:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qpe:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qpe:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qpe:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qpk:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qpk:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qpk:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qxd:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qxd:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qxd:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qxd:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8qzs:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8qzs:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8qzs:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8qzs:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8r08:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8r08:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8r08:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8r08:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8r09:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8r09:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8r09:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8r09:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8r0a:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8r0a:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8r0a:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8r0a:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8r0b:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8r0b:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8r0b:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8r0b:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif
+8rm5:4,U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,1.000,high,reference-alignment
+8rm5:4,U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,1.000,high,reference-alignment
+8rm5:4,U4_Brr2_loading_region,Brr2 loading region,60,95,1.000,medium,reference-alignment
+8rm5:4,U4_Sm_site,Sm site,119,125,1.000,medium,sequence-motif

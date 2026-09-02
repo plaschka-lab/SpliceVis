@@ -1,0 +1,4 @@
+feature,label,start,end,support_count,member_count,note
+U12_U6atac_helix_I_partner,U12/U6atac helix I partner,2,11,1,2,projected by global alignment; members=7dvq:H
+U12_branchpoint_pairing_region,branchpoint pairing region,16,26,2,2,"projected by global alignment; members=7dvq:H, 8y7e:H"
+U12_Sm_site,Sm site,75,81,2,2,"projected by global alignment; members=7dvq:H, 8y7e:H"

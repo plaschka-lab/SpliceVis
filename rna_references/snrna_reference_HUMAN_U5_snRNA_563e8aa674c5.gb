@@ -1,0 +1,22 @@
+LOCUS       HUMAN_U5_snRNA           117 bp    RNA              UNK 01-JAN-1980
+DEFINITION  HUMAN_U5 snRNA; snrna_reference; reference=9r8v:5; members=72.
+ACCESSION   HUMAN_U5_snRNA
+VERSION     HUMAN_U5_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    38..42
+                     /label="loop I"
+                     /note="feature=U5_loop_I; support=71/72; projected by
+                     global alignment; members=3jcr:H, 5mqf:5, 5o9z:5, 5xjc:B,
+                     5yzg:B, 5z56:B, 5z57:B, 5z58:B, 6ah0:B, 6ahd:B, 6ff4:5,
+                     6ff7:5, 6icz:B, 6id0:B, 6id1:B, 6qdv:5, 6qw6:5, 6qx9:5,
+                     6zym:5, 7aav:5"
+                     /ApEinfo_fwdcolor="#1B3CD0"
+                     /ApEinfo_revcolor="#1B3CD0"
+ORIGIN
+        1 auacucuggu uucucuucag aucgcauaaa ucuuucgccu uuuacuaaag auuuccgugg
+       61 agaggaacaa cucugagucu uaacccaauu uuuugaggcc uugcuuuggc aaggcua
+//

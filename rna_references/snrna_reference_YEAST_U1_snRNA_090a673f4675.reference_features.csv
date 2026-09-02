@@ -1,0 +1,8 @@
+feature,label,start,end,support_count,member_count,note
+U1_5prime_5SS_recognition,5' splice-site recognition region,1,10,5,5,"projected by global alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+U1_SL1,stem-loop 1,11,45,5,5,"projected by global alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+U1_SL2,stem-loop 2,46,95,5,5,"projected by global alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+U1_Sm_site,Sm site,224,230,4,5,"projected by global alignment; members=5zwn:P, 6n7p:R, 6n7r:R, 7oqe:1"
+U1_Sm_site,Sm site,241,247,5,5,"projected by global alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+U1_Sm_site,Sm site,516,520,1,5,projected by global alignment; members=6g90:1
+U1_Sm_site,Sm site,553,559,4,5,"projected by global alignment; members=5zwn:P, 6n7p:R, 6n7r:R, 7oqe:1"

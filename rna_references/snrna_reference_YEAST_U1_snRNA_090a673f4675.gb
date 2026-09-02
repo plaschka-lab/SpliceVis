@@ -1,0 +1,64 @@
+LOCUS       YEAST_U1_snRNA           568 bp    RNA              UNK 01-JAN-1980
+DEFINITION  YEAST_U1 snRNA; snrna_reference; reference=7oqe:1; members=5.
+ACCESSION   YEAST_U1_snRNA
+VERSION     YEAST_U1_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..10
+                     /label="5' splice-site recognition region"
+                     /note="feature=U1_5prime_5SS_recognition; support=5/5;
+                     projected by global alignment; members=5zwn:P, 6g90:1,
+                     6n7p:R, 6n7r:R, 7oqe:1"
+                     /ApEinfo_fwdcolor="#B66AAE"
+                     /ApEinfo_revcolor="#B66AAE"
+     misc_feature    11..45
+                     /label="stem-loop 1"
+                     /note="feature=U1_SL1; support=5/5; projected by global
+                     alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    46..95
+                     /label="stem-loop 2"
+                     /note="feature=U1_SL2; support=5/5; projected by global
+                     alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    224..230
+                     /label="Sm site"
+                     /note="feature=U1_Sm_site; support=4/5; projected by global
+                     alignment; members=5zwn:P, 6n7p:R, 6n7r:R, 7oqe:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    241..247
+                     /label="Sm site"
+                     /note="feature=U1_Sm_site; support=5/5; projected by global
+                     alignment; members=5zwn:P, 6g90:1, 6n7p:R, 6n7r:R, 7oqe:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    516..520
+                     /label="Sm site"
+                     /note="feature=U1_Sm_site; support=1/5; projected by global
+                     alignment; members=6g90:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    553..559
+                     /label="Sm site"
+                     /note="feature=U1_Sm_site; support=4/5; projected by global
+                     alignment; members=5zwn:P, 6n7p:R, 6n7r:R, 7oqe:1"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 auacuuaccu uaagauauca gaggagauca agaaguccua cugaucaaac augcgcuucc
+       61 aauaguagaa ggacguuaag cauuuaucau ugaacuauaa uuguucauug aagucauuga
+      121 ugcaaacucc uuggucacac acacauacgg cgcggaaggc guguuugcug acguuuccau
+      181 ucccuuguuu caaucauugg uuaaucccuu gauuccuuug gggauuuuug gguuaaacug
+      241 auuuuugggg cccuuuguuu cuucugccug gagaaguuug acaccaaauu caaauuggug
+      301 uuaggggagc uggggccuuu caaaagagag cuuuguagag gcauucuuuu ugacuacuuu
+      361 ucucuagcgu gccauuuuag uuuuugacgg cagauucgaa ugaacuuaag uuuaugauga
+      421 agguauggcu guugagauua uuuggucggg auuguaguuu gaagaugugc ucuuuugagc
+      481 agucucaacu uugcucguuc ccguuauggg aaaaauuuug gaaggucuug guaggaacgg
+      541 guggaucuua uaauuuuuga uuuauuuu
+//

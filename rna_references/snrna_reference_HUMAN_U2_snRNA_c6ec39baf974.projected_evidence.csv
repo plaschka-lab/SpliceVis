@@ -1,0 +1,226 @@
+member,feature,label,start,end,coverage,confidence,method
+5mqf:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+5mqf:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5mqf:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5mqf:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+5o9z:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5o9z:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5o9z:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+5xjc:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+5xjc:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5xjc:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5xjc:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+5yzg:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+5yzg:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5yzg:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5yzg:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+5z56:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+5z56:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5z56:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5z56:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+5z57:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+5z57:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5z57:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5z57:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+5z58:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+5z58:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+5z58:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+5z58:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6ah0:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6ah0:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6ah0:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6ah0:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6ahd:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6ahd:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6ahd:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6ahd:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6ff4:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6ff4:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6ff4:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6ff7:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6ff7:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6ff7:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6icz:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6icz:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6icz:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6icz:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6id0:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6id0:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6id0:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6id0:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6id1:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6id1:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6id1:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6id1:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6qdv:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6qdv:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6qdv:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6qdv:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6qx9:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6qx9:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6qx9:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6y50:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6y50:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6y50:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6y53:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6y53:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6y5q:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6y5q:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+6y5q:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+6y5q:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+6zym:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+6zym:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7a5p:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7aav:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7abg:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7abg:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7abg:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7abh:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7abh:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7abh:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7abi:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7abi:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7abi:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7abi:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7evo:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7evo:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7evo:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7evo:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7onb:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7onb:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7q3l:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7q3l:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7q3l:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7q4o:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7q4o:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7q4o:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7q4p:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7q4p:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7q4p:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7qtt:f,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7qtt:f,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7qtt:f,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7vpx:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7vpx:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7vpx:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7w59:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7w59:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7w59:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7w59:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7w5a:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7w5a:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7w5a:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7w5a:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+7w5b:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+7w5b:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+7w5b:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+7w5b:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8c6j:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8c6j:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8c6j:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8c6j:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8ch6:f,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8ch6:f,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8ch6:f,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8ch6:f,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8h6e:2A,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8h6e:2A,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8h6e:2A,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8h6e:2A,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8h6j:2A,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8h6j:2A,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8h6j:2A,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8h6j:2A,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8h6k:2A,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8h6k:2A,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8h6k:2A,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8h6k:2A,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8h6l:2A,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8h6l:2A,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8h6l:2A,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8h6l:2A,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8hk1:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8hk1:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8hk1:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8hk1:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0p:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0p:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0p:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0p:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0r:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0r:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0r:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0r:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0s:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0s:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0s:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0s:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0t:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0t:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0t:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0t:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0u:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0u:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0u:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0u:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0v:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0v:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0v:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0v:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8i0w:H,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8i0w:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8i0w:H,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8i0w:H,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8qo9:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8qo9:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8qo9:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8qo9:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8qxd:2,U2_U6_helix_I_partner,U2/U6 helix I partner,28,32,1.000,high,review-region
+8qxd:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8qxd:2,U2_stem_IIa,stem IIa,48,82,1.000,low,review-region
+8qxd:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8qzs:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8qzs:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8qzs:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8qzs:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8r08:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8r08:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8r08:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8r08:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8r09:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8r09:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8r09:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8r09:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8r0a:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8r0a:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8r0a:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8r0a:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8r0b:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8r0b:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8r0b:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8r0b:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8rm5:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8rm5:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+8rm5:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+8rm5:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+8ro2:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+8ro2:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9fmd:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+9fmd:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9fmd:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+9fmd:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+9k1r:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9k1w:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9k1y:H,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9r8v:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+9r8v:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9r8v:2,U2_stem_IIa,stem IIa,46,80,1.000,low,review-region
+9r8v:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif
+9ze0:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9ze2:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9ze3:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9zec:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9zed:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+9s2e:2,U2_U6_helix_I_partner,U2/U6 helix I partner,26,30,1.000,high,review-region
+9s2e:2,U2_branchpoint_pairing_region,branchpoint pairing region,32,41,1.000,medium,sequence-motif-neighborhood
+local_step2:2,U2_Sm_site,Sm site,99,105,1.000,medium,sequence-motif

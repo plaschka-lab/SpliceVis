@@ -1,0 +1,32 @@
+LOCUS       HUMAN_U12_snRNA          150 bp    RNA              UNK 01-JAN-1980
+DEFINITION  HUMAN_U12 snRNA; snrna_reference; reference=8y7e:H; members=2.
+ACCESSION   HUMAN_U12_snRNA
+VERSION     HUMAN_U12_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    2..11
+                     /label="U12/U6atac helix I partner"
+                     /note="feature=U12_U6atac_helix_I_partner; support=1/2;
+                     projected by global alignment; members=7dvq:H"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    16..26
+                     /label="branchpoint pairing region"
+                     /note="feature=U12_branchpoint_pairing_region; support=2/2;
+                     projected by global alignment; members=7dvq:H, 8y7e:H"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    75..81
+                     /label="Sm site"
+                     /note="feature=U12_Sm_site; support=2/2; projected by
+                     global alignment; members=7dvq:H, 8y7e:H"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 augccuuaaa cuuaugagua aggaaaauaa cgauucgggg ugacgcccga auccucacug
+       61 cuaaugugag acgaauuuuu gagcggguaa aggucgcccu caaggugacc cgccuacuuu
+      121 gcgggaugcc ugggaguugc gaucugcccg
+//

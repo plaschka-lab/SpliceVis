@@ -118,6 +118,9 @@
     .rna-alignment-help-text { position:absolute; right:0; bottom:calc(100% + 6px); z-index:30; display:none; width:min(330px,80vw); padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:#fff; box-shadow:0 8px 24px rgba(30,45,60,.14); color:#445160; line-height:1.4; }
     .rna-alignment-help-text strong { display:block; margin-bottom:3px; color:var(--ink); }
     .rna-alignment-help:hover .rna-alignment-help-text, .rna-alignment-help:focus-within .rna-alignment-help-text { display:block; }
+    .snrna-alignment-toggle { display:flex; align-items:center; gap:7px; min-height:28px; padding:4px 5px; border-top:1px solid var(--soft-line); color:var(--muted); font-size:11px; font-weight:700; cursor:pointer; }
+    .snrna-alignment-toggle input { width:auto; min-height:0; margin:0; }
+    .snrna-alignment-host[hidden] { display:none; }
     .molstar-options { margin-top:8px; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .molstar-options > summary { cursor:pointer; list-style:none; padding:8px 10px; color:var(--muted); font-size:12px; font-weight:750; }
     .molstar-options > summary::-webkit-details-marker { display:none; }
@@ -138,6 +141,9 @@
     .actions button, .actions a { display:inline-flex; min-height:30px; align-items:center; padding:5px 9px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); text-decoration:none; }
     .actions a.report-link { border-color:#f0b8a8; color:#9f3a22; background:#fff7f4; font-weight:650; }
     .actions a.report-link:hover { background:#ffece6; }
+    .selected-panel .chimerax-actions { padding:8px; border:1px solid #bfd2e8; border-radius:8px; background:#f5f9fd; }
+    .selected-panel .chimerax-actions .script-copy { min-height:34px; padding:6px 12px; border-color:var(--focus); background:var(--focus); color:#fff; font-weight:750; box-shadow:0 1px 2px rgba(36,92,158,.18); }
+    .selected-panel .chimerax-actions .script-copy:hover { border-color:#194d88; background:#194d88; color:#fff; }
     .script-options { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:10px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:#fafbfc; }
     .checkbox-option { display:inline-flex; gap:7px; align-items:center; margin:0; color:var(--ink); font-size:12px; font-weight:650; }
     .checkbox-option input { width:auto; margin:0; }
@@ -588,7 +594,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       return Number.isFinite(number) ? number.toFixed(1) : String(value);
     }
     async function init(){
-      const response = await fetch("data/structures.json?v=20260901-rna-alignment-v2", {
+      const response = await fetch("data/structures.json?v=20260902-snrna-alignments-v1", {
         cache: "no-cache",
       });
       if (!response.ok) throw new Error(`Could not load data/structures.json: ${response.status}`);
@@ -1437,6 +1443,45 @@ ${await scriptFor(record,"no_maps")}
       const fasta=document.getElementById("rnaAlignmentFasta");
       if(fasta && item.fasta) fasta.href=item.fasta;
     }
+    function structureSnrnaAlignmentItems(r){
+      return (r?.snrna_alignments || []).filter(item=>item.alignment_html).map(item=>({
+        html:item.alignment_html,
+        fasta:item.alignment_fasta || "",
+        label:String(item.snrna || "snRNA").replace(/\s+snRNA$/i,""),
+        reference:item.reference_label || "snRNA reference",
+        chains:item.chains || "",
+      }));
+    }
+    function snrnaAlignmentControl(r){
+      const items=structureSnrnaAlignmentItems(r);
+      if(!items.length) return "";
+      return `<label class="snrna-alignment-toggle"><input type="checkbox" onchange="toggleSnrnaAlignment(this)">Show snRNA reference alignments <span>(${items.length})</span></label><div id="snrnaAlignmentHost" class="snrna-alignment-host" hidden></div>`;
+    }
+    function snrnaAlignmentPanel(r){
+      const items=structureSnrnaAlignmentItems(r);
+      if(!items.length) return "";
+      const first=items[0], firstUrl=alignmentViewerUrl(first.html);
+      const chooser=items.length>1 ? `<select class="rna-alignment-select" aria-label="snRNA reference alignment" onchange="changeSnrnaAlignment(this)">${items.map((item,index)=>`<option value="${index}">${esc(item.label)}</option>`).join("")}</select>` : `<span>${esc(first.label)}</span>`;
+      const help=`<span class="rna-alignment-help"><button type="button" aria-label="snRNA alignment help">?</button><span class="rna-alignment-help-text" role="tooltip"><strong>snRNA alignment</strong>The annotated ${esc(first.reference)} reference is aligned to deposited chain${first.chains.includes(";")?"s":""} ${esc(first.chains)}. Blue bases are modelled; grey bases are present in the sequence record but unresolved.</span></span>`;
+      return `<section class="rna-alignment-panel"><iframe id="snrnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} snRNA sequence alignment`)}" loading="lazy"></iframe><div class="rna-alignment-footer">${chooser}${help}<a id="snrnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full alignment</a>${first.fasta?`<a id="snrnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}</div></section>`;
+    }
+    function toggleSnrnaAlignment(checkbox){
+      const host=document.getElementById("snrnaAlignmentHost");
+      if(!host) return;
+      host.hidden=!checkbox.checked;
+      host.innerHTML=checkbox.checked ? snrnaAlignmentPanel(currentMolstarRecord()) : "";
+    }
+    function changeSnrnaAlignment(control){
+      const item=structureSnrnaAlignmentItems(currentMolstarRecord())[Number(control.value)];
+      if(!item) return;
+      const viewerUrl=alignmentViewerUrl(item.html);
+      document.getElementById("snrnaAlignmentFrame").src=viewerUrl;
+      document.getElementById("snrnaAlignmentOpen").href=viewerUrl;
+      const fasta=document.getElementById("snrnaAlignmentFasta");
+      if(fasta && item.fasta) fasta.href=item.fasta;
+      const help=document.querySelector("#snrnaAlignmentHost .rna-alignment-help-text");
+      if(help) help.innerHTML=`<strong>snRNA alignment</strong>The annotated ${esc(item.reference)} reference is aligned to deposited chain${item.chains.includes(";")?"s":""} ${esc(item.chains)}. Blue bases are modelled; grey bases are present in the sequence record but unresolved.`;
+    }
     function molstarPanel(r){
       const count = (r.molstar_color_selections||[]).length;
       const legend = molstarLegend(r);
@@ -1445,7 +1490,7 @@ ${await scriptFor(record,"no_maps")}
       const features = hasFeatures ? `<section class="molstar-selection-section" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
       const legendBlock = hasLegend ? `<section class="molstar-selection-section" data-molstar-section="protein"><h3>Proteins</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><div class="molstar-legend">${legend}</div></section>` : "";
       const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar">${features}${legendBlock}</aside>` : "";
-      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${rnaAlignmentPanel(r)}</div>`;
+      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${rnaAlignmentPanel(r)}${snrnaAlignmentControl(r)}</div>`;
     }
     function switchMolstarSelectionTab(tab){
       const value = tab === "protein" ? "protein" : "rna";
@@ -1777,13 +1822,13 @@ ${await scriptFor(record,"no_maps")}
       if (state.chainMode === "systematic" && !systematicAvailable) state.chainMode = "original";
       const chainModeOption = `<div class="script-options"><label class="checkbox-option" title="Rename deposited chain IDs in ChimeraX to systematic project IDs using two safe-harbor changechains steps before coloring, alignment, and named selections. Systematic chain IDs attempt to give identical or homologous proteins the same chain IDs across structures."><input type="checkbox" ${selectedScriptMode === "systematic" ? "checked" : ""} ${systematicAvailable ? "" : "disabled"} onchange="setChainMode(this.checked ? 'systematic' : 'original')">Use systematic chain IDs</label><span class="subtle">${systematicAvailable ? `${r.systematic_chain_count || 0} mapped chains; renaming happens inside ChimeraX, no CIF files are downloaded.` : "No systematic chain map is available for this entry."}</span></div>`;
       const primaryMapAvailable = selectedScriptMode === "systematic" ? r.primary_map_script_systematic_path : r.primary_map_script_path;
-      const primaryMapButton = primaryMapAvailable ? `<button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy ChimeraX script with primary map</button>` : "";
-      const compositeButtons = (r.composite_groups||[]).map(group => `<button onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')}">Copy split-assembly ChimeraX script: ${esc(group.label || group.composite_id)}</button>`).join("");
+      const primaryMapButton = primaryMapAvailable ? `<button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy ChimeraX script with primary map</button>` : "";
+      const compositeButtons = (r.composite_groups||[]).map(group => `<button class="script-copy" onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')}">Copy split-assembly ChimeraX script: ${esc(group.label || group.composite_id)}</button>`).join("");
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
-      const scriptBlock = `${chainModeOption}<div class="actions"><button onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script without maps</button>${primaryMapButton}${compositeButtons}</div>`;
+      const scriptBlock = `${chainModeOption}<div class="actions chimerax-actions"><button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script without maps</button>${primaryMapButton}${compositeButtons}</div>`;
       const resourceBlock = `${externalLinks(r)}<div class="actions secondary-actions">${reportIssueLink(r)}</div>`;
       const substrateBadges=unique((r.substrate_types||[]).map(item=>item.family||item.type)).filter(value=>value!=="Other/unspecified substrate").slice(0,2).map(value=>`<span class="badge">${esc(value)}</span>`).join("");
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span>${minorSpliceosomeBadge(r)}<span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${substrateBadges}${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("ChimeraX scripts", scriptBlock, true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + substratePanel(r.substrate_features||[]) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.substrate_features||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span>${minorSpliceosomeBadge(r)}<span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${substrateBadges}${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("ChimeraX scripts", scriptBlock, true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
       renderMolstarFeatureButtons();
       scriptFor(r, "no_maps").then(text => {
         const preview = document.getElementById("scriptPreview");
@@ -1843,23 +1888,6 @@ ${await scriptFor(record,"no_maps")}
           : " No curated construct-level reference is assigned.";
         return `<div><strong>${esc(item.type||item.family)}</strong> ${confidenceBadge(item.confidence)}${primaryLinks?` <span class="reference-links">${primaryLinks}</span>`:""}<br><span class="subtle">Family: ${esc(item.family||"unassigned")}; deposited chain(s): ${esc(unique(item.chains.flatMap(value=>String(value).split(/;\s*/))).join(", ")||"n/a")}. ${esc(item.evidence||"")}${reference}</span>${advancedLinks?`<br><label class="inline-toggle"><input type="checkbox" onchange="this.parentElement.nextElementSibling.hidden=!this.checked"> Advanced files</label><span class="reference-links" hidden>${advancedLinks}</span>`:""}</div>`;
       }).join("")}</div>`;
-    }
-    function substratePanel(items){
-      if(!items.length) return "";
-      const net = i => {
-        if(!i.network_support) return "";
-        const bits=[`network ${i.network_support}`];
-        if(i.expected_snrna_features) bits.push(`expected ${i.expected_snrna_features}`);
-        if(i.snrna_basepair_count !== "") bits.push(`snRNA bp ${i.snrna_basepair_count}`);
-        if(i.snrna_min_distance_a !== "") bits.push(`snRNA d ${i.snrna_min_distance_a} A`);
-        if(i.u2_basepair_count !== "") bits.push(`U2 bp ${i.u2_basepair_count}`);
-        if(i.u2_min_distance_a !== "") bits.push(`d ${i.u2_min_distance_a} A`);
-        if(i.discontinuity_breaks !== "") bits.push(`breaks ${i.discontinuity_breaks}`);
-        if(i.network_score !== "") bits.push(`score ${i.network_score}`);
-        if(i.changed_from_legacy === "True" || i.changed_from_legacy === true) bits.push("changed");
-        return ` <span class="subtle">(${esc(bits.join("; "))})</span>`;
-      };
-      return `<h3>Substrate RNA Features (${items.length})</h3><div class="subtle">A leading ? marks an uncertain RNA-feature assignment retained with validation warnings.</div><div class="mini-list">${items.map(i=>`<div><strong>${esc(i.label||i.feature)}</strong>${net(i)} <span class="subtle">deposited chain ${esc(i.original_chain_id||"")}, seq ${esc(i.seq_start)}-${esc(i.seq_end)}, residues ${esc(i.auth_residue_ranges||"n/a")}</span><br><code>${esc(i.feature_sequence||i.notes||"")}</code></div>`).join("")}</div>`;
     }
     function snrnaPanel(items){
       if(!items.length) return "";

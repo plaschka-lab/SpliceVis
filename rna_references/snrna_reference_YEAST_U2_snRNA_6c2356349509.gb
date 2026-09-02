@@ -1,0 +1,58 @@
+LOCUS       YEAST_U2_snRNA          1175 bp    RNA              UNK 01-JAN-1980
+DEFINITION  YEAST_U2 snRNA; snrna_reference; reference=9dtr:2; members=25.
+ACCESSION   YEAST_U2_snRNA
+VERSION     YEAST_U2_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    26..30
+                     /label="U2/U6 helix I partner"
+                     /note="feature=U2_U6_helix_I_partner; support=20/25;
+                     projected by global alignment; members=5gm6:L, 5gmk:L,
+                     5lj3:Z, 5lj5:Z, 5lqw:2, 5mps:2, 5mq0:2, 5nrl:2, 5wsg:L,
+                     5y88:F, 5ylz:F, 6bk8:2, 6exn:2, 6j6g:L, 6j6h:L, 6j6n:L,
+                     6j6q:L, 7b9v:2, 7dco:H, 9dtr:2"
+                     /ApEinfo_fwdcolor="#047857"
+                     /ApEinfo_revcolor="#047857"
+     misc_feature    33..42
+                     /label="branchpoint pairing region"
+                     /note="feature=U2_branchpoint_pairing_region;
+                     support=25/25; projected by global alignment;
+                     members=5gm6:L, 5gmk:L, 5lj3:Z, 5lj5:Z, 5lqw:2, 5mps:2,
+                     5mq0:2, 5nrl:2, 5wsg:L, 5y88:F, 5ylz:F, 5zwm:H, 5zwo:H,
+                     6bk8:2, 6exn:2, 6g90:2, 6j6g:L, 6j6h:L, 6j6n:L, 6j6q:L"
+                     /ApEinfo_fwdcolor="#0B6E2D"
+                     /ApEinfo_revcolor="#0B6E2D"
+     misc_feature    46..80
+                     /label="stem IIa"
+                     /note="feature=U2_stem_IIa; support=23/25; projected by
+                     global alignment; members=5gm6:L, 5gmk:L, 5lj3:Z, 5lj5:Z,
+                     5lqw:2, 5mps:2, 5mq0:2, 5nrl:2, 5wsg:L, 5ylz:F, 5zwm:H,
+                     5zwo:H, 6bk8:2, 6exn:2, 6j6g:L, 6j6h:L, 6j6n:L, 6j6q:L,
+                     7b9v:2, 7dco:H"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 acgaaucucu uugccuuuug gcuuagauca aguguaguau cuguucuuuu caguguaaca
+       61 acugaaauga ccucaaugag gcucauuacc uuuuaauuug uuacaauaca cauuuuuugg
+      121 cacccaaaau aauaaaaugg acgggaagag acuuuuuaag caaguuguuu uccgcuaaug
+      181 ucaggucuca cuacuuuuug cugcuauuuu ucuucgcuca ugguuucuuc auaaggcguu
+      241 uuuaugaugg uuuuucgaaa uugguuuuug agacgacggu ugcucaaggu uauuguuuuu
+      301 guuuucuucu gguuguuuuc uauuuucuuu uuuuuagcuu ucuguuucuc ccuuaguuug
+      361 gcuuuuugcu ucauacucuu cccugucuuu ccgagccguu uauguccaac gcgggauuug
+      421 guuuuucuuu aucgauggga agaaauggug cuauaguagg uugggagaua auauuuaugg
+      481 uauggggugc uagugcggau ggggcgcucu uauuguugau uucuucgcuc gucuucuuuu
+      541 ucugguggcg cugcaagagg aaguuuuucg acuuuguuau gauuuuuggu uugcaaggaa
+      601 aggugucuua cgauucuuuu uuugauguaa uaggauaagc uugcuuaucc cccaaguauc
+      661 ggccaaaguu guugauuuuc cuuuugaagu guccucgguu ugagggggug uagggugggg
+      721 uuggucuaca auaagagugu uccauuguua acgugcuggc gucuuuuacu auauuuuuuu
+      781 ucccaguuua uuuugugcuu auuuucucau ugaggagaag gagcucuucu cgcaggauau
+      841 aaauggaggu uugcuaaagg ggaggagaug uguuugugag aauacugcug agagaguucu
+      901 ggaagagaaa aaaaggaggc aauggaaggc guuugcuggg aaaagagaag agccaugacu
+      961 gcaucuguug uuucaaggcc aguuuuauua accgccuaug ucauagaggc guuuuuuuug
+     1021 gagggauuug aagaaugccg gcggcaucaa gaaacggacu ugaugguuga cgccuguuuu
+     1081 uaaaguuaga gacgucgcga cccucgcacu uguggagucg uucuugacuu uuacuuuggu
+     1141 cgcuugaugu uucucucguc uucccguucg cucuu
+//

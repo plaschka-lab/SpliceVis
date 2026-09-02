@@ -1,0 +1,26 @@
+member,feature,label,start,end,coverage,confidence,method
+3jcm:F,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5gam:U,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5gan:U,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5gm6:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5gmk:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5lj3:U,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5lj5:U,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5lqw:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5mps:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5mq0:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5nrl:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5wsg:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5y88:B,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5ylz:B,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5zwm:B,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+5zwo:B,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+6bk8:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+6exn:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+6j6g:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+6j6h:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+6j6n:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+6j6q:D,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+7b9v:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+7dco:B,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif
+9dtr:5,U5_loop_I,loop I,53,57,1.000,medium,sequence-motif

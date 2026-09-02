@@ -1,0 +1,51 @@
+LOCUS       HUMAN_U4_snRNA           144 bp    RNA              UNK 01-JAN-1980
+DEFINITION  HUMAN_U4 snRNA; snrna_reference; reference=8rm5:4; members=26.
+ACCESSION   HUMAN_U4_snRNA
+VERSION     HUMAN_U4_snRNA
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..18
+                     /label="U4/U6 stem I partner"
+                     /note="feature=U4_U6_stem_I_partner; support=26/26;
+                     projected by global alignment; members=3jcr:M, 5o9z:4,
+                     6ah0:I, 6ahd:I, 6qw6:4, 6qx9:4, 8h6e:4A, 8h6j:4A, 8h6k:4A,
+                     8h6l:4A, 8q7n:4, 8qo9:4, 8qoz:4, 8qp8:4, 8qp9:4, 8qpa:4,
+                     8qpb:4, 8qpe:4, 8qpk:4, 8qxd:4"
+                     /ApEinfo_fwdcolor="#D8C800"
+                     /ApEinfo_revcolor="#D8C800"
+     misc_feature    56..64
+                     /label="U4/U6 stem II partner"
+                     /note="feature=U4_U6_stem_II_partner; support=26/26;
+                     projected by global alignment; members=3jcr:M, 5o9z:4,
+                     6ah0:I, 6ahd:I, 6qw6:4, 6qx9:4, 8h6e:4A, 8h6j:4A, 8h6k:4A,
+                     8h6l:4A, 8q7n:4, 8qo9:4, 8qoz:4, 8qp8:4, 8qp9:4, 8qpa:4,
+                     8qpb:4, 8qpe:4, 8qpk:4, 8qxd:4"
+                     /ApEinfo_fwdcolor="#E0CF1A"
+                     /ApEinfo_revcolor="#E0CF1A"
+     misc_feature    60..95
+                     /label="Brr2 loading region"
+                     /note="feature=U4_Brr2_loading_region; support=26/26;
+                     projected by global alignment; members=3jcr:M, 5o9z:4,
+                     6ah0:I, 6ahd:I, 6qw6:4, 6qx9:4, 8h6e:4A, 8h6j:4A, 8h6k:4A,
+                     8h6l:4A, 8q7n:4, 8qo9:4, 8qoz:4, 8qp8:4, 8qp9:4, 8qpa:4,
+                     8qpb:4, 8qpe:4, 8qpk:4, 8qxd:4"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+     misc_feature    118..124
+                     /label="Sm site"
+                     /note="feature=U4_Sm_site; support=18/26; merged
+                     overlapping projected intervals; projected by global
+                     alignment; members=6qw6:4, 6qx9:4, 8h6e:4A, 8h6k:4A,
+                     8h6l:4A; projected by global alignment; members=3jcr:M,
+                     5o9z:4, 6ah0:I, 6ahd:I, 8h6j:4A, 8qo9:4, 8qxd:4, 8qzs:4,
+                     8r08:4, 8r09:4, 8r0a:4, 8r0b:4, 8rm5:4"
+                     /ApEinfo_fwdcolor="#808080"
+                     /ApEinfo_revcolor="#808080"
+ORIGIN
+        1 agcuuugcgc aguggcagua ucguagccaa ugaggucuau ccgaggcgcg auuauugcua
+       61 auugaaaacu uuucccaaua ccccgccgug acgacuugca auauagucgg cacuggcaau
+      121 uuuugacagu cucuacggag acug
+//

@@ -1,0 +1,5 @@
+feature,label,start,end,support_count,member_count,note
+U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,26,26,"projected by global alignment; members=3jcr:M, 5o9z:4, 6ah0:I, 6ahd:I, 6qw6:4, 6qx9:4, 8h6e:4A, 8h6j:4A, 8h6k:4A, 8h6l:4A, 8q7n:4, 8qo9:4, 8qoz:4, 8qp8:4, 8qp9:4, 8qpa:4, 8qpb:4, 8qpe:4, 8qpk:4, 8qxd:4"
+U4_U6_stem_II_partner,U4/U6 stem II partner,56,64,26,26,"projected by global alignment; members=3jcr:M, 5o9z:4, 6ah0:I, 6ahd:I, 6qw6:4, 6qx9:4, 8h6e:4A, 8h6j:4A, 8h6k:4A, 8h6l:4A, 8q7n:4, 8qo9:4, 8qoz:4, 8qp8:4, 8qp9:4, 8qpa:4, 8qpb:4, 8qpe:4, 8qpk:4, 8qxd:4"
+U4_Brr2_loading_region,Brr2 loading region,60,95,26,26,"projected by global alignment; members=3jcr:M, 5o9z:4, 6ah0:I, 6ahd:I, 6qw6:4, 6qx9:4, 8h6e:4A, 8h6j:4A, 8h6k:4A, 8h6l:4A, 8q7n:4, 8qo9:4, 8qoz:4, 8qp8:4, 8qp9:4, 8qpa:4, 8qpb:4, 8qpe:4, 8qpk:4, 8qxd:4"
+U4_Sm_site,Sm site,118,124,18,26,"merged overlapping projected intervals; projected by global alignment; members=6qw6:4, 6qx9:4, 8h6e:4A, 8h6k:4A, 8h6l:4A; projected by global alignment; members=3jcr:M, 5o9z:4, 6ah0:I, 6ahd:I, 8h6j:4A, 8qo9:4, 8qxd:4, 8qzs:4, 8r08:4, 8r09:4, 8r0a:4, 8r0b:4, 8rm5:4"

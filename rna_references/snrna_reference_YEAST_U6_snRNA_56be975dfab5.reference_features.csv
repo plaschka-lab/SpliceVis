@@ -1,0 +1,10 @@
+feature,label,start,end,support_count,member_count,note
+U6_5prime_terminal_stem_loop,5' terminal stem-loop,1,30,24,29,"projected by global alignment; members=5gan:W, 5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6bk8:6, 6exn:6, 6j6g:E, 6j6h:E, 6j6n:E"
+U6_U2_helix_I_partner,U2/U6 helix I partner,41,66,27,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5vsu:I, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6aso:I, 6bk8:6, 6exn:6"
+U6_5SS_upstream_contact,5' splice-site upstream contact,44,55,27,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5vsu:I, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6aso:I, 6bk8:6, 6exn:6"
+U6_ISL,internal stem-loop,46,73,25,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6bk8:6, 6exn:6, 6j6g:E, 6j6h:E"
+U6_ACAGAGA_box,ACAGAGA box,47,53,27,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5vsu:I, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6aso:I, 6bk8:6, 6exn:6"
+U6_U4_stem_II_partner,U4/U6 stem II partner,55,68,6,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5nrl:6, 5zwm:F, 5zwo:F"
+U6_AGC_catalytic_triad,AGC catalytic triad,59,61,25,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6bk8:6, 6exn:6, 6j6g:E, 6j6h:E"
+U6_U4_stem_I_partner,U4/U6 stem I partner,70,80,6,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gap:W, 5nrl:6, 5zwm:F, 5zwo:F"
+U6_LSm_site,LSm site,103,112,16,29,"projected by global alignment; members=3jcm:D, 5gan:W, 5gm6:E, 5gmk:E, 5mps:6, 5mq0:6, 5nrl:6, 5wsg:E, 5ylz:D, 5zwm:F, 5zwo:F, 6j6g:E, 6j6h:E, 6j6n:E, 6j6q:E, 7dco:F"

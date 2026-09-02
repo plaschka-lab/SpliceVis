@@ -1,0 +1,8 @@
+member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
+3jcm:E,3jcm,E,160,85,0.5312,"1-64,139-159"
+5gan:V,5gan,V,160,124,0.7750,"1-67,73-104,128-152"
+5gao:V,5gao,V,96,57,0.5938,"9-40,64-88"
+5gap:V,5gap,V,67,67,1.0000,1-67
+5nrl:4,5nrl,4,160,114,0.7125,"1-68,71-79,90-102,131-154"
+5zwm:I,5zwm,I,160,110,0.6875,"1-64,71-79,90-102,131-154"
+5zwo:I,5zwo,I,161,110,0.6832,"1-64,71-79,90-102,131-154"
