@@ -1,2 +1,3 @@
 member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,modelled_label_seq_ranges
 7vpx:I,7vpx,I,259,15,0.0579,27-41
+7vpx:K,7vpx,K,10,10,1.0000,1-10

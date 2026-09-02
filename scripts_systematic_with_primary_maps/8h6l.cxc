@@ -306,9 +306,9 @@ name B_8H6L_U4_U6_stem_I_partner #370.1/4:1-18
 # U4 snRNA U4/U6 stem II partner: residues 56-63, reference-alignment, high confidence
 # selector_meta {"color":"#E0CF1A","family":"RNA","feature":"U4_U6_stem_II_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
 name B_8H6L_U4_U6_stem_II_partner #370.1/4:56-63
-# U4 snRNA Brr2 loading region: residues 59-63;70-76;83-94, review-region, low confidence
+# U4 snRNA Brr2 loading region: residues 60-63;70-76;83-95, reference-alignment, medium confidence
 # selector_meta {"color":"#F0DF2E","family":"RNA","feature":"U4_Brr2_loading_region","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name B_8H6L_U4_Brr2_loading_region #370.1/4:59-63,70-76,83-94
+name B_8H6L_U4_Brr2_loading_region #370.1/4:60-63,70-76,83-95
 # U4 snRNA Sm site: residues 118-124, sequence-motif, medium confidence
 # selector_meta {"color":"#F5E85A","family":"RNA","feature":"U4_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name B_8H6L_U4_Sm_site #370.1/4:118-124
@@ -378,9 +378,9 @@ color #370.1/4:56-63 #E0CF1A
 select #370.1/4:56-63
 nucleotides sel fill
 select clear
-# U4 Brr2 region: residues 59-63;70-76;83-94
-color #370.1/4:59-63,70-76,83-94 #F0DF2E
-select #370.1/4:59-63,70-76,83-94
+# U4 Brr2 region: residues 60-63;70-76;83-95
+color #370.1/4:60-63,70-76,83-95 #F0DF2E
+select #370.1/4:60-63,70-76,83-95
 nucleotides sel fill
 select clear
 # U5 loop I: residues 38-42

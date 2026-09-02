@@ -102,44 +102,16 @@
   "labels": [
     {
       "index": 1,
-      "selector_name": "U5_tri_snRNP_5GAO_U4_U6_stem_I_partner",
-      "feature": "U4_U6_stem_I_partner",
-      "atomspec": "#336.1/V:81",
-      "text": "U4/U6 stem I (res. 73-89)",
-      "color": "#D8C800",
-      "model_name": "label_01_U4_U6_stem_I_res_73_89",
-      "category_key": "snRNA_snRNA_regions",
-      "category_name": "snRNA-snRNA interacting regions",
-      "category_model_id": "336.2.1",
-      "label_model_id": "336.2.1.1",
-      "default_visible": false
-    },
-    {
-      "index": 2,
-      "selector_name": "U5_tri_snRNP_5GAO_U4_U6_stem_II_partner",
-      "feature": "U4_U6_stem_II_partner",
-      "atomspec": "#336.1/V:134",
-      "text": "U4/U6 stem II (res. 128-139)",
-      "color": "#E0CF1A",
-      "model_name": "label_02_U4_U6_stem_II_res_128_139",
-      "category_key": "snRNA_snRNA_regions",
-      "category_name": "snRNA-snRNA interacting regions",
-      "category_model_id": "336.2.1",
-      "label_model_id": "336.2.1.2",
-      "default_visible": false
-    },
-    {
-      "index": 3,
       "selector_name": "U5_tri_snRNP_5GAO_U4_Brr2_loading_region",
       "feature": "U4_Brr2_loading_region",
-      "atomspec": "#336.1/V:140",
-      "text": "U4 Brr2 region (res. 128-152)",
+      "atomspec": "#336.1/V:84",
+      "text": "U4 Brr2 region (res. 73-95)",
       "color": "#F0DF2E",
-      "model_name": "label_03_U4_Brr2_region_res_128_152",
+      "model_name": "label_01_U4_Brr2_region_res_73_95",
       "category_key": "other_snRNA_regions",
       "category_name": "other snRNA regions",
-      "category_model_id": "336.2.2",
-      "label_model_id": "336.2.2.1",
+      "category_model_id": "336.2.1",
+      "label_model_id": "336.2.1.1",
       "default_visible": false
     }
   ]

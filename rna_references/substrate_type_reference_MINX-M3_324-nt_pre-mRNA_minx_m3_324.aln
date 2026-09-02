@@ -25,11 +25,11 @@ REFERENCE  -----------------------GGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUC
 7abh:Z     -----------------------GGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUCGGCCUCCGAAC
 7abi:Z     -----------------------GGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUCGGCCUCCGAAC
 7qtt:g     -----------------------GGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUCGGCCUCCGAAC
-7w59:4     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
+7w59:4     -----------------------G----------AUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
 7w59:G     --------------------------------------------------------------------------------
-7w5a:4     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
+7w5a:4     -----------------------G----------AUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
 7w5a:G     --------------------------------------------------------------------------------
-7w5b:4     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
+7w5b:4     -----------------------G----------AUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
 7w5b:G     --------------------------------------------------------------------------------
 8ch6:g     -----------------------GGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUCGGCCUCCGAAC
 8i0p:G     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
@@ -39,7 +39,7 @@ REFERENCE  -----------------------GGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUC
 8i0u:G     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
 8i0v:G     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
 8i0w:6     --------------------------------------------------------------------------------
-8i0w:G     ---------------------------------GAUCGGGCUCG-CCACUCUUGGAUCGG-AACCCGUCGGCCUCCGAAC
+8i0w:G     -----------------------G----------AUCGGGCUCG-CCACUCUUGGAUC-GGAACCCGUCGGCCUCCGAAC
 8q7n:Z     GGUACCUAAUACGACUCACUAUAGGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUCGGCCUCCGAAC
 8qo9:Z     GGUACCUAAUACGACUCACUAUAGGGAGACGGAAUUCGAGCUCGCCCACUCUUGGAUCGGAAACCCGUCGGCCUCCGAAC
 9fmd:EX    ---------------------------------------------------------------------GGCCUCCGAAC
@@ -149,7 +149,7 @@ REFERENCE  UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCCGAUAUCCGUACACC
 6icz:G     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCC-------------------------
 6id0:G     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCC-------------------------
 6id1:G     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCC-------------------------
-6qdv:E     CU------------------------------------------------------------------------------
+6qdv:E     ---------CU---------------------------------------------------------------------
 6qdv:I     --------------------------------------------------------------------------------
 6zym:Y     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCCGAUAUCCGUACACCAUCAGGGUACG
 6zym:Z     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCCGAUAUCCGUACACCAUCAGGGUACG
@@ -177,7 +177,7 @@ REFERENCE  UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCCGAUAUCCGUACACC
 8i0w:G     --------------------------------------------------------------------------------
 8q7n:Z     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCCAAUAUCCGUACACCAUCAGGGUACG
 8qo9:Z     UUUCCACAGCUCGCGGUUGAGGACAAACUCUUCGCGGUCUUUCCAGUGGGGAUCCAAUAUCCGUACACCAUCAGGGUACG
-9fmd:EX    CU------------------------------------------------------------------------------
+9fmd:EX    ---------CU---------------------------------------------------------------------
 9fmd:IN    --------------------------------------------------------------------------------
 
 REFERENCE  AGCUAGCCCAUGGCGUACACCAUCAGGGUACGACUAGUAGAUCUCGUACACCAUCAGGGUACGGAAUUCUCUAGA

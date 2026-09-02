@@ -72,15 +72,9 @@ name pdb_5GAO_U4_snRNP #336.1/V
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
 name pdb_5GAO_U5_snRNP #336.1/A,B,E
 # Named selections for resolved snRNA functional regions.
-# U4 snRNA U4/U6 stem I partner: residues 73-89, review-region, low confidence
-# selector_meta {"color":"#D8C800","family":"RNA","feature":"U4_U6_stem_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_5GAO_U4_U6_stem_I_partner #336.1/V:73-89
-# U4 snRNA U4/U6 stem II partner: residues 128-139, review-region, low confidence
-# selector_meta {"color":"#E0CF1A","family":"RNA","feature":"U4_U6_stem_II_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_5GAO_U4_U6_stem_II_partner #336.1/V:128-139
-# U4 snRNA Brr2 loading region: residues 128-152, review-region, low confidence
+# U4 snRNA Brr2 loading region: residues 73-95, reference-alignment, medium confidence
 # selector_meta {"color":"#F0DF2E","family":"RNA","feature":"U4_Brr2_loading_region","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_5GAO_U4_Brr2_loading_region #336.1/V:128-152
+name U5_tri_snRNP_5GAO_U4_Brr2_loading_region #336.1/V:73-95
 # U4 snRNA Sm site: residues 144-150, sequence-motif, medium confidence
 # selector_meta {"color":"#F5E85A","family":"RNA","feature":"U4_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name U5_tri_snRNP_5GAO_U4_Sm_site #336.1/V:144-150
@@ -88,19 +82,9 @@ name U5_tri_snRNP_5GAO_U4_Sm_site #336.1/V:144-150
 select #336.1 & nucleic
 nucleotides sel atoms
 select clear
-# U4/U6 stem I: residues 73-89
-color #336.1/V:73-89 #D8C800
-select #336.1/V:73-89
-nucleotides sel fill
-select clear
-# U4/U6 stem II: residues 128-139
-color #336.1/V:128-139 #E0CF1A
-select #336.1/V:128-139
-nucleotides sel fill
-select clear
-# U4 Brr2 region: residues 128-152
-color #336.1/V:128-152 #F0DF2E
-select #336.1/V:128-152
+# U4 Brr2 region: residues 73-95
+color #336.1/V:73-95 #F0DF2E
+select #336.1/V:73-95
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.

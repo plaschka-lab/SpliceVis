@@ -261,9 +261,9 @@ name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA
 # 5' exon: residues -11-0, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_7DVQ_5exon #388.1/M:-11-0
-# 5' splice site: residues 1-9, minor-snrna-basepair, high confidence, validation validated
+# 5' splice site: residues 1-10, minor-snrna-basepair; manual-review-correction, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name Bact_7DVQ_5SS #388.1/M:1-9
+name Bact_7DVQ_5SS #388.1/M:1-10
 # intron from 5' splice site: residues 1-19;191-222, five-ss-inference, medium confidence, validation not_applicable
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name Bact_7DVQ_intron #388.1/M:1-19,191-222
@@ -307,7 +307,7 @@ color #388.1/M:-11-0 #FF9D00
 select #388.1/M:-11-0
 nucleotides sel fill
 select clear
-# 5'SS: residues 1-9
+# 5'SS: residues 1-10
 # intron: residues 1-19;191-222
 # BP region: residues 195-206
 # BP-A: residues 203
@@ -354,5 +354,7 @@ open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_syste
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic_with_primary_maps/selection_browser_scripts/7dvq_selection_browser.py
+# Compact annotated pre-mRNA alignment; clicking modelled residues focuses them in ChimeraX.
+open https://plaschka-lab.github.io/SpliceVis/rna_references/7dvq_vs_minx_u12_280.modelled.html?viewer=chimerax&chain_ids=systematic
 view
 show nucleic

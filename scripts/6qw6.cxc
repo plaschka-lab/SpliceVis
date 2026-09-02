@@ -149,9 +149,9 @@ name U5_tri_snRNP_6QW6_U4_U6_stem_I_partner #341.1/4:1-18
 # U4 snRNA U4/U6 stem II partner: residues 56-64, reference-alignment, high confidence
 # selector_meta {"color":"#E0CF1A","family":"RNA","feature":"U4_U6_stem_II_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
 name U5_tri_snRNP_6QW6_U4_U6_stem_II_partner #341.1/4:56-64
-# U4 snRNA Brr2 loading region: residues 59-70;73-80;85-94, review-region, low confidence
+# U4 snRNA Brr2 loading region: residues 60-70;73-80;85-95, reference-alignment, medium confidence
 # selector_meta {"color":"#F0DF2E","family":"RNA","feature":"U4_Brr2_loading_region","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name U5_tri_snRNP_6QW6_U4_Brr2_loading_region #341.1/4:59-70,73-80,85-94
+name U5_tri_snRNP_6QW6_U4_Brr2_loading_region #341.1/4:60-70,73-80,85-95
 # U4 snRNA Sm site: residues 118-124, sequence-motif, medium confidence
 # selector_meta {"color":"#F5E85A","family":"RNA","feature":"U4_Sm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name U5_tri_snRNP_6QW6_U4_Sm_site #341.1/4:118-124
@@ -187,9 +187,9 @@ color #341.1/4:56-64 #E0CF1A
 select #341.1/4:56-64
 nucleotides sel fill
 select clear
-# U4 Brr2 region: residues 59-70;73-80;85-94
-color #341.1/4:59-70,73-80,85-94 #F0DF2E
-select #341.1/4:59-70,73-80,85-94
+# U4 Brr2 region: residues 60-70;73-80;85-95
+color #341.1/4:60-70,73-80,85-95 #F0DF2E
+select #341.1/4:60-70,73-80,85-95
 nucleotides sel fill
 select clear
 # U5 loop I: residues 38

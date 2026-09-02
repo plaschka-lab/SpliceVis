@@ -1,7 +1,7 @@
 member,pdb_id,chain,feature,label,reference_start,reference_end,reference_feature_sequence,query_label_seq_ranges,projected_query_sequence,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
 6qx9:I,6qx9,I,exon_5,5' exon,1,102,GAAUAGAAGUAUAGUGCCGUUCUUUUGAGCGGCCUAUUACCCAAGCUUGGCGUUCGUCCUCACUCUCUUCCGCAUCGCUGUCUGCGAGGGCCAGCUGUUGGG,1-2,GG,0.0196,1.0000,1-2,0.0196,partial
 6qx9:I,6qx9,I,five_prime_splice_site,5' splice site,103,108,GUGAGU,3-8,GUGAGU,1.0000,1.0000,3-8,1.0000,complete
-6qx9:I,6qx9,I,intron,intron,103,215,GUGAGUCUGAUCAGCUUGUUGACCAGCUCGGCGGUGACCUGCACGUCUAGGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,"3-8,49-62",GUGAGUCUUUCGUGCUGACC,0.1770,0.8000,"3-8,49-62",0.1770,partial
+6qx9:I,6qx9,I,intron,intron,103,215,GUGAGUCUGAUCAGCUUGUUGACCAGCUCGGCGGUGACCUGCACGUCUAGGGCGCAGUAGUCCAGGGUUUCCUUGAUGAUGUCAUACUUAUCCUGUCCCUUUUUUUUCCACAG,"3-8,57-62",GUGAGUCUGACC,0.1062,0.9167,"3-8,57-62",0.1062,partial
 6qx9:I,6qx9,I,branch_point_region,branch point region,187,193,UACUUAU,,,0.0000,,,0.0000,absent
 6qx9:I,6qx9,I,branch_point_adenosine,branch point adenosine,192,192,A,,,0.0000,,,0.0000,absent
 6qx9:I,6qx9,I,polypyrimidine_tract,polypyrimidine tract,199,210,CCCUUUUUUUUC,,,0.0000,,,0.0000,absent

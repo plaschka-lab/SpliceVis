@@ -1,6 +1,6 @@
 LOCUS       7VPX_MINX_exon-d         259 bp    RNA              UNK 01-JAN-1980
 DEFINITION  7VPX MINX exon-definition construct; substrate_type_reference;
-            reference=minx_exon_7vpx_259; source=Zhang et al. 2024; members=1.
+            reference=minx_exon_7vpx_259; source=Zhang et al. 2024; members=2.
 ACCESSION   7VPX_MINX_exon-d
 VERSION     7VPX_MINX_exon-d
 KEYWORDS    .

@@ -212,7 +212,7 @@
       "label": "3' exon",
       "category": "substrate RNA feature",
       "section": "Named selections for resolved substrate RNA features.",
-      "comment": "3' exon: residues 1-11;14-21, auth-residue-numbering, high confidence, validation not_applicable",
+      "comment": "3' exon: residues 1-11;14-21, auth-residue-numbering; manual-review-correction, high confidence, validation validated",
       "atomspec": "#428.1/E:1-11,14-21",
       "family": "RNA",
       "group": "pre-mRNA features",

@@ -688,7 +688,7 @@
       "label": "U4 snRNA Brr2 loading region",
       "category": "snRNA feature",
       "section": "Named selections for resolved snRNA functional regions.",
-      "comment": "U4 snRNA Brr2 loading region: residues 60-63;68-95, review-region, low confidence",
+      "comment": "U4 snRNA Brr2 loading region: residues 60-63;68-95, reference-alignment, medium confidence",
       "atomspec": "#364.1/4:60-63,68-95",
       "family": "RNA",
       "group": "other snRNA regions",
