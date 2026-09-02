@@ -121,6 +121,10 @@
     .snrna-alignment-toggle { display:flex; align-items:center; gap:7px; min-height:28px; padding:4px 5px; border-top:1px solid var(--soft-line); color:var(--muted); font-size:11px; font-weight:700; cursor:pointer; }
     .snrna-alignment-toggle input { width:auto; min-height:0; margin:0; }
     .snrna-alignment-host[hidden] { display:none; }
+    .snrna-alignment-footer { justify-content:flex-start; padding:3px 5px; border-bottom:1px solid var(--soft-line); }
+    .snrna-feature-details { margin-top:12px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+    .snrna-feature-details > summary { padding:7px 9px; color:var(--muted); font-size:12px; font-weight:750; cursor:pointer; }
+    .snrna-feature-details-body { padding:0 9px 9px; }
     .molstar-options { margin-top:8px; border:1px solid var(--line); border-radius:8px; background:#fff; }
     .molstar-options > summary { cursor:pointer; list-style:none; padding:8px 10px; color:var(--muted); font-size:12px; font-weight:750; }
     .molstar-options > summary::-webkit-details-marker { display:none; }
@@ -1463,7 +1467,7 @@ ${await scriptFor(record,"no_maps")}
       const first=items[0], firstUrl=alignmentViewerUrl(first.html);
       const chooser=items.length>1 ? `<select class="rna-alignment-select" aria-label="snRNA reference alignment" onchange="changeSnrnaAlignment(this)">${items.map((item,index)=>`<option value="${index}">${esc(item.label)}</option>`).join("")}</select>` : `<span>${esc(first.label)}</span>`;
       const help=`<span class="rna-alignment-help"><button type="button" aria-label="snRNA alignment help">?</button><span class="rna-alignment-help-text" role="tooltip"><strong>snRNA alignment</strong>The annotated ${esc(first.reference)} reference is aligned to deposited chain${first.chains.includes(";")?"s":""} ${esc(first.chains)}. Blue bases are modelled; grey bases are present in the sequence record but unresolved.</span></span>`;
-      return `<section class="rna-alignment-panel"><iframe id="snrnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} snRNA sequence alignment`)}" loading="lazy"></iframe><div class="rna-alignment-footer">${chooser}${help}<a id="snrnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full alignment</a>${first.fasta?`<a id="snrnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}</div></section>`;
+      return `<section class="rna-alignment-panel"><div class="rna-alignment-footer snrna-alignment-footer">${chooser}${help}<a id="snrnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full alignment</a>${first.fasta?`<a id="snrnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}</div><iframe id="snrnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} snRNA sequence alignment`)}" loading="lazy"></iframe></section>`;
     }
     function toggleSnrnaAlignment(checkbox){
       const host=document.getElementById("snrnaAlignmentHost");
@@ -1891,7 +1895,7 @@ ${await scriptFor(record,"no_maps")}
     }
     function snrnaPanel(items){
       if(!items.length) return "";
-      return `<h3>snRNA Features (${items.length})</h3><div class="subtle">A leading ? marks an uncertain RNA-feature assignment retained with validation warnings.</div><div class="mini-list">${items.map(i=>`<div><strong>${esc(i.snrna||"snRNA")} ${esc(i.label||i.feature)}</strong> <span class="subtle">deposited chain ${esc(i.original_chain_id||"")}, seq ${esc(i.seq_start)}-${esc(i.seq_end)}, residues ${esc(i.auth_residue_ranges||"n/a")}</span><br><code>${esc(i.feature_sequence||"")}</code></div>`).join("")}</div>`;
+      return `<details class="snrna-feature-details"><summary>snRNA feature annotations (${items.length})</summary><div class="snrna-feature-details-body"><div class="subtle">A leading ? marks an uncertain assignment retained with validation warnings.</div><div class="mini-list">${items.map(i=>`<div><strong>${esc(i.snrna||"snRNA")} ${esc(i.label||i.feature)}</strong> <span class="subtle">deposited chain ${esc(i.original_chain_id||"")}, seq ${esc(i.seq_start)}-${esc(i.seq_end)}, residues ${esc(i.auth_residue_ranges||"n/a")}</span><br><code>${esc(i.feature_sequence||"")}</code></div>`).join("")}</div></div></details>`;
     }
     function comparisonPanel(){
       if(!state.compareIds.length) return `<h3>Compare Structures</h3><div class="subtle">Use the Compare column to add up to five structures.</div>`;

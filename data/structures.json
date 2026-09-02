@@ -1146,7 +1146,15 @@
         "annotation": "Sharpened A2 map",
         "contour_level": "0.0369"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6g90_6g90_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6g90_6g90_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/036_6g90_thumbnail.png"
       },
@@ -2184,7 +2192,15 @@
         "annotation": "Saccharomyces cerevisiae spliceosomal pre-A complex (delta BS-A ACT1)",
         "contour_level": "0.0125"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7oqe_7oqe_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7oqe_7oqe_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/066_7oqe_thumbnail.png"
       },
@@ -3125,7 +3141,15 @@
         "annotation": "The cryo-EM map for the U2 part of human pre-A complex",
         "contour_level": "0.25"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7vpx_7vpx_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7vpx_7vpx_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/073_7vpx_thumbnail.png"
       },
@@ -4684,7 +4708,15 @@
         "annotation": "unsharpened B2 map",
         "contour_level": "0.0258"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5nrl_5nrl_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5nrl_5nrl_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/016_5nrl_thumbnail.png"
       },
@@ -6190,7 +6222,15 @@
         "annotation": "sharpened, refined map",
         "contour_level": "0.04"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5o9z_5o9z_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5o9z_5o9z_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/017_5o9z_thumbnail.png"
       },
@@ -7637,7 +7677,15 @@
         "annotation": "cryo-EM structure of the spliceosomal B complex",
         "contour_level": "0.022"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5zwo_5zwo_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5zwo_5zwo_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/028_5zwo_thumbnail.png"
       },
@@ -9329,7 +9377,15 @@
         "annotation": "The 3.8 Angstrom map of the human B complex",
         "contour_level": "0.03"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6ahd_6ahd_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6ahd_6ahd_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/031_6ahd_thumbnail.png"
       },
@@ -10982,7 +11038,15 @@
         "annotation": "Author stated: Some sections of the map have very low resolution. For these areas, only the C-alpha model was docked into the density.",
         "contour_level": "0.01"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8h6k_8h6k_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8h6k_8h6k_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/081_8h6k_thumbnail.png"
       },
@@ -12583,7 +12647,15 @@
         "annotation": "Author stated: Some sections of the map have very low resolution. For these areas, only the C-alpha model was docked into the density.",
         "contour_level": "0.008"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8h6l_8h6l_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8h6l_8h6l_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/082_8h6l_thumbnail.png"
       },
@@ -13455,7 +13527,15 @@
         "annotation": "",
         "contour_level": "0.03"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8q7n_8q7n_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8q7n_8q7n_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/091_8q7n_thumbnail.png"
       },
@@ -15178,7 +15258,15 @@
         "annotation": "",
         "contour_level": "0.02"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qo9_8qo9_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qo9_8qo9_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/097_8qo9_thumbnail.png"
       },
@@ -16968,7 +17056,15 @@
         "annotation": "",
         "contour_level": "0.011"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "7",
+        "r2dt_chain_count": "7",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qzs_8qzs_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qzs_8qzs_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/106_8qzs_thumbnail.png"
       },
@@ -18144,7 +18240,15 @@
         "annotation": "",
         "contour_level": "0.019"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6j6g_6j6g_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6j6g_6j6g_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/040_6j6g_thumbnail.png"
       },
@@ -19317,7 +19421,15 @@
         "annotation": "",
         "contour_level": "0.024"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6j6h_6j6h_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6j6h_6j6h_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/041_6j6h_thumbnail.png"
       },
@@ -20490,7 +20602,15 @@
         "annotation": "",
         "contour_level": "0.028"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6j6n_6j6n_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6j6n_6j6n_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/042_6j6n_thumbnail.png"
       },
@@ -21676,7 +21796,15 @@
         "annotation": "",
         "contour_level": "0.0116"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "1",
+        "notes": "B: missing existing R2DT SVG",
+        "png": "rna_2d/6j6q_6j6q_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6j6q_6j6q_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/043_6j6q_thumbnail.png"
       },
@@ -22576,7 +22704,15 @@
         "annotation": "",
         "contour_level": "3.55"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9esh_9esh_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9esh_9esh_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/119_9esh_thumbnail.png"
       },
@@ -23537,7 +23673,15 @@
         "annotation": "",
         "contour_level": "3.2"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9esi_9esi_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9esi_9esi_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/120_9esi_thumbnail.png"
       },
@@ -24503,7 +24647,15 @@
         "annotation": "",
         "contour_level": "0.0035"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9l5s_9l5s_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9l5s_9l5s_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/126_9l5s_thumbnail.png"
       },
@@ -25448,7 +25600,15 @@
         "annotation": "",
         "contour_level": "0.005"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9l5t_9l5t_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9l5t_9l5t_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/127_9l5t_thumbnail.png"
       },
@@ -26379,7 +26539,15 @@
         "annotation": "",
         "contour_level": "3.2"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "4",
+        "notes": "1: missing existing R2DT SVG | 2: missing existing R2DT SVG | 5: missing existing R2DT SVG | 6: missing existing R2DT SVG",
+        "png": "rna_2d/9s2g_9s2g_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9s2g_9s2g_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/098_9s2g_thumbnail.png"
       },
@@ -27679,11 +27847,11 @@
         "contour_level": "0.0405"
       },
       "rna_2d": {
-        "status": "partial",
+        "status": "complete",
         "rna_chain_count": "5",
         "r2dt_chain_count": "5",
-        "failed_chain_count": "5",
-        "notes": "D: See 'docker run --help'. | E: See 'docker run --help'. | L: See 'docker run --help'. | M: See 'docker run --help'. | N: See 'docker run --help'.",
+        "failed_chain_count": "0",
+        "notes": "",
         "png": "rna_2d/5gm6_5gm6_r2dt_dashboard_colored.png",
         "svg": "rna_2d/5gm6_5gm6_r2dt_dashboard_colored.svg"
       },
@@ -28766,7 +28934,15 @@
         "annotation": "",
         "contour_level": "0.11"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5lqw_5lqw_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5lqw_5lqw_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/012_5lqw_thumbnail.png"
       },
@@ -30219,7 +30395,15 @@
         "annotation": "Cryo-EM structure of the human activated spliceosome (mature Bact) at 5.1 angstrom resolution",
         "contour_level": "0.0374"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5z56_5z56_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5z56_5z56_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/023_5z56_thumbnail.png"
       },
@@ -31647,7 +31831,15 @@
         "annotation": "Cryo-EM structure of the human activated spliceosome (late Bact) at 6.5 angstrom",
         "contour_level": "0.0323"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5z57_5z57_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5z57_5z57_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/024_5z57_thumbnail.png"
       },
@@ -32955,7 +33147,15 @@
         "annotation": "Cryo-EM structure of the human activated spliceosome (early Bact) at 4.8 angstrom",
         "contour_level": "0.0346"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5z58_5z58_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5z58_5z58_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/025_5z58_thumbnail.png"
       },
@@ -33999,7 +34199,15 @@
         "annotation": "",
         "contour_level": "0.04"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6ff4_6ff4_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6ff4_6ff4_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/034_6ff4_thumbnail.png"
       },
@@ -35382,7 +35590,15 @@
         "annotation": "",
         "contour_level": "0.013"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6ff7_6ff7_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6ff7_6ff7_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/035_6ff7_thumbnail.png"
       },
@@ -36786,7 +37002,15 @@
         "annotation": "overall EM map of the yeast activated spliceosome (Bact complex) at the average resolution of 2.5 angstrom",
         "contour_level": "0.015"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7dco_7dco_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7dco_7dco_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/060_7dco_thumbnail.png"
       },
@@ -37987,7 +38211,15 @@
         "annotation": "overall map of the activated human minor spliceosome",
         "contour_level": "0.014"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7dvq_7dvq_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7dvq_7dvq_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/061_7dvq_thumbnail.png"
       },
@@ -39230,7 +39462,15 @@
         "annotation": "",
         "contour_level": "0.033"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7qtt_7qtt_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7qtt_7qtt_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/072_7qtt_thumbnail.png"
       },
@@ -40710,7 +40950,15 @@
         "annotation": "State B map of the BAqr spliceosome, refined with a spherical mask.",
         "contour_level": "0.008"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8ch6_8ch6_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8ch6_8ch6_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/078_8ch6_thumbnail.png"
       },
@@ -42133,7 +42381,15 @@
         "annotation": "",
         "contour_level": "0.24"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0r_8i0r_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0r_8i0r_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/085_8i0r_thumbnail.png"
       },
@@ -43487,7 +43743,15 @@
         "annotation": "",
         "contour_level": "0.23"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0s_8i0s_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0s_8i0s_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/086_8i0s_thumbnail.png"
       },
@@ -44895,7 +45159,15 @@
         "annotation": "",
         "contour_level": "0.22"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0t_8i0t_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0t_8i0t_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/087_8i0t_thumbnail.png"
       },
@@ -46264,7 +46536,15 @@
         "annotation": "",
         "contour_level": "0.24"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0u_8i0u_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0u_8i0u_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/088_8i0u_thumbnail.png"
       },
@@ -47597,7 +47877,15 @@
         "annotation": "",
         "contour_level": "0.22"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0v_8i0v_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0v_8i0v_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/089_8i0v_thumbnail.png"
       },
@@ -48901,7 +49189,15 @@
         "annotation": "Cryo-EM map of Catalytic Step I spliceosome (C complex) at 3.4 angstrom",
         "contour_level": "0.0413"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5gmk_5gmk_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5gmk_5gmk_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/009_5gmk_thumbnail.png"
       },
@@ -50069,7 +50365,15 @@
         "annotation": "Spliceosome captured immediately after first catalytic step",
         "contour_level": "0.027"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5lj3_5lj3_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5lj3_5lj3_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/010_5lj3_thumbnail.png"
       },
@@ -51305,7 +51609,15 @@
         "annotation": "",
         "contour_level": "0.006"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5lj5_5lj5_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5lj5_5lj5_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/011_5lj5_thumbnail.png"
       },
@@ -52714,7 +53026,15 @@
         "annotation": "",
         "contour_level": "0.029"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5yzg_5yzg_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5yzg_5yzg_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/022_5yzg_thumbnail.png"
       },
@@ -53628,7 +53948,15 @@
         "annotation": "",
         "contour_level": "0.025"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6zym_6zym_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6zym_6zym_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/052_6zym_thumbnail.png"
       },
@@ -54483,7 +54811,15 @@
         "annotation": "",
         "contour_level": "0.018"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7a5p_7a5p_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7a5p_7a5p_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/053_7a5p_thumbnail.png"
       },
@@ -55796,7 +56132,15 @@
         "annotation": "",
         "contour_level": "5.0"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7b9v_7b9v_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7b9v_7b9v_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/059_7b9v_thumbnail.png"
       },
@@ -57267,7 +57611,15 @@
         "annotation": "",
         "contour_level": "0.25"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0w_8i0w_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0w_8i0w_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/090_8i0w_thumbnail.png"
       },
@@ -58410,7 +58762,15 @@
         "annotation": "Saccharomyces cerevisiae C-star spliceosome, predisposed to carry out exon ligation, the second step of pre-mRNA splicing.",
         "contour_level": "0.036"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5mps_5mps_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5mps_5mps_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/013_5mps_thumbnail.png"
       },
@@ -59761,7 +60121,15 @@
         "annotation": "Map of the spliceosomal C-star complex resulting from focussed classification on Prp22",
         "contour_level": "0.03"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5mq0_5mq0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5mq0_5mq0_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/014_5mq0_thumbnail.png"
       },
@@ -60981,7 +61349,15 @@
         "annotation": "None",
         "contour_level": "0.016"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5mqf_5mqf_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5mqf_5mqf_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/015_5mqf_thumbnail.png"
       },
@@ -62493,7 +62869,15 @@
         "annotation": "Yeast Step II Catalytically Activated Spliceosome, C* spliceosome",
         "contour_level": "0.0297"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "7",
+        "r2dt_chain_count": "7",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5wsg_5wsg_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5wsg_5wsg_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/018_5wsg_thumbnail.png"
       },
@@ -63833,7 +64217,15 @@
         "annotation": "Cryo-EM Structure of the Human C* Spliceosome at 3.6 angstrom",
         "contour_level": "0.05"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5xjc_5xjc_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5xjc_5xjc_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/019_5xjc_thumbnail.png"
       },
@@ -65281,7 +65673,15 @@
         "annotation": "The cryo-EM map of human pre-C*-I complex",
         "contour_level": "0.38"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7w59_7w59_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7w59_7w59_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/074_7w59_thumbnail.png"
       },
@@ -66781,7 +67181,15 @@
         "annotation": "The cryo-EM map of human pre-C*-II complex",
         "contour_level": "0.39"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7w5a_7w5a_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7w5a_7w5a_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/075_7w5a_thumbnail.png"
       },
@@ -68294,7 +68702,15 @@
         "annotation": "The cryo-EM map of human C* complex",
         "contour_level": "0.37"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7w5b_7w5b_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7w5b_7w5b_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/076_7w5b_thumbnail.png"
       },
@@ -69844,7 +70260,15 @@
         "annotation": "map of the human spliceosomal PM5 C* complex",
         "contour_level": "0.115"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "1",
+        "notes": "I: missing existing R2DT SVG",
+        "png": "rna_2d/8c6j_8c6j_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8c6j_8c6j_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/077_8c6j_thumbnail.png"
       },
@@ -70585,7 +71009,15 @@
         "annotation": "Composite map",
         "contour_level": "0.5"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9s2f_9s2f_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9s2f_9s2f_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/131_9s2f_thumbnail.png"
       },
@@ -71315,7 +71747,15 @@
         "annotation": "Spliceosomal E complex (UBC4)",
         "contour_level": "0.065"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6n7p_6n7p_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6n7p_6n7p_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/044_6n7p_thumbnail.png"
       },
@@ -72307,7 +72747,15 @@
         "annotation": "Spliceosomal E complex (ACT1)",
         "contour_level": "0.05"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6n7r_6n7r_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6n7r_6n7r_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/045_6n7r_thumbnail.png"
       },
@@ -73254,7 +73702,15 @@
         "annotation": "Reconstruction of spliceosome",
         "contour_level": "0.0203"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/3jb9_3jb9_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/3jb9_3jb9_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/001_3jb9_thumbnail.png"
       },
@@ -74394,7 +74850,15 @@
         "annotation": "Cryo-EM map of the ILS spliceosome from S.cerevisiae at 3.5 angstrom",
         "contour_level": "0.05"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5y88_5y88_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5y88_5y88_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/020_5y88_thumbnail.png"
       },
@@ -75585,7 +76049,15 @@
         "annotation": "The 2.9 angstrom map of the human ILS1 complex",
         "contour_level": "0.025"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6id0_6id0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6id0_6id0_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/038_6id0_thumbnail.png"
       },
@@ -76789,7 +77261,15 @@
         "annotation": "The 2.86 angstrom map of human ILS2 complex",
         "contour_level": "0.02"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6id1_6id1_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6id1_6id1_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/039_6id1_thumbnail.png"
       },
@@ -77722,7 +78202,15 @@
         "annotation": "Composite Map",
         "contour_level": "0.5"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8ro0_8ro0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8ro0_8ro0_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/113_8ro0_thumbnail.png"
       },
@@ -78822,7 +79310,15 @@
         "annotation": "",
         "contour_level": "0.5"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8ro1_8ro1_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8ro1_8ro1_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/114_8ro1_thumbnail.png"
       },
@@ -79835,7 +80331,15 @@
         "annotation": "composite map",
         "contour_level": "0.975"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8ro2_8ro2_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8ro2_8ro2_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/115_8ro2_thumbnail.png"
       },
@@ -80871,7 +81375,15 @@
         "annotation": "",
         "contour_level": "0.005"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9l5r_9l5r_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9l5r_9l5r_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/125_9l5r_thumbnail.png"
       },
@@ -82242,7 +82754,15 @@
         "annotation": "Composite map",
         "contour_level": "0.5"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9s2e_9s2e_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9s2e_9s2e_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/130_9s2e_thumbnail.png"
       },
@@ -83571,7 +84091,15 @@
         "annotation": "Cryo-EM Structure of the Post-catalytic Spliceosome from Saccharomyces cerevisiae at 3.6 angstrom",
         "contour_level": "0.034"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5ylz_5ylz_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5ylz_5ylz_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/021_5ylz_thumbnail.png"
       },
@@ -85219,7 +85747,15 @@
         "annotation": "Spliceosomal post-catalytic P complex",
         "contour_level": "0.06"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6bk8_6bk8_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6bk8_6bk8_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/032_6bk8_thumbnail.png"
       },
@@ -86768,7 +87304,15 @@
         "annotation": "",
         "contour_level": "0.04"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6exn_6exn_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6exn_6exn_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/033_6exn_thumbnail.png"
       },
@@ -88164,7 +88708,15 @@
         "annotation": "The 3.0 angstrom map of the human P complex",
         "contour_level": "0.03"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6icz_6icz_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6icz_6icz_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/037_6icz_thumbnail.png"
       },
@@ -89792,7 +90344,15 @@
         "annotation": "Human post-catalytic spliceosome (P complex) stalled with DHX8 K594A mutant, overall map",
         "contour_level": "0.024"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6qdv_6qdv_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6qdv_6qdv_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/046_6qdv_thumbnail.png"
       },
@@ -91342,7 +91902,15 @@
         "annotation": "P-complex spliceosome state I core refinement map, postprocessed",
         "contour_level": "0.02"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9dtr_9dtr_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9dtr_9dtr_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/118_9dtr_thumbnail.png"
       },
@@ -92934,7 +93502,15 @@
         "annotation": "Human post-catalytic spliceosome (P complex) stalled with DHX8 K594A mutant, overall map",
         "contour_level": "0.024"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9fmd_9fmd_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9fmd_9fmd_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/119_9fmd_thumbnail.png"
       },
@@ -94677,7 +95253,15 @@
       "primary_map_script_systematic_path": "",
       "systematic_chain_count": 40,
       "primary_map": {},
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "4",
+        "notes": "V: missing existing R2DT SVG | v: missing existing R2DT SVG | w: missing existing R2DT SVG | x: missing existing R2DT SVG",
+        "png": "rna_2d/3cw1_3cw1_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/3cw1_3cw1_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -95152,7 +95736,15 @@
       "primary_map_script_systematic_path": "",
       "systematic_chain_count": 22,
       "primary_map": {},
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "2",
+        "notes": "N: missing existing R2DT SVG | R: missing existing R2DT SVG",
+        "png": "rna_2d/3pgw_3pgw_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/3pgw_3pgw_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -96989,7 +97581,15 @@
       "primary_map_script_systematic_path": "",
       "systematic_chain_count": 44,
       "primary_map": {},
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "8",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "8",
+        "notes": "1: missing existing R2DT SVG | 2: missing existing R2DT SVG | 3: missing existing R2DT SVG | 4: missing existing R2DT SVG | X: missing existing R2DT SVG | Y: missing existing R2DT SVG | x: missing existing R2DT SVG | y: missing existing R2DT SVG",
+        "png": "rna_2d/4pjo_4pjo_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/4pjo_4pjo_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -97184,7 +97784,15 @@
       "primary_map_script_systematic_path": "",
       "systematic_chain_count": 2,
       "primary_map": {},
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "1",
+        "notes": "V: missing existing R2DT SVG",
+        "png": "rna_2d/4pkd_4pkd_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/4pkd_4pkd_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -97663,7 +98271,15 @@
         "annotation": "5'domain of human 17S U2 snRNP",
         "contour_level": "0.038"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6y50_6y50_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6y50_6y50_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/049_6y50_thumbnail.png"
       },
@@ -98096,7 +98712,15 @@
         "annotation": "",
         "contour_level": "0.013"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6y53_6y53_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6y53_6y53_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/050_6y53_thumbnail.png"
       },
@@ -98635,7 +99259,15 @@
         "annotation": "",
         "contour_level": "0.013"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6y5q_6y5q_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6y5q_6y5q_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/051_6y5q_thumbnail.png"
       },
@@ -99326,7 +99958,15 @@
         "annotation": "The EM map of U2 snRNP",
         "contour_level": "0.02"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7evo_7evo_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7evo_7evo_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/063_7evo_thumbnail.png"
       },
@@ -99762,7 +100402,15 @@
         "annotation": "The U2 5' module of the A3'-SSA complex (tight mask)",
         "contour_level": "0.015"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7onb_7onb_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7onb_7onb_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/064_7onb_thumbnail.png"
       },
@@ -100332,7 +100980,15 @@
         "annotation": "",
         "contour_level": "0.038"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7oqb_7oqb_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7oqb_7oqb_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/065_7oqb_thumbnail.png"
       },
@@ -100658,7 +101314,15 @@
         "annotation": "",
         "contour_level": "0.0062"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7q3l_7q3l_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7q3l_7q3l_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/069_7q3l_thumbnail.png"
       },
@@ -101101,7 +101765,15 @@
         "annotation": "",
         "contour_level": "0.00561"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7q4o_7q4o_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7q4o_7q4o_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/070_7q4o_thumbnail.png"
       },
@@ -101414,7 +102086,15 @@
         "annotation": "",
         "contour_level": "0.00711"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7q4p_7q4p_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7q4p_7q4p_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/071_7q4p_thumbnail.png"
       },
@@ -101937,7 +102617,15 @@
         "annotation": "",
         "contour_level": "0.22"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8hk1_8hk1_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8hk1_8hk1_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/083_8hk1_thumbnail.png"
       },
@@ -102168,7 +102856,15 @@
         "annotation": "EM map for SF3B-22-nt histone mRNA complex",
         "contour_level": "0.01"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9k1o_9k1o_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9k1o_9k1o_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/120_9k1o_thumbnail.png"
       },
@@ -102369,7 +103065,15 @@
         "annotation": "",
         "contour_level": "0.008"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9k1q_9k1q_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9k1q_9k1q_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/121_9k1q_thumbnail.png"
       },
@@ -102698,7 +103402,15 @@
         "annotation": "",
         "contour_level": "0.009"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9k1r_9k1r_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9k1r_9k1r_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/122_9k1r_thumbnail.png"
       },
@@ -103027,7 +103739,15 @@
         "annotation": "",
         "contour_level": "0.03"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9k1w_9k1w_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9k1w_9k1w_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/123_9k1w_thumbnail.png"
       },
@@ -103356,7 +104076,15 @@
         "annotation": "",
         "contour_level": "0.007"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9k1y_9k1y_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9k1y_9k1y_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/124_9k1y_thumbnail.png"
       },
@@ -103765,7 +104493,15 @@
         "annotation": "",
         "contour_level": "0.45"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9ze0_9ze0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9ze0_9ze0_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/132_9ze0_thumbnail.png"
       },
@@ -104133,7 +104869,15 @@
         "annotation": "",
         "contour_level": "0.72"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9ze2_9ze2_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9ze2_9ze2_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/133_9ze2_thumbnail.png"
       },
@@ -104540,7 +105284,15 @@
         "annotation": "",
         "contour_level": "0.45"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9ze3_9ze3_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9ze3_9ze3_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/134_9ze3_thumbnail.png"
       },
@@ -104921,7 +105673,15 @@
         "annotation": "",
         "contour_level": "0.43"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9zec_9zec_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9zec_9zec_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/135_9zec_thumbnail.png"
       },
@@ -105304,7 +106064,15 @@
         "annotation": "",
         "contour_level": "0.4"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9zed_9zed_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9zed_9zed_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/136_9zed_thumbnail.png"
       },
@@ -105931,7 +106699,15 @@
         "annotation": "Sharpened map",
         "contour_level": "0.2"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8q7q_8q7q_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8q7q_8q7q_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/092_8q7q_thumbnail.png"
       },
@@ -106274,7 +107050,15 @@
         "annotation": "sharpened map",
         "contour_level": "0.19"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8q7v_8q7v_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8q7v_8q7v_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/093_8q7v_thumbnail.png"
       },
@@ -106619,7 +107403,15 @@
         "annotation": "sharpened map",
         "contour_level": "0.26"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8q7w_8q7w_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8q7w_8q7w_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/094_8q7w_thumbnail.png"
       },
@@ -106964,7 +107756,15 @@
         "annotation": "",
         "contour_level": "0.14"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8q7x_8q7x_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8q7x_8q7x_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/095_8q7x_thumbnail.png"
       },
@@ -107293,7 +108093,15 @@
         "annotation": "20S U5 snRNP map",
         "contour_level": "0.12"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8q91_8q91_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8q91_8q91_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/096_8q91_thumbnail.png"
       },
@@ -107635,7 +108443,15 @@
         "annotation": "20S U5 snRNP local filtered map",
         "contour_level": "0.1"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8rc0_8rc0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8rc0_8rc0_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/111_8rc0_thumbnail.png"
       },
@@ -108715,7 +109531,15 @@
         "annotation": "Reconstruction of tri-snRNP",
         "contour_level": "0.0147"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/3jcm_3jcm_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/3jcm_3jcm_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/002_3jcm_thumbnail.png"
       },
@@ -109599,7 +110423,15 @@
         "annotation": "Reconstruction of human tri-snRNP",
         "contour_level": "0.13"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/3jcr_3jcr_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/3jcr_3jcr_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/003_3jcr_thumbnail.png"
       },
@@ -109918,7 +110750,15 @@
         "annotation": "",
         "contour_level": "0.012"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5gam_5gam_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5gam_5gam_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/004_5gam_thumbnail.png"
       },
@@ -110917,7 +111757,15 @@
         "annotation": "The overall structure of the yeast spliceosomal U4/U6.U5 tri-snRNP",
         "contour_level": "0.036"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5gan_5gan_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5gan_5gan_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/005_5gan_thumbnail.png"
       },
@@ -111242,11 +112090,11 @@
         "contour_level": "0.02"
       },
       "rna_2d": {
-        "status": "partial",
+        "status": "complete",
         "rna_chain_count": "1",
         "r2dt_chain_count": "1",
-        "failed_chain_count": "1",
-        "notes": "V: See 'docker run --help'.",
+        "failed_chain_count": "0",
+        "notes": "",
         "png": "rna_2d/5gao_5gao_r2dt_dashboard_colored.png",
         "svg": "rna_2d/5gao_5gao_r2dt_dashboard_colored.svg"
       },
@@ -111839,7 +112687,15 @@
         "annotation": "Central region of the U4/U6.U5 tri-snRNP comprising Prp8, Dib1, Prp31, Prp6, Prp4, Prp3, Snu13, U4 snRNA and U6 snRNA",
         "contour_level": "0.02"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5gap_5gap_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5gap_5gap_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/007_5gap_thumbnail.png"
       },
@@ -112749,7 +113605,15 @@
         "annotation": "Human U4.U5/U6 tri-snRNP, overall map.",
         "contour_level": "0.02"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6qw6_6qw6_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6qw6_6qw6_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/047_6qw6_thumbnail.png"
       },
@@ -113115,7 +113979,15 @@
         "annotation": "",
         "contour_level": "1.0"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "1",
+        "notes": "B: missing existing R2DT SVG",
+        "png": "rna_2d/9j8p_9j8p_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9j8p_9j8p_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -113438,7 +114310,15 @@
       "primary_map_script_systematic_path": "",
       "systematic_chain_count": 9,
       "primary_map": {},
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "1",
+        "notes": "I: missing existing R2DT SVG",
+        "png": "rna_2d/5vsu_5vsu_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5vsu_5vsu_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -113761,7 +114641,15 @@
       "primary_map_script_systematic_path": "",
       "systematic_chain_count": 9,
       "primary_map": {},
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "0",
+        "failed_chain_count": "1",
+        "notes": "I: missing existing R2DT SVG",
+        "png": "rna_2d/6aso_6aso_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6aso_6aso_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {},
       "composite_groups": []
     },
@@ -115157,7 +116045,15 @@
         "annotation": "tri-snRNP region of spliceosomal pre-B complex",
         "contour_level": "0.023"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5zwm_5zwm_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5zwm_5zwm_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/026_5zwm_thumbnail.png"
       },
@@ -115872,7 +116768,15 @@
         "annotation": "U1 snRNP region of the spliceosomal pre-B complex",
         "contour_level": "0.045"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/5zwn_5zwn_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/5zwn_5zwn_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/027_5zwn_thumbnail.png"
       },
@@ -117404,7 +118308,15 @@
         "annotation": "The 5.7 Angstrom map of the human pre-B complex",
         "contour_level": "0.015"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6ah0_6ah0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6ah0_6ah0_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/030_6ah0_thumbnail.png"
       },
@@ -119154,7 +120066,15 @@
         "annotation": "None",
         "contour_level": "0.01"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/6qx9_6qx9_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/6qx9_6qx9_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/048_6qx9_thumbnail.png"
       },
@@ -120780,7 +121700,15 @@
         "annotation": "Author stated: Some sections of the map have very low resolution. For these areas, only the C-alpha model was docked into the density.",
         "contour_level": "0.25"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8h6e_8h6e_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8h6e_8h6e_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/079_8h6e_thumbnail.png"
       },
@@ -122334,7 +123262,15 @@
         "annotation": "Author stated: Some sections of the map have very low resolution. For these areas, only the C-alpha model was docked into the density.",
         "contour_level": "0.25"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8h6j_8h6j_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8h6j_8h6j_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/080_8h6j_thumbnail.png"
       },
@@ -123111,7 +124047,15 @@
         "annotation": "",
         "contour_level": "0.032"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qoz_8qoz_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qoz_8qoz_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/098_8qoz_thumbnail.png"
       },
@@ -123729,7 +124673,15 @@
         "annotation": "",
         "contour_level": "0.075"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qp8_8qp8_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qp8_8qp8_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/099_8qp8_thumbnail.png"
       },
@@ -124360,7 +125312,15 @@
         "annotation": "",
         "contour_level": "0.043"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qp9_8qp9_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qp9_8qp9_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/100_8qp9_thumbnail.png"
       },
@@ -125137,7 +126097,15 @@
         "annotation": "",
         "contour_level": "0.031"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qpa_8qpa_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qpa_8qpa_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/101_8qpa_thumbnail.png"
       },
@@ -125914,7 +126882,15 @@
         "annotation": "",
         "contour_level": "0.027"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qpb_8qpb_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qpb_8qpb_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/102_8qpb_thumbnail.png"
       },
@@ -126793,7 +127769,15 @@
         "annotation": "",
         "contour_level": "0.085"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qpe_8qpe_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qpe_8qpe_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/103_8qpe_thumbnail.png"
       },
@@ -127567,7 +128551,15 @@
         "annotation": "",
         "contour_level": "0.0165"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qpk_8qpk_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qpk_8qpk_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/104_8qpk_thumbnail.png"
       },
@@ -129091,7 +130083,15 @@
         "annotation": "",
         "contour_level": "0.0125"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8qxd_8qxd_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8qxd_8qxd_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/105_8qxd_thumbnail.png"
       },
@@ -130783,7 +131783,15 @@
         "annotation": "",
         "contour_level": "0.0078"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "7",
+        "r2dt_chain_count": "7",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8r08_8r08_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8r08_8r08_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/107_8r08_thumbnail.png"
       },
@@ -132422,7 +133430,15 @@
         "annotation": "",
         "contour_level": "0.0068"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8r09_8r09_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8r09_8r09_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/108_8r09_thumbnail.png"
       },
@@ -134097,7 +135113,15 @@
         "annotation": "",
         "contour_level": "0.007"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8r0a_8r0a_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8r0a_8r0a_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/109_8r0a_thumbnail.png"
       },
@@ -135736,7 +136760,15 @@
         "annotation": "",
         "contour_level": "0.015"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8r0b_8r0b_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8r0b_8r0b_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/110_8r0b_thumbnail.png"
       },
@@ -137338,7 +138370,15 @@
         "annotation": "",
         "contour_level": "0.0075"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "6",
+        "r2dt_chain_count": "6",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8rm5_8rm5_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8rm5_8rm5_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/112_8rm5_thumbnail.png"
       },
@@ -138451,7 +139491,15 @@
         "annotation": "",
         "contour_level": "0.25"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "5",
+        "r2dt_chain_count": "5",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8y6o_8y6o_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8y6o_8y6o_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/116_8y6o_thumbnail.png"
       },
@@ -138974,7 +140022,15 @@
         "annotation": "Author Stated:The atomic coordinates of U12 snRNP from human minor Bact complex (PDB code: 7DVQ) were docked into the low-pass filtered bulky density lobe next to the U4atac/U6atac region.",
         "contour_level": "0.004"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8y7e_8y7e_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8y7e_8y7e_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/117_8y7e_thumbnail.png"
       },
@@ -139685,7 +140741,15 @@
         "annotation": "Masked/sharpened map of the pre-Bact-2 spliceosome core structure.",
         "contour_level": "0.051"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7aav_7aav_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7aav_7aav_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/054_7aav_thumbnail.png"
       },
@@ -140315,7 +141379,15 @@
         "annotation": "Sharpened/masked map for pre-Bact-1 core structure.",
         "contour_level": "0.034"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7abf_7abf_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7abf_7abf_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/055_7abf_thumbnail.png"
       },
@@ -141708,7 +142780,15 @@
         "annotation": "Unmasked/unsharpened map of the pre-Bact-1 complex.",
         "contour_level": "0.0095"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7abg_7abg_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7abg_7abg_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/056_7abg_thumbnail.png"
       },
@@ -142276,7 +143356,15 @@
         "annotation": "Masked/sharpened map of SF3b/U2 snRNP region of pre-Bact-2 spliceosome.",
         "contour_level": "0.047"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7abh_7abh_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7abh_7abh_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/057_7abh_thumbnail.png"
       },
@@ -143713,7 +144801,15 @@
         "annotation": "Unmasked/unsharpened map of the human pre-Bact-2 spliceosome.",
         "contour_level": "0.013"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/7abi_7abi_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/7abi_7abi_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/058_7abi_thumbnail.png"
       },
@@ -145084,7 +146180,15 @@
         "annotation": "",
         "contour_level": "0.19"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "4",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8i0p_8i0p_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8i0p_8i0p_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/084_8i0p_thumbnail.png"
       },
@@ -145735,7 +146839,15 @@
         "annotation": "",
         "contour_level": "0.055"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "3",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9r3d_9r3d_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9r3d_9r3d_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/128_9r3d_thumbnail.png"
       },
@@ -147228,7 +148340,15 @@
         "annotation": "",
         "contour_level": "0.0021"
       },
-      "rna_2d": {},
+      "rna_2d": {
+        "status": "partial",
+        "rna_chain_count": "4",
+        "r2dt_chain_count": "3",
+        "failed_chain_count": "1",
+        "notes": "2: missing existing R2DT SVG",
+        "png": "rna_2d/9r8v_9r8v_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9r8v_9r8v_r2dt_dashboard_colored.svg"
+      },
       "thumbnail": {
         "image": "thumbnails/129_9r8v_thumbnail.png"
       },
