@@ -51,7 +51,7 @@ REFERENCE  UCAAAUGCGUGCUUUUUUUUUAAAACUUAUGCUCUUAUUUACUAACAAAAUCAACAUGCUAUUGAACUA
 5lj5:I     UCAAAUGCGUGCUUUUUUUUUAAAACUUAUGCUCUUAUUUACUAACAAAAU-----------------------------
 5mps:E     --------------------------------------------------------------------------------
 5mps:I     UCAAAUGCGUGCUUUUUUUUUAAAACUUAUGCUCUUAUUUACUAACAAAAUCAACAUGCUAUUGAACUAG----------
-5mq0:3     ----------------------------------------------------------------------UUU-------
+5mq0:3     --------------------------------------------------------------------------------
 5mq0:E     --------------------------------------------------------------------------------
 5mq0:I     UCAAAUGCGUGCUUUUUUUUUAAAACUUAUGCUCUUAUUUACUAACAAAAUCAACAUGCUAUUGAACUAG----------
 5nrl:I     UCAAAUGCGUGCUUUUUUUUUAAAACUUAUGCUCUUAUUUACUAACAAAAUCAACAUGCUAUUGAACUAG----------
@@ -73,7 +73,7 @@ REFERENCE  ACUUCAUGUUCAGCCGGUCCAGGAUCCGAUAUCCGUACACCAUCAGGGUACGAGCUAGCCCAUGGCGUA
 5lj5:I     --------------------------------------------------------------------------------
 5mps:E     --------------------------------------------------------------------------------
 5mps:I     --------------------------------------------------------------------------------
-5mq0:3     --------------------------------------------------------------------------------
+5mq0:3     ----UUU-------------------------------------------------------------------------
 5mq0:E     --------------------------------------------------------------------------------
 5mq0:I     --------------------------------------------------------------------------------
 5nrl:I     --------------------------------------------------------------------------------
