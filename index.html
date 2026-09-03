@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:,">
-  <title>Spliceosome Structure Visualization</title>
+  <title>SpliceVis | Spliceosome Structure Atlas</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pdbe-molstar@latest/build/pdbe-molstar.css">
   <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
@@ -264,6 +264,8 @@
     .helper-panel > summary { cursor:pointer; display:inline-flex; color:var(--muted); font-weight:700; font-size:12px; }
     .helper-panel[open] { display:grid; grid-template-columns:minmax(180px,280px) minmax(260px,520px); gap:12px; align-items:start; padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.72); }
     .helper-panel[open] > summary { grid-column:1 / -1; }
+    .drawer-meta { display:flex; flex-wrap:wrap; gap:6px 12px; margin-top:12px; padding-top:10px; border-top:1px solid #e1e6ec; font-size:11px; }
+    .drawer-meta a { color:#0b5cab; text-underline-offset:2px; }
     .hero-copy h1 { max-width:980px; font-size:27px; line-height:1.12; font-weight:820; margin:2px 0 6px; }
     .eyebrow { color:#0b5cab; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
     .tab-button { min-height:30px; padding:5px 9px; font-size:12px; border-radius:8px; }
@@ -338,8 +340,8 @@
     .stat strong { font-size:15px; }
     .stat + .stat::before { content:"/"; color:#a0aab5; margin-right:2px; }
     .atlas-grid { display:grid; grid-template-columns:1fr; gap:14px; align-items:start; }
-    .cycle-browser-panel { --cycle-visual-height:clamp(620px,60vh,700px); min-width:0; height:clamp(780px,76vh,850px); display:flex; flex-direction:column; }
-    .cycle-browser-panel .panel-body { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(420px,.70fr); grid-template-areas:"cycle list" "context list" "filters list"; grid-template-rows:var(--cycle-visual-height) minmax(0,96px) auto; gap:8px 16px; flex:1 1 auto; min-height:0; padding:12px 14px; overflow:hidden; }
+    .cycle-browser-panel { --cycle-visual-height:clamp(620px,60vh,700px); min-width:0; height:clamp(760px,74vh,820px); display:flex; flex-direction:column; }
+    .cycle-browser-panel .panel-body { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(420px,.70fr); grid-template-areas:"cycle list" "context list"; grid-template-rows:var(--cycle-visual-height) minmax(0,96px); gap:8px 16px; flex:1 1 auto; min-height:0; padding:12px 14px; overflow:hidden; }
     .cycle-panel, .selected-panel, .active-filter-panel, .workspace > .panel, .cycle-browser-panel { border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(31,37,45,.06); }
     .cycle { overflow:hidden; }
     .cycle-art { max-width:790px; }
@@ -432,7 +434,62 @@
     @media (max-width:1000px) { .brand-block { grid-template-columns:minmax(180px,240px) minmax(300px,1fr); } .primary-nav-button, .tools-drawer { justify-self:stretch; } .tools-drawer > summary { justify-content:center; width:100%; } }
     @media (max-width:1100px) { .start-panel .panel-body { grid-template-columns:1fr; } .stats { grid-template-columns:repeat(2,1fr); } .table-wrap { max-height:none; } .detail-grid { grid-template-columns:1fr; } .proximity-controls { grid-template-columns:repeat(2,minmax(180px,1fr)); } }
     @media (max-width:900px) { .molstar-workbench { grid-template-columns:1fr; } .molstar-selection-sidebar { max-height:none; } }
-    @media (max-width:760px) { aside, main { padding-left:12px; padding-right:12px; } .brand-block, .filter-panel, .helper-panel[open], .tabs, .cycle-panel .panel-body, .refine-grid, .search-row { grid-template-columns:1fr; } .search-row { min-width:0; } .search-row > input { width:auto; min-width:0; } .refine-drawer > summary { justify-content:center; width:100%; min-height:38px; padding:7px 9px; } .primary-nav-button, .tools-drawer { justify-self:stretch; width:100%; } .tools-drawer > summary { justify-content:center; width:100%; } .tools-drawer-body, .refine-popover { left:0; right:auto; width:calc(100vw - 24px); } .cycle-browser-panel, .cycle-browser-panel .panel-body, .structure-browser, .structure-browser .table-wrap { min-width:0; max-width:100%; } .cycle-browser-panel .cycle { width:calc(100vw - 56px); max-width:100%; margin:0 auto; } .cycle-browser-panel .cycle-art { max-width:100% !important; } .cycle-context { border-left:0; border-top:1px solid #e1e6ec; padding-left:0; padding-top:10px; } .hero-copy h1 { font-size:25px; } th:nth-child(4),td:nth-child(4),th:nth-child(6),td:nth-child(6) { display:none; } .molstar-viewer { min-height:360px; height:420px; } }
+    .mobile-view-switch { display:none; }
+    .global-filter-panel { margin:0 0 8px; border:0; border-radius:8px; background:#fff; box-shadow:none; }
+    .global-filter-panel .panel-body { min-height:0; padding:7px 10px; }
+    .guide-card-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)); }
+    .guide-card-grid .kv { grid-template-columns:110px minmax(0,1fr); gap:7px 10px; line-height:1.4; }
+    .guide-card-grid .kv div:nth-child(odd) { font-size:10px; font-weight:800; text-transform:uppercase; }
+    .rna-guide-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); }
+    .guide-group-heading { grid-column:1 / -1; margin:8px 0 -4px; padding-bottom:5px; border-bottom:1px solid var(--line); color:#334155; font-size:12px; font-weight:850; text-transform:uppercase; }
+    .rna-2d-details { margin-top:10px; border-top:1px solid var(--soft-line); }
+    .rna-2d-details > summary { padding:8px 0; color:var(--muted); font-size:12px; font-weight:800; cursor:pointer; }
+    .rna-2d-details .rna-2d-img { margin-top:4px; max-height:420px; border:0; }
+    th[data-sort] { outline-offset:-2px; }
+    th[data-sort]:focus-visible { outline:2px solid rgba(11,92,171,.35); }
+    .pdb a { color:var(--state-color,#174f7a); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px; }
+    .pdb a:hover { text-decoration-thickness:2px; filter:none; }
+    .structure-browser tr:focus-visible { outline:2px solid rgba(11,92,171,.42); outline-offset:-2px; }
+    @media (max-width:760px) {
+      aside, main { padding-left:12px; padding-right:12px; }
+      aside { position:static; padding-top:10px; }
+      .brand-block { grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
+      .brand-copy, .search-cluster { grid-column:1 / -1; }
+      .brand-copy { display:flex; align-items:baseline; gap:8px; }
+      .brand-block h1 { margin:0; font-size:24px; }
+      .brand-copy .subtle { display:none; }
+      .filter-panel, .helper-panel[open], .tabs, .cycle-panel .panel-body, .refine-grid { grid-template-columns:1fr; }
+      .search-row { grid-template-columns:minmax(0,1fr) auto; min-width:0; }
+      .search-row > input { width:auto; min-width:0; }
+      .refine-drawer > summary { justify-content:center; width:auto; min-height:38px; padding:7px 9px; }
+      .primary-nav-button, .tools-drawer { justify-self:stretch; width:auto; min-width:0; padding:7px 5px; font-size:11px; white-space:normal; }
+      .tools-drawer > summary { justify-content:center; width:100%; min-height:42px; padding:7px 5px; text-align:center; font-size:11px; }
+      .tools-drawer-body, .refine-popover { left:0; right:auto; width:calc(100vw - 24px); }
+      .mobile-view-switch { position:sticky; top:6px; z-index:15; display:grid; grid-template-columns:repeat(3,1fr); gap:4px; margin:0 0 8px; padding:4px; border:1px solid var(--line); border-radius:8px; background:rgba(255,255,255,.96); box-shadow:0 4px 14px rgba(31,37,45,.08); }
+      .mobile-view-switch button { min-height:32px; border:0; border-radius:5px; background:transparent; color:var(--muted); font-size:11px; font-weight:800; }
+      .mobile-view-switch button.active { background:#eaf4ff; color:#0b5cab; }
+      body.mobile-pane-cycle .structure-browser, body.mobile-pane-cycle .selected-panel { display:none; }
+      body.mobile-pane-structures .cycle, body.mobile-pane-structures .cycle-context, body.mobile-pane-structures .selected-panel { display:none; }
+      body.mobile-pane-detail .cycle-browser-panel { display:none; }
+      .cycle-browser-panel, .cycle-browser-panel .panel-body, .structure-browser, .structure-browser .table-wrap { min-width:0; max-width:100%; }
+      .cycle-browser-panel { height:auto; }
+      .cycle-browser-panel .panel-body { display:block; padding:10px; }
+      .cycle-browser-panel .cycle { width:100%; max-width:100%; min-height:0; height:auto; margin:0 auto; }
+      .cycle-browser-panel .cycle-art { width:100% !important; height:auto !important; max-width:520px !important; margin:0 auto; }
+      .cycle-context { max-height:118px; margin-top:6px; border-left:0; border-top:1px solid #e1e6ec; padding:8px 0 0; }
+      .structure-browser .table-wrap { min-height:360px; max-height:calc(100vh - 250px); }
+      .structure-browser th:nth-child(n), .structure-browser td:nth-child(n) { display:none; }
+      .structure-browser th:nth-child(1), .structure-browser td:nth-child(1), .structure-browser th:nth-child(4), .structure-browser td:nth-child(4), .structure-browser th:nth-child(5), .structure-browser td:nth-child(5) { display:table-cell; }
+      .structure-browser th:nth-child(1), .structure-browser td:nth-child(1) { width:58px; }
+      .structure-browser th:nth-child(5), .structure-browser td:nth-child(5) { width:72px; }
+      .structure-browser .row-card-meta { display:block; }
+      .selected-panel-head { grid-template-columns:1fr; }
+      .selected-panel-title { justify-content:center; }
+      .selected-header-actions { grid-column:1; justify-content:center; }
+      .selected-panel .panel-body { padding:10px; }
+      .selected-panel .molstar-viewer { min-height:360px; height:58vh; }
+      .molstar-viewer { min-height:360px; height:420px; }
+    }
     </style>
 </head>
 <body>
@@ -452,8 +509,8 @@
           <div class="field"><label for="sortBy">Sort</label><select id="sortBy"><option value="pathway">Splicing pathway</option><option value="pdb">PDB</option><option value="title">Title</option><option value="state">State</option><option value="species">Species</option><option value="resolution">Resolution</option><option value="year">Year</option><option value="chains">Chain count</option><option value="proteins">Protein count</option></select></div>
           <button class="button reset-button" type="button" onclick="els.reset?.click()">Clear filters</button>
         </div></div></details></div></div>
-        <button id="atlasNavButton" class="primary-nav-button active" type="button">Atlas</button>
-        <button id="componentsNavButton" class="primary-nav-button" type="button">Components and colors</button>
+        <button id="atlasNavButton" class="primary-nav-button active" type="button" aria-pressed="true">Atlas</button>
+        <button id="componentsNavButton" class="primary-nav-button" type="button" aria-pressed="false">Components and colors</button>
         <details class="tools-drawer">
           <summary>More tools and documentation</summary>
           <div class="tools-drawer-body">
@@ -474,6 +531,7 @@
                   <div class="field"><label for="localRepoPath">Local repo path</label><input id="localRepoPath" type="text" placeholder="/path/to/SpliceVis"><div class="field-help">Clone once, then paste the folder path here to avoid repeated helper downloads.<code>git clone https://github.com/plaschka-lab/SpliceVis.git</code></div></div>
                 </div>
               </details>
+              <div class="drawer-meta" aria-label="Project links"><a href="https://github.com/plaschka-lab/SpliceVis" target="_blank" rel="noreferrer">GitHub repository</a><a href="https://doi.org/10.5281/zenodo.21168651" target="_blank" rel="noreferrer">Cite this release</a><a href="CITATION.cff" target="_blank">Citation metadata</a></div>
             </div>
           </div>
         </details>
@@ -485,15 +543,20 @@
       </div>
       <div id="structuresView">
         <section class="stats" id="stats"></section>
+        <nav class="mobile-view-switch" id="mobileViewSwitch" aria-label="Atlas view">
+          <button type="button" data-mobile-pane="cycle">Cycle</button>
+          <button type="button" data-mobile-pane="structures">Structures</button>
+          <button type="button" data-mobile-pane="detail">Selected</button>
+        </nav>
+        <section class="active-filter-panel global-filter-panel" id="activeFilterPanel" aria-live="polite" hidden><div class="panel-body"><strong>Active filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
         <section class="atlas-grid">
           <section class="cycle-browser-panel panel">
             <div class="panel-body">
               <div class="cycle" id="cycle"></div>
               <div class="cycle-context" id="cycleContext"></div>
-              <section class="active-filter-panel" id="activeFilterPanel" hidden><div class="panel-body"><strong>Filters</strong><div class="filter-chips" id="activeFilterChips"></div><span class="subtle filter-hint" id="filterHint"></span><button class="button reset-button" id="reset" type="button">Clear all</button></div></section>
               <section class="structure-browser">
                 <div class="structure-list-head"><h3>Associated Structures</h3><div class="structure-list-tools"><span class="subtle" id="tableCount"></span><label class="inline-toggle" title="When enabled, clicking a structure row opens a clean selected-structure panel in a new browser tab."><input id="openPanelOnly" type="checkbox"> Open structure in new tab</label></div></div>
-                <div class="table-wrap"><table><thead><tr><th data-sort="pdb">PDB</th><th>Preview</th><th data-sort="species">Species</th><th data-sort="title">Title</th><th data-sort="state">State</th><th data-sort="substrate">(pre-)mRNA type</th><th data-sort="resolution">Res.</th><th data-sort="year">Year</th><th data-sort="chains">Chains</th><th data-sort="proteins">Chains</th><th>RNA</th><th>Curation</th><th>Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
+                <div class="table-wrap"><table><thead><tr><th scope="col" data-sort="pdb" tabindex="0" aria-sort="none">PDB</th><th scope="col">Preview</th><th scope="col" data-sort="species" tabindex="0" aria-sort="none">Species</th><th scope="col" data-sort="title" tabindex="0" aria-sort="none">Title</th><th scope="col" data-sort="state" tabindex="0" aria-sort="none">State</th><th scope="col" data-sort="substrate" tabindex="0" aria-sort="none">(pre-)mRNA type</th><th scope="col" data-sort="resolution" tabindex="0" aria-sort="none">Res.</th><th scope="col" data-sort="year" tabindex="0" aria-sort="none">Year</th><th scope="col" data-sort="chains" tabindex="0" aria-sort="none">Total chains</th><th scope="col" data-sort="proteins" tabindex="0" aria-sort="none">Composition</th><th scope="col">RNA</th><th scope="col">Curation</th><th scope="col">Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
               </section>
             </div>
           </section>
@@ -532,10 +595,10 @@
         <section class="panel"><div class="panel-head"><h2>RNA Feature Definitions</h2><span class="subtle">selector vocabulary</span></div><div class="panel-body"><div class="field"><label for="rnaDefinitionSearch">Find Feature</label><input id="rnaDefinitionSearch" type="search" placeholder="5' splice site, branch, U6 ACAGAGA"></div><div class="mini-table"><table><thead><tr><th>Feature</th><th>Definition</th><th>Method</th><th>Notes</th></tr></thead><tbody id="rnaDefinitionRows"></tbody></table></div></div></section>
       </div>
       <div id="cycleStatesView" hidden>
-        <section class="panel"><div class="panel-head"><h2>Splicing Cycle State Guide</h2><span class="subtle">stage composition and transition remodelers</span></div><div class="panel-body"><div class="doc-grid" id="cycleStateGuide"></div></div></section>
+        <section class="panel"><div class="panel-head"><h2>Splicing Cycle State Guide</h2><span class="subtle">stage composition and transition remodelers</span></div><div class="panel-body"><div class="doc-grid guide-card-grid" id="cycleStateGuide"></div></div></section>
       </div>
       <div id="rnaElementsView" hidden>
-        <section class="panel"><div class="panel-head"><h2>RNA Element Guide</h2><span class="subtle">functions, interactors, remodeling, and helicases</span></div><div class="panel-body"><div class="doc-grid" id="rnaElementGuide"></div></div></section>
+        <section class="panel"><div class="panel-head"><h2>RNA Element Guide</h2><span class="subtle">functions, interactors, remodeling, and helicases</span></div><div class="panel-body"><div class="doc-grid guide-card-grid rna-guide-grid" id="rnaElementGuide"></div></div></section>
       </div>
       <div id="complexesView" hidden>
         <section class="panel"><div class="panel-head"><h2>Protein Complex Guide</h2><span class="subtle">when complexes join, leave, and remodel the spliceosome</span></div><div class="panel-body"><div class="doc-grid" id="proteinComplexGuide"></div></div></section>
@@ -545,13 +608,13 @@
       </div>
       <div id="documentationView" hidden>
         <section class="panel"><div class="panel-head"><h2>Dashboard Documentation</h2><span class="subtle">features, UI, and curation methodology</span></div><div class="panel-body"><div class="doc-grid">
-          <div class="doc-section"><h3>Scope</h3><p>This lightweight dashboard lists deposited spliceosome and spliceosomal snRNP structures and provides ChimeraX scripts that download models directly from the PDB.</p><ul><li>No mmCIF files, local curated CIF entries, or large map binaries are bundled here.</li><li>Primary EMDB maps can be downloaded on demand by using the primary-map ChimeraX script variant.</li><li>The full internal resource adds shared coordinate files, renamed-chain mmCIFs, all-map support, and local curated structures.</li><li>Entries are organized by pathway state, species, publication, resolved components, RNA annotations, quality metrics, and color/homolog metadata.</li></ul></div>
-          <div class="doc-section"><h3>Structure UI</h3><p>The Structures tab is the main workspace for finding entries and copying ChimeraX scripts.</p><ul><li>Use the sidebar to filter by text, complex, species, PRPF8/SF3B1 content, RNA features, and sort order.</li><li>Click a state in the splicing-cycle cartoon to filter the structure table.</li><li>Select a row to open details with paper metadata, components, RNA annotations, quality metrics, curation audit summaries, external resources, issue reporting, and a script preview.</li><li>Use the Compare column to keep up to five structures in a temporary comparison panel.</li></ul></div>
-          <div class="doc-section"><h3>RNA Features</h3><p>Resolved substrate and snRNA feature annotations are generated from deposited sequences and coordinates.</p><ul><li>The RNA feature text box narrows the feature drop-down; choosing a feature filters the structure table.</li><li>Common presets expose substrate annotations, snRNA annotations, 3' exon, ligated exons, branch A, and U6 ACAGAGA.</li><li>Named ChimeraX selectors follow `stage_PDB_feature`, for example `pre_Bact_7AAV_5exon`.</li><li>When multiple chains or segments represent one biological feature, the script creates a single named selection that unions the residue specs.</li></ul></div>
+          <div class="doc-section"><h3>Scope</h3><p>SpliceVis is a public atlas of deposited spliceosome and spliceosomal snRNP structures. It combines an interactive, consistently colored 3D viewer with RNA annotations, reference alignments, literature links, and ready-to-run ChimeraX scripts.</p><ul><li>The web viewer retrieves deposited coordinates on demand; large coordinate and map files are not bundled with the web interface.</li><li>The primary-map ChimeraX script can request the associated primary EMDB map.</li><li>Entries are organized by pathway state, species, publication, resolved components, pre-mRNA substrate, RNA annotations, validation data, and homolog/color metadata.</li></ul></div>
+          <div class="doc-section"><h3>Atlas Workflow</h3><p>The Atlas is the main structure-browsing workspace.</p><ul><li>Search by PDB accession, title, state, author, species, or component; use Refine for state, species, pre-mRNA substrate, RNA-feature, and sorting controls.</li><li>Click a pathway sector to restrict the associated-structure table, then select a row to load its Mol* model and RNA alignment.</li><li>Use the RNA-element and protein controls to focus the 3D model. External resources, curation and validation details, RNA files, and comparison tools remain available below.</li><li>On small screens, switch explicitly between Cycle, Structures, and Selected structure views.</li></ul></div>
+          <div class="doc-section"><h3>RNA Features</h3><p>Resolved substrate and snRNA features are assigned from deposited sequences and coordinates, reference alignments, state-specific interaction evidence, and documented manual curation.</p><ul><li>Use Refine to filter the atlas by annotation coverage or a specific RNA feature.</li><li>The selected-structure alignment places all deposited substrate chains against the assigned annotated reference and distinguishes modelled residues from unresolved sequence.</li><li>Named ChimeraX selectors follow `stage_PDB_feature`, for example `pre_Bact_7AAV_5exon`; segments belonging to one biological feature are combined into one selection.</li><li>A missing selector means no resolved interval met the current annotation rules, not necessarily that the biological feature is absent.</li></ul></div>
           <div class="doc-section"><h3>Pre-mRNA Substrates</h3><p>Construct identities use an evidence hierarchy: explicit deposited names and manual curation, exact full-sequence or annotated-intron propagation, then high-identity alignment to literature-defined reference constructs. Weak calls remain unspecified and review-required. Recurrent named families provide an annotated GenBank reference, a reference-anchored multiple-sequence alignment showing which residues are modelled in each structure, and a table projecting each reference feature onto deposited polymer sequences. These projections are exposed for audit and manual curation; they do not silently overwrite structure-level feature annotations.</p></div>
-          <div class="doc-section"><h3>Components & Colors</h3><p>The Components & Colors tab exposes the universal color table, common aliases, homolog mappings, systematic chain IDs, and source/provenance metadata.</p><ul><li>Colors combine provided ChimeraX examples, curated palettes, and generated class/family palettes.</li><li>This public dashboard defaults to original deposited chain IDs and can optionally rename chains in-session to systematic project IDs before downstream coloring, alignment, and named selections are applied.</li><li>Homolog mapping combines deposited names, curated aliases, SpliceosomeDB-style classes, OMA/BLAST-supported mappings, and manual corrections.</li></ul></div>
+          <div class="doc-section"><h3>Components and Colors</h3><p>This reference view exposes the universal color table, preferred component names, aliases, homolog mappings, systematic chain IDs, and provenance metadata.</p><ul><li>Its search is independent of the Atlas search and accepts protein names, homologs, aliases, and systematic chain IDs.</li><li>Curated high-level component groups replace raw, overlapping source classifications in the filter.</li><li>The dashboard defaults to deposited chain IDs and can optionally rename chains in-session before coloring, alignment, and named selections are applied.</li></ul></div>
           <div class="doc-section"><h3>ChimeraX Scripts</h3><p>Public scripts use `open PDBID` commands so ChimeraX retrieves models directly from the PDB. The selected-structure panel offers a systematic-chain-ID checkbox for users who prefer harmonized chain identifiers.</p><ul><li>Scripts use unique model IDs so multiple structures can be opened in one ChimeraX session.</li><li>In systematic-chain mode, deposited chain IDs are renamed live with two model-scoped `changechains` commands: all deposited IDs first move to temporary safe-harbor IDs, then those temporary IDs move to the systematic project IDs. This avoids collisions when a target ID already exists in the deposited model.</li><li>Structures are aligned to a shared anchor frame where PRPF8/SF3B1-compatible anchors are available.</li><li>Scripts apply the shared color code, RNA feature named selections, default display style, and nucleic-acid visibility after the requested chain-ID mode has been established.</li><li>GUI ChimeraX runs fetch a self-contained named-selection browser from GitHub; clicking an entry selects and zooms the corresponding RNA feature, and RNA-feature rows include checkboxes to toggle their 3D labels. No-GUI runs skip the browser automatically.</li><li>The model-only variant loads coordinates only; the primary-map variant also downloads the deposited primary EMDB map and brings it with the aligned model where ChimeraX can move the opened volume model.</li></ul></div>
-          <div class="doc-section doc-methods"><h3>Methods-Style Curation Methodology</h3><p>The resource is generated by local scripts that combine public structural metadata, deposited coordinate files, EMDB records, curated spliceosome knowledge, and project-specific validation tables. The following subsections describe the procedures in a form intended to be adaptable for a scientific Methods section. For publication use, the exact metadata snapshot, script commit, query log, and any manual overrides should be reported together with the exported tables.</p><h4>Structure Discovery And Inclusion Criteria</h4><p>Candidate deposited entries were identified from PDBe/PDB query sets recorded in `human_spliceosome_cryoem/metadata/all_species/discovery_log.csv`, with retained entries and discovery queries listed in `structures.csv` and excluded or failed records listed in `skipped_entries.csv`. Discovery was seeded with PRPF8/Prp8 and SF3B1/Hsh155-containing spliceosome entries, then expanded by title, composition, publication context, SpliceosomeDB-style seeds, and curated review to include spliceosomal snRNP assemblies, model-organism spliceosomes, and E-complex entries lacking those anchors. Deposited cryo-EM entries were retained when the deposited title, polymer composition, publication context, or curated inspection supported assignment to a spliceosome pathway bin or spliceosomal snRNP state. The public dataset comprises released PDB entries only; internal local CIF-only examples are excluded from public deposited-entry counts.</p><h4>Primary Metadata Extraction</h4><p>Entry-level metadata were taken from PDBe/PDB entry and publication records and cached in `entries_raw.json`. Titles, release and revision dates, experimental methods, nominal resolutions, linked EMDB identifiers, publication titles, DOIs, PubMed identifiers, journals, years, organisms, and deposited polymer entities are written to `structures.csv` and `publications.csv`. Polymer entities, chains, sequences, molecule names, gene names, polymer types, and UniProt cross-references were parsed from deposited mmCIF files and PDBe entity records into `components.csv` and `entity_xrefs.csv`. EMDB and validation-derived fields are written to `em_maps.csv`, `map_provenance.csv`, and `quality_metrics.csv` when available.</p><h4>Splicing-Pathway Assignment</h4><p>Structures were assigned to curated pathway bins using ordered title- and publication-derived rules implemented in `classify_structure()`, followed by manual correction of known ambiguous cases. Public pathway categories include isolated snRNP states, E complex, A complex, tri-snRNP, pre-B, B, pre-Bact, Bact, B*, C, C*, P, ILS/disassembly, DIS, and U5 recycling. Debranched intron spliceosome structures are curated as the first recycling state after ILS/disassembly. Ambiguous title patterns such as pre-B versus P complex are flagged in audit outputs such as `audits/stage_assignment_suspects.csv` and corrected where supported by publication or component evidence. Pathway labels should therefore be interpreted as curated bins rather than depositor-supplied stage labels.</p><h4>Protein And RNA Component Annotation</h4><p>Protein and RNA components were compiled from deposited polymer entities. Deposited entity names and gene symbols were used as initial labels; UniProt cross-references, curated aliases, species-specific homolog tables, paper-text evidence, OMA/BLAST-supported assignments for model organisms, and manual corrections were then used to normalize labels for search and coloring. Conflicts, missing assignments, and manual overrides are recorded in audit tables and should be treated as curation decisions rather than primary deposition metadata. RNA identities are assigned from deposited molecule or gene names, chain conventions where informative, and sequence-derived evidence. Unrecognized or ambiguous RNA entities are retained as unresolved and exposed in RNA identity audit tables.</p><h4>Homolog Mapping</h4><p>Homologous proteins across human, S. cerevisiae, S. pombe, C. elegans, and Chaetomium thermophilum were mapped to human-centric color and class keys where possible. Homolog assignments are evidence-integrated rather than BLAST-only: support may come from self or species matches, curated aliases, paper-text evidence, OMA orthology, BLAST best hits that pass manual review thresholds, and name or color-key fallbacks. Ambiguous or unmatched components remain flagged in unresolved-component and homolog-resolution audits. Repeated Sm/LSm copy labels use snRNP context plus nearest-snRNA heuristics where deposited identity is insufficient.</p><h4>RNA Feature Annotation</h4><p>Resolved substrate and snRNA feature annotations were generated by method-specific rules, including deposited component names, author residue numbering, sequence motifs, splice-site inference, resolved-residue checks against the mmCIF atom-site table, and review-derived approximate intervals for conserved snRNA regions. Substrate features include the 5' exon, 5' splice site, intron, branch point region, branch point adenosine, polypyrimidine tract, 3' splice site, 3' exon, ligated exons, intron lariat, and whole resolved substrate. snRNA features include conserved functional regions such as U1 5' splice-site recognition elements, U2 branchpoint-pairing and U2/U6 helix regions, U4/U6 interaction regions, U5 loop I and exon-contact sides, U6 ACAGAGA box, U6 catalytic and helix regions, and Sm/LSm-site regions. Each feature carries method and confidence fields in `substrate_features.csv` or `snrna_features.csv`; review-region or low/medium-confidence annotations should be interpreted as approximate selectable coordinate intervals. A missing feature means the scanner did not find a resolved selectable interval under the current rules, not that the biological feature is absent from the construct or complex. Selector names follow `stage_PDB_feature`; chain names are excluded, and multiple chains or segments representing the same feature are combined into a single named selection.</p><h4>EM Map Enumeration And File Availability</h4><p>Primary and associated EMDB records are collected in the full resource from PDB and EMDB cross-references, including focused refinements, linked additional maps, and half maps where listed. Map provenance is tracked separately from map file availability in `em_maps.csv` and `map_provenance.csv`. The full resource records expected map paths and whether each map is present on shared storage; large EM maps are intended to reside on the shared group volume rather than local OneDrive storage. This public lightweight dashboard does not distribute map binaries, but primary-map script variants can request the deposited primary EMDB map directly from ChimeraX.</p><h4>ChimeraX Script Generation And Alignment</h4><p>Public scripts retain original deposited chain IDs and use ChimeraX `open PDBID` commands. Model IDs are assigned uniquely per structure to avoid clashes when multiple scripts are run in one ChimeraX session. Structures are aligned into a common reference frame using PRPF8 when available, or SF3B1-compatible anchors where appropriate. Scripts apply a shared display style, color code, named subcomplex selections, RNA feature selections, and nucleic-acid visibility. The full internal resource additionally generates renamed-chain script variants and all-associated-map loading scripts.</p><h4>Color Assignment</h4><p>Protein and RNA colors are visualization conventions from a merged universal color table, not evidence for component identity. Colors inherited from provided ChimeraX example scripts were preserved where available, and missing entries were assigned using class/family-aware palettes so related spliceosomal modules retain visually coherent colors. Color provenance distinguishes inherited, curated, and generated colors.</p><h4>Quality Metrics And Validation Data</h4><p>Nominal/map resolution, model-validation summaries, and Q-score values are extracted from PDBe/EMDB validation and experiment metadata when available. Descriptive map/acquisition fields, including resolution method, pixel spacing, map box size, particle counts, microscope, and detector, are displayed for context only and do not contribute to quality or curation confidence badges. Missing values are reported as unavailable rather than inferred. Validation metrics are displayed in the selected-structure details view to avoid overloading the main table. These fields are screening aids and do not replace inspection of validation reports, local resolution, model-map fit, and deposited maps.</p><h4>Audit Tables And Confidence Labels</h4><p>Generated audit tables track curation provenance, assignment confidence, data completeness, map provenance, homolog resolution, RNA identity, unresolved components, and repeated substrate-RNA consistency. In this context, unresolved components are deposited entities that could not be normalized for dashboard use, most often proteins without a homolog/color assignment or RNAs whose identity could not be recognized; this is a curation-completeness issue, not a model-quality metric. These audits support internal review and are summarized in the dashboard through high, medium, review, flags, RNA-annotation, and map-status badges. Confidence labels are rule-based curation states, not calibrated probabilities or independent validation metrics. High confidence denotes deposited, self, manual, or independently supported assignments; medium confidence denotes rule-based or single-source inferred assignments; review denotes missing, conflicting, low-quality, or heuristic assignments requiring manual inspection. Entries marked medium or review are usable for browsing but should be checked before quantitative or publication-quality interpretation.</p></div>
+          <div class="doc-section doc-methods"><h3>Methods-Style Curation Methodology</h3><p>SpliceVis is generated by scripts that combine public structural metadata, deposited coordinate files, EMDB records, curated spliceosome knowledge, and validation data. Reproducible releases should report the metadata snapshot, software commit, discovery queries, and manual overrides together with exported results.</p><h4>Structure Discovery And Inclusion Criteria</h4><p>Candidate PDB entries were identified through recorded PDBe/PDB searches seeded with PRPF8/Prp8- and SF3B1/Hsh155-containing spliceosomes, then expanded by title, polymer composition, publication context, reference-database seeds, and manual review. This expansion captures spliceosomal snRNP assemblies, model-organism spliceosomes, early complexes that lack the initial protein anchors, and relevant X-ray as well as cryo-EM structures. An entry was retained when its deposited title, composition, publication, or curated inspection supported assignment to a spliceosomal assembly or pathway state. Only released PDB entries appear in the public dataset.</p><h4>Primary Metadata Extraction</h4><p>Titles, release and revision dates, experimental methods, nominal resolutions, linked EMDB accessions, publication identifiers, journals, years, organisms, and polymer entities were obtained from PDB/PDBe and EMDB records. Chains, sequences, molecule and gene names, polymer types, and UniProt cross-references were parsed from deposited mmCIF files and PDBe entity records. Missing metadata are reported as unavailable rather than inferred.</p><h4>Splicing-Pathway Assignment</h4><p>Structures were assigned to curated pathway bins by ordered title- and publication-derived rules, followed by manual correction of known ambiguous cases. Categories include isolated snRNP states, E, A, U5/tri-snRNP, pre-B, B, pre-Bact, Bact, B*, C, C*, P, ILS, DIS, U5 recycling, and the B*D quality-control/discard group. DIS is positioned as the first recycling state after ILS. Ambiguous labels such as pre-B versus P are flagged and resolved from publication and component evidence. These labels are curated atlas bins, not necessarily depositor-supplied state names.</p><h4>Protein And RNA Component Annotation</h4><p>Deposited entity names and gene symbols provide the initial component labels. UniProt cross-references, curated aliases, species-specific homolog tables, publication evidence, OMA/BLAST-supported assignments for model organisms, and manual corrections are then integrated to normalize names for search and coloring. RNA identities additionally use chain context and sequence evidence. Unrecognized or conflicting entities remain explicitly unresolved and are exposed by the curation audits.</p><h4>Homolog Mapping</h4><p>Homologous proteins across human, S. cerevisiae, S. pombe, C. elegans, and Chaetomium thermophilum were mapped to human-centric color and family keys where possible. Evidence can include a species-self match, curated aliases, publication text, OMA orthology, reviewed BLAST best hits, and consistent name or color-key matches. Ambiguous or unmatched components remain flagged. Repeated Sm/LSm copies are distinguished using snRNP context and proximity to the cognate snRNA when deposited identity alone is insufficient.</p><h4>RNA Feature Annotation</h4><p>Resolved substrate and snRNA features were assigned using deposited component names, author residue numbering, sequence motifs, splice-site inference, annotated-reference alignments, interaction-network evidence, and resolved-residue checks against mmCIF atom sites. Substrate features include the two exons, splice sites, intron, branch region and branch-point adenosine, polypyrimidine tract, ligated exons, and intron lariat. snRNA features include conserved substrate-recognition, snRNA-snRNA, catalytic, and Sm/LSm-binding regions in major and minor spliceosomes. Each feature retains method and confidence metadata; review-region and low- or medium-confidence intervals are approximate. A missing feature means that no resolved selectable interval met the current rules, not that the biological feature is absent. Named selections combine discontiguous segments or chains that represent one biological feature.</p><h4>EM Map Enumeration And Availability</h4><p>Primary and associated EMDB accessions are collected from PDB and EMDB cross-references, including focused refinements and additional maps where listed. Map provenance is tracked separately from file availability. Map binaries are not distributed through GitHub Pages; the primary-map ChimeraX script requests the deposited primary EMDB map on demand.</p><h4>ChimeraX Script Generation And Alignment</h4><p>Public scripts use ChimeraX `open PDBID` commands and retain deposited chain IDs by default. Optional systematic IDs are applied in two model-scoped steps through temporary safe-harbor identifiers before colors and named selections are created, avoiding chain-ID collisions. Model IDs are unique per structure, and compatible structures are aligned to a shared frame using PRPF8- or SF3B1-family anchors. Scripts apply the shared display style, component colors, RNA-feature selections, sequence-alignment viewer, nucleic-acid visibility, and optional primary-map loading.</p><h4>Color Assignment</h4><p>Protein and RNA colors are visualization conventions, not evidence for identity. Curated colors from the project reference scripts were retained where available; missing entries were assigned with family-aware palettes so homologous proteins and related spliceosomal modules remain visually coherent. Color provenance distinguishes inherited, curated, and generated assignments.</p><h4>Quality Metrics And Validation Data</h4><p>Nominal/map resolution, model-validation summaries, and Q-score values are extracted from PDB/PDBe and EMDB validation records when available. Acquisition descriptors, including resolution method, pixel spacing, map box size, particle count, microscope, and detector, are shown only as context and do not contribute to curation or quality badges. These fields are screening aids and do not replace inspection of validation reports, local resolution, model-map fit, or deposited maps.</p><h4>Audits And Confidence Labels</h4><p>Automated audits track curation provenance, assignment confidence, data completeness, map provenance, homolog resolution, RNA identity, unresolved components, and repeated-substrate consistency. An unresolved component is a deposited entity that could not be normalized for dashboard use, most often a protein without a homolog/color assignment or an RNA without a supported identity; it is a curation-completeness issue, not a model-quality metric. Dashboard confidence labels are rule-based curation states, not calibrated probabilities. High confidence denotes deposited, manual, or independently supported assignments; medium confidence denotes rule-based or single-source inference; review denotes missing, conflicting, or heuristic assignments requiring inspection.</p></div>
         </div></div></section>
       </div>
       <div id="localCopyView" hidden>
@@ -586,21 +649,19 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     let proteinLookup = [];
     let rnaFeatureDefinitions = [];
     let rnaFeatureConsistency = [];
-    const state = { activeTab:"structures", query:"", mode:"all", family:"all", species:"all", substrateType:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, openPanelInNewTab:false, panelOnly:false };
+    const state = { activeTab:"structures", structureQuery:"", proteinQuery:"", mode:"all", family:"all", species:"all", substrateType:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, openPanelInNewTab:false, panelOnly:false, mobilePane:"cycle" };
     const els = {};
-    for (const id of ["sidebarToggle","atlasNavButton","componentsNavButton","openPanelOnly","search","searchMode","family","species","substrateTypeFilter","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","selectedScriptActions","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
+    for (const id of ["sidebarToggle","atlasNavButton","componentsNavButton","openPanelOnly","mobileViewSwitch","search","searchMode","family","species","substrateTypeFilter","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","selectedScriptActions","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U1 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const STATE_COLORS = {
       "U1 snRNP":"#187A4A", "U2 snRNP":"#187A4A", "U6 snRNP":"#187A4A", "U6 snRNA biogenesis":"#187A4A", "U5/tri-snRNP":"#187A4A", "U5 recycling":"#006A2B",
-      "E complex":"#5F9EAA", "A complex":"#568F9A", "pre-B":"#4D808A",
+      "E complex":"#356F7A", "A complex":"#2F6670", "pre-B":"#285B64",
       "B":"#1C428B", "pre-Bact":"#123483", "Bact":"#08277A",
-      "B*":"#C06782", "C":"#B75F7A", "C*":"#AA536F",
-      "P":"#B97A6E", "ILS/disassembly":"#B17265", "DIS":"#AA6B5F",
-      "B*D complex":"#7B687F"
+      "B*":"#9B4664", "C":"#8E3F59", "C*":"#82364F",
+      "P":"#8A574C", "ILS/disassembly":"#7C4C43", "DIS":"#6D4139",
+      "B*D complex":"#66536A"
     };
-    const NODE_POS = [[280,100],[130,250],[205,410],[400,292],[365,535],[540,535],[705,515],[850,465],[990,390],[1110,295],[1190,190],[1150,92],[880,100],[735,100],[590,100]];
-    const U = {u1:"#d8a3cf", u2:"#78c96b", u4:"#f2dc4e", u5:"#5da8d7", u6:"#ee5960", ntc:"#f2bd5c", mrna:"#22272d"};
     let molstarLoadPromise = null;
     let molstarPendingPdbId = "";
     let molstarAutoPreviewEnabled = false;
@@ -613,7 +674,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       return Number.isFinite(number) ? number.toFixed(1) : String(value);
     }
     async function init(){
-      const response = await fetch("data/structures.json?v=20260902-snrna-alignments-v1", {
+      const response = await fetch("data/structures.json?v=20260903-ui-guide-v2", {
         cache: "no-cache",
       });
       if (!response.ok) throw new Error(`Could not load data/structures.json: ${response.status}`);
@@ -671,12 +732,43 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       art.style.height = `${height}px`;
     }
     function populateProteinComplexFilter(){
-      const values = new Set();
-      for(const p of proteinLookup){
-        if(p.class_family) values.add(p.class_family);
-        for(const c of p.canonical_chain_ids || []) if(c.subcomplex) values.add(c.subcomplex);
+      const groups = [
+        ["snrnp_u1","U1 snRNP"], ["snrnp_u2","U2 snRNP and SF3B"],
+        ["snrnp_tri","U4/U6 and tri-snRNP"], ["snrnp_u5","U5 snRNP"],
+        ["sm_lsm","Sm and LSm rings"], ["ntc","NTC / PRP19 complex"],
+        ["ntr","Activation and remodeling factors"], ["res","RES complex"],
+        ["step2","Second-step factors"], ["ejc","EJC and mRNP factors"],
+        ["disassembly","Disassembly and recycling"], ["other","Other or unclassified"]
+      ];
+      els.proteinComplexFilter.innerHTML = '<option value="all">All component groups</option>' + groups.map(([value,label])=>`<option value="${value}">${label}</option>`).join("");
+    }
+    function updateSearchContext(){
+      const componentView = state.activeTab === "proteins";
+      els.search.value = componentView ? state.proteinQuery : state.structureQuery;
+      els.search.placeholder = componentView ? "Protein, homolog, alias, chain ID" : "PDB, title, state, author, species";
+      els.search.setAttribute("aria-label", componentView ? "Find components" : "Find structures");
+      const refine = document.querySelector(".refine-drawer");
+      if(refine){ refine.hidden = componentView; if(componentView) refine.open = false; }
+    }
+    function setMobilePane(pane){
+      state.mobilePane = ["cycle","structures","detail"].includes(pane) ? pane : "cycle";
+      document.body.classList.remove("mobile-pane-cycle","mobile-pane-structures","mobile-pane-detail");
+      document.body.classList.add(`mobile-pane-${state.mobilePane}`);
+      if(els.mobileViewSwitch) for(const button of els.mobileViewSwitch.querySelectorAll("button")){
+        const active = button.dataset.mobilePane === state.mobilePane;
+        button.classList.toggle("active", active);
+        if(active) button.setAttribute("aria-current", "page");
+        else button.removeAttribute("aria-current");
       }
-      els.proteinComplexFilter.innerHTML = '<option value="all">All complex associations</option>' + [...values].sort((a,b)=>a.localeCompare(b)).map(v=>`<option value="${attr(v)}">${esc(v)}</option>`).join("");
+      requestAnimationFrame(fitCycleArt);
+    }
+    function activateSort(header){
+      const key=header.dataset.sort;
+      if(!key)return;
+      if(state.sortBy===key) state.sortDir=state.sortDir==="asc"?"desc":"asc";
+      else { state.sortBy=key; state.sortDir=["year","chains","proteins","resolution"].includes(key)?"desc":"asc"; }
+      if([...els.sortBy.options].some(option=>option.value===key)) els.sortBy.value = key;
+      render();
     }
     function populateProximityProteins(){
       const proteins = DATA.proximity.proteins || [];
@@ -697,8 +789,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       window.addEventListener("resize",()=>requestAnimationFrame(fitCycleArt));
       els.openPanelOnly.addEventListener("change",()=>{state.openPanelInNewTab=els.openPanelOnly.checked;});
       els.search.addEventListener("input",()=>{
-        state.query=els.search.value.trim().toLowerCase();
-        if(state.query){ state.family="all"; state.cyclePdbIds=[]; state.cyclePdbLabel=""; els.family.value="all"; }
+        const query=els.search.value.trim().toLowerCase();
+        if(state.activeTab === "proteins") state.proteinQuery=query;
+        else state.structureQuery=query;
+        if(state.activeTab === "structures" && state.structureQuery){ state.family="all"; state.cyclePdbIds=[]; state.cyclePdbLabel=""; els.family.value="all"; }
+        if(state.activeTab === "structures" && query) state.mobilePane="structures";
         render();
       });
       els.searchMode.addEventListener("change",()=>{state.mode=els.searchMode.value; render();});
@@ -717,7 +812,9 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       els.localRepoPath.addEventListener("input",()=>{state.localRepoPath=els.localRepoPath.value.trim(); render();});
       els.sortBy.addEventListener("change",()=>{state.sortBy=els.sortBy.value; state.sortDir = ["year","chains","proteins","resolution"].includes(state.sortBy) ? "desc" : "asc"; render();});
       els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); if(els.atlasNavButton) els.atlasNavButton.classList.toggle("active",state.activeTab==="structures"); if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab==="proteins"); const drawer=b.closest(".tools-drawer"); if(drawer) drawer.open=false; render();});
-      document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(!th)return; const key=th.dataset.sort; if(state.sortBy===key) state.sortDir=state.sortDir==="asc"?"desc":"asc"; else { state.sortBy=key; state.sortDir=["year","chains","proteins","resolution"].includes(key)?"desc":"asc"; } if([...els.sortBy.options].some(option=>option.value===key)) els.sortBy.value = key; render();});
+      document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(th) activateSort(th);});
+      document.addEventListener("keydown", event=>{const th=event.target.closest("th[data-sort]"); if(!th || !["Enter"," "].includes(event.key))return; event.preventDefault(); activateSort(th);});
+      if(els.mobileViewSwitch) els.mobileViewSwitch.addEventListener("click",event=>{const button=event.target.closest("button[data-mobile-pane]"); if(button)setMobilePane(button.dataset.mobilePane);});
       els.runProximitySearch.addEventListener("click", runProximitySearch);
       els.copyProximityCxc.addEventListener("click",async()=>copyText(await proximityChimeraXScript(), els.copyProximityCxc));
       els.downloadProximityCsv.addEventListener("click", downloadProximityCsv);
@@ -725,7 +822,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       els.proximitySpecies.addEventListener("change", updateProximityResultPresentation);
       for(const input of [els.proximityProtein, els.proximityStart, els.proximityEnd, els.proximityDistance]) input.addEventListener("keydown", event=>{if(event.key==="Enter"){event.preventDefault(); runProximitySearch();}});
       els.proximityRows.addEventListener("click", event=>{const b=event.target.closest("button[data-proximity-pdb]"); if(!b)return; state.selected=b.dataset.proximityPdb; state.activeTab="structures"; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x.dataset.tab==="structures"); render();});
-      els.reset.addEventListener("click",()=>{state.query=""; state.mode="all"; state.family="all"; state.species="all"; state.substrateType="all"; state.rnaFeature="all"; state.rnaFeatureSearch=""; state.cyclePdbIds=[]; state.cyclePdbLabel=""; state.rnaDefinitionQuery=""; state.proteinComplex="all"; state.sortBy="pathway"; state.sortDir="asc"; els.search.value=""; els.searchMode.value="all"; els.family.value="all"; els.species.value="all"; els.substrateTypeFilter.value="all"; els.rnaFeatureFilter.value="all"; els.rnaFeatureQuickSearch.value=""; renderRnaFeatureQuickSelect(); els.rnaDefinitionSearch.value=""; els.proteinComplexFilter.value="all"; els.sortBy.value="pathway"; render();});
+      els.reset.addEventListener("click",()=>{state.structureQuery=""; state.mode="all"; state.family="all"; state.species="all"; state.substrateType="all"; state.rnaFeature="all"; state.rnaFeatureSearch=""; state.cyclePdbIds=[]; state.cyclePdbLabel=""; state.rnaDefinitionQuery=""; state.sortBy="pathway"; state.sortDir="asc"; els.search.value=""; els.searchMode.value="all"; els.family.value="all"; els.species.value="all"; els.substrateTypeFilter.value="all"; els.rnaFeatureFilter.value="all"; els.rnaFeatureQuickSearch.value=""; renderRnaFeatureQuickSelect(); els.rnaDefinitionSearch.value=""; els.sortBy.value="pathway"; render();});
     }
     function fieldsFor(r){
       return {
@@ -797,7 +894,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       render();
     }
     function clearFilter(name){
-      if(name==="query"){ state.query=""; els.search.value=""; }
+      if(name==="query"){ state.structureQuery=""; els.search.value=""; }
       else if(name==="family"){ state.family="all"; els.family.value="all"; }
       else if(name==="cyclePdb"){ state.cyclePdbIds=[]; state.cyclePdbLabel=""; }
       else if(name==="species"){ state.species="all"; els.species.value="all"; }
@@ -821,7 +918,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     }
     function renderActiveFilterChips(){
       const chips = [];
-      if(state.query) chips.push(["query", `Search: ${state.query}`]);
+      if(state.structureQuery) chips.push(["query", `Search: ${state.structureQuery}`]);
       if(state.family!=="all") chips.push(["family", `State: ${state.family}`]);
       if(state.cyclePdbIds.length) chips.push(["cyclePdb", `Cycle: ${state.cyclePdbLabel || state.cyclePdbIds.map(id=>id.toUpperCase()).join(", ")}`]);
       if(state.species!=="all") chips.push(["species", `Species: ${state.species}`]);
@@ -829,11 +926,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       if(state.rnaFeature!=="all") chips.push(["rnaFeature", `RNA: ${rnaFeatureLabel(state.rnaFeature)}`]);
       if(els.activeFilterPanel) els.activeFilterPanel.hidden = !chips.length;
       els.activeFilterChips.innerHTML = chips.map(([key,label])=>`<button type="button" class="filter-chip" data-clear-filter="${attr(key)}" title="Clear this filter">${esc(label)} x</button>`).join("");
-      if(els.filterHint) els.filterHint.textContent = chips.length ? "Clear individual chips or clear all to broaden the Structure Set." : "";
+      if(els.filterHint) els.filterHint.textContent = chips.length ? "Remove a chip or clear all to broaden the atlas." : "";
       for(const button of els.rnaQuickFilters.querySelectorAll("button[data-rna-feature]")) button.classList.toggle("active", button.dataset.rnaFeature===state.rnaFeature);
     }
     function hasActiveStructureFilters(){
-      return Boolean(state.query || state.family!=="all" || state.cyclePdbIds.length || state.species!=="all" || state.substrateType!=="all" || state.rnaFeature!=="all");
+      return Boolean(state.structureQuery || state.family!=="all" || state.cyclePdbIds.length || state.species!=="all" || state.substrateType!=="all" || state.rnaFeature!=="all");
     }
     function substrateTypeOk(r){
       const value=state.substrateType;
@@ -845,14 +942,14 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       return rows.some(item=>item.family===value || item.type===value);
     }
     function filtered(options = {}){
-      const exactStage=exactStageForQuery(state.query);
+      const exactStage=exactStageForQuery(state.structureQuery);
       return records.filter(r=>{
         const fields = fieldsFor(r);
         const parts = state.mode === "all" ? fields.all : [...fields.structure, ...(fields[state.mode] || [])];
         const hay = parts.join(" ").toLowerCase();
         const familyOk = options.ignoreFamily || state.family==="all" || r.state===state.family;
         const cycleOk = options.ignoreCyclePdb || !state.cyclePdbIds.length || state.cyclePdbIds.includes(String(r.pdb_id || "").toLowerCase());
-        const queryOk = !state.query || (exactStage ? r.state===exactStage : hay.includes(state.query));
+        const queryOk = !state.structureQuery || (exactStage ? r.state===exactStage : hay.includes(state.structureQuery));
         return queryOk && familyOk && cycleOk && (state.species==="all" || r.species===state.species) && substrateTypeOk(r) && rnaFeatureOk(r);
       }).sort((a,b)=>{
         let value = 0;
@@ -871,8 +968,10 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       });
     }
     function render(){
-      if(els.atlasNavButton) els.atlasNavButton.classList.toggle("active",state.activeTab === "structures");
-      if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab === "proteins");
+      updateSearchContext();
+      setMobilePane(state.mobilePane);
+      if(els.atlasNavButton){ const active=state.activeTab === "structures"; els.atlasNavButton.classList.toggle("active",active); els.atlasNavButton.setAttribute("aria-pressed",String(active)); }
+      if(els.componentsNavButton){ const active=state.activeTab === "proteins"; els.componentsNavButton.classList.toggle("active",active); els.componentsNavButton.setAttribute("aria-pressed",String(active)); }
       els.structuresView.hidden = state.activeTab !== "structures";
       els.proximityView.hidden = state.activeTab !== "proximity";
       els.rnaFeaturesView.hidden = state.activeTab !== "rnaFeatures";
@@ -899,7 +998,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         return;
       }
       if(state.activeTab === "rnaElements") {
-        renderGuideCards(els.rnaElementGuide, DATA.guides.rna_elements || [], "name", ["category","function","interactors","remodeling","helicases"]);
+        renderGuideCards(els.rnaElementGuide, DATA.guides.rna_elements || [], "name", ["function","interactors","remodeling","helicases"], "category");
         els.resultSubtitle.textContent = `${(DATA.guides.rna_elements || []).length} RNA element explanations`;
         return;
       }
@@ -933,8 +1032,11 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
 
     function updateSortHeaders(){
       document.querySelectorAll("th[data-sort]").forEach(th=>{
-        th.classList.toggle("sorted-asc", th.dataset.sort === state.sortBy && state.sortDir === "asc");
-        th.classList.toggle("sorted-desc", th.dataset.sort === state.sortBy && state.sortDir === "desc");
+        const active = th.dataset.sort === state.sortBy;
+        th.classList.toggle("sorted-asc", active && state.sortDir === "asc");
+        th.classList.toggle("sorted-desc", active && state.sortDir === "desc");
+        th.setAttribute("aria-sort", active ? (state.sortDir === "asc" ? "ascending" : "descending") : "none");
+        th.title = active ? `Sorted ${state.sortDir === "asc" ? "ascending" : "descending"}; activate to reverse` : "Activate to sort this column";
       });
     }
     function renderStats(rows){
@@ -987,6 +1089,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
         state.family = state.family===item.stage ? "all" : item.stage;
         els.family.value=state.family;
       }
+      state.mobilePane="structures";
       render();
     }
     function cycleHoverInfo(item,count){
@@ -1010,7 +1113,7 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       const info=cycleHoverInfo(item,count);
       const side=item.x >= 55 ? " tooltip-left" : "";
       const vertical=item.y >= 65 ? " tooltip-above" : "";
-      return `<span class="cycle-tooltip${side}${vertical}" role="tooltip"><span class="cycle-tooltip-title"><span>${esc(info.title)}</span><span class="cycle-tooltip-count">${info.count} structures</span></span><span class="cycle-tooltip-row"><span class="cycle-tooltip-label">RNA</span><span>${esc(info.rna)}</span></span><span class="cycle-tooltip-row"><span class="cycle-tooltip-label">Helicase</span><span>${esc(info.helicase)}</span></span><span class="cycle-tooltip-row"><span class="cycle-tooltip-label">Change</span><span>${esc(info.change)}</span></span></span>`;
+      return `<span class="cycle-tooltip${side}${vertical}" role="tooltip"><span class="cycle-tooltip-title"><span>${esc(info.title)}</span></span><span class="cycle-tooltip-row"><span class="cycle-tooltip-label">RNA</span><span>${esc(info.rna)}</span></span><span class="cycle-tooltip-row"><span class="cycle-tooltip-label">Helicase</span><span>${esc(info.helicase)}</span></span><span class="cycle-tooltip-row"><span class="cycle-tooltip-label">Change</span><span>${esc(info.change)}</span></span></span>`;
     }
     function renderSvgCycle(rows){
       const svg=DATA.splicing_cycle_svg || "";
@@ -1023,39 +1126,6 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
     function renderCycle(rows){
       renderSvgCycle(rows);
       renderCycleContext(rows);
-      return;
-      const counts = Object.fromEntries(STAGES.map(s=>[s, rows.filter(r=>r.state===s).length]));
-      const stagePaths = {
-        "U2 snRNP": "M282 135 C260 235 238 335 216 384",
-        "E complex": "M138 288 C150 342 176 383 196 400",
-        "A complex": "M232 430 C274 478 321 515 344 529",
-        "U5/tri-snRNP": "M393 330 C388 405 377 487 369 520",
-        "pre-B": "M426 535 C459 539 494 539 512 536",
-        "B": "M600 532 C636 530 666 524 680 519",
-        "pre-Bact": "M764 501 C798 492 823 480 832 471",
-        "Bact": "M905 443 C937 424 963 404 973 395",
-        "B*": "M1039 360 C1072 333 1094 307 1102 300",
-        "C": "M1145 263 C1167 236 1180 211 1184 198",
-        "C*": "M1180 151 C1174 121 1164 104 1157 96",
-        "P": "M1088 91 C1030 88 955 92 900 97",
-        "ILS/disassembly": "M818 101 C787 102 755 101 744 100",
-        "DIS": "M692 99 C662 99 631 99 612 101",
-        "U5 recycling": "M552 98 C500 115 452 196 418 264"
-      };
-      const nodes = STAGES.map((stage,i)=>cycleNode(stage,NODE_POS[i][0],NODE_POS[i][1],counts[stage]||0)).join("");
-      const flow = STAGES.map(stage=>stagePaths[stage] ? `<path class="cycle-flow" d="${stagePaths[stage]}" marker-end="url(#cycleArrow)"/>` : "").join("");
-      const badges = [
-        [150,338,"Prp5","DDX46 / Sub2-DDX39B"],
-        [462,475,"Prp28","DDX23"],
-        [618,485,"Brr2","SNRNP200"],
-        [962,484,"Prp2","DHX16"],
-        [1082,365,"Prp16","DHX38"],
-        [1232,276,"Prp22","DHX8"],
-        [765,170,"Prp43","DHX15 / TFIP11-GCFC"],
-      ].map(([x,y,label,label2])=>`<g><text class="cycle-helicase-label" x="${x}" y="${y-7}">${esc(label)}</text><text class="cycle-helicase-human" x="${x}" y="${y+7}">${esc(label2)}</text></g>`).join("");
-      const ntc = `<g class="cycle-module" aria-label="NTC/NTR joins during activation"><path d="M658 355 C611 340 615 289 666 279 C718 269 754 299 741 339 C730 373 692 375 658 355 Z" fill="#f4bf67" stroke="rgba(31,35,40,.55)" stroke-width="1.2"/><text class="cycle-particle-label" x="684" y="326">NTC/NTR</text></g>`;
-      const ntcArrow = `<path class="cycle-flow dashed" d="M706 356 C750 407 806 445 834 458" marker-end="url(#cycleArrowMuted)"/>`;
-      els.cycle.innerHTML = `<svg class="cycle-svg" viewBox="0 0 1320 640" role="img" aria-label="Splicing cycle filter"><defs><marker id="cycleArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#22272d"/></marker><marker id="cycleArrowMuted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#aeb6bf"/></marker></defs><path class="cycle-band" d="M280 100 C155 145 104 220 130 250 C138 326 169 374 205 410 C248 474 305 518 365 535" stroke="#d9f1f4" stroke-width="70"/><path class="cycle-band" d="M365 535 C570 585 850 515 990 390 C1062 334 1117 268 1190 190" stroke="#fde3e5" stroke-width="72"/><path class="cycle-band" d="M1190 190 C1222 125 1199 91 1150 92 C1062 78 970 88 880 100 C765 115 675 115 590 100" stroke="#fff2b5" stroke-width="72"/>${flow}${ntcArrow}<text x="54" y="392" class="cycle-region-label" transform="rotate(-77 54 392)">Recognition and assembly</text><text x="666" y="604" class="cycle-region-label catalytic" transform="rotate(-3 666 604)">Catalytic stages</text><text x="1106" y="492" class="cycle-region-label release" transform="rotate(-44 1106 492)">Release and disassembly</text><text x="745" y="44" class="cycle-region-label release">Recycling</text><text class="cycle-note" x="90" y="180">pre-mRNA</text><text class="cycle-note" x="1138" y="52">mRNA + lariat</text><text class="cycle-note" x="1005" y="458">Step I / branching</text><text class="cycle-note" x="1185" y="322">Step II / exon ligation</text>${ntc}${badges}${nodes}</svg>`;
     }
     function stateGuideFor(stage){
       const aliases={"pre-b":"pre-b complex","b":"b complex","pre-bact":"pre-bact complex","bact":"bact complex","b*":"b* complex","b*d complex":"b*d complex","c":"c complex","c*":"c* complex","p":"p complex","ils/disassembly":"ils","dis":"dis","u5 recycling":"u5 recycling"};
@@ -1078,72 +1148,33 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
       const transition = guide?.transition || guide?.helicases || "";
       els.cycleContext.innerHTML = `<div class="context-title"><span>${esc(title)}</span><span class="subtle">${esc(countLabel)}</span></div><div class="context-label">Context</div><div class="context-line">${esc(context)}</div>${transition && transition !== context ? `<div class="context-label">Transition</div><div class="context-line">${esc(transition)}</div>` : ""}`;
     }
-    function cycleNode(stage,x,y,count){
-      const active = state.family===stage ? " active" : "";
-      const empty = count ? "" : " empty-stage";
-      const particlesByStage = {
-        "U2 snRNP": [
-          {dx:-17, dy:-3, r:18, fill:U.u2, text:"U2"},
-          {dx:18, dy:-3, r:16, fill:"#5dbb67", text:"SF3"}
-        ],
-        "E complex": [
-          {dx:-19, dy:-10, r:17, fill:U.u1, text:"U1", rna:true}
-        ],
-        "A complex": [
-          {dx:-22, dy:-8, r:17, fill:U.u1, text:"U1"},
-          {dx:13, dy:-11, r:19, fill:U.u2, text:"U2", rna:true}
-        ],
-        "U5/tri-snRNP": [
-          {dx:-24, dy:4, r:16, fill:U.u4, text:"U4"},
-          {dx:0, dy:-12, r:15, fill:U.u6, text:"U6"},
-          {dx:24, dy:10, r:19, fill:U.u5, text:"U5"}
-        ],
-        "pre-B": [
-          {dx:-27, dy:-7, r:16, fill:U.u1, text:"U1"},
-          {dx:0, dy:-15, r:18, fill:U.u2, text:"U2"},
-          {dx:26, dy:5, r:19, fill:U.u5, text:"U5"},
-          {dx:-4, dy:18, r:14, fill:U.u4, text:"U4"}
-        ],
-        "B": [
-          {dx:-18, dy:-13, r:18, fill:U.u2, text:"U2"},
-          {dx:10, dy:-11, r:16, fill:U.u6, text:"U6"},
-          {dx:27, dy:12, r:19, fill:U.u5, text:"U5"},
-          {dx:-25, dy:12, r:14, fill:U.u4, text:"U4"}
-        ]
-      };
-      const ntcStages = new Set(["Bact","B*","C","C*","P","ILS/disassembly"]);
-      const hasActivatedU6 = new Set(["pre-Bact","Bact","B*","C","C*","P","ILS/disassembly","DIS"]);
-      const defaultParticles = [
-        {dx:-24, dy:-7, r:18, fill:U.u2, text:"U2"},
-        {dx:15, dy:-10, r:17, fill:hasActivatedU6.has(stage)?U.u6:U.u4, text:hasActivatedU6.has(stage)?"U6":"U4"},
-        {dx:25, dy:13, r:20, fill:U.u5, text:"U5"},
-        ...(ntcStages.has(stage) ? [{dx:0, dy:18, r:12, fill:U.ntc, text:"NTC"}] : [])
-      ];
-      const particles = (particlesByStage[stage] || defaultParticles).map(p => `<circle class="cycle-particle" cx="${x+p.dx}" cy="${y+p.dy}" r="${p.r}" fill="${p.fill}"/>${p.text ? `<text class="cycle-particle-label" x="${x+p.dx}" y="${y+p.dy}">${esc(p.text)}</text>` : ""}`).join("");
-      const rnaLine = ["E complex","A complex"].includes(stage) ? `<path class="cycle-rna-line" d="M ${x-38} ${y+18} C ${x-18} ${y+7} ${x+18} ${y+7} ${x+38} ${y+18}"/>` : "";
-      return `<g class="cycle-node${active}${empty}" tabindex="0" role="button" data-stage="${attr(stage)}" onclick="state.family='${attr(stage)}'; els.family.value='${attr(stage)}'; render();"><ellipse class="cycle-node-shell" cx="${x}" cy="${y}" rx="65" ry="37"/>${rnaLine}${particles}<text class="cycle-label" x="${x}" y="${y+52}">${esc(stage)}</text><circle class="cycle-count-badge" cx="${x+52}" cy="${y-29}" r="12"/><text class="cycle-count-label" x="${x+52}" y="${y-29}">${count}</text></g>`;
-    }
     function renderRows(rows){
       if(!rows.length){
         const message = hasActiveStructureFilters()
-          ? "No deposited structures match the current filters. Clear the active filter chips above or press Reset to broaden the search."
+          ? "No deposited structures match the current filters. Remove an active filter chip or use Clear all to broaden the search."
           : "No deposited structures are available for this view.";
         els.rows.innerHTML = `<tr><td colspan="13" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
         return;
       }
-      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); const substrate=substrateTypeLabel(r); return `<tr class="${r.pdb_id===state.selected?"selected":""}" data-pdb="${attr(r.pdb_id)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()" style="color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}</td><td title="${attr(substrate)}">${esc(substrate)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
+      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const selected=r.pdb_id===state.selected; const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); const substrate=substrateTypeLabel(r); return `<tr class="${selected?"selected":""}" data-pdb="${attr(r.pdb_id)}" tabindex="0" aria-selected="${selected}" aria-label="Select ${attr(r.pdb_id.toUpperCase())}: ${attr(r.title)}"><td class="pdb"><a href="${attr(pdbe)}" target="_blank" rel="noopener" title="Open this entry at PDBe" onclick="event.stopPropagation()" style="--state-color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}</td><td title="${attr(substrate)}">${esc(substrate)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
+      const selectRow = row => {
+        if(state.openPanelInNewTab){ window.open(structurePanelUrl(row.dataset.pdb), "_blank", "noopener"); return; }
+        state.selected = row.dataset.pdb;
+        state.mobilePane = "detail";
+        molstarAutoPreviewEnabled = true;
+        render();
+        autoLoadMolstarForSelected();
+      };
       for (const row of els.rows.querySelectorAll("tr")) {
         row.addEventListener("click", event => {
           const button = event.target.closest("[data-compare]");
           if (button) { toggleCompare(button.dataset.compare); event.stopPropagation(); return; }
-          if(state.openPanelInNewTab){
-            window.open(structurePanelUrl(row.dataset.pdb), "_blank", "noopener");
-            return;
-          }
-          state.selected = row.dataset.pdb;
-          molstarAutoPreviewEnabled = true;
-          render();
-          autoLoadMolstarForSelected();
+          selectRow(row);
+        });
+        row.addEventListener("keydown", event=>{
+          if(event.target.closest("a,button,input,select") || !["Enter"," "].includes(event.key))return;
+          event.preventDefault();
+          selectRow(row);
         });
       }
     }
@@ -1864,15 +1895,8 @@ ${await scriptFor(record,"no_maps")}
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
       const resourceBlock = `${externalLinks(r)}<div class="actions secondary-actions">${reportIssueLink(r)}</div>`;
       const substrateBadges=unique((r.substrate_types||[]).map(item=>item.family||item.type)).filter(value=>value!=="Other/unspecified substrate").slice(0,2).map(value=>`<span class="badge">${esc(value)}</span>`).join("");
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span>${minorSpliceosomeBadge(r)}<span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${substrateBadges}${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation And Quality", curationPanel(r) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}${detailSection("Audits", unassignedPanel(r.unassigned_components||[]))}${detailSection("Compare Structures", comparisonPanel())}${detailSection("Script Preview", '<pre id="scriptPreview">Loading script...</pre>')}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span>${minorSpliceosomeBadge(r)}<span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${substrateBadges}${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation, Quality, and Audits", curationPanel(r) + unassignedPanel(r.unassigned_components||[]) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}${detailSection("Compare Structures", comparisonPanel())}`;
       renderMolstarFeatureButtons();
-      scriptFor(r, "no_maps").then(text => {
-        const preview = document.getElementById("scriptPreview");
-        if (preview && state.selected === r.pdb_id) preview.textContent = text;
-      }).catch(error => {
-        const preview = document.getElementById("scriptPreview");
-        if (preview) preview.textContent = error.message;
-      });
     }
     function detailSection(title, body, open=false){
       return `<details class="detail-section"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="detail-section-body">${body}</div></details>`;
@@ -1891,7 +1915,7 @@ ${await scriptFor(record,"no_maps")}
       const links = [`<a href="${attr(item.png)}">PNG</a>`];
       if(item.svg) links.push(`<a href="${attr(item.svg)}">SVG</a>`);
       const counts = [item.rna_chain_count ? `${item.rna_chain_count} RNA chains` : "", item.r2dt_chain_count ? `${item.r2dt_chain_count} R2DT layouts` : "", item.failed_chain_count && item.failed_chain_count !== "0" ? `${item.failed_chain_count} failed` : ""].filter(Boolean).join("; ");
-      return `<h3>RNA 2D Structure</h3><img class="rna-2d-img" src="${attr(item.png)}" alt="RNA secondary-structure panel" loading="lazy"><div class="subtle">${esc(counts)} ${links.join(" ")}</div>${item.notes ? `<div class="subtle">${esc(item.notes)}</div>` : ""}`;
+      return `<details class="rna-2d-details"><summary>RNA secondary-structure rendering</summary><img class="rna-2d-img" src="${attr(item.png)}" alt="RNA secondary-structure panel for the selected PDB entry" loading="lazy"><div class="subtle">${esc(counts)} ${links.join(" ")}</div>${item.notes ? `<div class="subtle">${esc(item.notes)}</div>` : ""}</details>`;
     }
     function substrateTypePanel(items){
       if(!items.length) return "";
@@ -1956,8 +1980,14 @@ ${await scriptFor(record,"no_maps")}
       const rows = rnaFeatureDefinitions.filter(x=>!q || [x.feature,x.label,x.definition,x.method,x.notes].join(" ").toLowerCase().includes(q));
       els.rnaDefinitionRows.innerHTML = rows.map(x=>`<tr><td><strong>${esc(x.label||x.feature)}</strong><br><code>${esc(x.feature||"")}</code></td><td>${esc(x.definition||"")}</td><td>${esc(x.method||"")}</td><td>${esc(x.notes||"")}</td></tr>`).join("") || '<tr><td colspan="4" class="subtle">No RNA feature definitions match.</td></tr>';
     }
-    function renderGuideCards(container, items, titleKey, fields){
-      container.innerHTML = items.map(item=>`<div class="doc-section"><h3>${esc(item[titleKey]||"")}</h3><div class="kv">${fields.map(field=>`<div>${esc(field.replace(/_/g," "))}</div><div>${esc(item[field]||"n/a")}</div>`).join("")}</div></div>`).join("") || '<div class="subtle">No guide entries available.</div>';
+    function renderGuideCards(container, items, titleKey, fields, groupKey=""){
+      const fieldLabel = field => ({stage:"Classification",composition:"Composition",transition:"Next transition",notes:"Scope",function:"Function",interactors:"Interactions",remodeling:"Remodeling",helicases:"ATPases / helicases"}[field] || field.replace(/_/g," "));
+      const card = item => `<article class="doc-section"><h3>${esc(item[titleKey]||"")}</h3><div class="kv">${fields.map(field=>`<div>${esc(fieldLabel(field))}</div><div>${esc(item[field]||"n/a")}</div>`).join("")}</div></article>`;
+      if(!items.length){ container.innerHTML='<div class="subtle">No guide entries available.</div>'; return; }
+      if(!groupKey){ container.innerHTML=items.map(card).join(""); return; }
+      const grouped=new Map();
+      for(const item of items){ const group=item[groupKey]||"Other"; if(!grouped.has(group))grouped.set(group,[]); grouped.get(group).push(item); }
+      container.innerHTML=[...grouped.entries()].map(([group,rows])=>`<h3 class="guide-group-heading">${esc(group)}</h3>${rows.map(card).join("")}`).join("");
     }
     function renderProteinComplexGuide(){
       const fields = ["joins","leaves","role","remodeling","key_factors"];
@@ -1976,8 +2006,9 @@ ${await scriptFor(record,"no_maps")}
         {needles:["u2 snrnp","sf3b"], terms:["u2 snrnp","sf3","sf3a","sf3b","u2-associated","u2 associated"]},
         {needles:["u4/u6.u5","tri-snrnp"], terms:["tri-snrnp","u4/u6","u4 snrnp","u6 snrnp","u5 snrnp","lsm","snrnp200","prpf3","prpf4","prpf31"]},
         {needles:["u5 snrnp"], terms:["u5 snrnp","prpf8","prp8","snrnp200","eftud2","prpf6","txnl4a","cd2bp2"]},
-        {needles:["ntc"], terms:["ntc","prpf19","cdc5l","plrg1","bcas2","spf27"]},
-        {needles:["ntr","activation"], terms:["ntr","dhx16","dhx38","dhx8","cwc25","ccdc130","prp2","prp16","prp22","remodel"]},
+        {needles:["ntc-related","ntr complex"], terms:["ntc/ntr related","aquarius","aqr","bud31","ppie","syf1","syf2","isy1","crnkl1","snw1","rbm22","cwc2"]},
+        {needles:["ntc"], terms:["ntc/prp19","prpf19","cdc5l","plrg1","bcas2","spf27"]},
+        {needles:["catalytic atpases","step factors","activation"], terms:["dhx16","dhx38","dhx8","dhx15","cwc25","ccdc49","ccdc94","aquarius","prp2","prp16","prp22","prp43","remodel"]},
         {needles:["ejc"], terms:["ejc","mrnp","eif4a3","magoh","rbm8a","casc3","mln51"]},
         {needles:["disassembly","recycling"], terms:["disassembly","recycling","dhx15","prp43","tfip11","gcfc","paxbp1","gpatch1","dhx35","c19l"]},
       ];
@@ -1997,10 +2028,11 @@ ${await scriptFor(record,"no_maps")}
       els.rnaConsistencyRows.innerHTML = rows.map(x=>`<tr><td><strong>${esc(x.family_label||"")}</strong><br><span class="subtle">${esc(x.sequence_length||"")} nt</span></td><td>${esc(x.label||x.feature)}<br><code>${esc(x.expected_seq_start)}-${esc(x.expected_seq_end)} ${esc(x.expected_sequence||"")}</code></td><td>${rnaConsistencyBadge(x.status)}</td><td>${esc(x.observed_count||"0")} / ${esc(x.missing_count||"0")} / ${esc(x.conflict_count||"0")}</td><td><span class="subtle">seen:</span> ${esc(x.observed_members||"none")}<br>${x.missing_members?`<span class="subtle">missing:</span> ${esc(x.missing_members)}<br>`:""}${x.conflicting_members?`<span class="subtle">conflicts:</span> ${esc(x.conflicting_members)}`:""}</td></tr>`).join("") || '<tr><td colspan="5" class="subtle">No repeated RNA feature audit rows.</td></tr>';
     }
     function renderProteins(){
-      const q = state.query;
+      const q = state.proteinQuery;
       const rows = proteinLookup.filter(p=>proteinComplexMatches(p) && (!q || [p.display_name,p.human_gene,p.protein_name,p.class_family,p.aliases?.join(" "),systematicChainText(p),homologItems(p).map(h=>`${h.species_code} ${h.gene} ${h.entry||""}`).join(" ")].join(" ").toLowerCase().includes(q)));
       const resolved = rows.filter(p=>(p.seen_in_pdb_ids||[]).length);
       const referenceOnly = rows.filter(p=>!(p.seen_in_pdb_ids||[]).length);
+      els.resultSubtitle.textContent = q ? `${rows.length} matching components` : `${proteinLookup.length} component and homolog records`;
       els.proteinCount.textContent = `${resolved.length} resolved; ${referenceOnly.length} reference-only`;
       const rowHtml = p=>{ const color=p.color_hex||""; const homologs=homologItems(p).map(h=>`${esc(h.species_code)}: ${esc(h.gene)}`).join("<br>"); const sysIds=systematicChainHtml(p); return `<tr><td><strong>${esc(p.display_name||p.human_gene||p.color_key||"")}</strong><br><span class="subtle">${esc(p.protein_name||"")}</span></td><td>${esc(p.class_family||"")}</td><td>${esc((p.aliases||[]).join("; "))}</td><td>${color?`<span class="swatch" style="background:${attr(color)}"></span>${esc(color)} <button class="copy-button" onclick="copyText('${attr(color)}', this)">Copy</button>`:""}</td><td>${sysIds || '<span class="subtle">n/a</span>'}</td><td>${homologs}</td><td>${esc((p.seen_in_pdb_ids||[]).slice(0,10).join("; "))}</td></tr>`; };
       els.proteinRows.innerHTML = resolved.map(rowHtml).join("") + (referenceOnly.length ? `<tr><td colspan="7"><details><summary><strong>${referenceOnly.length} reference-only proteins</strong> <span class="subtle">listed in reference/color tables but not resolved in the current PDB set</span></summary><table class="mini-table"><tbody>${referenceOnly.map(rowHtml).join("")}</tbody></table></details></td></tr>` : "");
@@ -2028,7 +2060,24 @@ ${await scriptFor(record,"no_maps")}
       return Object.values(homologs).flat();
     }
     function proteinComplexMatches(p){
-      return state.proteinComplex === "all" || p.class_family === state.proteinComplex || (p.canonical_chain_ids || []).some(c=>c.subcomplex === state.proteinComplex);
+      if(state.proteinComplex === "all") return true;
+      const hay=proteinAssociationText(p);
+      const groups={
+        snrnp_u1:["u1 snrnp","u1-associated","snrnp70","snrpc","snrpa"],
+        snrnp_u2:["u2 snrnp","u2/sf3b","sf3a","sf3b","u2-associated","17s u2"],
+        snrnp_tri:["tri-snrnp","u4/u6","u4 snrnp","u6 snrnp","prpf3","prpf4","prpf31"],
+        snrnp_u5:["u5 snrnp","prpf8","prp8","snrnp200","eftud2","prpf6","txnl4a","cd2bp2"],
+        sm_lsm:["sm ring","lsm"," u1 sm "," u2 sm "," u4 sm "," u5 sm "],
+        ntc:["ntc","prp19","prpf19","cdc5l","plrg1","bcas2","spf27"],
+        ntr:["ntr","dhx16","dhx38","dhx8","dhx15","cwc25","ccdc49","ccdc94","prp2","prp16","prp22","aquarius","remodel"],
+        res:["res complex","bud13","rbmx2","snip1"],
+        step2:["second step","second-step","slu7","prp18","cactin"],
+        ejc:["ejc","mrnp","eif4a3","magoh","rbm8a","casc3","mln51"],
+        disassembly:["disassembly","recycling","tfip11","gcfc","paxbp1","gpatch1","dhx35","c19l"]
+      };
+      const matches = terms => (terms||[]).some(term=>hay.includes(term));
+      if(state.proteinComplex === "other") return !Object.values(groups).some(matches);
+      return matches(groups[state.proteinComplex]);
     }
     function proteinAssociationText(p){
       return [p.display_name,p.human_gene,p.protein_name,p.class_family,p.color_key,(p.aliases||[]).join(" "),(p.canonical_chain_ids||[]).map(c=>[c.identity||c.canonical_identity,c.subcomplex,c.chain_id].join(" ")).join(" ")].join(" ").toLowerCase();

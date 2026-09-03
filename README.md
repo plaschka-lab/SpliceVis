@@ -1,8 +1,8 @@
-# Spliceosome Cryo-EM ChimeraX Scripts
+# SpliceVis
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21168651.svg)](https://doi.org/10.5281/zenodo.21168651)
 
-Lightweight static dashboard for copying ChimeraX scripts for spliceosome cryo-EM PDB entries.
+Static public atlas for exploring deposited spliceosome structures in an interactive, consistently colored 3D viewer and continuing the same visualization workflow in ChimeraX.
 
 - 146 deposited PDB entries.
 - Original deposited chain identifiers by default, with optional in-session systematic chain renaming.
@@ -12,6 +12,7 @@ Lightweight static dashboard for copying ChimeraX scripts for spliceosome cryo-E
 - Primary-map script variants use `open emdb:<id>` so ChimeraX can download deposited primary EMDB maps on demand.
 - Systematic-chain script variants use model-scoped two-step `changechains` commands through temporary safe-harbor IDs; no renamed CIF files are bundled.
 - GUI ChimeraX scripts fetch a small named-selection browser from GitHub for search, select, zoom, and RNA-label toggle actions.
+- Mol* models use the SpliceVis protein and RNA-feature colors, with clickable controls linked to the reference-anchored RNA sequence viewer.
 
 The **Refine** control beside the main search adds state, species, pre-mRNA substrate-family, RNA-feature, and sort filters without permanently occupying the atlas workspace. Recurrent substrates are assigned conservatively from deposited construct names, manual curation, exact sequence or intron matches, and high-identity alignment to literature-defined reference constructs. Ambiguous substrate-like RNAs remain explicitly review-required. The RNA Annotations panel provides an annotated GenBank reference, a reference-anchored multiple-sequence alignment showing which residues are modelled in each structure, and a table projecting each reference feature onto the deposited polymer sequences. These projections are exposed for audit and manual curation; they do not silently overwrite structure-level feature annotations.
 
@@ -41,4 +42,4 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis --with-primary-maps
 Open `index.html` locally, or use the GitHub Pages dashboard:
 https://plaschka-lab.github.io/SpliceVis/
 
-Internal local CIF-only examples are intentionally excluded.
+Only released PDB entries are included in the public atlas.
