@@ -110,16 +110,20 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1615.8" cy="362.9" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1670.4" cy="362.9" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1725.0" cy="362.9" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
-<circle cx="1015.0" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1069.6" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1124.2" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1178.8" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1233.5" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1288.1" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1342.7" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1397.3" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1451.9" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1506.5" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
+<circle cx="1015.0" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1069.6" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1124.2" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1178.8" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1233.5" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1288.1" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1342.7" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1397.3" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1451.9" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1506.5" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1561.2" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1615.8" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1670.4" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
+<circle cx="1725.0" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>intron; confidence high</title></circle>
 <circle cx="1561.2" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1615.8" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1670.4" cy="362.9" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
@@ -139,8 +143,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1615.8" y="362.9" class="base" fill="#303030"><title>/G seq 37 auth 140</title>A</text>
 <text x="1670.4" y="362.9" class="base" fill="#303030"><title>/G seq 38 auth 141</title>C</text>
 <text x="1725.0" y="362.9" class="base" fill="#303030"><title>/G seq 39 auth 142</title>U</text>
-<path d="M1370.0,362.9 L1413.5,342.6" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1413.5" y="342.6" class="feature-label" text-anchor="start" fill="#303030">BP region nt 129-142</text>
+<path d="M1643.1,362.9 L1601.5,338.9" class="feature-callout" stroke="#303030" opacity="0.60"/>
+<text x="1601.5" y="338.9" class="feature-label" text-anchor="end" fill="#303030">BP region nt 139-142</text>
 <path d="M1206.2,362.9 Q871.5,317.9 536.8,514.3" class="inter" stroke-width="1.5"><title>G:29-30 to H:43-44; 2 FR3D interactions; cWW</title></path>
 <path d="M1615.8,362.9 Q935.4,317.9 255.0,514.3" class="inter" stroke-width="2.2"><title>G:35-39 to H:35-39; 5 FR3D interactions; cWW</title></path>
 <path d="M255.0,514.3 Q935.4,317.9 1615.8,362.9" class="inter" stroke-width="2.2"><title>H:35-39 to G:35-39; 5 FR3D interactions; cWW</title></path>
@@ -149,9 +153,11 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="77.0" cy="761.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="90.0" y="765.0" class="small">substrate</text>
 <circle cx="287.0" cy="761.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="300.0" y="765.0" class="small">branch point region</text>
-<circle cx="497.0" cy="761.0" r="7" fill="#0b6e2d" opacity="0.28"/>
-<text x="510.0" y="765.0" class="small">U2 branchpoint pairing region</text>
-<circle cx="707.0" cy="761.0" r="7" fill="#167a38" opacity="0.28"/>
-<text x="720.0" y="765.0" class="small">U2 stem IIa</text>
+<text x="300.0" y="765.0" class="small">intron</text>
+<circle cx="497.0" cy="761.0" r="7" fill="#303030" opacity="0.28"/>
+<text x="510.0" y="765.0" class="small">branch point region</text>
+<circle cx="707.0" cy="761.0" r="7" fill="#0b6e2d" opacity="0.28"/>
+<text x="720.0" y="765.0" class="small">U2 branchpoint pairing region</text>
+<circle cx="917.0" cy="761.0" r="7" fill="#167a38" opacity="0.28"/>
+<text x="930.0" y="765.0" class="small">U2 stem IIa</text>
 </svg>

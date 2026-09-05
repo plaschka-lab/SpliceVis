@@ -20,11 +20,12 @@ html.chimerax main{padding:4px 6px}html.chimerax h1,html.chimerax h2,html.chimer
 <p class="intro">Feature positions are projected from reference coordinates onto alignment columns. Click a modelled nucleotide, or drag across a modelled range in one deposited chain, to focus it in the dashboard Mol* viewer.</p>
 <p class="chimerax-help">Click a blue modelled nucleotide, or drag across one deposited chain, to select and focus the corresponding residue(s) in ChimeraX.</p>
 <div id="alignment" class="alignment-panel"></div>
+<label id="fullReferenceControl" hidden style="font-size:11px;color:#586574" title="Unmodelled terminal MS2 tags are collapsed in this view. Downloads retain the complete reference sequence and its original numbering."><input id="fullReference" type="checkbox">Full reference (include unmodelled MS2 tag)</label>
 <div id="selectionStatus" class="selection-status" hidden><strong id="selectionLabel"></strong><span id="selectionCommand"></span><a id="chimeraxLink" href="#" title="Runs the selection command when this page is open in the ChimeraX Help Viewer">Focus in ChimeraX</a><button type="button" id="copyChimerax">Copy ChimeraX command</button></div>
 <div class="legend"><span><i class="swatch modelled"></i>modelled</span><span><i class="swatch unresolved"></i>sequence record, not modelled</span><span><i class="swatch mismatch"></i>reference mismatch</span><span><i class="swatch gap"></i>alignment gap</span></div>
 <div class="feature-index"><span class="feature-chip"><i style="background:#1B3CD0"></i>loop I <strong>38-42</strong></span></div>
 <section class="coverage-section"><h2>Modelled-residue coverage</h2><div class="coverage-wrap"><table class="coverage"><thead><tr><th>PDB</th><th>Chain</th><th>Sequence nt</th><th>Modelled nt</th><th>Coverage</th><th>Modelled label-sequence ranges</th></tr></thead><tbody><tr><td>6AHD</td><td>B</td><td>117</td><td>115</td><td>98.3%</td><td><code>3-117</code></td></tr></tbody></table></div></section>
-<script id="alignmentData" type="application/json">{"reference_sequence":"AUACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUCUUAACCCAAUUUUUUGAGGCCUUGCUUUGGCAAGGCUA","alignment_length":117,"features":[{"feature":"U5_loop_I","label":"loop I","start":38,"end":42,"alignment_start":38,"alignment_end":42,"color":"#1B3CD0"}],"records":[{"id":"REFERENCE","label":"Reference","pdb_id":"","chain":"","systematic_chain":"","model_id":"","sequence":"AUACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUCUUAACCCAAUUUUUUGAGGCCUUGCUUUGGCAAGGCUA","mask":"---------------------------------------------------------------------------------------------------------------------","reference":true,"sequence_positions":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117],"auth_positions":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]},{"id":"6ahd:B","label":"6AHD:B","pdb_id":"6ahd","chain":"B","systematic_chain":"5","model_id":"366.1","sequence":"AUACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUCUUAACCCAAUUUUUUGAGGCCUUGCUUUGGCAAGGCUA","mask":"..MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM","reference":false,"sequence_positions":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117],"auth_positions":[null,null,"3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117"]}]}</script>
+<script id="alignmentData" type="application/json">{"reference_sequence":"AUACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUCUUAACCCAAUUUUUUGAGGCCUUGCUUUGGCAAGGCUA","alignment_length":117,"features":[{"feature":"U5_loop_I","label":"loop I","start":38,"end":42,"alignment_start":38,"alignment_end":42,"color":"#1B3CD0"}],"records":[{"id":"REFERENCE","label":"Reference","pdb_id":"","chain":"","systematic_chain":"","model_id":"","sequence":"AUACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUCUUAACCCAAUUUUUUGAGGCCUUGCUUUGGCAAGGCUA","mask":"---------------------------------------------------------------------------------------------------------------------","reference":true,"sequence_positions":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117],"auth_positions":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]},{"id":"6ahd:B","label":"6AHD:B","pdb_id":"6ahd","chain":"B","systematic_chain":"5","model_id":"366.1","sequence":"AUACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUCUUAACCCAAUUUUUUGAGGCCUUGCUUUGGCAAGGCUA","mask":"..MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM","reference":false,"sequence_positions":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117],"auth_positions":[null,null,"3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117"]}],"display_start":1,"display_end":117}</script>
 <script>
 const data=JSON.parse(document.getElementById("alignmentData").textContent);
 const alignment=document.getElementById("alignment");
@@ -49,13 +50,23 @@ function featureLanes(features,startKey="start",endKey="end"){
   return lanes;
 }
 function featureMarkup(features,segmentStart,segmentEnd,startKey,endKey){
-  const visible=features.filter(feature=>feature[endKey]>=segmentStart&&feature[startKey]<=segmentEnd);
-  const lanes=featureLanes(visible,startKey,endKey);
+  const measure=document.createElement("canvas").getContext("2d");
+  measure.font="13px ui-monospace, monospace";
+  const baseWidth=measure.measureText("M").width;
+  measure.font="600 11px system-ui";
+  const length=segmentEnd-segmentStart+1;
+  const visible=features.filter(feature=>feature[endKey]>=segmentStart&&feature[startKey]<=segmentEnd).map(feature=>{
+    const start=Math.max(feature[startKey],segmentStart),end=Math.min(feature[endKey],segmentEnd);
+    const width=Math.min(length,measure.measureText(feature.label).width/baseWidth+2);
+    const center=Math.max(segmentStart+width/2,Math.min(segmentEnd+1-width/2,(start+end+1)/2));
+    return {...feature,visualStart:Math.min(start,center-width/2),visualEnd:Math.max(end+1,center+width/2),labelCenter:center,labelWidth:width};
+  });
+  const lanes=featureLanes(visible,"visualStart","visualEnd");
   if(!lanes.length)return "";
   return lanes.map(lane=>`<div class="track-grid"><div class="track-label"></div><div class="track-content feature-lane" style="width:calc(${segmentEnd-segmentStart+1} * 1ch)">${lane.map(feature=>{
     const start=Math.max(feature[startKey],segmentStart),end=Math.min(feature[endKey],segmentEnd);
     const label=`${feature.label} (${feature.start}-${feature.end})`;
-    return `<span class="feature-bar" title="${escapeHtml(label)}" style="left:calc(${start-segmentStart} * 1ch);width:calc(${end-start+1} * 1ch);background:${feature.color}"><span class="feature-name">${escapeHtml(label)}</span></span>`;
+    return `<span class="feature-bar" title="${escapeHtml(label)}" style="left:calc(${start-segmentStart} * 1ch);width:calc(${end-start+1} * 1ch);background:${feature.color}"><span class="feature-name" style="left:${(feature.labelCenter-start)*baseWidth}px;max-width:${feature.labelWidth*baseWidth}px;overflow:hidden;text-overflow:ellipsis">${escapeHtml(feature.label)}</span></span>`;
   }).join("")}</div></div>`).join("");
 }
 function sequenceMarkup(record,start,end){
@@ -81,11 +92,15 @@ function alignmentBlock(start,end,continuous=false){
 }
 function render(){
   const width=Number(lineWidth.value)||100;
+  const full=document.getElementById("fullReference").checked;
+  const first=full?1:data.display_start,last=full?data.alignment_length:data.display_end;
+  document.getElementById("fullReferenceControl").hidden=data.display_start===1&&data.display_end===data.alignment_length;
+  document.querySelectorAll(".feature-index .feature-chip").forEach((chip,index)=>{const feature=data.features[index];chip.hidden=feature.alignment_end<first||feature.alignment_start>last;chip.style.display=chip.hidden?"none":""});
   if(viewMode==="continuous"){
-    alignment.innerHTML=`<div class="scroll-shell">${alignmentBlock(1,data.alignment_length,true)}</div>`;
+    alignment.innerHTML=`<div class="scroll-shell">${alignmentBlock(first,last,true)}</div>`;
     lineWidth.disabled=true;
   }else{
-    const alignmentBlocks=[];for(let start=1;start<=data.alignment_length;start+=width)alignmentBlocks.push(alignmentBlock(start,Math.min(start+width-1,data.alignment_length)));
+    const alignmentBlocks=[];for(let start=first;start<=last;start+=width)alignmentBlocks.push(alignmentBlock(start,Math.min(start+width-1,last)));
     alignment.innerHTML=`<div class="wrap-shell">${alignmentBlocks.join("")}</div>`;
     lineWidth.disabled=false;
   }
@@ -133,5 +148,6 @@ function bindResidueSelection(){
 document.addEventListener("pointerup",()=>{if(dragStart)finishSelection()});
 document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>{viewMode=button.dataset.view;document.querySelectorAll("[data-view]").forEach(item=>item.classList.toggle("active",item===button));render()}));
 document.getElementById("copyChimerax").addEventListener("click",async()=>{if(!lastSelection)return;await navigator.clipboard.writeText(lastSelection.command);document.getElementById("copyChimerax").textContent="Copied";setTimeout(()=>document.getElementById("copyChimerax").textContent="Copy ChimeraX command",1200)});
+document.getElementById("fullReference").addEventListener("change",render);
 lineWidth.addEventListener("change",render);render();
 </script></main></body></html>

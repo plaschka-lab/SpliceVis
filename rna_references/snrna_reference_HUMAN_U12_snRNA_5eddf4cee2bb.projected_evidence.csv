@@ -1,6 +1,0 @@
-member,feature,label,start,end,coverage,confidence,method
-7dvq:H,U12_U6atac_helix_I_partner,U12/U6atac helix I partner,2,11,1.000,high,reference-alignment
-7dvq:H,U12_branchpoint_pairing_region,branchpoint pairing region,16,26,1.000,high,reference-alignment
-7dvq:H,U12_Sm_site,Sm site,75,81,1.000,medium,sequence-motif
-8y7e:H,U12_branchpoint_pairing_region,branchpoint pairing region,16,26,1.000,high,reference-alignment
-8y7e:H,U12_Sm_site,Sm site,75,81,1.000,medium,sequence-motif

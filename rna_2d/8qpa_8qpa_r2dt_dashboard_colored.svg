@@ -32,34 +32,34 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <line x1="594.0" y1="447.6" x2="563.3" y2="447.6" class="bp"><title>cWW auth 49-23; seq 49-23</title></line>
 <line x1="594.0" y1="469.5" x2="563.3" y2="469.5" class="bp"><title>cWW auth 50-22; seq 50-22</title></line>
 <line x1="594.0" y1="491.4" x2="563.3" y2="491.4" class="bp"><title>cWW auth 51-21; seq 51-21</title></line>
-<circle cx="125.0" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="146.9" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="168.8" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="190.7" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="212.7" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="234.6" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="256.5" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="278.4" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="300.3" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="322.2" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="344.1" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="366.0" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="388.0" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="409.9" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="431.8" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="453.7" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="475.6" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="497.5" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="703.5" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="725.4" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="747.3" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="769.3" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="791.2" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="813.1" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="835.0" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="791.2" cy="491.4" r="9.2" fill="#f0df2e" opacity="0.14"><title>Brr2 loading region; confidence low</title></circle>
-<circle cx="813.1" cy="491.4" r="9.2" fill="#f0df2e" opacity="0.14"><title>Brr2 loading region; confidence low</title></circle>
-<circle cx="835.0" cy="491.4" r="9.2" fill="#f0df2e" opacity="0.14"><title>Brr2 loading region; confidence low</title></circle>
+<circle cx="125.0" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="146.9" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="168.8" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="190.7" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="212.7" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="234.6" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="256.5" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="278.4" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="300.3" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="322.2" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="344.1" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="366.0" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="388.0" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="409.9" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="431.8" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="453.7" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="475.6" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="497.5" cy="491.4" r="9.2" fill="#e0cf1a" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="703.5" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="725.4" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="747.3" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="769.3" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="791.2" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="813.1" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="835.0" cy="491.4" r="9.2" fill="#d8c800" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="791.2" cy="491.4" r="9.2" fill="#f0df2e" opacity="0.22"><title>Brr2 loading region; confidence medium</title></circle>
+<circle cx="813.1" cy="491.4" r="9.2" fill="#f0df2e" opacity="0.22"><title>Brr2 loading region; confidence medium</title></circle>
+<circle cx="835.0" cy="491.4" r="9.2" fill="#f0df2e" opacity="0.22"><title>Brr2 loading region; confidence medium</title></circle>
 <text x="125.0" y="491.4" class="base" fill="#F2D94E"><title>/4 seq 1 auth 1</title>A</text>
 <text x="146.9" y="491.4" class="base" fill="#F2D94E"><title>/4 seq 2 auth 2</title>G</text>
 <text x="168.8" y="491.4" class="base" fill="#F2D94E"><title>/4 seq 3 auth 3</title>C</text>
@@ -128,11 +128,11 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="801.2" y="479.4" class="small" fill="#94a3b8">60</text>
 <text x="813.1" y="491.4" class="base" fill="#F2D94E"><title>/4 seq 61 auth 61</title>A</text>
 <text x="835.0" y="491.4" class="base" fill="#F2D94E"><title>/4 seq 62 auth 62</title>U</text>
-<path d="M311.3,491.4 L269.7,467.4" class="feature-callout" stroke="#d8c800" opacity="0.60"/>
-<text x="269.7" y="467.4" class="feature-label" text-anchor="end" fill="#d8c800">U4/U6 stem I nt 1-18</text>
-<path d="M769.3,491.4 L749.0,534.9" class="feature-callout" stroke="#e0cf1a" opacity="0.60"/>
-<text x="749.0" y="534.9" class="feature-label" text-anchor="end" fill="#e0cf1a">U4/U6 stem II nt 56-62</text>
-<path d="M813.1,491.4 L771.5,515.4" class="feature-callout" stroke="#f0df2e" opacity="0.46"/>
+<path d="M311.3,491.4 L269.7,467.4" class="feature-callout" stroke="#e0cf1a" opacity="0.60"/>
+<text x="269.7" y="467.4" class="feature-label" text-anchor="end" fill="#e0cf1a">U4/U6 stem II nt 1-18</text>
+<path d="M769.3,491.4 L749.0,534.9" class="feature-callout" stroke="#d8c800" opacity="0.60"/>
+<text x="749.0" y="534.9" class="feature-label" text-anchor="end" fill="#d8c800">U4/U6 stem I nt 56-62</text>
+<path d="M813.1,491.4 L771.5,515.4" class="feature-callout" stroke="#f0df2e" opacity="0.54"/>
 <text x="771.5" y="515.4" class="feature-label" text-anchor="end" fill="#f0df2e">Brr2 region nt 60-62</text>
 <rect x="960.0" y="92.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="120.0" class="label" style="font-size:16px;fill:#4F9FD3">U5 snRNA /5 -&gt; 5</text>
@@ -329,28 +329,54 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="325.7" cy="988.7" r="9.2" fill="#dc143c" opacity="0.28"><title>ACAGAGA box; confidence high</title></circle>
 <circle cx="341.1" cy="988.7" r="9.2" fill="#dc143c" opacity="0.28"><title>ACAGAGA box; confidence high</title></circle>
 <circle cx="356.5" cy="988.7" r="9.2" fill="#dc143c" opacity="0.28"><title>ACAGAGA box; confidence high</title></circle>
-<circle cx="433.7" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="449.1" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="464.6" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="480.0" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="495.4" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="510.9" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="526.3" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="541.7" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="557.2" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="572.6" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
-<circle cx="603.5" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="618.9" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="634.3" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="649.8" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="665.2" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="680.7" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="696.1" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="711.5" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="727.0" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="742.4" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="757.8" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
-<circle cx="773.3" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="433.7" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="449.1" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="464.6" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="480.0" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="495.4" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="510.9" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="526.3" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="541.7" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="557.2" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="572.6" cy="988.7" r="9.2" fill="#d9183e" opacity="0.28"><title>U4/U6 stem I partner; confidence high</title></circle>
+<circle cx="449.1" cy="988.7" r="9.2" fill="#c91236" opacity="0.28"><title>AGC catalytic triad; confidence high</title></circle>
+<circle cx="464.6" cy="988.7" r="9.2" fill="#c91236" opacity="0.28"><title>AGC catalytic triad; confidence high</title></circle>
+<circle cx="480.0" cy="988.7" r="9.2" fill="#c91236" opacity="0.28"><title>AGC catalytic triad; confidence high</title></circle>
+<circle cx="495.4" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="510.9" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="526.3" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="541.7" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="557.2" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="572.6" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="588.0" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="603.5" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="618.9" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="634.3" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="649.8" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="665.2" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="680.7" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="696.1" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="711.5" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="727.0" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="742.4" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="757.8" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="773.3" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="788.7" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="804.1" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="819.6" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="835.0" cy="988.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="603.5" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="618.9" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="634.3" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="649.8" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="665.2" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="680.7" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="696.1" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="711.5" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="727.0" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="742.4" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="757.8" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
+<circle cx="773.3" cy="988.7" r="9.2" fill="#e01842" opacity="0.28"><title>U4/U6 stem II partner; confidence high</title></circle>
 <text x="125.0" y="988.7" class="base" fill="#EF4444"><title>/6 seq 32 auth 32</title>U</text>
 <text x="140.4" y="988.7" class="base" fill="#EF4444"><title>/6 seq 33 auth 33</title>G</text>
 <text x="155.9" y="988.7" class="base" fill="#EF4444"><title>/6 seq 34 auth 34</title>G</text>
@@ -408,16 +434,20 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="260.9" y="1012.7" class="feature-label" text-anchor="end" fill="#e01842">5&#x27;SS contact nt 38-49</text>
 <path d="M310.2,988.7 L289.9,945.2" class="feature-callout" stroke="#dc143c" opacity="0.60"/>
 <text x="289.9" y="945.2" class="feature-label" text-anchor="end" fill="#dc143c">ACAGAGA nt 41-47</text>
-<path d="M503.2,988.7 L523.4,1032.2" class="feature-callout" stroke="#e01842" opacity="0.60"/>
-<text x="523.4" y="1032.2" class="feature-label" text-anchor="start" fill="#e01842">U4/U6 stem II nt 52-61</text>
-<path d="M688.4,988.7 L646.8,964.7" class="feature-callout" stroke="#d9183e" opacity="0.60"/>
-<text x="646.8" y="964.7" class="feature-label" text-anchor="end" fill="#d9183e">U4/U6 stem I nt 63-74</text>
+<path d="M503.2,988.7 L523.4,1032.2" class="feature-callout" stroke="#d9183e" opacity="0.60"/>
+<text x="523.4" y="1032.2" class="feature-label" text-anchor="start" fill="#d9183e">U4/U6 stem I nt 52-61</text>
+<path d="M464.6,988.7 L423.0,1012.7" class="feature-callout" stroke="#c91236" opacity="0.60"/>
+<text x="423.0" y="1012.7" class="feature-label" text-anchor="end" fill="#c91236">AGC triad nt 53-55</text>
+<path d="M665.2,988.7 L685.5,1032.2" class="feature-callout" stroke="#d61a3d" opacity="0.54"/>
+<text x="685.5" y="1032.2" class="feature-label" text-anchor="start" fill="#d61a3d">ISL nt 56-78</text>
+<path d="M688.4,988.7 L646.8,964.7" class="feature-callout" stroke="#e01842" opacity="0.60"/>
+<text x="646.8" y="964.7" class="feature-label" text-anchor="end" fill="#e01842">U4/U6 stem II nt 63-74</text>
 <rect x="960.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /z -&gt; M</text>
 <polyline points="1015.0,988.2 1056.8,988.2 1098.5,988.2 1140.3,988.2 1182.1,988.2 1223.8,988.2 1265.6,988.2 1307.4,988.2 1349.1,988.2 1390.9,988.2 1432.6,988.2 1474.4,988.2 1516.2,988.2 1557.9,988.2 1599.7,988.2 1641.5,988.2 1683.2,988.2 1725.0,988.2" class="backbone"/>
-<circle cx="1015.0" cy="988.2" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1056.8" cy="988.2" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1098.5" cy="988.2" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1015.0" cy="988.2" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1056.8" cy="988.2" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1098.5" cy="988.2" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
 <circle cx="1015.0" cy="988.2" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1056.8" cy="988.2" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1098.5" cy="988.2" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -476,8 +506,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1641.5" y="988.2" class="base" fill="#303030"><title>/z seq 16 auth 13</title>C</text>
 <text x="1683.2" y="988.2" class="base" fill="#303030"><title>/z seq 17 auth 14</title>C</text>
 <text x="1725.0" y="988.2" class="base" fill="#303030"><title>/z seq 18 auth 15</title>A</text>
-<path d="M1056.8,988.2 L1100.3,967.9" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
-<text x="1100.3" y="967.9" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -3--1</text>
+<path d="M1056.8,988.2 L1100.3,967.9" class="feature-callout" stroke="#FF9D00" opacity="0.54"/>
+<text x="1100.3" y="967.9" class="feature-label" text-anchor="start" fill="#FF9D00">5&#x27; exon nt -3--1</text>
 <path d="M1244.7,988.2 L1288.2,967.9" class="feature-callout" stroke="#303030" opacity="0.54"/>
 <text x="1288.2" y="967.9" class="feature-label" text-anchor="start" fill="#303030">? 5&#x27;SS nt 1-6</text>
 <path d="M314.4,491.4 Q477.1,446.4 639.9,988.7" class="inter" stroke-width="4.2"><title>4:2-17 to 6:58-73; 14 FR3D interactions; cWW</title></path>
@@ -490,7 +520,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M1486.9,988.2 Q850.0,943.2 213.0,988.7" class="inter" stroke-width="3.3"><title>z:7-17 to 6:33-43; 10 FR3D interactions; cWW</title></path>
 <text x="70" y="1364.0" class="label" style="font-size:15px">Feature overlays</text>
 <text x="70.0" y="1390.0" class="small">? label prefix = uncertain RNA-feature assignment; inspect validation notes before interpretation.</text>
-<circle cx="77.0" cy="1410.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<circle cx="77.0" cy="1410.0" r="7" fill="#FF9D00" opacity="0.28"/>
 <text x="90.0" y="1414.0" class="small">exon 5</text>
 <circle cx="287.0" cy="1410.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="300.0" y="1414.0" class="small">substrate</text>
@@ -498,10 +528,10 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="510.0" y="1414.0" class="small">five prime splice site</text>
 <circle cx="707.0" cy="1410.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="720.0" y="1414.0" class="small">intron</text>
-<circle cx="917.0" cy="1410.0" r="7" fill="#d8c800" opacity="0.28"/>
-<text x="930.0" y="1414.0" class="small">U4 U6 stem I partner</text>
-<circle cx="1127.0" cy="1410.0" r="7" fill="#e0cf1a" opacity="0.28"/>
-<text x="1140.0" y="1414.0" class="small">U4 U6 stem II partner</text>
+<circle cx="917.0" cy="1410.0" r="7" fill="#e0cf1a" opacity="0.28"/>
+<text x="930.0" y="1414.0" class="small">U4 U6 stem II partner</text>
+<circle cx="1127.0" cy="1410.0" r="7" fill="#d8c800" opacity="0.28"/>
+<text x="1140.0" y="1414.0" class="small">U4 U6 stem I partner</text>
 <circle cx="1337.0" cy="1410.0" r="7" fill="#f0df2e" opacity="0.28"/>
 <text x="1350.0" y="1414.0" class="small">U4 Brr2 loading region</text>
 <circle cx="1547.0" cy="1410.0" r="7" fill="#1b3cd0" opacity="0.28"/>
@@ -512,8 +542,12 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="300.0" y="1437.0" class="small">U6 5SS upstream contact</text>
 <circle cx="497.0" cy="1433.0" r="7" fill="#dc143c" opacity="0.28"/>
 <text x="510.0" y="1437.0" class="small">U6 ACAGAGA box</text>
-<circle cx="707.0" cy="1433.0" r="7" fill="#e01842" opacity="0.28"/>
-<text x="720.0" y="1437.0" class="small">U6 U4 stem II partner</text>
-<circle cx="917.0" cy="1433.0" r="7" fill="#d9183e" opacity="0.28"/>
-<text x="930.0" y="1437.0" class="small">U6 U4 stem I partner</text>
+<circle cx="707.0" cy="1433.0" r="7" fill="#d9183e" opacity="0.28"/>
+<text x="720.0" y="1437.0" class="small">U6 U4 stem I partner</text>
+<circle cx="917.0" cy="1433.0" r="7" fill="#c91236" opacity="0.28"/>
+<text x="930.0" y="1437.0" class="small">U6 AGC catalytic triad</text>
+<circle cx="1127.0" cy="1433.0" r="7" fill="#d61a3d" opacity="0.28"/>
+<text x="1140.0" y="1437.0" class="small">U6 ISL</text>
+<circle cx="1337.0" cy="1433.0" r="7" fill="#e01842" opacity="0.28"/>
+<text x="1350.0" y="1437.0" class="small">U6 U4 stem II partner</text>
 </svg>

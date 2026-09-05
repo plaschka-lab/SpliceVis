@@ -566,6 +566,24 @@
       "label_category_model_id": "373.2.5",
       "label_group_model_id": "373.2",
       "label_default_visible": ""
+    },
+    {
+      "name": "pre_Bact_7ABF_U6_ISL",
+      "label": "U6 snRNA internal stem-loop core",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA internal stem-loop core: residues 58-76, reference-alignment, medium confidence",
+      "atomspec": "#373.1/6:58-76",
+      "family": "RNA",
+      "group": "internal stem loops",
+      "group_key": "internal_stem_loops",
+      "kind": "rna_feature",
+      "feature": "U6_ISL",
+      "color": "#D61A3D",
+      "label_model_id": "373.2.3.2",
+      "label_category_model_id": "373.2.3",
+      "label_group_model_id": "373.2",
+      "label_default_visible": ""
     }
   ]
 }

@@ -1,5 +1,7 @@
 LOCUS       YEAST_U4_snRNA           160 bp    RNA              UNK 01-JAN-1980
-DEFINITION  YEAST_U4 snRNA; snrna_reference; reference=5zwm:I; members=7.
+DEFINITION  YEAST_U4 snRNA; snrna_reference; reference=YEAST_U4; source=Curated
+            U4/U6 reference intervals; other tracks are projected
+            sequence-region annotations, not folding evidence; members=7.
 ACCESSION   YEAST_U4_snRNA
 VERSION     YEAST_U4_snRNA
 KEYWORDS    .
@@ -8,25 +10,27 @@ SOURCE      .
             .
 FEATURES             Location/Qualifiers
      misc_feature    1..18
-                     /label="U4/U6 stem I partner"
-                     /note="feature=U4_U6_stem_I_partner; support=6/7; projected
-                     by global alignment; members=3jcm:E, 5gan:V, 5gap:V,
-                     5nrl:4, 5zwm:I, 5zwo:I"
-                     /ApEinfo_fwdcolor="#D8C800"
-                     /ApEinfo_revcolor="#D8C800"
-     misc_feature    57..64
                      /label="U4/U6 stem II partner"
-                     /note="feature=U4_U6_stem_II_partner; support=5/7;
-                     projected by global alignment; members=3jcm:E, 5gan:V,
-                     5nrl:4, 5zwm:I, 5zwo:I"
+                     /note="feature=U4_U6_stem_II_partner; support=0/7; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#E0CF1A"
                      /ApEinfo_revcolor="#E0CF1A"
+     misc_feature    57..64
+                     /label="U4/U6 stem I partner"
+                     /note="feature=U4_U6_stem_I_partner; support=0/7; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
+                     /ApEinfo_fwdcolor="#D8C800"
+                     /ApEinfo_revcolor="#D8C800"
      misc_feature    60..95
                      /label="Brr2 loading region"
-                     /note="feature=U4_Brr2_loading_region; support=6/7; merged
-                     overlapping projected intervals; projected by global
-                     alignment; members=3jcm:E, 5gan:V, 5nrl:4, 5zwm:I, 5zwo:I;
-                     projected by global alignment; members=5gao:V"
+                     /note="feature=U4_Brr2_loading_region; support=0/7; Curated
+                     species-reference interval; medium; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#808080"
                      /ApEinfo_revcolor="#808080"
      misc_feature    144..150

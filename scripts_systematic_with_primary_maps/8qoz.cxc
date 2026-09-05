@@ -186,12 +186,12 @@ name pre_B_8QOZ_5SS #350.1/M:1-6
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
 name pre_B_8QOZ_intron #350.1/M:1-8
 # Named selections for resolved snRNA functional regions.
-# U4 snRNA U4/U6 stem I partner: residues 1-18, reference-alignment, high confidence
-# selector_meta {"color":"#D8C800","family":"RNA","feature":"U4_U6_stem_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name pre_B_8QOZ_U4_U6_stem_I_partner #350.1/4:1-18
-# U4 snRNA U4/U6 stem II partner: residues 56-64, reference-alignment, high confidence
+# U4 snRNA U4/U6 stem II partner: residues 1-18, reference-alignment, high confidence
 # selector_meta {"color":"#E0CF1A","family":"RNA","feature":"U4_U6_stem_II_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
-name pre_B_8QOZ_U4_U6_stem_II_partner #350.1/4:56-64
+name pre_B_8QOZ_U4_U6_stem_II_partner #350.1/4:1-18
+# U4 snRNA U4/U6 stem I partner: residues 56-64, reference-alignment, high confidence
+# selector_meta {"color":"#D8C800","family":"RNA","feature":"U4_U6_stem_I_partner","group":"snRNA-snRNA interacting regions","group_key":"snRNA_snRNA_regions","kind":"rna_feature"}
+name pre_B_8QOZ_U4_U6_stem_I_partner #350.1/4:56-64
 # U4 snRNA Brr2 loading region: residues 60-80, reference-alignment, medium confidence
 # selector_meta {"color":"#F0DF2E","family":"RNA","feature":"U4_Brr2_loading_region","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name pre_B_8QOZ_U4_Brr2_loading_region #350.1/4:60-80
@@ -207,12 +207,18 @@ name pre_B_8QOZ_U6_5SS_upstream_contact #350.1/6:38-49
 # U6 snRNA ACAGAGA box: residues 41-47, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name pre_B_8QOZ_U6_ACAGAGA_box #350.1/6:41-47
-# U6 snRNA U4/U6 stem II partner: residues 52-61, reference-alignment, high confidence
-# selector_meta {"color":"#E01842","family":"RNA","feature":"U6_U4_stem_II_partner","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name pre_B_8QOZ_U6_U4_stem_II_partner #350.1/6:52-61
-# U6 snRNA U4/U6 stem I partner: residues 63-74, reference-alignment, high confidence
+# U6 snRNA U4/U6 stem I partner: residues 52-61, reference-alignment, high confidence
 # selector_meta {"color":"#D9183E","family":"RNA","feature":"U6_U4_stem_I_partner","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
-name pre_B_8QOZ_U6_U4_stem_I_partner #350.1/6:63-74
+name pre_B_8QOZ_U6_U4_stem_I_partner #350.1/6:52-61
+# U6 snRNA AGC catalytic triad: residues 53-55, reference-alignment, high confidence
+# selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
+name pre_B_8QOZ_U6_AGC_catalytic_triad #350.1/6:53-55
+# U6 snRNA internal stem-loop core: residues 56-78, reference-alignment, medium confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name pre_B_8QOZ_U6_ISL #350.1/6:56-78
+# U6 snRNA U4/U6 stem II partner: residues 63-74, reference-alignment, high confidence
+# selector_meta {"color":"#E01842","family":"RNA","feature":"U6_U4_stem_II_partner","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
+name pre_B_8QOZ_U6_U4_stem_II_partner #350.1/6:63-74
 # RNA feature nucleotide display.
 select #350.1 & nucleic
 nucleotides sel atoms
@@ -224,13 +230,13 @@ nucleotides sel fill
 select clear
 # 5'SS: residues 1-6
 # intron: residues 1-8
-# U4/U6 stem I: residues 1-18
-color #350.1/4:1-18 #D8C800
+# U4/U6 stem II: residues 1-18
+color #350.1/4:1-18 #E0CF1A
 select #350.1/4:1-18
 nucleotides sel fill
 select clear
-# U4/U6 stem II: residues 56-64
-color #350.1/4:56-64 #E0CF1A
+# U4/U6 stem I: residues 56-64
+color #350.1/4:56-64 #D8C800
 select #350.1/4:56-64
 nucleotides sel fill
 select clear
@@ -259,13 +265,23 @@ color #350.1/6:41-47 #DC143C
 select #350.1/6:41-47
 nucleotides sel fill
 select clear
-# U4/U6 stem II: residues 52-61
-color #350.1/6:52-61 #E01842
+# U4/U6 stem I: residues 52-61
+color #350.1/6:52-61 #D9183E
 select #350.1/6:52-61
 nucleotides sel fill
 select clear
-# U4/U6 stem I: residues 63-74
-color #350.1/6:63-74 #D9183E
+# U6 AGC triad: residues 53-55
+color #350.1/6:53-55 #C91236
+select #350.1/6:53-55
+nucleotides sel fill
+select clear
+# U6 ISL: residues 56-78
+color #350.1/6:56-78 #D61A3D
+select #350.1/6:56-78
+nucleotides sel fill
+select clear
+# U4/U6 stem II: residues 63-74
+color #350.1/6:63-74 #E01842
 select #350.1/6:63-74
 nucleotides sel fill
 select clear

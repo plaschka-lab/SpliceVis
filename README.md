@@ -39,7 +39,10 @@ Primary EMDB maps are optional because they are large:
 python3 tools/setup_offline.py --dest ~/Documents/SpliceVis --with-primary-maps
 ```
 
-Open `index.html` locally, or use the GitHub Pages dashboard:
+Preview the public clone with `python3 tools/serve.py --open`, or use GitHub Pages:
 https://plaschka-lab.github.io/SpliceVis/
 
 Only released PDB entries are included in the public atlas.
+
+UI source, dependency versions, evidence semantics, and release checks are
+documented in [Development](docs/DEVELOPMENT.md).

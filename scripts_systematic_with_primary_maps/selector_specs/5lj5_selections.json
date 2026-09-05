@@ -710,24 +710,6 @@
       "label_default_visible": "true"
     },
     {
-      "name": "C_5LJ5_U6_ISL",
-      "label": "U6 snRNA internal stem-loop",
-      "category": "snRNA feature",
-      "section": "Named selections for resolved snRNA functional regions.",
-      "comment": "U6 snRNA internal stem-loop: residues 46-73, motif-neighborhood, low confidence",
-      "atomspec": "#407.1/6:46-73",
-      "family": "RNA",
-      "group": "internal stem loops",
-      "group_key": "internal_stem_loops",
-      "kind": "rna_feature",
-      "feature": "U6_ISL",
-      "color": "#D61A3D",
-      "label_model_id": "407.2.4.3",
-      "label_category_model_id": "407.2.4",
-      "label_group_model_id": "407.2",
-      "label_default_visible": ""
-    },
-    {
       "name": "C_5LJ5_U6_ACAGAGA_box",
       "label": "U6 snRNA ACAGAGA box",
       "category": "snRNA feature",
@@ -750,7 +732,7 @@
       "label": "U6 snRNA AGC catalytic triad",
       "category": "snRNA feature",
       "section": "Named selections for resolved snRNA functional regions.",
-      "comment": "U6 snRNA AGC catalytic triad: residues 59-61, sequence-motif, medium confidence",
+      "comment": "U6 snRNA AGC catalytic triad: residues 59-61, reference-alignment, high confidence",
       "atomspec": "#407.1/6:59-61",
       "family": "RNA",
       "group": "catalytic core regions",
@@ -760,6 +742,24 @@
       "color": "#C91236",
       "label_model_id": "407.2.6.1",
       "label_category_model_id": "407.2.6",
+      "label_group_model_id": "407.2",
+      "label_default_visible": ""
+    },
+    {
+      "name": "C_5LJ5_U6_ISL",
+      "label": "U6 snRNA internal stem-loop core",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA internal stem-loop core: residues 62-85, reference-alignment, high confidence",
+      "atomspec": "#407.1/6:62-85",
+      "family": "RNA",
+      "group": "internal stem loops",
+      "group_key": "internal_stem_loops",
+      "kind": "rna_feature",
+      "feature": "U6_ISL",
+      "color": "#D61A3D",
+      "label_model_id": "407.2.4.3",
+      "label_category_model_id": "407.2.4",
       "label_group_model_id": "407.2",
       "label_default_visible": ""
     }

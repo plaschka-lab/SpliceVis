@@ -298,30 +298,30 @@
     },
     {
       "index": 15,
-      "selector_name": "Bact_5Z56_U6_ISL",
-      "feature": "U6_ISL",
-      "atomspec": "#383.1/6:90",
-      "text": "U6 ISL (res. 79;84-97)",
-      "color": "#D61A3D",
-      "model_name": "label_15_U6_ISL_res_79_84_97",
-      "category_key": "internal_stem_loops",
-      "category_name": "internal stem loops",
-      "category_model_id": "383.2.4",
-      "label_model_id": "383.2.4.3",
-      "default_visible": false
-    },
-    {
-      "index": 16,
       "selector_name": "Bact_5Z56_U6_AGC_catalytic_triad",
       "feature": "U6_AGC_catalytic_triad",
-      "atomspec": "#383.1/6:93",
-      "text": "U6 AGC triad (res. 92-94)",
+      "atomspec": "#383.1/6:54",
+      "text": "U6 AGC triad (res. 53-55)",
       "color": "#C91236",
-      "model_name": "label_16_U6_AGC_triad_res_92_94",
+      "model_name": "label_15_U6_AGC_triad_res_53_55",
       "category_key": "catalytic_core_regions",
       "category_name": "catalytic core regions",
       "category_model_id": "383.2.6",
       "label_model_id": "383.2.6.1",
+      "default_visible": false
+    },
+    {
+      "index": 16,
+      "selector_name": "Bact_5Z56_U6_ISL",
+      "feature": "U6_ISL",
+      "atomspec": "#383.1/6:68",
+      "text": "U6 ISL (res. 56-79)",
+      "color": "#D61A3D",
+      "model_name": "label_16_U6_ISL_res_56_79",
+      "category_key": "internal_stem_loops",
+      "category_name": "internal stem loops",
+      "category_model_id": "383.2.4",
+      "label_model_id": "383.2.4.3",
       "default_visible": false
     }
   ]

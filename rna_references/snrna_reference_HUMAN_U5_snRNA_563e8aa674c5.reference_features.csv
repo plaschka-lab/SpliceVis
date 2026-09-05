@@ -1,2 +1,2 @@
 feature,label,start,end,support_count,member_count,note
-U5_loop_I,loop I,38,42,71,72,"projected by global alignment; members=3jcr:H, 5mqf:5, 5o9z:5, 5xjc:B, 5yzg:B, 5z56:B, 5z57:B, 5z58:B, 6ah0:B, 6ahd:B, 6ff4:5, 6ff7:5, 6icz:B, 6id0:B, 6id1:B, 6qdv:5, 6qw6:5, 6qx9:5, 6zym:5, 7aav:5"
+U5_loop_I,loop I,38,42,70,71,"projected by global alignment; members=3jcr:H, 5mqf:5, 5o9z:5, 5xjc:B, 5yzg:B, 5z56:B, 5z57:B, 5z58:B, 6ah0:B, 6ahd:B, 6ff4:5, 6ff7:5, 6icz:B, 6id0:B, 6id1:B, 6qdv:5, 6qw6:5, 6qx9:5, 6zym:5, 7aav:5"

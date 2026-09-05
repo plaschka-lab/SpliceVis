@@ -74,6 +74,12 @@ name U6_snRNP_6ASO_U6_5SS_upstream_contact #328.1/I:44-55
 # U6 snRNA ACAGAGA box: residues 47-53, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name U6_snRNP_6ASO_U6_ACAGAGA_box #328.1/I:47-53
+# U6 snRNA AGC catalytic triad: residues 59-61, reference-alignment, high confidence
+# selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
+name U6_snRNP_6ASO_U6_AGC_catalytic_triad #328.1/I:59-61
+# U6 snRNA internal stem-loop core: residues 62-79;81-85, reference-alignment, high confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name U6_snRNP_6ASO_U6_ISL #328.1/I:62-79,81-85
 # RNA feature nucleotide display.
 select #328.1 & nucleic
 nucleotides sel atoms
@@ -91,6 +97,16 @@ select clear
 # U6 ACAGAGA: residues 47-53
 color #328.1/I:47-53 #DC143C
 select #328.1/I:47-53
+nucleotides sel fill
+select clear
+# U6 AGC triad: residues 59-61
+color #328.1/I:59-61 #C91236
+select #328.1/I:59-61
+nucleotides sel fill
+select clear
+# U6 ISL: residues 62-79;81-85
+color #328.1/I:62-79,81-85 #D61A3D
+select #328.1/I:62-79,81-85
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.

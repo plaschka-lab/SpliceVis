@@ -1,5 +1,7 @@
 LOCUS       HUMAN_U6_snRNA           106 bp    RNA              UNK 01-JAN-1980
-DEFINITION  HUMAN_U6 snRNA; snrna_reference; reference=9s2f:6; members=65.
+DEFINITION  HUMAN_U6 snRNA; snrna_reference; reference=HUMAN_U6; source=Curated
+            U4/U6 reference intervals; other tracks are projected
+            sequence-region annotations, not folding evidence; members=64.
 ACCESSION   HUMAN_U6_snRNA
 VERSION     HUMAN_U6_snRNA
 KEYWORDS    .
@@ -9,16 +11,15 @@ SOURCE      .
 FEATURES             Location/Qualifiers
      misc_feature    1..30
                      /label="5' terminal stem-loop"
-                     /note="feature=U6_5prime_terminal_stem_loop; support=43/65;
-                     projected by global alignment; members=5mqf:6, 5o9z:6,
-                     5xjc:F, 5yzg:F, 5z56:F, 5z57:F, 5z58:F, 6ah0:F, 6ahd:F,
-                     6ff4:6, 6ff7:6, 6icz:F, 6id0:F, 6id1:F, 6qdv:6, 6zym:6,
-                     7aav:6, 7abf:6, 7abg:6, 7abi:6"
+                     /note="feature=U6_5prime_terminal_stem_loop; support=0/64;
+                     Curated species-reference interval; high; Curated U4/U6
+                     reference intervals; other tracks are projected
+                     sequence-region annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#DC143C"
                      /ApEinfo_revcolor="#DC143C"
      misc_feature    35..60
                      /label="U2/U6 helix I partner"
-                     /note="feature=U6_U2_helix_I_partner; support=64/65;
+                     /note="feature=U6_U2_helix_I_partner; support=63/64;
                      projected by global alignment; members=3jcr:N, 5mqf:6,
                      5o9z:6, 5xjc:F, 5yzg:F, 5z56:F, 5z57:F, 5z58:F, 6ah0:F,
                      6ahd:F, 6ff4:6, 6ff7:6, 6icz:F, 6id0:F, 6id1:F, 6qdv:6,
@@ -27,7 +28,7 @@ FEATURES             Location/Qualifiers
                      /ApEinfo_revcolor="#D0183C"
      misc_feature    38..49
                      /label="5' splice-site upstream contact"
-                     /note="feature=U6_5SS_upstream_contact; support=62/65;
+                     /note="feature=U6_5SS_upstream_contact; support=61/64;
                      projected by global alignment; members=5mqf:6, 5o9z:6,
                      5xjc:F, 5yzg:F, 5z56:F, 5z57:F, 5z58:F, 6ah0:F, 6ahd:F,
                      6ff4:6, 6ff7:6, 6icz:F, 6id0:F, 6id1:F, 6qdv:6, 6qw6:6,
@@ -36,7 +37,7 @@ FEATURES             Location/Qualifiers
                      /ApEinfo_revcolor="#808080"
      misc_feature    41..47
                      /label="ACAGAGA box"
-                     /note="feature=U6_ACAGAGA_box; support=62/65; projected by
+                     /note="feature=U6_ACAGAGA_box; support=61/64; projected by
                      global alignment; members=5mqf:6, 5o9z:6, 5xjc:F, 5yzg:F,
                      5z56:F, 5z57:F, 5z58:F, 6ah0:F, 6ahd:F, 6ff4:6, 6ff7:6,
                      6icz:F, 6id0:F, 6id1:F, 6qdv:6, 6qw6:6, 6qx9:6, 6zym:6,
@@ -44,48 +45,40 @@ FEATURES             Location/Qualifiers
                      /ApEinfo_fwdcolor="#DC143C"
                      /ApEinfo_revcolor="#DC143C"
      misc_feature    52..61
-                     /label="U4/U6 stem II partner"
-                     /note="feature=U6_U4_stem_II_partner; support=26/65;
-                     projected by global alignment; members=3jcr:N, 5o9z:6,
-                     6ah0:F, 6ahd:F, 6qw6:6, 6qx9:6, 8h6e:6A, 8h6j:6A, 8h6k:6A,
-                     8h6l:6A, 8q7n:6, 8qo9:6, 8qoz:6, 8qp8:6, 8qp9:6, 8qpa:6,
-                     8qpb:6, 8qpe:6, 8qpk:6, 8qxd:6"
-                     /ApEinfo_fwdcolor="#E01842"
-                     /ApEinfo_revcolor="#E01842"
-     misc_feature    63..74
                      /label="U4/U6 stem I partner"
-                     /note="feature=U6_U4_stem_I_partner; support=26/65;
-                     projected by global alignment; members=3jcr:N, 5o9z:6,
-                     6ah0:F, 6ahd:F, 6qw6:6, 6qx9:6, 8h6e:6A, 8h6j:6A, 8h6k:6A,
-                     8h6l:6A, 8q7n:6, 8qo9:6, 8qoz:6, 8qp8:6, 8qp9:6, 8qpa:6,
-                     8qpb:6, 8qpe:6, 8qpk:6, 8qxd:6"
+                     /note="feature=U6_U4_stem_I_partner; support=0/64; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#D9183E"
                      /ApEinfo_revcolor="#D9183E"
-     misc_feature    79..105
-                     /label="internal stem-loop"
-                     /note="feature=U6_ISL; support=50/65; merged overlapping
-                     projected intervals; projected by global alignment;
-                     members=5xjc:F, 5yzg:F, 5z56:F, 5z57:F, 5z58:F, 6ah0:F,
-                     6ahd:F, 6ff4:6, 6ff7:6, 6icz:F, 6id0:F, 6id1:F, 7w59:F,
-                     7w5a:F, 7w5b:F, 8h6e:6A, 8h6j:6A, 8h6k:6A, 8h6l:6A, 8i0p:F;
-                     projected by global alignment; members=3jcr:N, 5mqf:6,
-                     5o9z:6, 6qdv:6, 6qx9:6, 7a5p:6, 7abg:6, 7abi:6, 7qtt:d,
-                     8c6j:6, 8ch6:d, 8qo9:6, 8qxd:6, 8qzs:6, 8r08:6, 8r09:6,
-                     8r0a:6, 8r0b:6, 8rm5:6, 8ro2:6"
-                     /ApEinfo_fwdcolor="#D61A3D"
-                     /ApEinfo_revcolor="#D61A3D"
-     misc_feature    92..94
+     misc_feature    53..55
                      /label="AGC catalytic triad"
-                     /note="feature=U6_AGC_catalytic_triad; support=50/65;
-                     projected by global alignment; members=5mqf:6, 5o9z:6,
-                     5xjc:F, 5yzg:F, 5z56:F, 5z57:F, 5z58:F, 6ah0:F, 6ahd:F,
-                     6ff4:6, 6ff7:6, 6icz:F, 6id0:F, 6id1:F, 6qdv:6, 6qx9:6,
-                     7a5p:6, 7abg:6, 7abi:6, 7qtt:d"
+                     /note="feature=U6_AGC_catalytic_triad; support=0/64;
+                     Curated species-reference interval; high; Curated U4/U6
+                     reference intervals; other tracks are projected
+                     sequence-region annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#C91236"
                      /ApEinfo_revcolor="#C91236"
+     misc_feature    56..79
+                     /label="internal stem-loop core"
+                     /note="feature=U6_ISL; support=0/64; Curated
+                     species-reference interval; medium; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
+                     /ApEinfo_fwdcolor="#D61A3D"
+                     /ApEinfo_revcolor="#D61A3D"
+     misc_feature    63..74
+                     /label="U4/U6 stem II partner"
+                     /note="feature=U6_U4_stem_II_partner; support=0/64; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
+                     /ApEinfo_fwdcolor="#E01842"
+                     /ApEinfo_revcolor="#E01842"
      misc_feature    97..106
                      /label="LSm site"
-                     /note="feature=U6_LSm_site; support=24/65; merged
+                     /note="feature=U6_LSm_site; support=24/64; merged
                      overlapping projected intervals; projected by global
                      alignment; members=3jcr:N, 6qdv:6, 6qx9:6, 7qtt:d, 8c6j:6,
                      8ch6:d, 8qo9:6, 8qzs:6, 8r08:6, 8r09:6, 8r0a:6, 8r0b:6,

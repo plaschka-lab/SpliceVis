@@ -197,6 +197,9 @@ name pre_Bact_7ABF_U6_5SS_upstream_contact #373.1/6:38-46
 # U6 snRNA ACAGAGA box: residues 41-46, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name pre_Bact_7ABF_U6_ACAGAGA_box #373.1/6:41-46
+# U6 snRNA internal stem-loop core: residues 58-76, reference-alignment, medium confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name pre_Bact_7ABF_U6_ISL #373.1/6:58-76
 # RNA feature nucleotide display.
 select #373.1 & nucleic
 nucleotides sel atoms
@@ -233,6 +236,11 @@ color #373.1/6:41-46 #DC143C
 select #373.1/6:41-46
 nucleotides sel fill
 select clear
+# U6 ISL: residues 58-76
+color #373.1/6:58-76 #D61A3D
+select #373.1/6:58-76
+nucleotides sel fill
+select clear
 # RNA feature 3D residue labels.
 # Labels are created as independent grouped models under #373.2.
 # Fetch and run the self-contained RNA label script from GitHub.
@@ -241,7 +249,5 @@ open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_syste
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic_with_primary_maps/selection_browser_scripts/7abf_selection_browser.py
-# Compact annotated pre-mRNA alignment; clicking modelled residues focuses them in ChimeraX.
-open https://plaschka-lab.github.io/SpliceVis/rna_references/7abf_vs_minx_m3_324.modelled.html?viewer=chimerax&chain_ids=systematic
 view
 show nucleic

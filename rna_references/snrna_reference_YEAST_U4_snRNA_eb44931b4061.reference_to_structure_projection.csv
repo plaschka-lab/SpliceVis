@@ -1,0 +1,29 @@
+member,pdb_id,chain,feature,label,reference_start,reference_end,reference_feature_sequence,query_label_seq_ranges,projected_query_sequence,alignment_coverage,aligned_identity,modelled_label_seq_ranges,modelled_fraction,projection_status
+3jcm:E,3jcm,E,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,1-18,AUCCUUAUGCACGGGAAA,1.0000,1.0000,1-18,1.0000,complete
+3jcm:E,3jcm,E,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,57-64,UGCUGGUU,1.0000,1.0000,57-64,1.0000,complete
+3jcm:E,3jcm,E,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,60-95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,1.0000,1.0000,60-64,0.1389,complete
+3jcm:E,3jcm,E,U4_Sm_site,Sm site,144,150,AUUUUUG,144-150,AUUUUUG,1.0000,1.0000,144-150,1.0000,complete
+5gan:V,5gan,V,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,1-18,AUCCUUAUGCACGGGAAA,1.0000,1.0000,1-18,1.0000,complete
+5gan:V,5gan,V,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,57-64,UGCUGGUU,1.0000,1.0000,57-64,1.0000,complete
+5gan:V,5gan,V,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,60-95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,1.0000,1.0000,"60-67,73-95",0.8611,complete
+5gan:V,5gan,V,U4_Sm_site,Sm site,144,150,AUUUUUG,144-150,AUUUUUG,1.0000,1.0000,144-150,1.0000,complete
+5gao:V,5gao,V,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,,,0.0000,,,0.0000,absent
+5gao:V,5gao,V,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,,,0.0000,,,0.0000,absent
+5gao:V,5gao,V,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,1-31,GAAAUUUAAUUAUAAACCAGACCGUCUCCUC,0.8611,1.0000,9-31,0.6389,partial
+5gao:V,5gao,V,U4_Sm_site,Sm site,144,150,AUUUUUG,80-86,AUUUUUG,1.0000,1.0000,80-86,1.0000,complete
+5gap:V,5gap,V,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,1-18,AUCCUUAUGCACGGGAAA,1.0000,1.0000,1-18,1.0000,complete
+5gap:V,5gap,V,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,57-64,UGCUGGUU,1.0000,1.0000,57-64,1.0000,complete
+5gap:V,5gap,V,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,60-67,UGGUUGAA,0.2222,1.0000,60-67,0.2222,partial
+5gap:V,5gap,V,U4_Sm_site,Sm site,144,150,AUUUUUG,,,0.0000,,,0.0000,absent
+5nrl:4,5nrl,4,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,1-18,AUCCUUAUGCACGGGAAA,1.0000,1.0000,1-18,1.0000,complete
+5nrl:4,5nrl,4,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,57-64,UGCUGGUU,1.0000,1.0000,57-64,1.0000,complete
+5nrl:4,5nrl,4,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,60-95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,1.0000,1.0000,"60-68,71-79,90-95",0.6667,complete
+5nrl:4,5nrl,4,U4_Sm_site,Sm site,144,150,AUUUUUG,144-150,AUUUUUG,1.0000,1.0000,144-150,1.0000,complete
+5zwm:I,5zwm,I,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,1-18,AUCCUUAUGCACGGGAAA,1.0000,1.0000,1-18,1.0000,complete
+5zwm:I,5zwm,I,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,57-64,UGCUGGUU,1.0000,1.0000,57-64,1.0000,complete
+5zwm:I,5zwm,I,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,60-95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,1.0000,1.0000,"60-64,71-79,90-95",0.5556,complete
+5zwm:I,5zwm,I,U4_Sm_site,Sm site,144,150,AUUUUUG,144-150,AUUUUUG,1.0000,1.0000,144-150,1.0000,complete
+5zwo:I,5zwo,I,U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,AUCCUUAUGCACGGGAAA,1-18,AUCCUUAUGCACGGGAAA,1.0000,1.0000,1-18,1.0000,complete
+5zwo:I,5zwo,I,U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,UGCUGGUU,57-64,UGCUGGUU,1.0000,1.0000,57-64,1.0000,complete
+5zwo:I,5zwo,I,U4_Brr2_loading_region,Brr2 loading region,60,95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,60-95,UGGUUGAAAUUUAAUUAUAAACCAGACCGUCUCCUC,1.0000,1.0000,"60-64,71-79,90-95",0.5556,complete
+5zwo:I,5zwo,I,U4_Sm_site,Sm site,144,150,AUUUUUG,144-150,AUUUUUG,1.0000,1.0000,144-150,1.0000,complete

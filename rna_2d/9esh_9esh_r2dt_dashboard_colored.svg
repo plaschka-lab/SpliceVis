@@ -429,22 +429,22 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <rect x="960.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /1 -&gt; M</text>
 <polyline points="1015.0,988.5 1040.4,988.5 1065.7,988.5 1091.1,988.5 1116.4,988.5 1141.8,988.5 1167.1,988.5 1192.5,988.5 1217.9,988.5 1243.2,988.5 1268.6,988.5 1293.9,988.5 1319.3,988.5 1344.6,988.5 1370.0,988.5 1395.4,988.5 1420.7,988.5 1446.1,988.5 1471.4,988.5 1496.8,988.5 1522.1,988.5 1547.5,988.5 1572.9,988.5 1598.2,988.5 1623.6,988.5 1648.9,988.5 1674.3,988.5 1699.6,988.5 1725.0,988.5" class="backbone"/>
-<circle cx="1015.0" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1040.4" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1065.7" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1091.1" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1116.4" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1141.8" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1167.1" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1192.5" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1217.9" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1243.2" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1268.6" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1293.9" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1319.3" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1344.6" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1370.0" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1395.4" cy="988.5" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1015.0" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1040.4" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1065.7" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1091.1" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1116.4" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1141.8" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1167.1" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1192.5" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1217.9" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1243.2" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1268.6" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1293.9" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1319.3" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1344.6" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1370.0" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1395.4" cy="988.5" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
 <circle cx="1015.0" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1040.4" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1065.7" cy="988.5" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -524,8 +524,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1674.3" y="988.5" class="base" fill="#303030"><title>/1 seq 27 auth 11</title>U</text>
 <text x="1699.6" y="988.5" class="base" fill="#303030"><title>/1 seq 28 auth 12</title>U</text>
 <text x="1725.0" y="988.5" class="base" fill="#303030"><title>/1 seq 29 auth 13</title>U</text>
-<path d="M1205.2,988.5 L1248.7,968.2" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
-<text x="1248.7" y="968.2" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -15-0</text>
+<path d="M1205.2,988.5 L1248.7,968.2" class="feature-callout" stroke="#FF9D00" opacity="0.54"/>
+<text x="1248.7" y="968.2" class="feature-label" text-anchor="start" fill="#FF9D00">5&#x27; exon nt -15-0</text>
 <path d="M1484.1,988.5 L1527.6,968.2" class="feature-callout" stroke="#303030" opacity="0.54"/>
 <text x="1527.6" y="968.2" class="feature-label" text-anchor="start" fill="#303030">? 5&#x27;SS nt 1-6</text>
 <path d="M1319.3,988.5 Q1300.9,147.6 1282.6,192.6" class="inter" stroke-width="1.8"><title>1:12-14 to 5:50-52; 3 FR3D interactions; cWW</title></path>
@@ -540,7 +540,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M789.3,1031.9 Q457.2,318.4 125.0,363.4" class="inter" stroke-width="1.3"><title>6:88-88 to 2:3-3; 1 FR3D interactions; cWW</title></path>
 <text x="70" y="1364.0" class="label" style="font-size:15px">Feature overlays</text>
 <text x="70.0" y="1390.0" class="small">? label prefix = uncertain RNA-feature assignment; inspect validation notes before interpretation.</text>
-<circle cx="77.0" cy="1410.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<circle cx="77.0" cy="1410.0" r="7" fill="#FF9D00" opacity="0.28"/>
 <text x="90.0" y="1414.0" class="small">exon 5</text>
 <circle cx="287.0" cy="1410.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="300.0" y="1414.0" class="small">substrate</text>

@@ -1136,8 +1136,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <polyline points="1055.6,552.9 1062.5,552.9 1069.3,552.9 1076.2,552.9 1083.0,552.9 1089.9,552.9 1096.8,552.9 1103.6,552.9 1110.5,552.9 1117.3,552.9 1124.2,552.9 1131.0,552.9 1131.0,546.1 1131.0,539.2 1131.0,532.4 1124.9,529.3 1120.4,524.2 1113.7,526.0 1107.1,527.8 1100.5,529.6 1093.9,531.4 1087.2,533.1 1080.6,534.9 1074.0,536.7 1067.4,538.5 1061.1,541.2 1056.0,536.6 1058.1,530.1 1064.9,529.3 1071.5,527.5 1078.1,525.7 1084.7,523.9 1086.5,517.3 1091.4,522.1 1098.0,520.3 1104.6,518.5 1111.2,516.7 1117.8,514.9 1119.7,507.0 1114.6,502.5 1109.5,497.9 1104.4,493.3 1099.2,488.8 1094.1,484.2 1089.0,479.6 1083.9,475.0 1078.8,470.5 1072.3,472.6 1073.7,465.9 1068.6,461.3 1063.4,456.8 1058.3,452.2 1053.2,447.6 1046.8,450.1 1040.0,450.1 1033.7,447.4 1028.8,442.5 1026.2,436.2 1026.1,429.3 1028.6,423.0 1033.4,418.0 1039.6,415.2 1040.0,408.4" class="backbone"/>
 <path d="M978.0,552.9 L1055.6,552.9" class="missing"><title>missing 5-prime /r sequence residues 1-177 (177 nt)</title></path>
 <text x="978.0" y="544.9" text-anchor="start" class="small" fill="#64748b">missing 5-prime 177 nt</text>
-<circle cx="1055.6" cy="552.9" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1062.5" cy="552.9" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1055.6" cy="552.9" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1062.5" cy="552.9" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
 <circle cx="1055.6" cy="552.9" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1062.5" cy="552.9" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1069.3" cy="552.9" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -1338,14 +1338,14 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1039.6" y="415.2" class="base" fill="#303030"><title>/r seq 239 auth 155</title>A</text>
 <text x="1040.0" y="408.4" class="base" fill="#303030"><title>/r seq 240 auth 156</title>A</text>
 <text x="1050.0" y="396.4" class="small" fill="#94a3b8">240</text>
-<path d="M1059.0,552.9 L1079.3,596.0" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
-<text x="1079.3" y="596.0" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -2--1</text>
+<path d="M1059.0,552.9 L1079.3,596.0" class="feature-callout" stroke="#FF9D00" opacity="0.54"/>
+<text x="1079.3" y="596.0" class="feature-label" text-anchor="start" fill="#FF9D00">5&#x27; exon nt -2--1</text>
 <path d="M1086.5,552.9 L1066.2,596.0" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1066.2" y="596.0" class="feature-label" text-anchor="end" fill="#303030">5&#x27;SS nt 1-6</text>
 <path d="M199.9,552.9 Q641.5,507.9 1083.0,552.9" class="inter" stroke-width="2.4"><title>R:3-9 to r:179-185; 6 FR3D interactions; cWW</title></path>
 <path d="M1083.0,552.9 Q641.5,507.9 199.9,552.9" class="inter" stroke-width="2.4"><title>r:179-185 to R:3-9; 6 FR3D interactions; cWW</title></path>
 <text x="70" y="739.0" class="label" style="font-size:15px">Feature overlays</text>
-<circle cx="77.0" cy="761.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<circle cx="77.0" cy="761.0" r="7" fill="#FF9D00" opacity="0.28"/>
 <text x="90.0" y="765.0" class="small">exon 5</text>
 <circle cx="287.0" cy="761.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="300.0" y="765.0" class="small">substrate</text>

@@ -211,15 +211,15 @@ name Cstar_5WSG_U6_U2_helix_I_partner #415.1/E:41-66
 # U6 snRNA 5' splice-site upstream contact: residues 44-55, motif-neighborhood, medium confidence
 # selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name Cstar_5WSG_U6_5SS_upstream_contact #415.1/E:44-55
-# U6 snRNA internal stem-loop: residues 46-73, motif-neighborhood, low confidence
-# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name Cstar_5WSG_U6_ISL #415.1/E:46-73
 # U6 snRNA ACAGAGA box: residues 47-53, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name Cstar_5WSG_U6_ACAGAGA_box #415.1/E:47-53
-# U6 snRNA AGC catalytic triad: residues 59-61, sequence-motif, medium confidence
+# U6 snRNA AGC catalytic triad: residues 59-61, reference-alignment, high confidence
 # selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
 name Cstar_5WSG_U6_AGC_catalytic_triad #415.1/E:59-61
+# U6 snRNA internal stem-loop core: residues 62-85, reference-alignment, high confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name Cstar_5WSG_U6_ISL #415.1/E:62-85
 # U6 snRNA LSm site: residues 103, terminal-region, low confidence
 # selector_meta {"color":"#E33A55","family":"RNA","feature":"U6_LSm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name Cstar_5WSG_U6_LSm_site #415.1/E:103
@@ -278,11 +278,6 @@ color #415.1/E:44-55 #E01842
 select #415.1/E:44-55
 nucleotides sel fill
 select clear
-# U6 ISL: residues 46-73
-color #415.1/E:46-73 #D61A3D
-select #415.1/E:46-73
-nucleotides sel fill
-select clear
 # U6 ACAGAGA: residues 47-53
 color #415.1/E:47-53 #DC143C
 select #415.1/E:47-53
@@ -291,6 +286,11 @@ select clear
 # U6 AGC triad: residues 59-61
 color #415.1/E:59-61 #C91236
 select #415.1/E:59-61
+nucleotides sel fill
+select clear
+# U6 ISL: residues 62-85
+color #415.1/E:62-85 #D61A3D
+select #415.1/E:62-85
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.

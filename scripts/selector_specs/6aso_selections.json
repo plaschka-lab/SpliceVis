@@ -98,6 +98,42 @@
       "label_category_model_id": "328.2.3",
       "label_group_model_id": "328.2",
       "label_default_visible": ""
+    },
+    {
+      "name": "U6_snRNP_6ASO_U6_AGC_catalytic_triad",
+      "label": "U6 snRNA AGC catalytic triad",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA AGC catalytic triad: residues 59-61, reference-alignment, high confidence",
+      "atomspec": "#328.1/I:59-61",
+      "family": "RNA",
+      "group": "catalytic core regions",
+      "group_key": "catalytic_core_regions",
+      "kind": "rna_feature",
+      "feature": "U6_AGC_catalytic_triad",
+      "color": "#C91236",
+      "label_model_id": "328.2.4.1",
+      "label_category_model_id": "328.2.4",
+      "label_group_model_id": "328.2",
+      "label_default_visible": ""
+    },
+    {
+      "name": "U6_snRNP_6ASO_U6_ISL",
+      "label": "U6 snRNA internal stem-loop core",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U6 snRNA internal stem-loop core: residues 62-79;81-85, reference-alignment, high confidence",
+      "atomspec": "#328.1/I:62-79,81-85",
+      "family": "RNA",
+      "group": "internal stem loops",
+      "group_key": "internal_stem_loops",
+      "kind": "rna_feature",
+      "feature": "U6_ISL",
+      "color": "#D61A3D",
+      "label_model_id": "328.2.5.1",
+      "label_category_model_id": "328.2.5",
+      "label_group_model_id": "328.2",
+      "label_default_visible": ""
     }
   ]
 }

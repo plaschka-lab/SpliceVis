@@ -5,7 +5,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 </style>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="70" y="40" class="label">7VPX RNA 2D panel using R2DT layouts</text>
-<text x="70" y="63" class="small">stage U2 snRNP; Human; 3.0 A; 2024</text>
+<text x="70" y="63" class="small">Human; 3.0 A; 2024</text>
 <text x="70" y="80" class="small">Per-chain R2DT/RNApuzzler layouts; dashed backbones mark unresolved sequence-record residues; inter-RNA base pairs are clustered from FR3D output.</text>
 <rect x="70.0" y="92.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="120.0" class="label" style="font-size:16px;fill:#D46BB8">U1 snRNA /L -&gt; 1</text>
@@ -704,18 +704,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <rect x="960.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /K -&gt; MB</text>
 <polyline points="1015.0,987.4 1093.9,987.4 1172.8,987.4 1251.7,987.4 1330.6,987.4 1409.4,987.4 1488.3,987.4 1567.2,987.4 1646.1,987.4 1725.0,987.4" class="backbone"/>
-<circle cx="1015.0" cy="987.4" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1093.9" cy="987.4" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1015.0" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1093.9" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1172.8" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1251.7" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1330.6" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1409.4" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1488.3" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1567.2" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1646.1" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
-<circle cx="1725.0" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1015.0" cy="987.4" r="9.2" fill="#FF9D00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
+<circle cx="1093.9" cy="987.4" r="9.2" fill="#FF9D00" opacity="0.28"><title>5&#x27; exon; confidence high</title></circle>
 <circle cx="1015.0" cy="987.4" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1093.9" cy="987.4" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1172.8" cy="987.4" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -726,14 +716,20 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1567.2" cy="987.4" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1646.1" cy="987.4" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1725.0" cy="987.4" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
-<circle cx="1172.8" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1251.7" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1330.6" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1409.4" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1488.3" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1567.2" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1646.1" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
-<circle cx="1725.0" cy="987.4" r="9.2" fill="#303030" opacity="0.14"><title>intron from 5&#x27; splice site; confidence low</title></circle>
+<circle cx="1172.8" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1251.7" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1330.6" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1409.4" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1488.3" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1567.2" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1646.1" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1725.0" cy="987.4" r="9.2" fill="#f97316" opacity="0.28"><title>downstream intron segment; confidence high</title></circle>
+<circle cx="1172.8" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1251.7" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1330.6" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1409.4" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1488.3" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
+<circle cx="1567.2" cy="987.4" r="9.2" fill="#303030" opacity="0.28"><title>5&#x27; splice site; confidence high</title></circle>
 <text x="1015.0" y="987.4" class="base" fill="#303030"><title>/K seq 1 auth -1</title>G</text>
 <text x="1093.9" y="987.4" class="base" fill="#303030"><title>/K seq 2 auth 0</title>G</text>
 <text x="1172.8" y="987.4" class="base" fill="#303030"><title>/K seq 3 auth 1</title>G</text>
@@ -745,8 +741,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1646.1" y="987.4" class="base" fill="#303030"><title>/K seq 9 auth 7</title>A</text>
 <text x="1725.0" y="987.4" class="base" fill="#303030"><title>/K seq 10 auth 8</title>C</text>
 <text x="1735.0" y="975.4" class="small" fill="#94a3b8">10</text>
-<path d="M1054.4,987.4 L1097.9,967.1" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
-<text x="1097.9" y="967.1" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -1-0</text>
+<path d="M1054.4,987.4 L1097.9,967.1" class="feature-callout" stroke="#FF9D00" opacity="0.60"/>
+<text x="1097.9" y="967.1" class="feature-label" text-anchor="start" fill="#FF9D00">5&#x27; exon nt -1-0</text>
 <path d="M1370.0,987.4 L1413.5,967.1" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1413.5" y="967.1" class="feature-label" text-anchor="start" fill="#303030">5&#x27;SS nt 1-6</text>
 <path d="M1062.3,488.5 Q897.9,443.5 733.6,988.0" class="inter" stroke-width="2.2"><title>H:35-39 to I:37-41; 5 FR3D interactions; cWW</title></path>
@@ -760,12 +756,12 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="90.0" y="1390.0" class="small">substrate</text>
 <circle cx="287.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="300.0" y="1390.0" class="small">branch point region</text>
-<circle cx="497.0" cy="1386.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<circle cx="497.0" cy="1386.0" r="7" fill="#FF9D00" opacity="0.28"/>
 <text x="510.0" y="1390.0" class="small">exon 5</text>
-<circle cx="707.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="720.0" y="1390.0" class="small">five prime splice site</text>
+<circle cx="707.0" cy="1386.0" r="7" fill="#f97316" opacity="0.28"/>
+<text x="720.0" y="1390.0" class="small">downstream intron segment</text>
 <circle cx="917.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
-<text x="930.0" y="1390.0" class="small">intron</text>
+<text x="930.0" y="1390.0" class="small">five prime splice site</text>
 <circle cx="1127.0" cy="1386.0" r="7" fill="#b66aae" opacity="0.28"/>
 <text x="1140.0" y="1390.0" class="small">U1 5prime 5SS recognition</text>
 <circle cx="1337.0" cy="1386.0" r="7" fill="#bf72b7" opacity="0.28"/>

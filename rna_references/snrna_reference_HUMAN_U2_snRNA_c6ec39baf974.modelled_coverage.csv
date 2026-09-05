@@ -68,4 +68,3 @@ member,pdb_id,chain,sequence_length,modelled_residue_count,modelled_fraction,mod
 9ze3:2,9ze3,2,37,37,1.0000,1-37
 9zec:2,9zec,2,37,37,1.0000,1-37
 9zed:2,9zed,2,37,37,1.0000,1-37
-local_step2:2,local_step2,2,184,82,0.4457,"88-120,136-184"

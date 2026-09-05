@@ -873,8 +873,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <rect x="70.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /I -&gt; M</text>
 <polyline points="125.0,988.6 144.2,988.6 163.4,988.6 182.6,988.6 201.8,988.6 220.9,988.6 240.1,988.6 259.3,988.6 278.5,988.6 297.7,988.6 316.9,988.6 336.1,988.6 355.3,988.6 374.5,988.6 393.6,988.6 412.8,988.6 432.0,988.6 451.2,988.6 470.4,988.6 489.6,988.6 508.8,988.6 528.0,988.6 547.2,988.6 566.4,988.6 585.5,988.6 604.7,988.6 623.9,988.6 643.1,988.6 662.3,988.6 681.5,988.6 700.7,988.6 719.9,988.6 739.1,988.6 758.2,988.6 777.4,988.6 796.6,988.6 815.8,988.6 835.0,988.6" class="backbone"/>
-<circle cx="125.0" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="144.2" cy="988.6" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="125.0" cy="988.6" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="144.2" cy="988.6" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
 <circle cx="125.0" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="144.2" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="163.4" cy="988.6" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -1007,8 +1007,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="796.6" y="988.6" class="base" fill="#303030"><title>/I seq 36 auth 77</title>C</text>
 <text x="815.8" y="988.6" class="base" fill="#303030"><title>/I seq 37 auth 78</title>A</text>
 <text x="835.0" y="988.6" class="base" fill="#303030"><title>/I seq 38 auth 79</title>A</text>
-<path d="M134.6,988.6 L178.1,968.3" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
-<text x="178.1" y="968.3" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt -1-0</text>
+<path d="M134.6,988.6 L178.1,968.3" class="feature-callout" stroke="#FF9D00" opacity="0.54"/>
+<text x="178.1" y="968.3" class="feature-label" text-anchor="start" fill="#FF9D00">5&#x27; exon nt -1-0</text>
 <path d="M211.4,988.6 L254.9,1008.9" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="254.9" y="1008.9" class="feature-label" text-anchor="start" fill="#303030">5&#x27;SS nt 1-6</text>
 <path d="M604.7,988.6 L563.2,964.6" class="feature-callout" stroke="#303030" opacity="0.60"/>
@@ -1020,7 +1020,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M508.8,988.6 Q879.8,519.0 1250.9,564.0" class="inter" stroke-width="1.3"><title>I:21-21 to 2:13-13; 1 FR3D interactions; cWW</title></path>
 <path d="M630.3,988.6 Q902.2,519.0 1174.2,564.0" class="inter" stroke-width="2.4"><title>I:24-31 to 2:4-10; 6 FR3D interactions; cWW</title></path>
 <text x="70" y="1364.0" class="label" style="font-size:15px">Feature overlays</text>
-<circle cx="77.0" cy="1386.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<circle cx="77.0" cy="1386.0" r="7" fill="#FF9D00" opacity="0.28"/>
 <text x="90.0" y="1390.0" class="small">exon 5</text>
 <circle cx="287.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="300.0" y="1390.0" class="small">substrate</text>

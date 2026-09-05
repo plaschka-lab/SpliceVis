@@ -5,7 +5,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 </style>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="70" y="40" class="label">7A5P RNA 2D panel using R2DT layouts</text>
-<text x="70" y="63" class="small">stage U2 snRNP; Human; 5.0 A; 2020</text>
+<text x="70" y="63" class="small">stage C; Human; 5.0 A; 2020</text>
 <text x="70" y="80" class="small">Per-chain R2DT/RNApuzzler layouts; dashed backbones mark unresolved sequence-record residues; inter-RNA base pairs are clustered from FR3D output.</text>
 <rect x="70.0" y="92.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="120.0" class="label" style="font-size:16px;fill:#71C562">U2 snRNA /2 -&gt; 2</text>
@@ -323,25 +323,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="88.0" y="980.1" text-anchor="start" class="small" fill="#64748b">missing 5-prime 79 nt</text>
 <path d="M835.0,988.1 L872.0,988.1" class="missing"><title>missing 3-prime /6 sequence residues 96-106 (11 nt)</title></path>
 <text x="872.0" y="980.1" text-anchor="end" class="small" fill="#64748b">missing 3-prime 11 nt</text>
-<circle cx="125.0" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="172.3" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="219.7" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="267.0" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="314.3" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="361.7" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="409.0" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="456.3" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="503.7" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="551.0" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="598.3" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="645.7" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="693.0" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="740.3" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="787.7" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="835.0" cy="988.1" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="693.0" cy="988.1" r="9.2" fill="#c91236" opacity="0.22"><title>AGC catalytic triad; confidence medium</title></circle>
-<circle cx="740.3" cy="988.1" r="9.2" fill="#c91236" opacity="0.22"><title>AGC catalytic triad; confidence medium</title></circle>
-<circle cx="787.7" cy="988.1" r="9.2" fill="#c91236" opacity="0.22"><title>AGC catalytic triad; confidence medium</title></circle>
 <text x="125.0" y="988.1" class="base" fill="#EF4444"><title>/6 seq 80 auth 80</title>G</text>
 <text x="135.0" y="976.1" class="small" fill="#94a3b8">80</text>
 <text x="172.3" y="988.1" class="base" fill="#EF4444"><title>/6 seq 81 auth 81</title>C</text>
@@ -360,10 +341,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="740.3" y="988.1" class="base" fill="#EF4444"><title>/6 seq 93 auth 93</title>G</text>
 <text x="787.7" y="988.1" class="base" fill="#EF4444"><title>/6 seq 94 auth 94</title>C</text>
 <text x="835.0" y="988.1" class="base" fill="#EF4444"><title>/6 seq 95 auth 95</title>G</text>
-<path d="M480.0,988.1 L500.3,1031.6" class="feature-callout" stroke="#d61a3d" opacity="0.46"/>
-<text x="500.3" y="1031.6" class="feature-label" text-anchor="start" fill="#d61a3d">ISL nt 80-95</text>
-<path d="M740.3,988.1 L698.8,964.1" class="feature-callout" stroke="#c91236" opacity="0.54"/>
-<text x="698.8" y="964.1" class="feature-label" text-anchor="end" fill="#c91236">AGC triad nt 92-94</text>
 <rect x="960.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /Y -&gt; M</text>
 <polyline points="1015.0,988.5 1040.4,988.5 1065.7,988.5 1091.1,988.5 1116.4,988.5 1141.8,988.5 1167.1,988.5 1192.5,988.5 1217.9,988.5 1243.2,988.5 1268.6,988.5 1293.9,988.5 1319.3,988.5 1344.6,988.5 1370.0,988.5 1395.4,988.5 1420.7,988.5 1446.1,988.5 1471.4,988.5 1496.8,988.5 1522.1,988.5 1547.5,988.5 1572.9,988.5 1598.2,988.5 1623.6,988.5 1648.9,988.5 1674.3,988.5 1699.6,988.5 1725.0,988.5" class="backbone"/>
@@ -472,8 +449,4 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="300.0" y="1390.0" class="small">intron</text>
 <circle cx="497.0" cy="1386.0" r="7" fill="#2f8b4d" opacity="0.28"/>
 <text x="510.0" y="1390.0" class="small">U2 Sm site</text>
-<circle cx="707.0" cy="1386.0" r="7" fill="#d61a3d" opacity="0.28"/>
-<text x="720.0" y="1390.0" class="small">U6 ISL</text>
-<circle cx="917.0" cy="1386.0" r="7" fill="#c91236" opacity="0.28"/>
-<text x="930.0" y="1390.0" class="small">U6 AGC catalytic triad</text>
 </svg>

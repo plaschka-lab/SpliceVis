@@ -1,0 +1,12 @@
+{
+  "package": "pdbe-molstar",
+  "version": "3.12.0",
+  "molstar_version": "5.8.0",
+  "source": "https://registry.npmjs.org/pdbe-molstar/-/pdbe-molstar-3.12.0.tgz",
+  "sha256": {
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "pdbe-molstar-plugin.js": "965e97ab30aac25b90adb9e5037cd61624d7503aee8641a4322510dd5f36185d",
+    "pdbe-molstar-plugin.js.LICENSE.txt": "c5d4008581e7d65c10fc61651039254d953b605001378a4aa04ecf99b15d71ce",
+    "pdbe-molstar.css": "65ab66b2cc9145e92ccc047c0c8756c876858507722c66e873020a426f893a9d"
+  }
+}

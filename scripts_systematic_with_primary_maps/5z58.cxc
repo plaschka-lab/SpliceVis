@@ -295,12 +295,12 @@ name Bact_5Z58_U6_5SS_upstream_contact #385.1/6:38-49
 # U6 snRNA ACAGAGA box: residues 41-47, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name Bact_5Z58_U6_ACAGAGA_box #385.1/6:41-47
-# U6 snRNA internal stem-loop: residues 79;84-97, motif-neighborhood, low confidence
-# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name Bact_5Z58_U6_ISL #385.1/6:79,84-97
-# U6 snRNA AGC catalytic triad: residues 92-94, sequence-motif, medium confidence
+# U6 snRNA AGC catalytic triad: residues 53-55, reference-alignment, high confidence
 # selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
-name Bact_5Z58_U6_AGC_catalytic_triad #385.1/6:92-94
+name Bact_5Z58_U6_AGC_catalytic_triad #385.1/6:53-55
+# U6 snRNA internal stem-loop core: residues 56-79, reference-alignment, medium confidence
+# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
+name Bact_5Z58_U6_ISL #385.1/6:56-79
 # RNA feature nucleotide display.
 select #385.1 & nucleic
 nucleotides sel atoms
@@ -355,14 +355,14 @@ color #385.1/6:41-47 #DC143C
 select #385.1/6:41-47
 nucleotides sel fill
 select clear
-# U6 ISL: residues 79;84-97
-color #385.1/6:79,84-97 #D61A3D
-select #385.1/6:79,84-97
+# U6 AGC triad: residues 53-55
+color #385.1/6:53-55 #C91236
+select #385.1/6:53-55
 nucleotides sel fill
 select clear
-# U6 AGC triad: residues 92-94
-color #385.1/6:92-94 #C91236
-select #385.1/6:92-94
+# U6 ISL: residues 56-79
+color #385.1/6:56-79 #D61A3D
+select #385.1/6:56-79
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
@@ -373,7 +373,5 @@ open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_syste
 # In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
 # Fetch and open the self-contained named selection browser from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic_with_primary_maps/selection_browser_scripts/5z58_selection_browser.py
-# Compact annotated pre-mRNA alignment; clicking modelled residues focuses them in ChimeraX.
-open https://plaschka-lab.github.io/SpliceVis/rna_references/5z58_vs_minx_m3_324.modelled.html?viewer=chimerax&chain_ids=systematic
 view
 show nucleic

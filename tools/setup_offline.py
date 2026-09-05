@@ -17,6 +17,7 @@ import shutil
 import sys
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit, unquote
 from pathlib import Path
 
 
@@ -35,6 +36,9 @@ COPIED_DIRS = [
     "rna_2d",
     "thumbnails",
     "tools",
+    "web",
+    "rna_references",
+    "assets",
 ]
 COPIED_FILES = ["index.html", "README.md", "CITATION.cff", ".nojekyll"]
 SCRIPT_DIRS = [
@@ -99,7 +103,7 @@ def script_paths(root: Path) -> list[Path]:
     for rel in SCRIPT_DIRS:
         folder = root / rel
         if folder.exists():
-            paths.extend(sorted(folder.glob("*.cxc")))
+            paths.extend(sorted(folder.rglob("*.cxc")))
     return paths
 
 
@@ -191,7 +195,16 @@ def rewrite_script_text(text: str, dest: Path, with_primary_maps: bool) -> str:
             "# Primary maps, when requested, are downloaded directly from EMDB.",
             "# Primary-map variants still require network access unless setup_offline.py --with-primary-maps was used.",
         )
-    text = text.replace(RAW_GITHUB_PREFIX, posix_path(dest) + "/")
+    def localize_open(match: re.Match[str]) -> str:
+        url = match.group(2)
+        prefix = RAW_GITHUB_PREFIX if url.startswith(RAW_GITHUB_PREFIX) else "https://plaschka-lab.github.io/SpliceVis/"
+        parts = urlsplit(url[len(prefix):])
+        path = dest / unquote(parts.path)
+        # HTML viewers need URL query parameters; scripts need quoted file paths.
+        target = path.resolve().as_uri() + ("?" + parts.query if parts.query else "") if parts.path.endswith(".html") else posix_path(path)
+        return match.group(1) + '"' + target.replace('"', '\\"') + '"'
+
+    text = re.sub(r'(?m)^(open\s+)(https://(?:raw\.githubusercontent\.com/plaschka-lab/SpliceVis/main/|plaschka-lab\.github\.io/SpliceVis/)[^\s]+)', localize_open, text)
 
     def replace_pdb(match: re.Match[str]) -> str:
         pdb_id = match.group(2).lower()
@@ -224,14 +237,7 @@ def write_launchers(dest: Path) -> None:
     launcher.write_text(
         "#!/bin/zsh\n"
         "cd \"${0:A:h}\"\n"
-        "PORT=${SPLICEVIS_PORT:-8765}\n"
-        "python3 -m http.server \"$PORT\" >/tmp/splicevis_http.log 2>&1 &\n"
-        "SERVER_PID=$!\n"
-        "sleep 1\n"
-        "open \"http://127.0.0.1:$PORT/\"\n"
-        "echo \"Spliceosome Structure Vis is running at http://127.0.0.1:$PORT/\"\n"
-        "echo \"Close this terminal window to stop the local server.\"\n"
-        "wait \"$SERVER_PID\"\n",
+        "exec python3 tools/serve.py --open\n",
         encoding="utf-8",
     )
     launcher.chmod(0o755)
@@ -262,15 +268,18 @@ def main() -> int:
     )
     parser.add_argument("--with-primary-maps", action="store_true", help="Also download and localize primary EMDB maps.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing copied assets and coordinate/map files.")
+    parser.add_argument("--refresh-assets", action="store_true", help="Replace generated dashboard asset folders without re-downloading existing coordinates or maps.")
     args = parser.parse_args()
 
     dest = args.dest.expanduser().resolve()
+    if dest == REPO_ROOT.resolve():
+        parser.error("Choose a destination other than the source repository.")
     source_dir = args.coordinate_source.expanduser().resolve() if args.coordinate_source else None
     if source_dir and not source_dir.exists():
         print(f"Coordinate source does not exist: {source_dir}", file=sys.stderr)
         return 2
 
-    copy_public_assets(dest, args.force)
+    copy_public_assets(dest, args.force or args.refresh_assets)
     payload = load_payload(dest)
     pdb_ids = pdb_ids_from_scripts(dest, payload)
     print(f"Installing {len(pdb_ids)} coordinate files into {dest / 'pdb'}")
@@ -300,8 +309,14 @@ def main() -> int:
                 print(f"  {index}/{len(emdb_ids)} primary maps checked")
 
     rewrite_scripts(dest, args.with_primary_maps)
+    payload["offline"] = True
+    (dest / "data" / "structures.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     write_launchers(dest)
     remove_junk_files(dest)
+    from validate_release import validate
+    validation_errors = validate(dest)
+    for error in validation_errors:
+        print(error, file=sys.stderr)
 
     print(f"Offline dashboard: {dest / 'index.html'}")
     print(f"Coordinate summary: {existing} existing, {copied} copied, {downloaded} downloaded")
@@ -313,7 +328,7 @@ def main() -> int:
         print("Map failures:", file=sys.stderr)
         for emd_id, reason in map_failures:
             print(f"  EMD-{emd_id}: {reason}", file=sys.stderr)
-    return 1 if failures or map_failures else 0
+    return 1 if failures or map_failures or validation_errors else 0
 
 
 if __name__ == "__main__":

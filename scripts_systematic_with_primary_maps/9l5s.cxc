@@ -257,15 +257,9 @@ name BstarD_complex_9L5S_U6_U2_helix_I_partner #402.1/6:28-53
 # U6 snRNA 5' splice-site upstream contact: residues 31-42, motif-neighborhood, medium confidence
 # selector_meta {"color":"#E01842","family":"RNA","feature":"U6_5SS_upstream_contact","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name BstarD_complex_9L5S_U6_5SS_upstream_contact #402.1/6:31-42
-# U6 snRNA internal stem-loop: residues 33-60, motif-neighborhood, low confidence
-# selector_meta {"color":"#D61A3D","family":"RNA","feature":"U6_ISL","group":"internal stem loops","group_key":"internal_stem_loops","kind":"rna_feature"}
-name BstarD_complex_9L5S_U6_ISL #402.1/6:33-60
 # U6 snRNA ACAGAGA box: residues 34-40, sequence-motif, high confidence
 # selector_meta {"color":"#DC143C","family":"RNA","feature":"U6_ACAGAGA_box","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name BstarD_complex_9L5S_U6_ACAGAGA_box #402.1/6:34-40
-# U6 snRNA AGC catalytic triad: residues 46-48, sequence-motif, medium confidence
-# selector_meta {"color":"#C91236","family":"RNA","feature":"U6_AGC_catalytic_triad","group":"catalytic core regions","group_key":"catalytic_core_regions","kind":"rna_feature"}
-name BstarD_complex_9L5S_U6_AGC_catalytic_triad #402.1/6:46-48
 # U6 snRNA LSm site: residues 92, terminal-region, low confidence
 # selector_meta {"color":"#E33A55","family":"RNA","feature":"U6_LSm_site","group":"other snRNA regions","group_key":"other_snRNA_regions","kind":"rna_feature"}
 name BstarD_complex_9L5S_U6_LSm_site #402.1/6:92
@@ -303,19 +297,9 @@ color #402.1/6:31-42 #E01842
 select #402.1/6:31-42
 nucleotides sel fill
 select clear
-# U6 ISL: residues 33-60
-color #402.1/6:33-60 #D61A3D
-select #402.1/6:33-60
-nucleotides sel fill
-select clear
 # U6 ACAGAGA: residues 34-40
 color #402.1/6:34-40 #DC143C
 select #402.1/6:34-40
-nucleotides sel fill
-select clear
-# U6 AGC triad: residues 46-48
-color #402.1/6:46-48 #C91236
-select #402.1/6:46-48
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.

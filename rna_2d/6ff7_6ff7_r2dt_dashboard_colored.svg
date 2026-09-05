@@ -5,7 +5,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 </style>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="70" y="40" class="label">6FF7 RNA 2D panel using R2DT layouts</text>
-<text x="70" y="63" class="small">stage U2 snRNP; Human; 4.5 A; 2018</text>
+<text x="70" y="63" class="small">stage Bact; Human; 4.5 A; 2018</text>
 <text x="70" y="80" class="small">Per-chain R2DT/RNApuzzler layouts; dashed backbones mark unresolved sequence-record residues; inter-RNA base pairs are clustered from FR3D output.</text>
 <rect x="70.0" y="92.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="88.0" y="120.0" class="label" style="font-size:16px;fill:#71C562">U2 snRNA /2 -&gt; 2</text>
@@ -358,26 +358,33 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="474.1" cy="1033.6" r="9.2" fill="#dc143c" opacity="0.28"><title>ACAGAGA box; confidence high</title></circle>
 <circle cx="485.9" cy="1033.6" r="9.2" fill="#dc143c" opacity="0.28"><title>ACAGAGA box; confidence high</title></circle>
 <circle cx="497.8" cy="1033.6" r="9.2" fill="#dc143c" opacity="0.28"><title>ACAGAGA box; confidence high</title></circle>
-<circle cx="645.0" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="656.9" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="668.8" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="680.7" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="692.5" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="704.4" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="716.3" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="728.1" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="740.0" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="751.9" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="763.8" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="775.6" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="787.5" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="799.4" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="811.3" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="823.1" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="835.0" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.14"><title>internal stem-loop; confidence low</title></circle>
-<circle cx="799.4" cy="1033.6" r="9.2" fill="#c91236" opacity="0.22"><title>AGC catalytic triad; confidence medium</title></circle>
-<circle cx="811.3" cy="1033.6" r="9.2" fill="#c91236" opacity="0.22"><title>AGC catalytic triad; confidence medium</title></circle>
-<circle cx="823.1" cy="1033.6" r="9.2" fill="#c91236" opacity="0.22"><title>AGC catalytic triad; confidence medium</title></circle>
+<circle cx="569.0" cy="1033.6" r="9.2" fill="#c91236" opacity="0.28"><title>AGC catalytic triad; confidence high</title></circle>
+<circle cx="580.9" cy="1033.6" r="9.2" fill="#c91236" opacity="0.28"><title>AGC catalytic triad; confidence high</title></circle>
+<circle cx="592.8" cy="1033.6" r="9.2" fill="#c91236" opacity="0.28"><title>AGC catalytic triad; confidence high</title></circle>
+<circle cx="604.7" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="616.5" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="616.5" cy="1021.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="616.5" cy="1009.9" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="606.3" cy="1003.9" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="616.5" cy="998.0" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="611.3" cy="987.3" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="602.0" cy="980.0" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="592.6" cy="972.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="580.8" cy="971.3" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="574.1" cy="961.5" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="576.9" cy="950.0" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="587.4" cy="944.4" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="598.5" cy="948.5" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="602.8" cy="959.6" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="612.2" cy="966.9" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="621.5" cy="974.2" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="633.2" cy="976.6" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="638.4" cy="987.3" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="633.2" cy="998.0" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="633.2" cy="1009.9" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="633.2" cy="1021.7" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="633.2" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
+<circle cx="645.0" cy="1033.6" r="9.2" fill="#d61a3d" opacity="0.22"><title>internal stem-loop core; confidence medium</title></circle>
 <text x="125.0" y="1033.6" class="base" fill="#EF4444"><title>/6 seq 1 auth 1</title>G</text>
 <text x="136.9" y="1033.6" class="base" fill="#EF4444"><title>/6 seq 2 auth 2</title>U</text>
 <text x="136.9" y="1021.7" class="base" fill="#EF4444"><title>/6 seq 3 auth 3</title>G</text>
@@ -490,10 +497,10 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="436.0" y="1077.1" class="feature-label" text-anchor="end" fill="#e01842">5&#x27;SS contact nt 38-49</text>
 <path d="M462.2,1033.6 L420.6,1009.6" class="feature-callout" stroke="#dc143c" opacity="0.60"/>
 <text x="420.6" y="1009.6" class="feature-label" text-anchor="end" fill="#dc143c">ACAGAGA nt 41-47</text>
-<path d="M740.0,1033.6 L760.3,1077.1" class="feature-callout" stroke="#d61a3d" opacity="0.46"/>
-<text x="760.3" y="1077.1" class="feature-label" text-anchor="start" fill="#d61a3d">ISL nt 79-95</text>
-<path d="M811.3,1033.6 L769.7,1009.6" class="feature-callout" stroke="#c91236" opacity="0.54"/>
-<text x="769.7" y="1009.6" class="feature-label" text-anchor="end" fill="#c91236">AGC triad nt 92-94</text>
+<path d="M580.9,1033.6 L560.6,990.1" class="feature-callout" stroke="#c91236" opacity="0.60"/>
+<text x="560.6" y="990.1" class="feature-label" text-anchor="end" fill="#c91236">AGC triad nt 53-55</text>
+<path d="M611.9,990.7 L632.2,1034.2" class="feature-callout" stroke="#d61a3d" opacity="0.54"/>
+<text x="632.2" y="1034.2" class="feature-label" text-anchor="start" fill="#d61a3d">ISL nt 56-79</text>
 <rect x="960.0" y="717.0" width="820.0" height="520.0" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
 <text x="978.0" y="745.0" class="label" style="font-size:16px;fill:#303030">mRNA /Z -&gt; M</text>
 <polyline points="1015.0,988.7 1030.1,988.7 1045.2,988.7 1060.3,988.7 1075.4,988.7 1090.5,988.7 1105.6,988.7 1120.7,988.7 1135.9,988.7 1151.0,988.7 1166.1,988.7 1181.2,988.7 1196.3,988.7 1211.4,988.7 1226.5,988.7 1241.6,988.7 1256.7,988.7 1271.8,988.7 1286.9,988.7 1302.0,988.7 1317.1,988.7 1332.2,988.7 1347.3,988.7 1362.4,988.7 1377.6,988.7 1392.7,988.7 1407.8,988.7 1422.9,988.7 1438.0,988.7 1453.1,988.7 1468.2,988.7 1483.3,988.7 1498.4,988.7 1513.5,988.7 1528.6,988.7 1543.7,988.7 1558.8,988.7 1573.9,988.7 1589.0,988.7 1604.1,988.7 1619.3,988.7 1634.4,988.7 1649.5,988.7 1664.6,988.7 1679.7,988.7 1694.8,988.7 1709.9,988.7 1725.0,988.7" class="backbone"/>
@@ -502,16 +509,16 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M1725.0,988.7 L1762.0,988.7" class="missing"><title>missing 3-prime /Z sequence residues 289-369 (81 nt)</title></path>
 <text x="1762.0" y="980.7" text-anchor="end" class="small" fill="#64748b">missing 3-prime 81 nt</text>
 <path d="M1453.1,988.7 Q1460.6,952.7 1468.2,988.7" class="missing"><title>missing /Z sequence residues 263-270 (8 nt)</title></path>
-<circle cx="1015.0" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1030.1" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1045.2" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1060.3" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1075.4" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1090.5" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1105.6" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1120.7" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1135.9" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
-<circle cx="1151.0" cy="988.7" r="9.2" fill="#FF8C00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1015.0" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1030.1" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1045.2" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1060.3" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1075.4" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1090.5" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1105.6" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1120.7" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1135.9" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
+<circle cx="1151.0" cy="988.7" r="9.2" fill="#FF9D00" opacity="0.22"><title>5&#x27; exon; confidence medium</title></circle>
 <circle cx="1015.0" cy="988.7" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1030.1" cy="988.7" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
 <circle cx="1045.2" cy="988.7" r="9.2" fill="#303030" opacity="0.22"><title>substrate RNA; confidence medium</title></circle>
@@ -604,12 +611,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1694.8" cy="988.7" r="9.2" fill="#303030" opacity="0.22"><title>intron from 5&#x27; splice site; confidence medium</title></circle>
 <circle cx="1709.9" cy="988.7" r="9.2" fill="#303030" opacity="0.22"><title>intron from 5&#x27; splice site; confidence medium</title></circle>
 <circle cx="1725.0" cy="988.7" r="9.2" fill="#303030" opacity="0.22"><title>intron from 5&#x27; splice site; confidence medium</title></circle>
-<circle cx="1468.2" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1483.3" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1498.4" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1513.5" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1528.6" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1543.7" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1558.8" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1573.9" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1589.0" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
@@ -620,8 +621,6 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <circle cx="1664.6" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1679.7" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1694.8" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1709.9" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
-<circle cx="1725.0" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point region; confidence high</title></circle>
 <circle cx="1679.7" cy="988.7" r="9.2" fill="#303030" opacity="0.28"><title>branch point adenosine; confidence high</title></circle>
 <text x="1015.0" y="988.7" class="base" fill="#303030"><title>/Z seq 233 auth 233</title>C</text>
 <text x="1030.1" y="988.7" class="base" fill="#303030"><title>/Z seq 234 auth 234</title>G</text>
@@ -675,14 +674,14 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="1694.8" y="988.7" class="base" fill="#303030"><title>/Z seq 286 auth 395</title>C</text>
 <text x="1709.9" y="988.7" class="base" fill="#303030"><title>/Z seq 287 auth 396</title>C</text>
 <text x="1725.0" y="988.7" class="base" fill="#303030"><title>/Z seq 288 auth 397</title>U</text>
-<path d="M1083.0,988.7 L1126.5,968.4" class="feature-callout" stroke="#FF8C00" opacity="0.54"/>
-<text x="1126.5" y="968.4" class="feature-label" text-anchor="start" fill="#FF8C00">5&#x27; exon nt 233-242</text>
+<path d="M1083.0,988.7 L1126.5,968.4" class="feature-callout" stroke="#FF9D00" opacity="0.54"/>
+<text x="1126.5" y="968.4" class="feature-label" text-anchor="start" fill="#FF9D00">5&#x27; exon nt 233-242</text>
 <path d="M1203.8,988.7 L1247.3,1009.0" class="feature-callout" stroke="#303030" opacity="0.60"/>
 <text x="1247.3" y="1009.0" class="feature-label" text-anchor="start" fill="#303030">5&#x27;SS nt 243-248</text>
-<path d="M1596.6,988.7 L1555.0,964.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1555.0" y="964.7" class="feature-label" text-anchor="end" fill="#303030">BP region nt 380-397</text>
-<path d="M1679.7,988.7 L1638.1,1012.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
-<text x="1638.1" y="1012.7" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 394</text>
+<path d="M1626.8,988.7 L1606.5,1032.2" class="feature-callout" stroke="#303030" opacity="0.60"/>
+<text x="1606.5" y="1032.2" class="feature-label" text-anchor="end" fill="#303030">BP region nt 386-395</text>
+<path d="M1679.7,988.7 L1638.1,964.7" class="feature-callout" stroke="#303030" opacity="0.60"/>
+<text x="1638.1" y="964.7" class="feature-label" text-anchor="end" fill="#303030">BP-A nt 394</text>
 <path d="M187.3,393.8 Q485.4,348.8 783.6,1033.6" class="inter" stroke-width="3.1"><title>2:3-12 to 6:86-95; 9 FR3D interactions; cWW</title></path>
 <path d="M383.7,393.8 Q482.3,348.8 580.9,1033.6" class="inter" stroke-width="1.8"><title>2:20-22 to 6:53-55; 3 FR3D interactions; cWW</title></path>
 <path d="M462.8,393.8 Q501.1,348.8 539.4,1033.6" class="inter" stroke-width="2.0"><title>2:25-28 to 6:49-52; 4 FR3D interactions; cWW</title></path>
@@ -702,7 +701,7 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <path d="M1543.7,988.7 Q1114.6,348.8 685.5,393.8" class="inter" stroke-width="1.5"><title>Z:275-277 to 2:41-43; 2 FR3D interactions; cWS,cWW</title></path>
 <path d="M1644.4,988.7 Q1118.3,348.8 592.1,393.8" class="inter" stroke-width="2.4"><title>Z:280-286 to 2:33-38; 6 FR3D interactions; cWW</title></path>
 <text x="70" y="1364.0" class="label" style="font-size:15px">Feature overlays</text>
-<circle cx="77.0" cy="1386.0" r="7" fill="#FF8C00" opacity="0.28"/>
+<circle cx="77.0" cy="1386.0" r="7" fill="#FF9D00" opacity="0.28"/>
 <text x="90.0" y="1390.0" class="small">exon 5</text>
 <circle cx="287.0" cy="1386.0" r="7" fill="#303030" opacity="0.28"/>
 <text x="300.0" y="1390.0" class="small">substrate</text>
@@ -730,8 +729,8 @@ text{font-family:Arial,Helvetica,sans-serif} .base{font-size:12px;font-weight:70
 <text x="930.0" y="1413.0" class="small">U6 5SS upstream contact</text>
 <circle cx="1127.0" cy="1409.0" r="7" fill="#dc143c" opacity="0.28"/>
 <text x="1140.0" y="1413.0" class="small">U6 ACAGAGA box</text>
-<circle cx="1337.0" cy="1409.0" r="7" fill="#d61a3d" opacity="0.28"/>
-<text x="1350.0" y="1413.0" class="small">U6 ISL</text>
-<circle cx="1547.0" cy="1409.0" r="7" fill="#c91236" opacity="0.28"/>
-<text x="1560.0" y="1413.0" class="small">U6 AGC catalytic triad</text>
+<circle cx="1337.0" cy="1409.0" r="7" fill="#c91236" opacity="0.28"/>
+<text x="1350.0" y="1413.0" class="small">U6 AGC catalytic triad</text>
+<circle cx="1547.0" cy="1409.0" r="7" fill="#d61a3d" opacity="0.28"/>
+<text x="1560.0" y="1413.0" class="small">U6 ISL</text>
 </svg>

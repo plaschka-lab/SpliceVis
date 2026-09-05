@@ -1,5 +1,7 @@
 LOCUS       YEAST_U6_snRNA           112 bp    RNA              UNK 01-JAN-1980
-DEFINITION  YEAST_U6 snRNA; snrna_reference; reference=9dtr:6; members=29.
+DEFINITION  YEAST_U6 snRNA; snrna_reference; reference=YEAST_U6; source=Curated
+            U4/U6 reference intervals; other tracks are projected
+            sequence-region annotations, not folding evidence; members=29.
 ACCESSION   YEAST_U6_snRNA
 VERSION     YEAST_U6_snRNA
 KEYWORDS    .
@@ -9,11 +11,10 @@ SOURCE      .
 FEATURES             Location/Qualifiers
      misc_feature    1..30
                      /label="5' terminal stem-loop"
-                     /note="feature=U6_5prime_terminal_stem_loop; support=24/29;
-                     projected by global alignment; members=5gan:W, 5gap:W,
-                     5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6,
-                     5nrl:6, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6bk8:6,
-                     6exn:6, 6j6g:E, 6j6h:E, 6j6n:E"
+                     /note="feature=U6_5prime_terminal_stem_loop; support=0/29;
+                     Curated species-reference interval; high; Curated U4/U6
+                     reference intervals; other tracks are projected
+                     sequence-region annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#DC143C"
                      /ApEinfo_revcolor="#DC143C"
      misc_feature    41..66
@@ -34,15 +35,6 @@ FEATURES             Location/Qualifiers
                      5zwo:F, 6aso:I, 6bk8:6, 6exn:6"
                      /ApEinfo_fwdcolor="#808080"
                      /ApEinfo_revcolor="#808080"
-     misc_feature    46..73
-                     /label="internal stem-loop"
-                     /note="feature=U6_ISL; support=25/29; projected by global
-                     alignment; members=3jcm:D, 5gan:W, 5gap:W, 5gm6:E, 5gmk:E,
-                     5lj3:V, 5lj5:V, 5lqw:6, 5mps:6, 5mq0:6, 5nrl:6, 5wsg:E,
-                     5y88:D, 5ylz:D, 5zwm:F, 5zwo:F, 6bk8:6, 6exn:6, 6j6g:E,
-                     6j6h:E"
-                     /ApEinfo_fwdcolor="#D61A3D"
-                     /ApEinfo_revcolor="#D61A3D"
      misc_feature    47..53
                      /label="ACAGAGA box"
                      /note="feature=U6_ACAGAGA_box; support=27/29; projected by
@@ -53,28 +45,37 @@ FEATURES             Location/Qualifiers
                      /ApEinfo_fwdcolor="#DC143C"
                      /ApEinfo_revcolor="#DC143C"
      misc_feature    55..68
-                     /label="U4/U6 stem II partner"
-                     /note="feature=U6_U4_stem_II_partner; support=6/29;
-                     projected by global alignment; members=3jcm:D, 5gan:W,
-                     5gap:W, 5nrl:6, 5zwm:F, 5zwo:F"
-                     /ApEinfo_fwdcolor="#E01842"
-                     /ApEinfo_revcolor="#E01842"
-     misc_feature    59..61
-                     /label="AGC catalytic triad"
-                     /note="feature=U6_AGC_catalytic_triad; support=25/29;
-                     projected by global alignment; members=3jcm:D, 5gan:W,
-                     5gap:W, 5gm6:E, 5gmk:E, 5lj3:V, 5lj5:V, 5lqw:6, 5mps:6,
-                     5mq0:6, 5nrl:6, 5wsg:E, 5y88:D, 5ylz:D, 5zwm:F, 5zwo:F,
-                     6bk8:6, 6exn:6, 6j6g:E, 6j6h:E"
-                     /ApEinfo_fwdcolor="#C91236"
-                     /ApEinfo_revcolor="#C91236"
-     misc_feature    70..80
                      /label="U4/U6 stem I partner"
-                     /note="feature=U6_U4_stem_I_partner; support=6/29;
-                     projected by global alignment; members=3jcm:D, 5gan:W,
-                     5gap:W, 5nrl:6, 5zwm:F, 5zwo:F"
+                     /note="feature=U6_U4_stem_I_partner; support=0/29; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
                      /ApEinfo_fwdcolor="#D9183E"
                      /ApEinfo_revcolor="#D9183E"
+     misc_feature    59..61
+                     /label="AGC catalytic triad"
+                     /note="feature=U6_AGC_catalytic_triad; support=0/29;
+                     Curated species-reference interval; high; Curated U4/U6
+                     reference intervals; other tracks are projected
+                     sequence-region annotations, not folding evidence"
+                     /ApEinfo_fwdcolor="#C91236"
+                     /ApEinfo_revcolor="#C91236"
+     misc_feature    62..85
+                     /label="internal stem-loop core"
+                     /note="feature=U6_ISL; support=0/29; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
+                     /ApEinfo_fwdcolor="#D61A3D"
+                     /ApEinfo_revcolor="#D61A3D"
+     misc_feature    70..80
+                     /label="U4/U6 stem II partner"
+                     /note="feature=U6_U4_stem_II_partner; support=0/29; Curated
+                     species-reference interval; high; Curated U4/U6 reference
+                     intervals; other tracks are projected sequence-region
+                     annotations, not folding evidence"
+                     /ApEinfo_fwdcolor="#E01842"
+                     /ApEinfo_revcolor="#E01842"
      misc_feature    103..112
                      /label="LSm site"
                      /note="feature=U6_LSm_site; support=16/29; projected by

@@ -1,5 +1,5 @@
 feature,label,start,end,support_count,member_count,note
-U4_U6_stem_I_partner,U4/U6 stem I partner,1,18,6,7,"projected by global alignment; members=3jcm:E, 5gan:V, 5gap:V, 5nrl:4, 5zwm:I, 5zwo:I"
-U4_U6_stem_II_partner,U4/U6 stem II partner,57,64,5,7,"projected by global alignment; members=3jcm:E, 5gan:V, 5nrl:4, 5zwm:I, 5zwo:I"
-U4_Brr2_loading_region,Brr2 loading region,60,95,6,7,"merged overlapping projected intervals; projected by global alignment; members=3jcm:E, 5gan:V, 5nrl:4, 5zwm:I, 5zwo:I; projected by global alignment; members=5gao:V"
+U4_U6_stem_II_partner,U4/U6 stem II partner,1,18,0,7,"Curated species-reference interval; high; Curated U4/U6 reference intervals; other tracks are projected sequence-region annotations, not folding evidence"
+U4_U6_stem_I_partner,U4/U6 stem I partner,57,64,0,7,"Curated species-reference interval; high; Curated U4/U6 reference intervals; other tracks are projected sequence-region annotations, not folding evidence"
+U4_Brr2_loading_region,Brr2 loading region,60,95,0,7,"Curated species-reference interval; medium; Curated U4/U6 reference intervals; other tracks are projected sequence-region annotations, not folding evidence"
 U4_Sm_site,Sm site,144,150,6,7,"projected by global alignment; members=3jcm:E, 5gan:V, 5gao:V, 5nrl:4, 5zwm:I, 5zwo:I"
