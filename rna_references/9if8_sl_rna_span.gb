@@ -1,0 +1,35 @@
+LOCUS       sl_rna_span               96 bp    RNA              UNK 01-JAN-1980
+DEFINITION  Reconstructed deposited SL RNA span: exon 1–39 and outron 40–96.
+            Separate rows represent separate deposited chains; the gap is not a
+            deletion. Only the SL exon part of LE is shown after ligation.
+            Source: https://doi.org/10.1038/s41467-026-77480-6.
+ACCESSION   sl_rna_span
+VERSION     sl_rna_span
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..39
+                     /label="SL exon"
+                     /note="feature=exon_5; Paper Fig. 2 and deposited polymer
+                     connectivity; https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
+     misc_feature    40..45
+                     /label="SL 5′ splice site"
+                     /note="feature=five_prime_splice_site; Paper Fig. 2 and
+                     deposited polymer connectivity;
+                     https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    40..96
+                     /label="SL outron"
+                     /note="feature=intron; Paper Fig. 2 and deposited polymer
+                     connectivity; https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 aacuaacgcu auauaaguau caguuucugu acuuuauugg uaugcgaaac uuccggaacc
+       61 ugucuuccgg caagauuuug gaagcgcgca ggcgcu
+//

@@ -72697,6 +72697,36 @@
       "thumbnail": {
         "image": "thumbnails/122_9if7_thumbnail.png"
       },
+      "rna_sequence_views": [
+        {
+          "label": "SL RNA: exon + outron (1–96)",
+          "html": "rna_references/9if7_sl_rna_span.html",
+          "fasta": "rna_references/9if7_sl_rna_span.fasta",
+          "genbank": "rna_references/9if7_sl_rna_span.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        },
+        {
+          "label": "SL exon",
+          "html": "rna_references/9if7_chain_LE.html",
+          "fasta": "rna_references/9if7_chain_LE.fasta",
+          "genbank": "rna_references/9if7_chain_LE.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        },
+        {
+          "label": "SL outron (author 40–96)",
+          "html": "rna_references/9if7_chain_LO.html",
+          "fasta": "rna_references/9if7_chain_LO.fasta",
+          "genbank": "rna_references/9if7_chain_LO.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        },
+        {
+          "label": "Recipient pre-mRNA: outron + 3′ exon",
+          "html": "rna_references/9if7_chain_RN.html",
+          "fasta": "rna_references/9if7_chain_RN.fasta",
+          "genbank": "rna_references/9if7_chain_RN.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        }
+      ],
       "composite_groups": []
     },
     {
@@ -97639,6 +97669,36 @@
       "thumbnail": {
         "image": "thumbnails/130_9if8_thumbnail.png"
       },
+      "rna_sequence_views": [
+        {
+          "label": "SL RNA: exon + outron (1–96)",
+          "html": "rna_references/9if8_sl_rna_span.html",
+          "fasta": "rna_references/9if8_sl_rna_span.fasta",
+          "genbank": "rna_references/9if8_sl_rna_span.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        },
+        {
+          "label": "Ligated mRNA: SL exon + recipient exon",
+          "html": "rna_references/9if8_chain_LE.html",
+          "fasta": "rna_references/9if8_chain_LE.fasta",
+          "genbank": "rna_references/9if8_chain_LE.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        },
+        {
+          "label": "SL outron (author 40–96)",
+          "html": "rna_references/9if8_chain_LO.html",
+          "fasta": "rna_references/9if8_chain_LO.fasta",
+          "genbank": "rna_references/9if8_chain_LO.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        },
+        {
+          "label": "Recipient outron after exon ligation",
+          "html": "rna_references/9if8_chain_RN.html",
+          "fasta": "rna_references/9if8_chain_RN.fasta",
+          "genbank": "rna_references/9if8_chain_RN.gb",
+          "help": "Deposited sequence with paper-curated feature boundaries. Blue bases are modelled; grey bases have no coordinates. N means unspecified endogenous sequence, not necessarily missing coordinates. Click or drag modelled bases within one chain to focus them in 3D. The combined SL view reconstructs the deposited 1–96 span, not a covalently intact RNA in these states."
+        }
+      ],
       "composite_groups": []
     },
     {

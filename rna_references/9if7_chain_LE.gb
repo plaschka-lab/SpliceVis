@@ -1,0 +1,22 @@
+LOCUS       chain_LE                  39 bp    RNA              UNK 01-JAN-1980
+DEFINITION  Deposited chain LE sequence; feature tracks use sequence positions,
+            and selectable bases retain deposited author residue numbers. N
+            denotes unspecified base identity. This is the deposited span, not
+            an inferred full endogenous transcript. Source:
+            https://doi.org/10.1038/s41467-026-77480-6.
+ACCESSION   chain_LE
+VERSION     chain_LE
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..39
+                     /label="SL 5' exon"
+                     /note="feature=exon_5; Paper Fig. 2 and deposited polymer
+                     connectivity; https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#FF9D00"
+                     /ApEinfo_revcolor="#FF9D00"
+ORIGIN
+        1 aacuaacgcu auauaaguau caguuucugu acuuuauug
+//

@@ -82,3 +82,15 @@ The private curation workspace provides `curate_nadenoen_2026.py` and
 `curate_nadenoen_rna.py` as repeatable inputs, plus manual-review tables.
 The public repository intentionally does not include large coordinate/map
 binaries or the complete supplementary archive.
+
+## Interactive annotated sequences
+
+Each entry includes four sequence views beneath the 3D viewer: the reconstructed
+SL RNA deposited span (1–96), SL exon or ligated mRNA, SL outron, and recipient
+RNA. The combined view places the two separate chains against exon 1–39 plus
+outron 40–96; it does not assert that these chains remain covalently continuous.
+The post-catalytic LE view includes the recipient exon at positions 40–63.
+N-coded recipient bases remain unspecified, including those with coordinates.
+Modelled bases can be selected to focus their original chain/residue in Mol*;
+FASTA and annotated GenBank downloads preserve the displayed sequence/features.
+The paper names this RNA SL snRNA; no unsupported SL1 isoform assignment is made.

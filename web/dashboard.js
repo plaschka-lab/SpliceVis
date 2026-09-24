@@ -804,7 +804,7 @@ ${await scriptFor(record,"no_maps")}
       return `<div class="molstar-feature-box"><div class="molstar-feature-controls"><div class="field"><label for="molstarFeatureGroup">Feature group</label><select id="molstarFeatureGroup" onchange="renderMolstarFeatureButtons()"><option value="all">All feature groups</option>${groups.map(g=>`<option value="${attr(g)}">${esc(g)}</option>`).join("")}</select></div><div class="field"><label for="molstarFeatureSearch">Find feature</label><input id="molstarFeatureSearch" type="search" placeholder="branch, 5SS, U6" oninput="renderMolstarFeatureButtons()"></div><button type="button" onclick="clearMolstarFeature()" title="Clear Mol* feature highlight and refocus the full structure.">Clear feature</button></div><div class="molstar-feature-list" id="molstarFeatureList"></div></div>`;
     }
     function structureAlignmentItems(r){
-      const byPath = new Map();
+      const byPath = new Map((r.rna_sequence_views || []).map(item=>[item.html,item]));
       for(const substrate of (r.substrate_types || [])){
         for(const alignment of (substrate.pairwise_alignments || [])){
           if(!alignment.alignment_html || byPath.has(alignment.alignment_html)) continue;
@@ -828,7 +828,7 @@ ${await scriptFor(record,"no_maps")}
       const firstUrl = alignmentViewerUrl(first.html);
       const chooser = items.length > 1 ? `<select class="rna-alignment-select" aria-label="Reference alignment" onchange="changeRnaAlignment(this)">${items.map((item,index)=>`<option value="${index}">${esc(item.label)}</option>`).join("")}</select>` : "";
       const help = `<span class="rna-alignment-help"><button type="button" aria-label="Sequence alignment help">?</button><span class="rna-alignment-help-text" role="tooltip"><strong>Sequence alignment</strong>Feature tracks are projected from the annotated reference. Blue bases are modelled; grey bases are present in the sequence record but unresolved. Click a modelled base, or drag a range within one chain, to focus it in Mol*.</span></span>`;
-      return `<section class="rna-alignment-panel"><iframe id="rnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} pre-mRNA sequence alignment`)}" loading="eager"></iframe><div class="rna-alignment-footer">${chooser}${help}<a id="rnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full alignment</a>${first.fasta?`<a id="rnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}</div></section>`;
+      return `<section class="rna-alignment-panel"><iframe id="rnaAlignmentFrame" class="rna-alignment-frame" src="${attr(firstUrl)}" title="${attr(`${r.pdb_id.toUpperCase()} pre-mRNA sequence alignment`)}" loading="eager"></iframe><div class="rna-alignment-footer">${chooser}${first.help?`<span class="subtle rna-sequence-note">${esc(first.help)}</span>`:help}<a id="rnaAlignmentOpen" href="${attr(firstUrl)}" target="_blank" rel="noopener">Full alignment</a>${first.fasta?`<a id="rnaAlignmentFasta" href="${attr(first.fasta)}" download>FASTA</a>`:""}<a id="rnaAlignmentGenbank" href="${attr(first.genbank || "")}" download ${first.genbank?"":"hidden"}>GenBank</a></div></section>`;
     }
     function changeRnaAlignment(control){
       const items=structureAlignmentItems(currentMolstarRecord()),item=items[Number(control.value)];
@@ -838,6 +838,9 @@ ${await scriptFor(record,"no_maps")}
       document.getElementById("rnaAlignmentOpen").href=viewerUrl;
       const fasta=document.getElementById("rnaAlignmentFasta");
       if(fasta && item.fasta) fasta.href=item.fasta;
+      const gb=document.getElementById("rnaAlignmentGenbank");
+      if(gb){gb.hidden=!item.genbank;gb.href=item.genbank || "";}
+      document.getElementById("rnaAlignmentFrame").title=item.label + " annotated sequence";
     }
     function structureSnrnaAlignmentItems(r){
       return (r?.snrna_alignments || []).filter(item=>item.alignment_html).map(item=>({

@@ -1,0 +1,36 @@
+LOCUS       chain_RN                  44 bp    RNA              UNK 01-JAN-1980
+DEFINITION  Deposited chain RN sequence; feature tracks use sequence positions,
+            and selectable bases retain deposited author residue numbers. N
+            denotes unspecified base identity. This is the deposited span, not
+            an inferred full endogenous transcript. Source:
+            https://doi.org/10.1038/s41467-026-77480-6.
+ACCESSION   chain_RN
+VERSION     chain_RN
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1
+                     /label="Branch-point A"
+                     /note="feature=branch_point_adenosine; Paper Fig. 2 and
+                     deposited polymer connectivity;
+                     https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    1..44
+                     /label="Pre-mRNA outron"
+                     /note="feature=intron; Paper Fig. 2 and deposited polymer
+                     connectivity; https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    43..44
+                     /label="3' splice-site AG"
+                     /note="feature=three_prime_splice_site; Paper Fig. 2 and
+                     deposited polymer connectivity;
+                     https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 annnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnag
+//

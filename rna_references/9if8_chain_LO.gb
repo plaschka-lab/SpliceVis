@@ -1,0 +1,29 @@
+LOCUS       chain_LO                  57 bp    RNA              UNK 01-JAN-1980
+DEFINITION  Deposited chain LO sequence; feature tracks use sequence positions,
+            and selectable bases retain deposited author residue numbers. N
+            denotes unspecified base identity. This is the deposited span, not
+            an inferred full endogenous transcript. Source:
+            https://doi.org/10.1038/s41467-026-77480-6.
+ACCESSION   chain_LO
+VERSION     chain_LO
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc_feature    1..6
+                     /label="SL 5' splice site"
+                     /note="feature=five_prime_splice_site; Paper Fig. 2 and
+                     deposited polymer connectivity;
+                     https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+     misc_feature    1..57
+                     /label="SL outron"
+                     /note="feature=intron; Paper Fig. 2 and deposited polymer
+                     connectivity; https://doi.org/10.1038/s41467-026-77480-6"
+                     /ApEinfo_fwdcolor="#303030"
+                     /ApEinfo_revcolor="#303030"
+ORIGIN
+        1 guaugcgaaa cuuccggaac cugucuuccg gcaagauuuu ggaagcgcgc aggcgcu
+//
