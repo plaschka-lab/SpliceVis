@@ -4,7 +4,7 @@
 
 Static public atlas for exploring deposited spliceosome structures in an interactive, consistently colored 3D viewer and continuing the same visualization workflow in ChimeraX.
 
-- 146 deposited PDB entries.
+- 148 deposited PDB entries.
 - Original deposited chain identifiers by default, with optional in-session systematic chain renaming.
 - Thumbnail PNGs and RNA 2D preview panels are included.
 - No mmCIF files, local CIF models, or large map binaries are included.

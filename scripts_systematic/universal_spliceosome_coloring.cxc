@@ -18,10 +18,16 @@ name spliceosome_NTC_PRP19 /N1A,N1B,N1C,N1D,N2,N3,N4,N5
 name spliceosome_RNA_binding /RA,RC
 # RNA/substrate
 name spliceosome_RNA_substrate /I,IA,IB,IC,M,MA,MB,MC,MD
+# SL Sm ring
+name spliceosome_SL_Sm_ring /LS1,LS2,LS3,LSB,LSE,LSF,LSG
+# SL snRNP
+name spliceosome_SL_snRNP /SLO
+# SL substrate
+name spliceosome_SL_substrate /SLE,SLM
 # SR proteins
 name spliceosome_SR_proteins /RB
 # Second step factors
-name spliceosome_Second_step_factors /C1,C2,C3
+name spliceosome_Second_step_factors /C1,C2,C3,CA
 # Sm ring
 name spliceosome_Sm_ring /SA,SAA,SAB,SAC,SB,SBA,SBB,SC,SCA,SCB,SD,SDA,SDB,SE,SEA,SEB,SEC,SF,SFA,SFB,SFC,SG,SGA,SGB
 # U1 Sm ring
@@ -53,7 +59,7 @@ name spliceosome_U6_LSm /6L2,6L3,6L4,6L5,6L6,6L7,6L8
 # U6 snRNP
 name spliceosome_U6_snRNP /6,6R1,6R2
 # other
-name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBY,XBZA,XBZB,XCA,XCB,XCC,XCD,XCE,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
+name spliceosome_other /X0,X1,X2,X3,X4,X5,X6,X7,X8,X9A,X9B,XA,XA0,XA1,XA2,XA3,XA4,XA5,XA6,XA7,XA8,XA9,XAA,XAB,XAC,XAD,XAE,XAF,XAG,XAH,XAI,XAJ,XAK,XAL,XALA,XALB,XAM,XAN,XAO,XAP,XAQ,XAR,XAS,XAT,XAU,XAV,XAW,XAX,XAY,XAZ,XB,XB0,XB1,XB2,XB3,XB4,XB5,XB6,XB7,XB8,XB9,XBA,XBB,XBC,XBD,XBDA,XBDB,XBE,XBF,XBG,XBH,XBI,XBJ,XBK,XBL,XBM,XBN,XBO,XBP,XBQ,XBR,XBS,XBT,XBU,XBV,XBW,XBX,XBYA,XBYB,XBZ,XCA,XCB,XCC,XCD,XCE,XCF,XCG,XCH,XCI,XCJ,XCK,XCL,XCM,XCN,XCO,XD,XEA,XEB,XF,XG,XH,XI,XJ,XK,XL,XM,XN,XO,XP,XQ,XR,XS,XT,XU,XV,XW,XX,XY,XZ
 
 # Systematic-chain colors.
 # Disassembly factors
@@ -142,6 +148,29 @@ color /MB #303030
 color /MC #303030
 # mRNA (MD)
 color /MD #303030
+# SL Sm ring
+# SL:SNRPD1 (LS1)
+color /LS1 #C6B4D8
+# SL:SNRPD2 (LS2)
+color /LS2 #C6B4D8
+# SL:SNRPD3 (LS3)
+color /LS3 #C6B4D8
+# SL:SNRPB (LSB)
+color /LSB #C6B4D8
+# SL:SNRPE (LSE)
+color /LSE #C6B4D8
+# SL:SNRPF (LSF)
+color /LSF #C6B4D8
+# SL:SNRPG (LSG)
+color /LSG #C6B4D8
+# SL snRNP
+# SL outron (SLO)
+color /SLO #303030
+# SL substrate
+# SL exon (SLE)
+color /SLE #FF9D00
+# SL-ligated mRNA (SLM)
+color /SLM #FF9D00
 # SR proteins
 # SRRM2 (RB)
 color /RB #BDD6F0
@@ -152,6 +181,8 @@ color /C1 #5A338B
 color /C2 #FFF7C9
 # DHX8 (C3)
 color /C3 #900C3F
+# PRPF18 (CA)
+color /CA #9A85C1
 # Sm ring
 # SNRPB (SA)
 color /SA #B0C4DE
@@ -572,12 +603,10 @@ color /XAY #B12F50
 color /XAZ #57389F
 # ASF (XB)
 color /XB #CC3E8E
-# WDR70 (XB0)
-color /XB0 #7363C5
-# WDR83 (XB1)
-color /XB1 #ED6983
-# YJU2B (XB8)
-color /XB8 #DA70D6
+# WDR83 (XB0)
+color /XB0 #ED6983
+# YJU2B (XB7)
+color /XB7 #DA70D6
 # SDE2 (XBA)
 color /XBA #FFFF00
 # SF1 (XBC)
@@ -590,14 +619,38 @@ color /XBDA #E0A3D2
 color /XBDB #E0A3D2
 # SNIP1 (XBE)
 color /XBE #89BFC8
-# SRM160 (XBJ)
-color /XBJ #6E96C4
-# UBL5 (XBN)
-color /XBN #DB7093
-# ZCCHC10 (XCD)
-color /XCD #42C4EB
-# ZMAT2 (XCE)
-color /XCE #FFB6C1
+# SRM160 (XBI)
+color /XBI #6E96C4
+# UBL5 (XBM)
+color /XBM #DB7093
+# WDR70 (XBZ)
+color /XBZ #7363C5
+# ZCCHC10 (XCC)
+color /XCC #42C4EB
+# ZMAT2 (XCD)
+color /XCD #FFB6C1
+# LT_CWC21 (XCE)
+color /XCE #5979AF
+# LT_LTAP16_0490 (XCF)
+color /XCF #779E91
+# LT_LTAPH_1601800 (XCG)
+color /XCG #CC983E
+# LT_PRC3 (XCH)
+color /XCH #987352
+# LT_PRC5 (XCI)
+color /XCI #7E6B95
+# LT_RBP1 (XCJ)
+color /XCJ #438E78
+# LT_SDE2_LIKE (XCK)
+color /XCK #BD6798
+# LT_SM15K (XCL)
+color /XCL #92A7BC
+# LT_SM16_5K (XCM)
+color /XCM #C7AE85
+# LT_UNK (XCN)
+color /XCN #929292
+# LT_ZN_KNUCKLE (XCO)
+color /XCO #C36B5D
 # BTCD (XH)
 color /XH #BBA681
 # BUD13 (XI)
