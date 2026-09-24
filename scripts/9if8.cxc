@@ -4,15 +4,15 @@
 # Original deposited chain identifiers are used.
 
 # Shared anchor frame: 8H6L
-# Structure group: #430; target model: #430.1; RNA labels: #430.2.
+# Structure group: #431; target model: #431.1; RNA labels: #431.2.
 
-open 8h6l id 430.9 name 8H6L_anchor
-open 9if8 id 430.1 name 9IF8
-rename #430 P_9if8_structure
+open 8h6l id 431.9 name 8H6L_anchor
+open 9if8 id 431.1 name 9IF8
+rename #431 P_9if8_structure
 
 # Align on PRPF8.
-matchmaker #430.1/LA to #430.9/5B
-close #430.9
+matchmaker #431.1/LA to #431.9/5B
+close #431.9
 
 # Remove implausibly long deposited covalent bonds before styling.
 # Fetch and run the implausible-bond pruning helper from GitHub.
@@ -40,215 +40,215 @@ cartoon style arrowScale 1.5
 color byhetero
 # Subunit colors from color_code/subunit_color_code.csv.
 # PRPF8
-color #430.1/LA #BFC3E8
+color #431.1/LA #BFC3E8
 # SNRNP200
-color #430.1/LB #AFEEEE
+color #431.1/LB #AFEEEE
 # EFTUD2
-color #430.1/LC #6495ED
+color #431.1/LC #6495ED
 # PRKRIP1
-color #430.1/LD #B39C7B
+color #431.1/LD #B39C7B
 # CACTIN
-color #430.1/LF #E3C2CF
+color #431.1/LF #E3C2CF
 # LT_RBP1
-color #430.1/LG #438E78
+color #431.1/LG #438E78
 # LT_SDE2_LIKE
-color #430.1/LH #FFFF00
+color #431.1/LH #FFFF00
 # PLRG1
-color #430.1/LJ #F4A460
+color #431.1/LJ #F4A460
 # BUD31
-color #430.1/LL #FFF584
+color #431.1/LL #FFF584
 # PRP8BP
-color #430.1/LN #E2F3F4
+color #431.1/LN #E2F3F4
 # CWC15
-color #430.1/LP #FFDEAD
+color #431.1/LP #FFDEAD
 # CDC5L
-color #430.1/LQ #DAA520
+color #431.1/LQ #DAA520
 # LT_CWC21
-color #430.1/LR #5979AF
+color #431.1/LR #5979AF
 # CRNKL1
-color #430.1/LS #FFC388
+color #431.1/LS #FFC388
 # SYF1
-color #430.1/LT #FF957B
+color #431.1/LT #FF957B
 # DHX8
-color #430.1/LV #900C3F
+color #431.1/LV #900C3F
 # SNRPA1
-color #430.1/LW #58D68D
+color #431.1/LW #58D68D
 # SNRPB2
-color #430.1/LY #DAF7A6
+color #431.1/LY #DAF7A6
 # NKAP
-color #430.1/LZ #9370DB
+color #431.1/LZ #9370DB
 # CWC22
-color #430.1/SA #2C54DD
+color #431.1/SA #2C54DD
 # SLU7
-color #430.1/SC #5A338B
+color #431.1/SC #5A338B
 # PRPF18
-color #430.1/SD #9A85C1
+color #431.1/SD #9A85C1
 # LT_LTAPH_1601800
-color #430.1/SF #CC983E
+color #431.1/SF #CC983E
 # LT_PRC3
-color #430.1/SJ #987352
+color #431.1/SJ #987352
 # LT_PRC5
-color #430.1/SK #7E6B95
+color #431.1/SK #7E6B95
 # SNW1
-color #430.1/SL #D49F96
+color #431.1/SL #D49F96
 # PPIL1
-color #430.1/SN #EEE8AA
+color #431.1/SN #EEE8AA
 # PRPF17
-color #430.1/SO #FFF7C9
+color #431.1/SO #FFF7C9
 # ISY1
-color #430.1/SP #FFEF8C
+color #431.1/SP #FFEF8C
 # BCAS2
-color #430.1/SS #FFDAB9
+color #431.1/SS #FFDAB9
 # PRPF19
-color #430.1/ST #FFFFAB
+color #431.1/ST #FFFFAB
 # PRPF19
-color #430.1/SU #FFFFAB
+color #431.1/SU #FFFFAB
 # PRPF19
-color #430.1/SV #FFFFAB
+color #431.1/SV #FFFFAB
 # PRPF19
-color #430.1/SW #FFFFAB
+color #431.1/SW #FFFFAB
 # LT_LTAP16_0490
-color #430.1/TN #779E91
+color #431.1/TN #779E91
 # LT_UNK
-color #430.1/UX #929292
+color #431.1/UX #929292
 # LSM2
-color #430.1/62 #F4A3A8
+color #431.1/62 #F4A3A8
 # LSM3
-color #430.1/63 #F4A3A8
+color #431.1/63 #F4A3A8
 # LSM4
-color #430.1/64 #F4A3A8
+color #431.1/64 #F4A3A8
 # LSM5
-color #430.1/65 #F4A3A8
+color #431.1/65 #F4A3A8
 # LSM6
-color #430.1/66 #F4A3A8
+color #431.1/66 #F4A3A8
 # LSM7
-color #430.1/67 #F4A3A8
+color #431.1/67 #F4A3A8
 # LSM8
-color #430.1/A #F4A3A8
+color #431.1/A #F4A3A8
 # mRNA
-color #430.1/RN #303030
+color #431.1/RN #303030
 # U2-Sm SNRPD1
-color #430.1/24 #A7D89C
+color #431.1/24 #A7D89C
 # U5-Sm SNRPD1
-color #430.1/51 #A9CFE8
+color #431.1/51 #A9CFE8
 # SNRPD1
-color #430.1/U1 #B0C4DE
+color #431.1/U1 #B0C4DE
 # U2-Sm SNRPD2
-color #430.1/25 #A7D89C
+color #431.1/25 #A7D89C
 # U5-Sm SNRPD2
-color #430.1/52 #A9CFE8
+color #431.1/52 #A9CFE8
 # SNRPD2
-color #430.1/U2 #B0C4DE
+color #431.1/U2 #B0C4DE
 # LT_SM15K
-color #430.1/2C #92A7BC
+color #431.1/2C #92A7BC
 # LT_SM16_5K
-color #430.1/2D #C7AE85
+color #431.1/2D #C7AE85
 # U2-Sm SNRPE
-color #430.1/2H #A7D89C
+color #431.1/2H #A7D89C
 # U5-Sm SNRPE
-color #430.1/5E #A9CFE8
+color #431.1/5E #A9CFE8
 # SNRPE
-color #430.1/UE #B0C4DE
+color #431.1/UE #B0C4DE
 # U2-Sm SNRPF
-color #430.1/2I #A7D89C
+color #431.1/2I #A7D89C
 # U5-Sm SNRPF
-color #430.1/5F #A9CFE8
+color #431.1/5F #A9CFE8
 # SNRPF
-color #430.1/UF #B0C4DE
+color #431.1/UF #B0C4DE
 # U2-Sm SNRPG
-color #430.1/2J #A7D89C
+color #431.1/2J #A7D89C
 # U5-Sm SNRPG
-color #430.1/5G #A9CFE8
+color #431.1/5G #A9CFE8
 # SNRPG
-color #430.1/UG #B0C4DE
+color #431.1/UG #B0C4DE
 # U5-Sm SNRPD3
-color #430.1/53 #A9CFE8
+color #431.1/53 #A9CFE8
 # SNRPD3
-color #430.1/U3 #B0C4DE
+color #431.1/U3 #B0C4DE
 # U5-Sm SNRPB
-color #430.1/5B #A9CFE8
+color #431.1/5B #A9CFE8
 # SNRPB
-color #430.1/UB #B0C4DE
+color #431.1/UB #B0C4DE
 # SL-ligated mRNA
-color #430.1/LE #FF9D00
+color #431.1/LE #FF9D00
 # U2 snRNA
-color #430.1/N2 #71C562
+color #431.1/N2 #71C562
 # U5 snRNA
-color #430.1/N5 #4F9FD3
+color #431.1/N5 #4F9FD3
 # U6 snRNA
-color #430.1/N6 #EF4444
+color #431.1/N6 #EF4444
 # Named selections for subcomplexes using original deposited chain IDs.
 # EJC/mRNP
 # selector_meta {"color":"#EAA439","family":"Protein/RNP groups","group":"EJC/mRNP groups","kind":"subcomplex"}
-name pdb_9IF8_EJC_mRNP #430.1/SA
+name pdb_9IF8_EJC_mRNP #431.1/SA
 # NTC/NTR related
 # selector_meta {"color":"#F4BF67","family":"Protein/RNP groups","group":"NTC/NTR groups","kind":"subcomplex"}
-name pdb_9IF8_NTC_NTR_related #430.1/LL,LS,LT,SL,SN,SP
+name pdb_9IF8_NTC_NTR_related #431.1/LL,LS,LT,SL,SN,SP
 # NTC/PRP19
 # selector_meta {"color":"#F4BF67","family":"Protein/RNP groups","group":"NTC/NTR groups","kind":"subcomplex"}
-name pdb_9IF8_NTC_PRP19 #430.1/LJ,LP,LQ,SS,ST,SU,SV,SW
+name pdb_9IF8_NTC_PRP19 #431.1/LJ,LP,LQ,SS,ST,SU,SV,SW
 # RNA/substrate
 # selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
-name pdb_9IF8_RNA_substrate #430.1/RN
+name pdb_9IF8_RNA_substrate #431.1/RN
 # SL Sm ring
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9IF8_SL_Sm_ring #430.1/U1,U2,U3,UB,UE,UF,UG
+name pdb_9IF8_SL_Sm_ring #431.1/U1,U2,U3,UB,UE,UF,UG
 # SL snRNP
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9IF8_SL_snRNP #430.1/LO
+name pdb_9IF8_SL_snRNP #431.1/LO
 # SL substrate
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9IF8_SL_substrate #430.1/LE
+name pdb_9IF8_SL_substrate #431.1/LE
 # Second step factors
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9IF8_Second_step_factors #430.1/LV,SC,SD,SO
+name pdb_9IF8_Second_step_factors #431.1/LV,SC,SD,SO
 # U2 Sm ring
 # selector_meta {"color":"#BFE6BF","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9IF8_U2_Sm_ring #430.1/2H,2I,2J,24,25
+name pdb_9IF8_U2_Sm_ring #431.1/2H,2I,2J,24,25
 # U2 snRNP
 # selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
-name pdb_9IF8_U2_snRNP #430.1/LD,LW,LY,N2
+name pdb_9IF8_U2_snRNP #431.1/LD,LW,LY,N2
 # U5 Sm ring
 # selector_meta {"color":"#BFC3E8","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_9IF8_U5_Sm_ring #430.1/5B,5E,5F,5G,51,52,53
+name pdb_9IF8_U5_Sm_ring #431.1/5B,5E,5F,5G,51,52,53
 # U5 snRNP
 # selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
-name pdb_9IF8_U5_snRNP #430.1/LA,LB,LC,LN,N5
+name pdb_9IF8_U5_snRNP #431.1/LA,LB,LC,LN,N5
 # U6 LSm
 # selector_meta {"color":"#FECACA","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
-name pdb_9IF8_U6_LSm #430.1/62,63,64,65,66,67,A
+name pdb_9IF8_U6_LSm #431.1/62,63,64,65,66,67,A
 # U6 snRNP
 # selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
-name pdb_9IF8_U6_snRNP #430.1/N6
+name pdb_9IF8_U6_snRNP #431.1/N6
 # other
 # selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
-name pdb_9IF8_other #430.1/2C,2D,LF,LG,LH,LR,LZ,SF,SJ,SK,TN,UX
+name pdb_9IF8_other #431.1/2C,2D,LF,LG,LH,LR,LZ,SF,SJ,SK,TN,UX
 # Named selections for resolved substrate RNA features.
 # SL 5' exon: residues 28-39, manual-review-addition, high confidence, validation validated
 # selector_meta {"color":"#FF9D00","family":"RNA","feature":"exon_5","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9IF8_5exon #430.1/LE:28-39
+name P_9IF8_5exon #431.1/LE:28-39
 # SL outron: residues 1-6;39-44; 40-61;72-96, manual-review-addition, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"intron","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9IF8_intron #430.1/LO:40-61,72-96|#430.1/RN:1-6,39-44
+name P_9IF8_intron #431.1/LO:40-61,72-96|#431.1/RN:1-6,39-44
 # Branch-point A: residues 1, manual-review-addition, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"branch_point_adenosine","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9IF8_branch_A #430.1/RN:1
+name P_9IF8_branch_A #431.1/RN:1
 # 3' splice-site AG: residues 43-44, manual-review-addition, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"three_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9IF8_3SS #430.1/RN:43-44
+name P_9IF8_3SS #431.1/RN:43-44
 # SL 5' splice site: residues 40-45, manual-review-addition, high confidence, validation validated
 # selector_meta {"color":"#303030","family":"RNA","feature":"five_prime_splice_site","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9IF8_5SS #430.1/LO:40-45
+name P_9IF8_5SS #431.1/LO:40-45
 # Ligated pre-mRNA 3' exon: residues 40-41;57-63, manual-review-addition, high confidence, validation validated
 # selector_meta {"color":"#C65D00","family":"RNA","feature":"exon_3","group":"pre-mRNA features","group_key":"pre_mRNA_features","kind":"rna_feature"}
-name P_9IF8_3exon #430.1/LE:40-41,57-63
+name P_9IF8_3exon #431.1/LE:40-41,57-63
 # RNA feature nucleotide display.
-select #430.1 & nucleic
+select #431.1 & nucleic
 nucleotides sel atoms
 select clear
 # 5' exon: residues 28-39
-color #430.1/LE:28-39 #FF9D00
-select #430.1/LE:28-39
+color #431.1/LE:28-39 #FF9D00
+select #431.1/LE:28-39
 nucleotides sel fill
 select clear
 # intron: residues 1-6;39-44; 40-61;72-96
@@ -256,12 +256,12 @@ select clear
 # 3'SS: residues 43-44
 # 5'SS: residues 40-45
 # 3' exon: residues 40-41;57-63
-color #430.1/LE:40-41,57-63 #C65D00
-select #430.1/LE:40-41,57-63
+color #431.1/LE:40-41,57-63 #C65D00
+select #431.1/LE:40-41,57-63
 nucleotides sel fill
 select clear
 # RNA feature 3D residue labels.
-# Labels are created as independent grouped models under #430.2.
+# Labels are created as independent grouped models under #431.2.
 # Fetch and run the self-contained RNA label script from GitHub.
 open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9if8_rna_labels.py
 # Searchable named selection browser.
