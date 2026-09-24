@@ -34,6 +34,15 @@ class LeishmaniaCuration(unittest.TestCase):
             if item.get('color_key', '').startswith('LT_'):
                 self.assertFalse(item['human_gene'])
 
+    def test_sde2_like_color_and_resolved_occurrences(self):
+        lookup = {p['color_key']: p for p in self.data['protein_lookup'] if p.get('color_key')}
+        self.assertEqual(lookup['LT_SDE2_LIKE']['color_hex'], lookup['SDE2']['color_hex'])
+        self.assertEqual(lookup['LT_SDE2_LIKE']['seen_in_pdb_ids'], ['9if7', '9if8'])
+        for p in lookup.values():
+            if p['color_key'].startswith('LT_'):
+                self.assertTrue(p['seen_in_pdb_ids'])
+            self.assertTrue(set(p['seen_in_pdb_ids']) <= self.records.keys())
+
     def test_sl_color_and_ligation_boundaries(self):
         for pdb in ['9if7', '9if8']:
             r = self.records[pdb]

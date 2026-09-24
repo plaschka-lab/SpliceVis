@@ -45,7 +45,7 @@ See [protein assignments](curation/nadenoen_2026/protein_assignments.csv) and
 | PRC3 / PRC5 | Distinct identities; functional analogs of SYF2 / CCDC12 (yeast Syf2 / Ntc20), not asserted orthologs. |
 | CWC21 | Distinct from full-length human SRRM2; Table 2 explicitly labels SRRM2 a functional analog. |
 | RBP1 | RRM-domain functional replacement for PPIE; no whole-protein PPIE orthology asserted. |
-| SDE2-like | Qualified author assignment retained, supported by processing motif and structural placement; no claim of demonstrated 3′-site selection function. |
+| SDE2-like | Uses the SDE2 color (`#FFFF00`) at the user’s request. Qualified author assignment retained, supported by processing motif and structural placement; no claim of demonstrated 3′-site selection function. |
 | LtaPh_1601800 | FAM192A/Fyv6 positional and proposed functional analog. Fig. 4's `1601860` spelling conflicts with the deposition, Table 2 and Source Data; the latter agree on `1601800`. |
 | Zn-knuckle | EJC factor occupying the CASC3 position; no CASC3 homology asserted. |
 | LtaP16.0490 | Noncanonical SF2 ATPase. Peer review explicitly retreats from DDX41 orthology/equivalence. |
