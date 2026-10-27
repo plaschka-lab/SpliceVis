@@ -393,10 +393,10 @@
     .structure-browser table { display:table; width:100%; border-collapse:collapse; border:0; table-layout:fixed; font-size:11px; }
     .structure-browser thead { display:table-header-group; }
     .structure-browser tbody { display:table-row-group; padding:0; }
-    .structure-browser th { position:sticky; top:0; z-index:1; padding:7px 6px; border-bottom:1px solid #dfe6ee; background:#fff; color:var(--muted); font-size:10px; font-weight:800; text-transform:uppercase; line-height:1.2; }
+    .structure-browser th { position:sticky; top:0; z-index:1; padding:7px 6px; border-bottom:1px solid #dfe6ee; background:#fff; color:var(--muted); font-size:10px; font-weight:800; text-transform:uppercase; line-height:1.2; overflow-wrap:anywhere; }
     .structure-browser tr { display:table-row; padding:0; border:0; border-radius:0; background:transparent; cursor:pointer; }
     .structure-browser tr.selected td { background:#f2f8ff; }
-    .structure-browser td { display:table-cell; padding:7px 6px; border:0; border-bottom:1px solid #edf1f5; vertical-align:top; line-height:1.25; }
+    .structure-browser td { display:table-cell; padding:7px 6px; border:0; border-bottom:1px solid #edf1f5; vertical-align:top; line-height:1.25; overflow-wrap:anywhere; }
     .structure-browser td.empty-state { display:table-cell; padding:14px 6px; }
     .row-card-meta { display:none; }
     .structure-browser th:nth-child(1), .structure-browser td:nth-child(1) { width:52px; }
