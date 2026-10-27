@@ -73746,17 +73746,20 @@
       "species": "Human",
       "species_code": "HUMAN",
       "resolution": "3.14",
-      "year": "",
-      "paper_title": "Mechanisms of spliceosome termination",
-      "doi": "",
-      "pubmed_id": "",
-      "journal": "To Be Published",
+      "year": "2026",
+      "paper_title": "Mechanism of spliceosome termination",
+      "doi": "10.1038/s41586-026-11101-6",
+      "pubmed_id": "42844479",
+      "journal": "Nature",
       "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9s2f",
       "rcsb_url": "https://www.rcsb.org/structure/9S2F",
-      "emdb_ids": [],
-      "authors": "Boreikaite V; Vorlaender MK; Phillips AW",
-      "authors_short": "Boreikaite V; Vorlaender MK; Phillips AW",
-      "abstract": "",
+      "emdb_ids": [
+        "EMD-54494"
+      ],
+      "empiar_id": "EMPIAR-14001",
+      "authors": "Boreikaite V; Faraway R; Vorländer MK; Phillips AW; Opitz L; Wanke M; Yakoub G; Raffl G; Fin L; González-Prieto R; Luijsterburg MS; Ameres SL; Plaschka C",
+      "authors_short": "Boreikaite V; Faraway R; Vorländer MK; et al. (13 authors)",
+      "abstract": "After excising an intron from pre-mRNA, the spliceosome remains trapped in a non-productive complex bound to the intron1-5. Termination of this complex is critical for spliceosome recycling and intron decay6, but the mechanism remains unknown. Here we present cryo-electron microscopy structures of human spliceosomes at two sequential stages of termination. First, the RNA helicases DHX15 and Aquarius unwind the RNA active site of the spliceosome, releasing bound components including U2 snRNA and extracting the buried intron-lariat branch point. The branch point is then debranched by the spliceosome-tethered enzyme DBR1, generating the previously unknown debranched intron spliceosome. This state recruits the RNA helicase DHX35 with its co-factors GPATCH1-WDR83, assisted by YJU2B. DHX35 ejects the debranched intron from the U6 snRNA-5' splice site duplex, driving spliceosome disassembly and intron turnover. In defective spliceosomes stalled on aberrant introns, YJU2B partners with LENG1 to guide DHX35-GPATCH1-WDR83 for termination through spliceosome quality control. Together, we reveal the mechanism of regular spliceosome termination and its parallels with spliceosome quality control, ensuring accurate and efficient pre-mRNA splicing.",
       "proteins": [
         {
           "name": "Intron-binding protein aquarius",
@@ -74374,7 +74377,7 @@
           "type": "Endogenous RNA",
           "family": "Endogenous RNA",
           "confidence": "high",
-          "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product",
+          "evidence": "publication/manual evidence (doi:10.1038/s41586-026-11101-6): Endogenous human K562 spliceosomes purified via DHX35-GFP; the substrate is an excised debranched intron",
           "reference_id": "",
           "reference_label": "",
           "reference_confidence": "",
@@ -74403,7 +74406,7 @@
         "entity_count": "1",
         "confidence": "high",
         "review_required": "False",
-        "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
+        "evidence": "publication/manual evidence (doi:10.1038/s41586-026-11101-6): Endogenous human K562 spliceosomes purified via DHX35-GFP; the substrate is an excised debranched intron"
       },
       "snrna_alignments": [
         {
@@ -84948,17 +84951,20 @@
       "species": "Human",
       "species_code": "HUMAN",
       "resolution": "2.4",
-      "year": "",
-      "paper_title": "Mechanisms of spliceosome termination",
-      "doi": "",
-      "pubmed_id": "",
-      "journal": "To Be Published",
+      "year": "2026",
+      "paper_title": "Mechanism of spliceosome termination",
+      "doi": "10.1038/s41586-026-11101-6",
+      "pubmed_id": "42844479",
+      "journal": "Nature",
       "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9s2e",
       "rcsb_url": "https://www.rcsb.org/structure/9S2E",
-      "emdb_ids": [],
-      "authors": "Boreikaite V; Vorlaender MK; Phillips AW",
-      "authors_short": "Boreikaite V; Vorlaender MK; Phillips AW",
-      "abstract": "",
+      "emdb_ids": [
+        "EMD-54493"
+      ],
+      "empiar_id": "EMPIAR-14002",
+      "authors": "Boreikaite V; Faraway R; Vorländer MK; Phillips AW; Opitz L; Wanke M; Yakoub G; Raffl G; Fin L; González-Prieto R; Luijsterburg MS; Ameres SL; Plaschka C",
+      "authors_short": "Boreikaite V; Faraway R; Vorländer MK; et al. (13 authors)",
+      "abstract": "After excising an intron from pre-mRNA, the spliceosome remains trapped in a non-productive complex bound to the intron1-5. Termination of this complex is critical for spliceosome recycling and intron decay6, but the mechanism remains unknown. Here we present cryo-electron microscopy structures of human spliceosomes at two sequential stages of termination. First, the RNA helicases DHX15 and Aquarius unwind the RNA active site of the spliceosome, releasing bound components including U2 snRNA and extracting the buried intron-lariat branch point. The branch point is then debranched by the spliceosome-tethered enzyme DBR1, generating the previously unknown debranched intron spliceosome. This state recruits the RNA helicase DHX35 with its co-factors GPATCH1-WDR83, assisted by YJU2B. DHX35 ejects the debranched intron from the U6 snRNA-5' splice site duplex, driving spliceosome disassembly and intron turnover. In defective spliceosomes stalled on aberrant introns, YJU2B partners with LENG1 to guide DHX35-GPATCH1-WDR83 for termination through spliceosome quality control. Together, we reveal the mechanism of regular spliceosome termination and its parallels with spliceosome quality control, ensuring accurate and efficient pre-mRNA splicing.",
       "proteins": [
         {
           "name": "Intron-binding protein aquarius",
@@ -85057,20 +85063,24 @@
           "color_hex": "#6669B0"
         },
         {
+          "name": "Intron Large complex component GCFC2",
+          "gene": "GCFC2",
+          "display_name": "GCFC2",
+          "chains": "GC",
+          "organisms": "Homo sapiens",
+          "homolog_relationship": "human paralog",
+          "homolog_target": "PAXBP1",
+          "annotation_note": "GCFC2 is a paralog of PAXBP1, not the same human protein; PAXBP1 family color is intentionally shared. Boreikaite et al., Supplementary Text 2.",
+          "annotation_source": "https://doi.org/10.1038/s41586-026-11101-6",
+          "color_hex": "#FFC0CB"
+        },
+        {
           "name": "pre-mRNA-splicing factor ISY1 homolog",
           "gene": "ISY1",
           "display_name": "ISY1",
           "chains": "D",
           "organisms": "Homo sapiens",
           "color_hex": "#FFEF8C"
-        },
-        {
-          "name": "Intron Large complex component GCFC2",
-          "gene": "PAXBP1",
-          "display_name": "GCFC2",
-          "chains": "GC",
-          "organisms": "Homo sapiens",
-          "color_hex": "#FFC0CB"
         },
         {
           "name": "Pleiotropic regulator 1",
@@ -86109,7 +86119,7 @@
           "type": "Endogenous RNA",
           "family": "Endogenous RNA",
           "confidence": "high",
-          "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product",
+          "evidence": "publication/manual evidence (doi:10.1038/s41586-026-11101-6): Endogenous human K562 spliceosomes purified via YJU2B-GFP; the substrate is an excised intron lariat",
           "reference_id": "",
           "reference_label": "",
           "reference_confidence": "",
@@ -86138,7 +86148,7 @@
         "entity_count": "1",
         "confidence": "high",
         "review_required": "False",
-        "evidence": "manual structure-level curation: endogenous cellular RNA substrate or intron product"
+        "evidence": "publication/manual evidence (doi:10.1038/s41586-026-11101-6): Endogenous human K562 spliceosomes purified via YJU2B-GFP; the substrate is an excised intron lariat"
       },
       "snrna_alignments": [
         {

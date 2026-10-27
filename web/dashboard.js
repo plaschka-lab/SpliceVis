@@ -748,6 +748,7 @@ ${await scriptFor(record,"no_maps")}
       const links = [];
       if(r.rcsb_url) links.push(`<a href="${attr(r.rcsb_url)}" target="_blank" rel="noreferrer" title="Open this entry at the RCSB PDB">RCSB PDB</a>`);
       if(r.pdbe_url) links.push(`<a href="${attr(r.pdbe_url)}" target="_blank" rel="noreferrer" title="Open this entry at PDBe">PDBe</a>`);
+      if(r.empiar_id) links.push(`<a href="https://www.ebi.ac.uk/empiar/${attr(r.empiar_id)}/" target="_blank" rel="noreferrer" title="Open the raw cryo-EM dataset at EMPIAR">${esc(r.empiar_id)}</a>`);
       if(r.pubmed_id) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${attr(r.pubmed_id)}/" target="_blank" rel="noreferrer" title="Open the associated publication at PubMed">PubMed</a>`);
       if(r.doi) links.push(`<a href="https://doi.org/${attr(r.doi)}" target="_blank" rel="noreferrer" title="Open the publication DOI">DOI</a>`);
       for(const emdb of r.emdb_ids || []){
