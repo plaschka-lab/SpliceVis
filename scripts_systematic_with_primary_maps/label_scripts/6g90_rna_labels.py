@@ -14,27 +14,44 @@ import sys
 from chimerax.core.colors import Color
 from chimerax.core.commands import ObjectsArg
 from chimerax.core.models import Model
-from chimerax.label.label3d import ObjectLabels, label_class
+from chimerax.label.label3d import ObjectLabels, ResidueLabel
 
 
-OUTLINE_OFFSETS = (
-    (-0.085, 0, 0),
-    (0.085, 0, 0),
-    (0, -0.085, 0),
-    (0, 0.085, 0),
-    (-0.060, -0.060, 0),
-    (-0.060, 0.060, 0),
-    (0.060, -0.060, 0),
-    (0.060, 0.060, 0),
-    (-0.052, 0, 0),
-    (0.052, 0, 0),
-    (0, -0.052, 0),
-    (0, 0.052, 0),
-    (-0.037, -0.037, 0),
-    (-0.037, 0.037, 0),
-    (0.037, -0.037, 0),
-    (0.037, 0.037, 0),
-)
+class OutlinedResidueLabel(ResidueLabel):
+    """Paint a text halo into the label texture instead of copying 3D models."""
+
+    def __init__(self, *args, outline_color=(255, 255, 255, 255), outline_width=3, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.outline_color = outline_color
+        self.outline_width = outline_width
+
+    def _label_image(self):
+        from math import ceil
+        from Qt.QtCore import Qt
+        from Qt.QtGui import QColor, QFont, QImage, QPainter, QPainterPath, QPen
+        from chimerax.graphics import qimage_to_numpy
+
+        font = QFont(self.font, self.size)
+        path = QPainterPath()
+        path.addText(0, 0, font, self.text)
+        bounds = path.boundingRect()
+        pad = max(1, ceil(self.outline_width)) + 2
+        width = max(1, ceil(bounds.width()) + 2 * pad)
+        height = max(1, ceil(bounds.height()) + 2 * pad)
+        path.translate(pad - bounds.left(), pad - bounds.top())
+
+        image = QImage(width, height, QImage.Format.Format_ARGB32)
+        image.fill(QColor(0, 0, 0, 0))
+        painter = QPainter(image)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.setPen(QPen(QColor(*self.outline_color), 2 * self.outline_width,
+                            Qt.PenStyle.SolidLine, Qt.PenCapStyle.RoundCap,
+                            Qt.PenJoinStyle.RoundJoin))
+        painter.setBrush(QColor(*self.color))
+        painter.drawPath(path)
+        painter.end()
+        self._label_size = width, height
+        return qimage_to_numpy(image)
 
 
 def _id_tuple(model_id: str) -> tuple[int, ...]:
@@ -99,10 +116,8 @@ def create_label_models(session, spec_path: str) -> None:
     view = session.main_view
     height = spec.get("height", 3)
     size = spec.get("size", 96)
-    background_spec = spec.get("background")
-    background = None if background_spec in (None, "", "none") else _color_uint8(background_spec)
     outline_color = _color_uint8(spec.get("outline_color", "#ffffff"))
-    outline_offsets = spec.get("outline_offsets", OUTLINE_OFFSETS)
+    outline_width = spec.get("outline_width", 3)
     visible_category_keys = set(spec.get("default_visible_category_keys", []))
     visible_category_names = set(spec.get("default_visible_category_names", []))
 
@@ -132,45 +147,27 @@ def create_label_models(session, spec_path: str) -> None:
         feature_index = category_counts[category_key]
         feature_id = f"{group_id}.{category_index}.{feature_index}"
 
-        feature_group = Model(label["model_name"], session)
-        feature_group.id = _id_tuple(feature_id)
-        session.models.add([feature_group], parent=category_group)
-
-        for outline_index, offset in enumerate(outline_offsets, start=1):
-            outline_model = ObjectLabels(session)
-            outline_model.name = f"{label['model_name']}_outline_{outline_index:02d}"
-            outline_model.id = _id_tuple(f"{feature_id}.{outline_index}")
-            session.models.add([outline_model], parent=feature_group)
-            outline_settings = {
-                "text": label["text"],
-                "color": outline_color,
-                "background": None,
-                "height": height,
-                "size": size,
-                "offset": tuple(offset),
-                "position": "centroid",
-            }
-            outline_model.add_labels(residues, label_class(residues[0]), view, outline_settings, on_top=True)
-
         foreground_model = ObjectLabels(session)
-        foreground_model.name = f"{label['model_name']}_text"
-        foreground_model.id = _id_tuple(f"{feature_id}.{len(outline_offsets) + 1}")
-        session.models.add([foreground_model], parent=feature_group)
+        foreground_model.name = label["model_name"]
+        foreground_model.id = _id_tuple(feature_id)
+        session.models.add([foreground_model], parent=category_group)
         foreground_settings = {
             "text": label["text"],
             "color": _color_uint8(label["color"]),
-            "background": background,
+            "background": None,
             "height": height,
             "size": size,
             "position": "centroid",
+            "outline_color": outline_color,
+            "outline_width": outline_width,
         }
-        foreground_model.add_labels(residues, label_class(residues[0]), view, foreground_settings, on_top=True)
+        foreground_model.add_labels(residues, OutlinedResidueLabel, view, foreground_settings, on_top=True)
         created += 1
 
     session.logger.info(f"Created {created} independently togglable RNA feature label models under #{group_id}")
 
 # Embedded label specification for remote execution from GitHub.
-_EMBEDDED_SPEC_JSON = '{\n  "background": "none",\n  "cleanup_model_ids": [\n    "332.1.90"\n  ],\n  "default_visible_category_keys": [\n    "pre_mRNA_features",\n    "snRNA_pre_mRNA_regions"\n  ],\n  "default_visible_category_names": [\n    "pre-mRNA features",\n    "snRNA-pre-mRNA regions"\n  ],\n  "height": 3.35,\n  "label_group_model_id": "332.2",\n  "label_group_name": "RNA_feature_labels",\n  "labels": [\n    {\n      "atomspec": "#332.1/M:0",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#FF9D00",\n      "default_visible": true,\n      "feature": "exon_5",\n      "index": 1,\n      "label_model_id": "332.2.1.1",\n      "model_name": "label_01_5_exon_res_1_0",\n      "selector_name": "A_complex_6G90_5exon",\n      "text": "5\' exon (res. -1-0)"\n    },\n    {\n      "atomspec": "#332.1/M:4",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#303030",\n      "default_visible": true,\n      "feature": "five_prime_splice_site",\n      "index": 2,\n      "label_model_id": "332.2.1.2",\n      "model_name": "label_02_5_SS_res_1_6",\n      "selector_name": "A_complex_6G90_5SS",\n      "text": "5\'SS (res. 1-6)"\n    },\n    {\n      "atomspec": "#332.1/M:1",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#303030",\n      "default_visible": true,\n      "feature": "intron",\n      "index": 3,\n      "label_model_id": "332.2.1.3",\n      "model_name": "label_03_intron_res_1_2_3_4_5_6_7_8_9_10_51_52_53_57_58_59_60_61_62_63_64_65_66_67_68_69_70_71_72_73_74_75_76_77_78_79",\n      "selector_name": "A_complex_6G90_intron",\n      "text": "intron (res. 1,2,3,4,5,6,7,8,9,10,51,52,53,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79)"\n    },\n    {\n      "atomspec": "#332.1/M:67",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#303030",\n      "default_visible": true,\n      "feature": "branch_point_region",\n      "index": 4,\n      "label_model_id": "332.2.1.4",\n      "model_name": "label_04_BP_region_res_62_72",\n      "selector_name": "A_complex_6G90_branch_region",\n      "text": "BP region (res. 62-72)"\n    },\n    {\n      "atomspec": "#332.1/1:6",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "332.2.2",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#B66AAE",\n      "default_visible": true,\n      "feature": "U1_5prime_5SS_recognition",\n      "index": 5,\n      "label_model_id": "332.2.2.1",\n      "model_name": "label_05_U1_5_SS_recog_res_1_10",\n      "selector_name": "A_complex_6G90_U1_5_5SS_recognition",\n      "text": "U1 5\'SS recog. (res. 1-10)"\n    },\n    {\n      "atomspec": "#332.1/1:28",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "332.2.3",\n      "category_name": "internal stem loops",\n      "color": "#BF72B7",\n      "default_visible": false,\n      "feature": "U1_SL1",\n      "index": 6,\n      "label_model_id": "332.2.3.1",\n      "model_name": "label_06_U1_SL1_res_11_45",\n      "selector_name": "A_complex_6G90_U1_SL1",\n      "text": "U1 SL1 (res. 11-45)"\n    },\n    {\n      "atomspec": "#332.1/1:81",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "332.2.3",\n      "category_name": "internal stem loops",\n      "color": "#AD62A6",\n      "default_visible": false,\n      "feature": "U1_SL2",\n      "index": 7,\n      "label_model_id": "332.2.3.2",\n      "model_name": "label_07_U1_SL2_res_46_61_67_95",\n      "selector_name": "A_complex_6G90_U1_SL2",\n      "text": "U1 SL2 (res. 46-61;67-95)"\n    },\n    {\n      "atomspec": "#332.1/1:244",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "332.2.4",\n      "category_name": "other snRNA regions",\n      "color": "#C783BF",\n      "default_visible": false,\n      "feature": "U1_Sm_site",\n      "index": 8,\n      "label_model_id": "332.2.4.1",\n      "model_name": "label_08_U1_Sm_site_res_241_247_439_440_516_517_518_519_520",\n      "selector_name": "A_complex_6G90_U1_Sm_site",\n      "text": "U1 Sm site (res. 241-247;439,440,516,517,518,519,520)"\n    },\n    {\n      "atomspec": "#332.1/2:38",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "332.2.2",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#0B6E2D",\n      "default_visible": true,\n      "feature": "U2_branchpoint_pairing_region",\n      "index": 9,\n      "label_model_id": "332.2.2.2",\n      "model_name": "label_09_U2_BP_pairing_res_33_42",\n      "selector_name": "A_complex_6G90_U2_branchpoint_pairing_region",\n      "text": "U2 BP pairing (res. 33-42)"\n    }\n  ],\n  "outline_color": "#ffffff",\n  "outline_offsets": [\n    [\n      -0.085,\n      0,\n      0\n    ],\n    [\n      0.085,\n      0,\n      0\n    ],\n    [\n      0,\n      -0.085,\n      0\n    ],\n    [\n      0,\n      0.085,\n      0\n    ],\n    [\n      -0.06,\n      -0.06,\n      0\n    ],\n    [\n      -0.06,\n      0.06,\n      0\n    ],\n    [\n      0.06,\n      -0.06,\n      0\n    ],\n    [\n      0.06,\n      0.06,\n      0\n    ],\n    [\n      -0.052,\n      0,\n      0\n    ],\n    [\n      0.052,\n      0,\n      0\n    ],\n    [\n      0,\n      -0.052,\n      0\n    ],\n    [\n      0,\n      0.052,\n      0\n    ],\n    [\n      -0.037,\n      -0.037,\n      0\n    ],\n    [\n      -0.037,\n      0.037,\n      0\n    ],\n    [\n      0.037,\n      -0.037,\n      0\n    ],\n    [\n      0.037,\n      0.037,\n      0\n    ]\n  ],\n  "size": 144,\n  "structure_model_id": "332.1"\n}'
+_EMBEDDED_SPEC_JSON = '{\n  "background": "none",\n  "cleanup_model_ids": [\n    "332.1.90"\n  ],\n  "default_visible_category_keys": [\n    "pre_mRNA_features",\n    "snRNA_pre_mRNA_regions"\n  ],\n  "default_visible_category_names": [\n    "pre-mRNA features",\n    "snRNA-pre-mRNA regions"\n  ],\n  "height": 3.35,\n  "label_group_model_id": "332.2",\n  "label_group_name": "RNA_feature_labels",\n  "labels": [\n    {\n      "atomspec": "#332.1/M:0",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#FF9D00",\n      "default_visible": true,\n      "feature": "exon_5",\n      "index": 1,\n      "label_model_id": "332.2.1.1",\n      "model_name": "label_01_5_exon_res_1_0",\n      "selector_name": "A_complex_6G90_5exon",\n      "text": "5\' exon (res. -1-0)"\n    },\n    {\n      "atomspec": "#332.1/M:4",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#303030",\n      "default_visible": true,\n      "feature": "five_prime_splice_site",\n      "index": 2,\n      "label_model_id": "332.2.1.2",\n      "model_name": "label_02_5_SS_res_1_6",\n      "selector_name": "A_complex_6G90_5SS",\n      "text": "5\'SS (res. 1-6)"\n    },\n    {\n      "atomspec": "#332.1/M:1",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#303030",\n      "default_visible": true,\n      "feature": "intron",\n      "index": 3,\n      "label_model_id": "332.2.1.3",\n      "model_name": "label_03_intron_res_1_2_3_4_5_6_7_8_9_10_51_52_53_57_58_59_60_61_62_63_64_65_66_67_68_69_70_71_72_73_74_75_76_77_78_79",\n      "selector_name": "A_complex_6G90_intron",\n      "text": "intron (res. 1,2,3,4,5,6,7,8,9,10,51,52,53,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79)"\n    },\n    {\n      "atomspec": "#332.1/M:67",\n      "category_key": "pre_mRNA_features",\n      "category_model_id": "332.2.1",\n      "category_name": "pre-mRNA features",\n      "color": "#303030",\n      "default_visible": true,\n      "feature": "branch_point_region",\n      "index": 4,\n      "label_model_id": "332.2.1.4",\n      "model_name": "label_04_BP_region_res_62_72",\n      "selector_name": "A_complex_6G90_branch_region",\n      "text": "BP region (res. 62-72)"\n    },\n    {\n      "atomspec": "#332.1/1:6",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "332.2.2",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#B66AAE",\n      "default_visible": true,\n      "feature": "U1_5prime_5SS_recognition",\n      "index": 5,\n      "label_model_id": "332.2.2.1",\n      "model_name": "label_05_U1_5_SS_recog_res_1_10",\n      "selector_name": "A_complex_6G90_U1_5_5SS_recognition",\n      "text": "U1 5\'SS recog. (res. 1-10)"\n    },\n    {\n      "atomspec": "#332.1/1:28",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "332.2.3",\n      "category_name": "internal stem loops",\n      "color": "#BF72B7",\n      "default_visible": false,\n      "feature": "U1_SL1",\n      "index": 6,\n      "label_model_id": "332.2.3.1",\n      "model_name": "label_06_U1_SL1_res_11_45",\n      "selector_name": "A_complex_6G90_U1_SL1",\n      "text": "U1 SL1 (res. 11-45)"\n    },\n    {\n      "atomspec": "#332.1/1:81",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "332.2.3",\n      "category_name": "internal stem loops",\n      "color": "#AD62A6",\n      "default_visible": false,\n      "feature": "U1_SL2",\n      "index": 7,\n      "label_model_id": "332.2.3.2",\n      "model_name": "label_07_U1_SL2_res_46_61_67_95",\n      "selector_name": "A_complex_6G90_U1_SL2",\n      "text": "U1 SL2 (res. 46-61;67-95)"\n    },\n    {\n      "atomspec": "#332.1/1:244",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "332.2.4",\n      "category_name": "other snRNA regions",\n      "color": "#C783BF",\n      "default_visible": false,\n      "feature": "U1_Sm_site",\n      "index": 8,\n      "label_model_id": "332.2.4.1",\n      "model_name": "label_08_U1_Sm_site_res_241_247_439_440_516_517_518_519_520",\n      "selector_name": "A_complex_6G90_U1_Sm_site",\n      "text": "U1 Sm site (res. 241-247;439,440,516,517,518,519,520)"\n    },\n    {\n      "atomspec": "#332.1/2:38",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "332.2.2",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#0B6E2D",\n      "default_visible": true,\n      "feature": "U2_branchpoint_pairing_region",\n      "index": 9,\n      "label_model_id": "332.2.2.2",\n      "model_name": "label_09_U2_BP_pairing_res_33_42",\n      "selector_name": "A_complex_6G90_U2_branchpoint_pairing_region",\n      "text": "U2 BP pairing (res. 33-42)"\n    }\n  ],\n  "outline_color": "#ffffff",\n  "outline_width": 3,\n  "size": 144,\n  "structure_model_id": "332.1"\n}'
 _EMBEDDED_SPEC = json.loads(_EMBEDDED_SPEC_JSON)
 
 import os as _os

@@ -14,27 +14,44 @@ import sys
 from chimerax.core.colors import Color
 from chimerax.core.commands import ObjectsArg
 from chimerax.core.models import Model
-from chimerax.label.label3d import ObjectLabels, label_class
+from chimerax.label.label3d import ObjectLabels, ResidueLabel
 
 
-OUTLINE_OFFSETS = (
-    (-0.085, 0, 0),
-    (0.085, 0, 0),
-    (0, -0.085, 0),
-    (0, 0.085, 0),
-    (-0.060, -0.060, 0),
-    (-0.060, 0.060, 0),
-    (0.060, -0.060, 0),
-    (0.060, 0.060, 0),
-    (-0.052, 0, 0),
-    (0.052, 0, 0),
-    (0, -0.052, 0),
-    (0, 0.052, 0),
-    (-0.037, -0.037, 0),
-    (-0.037, 0.037, 0),
-    (0.037, -0.037, 0),
-    (0.037, 0.037, 0),
-)
+class OutlinedResidueLabel(ResidueLabel):
+    """Paint a text halo into the label texture instead of copying 3D models."""
+
+    def __init__(self, *args, outline_color=(255, 255, 255, 255), outline_width=3, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.outline_color = outline_color
+        self.outline_width = outline_width
+
+    def _label_image(self):
+        from math import ceil
+        from Qt.QtCore import Qt
+        from Qt.QtGui import QColor, QFont, QImage, QPainter, QPainterPath, QPen
+        from chimerax.graphics import qimage_to_numpy
+
+        font = QFont(self.font, self.size)
+        path = QPainterPath()
+        path.addText(0, 0, font, self.text)
+        bounds = path.boundingRect()
+        pad = max(1, ceil(self.outline_width)) + 2
+        width = max(1, ceil(bounds.width()) + 2 * pad)
+        height = max(1, ceil(bounds.height()) + 2 * pad)
+        path.translate(pad - bounds.left(), pad - bounds.top())
+
+        image = QImage(width, height, QImage.Format.Format_ARGB32)
+        image.fill(QColor(0, 0, 0, 0))
+        painter = QPainter(image)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.setPen(QPen(QColor(*self.outline_color), 2 * self.outline_width,
+                            Qt.PenStyle.SolidLine, Qt.PenCapStyle.RoundCap,
+                            Qt.PenJoinStyle.RoundJoin))
+        painter.setBrush(QColor(*self.color))
+        painter.drawPath(path)
+        painter.end()
+        self._label_size = width, height
+        return qimage_to_numpy(image)
 
 
 def _id_tuple(model_id: str) -> tuple[int, ...]:
@@ -99,10 +116,8 @@ def create_label_models(session, spec_path: str) -> None:
     view = session.main_view
     height = spec.get("height", 3)
     size = spec.get("size", 96)
-    background_spec = spec.get("background")
-    background = None if background_spec in (None, "", "none") else _color_uint8(background_spec)
     outline_color = _color_uint8(spec.get("outline_color", "#ffffff"))
-    outline_offsets = spec.get("outline_offsets", OUTLINE_OFFSETS)
+    outline_width = spec.get("outline_width", 3)
     visible_category_keys = set(spec.get("default_visible_category_keys", []))
     visible_category_names = set(spec.get("default_visible_category_names", []))
 
@@ -132,45 +147,27 @@ def create_label_models(session, spec_path: str) -> None:
         feature_index = category_counts[category_key]
         feature_id = f"{group_id}.{category_index}.{feature_index}"
 
-        feature_group = Model(label["model_name"], session)
-        feature_group.id = _id_tuple(feature_id)
-        session.models.add([feature_group], parent=category_group)
-
-        for outline_index, offset in enumerate(outline_offsets, start=1):
-            outline_model = ObjectLabels(session)
-            outline_model.name = f"{label['model_name']}_outline_{outline_index:02d}"
-            outline_model.id = _id_tuple(f"{feature_id}.{outline_index}")
-            session.models.add([outline_model], parent=feature_group)
-            outline_settings = {
-                "text": label["text"],
-                "color": outline_color,
-                "background": None,
-                "height": height,
-                "size": size,
-                "offset": tuple(offset),
-                "position": "centroid",
-            }
-            outline_model.add_labels(residues, label_class(residues[0]), view, outline_settings, on_top=True)
-
         foreground_model = ObjectLabels(session)
-        foreground_model.name = f"{label['model_name']}_text"
-        foreground_model.id = _id_tuple(f"{feature_id}.{len(outline_offsets) + 1}")
-        session.models.add([foreground_model], parent=feature_group)
+        foreground_model.name = label["model_name"]
+        foreground_model.id = _id_tuple(feature_id)
+        session.models.add([foreground_model], parent=category_group)
         foreground_settings = {
             "text": label["text"],
             "color": _color_uint8(label["color"]),
-            "background": background,
+            "background": None,
             "height": height,
             "size": size,
             "position": "centroid",
+            "outline_color": outline_color,
+            "outline_width": outline_width,
         }
-        foreground_model.add_labels(residues, label_class(residues[0]), view, foreground_settings, on_top=True)
+        foreground_model.add_labels(residues, OutlinedResidueLabel, view, foreground_settings, on_top=True)
         created += 1
 
     session.logger.info(f"Created {created} independently togglable RNA feature label models under #{group_id}")
 
 # Embedded label specification for remote execution from GitHub.
-_EMBEDDED_SPEC_JSON = '{\n  "background": "none",\n  "cleanup_model_ids": [\n    "449.1.90"\n  ],\n  "default_visible_category_keys": [\n    "pre_mRNA_features",\n    "snRNA_pre_mRNA_regions"\n  ],\n  "default_visible_category_names": [\n    "pre-mRNA features",\n    "snRNA-pre-mRNA regions"\n  ],\n  "height": 3.35,\n  "label_group_model_id": "449.2",\n  "label_group_name": "RNA_feature_labels",\n  "labels": [\n    {\n      "atomspec": "#449.1/5:38",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "449.2.1",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#1B3CD0",\n      "default_visible": true,\n      "feature": "U5_loop_I",\n      "index": 1,\n      "label_model_id": "449.2.1.1",\n      "model_name": "label_01_U5_loop_I_res_38",\n      "selector_name": "U5_recycling_8Q7W_U5_loop_I",\n      "text": "U5 loop I (res. 38)"\n    }\n  ],\n  "outline_color": "#ffffff",\n  "outline_offsets": [\n    [\n      -0.085,\n      0,\n      0\n    ],\n    [\n      0.085,\n      0,\n      0\n    ],\n    [\n      0,\n      -0.085,\n      0\n    ],\n    [\n      0,\n      0.085,\n      0\n    ],\n    [\n      -0.06,\n      -0.06,\n      0\n    ],\n    [\n      -0.06,\n      0.06,\n      0\n    ],\n    [\n      0.06,\n      -0.06,\n      0\n    ],\n    [\n      0.06,\n      0.06,\n      0\n    ],\n    [\n      -0.052,\n      0,\n      0\n    ],\n    [\n      0.052,\n      0,\n      0\n    ],\n    [\n      0,\n      -0.052,\n      0\n    ],\n    [\n      0,\n      0.052,\n      0\n    ],\n    [\n      -0.037,\n      -0.037,\n      0\n    ],\n    [\n      -0.037,\n      0.037,\n      0\n    ],\n    [\n      0.037,\n      -0.037,\n      0\n    ],\n    [\n      0.037,\n      0.037,\n      0\n    ]\n  ],\n  "size": 144,\n  "structure_model_id": "449.1"\n}'
+_EMBEDDED_SPEC_JSON = '{\n  "background": "none",\n  "cleanup_model_ids": [\n    "449.1.90"\n  ],\n  "default_visible_category_keys": [\n    "pre_mRNA_features",\n    "snRNA_pre_mRNA_regions"\n  ],\n  "default_visible_category_names": [\n    "pre-mRNA features",\n    "snRNA-pre-mRNA regions"\n  ],\n  "height": 3.35,\n  "label_group_model_id": "449.2",\n  "label_group_name": "RNA_feature_labels",\n  "labels": [\n    {\n      "atomspec": "#449.1/5:38",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "449.2.1",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#1B3CD0",\n      "default_visible": true,\n      "feature": "U5_loop_I",\n      "index": 1,\n      "label_model_id": "449.2.1.1",\n      "model_name": "label_01_U5_loop_I_res_38",\n      "selector_name": "U5_recycling_8Q7W_U5_loop_I",\n      "text": "U5 loop I (res. 38)"\n    }\n  ],\n  "outline_color": "#ffffff",\n  "outline_width": 3,\n  "size": 144,\n  "structure_model_id": "449.1"\n}'
 _EMBEDDED_SPEC = json.loads(_EMBEDDED_SPEC_JSON)
 
 import os as _os

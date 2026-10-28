@@ -14,27 +14,44 @@ import sys
 from chimerax.core.colors import Color
 from chimerax.core.commands import ObjectsArg
 from chimerax.core.models import Model
-from chimerax.label.label3d import ObjectLabels, label_class
+from chimerax.label.label3d import ObjectLabels, ResidueLabel
 
 
-OUTLINE_OFFSETS = (
-    (-0.085, 0, 0),
-    (0.085, 0, 0),
-    (0, -0.085, 0),
-    (0, 0.085, 0),
-    (-0.060, -0.060, 0),
-    (-0.060, 0.060, 0),
-    (0.060, -0.060, 0),
-    (0.060, 0.060, 0),
-    (-0.052, 0, 0),
-    (0.052, 0, 0),
-    (0, -0.052, 0),
-    (0, 0.052, 0),
-    (-0.037, -0.037, 0),
-    (-0.037, 0.037, 0),
-    (0.037, -0.037, 0),
-    (0.037, 0.037, 0),
-)
+class OutlinedResidueLabel(ResidueLabel):
+    """Paint a text halo into the label texture instead of copying 3D models."""
+
+    def __init__(self, *args, outline_color=(255, 255, 255, 255), outline_width=3, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.outline_color = outline_color
+        self.outline_width = outline_width
+
+    def _label_image(self):
+        from math import ceil
+        from Qt.QtCore import Qt
+        from Qt.QtGui import QColor, QFont, QImage, QPainter, QPainterPath, QPen
+        from chimerax.graphics import qimage_to_numpy
+
+        font = QFont(self.font, self.size)
+        path = QPainterPath()
+        path.addText(0, 0, font, self.text)
+        bounds = path.boundingRect()
+        pad = max(1, ceil(self.outline_width)) + 2
+        width = max(1, ceil(bounds.width()) + 2 * pad)
+        height = max(1, ceil(bounds.height()) + 2 * pad)
+        path.translate(pad - bounds.left(), pad - bounds.top())
+
+        image = QImage(width, height, QImage.Format.Format_ARGB32)
+        image.fill(QColor(0, 0, 0, 0))
+        painter = QPainter(image)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.setPen(QPen(QColor(*self.outline_color), 2 * self.outline_width,
+                            Qt.PenStyle.SolidLine, Qt.PenCapStyle.RoundCap,
+                            Qt.PenJoinStyle.RoundJoin))
+        painter.setBrush(QColor(*self.color))
+        painter.drawPath(path)
+        painter.end()
+        self._label_size = width, height
+        return qimage_to_numpy(image)
 
 
 def _id_tuple(model_id: str) -> tuple[int, ...]:
@@ -99,10 +116,8 @@ def create_label_models(session, spec_path: str) -> None:
     view = session.main_view
     height = spec.get("height", 3)
     size = spec.get("size", 96)
-    background_spec = spec.get("background")
-    background = None if background_spec in (None, "", "none") else _color_uint8(background_spec)
     outline_color = _color_uint8(spec.get("outline_color", "#ffffff"))
-    outline_offsets = spec.get("outline_offsets", OUTLINE_OFFSETS)
+    outline_width = spec.get("outline_width", 3)
     visible_category_keys = set(spec.get("default_visible_category_keys", []))
     visible_category_names = set(spec.get("default_visible_category_names", []))
 
@@ -132,45 +147,27 @@ def create_label_models(session, spec_path: str) -> None:
         feature_index = category_counts[category_key]
         feature_id = f"{group_id}.{category_index}.{feature_index}"
 
-        feature_group = Model(label["model_name"], session)
-        feature_group.id = _id_tuple(feature_id)
-        session.models.add([feature_group], parent=category_group)
-
-        for outline_index, offset in enumerate(outline_offsets, start=1):
-            outline_model = ObjectLabels(session)
-            outline_model.name = f"{label['model_name']}_outline_{outline_index:02d}"
-            outline_model.id = _id_tuple(f"{feature_id}.{outline_index}")
-            session.models.add([outline_model], parent=feature_group)
-            outline_settings = {
-                "text": label["text"],
-                "color": outline_color,
-                "background": None,
-                "height": height,
-                "size": size,
-                "offset": tuple(offset),
-                "position": "centroid",
-            }
-            outline_model.add_labels(residues, label_class(residues[0]), view, outline_settings, on_top=True)
-
         foreground_model = ObjectLabels(session)
-        foreground_model.name = f"{label['model_name']}_text"
-        foreground_model.id = _id_tuple(f"{feature_id}.{len(outline_offsets) + 1}")
-        session.models.add([foreground_model], parent=feature_group)
+        foreground_model.name = label["model_name"]
+        foreground_model.id = _id_tuple(feature_id)
+        session.models.add([foreground_model], parent=category_group)
         foreground_settings = {
             "text": label["text"],
             "color": _color_uint8(label["color"]),
-            "background": background,
+            "background": None,
             "height": height,
             "size": size,
             "position": "centroid",
+            "outline_color": outline_color,
+            "outline_width": outline_width,
         }
-        foreground_model.add_labels(residues, label_class(residues[0]), view, foreground_settings, on_top=True)
+        foreground_model.add_labels(residues, OutlinedResidueLabel, view, foreground_settings, on_top=True)
         created += 1
 
     session.logger.info(f"Created {created} independently togglable RNA feature label models under #{group_id}")
 
 # Embedded label specification for remote execution from GitHub.
-_EMBEDDED_SPEC_JSON = '{\n  "background": "none",\n  "cleanup_model_ids": [\n    "335.1.90"\n  ],\n  "default_visible_category_keys": [\n    "pre_mRNA_features",\n    "snRNA_pre_mRNA_regions"\n  ],\n  "default_visible_category_names": [\n    "pre-mRNA features",\n    "snRNA-pre-mRNA regions"\n  ],\n  "height": 3.35,\n  "label_group_model_id": "335.2",\n  "label_group_name": "RNA_feature_labels",\n  "labels": [\n    {\n      "atomspec": "#335.1/4:10",\n      "category_key": "snRNA_snRNA_regions",\n      "category_model_id": "335.2.1",\n      "category_name": "snRNA-snRNA interacting regions",\n      "color": "#E0CF1A",\n      "default_visible": false,\n      "feature": "U4_U6_stem_II_partner",\n      "index": 1,\n      "label_model_id": "335.2.1.1",\n      "model_name": "label_01_U4_U6_stem_II_res_1_18",\n      "selector_name": "U5_tri_snRNP_5GAN_U4_U6_stem_II_partner",\n      "text": "U4/U6 stem II (res. 1-18)"\n    },\n    {\n      "atomspec": "#335.1/4:60",\n      "category_key": "snRNA_snRNA_regions",\n      "category_model_id": "335.2.1",\n      "category_name": "snRNA-snRNA interacting regions",\n      "color": "#D8C800",\n      "default_visible": false,\n      "feature": "U4_U6_stem_I_partner",\n      "index": 2,\n      "label_model_id": "335.2.1.2",\n      "model_name": "label_02_U4_U6_stem_I_res_57_64",\n      "selector_name": "U5_tri_snRNP_5GAN_U4_U6_stem_I_partner",\n      "text": "U4/U6 stem I (res. 57-64)"\n    },\n    {\n      "atomspec": "#335.1/4:84",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#F0DF2E",\n      "default_visible": false,\n      "feature": "U4_Brr2_loading_region",\n      "index": 3,\n      "label_model_id": "335.2.2.1",\n      "model_name": "label_03_U4_Brr2_region_res_60_67_73_95",\n      "selector_name": "U5_tri_snRNP_5GAN_U4_Brr2_loading_region",\n      "text": "U4 Brr2 region (res. 60-67;73-95)"\n    },\n    {\n      "atomspec": "#335.1/5:53",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "335.2.3",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#1B3CD0",\n      "default_visible": true,\n      "feature": "U5_loop_I",\n      "index": 4,\n      "label_model_id": "335.2.3.1",\n      "model_name": "label_04_U5_loop_I_res_53",\n      "selector_name": "U5_tri_snRNP_5GAN_U5_loop_I",\n      "text": "U5 loop I (res. 53)"\n    },\n    {\n      "atomspec": "#335.1/6:23",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "335.2.4",\n      "category_name": "internal stem loops",\n      "color": "#DC143C",\n      "default_visible": false,\n      "feature": "U6_5prime_terminal_stem_loop",\n      "index": 5,\n      "label_model_id": "335.2.4.1",\n      "model_name": "label_05_U6_5_terminal_SL_res_1_9_16_30",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_5_terminal_stem_loop",\n      "text": "U6 5\' terminal SL (res. 1-9;16-30)"\n    },\n    {\n      "atomspec": "#335.1/6:60",\n      "category_key": "snRNA_snRNA_regions",\n      "category_model_id": "335.2.1",\n      "category_name": "snRNA-snRNA interacting regions",\n      "color": "#D0183C",\n      "default_visible": false,\n      "feature": "U6_U2_helix_I_partner",\n      "index": 6,\n      "label_model_id": "335.2.1.3",\n      "model_name": "label_06_U2_U6_helix_I_res_44_51_55_66",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_U2_helix_I_partner",\n      "text": "U2/U6 helix I (res. 44-51;55-66)"\n    },\n    {\n      "atomspec": "#335.1/6:48",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "335.2.3",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#E01842",\n      "default_visible": true,\n      "feature": "U6_5SS_upstream_contact",\n      "index": 7,\n      "label_model_id": "335.2.3.2",\n      "model_name": "label_07_U6_5_SS_contact_res_44_51_55",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_5SS_upstream_contact",\n      "text": "U6 5\'SS contact (res. 44-51;55)"\n    },\n    {\n      "atomspec": "#335.1/6:49",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#DC143C",\n      "default_visible": false,\n      "feature": "U6_ACAGAGA_box",\n      "index": 8,\n      "label_model_id": "335.2.2.2",\n      "model_name": "label_08_U6_ACAGAGA_res_47_51",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_ACAGAGA_box",\n      "text": "U6 ACAGAGA (res. 47-51)"\n    },\n    {\n      "atomspec": "#335.1/6:62",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#D9183E",\n      "default_visible": false,\n      "feature": "U6_U4_stem_I_partner",\n      "index": 9,\n      "label_model_id": "335.2.2.3",\n      "model_name": "label_09_U4_U6_stem_I_res_55_68",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_U4_stem_I_partner",\n      "text": "U4/U6 stem I (res. 55-68)"\n    },\n    {\n      "atomspec": "#335.1/6:60",\n      "category_key": "catalytic_core_regions",\n      "category_model_id": "335.2.5",\n      "category_name": "catalytic core regions",\n      "color": "#C91236",\n      "default_visible": false,\n      "feature": "U6_AGC_catalytic_triad",\n      "index": 10,\n      "label_model_id": "335.2.5.1",\n      "model_name": "label_10_U6_AGC_triad_res_59_61",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_AGC_catalytic_triad",\n      "text": "U6 AGC triad (res. 59-61)"\n    },\n    {\n      "atomspec": "#335.1/6:74",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "335.2.4",\n      "category_name": "internal stem loops",\n      "color": "#D61A3D",\n      "default_visible": false,\n      "feature": "U6_ISL",\n      "index": 11,\n      "label_model_id": "335.2.4.2",\n      "model_name": "label_11_U6_ISL_res_62_85",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_ISL",\n      "text": "U6 ISL (res. 62-85)"\n    },\n    {\n      "atomspec": "#335.1/6:75",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#E01842",\n      "default_visible": false,\n      "feature": "U6_U4_stem_II_partner",\n      "index": 12,\n      "label_model_id": "335.2.2.4",\n      "model_name": "label_12_U4_U6_stem_II_res_70_80",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_U4_stem_II_partner",\n      "text": "U4/U6 stem II (res. 70-80)"\n    }\n  ],\n  "outline_color": "#ffffff",\n  "outline_offsets": [\n    [\n      -0.085,\n      0,\n      0\n    ],\n    [\n      0.085,\n      0,\n      0\n    ],\n    [\n      0,\n      -0.085,\n      0\n    ],\n    [\n      0,\n      0.085,\n      0\n    ],\n    [\n      -0.06,\n      -0.06,\n      0\n    ],\n    [\n      -0.06,\n      0.06,\n      0\n    ],\n    [\n      0.06,\n      -0.06,\n      0\n    ],\n    [\n      0.06,\n      0.06,\n      0\n    ],\n    [\n      -0.052,\n      0,\n      0\n    ],\n    [\n      0.052,\n      0,\n      0\n    ],\n    [\n      0,\n      -0.052,\n      0\n    ],\n    [\n      0,\n      0.052,\n      0\n    ],\n    [\n      -0.037,\n      -0.037,\n      0\n    ],\n    [\n      -0.037,\n      0.037,\n      0\n    ],\n    [\n      0.037,\n      -0.037,\n      0\n    ],\n    [\n      0.037,\n      0.037,\n      0\n    ]\n  ],\n  "size": 144,\n  "structure_model_id": "335.1"\n}'
+_EMBEDDED_SPEC_JSON = '{\n  "background": "none",\n  "cleanup_model_ids": [\n    "335.1.90"\n  ],\n  "default_visible_category_keys": [\n    "pre_mRNA_features",\n    "snRNA_pre_mRNA_regions"\n  ],\n  "default_visible_category_names": [\n    "pre-mRNA features",\n    "snRNA-pre-mRNA regions"\n  ],\n  "height": 3.35,\n  "label_group_model_id": "335.2",\n  "label_group_name": "RNA_feature_labels",\n  "labels": [\n    {\n      "atomspec": "#335.1/4:10",\n      "category_key": "snRNA_snRNA_regions",\n      "category_model_id": "335.2.1",\n      "category_name": "snRNA-snRNA interacting regions",\n      "color": "#E0CF1A",\n      "default_visible": false,\n      "feature": "U4_U6_stem_II_partner",\n      "index": 1,\n      "label_model_id": "335.2.1.1",\n      "model_name": "label_01_U4_U6_stem_II_res_1_18",\n      "selector_name": "U5_tri_snRNP_5GAN_U4_U6_stem_II_partner",\n      "text": "U4/U6 stem II (res. 1-18)"\n    },\n    {\n      "atomspec": "#335.1/4:60",\n      "category_key": "snRNA_snRNA_regions",\n      "category_model_id": "335.2.1",\n      "category_name": "snRNA-snRNA interacting regions",\n      "color": "#D8C800",\n      "default_visible": false,\n      "feature": "U4_U6_stem_I_partner",\n      "index": 2,\n      "label_model_id": "335.2.1.2",\n      "model_name": "label_02_U4_U6_stem_I_res_57_64",\n      "selector_name": "U5_tri_snRNP_5GAN_U4_U6_stem_I_partner",\n      "text": "U4/U6 stem I (res. 57-64)"\n    },\n    {\n      "atomspec": "#335.1/4:84",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#F0DF2E",\n      "default_visible": false,\n      "feature": "U4_Brr2_loading_region",\n      "index": 3,\n      "label_model_id": "335.2.2.1",\n      "model_name": "label_03_U4_Brr2_region_res_60_67_73_95",\n      "selector_name": "U5_tri_snRNP_5GAN_U4_Brr2_loading_region",\n      "text": "U4 Brr2 region (res. 60-67;73-95)"\n    },\n    {\n      "atomspec": "#335.1/5:53",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "335.2.3",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#1B3CD0",\n      "default_visible": true,\n      "feature": "U5_loop_I",\n      "index": 4,\n      "label_model_id": "335.2.3.1",\n      "model_name": "label_04_U5_loop_I_res_53",\n      "selector_name": "U5_tri_snRNP_5GAN_U5_loop_I",\n      "text": "U5 loop I (res. 53)"\n    },\n    {\n      "atomspec": "#335.1/6:23",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "335.2.4",\n      "category_name": "internal stem loops",\n      "color": "#DC143C",\n      "default_visible": false,\n      "feature": "U6_5prime_terminal_stem_loop",\n      "index": 5,\n      "label_model_id": "335.2.4.1",\n      "model_name": "label_05_U6_5_terminal_SL_res_1_9_16_30",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_5_terminal_stem_loop",\n      "text": "U6 5\' terminal SL (res. 1-9;16-30)"\n    },\n    {\n      "atomspec": "#335.1/6:60",\n      "category_key": "snRNA_snRNA_regions",\n      "category_model_id": "335.2.1",\n      "category_name": "snRNA-snRNA interacting regions",\n      "color": "#D0183C",\n      "default_visible": false,\n      "feature": "U6_U2_helix_I_partner",\n      "index": 6,\n      "label_model_id": "335.2.1.3",\n      "model_name": "label_06_U2_U6_helix_I_res_44_51_55_66",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_U2_helix_I_partner",\n      "text": "U2/U6 helix I (res. 44-51;55-66)"\n    },\n    {\n      "atomspec": "#335.1/6:48",\n      "category_key": "snRNA_pre_mRNA_regions",\n      "category_model_id": "335.2.3",\n      "category_name": "snRNA-pre-mRNA regions",\n      "color": "#E01842",\n      "default_visible": true,\n      "feature": "U6_5SS_upstream_contact",\n      "index": 7,\n      "label_model_id": "335.2.3.2",\n      "model_name": "label_07_U6_5_SS_contact_res_44_51_55",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_5SS_upstream_contact",\n      "text": "U6 5\'SS contact (res. 44-51;55)"\n    },\n    {\n      "atomspec": "#335.1/6:49",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#DC143C",\n      "default_visible": false,\n      "feature": "U6_ACAGAGA_box",\n      "index": 8,\n      "label_model_id": "335.2.2.2",\n      "model_name": "label_08_U6_ACAGAGA_res_47_51",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_ACAGAGA_box",\n      "text": "U6 ACAGAGA (res. 47-51)"\n    },\n    {\n      "atomspec": "#335.1/6:62",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#D9183E",\n      "default_visible": false,\n      "feature": "U6_U4_stem_I_partner",\n      "index": 9,\n      "label_model_id": "335.2.2.3",\n      "model_name": "label_09_U4_U6_stem_I_res_55_68",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_U4_stem_I_partner",\n      "text": "U4/U6 stem I (res. 55-68)"\n    },\n    {\n      "atomspec": "#335.1/6:60",\n      "category_key": "catalytic_core_regions",\n      "category_model_id": "335.2.5",\n      "category_name": "catalytic core regions",\n      "color": "#C91236",\n      "default_visible": false,\n      "feature": "U6_AGC_catalytic_triad",\n      "index": 10,\n      "label_model_id": "335.2.5.1",\n      "model_name": "label_10_U6_AGC_triad_res_59_61",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_AGC_catalytic_triad",\n      "text": "U6 AGC triad (res. 59-61)"\n    },\n    {\n      "atomspec": "#335.1/6:74",\n      "category_key": "internal_stem_loops",\n      "category_model_id": "335.2.4",\n      "category_name": "internal stem loops",\n      "color": "#D61A3D",\n      "default_visible": false,\n      "feature": "U6_ISL",\n      "index": 11,\n      "label_model_id": "335.2.4.2",\n      "model_name": "label_11_U6_ISL_res_62_85",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_ISL",\n      "text": "U6 ISL (res. 62-85)"\n    },\n    {\n      "atomspec": "#335.1/6:75",\n      "category_key": "other_snRNA_regions",\n      "category_model_id": "335.2.2",\n      "category_name": "other snRNA regions",\n      "color": "#E01842",\n      "default_visible": false,\n      "feature": "U6_U4_stem_II_partner",\n      "index": 12,\n      "label_model_id": "335.2.2.4",\n      "model_name": "label_12_U4_U6_stem_II_res_70_80",\n      "selector_name": "U5_tri_snRNP_5GAN_U6_U4_stem_II_partner",\n      "text": "U4/U6 stem II (res. 70-80)"\n    }\n  ],\n  "outline_color": "#ffffff",\n  "outline_width": 3,\n  "size": 144,\n  "structure_model_id": "335.1"\n}'
 _EMBEDDED_SPEC = json.loads(_EMBEDDED_SPEC_JSON)
 
 import os as _os
