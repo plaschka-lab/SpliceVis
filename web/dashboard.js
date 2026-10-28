@@ -8,10 +8,10 @@
     const state = { activeTab:"structures", structureQuery:"", proteinQuery:"", mode:"all", family:"all", species:"all", substrateType:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, openPanelInNewTab:false, panelOnly:false, mobilePane:"cycle" };
     const els = {};
     for (const id of ["sidebarToggle","atlasNavButton","componentsNavButton","openPanelOnly","mobileViewSwitch","search","searchMode","family","species","substrateTypeFilter","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","selectedScriptActions","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
-    const STAGES = ["U1 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
+    const STAGES = ["U1 snRNP","U11 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const STATE_COLORS = {
-      "U1 snRNP":"#187A4A", "U2 snRNP":"#187A4A", "U6 snRNP":"#187A4A", "U6 snRNA biogenesis":"#187A4A", "U5/tri-snRNP":"#187A4A", "U5 recycling":"#006A2B",
+      "U1 snRNP":"#187A4A", "U11 snRNP":"#187A4A", "U2 snRNP":"#187A4A", "U6 snRNP":"#187A4A", "U6 snRNA biogenesis":"#187A4A", "U5/tri-snRNP":"#187A4A", "U5 recycling":"#006A2B",
       "E complex":"#356F7A", "A complex":"#2F6670", "pre-B":"#285B64",
       "B":"#1C428B", "pre-Bact":"#123483", "Bact":"#08277A",
       "B*":"#9B4664", "C":"#8E3F59", "C*":"#82364F",
@@ -414,7 +414,7 @@
     }
     function cycleHotspots(){
       return [
-        {label:"snRNP/protein pool", stages:["U1 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","U5/tri-snRNP","U5 recycling"], x:39.0, y:5.0, w:16.0, h:23.0},
+        {label:"snRNP/protein pool", stages:["U1 snRNP","U11 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","U5/tri-snRNP","U5 recycling"], x:39.0, y:5.0, w:16.0, h:23.0},
         {stage:"E complex", label:"E complex", x:18.0, y:18.0, w:16.0, h:14.0},
         {stage:"A complex", label:"A complex", x:10.0, y:30.0, w:17.0, h:14.0},
         {stage:"pre-B", label:"pre-B", x:8.0, y:43.0, w:18.0, h:15.0},
@@ -462,7 +462,7 @@
       if(item.stages) return {
         title:item.label,
         count,
-        rna:"Isolated U1, U2, U6 and tri-snRNP particles plus recycling and biogenesis assemblies.",
+        rna:"Isolated U1, U11, U2, U6 and tri-snRNP particles plus recycling and biogenesis assemblies.",
         helicase:"Prp43/DHX15 returns reusable components during late disassembly.",
         change:"Mature particles enter assembly; released snRNPs and proteins return here."
       };

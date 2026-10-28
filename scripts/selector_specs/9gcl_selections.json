@@ -1,0 +1,81 @@
+{
+  "pdb_id": "9gcl",
+  "structure_model_id": "606.1",
+  "structure_group_id": "606",
+  "selectors": [
+    {
+      "name": "pdb_9GCL_RNA_binding",
+      "label": "RNA-binding",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "RNA-binding",
+      "atomspec": "#606.1/E",
+      "family": "Protein/RNP groups",
+      "group": "other protein/RNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#9CA3AF"
+    },
+    {
+      "name": "pdb_9GCL_U1_Sm_ring",
+      "label": "U1 Sm ring",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "U1 Sm ring",
+      "atomspec": "#606.1/h,i,j,k,l,m,n",
+      "family": "Protein/RNP groups",
+      "group": "U1 snRNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#B66AAE"
+    },
+    {
+      "name": "pdb_9GCL_U11_U12_snRNP",
+      "label": "U11/U12 snRNP",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "U11/U12 snRNP",
+      "atomspec": "#606.1/A",
+      "family": "Protein/RNP groups",
+      "group": "U1 snRNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#B66AAE"
+    },
+    {
+      "name": "pdb_9GCL_other",
+      "label": "other",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "other",
+      "atomspec": "#606.1/F",
+      "family": "Protein/RNP groups",
+      "group": "other protein/RNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#9CA3AF"
+    },
+    {
+      "name": "U11_snRNP_9GCL_U11_5_5SS_recognition",
+      "label": "U11 snRNA 5' splice-site recognition region",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U11 snRNA 5' splice-site recognition region: residues 5-7, reference-alignment, high confidence",
+      "atomspec": "#606.1/A:5-7",
+      "family": "RNA",
+      "group": "snRNA-pre-mRNA regions",
+      "group_key": "snRNA_pre_mRNA_regions",
+      "kind": "rna_feature",
+      "feature": "U11_5prime_5SS_recognition",
+      "color": "#B66AAE",
+      "label_model_id": "606.2.1.1",
+      "label_category_model_id": "606.2.1",
+      "label_group_model_id": "606.2",
+      "label_default_visible": "true"
+    }
+  ]
+}

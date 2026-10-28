@@ -1,0 +1,32 @@
+[
+  {
+    "pdb_id": "8r7n",
+    "chain_count": 13,
+    "roundtrip": "passed"
+  },
+  {
+    "pdb_id": "9gbw",
+    "chain_count": 14,
+    "roundtrip": "passed"
+  },
+  {
+    "pdb_id": "9gbz",
+    "chain_count": 4,
+    "roundtrip": "passed"
+  },
+  {
+    "pdb_id": "9gc0",
+    "chain_count": 11,
+    "roundtrip": "passed"
+  },
+  {
+    "pdb_id": "9gcl",
+    "chain_count": 10,
+    "roundtrip": "passed"
+  },
+  {
+    "pdb_id": "9gcm",
+    "chain_count": 4,
+    "roundtrip": "passed"
+  }
+]

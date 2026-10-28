@@ -1,0 +1,20 @@
+{
+  "doi": "10.1016/j.molcel.2024.12.017",
+  "pubmed_id": "39809272",
+  "pdb_ids": [
+    "8r7n",
+    "9gbw",
+    "9gbz",
+    "9gc0",
+    "9gcl",
+    "9gcm"
+  ],
+  "retrieved": "2026-10-28",
+  "sources": [
+    "https://www.ebi.ac.uk/pdbe/api/pdb/entry/summary/{pdb_id}",
+    "https://www.ebi.ac.uk/pdbe/api/pdb/entry/molecules/{pdb_id}",
+    "https://www.ebi.ac.uk/pdbe/api/pdb/entry/publications/{pdb_id}",
+    "https://www.ebi.ac.uk/pdbe/api/pdb/entry/experiment/{pdb_id}"
+  ],
+  "maps": "Primary EMDB links verified through the EMDB API; map binaries remain on demand."
+}

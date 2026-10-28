@@ -1,0 +1,37 @@
+{
+  "structure_model_id": "604.1",
+  "label_group_model_id": "604.2",
+  "cleanup_model_ids": [
+    "604.1.90"
+  ],
+  "label_group_name": "RNA_feature_labels",
+  "height": 3.35,
+  "size": 144,
+  "background": "none",
+  "outline_color": "#ffffff",
+  "outline_width": 3,
+  "default_visible_category_keys": [
+    "pre_mRNA_features",
+    "snRNA_pre_mRNA_regions"
+  ],
+  "default_visible_category_names": [
+    "pre-mRNA features",
+    "snRNA-pre-mRNA regions"
+  ],
+  "labels": [
+    {
+      "index": 1,
+      "selector_name": "U11_snRNP_9GBZ_U11_5_5SS_recognition",
+      "feature": "U11_5prime_5SS_recognition",
+      "atomspec": "#604.1/R:4",
+      "text": "U11 5'SS recog. (res. 1-7)",
+      "color": "#B66AAE",
+      "model_name": "label_01_U11_5_SS_recog_res_1_7",
+      "category_key": "snRNA_pre_mRNA_regions",
+      "category_name": "snRNA-pre-mRNA regions",
+      "category_model_id": "604.2.1",
+      "label_model_id": "604.2.1.1",
+      "default_visible": true
+    }
+  ]
+}

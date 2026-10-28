@@ -1,0 +1,3 @@
+pdb_id,entity_id,original_chain_ids,molecule_name,sequence_length,sequence_hash,substrate_type,substrate_family,confidence,evidence,reference_id,reference_label,reference_confidence,reference_evidence,reference_eligible
+9gbw,5,G,P120-5'SS,,,P120-5′SS,P120,high,"Explicit deposited entity name P120-5'SS; Zhao et al., DOI:10.1016/j.molcel.2024.12.017",,,,,
+9gbz,3,G,P120-5'SS,,,P120-5′SS,P120,high,"Explicit deposited entity name P120-5'SS; Zhao et al., DOI:10.1016/j.molcel.2024.12.017",,,,,

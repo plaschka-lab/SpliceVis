@@ -1,0 +1,67 @@
+{
+  "pdb_id": "9gbz",
+  "structure_model_id": "604.1",
+  "structure_group_id": "604",
+  "selectors": [
+    {
+      "name": "pdb_9GBZ_RNA_substrate",
+      "label": "RNA/substrate",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "RNA/substrate",
+      "atomspec": "#604.1/G",
+      "family": "RNA",
+      "group": "pre-mRNA features",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#303030"
+    },
+    {
+      "name": "pdb_9GBZ_U11_U12_snRNP",
+      "label": "U11/U12 snRNP",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "U11/U12 snRNP",
+      "atomspec": "#604.1/R",
+      "family": "Protein/RNP groups",
+      "group": "U1 snRNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#B66AAE"
+    },
+    {
+      "name": "pdb_9GBZ_other",
+      "label": "other",
+      "category": "subcomplex",
+      "section": "Named selections for subcomplexes using original deposited chain IDs.",
+      "comment": "other",
+      "atomspec": "#604.1/B,C",
+      "family": "Protein/RNP groups",
+      "group": "other protein/RNP groups",
+      "group_key": "",
+      "kind": "subcomplex",
+      "feature": "",
+      "color": "#9CA3AF"
+    },
+    {
+      "name": "U11_snRNP_9GBZ_U11_5_5SS_recognition",
+      "label": "U11 snRNA 5' splice-site recognition region",
+      "category": "snRNA feature",
+      "section": "Named selections for resolved snRNA functional regions.",
+      "comment": "U11 snRNA 5' splice-site recognition region: residues 1-7, reference-alignment, high confidence",
+      "atomspec": "#604.1/R:1-7",
+      "family": "RNA",
+      "group": "snRNA-pre-mRNA regions",
+      "group_key": "snRNA_pre_mRNA_regions",
+      "kind": "rna_feature",
+      "feature": "U11_5prime_5SS_recognition",
+      "color": "#B66AAE",
+      "label_model_id": "604.2.1.1",
+      "label_category_model_id": "604.2.1",
+      "label_group_model_id": "604.2",
+      "label_default_visible": "true"
+    }
+  ]
+}

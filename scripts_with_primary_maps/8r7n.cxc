@@ -1,0 +1,99 @@
+# Lightweight ChimeraX script for 8R7N
+# Models are downloaded directly by ChimeraX from the PDB.
+# Primary maps, when requested, are downloaded directly from EMDB.
+# Original deposited chain identifiers are used.
+
+# Structure group: #602; target model: #602.1; RNA labels: #602.2.
+
+open 8r7n id 602.1 name 8R7N
+open emdb:18984 id 602.3.1 name U11_snRNP_8r7n_EMD-18984_primary_map
+rename #602 U11_snRNP_8r7n_structure
+
+
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# U11 snRNA
+color #602.1/A #D46BB8
+# C16ORF33
+color #602.1/B #A458BB
+# HM1
+color #602.1/C #BFA1D9
+# PDCD7
+color #602.1/D #CFC7DB
+# ZMAT5
+color #602.1/E #67A6C1
+# C6ORF151
+color #602.1/F #CA7DCA
+# U1-Sm SNRPD1
+color #602.1/h #EAD7E8
+# U1-Sm SNRPD2
+color #602.1/i #EAD7E8
+# U1-Sm SNRPD3
+color #602.1/j #EAD7E8
+# U1-Sm SNRPB
+color #602.1/k #EAD7E8
+# U1-Sm SNRPE
+color #602.1/l #EAD7E8
+# U1-Sm SNRPF
+color #602.1/m #EAD7E8
+# U1-Sm SNRPG
+color #602.1/n #EAD7E8
+# Named selections for subcomplexes using original deposited chain IDs.
+# RNA-binding
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_8R7N_RNA_binding #602.1/E
+# U1 Sm ring
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_8R7N_U1_Sm_ring #602.1/h,i,j,k,l,m,n
+# U11/U12 snRNP
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_8R7N_U11_U12_snRNP #602.1/A
+# other
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_8R7N_other #602.1/B,C,D,F
+# Named selections for resolved snRNA functional regions.
+# U11 snRNA 5' splice-site recognition region: residues 5-7, reference-alignment, high confidence
+# selector_meta {"color":"#B66AAE","family":"RNA","feature":"U11_5prime_5SS_recognition","group":"snRNA-pre-mRNA regions","group_key":"snRNA_pre_mRNA_regions","kind":"rna_feature"}
+name U11_snRNP_8R7N_U11_5_5SS_recognition #602.1/A:5-7
+# RNA feature nucleotide display.
+select #602.1 & nucleic
+nucleotides sel atoms
+select clear
+# U11 5'SS recog.: residues 5-7
+color #602.1/A:5-7 #B66AAE
+select #602.1/A:5-7
+nucleotides sel fill
+select clear
+# RNA feature 3D residue labels.
+# Labels are created as independent grouped models under #602.2.
+# Fetch and run the self-contained RNA label script from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8r7n_rna_labels.py
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/8r7n_selection_browser.py
+view
+show nucleic

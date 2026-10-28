@@ -155146,6 +155146,1472 @@
         "image": "thumbnails/129_9r8v_thumbnail.png"
       },
       "composite_groups": []
+    },
+    {
+      "pdb_id": "8r7n",
+      "title": "Overall structure of the U11 snRNP",
+      "state": "U11 snRNP",
+      "species": "Human",
+      "species_code": "HUMAN",
+      "resolution": "3.4",
+      "year": "2025",
+      "paper_title": "Structural basis of 5' splice site recognition by the minor spliceosome.",
+      "doi": "10.1016/j.molcel.2024.12.017",
+      "pubmed_id": "39809272",
+      "journal": "Mol Cell",
+      "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/8r7n",
+      "rcsb_url": "https://www.rcsb.org/structure/8R7N",
+      "emdb_ids": [
+        "EMD-18984"
+      ],
+      "authors": "Zhao J; Peter D; Brandina I; Liu X; Galej WP",
+      "authors_short": "Zhao J; Peter D; Brandina I; et al. (5 authors)",
+      "abstract": "",
+      "proteins": [
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 25 kDa protein",
+          "gene": "C16ORF33; SNRNP25",
+          "display_name": "SNR25",
+          "chains": "B",
+          "organisms": "Homo sapiens",
+          "color_hex": "#A458BB"
+        },
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 48 kDa protein",
+          "gene": "C6ORF151; SNRNP48",
+          "display_name": "SNR48",
+          "chains": "F",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CA7DCA"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein-associated proteins B and B'",
+          "gene": "COD; SNRPB; SNRPB1",
+          "display_name": "RSMB",
+          "chains": "k",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 35 kDa protein",
+          "gene": "HM1; SNRNP35; U1SNRNPBP",
+          "display_name": "U1SBP",
+          "chains": "C",
+          "organisms": "Homo sapiens",
+          "color_hex": "#BFA1D9"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein F",
+          "gene": "PBSCF; SNRPF",
+          "display_name": "RUXF",
+          "chains": "m",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein G",
+          "gene": "PBSCG; SNRPG",
+          "display_name": "RUXG",
+          "chains": "n",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Programmed cell death protein 7",
+          "gene": "PDCD7",
+          "display_name": "PDCD7",
+          "chains": "D",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CFC7DB"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D1",
+          "gene": "SNRPD1",
+          "display_name": "SMD1",
+          "chains": "h",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D2",
+          "gene": "SNRPD1; SNRPD2",
+          "display_name": "SMD2",
+          "chains": "i",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D3",
+          "gene": "SNRPD3",
+          "display_name": "SMD3",
+          "chains": "j",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein E",
+          "gene": "SNRPE",
+          "display_name": "RUXE",
+          "chains": "l",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Zinc finger matrin-type protein 5",
+          "gene": "ZMAT5",
+          "display_name": "ZMAT5",
+          "chains": "E",
+          "organisms": "Homo sapiens",
+          "color_hex": "#67A6C1"
+        }
+      ],
+      "rnas": [
+        {
+          "name": "U11 snRNA",
+          "gene": "",
+          "display_name": "U11 snRNA",
+          "chains": "A",
+          "organisms": "",
+          "color_hex": "#D8A3CF"
+        }
+      ],
+      "molstar_color_selections": [
+        {
+          "auth_asym_id": "B",
+          "color": "#A458BB",
+          "label": "SNR25"
+        },
+        {
+          "auth_asym_id": "C",
+          "color": "#BFA1D9",
+          "label": "U1SBP"
+        },
+        {
+          "auth_asym_id": "D",
+          "color": "#CFC7DB",
+          "label": "PDCD7"
+        },
+        {
+          "auth_asym_id": "E",
+          "color": "#67A6C1",
+          "label": "ZMAT5"
+        },
+        {
+          "auth_asym_id": "F",
+          "color": "#CA7DCA",
+          "label": "SNR48"
+        },
+        {
+          "auth_asym_id": "h",
+          "color": "#EAD7E8",
+          "label": "SMD1 (U11)"
+        },
+        {
+          "auth_asym_id": "i",
+          "color": "#EAD7E8",
+          "label": "SMD2 (U11)"
+        },
+        {
+          "auth_asym_id": "j",
+          "color": "#EAD7E8",
+          "label": "SMD3 (U11)"
+        },
+        {
+          "auth_asym_id": "k",
+          "color": "#EAD7E8",
+          "label": "RSMB (U11)"
+        },
+        {
+          "auth_asym_id": "l",
+          "color": "#EAD7E8",
+          "label": "RUXE (U11)"
+        },
+        {
+          "auth_asym_id": "m",
+          "color": "#EAD7E8",
+          "label": "RUXF (U11)"
+        },
+        {
+          "auth_asym_id": "n",
+          "color": "#EAD7E8",
+          "label": "RUXG (U11)"
+        },
+        {
+          "auth_asym_id": "A",
+          "color": "#D46BB8",
+          "label": "U11 snRNA"
+        }
+      ],
+      "molstar_feature_selections": [
+        {
+          "kind": "snRNA",
+          "group": "snRNA-pre-mRNA regions",
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "U11 snRNA 5' splice-site recognition region",
+          "chain": "A",
+          "residue_ranges": "5-7",
+          "confidence": "high",
+          "method": "reference-alignment",
+          "color": "#D46BB8",
+          "queries": [
+            {
+              "auth_asym_id": "A",
+              "beg_auth_seq_id": 5,
+              "end_auth_seq_id": 7
+            }
+          ]
+        }
+      ],
+      "protein_count": 12,
+      "rna_count": 1,
+      "chain_count": 13,
+      "has_prpf8": false,
+      "has_sf3b1": false,
+      "quality": {
+        "status": "missing",
+        "notes": "No extracted quality metrics."
+      },
+      "curation": {
+        "stage_evidence": "Deposited title identifies isolated U11 snRNP; Zhao et al. 2025, DOI:10.1016/j.molcel.2024.12.017",
+        "curation_summary": "Overall particle reconstruction. U11 snRNA recognition region mapped to the human reference; approximate stem-loop features withheld pending paper-specific review.",
+        "stage_confidence": "",
+        "homolog_confidence": "",
+        "color_confidence": "",
+        "rna_identity_confidence": "",
+        "overall_confidence": "",
+        "badges": [],
+        "flags": [],
+        "colored_proteins": "",
+        "protein_count": "",
+        "unassigned_components": "0",
+        "assignment_completeness": "complete",
+        "provisional_rna_features": 0,
+        "annotation_scope": "Reference/motif regions; occupancy and folding require structural inspection. Consistency is not independent validation."
+      },
+      "unassigned_components": [],
+      "substrate_features": [],
+      "substrate_types": [],
+      "substrate_type_summary": {
+        "pdb_id": "8r7n",
+        "has_substrate": "False",
+        "substrate_types": "",
+        "substrate_families": "",
+        "entity_count": "0",
+        "confidence": "high",
+        "review_required": "False",
+        "evidence": ""
+      },
+      "snrna_alignments": [],
+      "snrna_features": [
+        {
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "5' splice-site recognition region",
+          "snrna": "U11 snRNA",
+          "entity_id": "1",
+          "molecule_name": "U11 snRNA",
+          "original_chain_id": "A",
+          "seq_start": "1",
+          "seq_end": "7",
+          "auth_residue_ranges": "5-7",
+          "feature_sequence": "AAAAAGG",
+          "method": "reference-alignment",
+          "confidence": "high"
+        }
+      ],
+      "script_path": "scripts/8r7n.cxc",
+      "script_systematic_path": "scripts_systematic/8r7n.cxc",
+      "primary_map_script_path": "scripts_with_primary_maps/8r7n.cxc",
+      "primary_map_script_systematic_path": "scripts_systematic_with_primary_maps/8r7n.cxc",
+      "systematic_chain_count": 13,
+      "primary_map": {
+        "emdb_id": "EMD-18984",
+        "annotation": "",
+        "contour_level": "0.035"
+      },
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/8r7n_8r7n_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/8r7n_8r7n_r2dt_dashboard_colored.svg"
+      },
+      "thumbnail": {
+        "image": "thumbnails/002_8r7n_thumbnail.png"
+      },
+      "composite_groups": []
+    },
+    {
+      "pdb_id": "9gbw",
+      "title": "Overall structure of the substrate-bound U11 snRNP",
+      "state": "U11 snRNP",
+      "species": "Human",
+      "species_code": "HUMAN",
+      "resolution": "3.5",
+      "year": "2025",
+      "paper_title": "Structural basis of 5' splice site recognition by the minor spliceosome.",
+      "doi": "10.1016/j.molcel.2024.12.017",
+      "pubmed_id": "39809272",
+      "journal": "Mol Cell",
+      "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9gbw",
+      "rcsb_url": "https://www.rcsb.org/structure/9GBW",
+      "emdb_ids": [
+        "EMD-51223"
+      ],
+      "authors": "Zhao J; Peter D; Brandina I; Liu X; Galej WP",
+      "authors_short": "Zhao J; Peter D; Brandina I; et al. (5 authors)",
+      "abstract": "",
+      "proteins": [
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 25 kDa protein",
+          "gene": "C16ORF33; SNRNP25",
+          "display_name": "SNR25",
+          "chains": "B",
+          "organisms": "Homo sapiens",
+          "color_hex": "#A458BB"
+        },
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 48 kDa protein",
+          "gene": "C6ORF151; SNRNP48",
+          "display_name": "SNR48",
+          "chains": "F",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CA7DCA"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein-associated proteins B and B'",
+          "gene": "COD; SNRPB; SNRPB1",
+          "display_name": "RSMB",
+          "chains": "k",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 35 kDa protein",
+          "gene": "HM1; SNRNP35; U1SNRNPBP",
+          "display_name": "U1SBP",
+          "chains": "C",
+          "organisms": "Homo sapiens",
+          "color_hex": "#BFA1D9"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein F",
+          "gene": "PBSCF; SNRPF",
+          "display_name": "RUXF",
+          "chains": "m",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein G",
+          "gene": "PBSCG; SNRPG",
+          "display_name": "RUXG",
+          "chains": "n",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Programmed cell death protein 7",
+          "gene": "PDCD7",
+          "display_name": "PDCD7",
+          "chains": "D",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CFC7DB"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D1",
+          "gene": "SNRPD1",
+          "display_name": "SMD1",
+          "chains": "h",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D2",
+          "gene": "SNRPD1; SNRPD2",
+          "display_name": "SMD2",
+          "chains": "i",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D3",
+          "gene": "SNRPD3",
+          "display_name": "SMD3",
+          "chains": "j",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein E",
+          "gene": "SNRPE",
+          "display_name": "RUXE",
+          "chains": "l",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Zinc finger matrin-type protein 5",
+          "gene": "ZMAT5",
+          "display_name": "ZMAT5",
+          "chains": "E",
+          "organisms": "Homo sapiens",
+          "color_hex": "#67A6C1"
+        }
+      ],
+      "rnas": [
+        {
+          "name": "P120-5'SS",
+          "gene": "",
+          "display_name": "P120-5'SS",
+          "chains": "G",
+          "organisms": "",
+          "color_hex": ""
+        },
+        {
+          "name": "U11 snRNA",
+          "gene": "",
+          "display_name": "U11 snRNA",
+          "chains": "R",
+          "organisms": "",
+          "color_hex": "#D8A3CF"
+        }
+      ],
+      "molstar_color_selections": [
+        {
+          "auth_asym_id": "B",
+          "color": "#A458BB",
+          "label": "SNR25"
+        },
+        {
+          "auth_asym_id": "C",
+          "color": "#BFA1D9",
+          "label": "U1SBP"
+        },
+        {
+          "auth_asym_id": "D",
+          "color": "#CFC7DB",
+          "label": "PDCD7"
+        },
+        {
+          "auth_asym_id": "E",
+          "color": "#67A6C1",
+          "label": "ZMAT5"
+        },
+        {
+          "auth_asym_id": "h",
+          "color": "#EAD7E8",
+          "label": "SMD1 (U11)"
+        },
+        {
+          "auth_asym_id": "j",
+          "color": "#EAD7E8",
+          "label": "SMD3 (U11)"
+        },
+        {
+          "auth_asym_id": "k",
+          "color": "#EAD7E8",
+          "label": "RSMB (U11)"
+        },
+        {
+          "auth_asym_id": "l",
+          "color": "#EAD7E8",
+          "label": "RUXE (U11)"
+        },
+        {
+          "auth_asym_id": "m",
+          "color": "#EAD7E8",
+          "label": "RUXF (U11)"
+        },
+        {
+          "auth_asym_id": "n",
+          "color": "#EAD7E8",
+          "label": "RUXG (U11)"
+        },
+        {
+          "auth_asym_id": "F",
+          "color": "#CA7DCA",
+          "label": "SNR48"
+        },
+        {
+          "auth_asym_id": "i",
+          "color": "#EAD7E8",
+          "label": "SMD2 (U11)"
+        },
+        {
+          "auth_asym_id": "G",
+          "color": "#303030",
+          "label": "P120-5'SS"
+        },
+        {
+          "auth_asym_id": "R",
+          "color": "#D46BB8",
+          "label": "U11 snRNA"
+        }
+      ],
+      "molstar_feature_selections": [
+        {
+          "kind": "snRNA",
+          "group": "snRNA-pre-mRNA regions",
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "U11 snRNA 5' splice-site recognition region",
+          "chain": "R",
+          "residue_ranges": "1-7",
+          "confidence": "high",
+          "method": "reference-alignment",
+          "color": "#D46BB8",
+          "queries": [
+            {
+              "auth_asym_id": "R",
+              "beg_auth_seq_id": 1,
+              "end_auth_seq_id": 7
+            }
+          ]
+        }
+      ],
+      "protein_count": 12,
+      "rna_count": 2,
+      "chain_count": 14,
+      "has_prpf8": false,
+      "has_sf3b1": false,
+      "quality": {
+        "status": "missing",
+        "notes": "No extracted quality metrics."
+      },
+      "curation": {
+        "stage_evidence": "Deposited title identifies isolated U11 snRNP; Zhao et al. 2025, DOI:10.1016/j.molcel.2024.12.017",
+        "curation_summary": "Overall particle reconstruction. U11 snRNA recognition region mapped to the human reference; approximate stem-loop features withheld pending paper-specific review.",
+        "stage_confidence": "",
+        "homolog_confidence": "",
+        "color_confidence": "",
+        "rna_identity_confidence": "",
+        "overall_confidence": "",
+        "badges": [],
+        "flags": [],
+        "colored_proteins": "",
+        "protein_count": "",
+        "unassigned_components": "0",
+        "assignment_completeness": "complete",
+        "provisional_rna_features": 0,
+        "annotation_scope": "Reference/motif regions; occupancy and folding require structural inspection. Consistency is not independent validation."
+      },
+      "unassigned_components": [],
+      "substrate_features": [],
+      "substrate_types": [
+        {
+          "type": "P120-5′SS",
+          "family": "P120",
+          "confidence": "high",
+          "evidence": "Explicit deposited entity name P120-5'SS; Zhao et al., DOI:10.1016/j.molcel.2024.12.017",
+          "reference_id": "",
+          "reference_label": "",
+          "reference_confidence": "",
+          "reference_evidence": "",
+          "reference_source": "",
+          "reference_url": "",
+          "entity_id": "5",
+          "chains": "G",
+          "molecule_name": "P120-5'SS",
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_alignment_html": "",
+          "reference_alignment_stockholm": "",
+          "reference_modelled_fasta": "",
+          "reference_modelled_coverage": "",
+          "reference_feature_table": "",
+          "reference_projection_table": "",
+          "pairwise_alignments": []
+        }
+      ],
+      "substrate_type_summary": {
+        "pdb_id": "9gbw",
+        "has_substrate": "True",
+        "substrate_types": "P120-5′SS",
+        "substrate_families": "P120",
+        "entity_count": "1",
+        "confidence": "high",
+        "review_required": "False",
+        "evidence": ""
+      },
+      "snrna_alignments": [],
+      "snrna_features": [
+        {
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "5' splice-site recognition region",
+          "snrna": "U11 snRNA",
+          "entity_id": "14",
+          "molecule_name": "U11 snRNA",
+          "original_chain_id": "R",
+          "seq_start": "1",
+          "seq_end": "7",
+          "auth_residue_ranges": "1-7",
+          "feature_sequence": "AAAAAGG",
+          "method": "reference-alignment",
+          "confidence": "high"
+        }
+      ],
+      "script_path": "scripts/9gbw.cxc",
+      "script_systematic_path": "scripts_systematic/9gbw.cxc",
+      "primary_map_script_path": "scripts_with_primary_maps/9gbw.cxc",
+      "primary_map_script_systematic_path": "scripts_systematic_with_primary_maps/9gbw.cxc",
+      "systematic_chain_count": 14,
+      "primary_map": {
+        "emdb_id": "EMD-51223",
+        "annotation": "",
+        "contour_level": "0.018"
+      },
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9gbw_9gbw_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9gbw_9gbw_r2dt_dashboard_colored.svg"
+      },
+      "thumbnail": {
+        "image": "thumbnails/003_9gbw_thumbnail.png"
+      },
+      "composite_groups": []
+    },
+    {
+      "pdb_id": "9gbz",
+      "title": "5'-lobe of the substrate-bound U11 snRNP",
+      "state": "U11 snRNP",
+      "species": "Human",
+      "species_code": "HUMAN",
+      "resolution": "3.4",
+      "year": "2025",
+      "paper_title": "Structural basis of 5' splice site recognition by the minor spliceosome.",
+      "doi": "10.1016/j.molcel.2024.12.017",
+      "pubmed_id": "39809272",
+      "journal": "Mol Cell",
+      "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9gbz",
+      "rcsb_url": "https://www.rcsb.org/structure/9GBZ",
+      "emdb_ids": [
+        "EMD-51225"
+      ],
+      "authors": "Zhao J; Peter D; Brandina I; Liu X; Galej WP",
+      "authors_short": "Zhao J; Peter D; Brandina I; et al. (5 authors)",
+      "abstract": "",
+      "proteins": [
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 25 kDa protein",
+          "gene": "C16ORF33; SNRNP25",
+          "display_name": "SNR25",
+          "chains": "B",
+          "organisms": "Homo sapiens",
+          "color_hex": "#A458BB"
+        },
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 35 kDa protein",
+          "gene": "HM1; SNRNP35; U1SNRNPBP",
+          "display_name": "U1SBP",
+          "chains": "C",
+          "organisms": "Homo sapiens",
+          "color_hex": "#BFA1D9"
+        }
+      ],
+      "rnas": [
+        {
+          "name": "P120-5'SS",
+          "gene": "",
+          "display_name": "P120-5'SS",
+          "chains": "G",
+          "organisms": "",
+          "color_hex": ""
+        },
+        {
+          "name": "U11 snRNA",
+          "gene": "",
+          "display_name": "U11 snRNA",
+          "chains": "R",
+          "organisms": "",
+          "color_hex": "#D8A3CF"
+        }
+      ],
+      "molstar_color_selections": [
+        {
+          "auth_asym_id": "B",
+          "color": "#A458BB",
+          "label": "SNR25"
+        },
+        {
+          "auth_asym_id": "C",
+          "color": "#BFA1D9",
+          "label": "U1SBP"
+        },
+        {
+          "auth_asym_id": "G",
+          "color": "#303030",
+          "label": "P120-5'SS"
+        },
+        {
+          "auth_asym_id": "R",
+          "color": "#D46BB8",
+          "label": "U11 snRNA"
+        }
+      ],
+      "molstar_feature_selections": [
+        {
+          "kind": "snRNA",
+          "group": "snRNA-pre-mRNA regions",
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "U11 snRNA 5' splice-site recognition region",
+          "chain": "R",
+          "residue_ranges": "1-7",
+          "confidence": "high",
+          "method": "reference-alignment",
+          "color": "#D46BB8",
+          "queries": [
+            {
+              "auth_asym_id": "R",
+              "beg_auth_seq_id": 1,
+              "end_auth_seq_id": 7
+            }
+          ]
+        }
+      ],
+      "protein_count": 2,
+      "rna_count": 2,
+      "chain_count": 4,
+      "has_prpf8": false,
+      "has_sf3b1": false,
+      "quality": {
+        "status": "missing",
+        "notes": "No extracted quality metrics."
+      },
+      "curation": {
+        "stage_evidence": "Deposited title identifies isolated U11 snRNP; Zhao et al. 2025, DOI:10.1016/j.molcel.2024.12.017",
+        "curation_summary": "Focused reconstruction; see deposited title. U11 snRNA recognition region mapped to the human reference; approximate stem-loop features withheld pending paper-specific review.",
+        "stage_confidence": "",
+        "homolog_confidence": "",
+        "color_confidence": "",
+        "rna_identity_confidence": "",
+        "overall_confidence": "",
+        "badges": [],
+        "flags": [],
+        "colored_proteins": "",
+        "protein_count": "",
+        "unassigned_components": "0",
+        "assignment_completeness": "complete",
+        "provisional_rna_features": 0,
+        "annotation_scope": "Reference/motif regions; occupancy and folding require structural inspection. Consistency is not independent validation."
+      },
+      "unassigned_components": [],
+      "substrate_features": [],
+      "substrate_types": [
+        {
+          "type": "P120-5′SS",
+          "family": "P120",
+          "confidence": "high",
+          "evidence": "Explicit deposited entity name P120-5'SS; Zhao et al., DOI:10.1016/j.molcel.2024.12.017",
+          "reference_id": "",
+          "reference_label": "",
+          "reference_confidence": "",
+          "reference_evidence": "",
+          "reference_source": "",
+          "reference_url": "",
+          "entity_id": "3",
+          "chains": "G",
+          "molecule_name": "P120-5'SS",
+          "reference_genbank": "",
+          "reference_alignment": "",
+          "reference_alignment_html": "",
+          "reference_alignment_stockholm": "",
+          "reference_modelled_fasta": "",
+          "reference_modelled_coverage": "",
+          "reference_feature_table": "",
+          "reference_projection_table": "",
+          "pairwise_alignments": []
+        }
+      ],
+      "substrate_type_summary": {
+        "pdb_id": "9gbz",
+        "has_substrate": "True",
+        "substrate_types": "P120-5′SS",
+        "substrate_families": "P120",
+        "entity_count": "1",
+        "confidence": "high",
+        "review_required": "False",
+        "evidence": ""
+      },
+      "snrna_alignments": [],
+      "snrna_features": [
+        {
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "5' splice-site recognition region",
+          "snrna": "U11 snRNA",
+          "entity_id": "4",
+          "molecule_name": "U11 snRNA",
+          "original_chain_id": "R",
+          "seq_start": "1",
+          "seq_end": "7",
+          "auth_residue_ranges": "1-7",
+          "feature_sequence": "AAAAAGG",
+          "method": "reference-alignment",
+          "confidence": "high"
+        }
+      ],
+      "script_path": "scripts/9gbz.cxc",
+      "script_systematic_path": "scripts_systematic/9gbz.cxc",
+      "primary_map_script_path": "scripts_with_primary_maps/9gbz.cxc",
+      "primary_map_script_systematic_path": "scripts_systematic_with_primary_maps/9gbz.cxc",
+      "systematic_chain_count": 4,
+      "primary_map": {
+        "emdb_id": "EMD-51225",
+        "annotation": "main map",
+        "contour_level": "0.03"
+      },
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "2",
+        "r2dt_chain_count": "2",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9gbz_9gbz_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9gbz_9gbz_r2dt_dashboard_colored.svg"
+      },
+      "thumbnail": {
+        "image": "thumbnails/004_9gbz_thumbnail.png"
+      },
+      "composite_groups": []
+    },
+    {
+      "pdb_id": "9gc0",
+      "title": "3'-lobe of the substrate-bound U11 snRNP",
+      "state": "U11 snRNP",
+      "species": "Human",
+      "species_code": "HUMAN",
+      "resolution": "3.2",
+      "year": "2025",
+      "paper_title": "Structural basis of 5' splice site recognition by the minor spliceosome.",
+      "doi": "10.1016/j.molcel.2024.12.017",
+      "pubmed_id": "39809272",
+      "journal": "Mol Cell",
+      "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9gc0",
+      "rcsb_url": "https://www.rcsb.org/structure/9GC0",
+      "emdb_ids": [
+        "EMD-51226"
+      ],
+      "authors": "Zhao J; Peter D; Brandina I; Liu X; Galej WP",
+      "authors_short": "Zhao J; Peter D; Brandina I; et al. (5 authors)",
+      "abstract": "",
+      "proteins": [
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 48 kDa protein",
+          "gene": "C6ORF151; SNRNP48",
+          "display_name": "SNR48",
+          "chains": "F",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CA7DCA"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein-associated proteins B and B'",
+          "gene": "COD; SNRPB; SNRPB1",
+          "display_name": "RSMB",
+          "chains": "k",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein F",
+          "gene": "PBSCF; SNRPF",
+          "display_name": "RUXF",
+          "chains": "m",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein G",
+          "gene": "PBSCG; SNRPG",
+          "display_name": "RUXG",
+          "chains": "n",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Programmed cell death protein 7",
+          "gene": "PDCD7",
+          "display_name": "PDCD7",
+          "chains": "D",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CFC7DB"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D1",
+          "gene": "SNRPD1",
+          "display_name": "SMD1",
+          "chains": "h",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D2",
+          "gene": "SNRPD1; SNRPD2",
+          "display_name": "SMD2",
+          "chains": "i",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D3",
+          "gene": "SNRPD3",
+          "display_name": "SMD3",
+          "chains": "j",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein E",
+          "gene": "SNRPE",
+          "display_name": "RUXE",
+          "chains": "l",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Zinc finger matrin-type protein 5",
+          "gene": "ZMAT5",
+          "display_name": "ZMAT5",
+          "chains": "E",
+          "organisms": "Homo sapiens",
+          "color_hex": "#67A6C1"
+        }
+      ],
+      "rnas": [
+        {
+          "name": "U11 snRNA",
+          "gene": "",
+          "display_name": "U11 snRNA",
+          "chains": "Q",
+          "organisms": "",
+          "color_hex": "#D8A3CF"
+        }
+      ],
+      "molstar_color_selections": [
+        {
+          "auth_asym_id": "E",
+          "color": "#67A6C1",
+          "label": "ZMAT5"
+        },
+        {
+          "auth_asym_id": "D",
+          "color": "#CFC7DB",
+          "label": "PDCD7"
+        },
+        {
+          "auth_asym_id": "h",
+          "color": "#EAD7E8",
+          "label": "SMD1 (U11)"
+        },
+        {
+          "auth_asym_id": "j",
+          "color": "#EAD7E8",
+          "label": "SMD3 (U11)"
+        },
+        {
+          "auth_asym_id": "k",
+          "color": "#EAD7E8",
+          "label": "RSMB (U11)"
+        },
+        {
+          "auth_asym_id": "l",
+          "color": "#EAD7E8",
+          "label": "RUXE (U11)"
+        },
+        {
+          "auth_asym_id": "m",
+          "color": "#EAD7E8",
+          "label": "RUXF (U11)"
+        },
+        {
+          "auth_asym_id": "n",
+          "color": "#EAD7E8",
+          "label": "RUXG (U11)"
+        },
+        {
+          "auth_asym_id": "F",
+          "color": "#CA7DCA",
+          "label": "SNR48"
+        },
+        {
+          "auth_asym_id": "i",
+          "color": "#EAD7E8",
+          "label": "SMD2 (U11)"
+        },
+        {
+          "auth_asym_id": "Q",
+          "color": "#D46BB8",
+          "label": "U11 snRNA"
+        }
+      ],
+      "molstar_feature_selections": [],
+      "protein_count": 10,
+      "rna_count": 1,
+      "chain_count": 11,
+      "has_prpf8": false,
+      "has_sf3b1": false,
+      "quality": {
+        "status": "missing",
+        "notes": "No extracted quality metrics."
+      },
+      "curation": {
+        "stage_evidence": "Deposited title identifies isolated U11 snRNP; Zhao et al. 2025, DOI:10.1016/j.molcel.2024.12.017",
+        "curation_summary": "Focused reconstruction; see deposited title. U11 snRNA recognition region mapped to the human reference; approximate stem-loop features withheld pending paper-specific review.",
+        "stage_confidence": "",
+        "homolog_confidence": "",
+        "color_confidence": "",
+        "rna_identity_confidence": "",
+        "overall_confidence": "",
+        "badges": [],
+        "flags": [],
+        "colored_proteins": "",
+        "protein_count": "",
+        "unassigned_components": "0",
+        "assignment_completeness": "complete",
+        "provisional_rna_features": 0,
+        "annotation_scope": "Reference/motif regions; occupancy and folding require structural inspection. Consistency is not independent validation."
+      },
+      "unassigned_components": [],
+      "substrate_features": [],
+      "substrate_types": [],
+      "substrate_type_summary": {
+        "pdb_id": "9gc0",
+        "has_substrate": "False",
+        "substrate_types": "",
+        "substrate_families": "",
+        "entity_count": "0",
+        "confidence": "high",
+        "review_required": "False",
+        "evidence": ""
+      },
+      "snrna_alignments": [],
+      "snrna_features": [],
+      "script_path": "scripts/9gc0.cxc",
+      "script_systematic_path": "scripts_systematic/9gc0.cxc",
+      "primary_map_script_path": "scripts_with_primary_maps/9gc0.cxc",
+      "primary_map_script_systematic_path": "scripts_systematic_with_primary_maps/9gc0.cxc",
+      "systematic_chain_count": 11,
+      "primary_map": {
+        "emdb_id": "EMD-51226",
+        "annotation": "main map",
+        "contour_level": "0.024"
+      },
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9gc0_9gc0_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9gc0_9gc0_r2dt_dashboard_colored.svg"
+      },
+      "thumbnail": {
+        "image": "thumbnails/005_9gc0_thumbnail.png"
+      },
+      "composite_groups": []
+    },
+    {
+      "pdb_id": "9gcl",
+      "title": "Structure of the U11 snRNP C-lobe",
+      "state": "U11 snRNP",
+      "species": "Human",
+      "species_code": "HUMAN",
+      "resolution": "3.0",
+      "year": "2025",
+      "paper_title": "Structural basis of 5' splice site recognition by the minor spliceosome.",
+      "doi": "10.1016/j.molcel.2024.12.017",
+      "pubmed_id": "39809272",
+      "journal": "Mol Cell",
+      "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9gcl",
+      "rcsb_url": "https://www.rcsb.org/structure/9GCL",
+      "emdb_ids": [
+        "EMD-51233"
+      ],
+      "authors": "Zhao J; Peter D; Brandina I; Liu X; Galej WP",
+      "authors_short": "Zhao J; Peter D; Brandina I; et al. (5 authors)",
+      "abstract": "",
+      "proteins": [
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 48 kDa protein",
+          "gene": "C6ORF151; SNRNP48",
+          "display_name": "SNR48",
+          "chains": "F",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CA7DCA"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein-associated proteins B and B'",
+          "gene": "COD; SNRPB; SNRPB1",
+          "display_name": "RSMB",
+          "chains": "k",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein F",
+          "gene": "PBSCF; SNRPF",
+          "display_name": "RUXF",
+          "chains": "m",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein G",
+          "gene": "PBSCG; SNRPG",
+          "display_name": "RUXG",
+          "chains": "n",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D1",
+          "gene": "SNRPD1",
+          "display_name": "SMD1",
+          "chains": "h",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D2",
+          "gene": "SNRPD1; SNRPD2",
+          "display_name": "SMD2",
+          "chains": "i",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein Sm D3",
+          "gene": "SNRPD3",
+          "display_name": "SMD3",
+          "chains": "j",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Small nuclear ribonucleoprotein E",
+          "gene": "SNRPE",
+          "display_name": "RUXE",
+          "chains": "l",
+          "organisms": "Homo sapiens",
+          "color_hex": "#EAD7E8"
+        },
+        {
+          "name": "Zinc finger matrin-type protein 5",
+          "gene": "ZMAT5",
+          "display_name": "ZMAT5",
+          "chains": "E",
+          "organisms": "Homo sapiens",
+          "color_hex": "#67A6C1"
+        }
+      ],
+      "rnas": [
+        {
+          "name": "U11 snRNA",
+          "gene": "",
+          "display_name": "U11 snRNA",
+          "chains": "A",
+          "organisms": "",
+          "color_hex": "#D8A3CF"
+        }
+      ],
+      "molstar_color_selections": [
+        {
+          "auth_asym_id": "E",
+          "color": "#67A6C1",
+          "label": "ZMAT5"
+        },
+        {
+          "auth_asym_id": "h",
+          "color": "#EAD7E8",
+          "label": "SMD1 (U11)"
+        },
+        {
+          "auth_asym_id": "j",
+          "color": "#EAD7E8",
+          "label": "SMD3 (U11)"
+        },
+        {
+          "auth_asym_id": "k",
+          "color": "#EAD7E8",
+          "label": "RSMB (U11)"
+        },
+        {
+          "auth_asym_id": "l",
+          "color": "#EAD7E8",
+          "label": "RUXE (U11)"
+        },
+        {
+          "auth_asym_id": "m",
+          "color": "#EAD7E8",
+          "label": "RUXF (U11)"
+        },
+        {
+          "auth_asym_id": "n",
+          "color": "#EAD7E8",
+          "label": "RUXG (U11)"
+        },
+        {
+          "auth_asym_id": "F",
+          "color": "#CA7DCA",
+          "label": "SNR48"
+        },
+        {
+          "auth_asym_id": "i",
+          "color": "#EAD7E8",
+          "label": "SMD2 (U11)"
+        },
+        {
+          "auth_asym_id": "A",
+          "color": "#D46BB8",
+          "label": "U11 snRNA"
+        }
+      ],
+      "molstar_feature_selections": [
+        {
+          "kind": "snRNA",
+          "group": "snRNA-pre-mRNA regions",
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "U11 snRNA 5' splice-site recognition region",
+          "chain": "A",
+          "residue_ranges": "5-7",
+          "confidence": "high",
+          "method": "reference-alignment",
+          "color": "#D46BB8",
+          "queries": [
+            {
+              "auth_asym_id": "A",
+              "beg_auth_seq_id": 5,
+              "end_auth_seq_id": 7
+            }
+          ]
+        }
+      ],
+      "protein_count": 9,
+      "rna_count": 1,
+      "chain_count": 10,
+      "has_prpf8": false,
+      "has_sf3b1": false,
+      "quality": {
+        "status": "missing",
+        "notes": "No extracted quality metrics."
+      },
+      "curation": {
+        "stage_evidence": "Deposited title identifies isolated U11 snRNP; Zhao et al. 2025, DOI:10.1016/j.molcel.2024.12.017",
+        "curation_summary": "Focused reconstruction; see deposited title. U11 snRNA recognition region mapped to the human reference; approximate stem-loop features withheld pending paper-specific review.",
+        "stage_confidence": "",
+        "homolog_confidence": "",
+        "color_confidence": "",
+        "rna_identity_confidence": "",
+        "overall_confidence": "",
+        "badges": [],
+        "flags": [],
+        "colored_proteins": "",
+        "protein_count": "",
+        "unassigned_components": "0",
+        "assignment_completeness": "complete",
+        "provisional_rna_features": 0,
+        "annotation_scope": "Reference/motif regions; occupancy and folding require structural inspection. Consistency is not independent validation."
+      },
+      "unassigned_components": [],
+      "substrate_features": [],
+      "substrate_types": [],
+      "substrate_type_summary": {
+        "pdb_id": "9gcl",
+        "has_substrate": "False",
+        "substrate_types": "",
+        "substrate_families": "",
+        "entity_count": "0",
+        "confidence": "high",
+        "review_required": "False",
+        "evidence": ""
+      },
+      "snrna_alignments": [],
+      "snrna_features": [
+        {
+          "feature": "U11_5prime_5SS_recognition",
+          "label": "5' splice-site recognition region",
+          "snrna": "U11 snRNA",
+          "entity_id": "10",
+          "molecule_name": "U11 snRNA",
+          "original_chain_id": "A",
+          "seq_start": "1",
+          "seq_end": "7",
+          "auth_residue_ranges": "5-7",
+          "feature_sequence": "AAAAAGG",
+          "method": "reference-alignment",
+          "confidence": "high"
+        }
+      ],
+      "script_path": "scripts/9gcl.cxc",
+      "script_systematic_path": "scripts_systematic/9gcl.cxc",
+      "primary_map_script_path": "scripts_with_primary_maps/9gcl.cxc",
+      "primary_map_script_systematic_path": "scripts_systematic_with_primary_maps/9gcl.cxc",
+      "systematic_chain_count": 10,
+      "primary_map": {
+        "emdb_id": "EMD-51233",
+        "annotation": "main map",
+        "contour_level": "0.05"
+      },
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9gcl_9gcl_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9gcl_9gcl_r2dt_dashboard_colored.svg"
+      },
+      "thumbnail": {
+        "image": "thumbnails/006_9gcl_thumbnail.png"
+      },
+      "composite_groups": []
+    },
+    {
+      "pdb_id": "9gcm",
+      "title": "Structure of the U11 snRNP core",
+      "state": "U11 snRNP",
+      "species": "Human",
+      "species_code": "HUMAN",
+      "resolution": "3.1",
+      "year": "2025",
+      "paper_title": "Structural basis of 5' splice site recognition by the minor spliceosome.",
+      "doi": "10.1016/j.molcel.2024.12.017",
+      "pubmed_id": "39809272",
+      "journal": "Mol Cell",
+      "pdbe_url": "https://www.ebi.ac.uk/pdbe/entry/pdb/9gcm",
+      "rcsb_url": "https://www.rcsb.org/structure/9GCM",
+      "emdb_ids": [
+        "EMD-51234"
+      ],
+      "authors": "Zhao J; Peter D; Brandina I; Liu X; Galej WP",
+      "authors_short": "Zhao J; Peter D; Brandina I; et al. (5 authors)",
+      "abstract": "",
+      "proteins": [
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 25 kDa protein",
+          "gene": "C16ORF33; SNRNP25",
+          "display_name": "SNR25",
+          "chains": "B",
+          "organisms": "Homo sapiens",
+          "color_hex": "#A458BB"
+        },
+        {
+          "name": "U11/U12 small nuclear ribonucleoprotein 35 kDa protein",
+          "gene": "HM1; SNRNP35; U1SNRNPBP",
+          "display_name": "U1SBP",
+          "chains": "C",
+          "organisms": "Homo sapiens",
+          "color_hex": "#BFA1D9"
+        },
+        {
+          "name": "Programmed cell death protein 7",
+          "gene": "PDCD7",
+          "display_name": "PDCD7",
+          "chains": "D",
+          "organisms": "Homo sapiens",
+          "color_hex": "#CFC7DB"
+        }
+      ],
+      "rnas": [
+        {
+          "name": "U11 snRNA",
+          "gene": "",
+          "display_name": "U11 snRNA",
+          "chains": "A",
+          "organisms": "",
+          "color_hex": "#D8A3CF"
+        }
+      ],
+      "molstar_color_selections": [
+        {
+          "auth_asym_id": "B",
+          "color": "#A458BB",
+          "label": "SNR25"
+        },
+        {
+          "auth_asym_id": "C",
+          "color": "#BFA1D9",
+          "label": "U1SBP"
+        },
+        {
+          "auth_asym_id": "D",
+          "color": "#CFC7DB",
+          "label": "PDCD7"
+        },
+        {
+          "auth_asym_id": "A",
+          "color": "#D46BB8",
+          "label": "U11 snRNA"
+        }
+      ],
+      "molstar_feature_selections": [],
+      "protein_count": 3,
+      "rna_count": 1,
+      "chain_count": 4,
+      "has_prpf8": false,
+      "has_sf3b1": false,
+      "quality": {
+        "status": "missing",
+        "notes": "No extracted quality metrics."
+      },
+      "curation": {
+        "stage_evidence": "Deposited title identifies isolated U11 snRNP; Zhao et al. 2025, DOI:10.1016/j.molcel.2024.12.017",
+        "curation_summary": "Focused reconstruction; see deposited title. U11 snRNA recognition region mapped to the human reference; approximate stem-loop features withheld pending paper-specific review.",
+        "stage_confidence": "",
+        "homolog_confidence": "",
+        "color_confidence": "",
+        "rna_identity_confidence": "",
+        "overall_confidence": "",
+        "badges": [],
+        "flags": [],
+        "colored_proteins": "",
+        "protein_count": "",
+        "unassigned_components": "0",
+        "assignment_completeness": "complete",
+        "provisional_rna_features": 0,
+        "annotation_scope": "Reference/motif regions; occupancy and folding require structural inspection. Consistency is not independent validation."
+      },
+      "unassigned_components": [],
+      "substrate_features": [],
+      "substrate_types": [],
+      "substrate_type_summary": {
+        "pdb_id": "9gcm",
+        "has_substrate": "False",
+        "substrate_types": "",
+        "substrate_families": "",
+        "entity_count": "0",
+        "confidence": "high",
+        "review_required": "False",
+        "evidence": ""
+      },
+      "snrna_alignments": [],
+      "snrna_features": [],
+      "script_path": "scripts/9gcm.cxc",
+      "script_systematic_path": "scripts_systematic/9gcm.cxc",
+      "primary_map_script_path": "scripts_with_primary_maps/9gcm.cxc",
+      "primary_map_script_systematic_path": "scripts_systematic_with_primary_maps/9gcm.cxc",
+      "systematic_chain_count": 4,
+      "primary_map": {
+        "emdb_id": "EMD-51234",
+        "annotation": "main map",
+        "contour_level": "0.065"
+      },
+      "rna_2d": {
+        "status": "complete",
+        "rna_chain_count": "1",
+        "r2dt_chain_count": "1",
+        "failed_chain_count": "0",
+        "notes": "",
+        "png": "rna_2d/9gcm_9gcm_r2dt_dashboard_colored.png",
+        "svg": "rna_2d/9gcm_9gcm_r2dt_dashboard_colored.svg"
+      },
+      "thumbnail": {
+        "image": "thumbnails/007_9gcm_thumbnail.png"
+      },
+      "composite_groups": []
     }
   ],
   "primary_map_scripts": {
@@ -155291,7 +156757,13 @@
     "9s2f": "# Lightweight ChimeraX script for 9S2F\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Shared anchor frame: 8H6L\n# Structure group: #442; target model: #442.1; RNA labels: #442.2.\n\nopen 8h6l id 442.9 name 8H6L_anchor\nopen 9s2f id 442.1 name 9S2F\nopen emdb:54494 id 442.3.1 name DIS_9s2f_EMD-54494_primary_map\nrename #442 DIS_9s2f_structure\n\n# Align on PRPF8.\nmatchmaker #442.1/A to #442.9/5B bring #442.3.1\nclose #442.9\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# DHX35\ncolor #442.1/35 #78184A\n# U5 snRNA\ncolor #442.1/5 #4F9FD3\n# PRPF8\ncolor #442.1/A #BFC3E8\n# SNRNP200\ncolor #442.1/B #AFEEEE\n# EFTUD2\ncolor #442.1/C #6495ED\n# PRP8BP\ncolor #442.1/E #E2F3F4\n# GPATCH1\ncolor #442.1/GP #E52B75\n# SYF1\ncolor #442.1/I #FF957B\n# CRNKL1\ncolor #442.1/J #FFC388\n# BCAS2\ncolor #442.1/K #FFDAB9\n# CDC5L\ncolor #442.1/L #DAA520\n# SYF2\ncolor #442.1/M #FF8C00\n# BUD31\ncolor #442.1/N #FFF584\n# RBM22\ncolor #442.1/O #DE9A52\n# CWC15\ncolor #442.1/P #FFDEAD\n# AQR\ncolor #442.1/Q #FFDAB9\n# SNW1\ncolor #442.1/R #D49F96\n# PPIL1\ncolor #442.1/S #EEE8AA\n# PLRG1\ncolor #442.1/T #F4A460\n# PRPF17\ncolor #442.1/W #FFF7C9\n# WDR83\ncolor #442.1/WD #ED6983\n# CCDC12\ncolor #442.1/Z #FAEBD7\n# U5-Sm SNRPD3\ncolor #442.1/a #B0C4DE\n# U5-Sm SNRPB\ncolor #442.1/b #B0C4DE\n# U5-Sm SNRPD1\ncolor #442.1/c #B0C4DE\n# U5-Sm SNRPD2\ncolor #442.1/d #B0C4DE\n# U5-Sm SNRPE\ncolor #442.1/e #B0C4DE\n# U5-Sm SNRPF\ncolor #442.1/f #B0C4DE\n# U5-Sm SNRPG\ncolor #442.1/g #B0C4DE\n# PRPF19\ncolor #442.1/q #FFFFAB\n# PRPF19\ncolor #442.1/r #FFFFAB\n# PRPF19\ncolor #442.1/s #FFFFAB\n# PRPF19\ncolor #442.1/t #FFFFAB\n# PPIE\ncolor #442.1/y #FFFFE0\n# ISY1\ncolor #442.1/D #FFEF8C\n# INTRON\ncolor #442.1/IN #303030\n# U6 snRNA\ncolor #442.1/6 #EF4444\n# Named selections for subcomplexes using original deposited chain IDs.\n# Disassembly factors\n# selector_meta {\"color\":\"#FF69B4\",\"family\":\"Protein/RNP groups\",\"group\":\"disassembly factors\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_Disassembly_factors #442.1/35,GP\n# NTC/NTR related\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_NTC_NTR_related #442.1/D,I,J,M,N,O,Q,R,S,y\n# NTC/PRP19\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_NTC_PRP19 #442.1/K,L,P,T,q,r,s,t\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_RNA_substrate #442.1/IN\n# Second step factors\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_Second_step_factors #442.1/W\n# U5 Sm ring\n# selector_meta {\"color\":\"#BFC3E8\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_U5_Sm_ring #442.1/a,b,c,d,e,f,g\n# U5 snRNP\n# selector_meta {\"color\":\"#0000CD\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_U5_snRNP #442.1/5,A,B,C,E\n# U6 snRNP\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_U6_snRNP #442.1/6\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9S2F_other #442.1/WD,Z\n# Named selections for resolved substrate RNA features.\n# intron: residues 11-20, component-name, high confidence, validation not_applicable\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"intron\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname DIS_9S2F_intron #442.1/IN:11-20\n# Named selections for resolved snRNA functional regions.\n# U5 snRNA loop I: residues 38-42, sequence-motif, medium confidence\n# selector_meta {\"color\":\"#1B3CD0\",\"family\":\"RNA\",\"feature\":\"U5_loop_I\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname DIS_9S2F_U5_loop_I #442.1/5:38-42\n# U6 snRNA 5' terminal stem-loop: residues 1-30, reference-alignment, high confidence\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"RNA\",\"feature\":\"U6_5prime_terminal_stem_loop\",\"group\":\"internal stem loops\",\"group_key\":\"internal_stem_loops\",\"kind\":\"rna_feature\"}\nname DIS_9S2F_U6_5_terminal_stem_loop #442.1/6:1-30\n# U6 snRNA U2/U6 helix I partner: residues 35, motif-neighborhood, medium confidence\n# selector_meta {\"color\":\"#D0183C\",\"family\":\"RNA\",\"feature\":\"U6_U2_helix_I_partner\",\"group\":\"snRNA-snRNA interacting regions\",\"group_key\":\"snRNA_snRNA_regions\",\"kind\":\"rna_feature\"}\nname DIS_9S2F_U6_U2_helix_I_partner #442.1/6:35\n# RNA feature nucleotide display.\nselect #442.1 & nucleic\nnucleotides sel atoms\nselect clear\n# intron: residues 11-20\n# U5 loop I: residues 38-42\ncolor #442.1/5:38-42 #1B3CD0\nselect #442.1/5:38-42\nnucleotides sel fill\nselect clear\n# U6 5' terminal SL: residues 1-30\ncolor #442.1/6:1-30 #DC143C\nselect #442.1/6:1-30\nnucleotides sel fill\nselect clear\n# U2/U6 helix I: residues 35\ncolor #442.1/6:35 #D0183C\nselect #442.1/6:35\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #442.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9s2f_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9s2f_selection_browser.py\nview\nshow nucleic\n",
     "9if7": "# Lightweight ChimeraX script for 9IF7\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Shared anchor frame: 8H6L\n# Structure group: #423; target model: #423.1; RNA labels: #423.2.\n\nopen 8h6l id 423.9 name 8H6L_anchor\nopen 9if7 id 423.1 name 9IF7\nopen emdb:52843 id 423.3.1 name Cstar_9if7_EMD-52843_primary_map\nrename #423 Cstar_9if7_structure\n\n# Align on PRPF8.\nmatchmaker #423.1/LA to #423.9/5B bring #423.3.1\nclose #423.9\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# EIF4A3\ncolor #423.1/L7 #F1D8BC\n# RBM8A\ncolor #423.1/L8 #EB6841\n# MAGOH\ncolor #423.1/L9 #EAA439\n# PRPF8\ncolor #423.1/LA #BFC3E8\n# SNRNP200\ncolor #423.1/LB #AFEEEE\n# EFTUD2\ncolor #423.1/LC #6495ED\n# PRKRIP1\ncolor #423.1/LD #B39C7B\n# CACTIN\ncolor #423.1/LF #E3C2CF\n# LT_RBP1\ncolor #423.1/LG #438E78\n# LT_SDE2_LIKE\ncolor #423.1/LH #FFFF00\n# PLRG1\ncolor #423.1/LJ #F4A460\n# BUD31\ncolor #423.1/LL #FFF584\n# PRP8BP\ncolor #423.1/LN #E2F3F4\n# CWC15\ncolor #423.1/LP #FFDEAD\n# CDC5L\ncolor #423.1/LQ #DAA520\n# LT_CWC21\ncolor #423.1/LR #5979AF\n# CRNKL1\ncolor #423.1/LS #FFC388\n# SYF1\ncolor #423.1/LT #FF957B\n# DHX8\ncolor #423.1/LV #900C3F\n# SNRPA1\ncolor #423.1/LW #58D68D\n# SNRPB2\ncolor #423.1/LY #DAF7A6\n# NKAP\ncolor #423.1/LZ #9370DB\n# CWC22\ncolor #423.1/SA #2C54DD\n# SLU7\ncolor #423.1/SC #5A338B\n# PRPF18\ncolor #423.1/SD #9A85C1\n# LT_LTAPH_1601800\ncolor #423.1/SF #CC983E\n# LT_PRC3\ncolor #423.1/SJ #987352\n# LT_PRC5\ncolor #423.1/SK #7E6B95\n# SNW1\ncolor #423.1/SL #D49F96\n# PPIL1\ncolor #423.1/SN #EEE8AA\n# PRPF17\ncolor #423.1/SO #FFF7C9\n# ISY1\ncolor #423.1/SP #FFEF8C\n# LT_ZN_KNUCKLE\ncolor #423.1/SQ #C36B5D\n# BCAS2\ncolor #423.1/SS #FFDAB9\n# PRPF19\ncolor #423.1/ST #FFFFAB\n# PRPF19\ncolor #423.1/SU #FFFFAB\n# PRPF19\ncolor #423.1/SV #FFFFAB\n# PRPF19\ncolor #423.1/SW #FFFFAB\n# LT_LTAP16_0490\ncolor #423.1/TN #779E91\n# LT_UNK\ncolor #423.1/UX #929292\n# LSM2\ncolor #423.1/62 #F4A3A8\n# LSM3\ncolor #423.1/63 #F4A3A8\n# LSM4\ncolor #423.1/64 #F4A3A8\n# LSM5\ncolor #423.1/65 #F4A3A8\n# LSM6\ncolor #423.1/66 #F4A3A8\n# LSM7\ncolor #423.1/67 #F4A3A8\n# LSM8\ncolor #423.1/68 #F4A3A8\n# mRNA\ncolor #423.1/RN #303030\n# U2-Sm SNRPD1\ncolor #423.1/24 #A7D89C\n# U5-Sm SNRPD1\ncolor #423.1/51 #A9CFE8\n# SNRPD1\ncolor #423.1/U1 #B0C4DE\n# U2-Sm SNRPD2\ncolor #423.1/25 #A7D89C\n# U5-Sm SNRPD2\ncolor #423.1/52 #A9CFE8\n# SNRPD2\ncolor #423.1/U2 #B0C4DE\n# LT_SM15K\ncolor #423.1/2C #92A7BC\n# LT_SM16_5K\ncolor #423.1/2D #C7AE85\n# U2-Sm SNRPE\ncolor #423.1/2H #A7D89C\n# U5-Sm SNRPE\ncolor #423.1/5E #A9CFE8\n# SNRPE\ncolor #423.1/UE #B0C4DE\n# U2-Sm SNRPF\ncolor #423.1/2I #A7D89C\n# U5-Sm SNRPF\ncolor #423.1/5F #A9CFE8\n# SNRPF\ncolor #423.1/UF #B0C4DE\n# U2-Sm SNRPG\ncolor #423.1/2J #A7D89C\n# U5-Sm SNRPG\ncolor #423.1/5G #A9CFE8\n# SNRPG\ncolor #423.1/UG #B0C4DE\n# U5-Sm SNRPD3\ncolor #423.1/53 #A9CFE8\n# SNRPD3\ncolor #423.1/U3 #B0C4DE\n# U5-Sm SNRPB\ncolor #423.1/5B #A9CFE8\n# SNRPB\ncolor #423.1/UB #B0C4DE\n# SL exon\ncolor #423.1/LE #FF9D00\n# U2 snRNA\ncolor #423.1/N2 #71C562\n# U5 snRNA\ncolor #423.1/N5 #4F9FD3\n# U6 snRNA\ncolor #423.1/N6 #EF4444\n# Named selections for subcomplexes using original deposited chain IDs.\n# EJC/mRNP\n# selector_meta {\"color\":\"#EAA439\",\"family\":\"Protein/RNP groups\",\"group\":\"EJC/mRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_EJC_mRNP #423.1/L7,L8,L9,SA\n# NTC/NTR related\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_NTC_NTR_related #423.1/LL,LS,LT,SL,SN,SP\n# NTC/PRP19\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_NTC_PRP19 #423.1/LJ,LP,LQ,SS,ST,SU,SV,SW\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_RNA_substrate #423.1/RN\n# SL Sm ring\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_SL_Sm_ring #423.1/U1,U2,U3,UB,UE,UF,UG\n# SL snRNP\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_SL_snRNP #423.1/LO\n# SL substrate\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_SL_substrate #423.1/LE\n# Second step factors\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_Second_step_factors #423.1/LV,SC,SD,SO\n# U2 Sm ring\n# selector_meta {\"color\":\"#BFE6BF\",\"family\":\"Protein/RNP groups\",\"group\":\"U2/SF3B groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_U2_Sm_ring #423.1/2H,2I,2J,24,25\n# U2 snRNP\n# selector_meta {\"color\":\"#2F8B4D\",\"family\":\"Protein/RNP groups\",\"group\":\"U2/SF3B groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_U2_snRNP #423.1/LD,LW,LY,N2\n# U5 Sm ring\n# selector_meta {\"color\":\"#BFC3E8\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_U5_Sm_ring #423.1/5B,5E,5F,5G,51,52,53\n# U5 snRNP\n# selector_meta {\"color\":\"#0000CD\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_U5_snRNP #423.1/LA,LB,LC,LN,N5\n# U6 LSm\n# selector_meta {\"color\":\"#FECACA\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_U6_LSm #423.1/62,63,64,65,66,67,68\n# U6 snRNP\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_U6_snRNP #423.1/N6\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF7_other #423.1/2C,2D,LF,LG,LH,LR,LZ,SF,SJ,SK,SQ,TN,UX\n# Named selections for resolved substrate RNA features.\n# SL 5' exon: residues 15-39, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#FF9D00\",\"family\":\"RNA\",\"feature\":\"exon_5\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_9IF7_5exon #423.1/LE:15-39\n# SL outron: residues 1-6;39-44; 40-61;72-96, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"intron\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_9IF7_intron #423.1/LO:40-61,72-96|#423.1/RN:1-6,39-44\n# Branch-point A: residues 1, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"branch_point_adenosine\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_9IF7_branch_A #423.1/RN:1\n# 3' splice-site AG: residues 43-44, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"three_prime_splice_site\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_9IF7_3SS #423.1/RN:43-44\n# SL 5' splice site: residues 40-45, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"five_prime_splice_site\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_9IF7_5SS #423.1/LO:40-45\n# Pre-mRNA 3' exon: residues 45-46;62-68, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#C65D00\",\"family\":\"RNA\",\"feature\":\"exon_3\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_9IF7_3exon #423.1/RN:45-46,62-68\n# RNA feature nucleotide display.\nselect #423.1 & nucleic\nnucleotides sel atoms\nselect clear\n# 5' exon: residues 15-39\ncolor #423.1/LE:15-39 #FF9D00\nselect #423.1/LE:15-39\nnucleotides sel fill\nselect clear\n# intron: residues 1-6;39-44; 40-61;72-96\n# BP-A: residues 1\n# 3'SS: residues 43-44\n# 5'SS: residues 40-45\n# 3' exon: residues 45-46;62-68\ncolor #423.1/RN:45-46,62-68 #C65D00\nselect #423.1/RN:45-46,62-68\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #423.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9if7_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9if7_selection_browser.py\nview\nshow nucleic\n",
     "9if8": "# Lightweight ChimeraX script for 9IF8\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Shared anchor frame: 8H6L\n# Structure group: #431; target model: #431.1; RNA labels: #431.2.\n\nopen 8h6l id 431.9 name 8H6L_anchor\nopen 9if8 id 431.1 name 9IF8\nopen emdb:52844 id 431.3.1 name P_9if8_EMD-52844_primary_map\nrename #431 P_9if8_structure\n\n# Align on PRPF8.\nmatchmaker #431.1/LA to #431.9/5B bring #431.3.1\nclose #431.9\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# PRPF8\ncolor #431.1/LA #BFC3E8\n# SNRNP200\ncolor #431.1/LB #AFEEEE\n# EFTUD2\ncolor #431.1/LC #6495ED\n# PRKRIP1\ncolor #431.1/LD #B39C7B\n# CACTIN\ncolor #431.1/LF #E3C2CF\n# LT_RBP1\ncolor #431.1/LG #438E78\n# LT_SDE2_LIKE\ncolor #431.1/LH #FFFF00\n# PLRG1\ncolor #431.1/LJ #F4A460\n# BUD31\ncolor #431.1/LL #FFF584\n# PRP8BP\ncolor #431.1/LN #E2F3F4\n# CWC15\ncolor #431.1/LP #FFDEAD\n# CDC5L\ncolor #431.1/LQ #DAA520\n# LT_CWC21\ncolor #431.1/LR #5979AF\n# CRNKL1\ncolor #431.1/LS #FFC388\n# SYF1\ncolor #431.1/LT #FF957B\n# DHX8\ncolor #431.1/LV #900C3F\n# SNRPA1\ncolor #431.1/LW #58D68D\n# SNRPB2\ncolor #431.1/LY #DAF7A6\n# NKAP\ncolor #431.1/LZ #9370DB\n# CWC22\ncolor #431.1/SA #2C54DD\n# SLU7\ncolor #431.1/SC #5A338B\n# PRPF18\ncolor #431.1/SD #9A85C1\n# LT_LTAPH_1601800\ncolor #431.1/SF #CC983E\n# LT_PRC3\ncolor #431.1/SJ #987352\n# LT_PRC5\ncolor #431.1/SK #7E6B95\n# SNW1\ncolor #431.1/SL #D49F96\n# PPIL1\ncolor #431.1/SN #EEE8AA\n# PRPF17\ncolor #431.1/SO #FFF7C9\n# ISY1\ncolor #431.1/SP #FFEF8C\n# BCAS2\ncolor #431.1/SS #FFDAB9\n# PRPF19\ncolor #431.1/ST #FFFFAB\n# PRPF19\ncolor #431.1/SU #FFFFAB\n# PRPF19\ncolor #431.1/SV #FFFFAB\n# PRPF19\ncolor #431.1/SW #FFFFAB\n# LT_LTAP16_0490\ncolor #431.1/TN #779E91\n# LT_UNK\ncolor #431.1/UX #929292\n# LSM2\ncolor #431.1/62 #F4A3A8\n# LSM3\ncolor #431.1/63 #F4A3A8\n# LSM4\ncolor #431.1/64 #F4A3A8\n# LSM5\ncolor #431.1/65 #F4A3A8\n# LSM6\ncolor #431.1/66 #F4A3A8\n# LSM7\ncolor #431.1/67 #F4A3A8\n# LSM8\ncolor #431.1/A #F4A3A8\n# mRNA\ncolor #431.1/RN #303030\n# U2-Sm SNRPD1\ncolor #431.1/24 #A7D89C\n# U5-Sm SNRPD1\ncolor #431.1/51 #A9CFE8\n# SNRPD1\ncolor #431.1/U1 #B0C4DE\n# U2-Sm SNRPD2\ncolor #431.1/25 #A7D89C\n# U5-Sm SNRPD2\ncolor #431.1/52 #A9CFE8\n# SNRPD2\ncolor #431.1/U2 #B0C4DE\n# LT_SM15K\ncolor #431.1/2C #92A7BC\n# LT_SM16_5K\ncolor #431.1/2D #C7AE85\n# U2-Sm SNRPE\ncolor #431.1/2H #A7D89C\n# U5-Sm SNRPE\ncolor #431.1/5E #A9CFE8\n# SNRPE\ncolor #431.1/UE #B0C4DE\n# U2-Sm SNRPF\ncolor #431.1/2I #A7D89C\n# U5-Sm SNRPF\ncolor #431.1/5F #A9CFE8\n# SNRPF\ncolor #431.1/UF #B0C4DE\n# U2-Sm SNRPG\ncolor #431.1/2J #A7D89C\n# U5-Sm SNRPG\ncolor #431.1/5G #A9CFE8\n# SNRPG\ncolor #431.1/UG #B0C4DE\n# U5-Sm SNRPD3\ncolor #431.1/53 #A9CFE8\n# SNRPD3\ncolor #431.1/U3 #B0C4DE\n# U5-Sm SNRPB\ncolor #431.1/5B #A9CFE8\n# SNRPB\ncolor #431.1/UB #B0C4DE\n# SL-ligated mRNA\ncolor #431.1/LE #FF9D00\n# U2 snRNA\ncolor #431.1/N2 #71C562\n# U5 snRNA\ncolor #431.1/N5 #4F9FD3\n# U6 snRNA\ncolor #431.1/N6 #EF4444\n# Named selections for subcomplexes using original deposited chain IDs.\n# EJC/mRNP\n# selector_meta {\"color\":\"#EAA439\",\"family\":\"Protein/RNP groups\",\"group\":\"EJC/mRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_EJC_mRNP #431.1/SA\n# NTC/NTR related\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_NTC_NTR_related #431.1/LL,LS,LT,SL,SN,SP\n# NTC/PRP19\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_NTC_PRP19 #431.1/LJ,LP,LQ,SS,ST,SU,SV,SW\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_RNA_substrate #431.1/RN\n# SL Sm ring\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_SL_Sm_ring #431.1/U1,U2,U3,UB,UE,UF,UG\n# SL snRNP\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_SL_snRNP #431.1/LO\n# SL substrate\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_SL_substrate #431.1/LE\n# Second step factors\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_Second_step_factors #431.1/LV,SC,SD,SO\n# U2 Sm ring\n# selector_meta {\"color\":\"#BFE6BF\",\"family\":\"Protein/RNP groups\",\"group\":\"U2/SF3B groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_U2_Sm_ring #431.1/2H,2I,2J,24,25\n# U2 snRNP\n# selector_meta {\"color\":\"#2F8B4D\",\"family\":\"Protein/RNP groups\",\"group\":\"U2/SF3B groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_U2_snRNP #431.1/LD,LW,LY,N2\n# U5 Sm ring\n# selector_meta {\"color\":\"#BFC3E8\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_U5_Sm_ring #431.1/5B,5E,5F,5G,51,52,53\n# U5 snRNP\n# selector_meta {\"color\":\"#0000CD\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_U5_snRNP #431.1/LA,LB,LC,LN,N5\n# U6 LSm\n# selector_meta {\"color\":\"#FECACA\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_U6_LSm #431.1/62,63,64,65,66,67,A\n# U6 snRNP\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_U6_snRNP #431.1/N6\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9IF8_other #431.1/2C,2D,LF,LG,LH,LR,LZ,SF,SJ,SK,TN,UX\n# Named selections for resolved substrate RNA features.\n# SL 5' exon: residues 28-39, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#FF9D00\",\"family\":\"RNA\",\"feature\":\"exon_5\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname P_9IF8_5exon #431.1/LE:28-39\n# SL outron: residues 1-6;39-44; 40-61;72-96, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"intron\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname P_9IF8_intron #431.1/LO:40-61,72-96|#431.1/RN:1-6,39-44\n# Branch-point A: residues 1, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"branch_point_adenosine\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname P_9IF8_branch_A #431.1/RN:1\n# 3' splice-site AG: residues 43-44, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"three_prime_splice_site\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname P_9IF8_3SS #431.1/RN:43-44\n# SL 5' splice site: residues 40-45, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"five_prime_splice_site\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname P_9IF8_5SS #431.1/LO:40-45\n# Ligated pre-mRNA 3' exon: residues 40-41;57-63, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#C65D00\",\"family\":\"RNA\",\"feature\":\"exon_3\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname P_9IF8_3exon #431.1/LE:40-41,57-63\n# RNA feature nucleotide display.\nselect #431.1 & nucleic\nnucleotides sel atoms\nselect clear\n# 5' exon: residues 28-39\ncolor #431.1/LE:28-39 #FF9D00\nselect #431.1/LE:28-39\nnucleotides sel fill\nselect clear\n# intron: residues 1-6;39-44; 40-61;72-96\n# BP-A: residues 1\n# 3'SS: residues 43-44\n# 5'SS: residues 40-45\n# 3' exon: residues 40-41;57-63\ncolor #431.1/LE:40-41,57-63 #C65D00\nselect #431.1/LE:40-41,57-63\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #431.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9if8_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9if8_selection_browser.py\nview\nshow nucleic\n",
-    "8xi2": "# Lightweight ChimeraX script for 8XI2\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Shared anchor frame: 8H6L\n# Structure group: #422; target model: #422.1; RNA labels: #422.2.\n\nopen 8h6l id 422.9 name 8H6L_anchor\nopen 8xi2 id 422.1 name 8XI2\nopen emdb:38362 id 422.3.1 name Cstar_8xi2_EMD-38362_primary_map\nrename #422 Cstar_8xi2_structure\n\n# Align on PRPF8.\nmatchmaker #422.1/A to #422.9/5B bring #422.3.1\nclose #422.9\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# PRPF8\ncolor #422.1/A #BFC3E8\n# U5 snRNA\ncolor #422.1/B #4F9FD3\n# EFTUD2\ncolor #422.1/C #6495ED\n# PRP8BP\ncolor #422.1/E #E2F3F4\n# U6 snRNA\ncolor #422.1/F #EF4444\n# PRPF19\ncolor #422.1/q #FFFFAB\n# PRPF19\ncolor #422.1/r #FFFFAB\n# PRPF19\ncolor #422.1/s #FFFFAB\n# PRPF19\ncolor #422.1/t #FFFFAB\n# U5-Sm SNRPD3\ncolor #422.1/a #A9CFE8\n# U5-Sm SNRPG\ncolor #422.1/g #A9CFE8\n# U5-Sm SNRPE\ncolor #422.1/e #A9CFE8\n# U5-Sm SNRPF\ncolor #422.1/f #A9CFE8\n# U5-Sm SNRPD2\ncolor #422.1/d #A9CFE8\n# U5-Sm SNRPD1\ncolor #422.1/c #A9CFE8\n# U5-Sm SNRPB\ncolor #422.1/b #A9CFE8\n# SYF1\ncolor #422.1/I #FF957B\n# CRNKL1\ncolor #422.1/J #FFC388\n# CWC15\ncolor #422.1/P #FFDEAD\n# SYF2\ncolor #422.1/M #FF8C00\n# PLRG1\ncolor #422.1/T #F4A460\n# RBM22\ncolor #422.1/O #DE9A52\n# BUD31\ncolor #422.1/N #FFF584\n# SNW1\ncolor #422.1/R #D49F96\n# U2 snRNA\ncolor #422.1/H #71C562\n# PPIL1\ncolor #422.1/S #EEE8AA\n# PRPF17\ncolor #422.1/W #FFF7C9\n# CDC5L\ncolor #422.1/L #DAA520\n# BCAS2\ncolor #422.1/K #FFDAB9\n# SRRM2\ncolor #422.1/U #BDD6F0\n# CWC22\ncolor #422.1/V #2C54DD\n# AQR\ncolor #422.1/Q #FFDAB9\n# mRNA\ncolor #422.1/5 #303030\n# INTRON\ncolor #422.1/3 #303030\n# Named selections for subcomplexes using original deposited chain IDs.\n# EJC/mRNP\n# selector_meta {\"color\":\"#EAA439\",\"family\":\"Protein/RNP groups\",\"group\":\"EJC/mRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_EJC_mRNP #422.1/V\n# NTC/NTR related\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_NTC_NTR_related #422.1/I,J,M,N,O,Q,R,S\n# NTC/PRP19\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_NTC_PRP19 #422.1/K,L,P,T,q,r,s,t\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_RNA_substrate #422.1/3,5\n# SR proteins\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_SR_proteins #422.1/U\n# Second step factors\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_Second_step_factors #422.1/W\n# U2 snRNP\n# selector_meta {\"color\":\"#2F8B4D\",\"family\":\"Protein/RNP groups\",\"group\":\"U2/SF3B groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U2_snRNP #422.1/H\n# U5 Sm ring\n# selector_meta {\"color\":\"#BFC3E8\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U5_Sm_ring #422.1/a,b,c,d,e,f,g\n# U5 snRNP\n# selector_meta {\"color\":\"#0000CD\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U5_snRNP #422.1/A,B,C,E\n# U6 snRNP\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U6_snRNP #422.1/F\n# Named selections for resolved substrate RNA features.\n# 5-prime exon: residues -7--1, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#FF9D00\",\"family\":\"RNA\",\"feature\":\"exon_5\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_5exon #422.1/5:-7--1\n# Intron: residues 1-22;90-101, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"intron\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_intron #422.1/3:1-22,90-101\n# 5-prime splice site: residues 1-6, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"five_prime_splice_site\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_5SS #422.1/3:1-6\n# Named selections for resolved snRNA functional regions.\n# U2 snRNA Branch-helix region: residues 33-40, paper-curated, high confidence\n# selector_meta {\"color\":\"#0B6E2D\",\"family\":\"RNA\",\"feature\":\"U2_branchpoint_pairing_region\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U2_branchpoint_pairing_region #422.1/H:33-40\n# U5 snRNA Loop I / 5-prime exon contact: residues 40-46, paper-curated, high confidence\n# selector_meta {\"color\":\"#1B3CD0\",\"family\":\"RNA\",\"feature\":\"U5_loop_I\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U5_loop_I #422.1/B:40-46\n# U6 snRNA 5-prime terminal stem-loop: residues 1-12, paper-curated, high confidence\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"RNA\",\"feature\":\"U6_5prime_stem_loop\",\"group\":\"other snRNA regions\",\"group_key\":\"other_snRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_5_stem_loop #422.1/F:1-12\n# U6 snRNA ACAGAGA box: residues 34-40, paper-curated, high confidence\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"RNA\",\"feature\":\"U6_ACAGAGA_box\",\"group\":\"other snRNA regions\",\"group_key\":\"other_snRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_ACAGAGA_box #422.1/F:34-40\n# U6 snRNA Catalytic AGC triad: residues 46-48, paper-curated, high confidence\n# selector_meta {\"color\":\"#C91236\",\"family\":\"RNA\",\"feature\":\"U6_AGC_catalytic_triad\",\"group\":\"catalytic core regions\",\"group_key\":\"catalytic_core_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_AGC_catalytic_triad #422.1/F:46-48\n# U6 snRNA Catalytic U67: residues 67, paper-curated, high confidence\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"RNA\",\"feature\":\"U6_catalytic_U\",\"group\":\"other snRNA regions\",\"group_key\":\"other_snRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_catalytic_U #422.1/F:67\n# RNA feature nucleotide display.\nselect #422.1 & nucleic\nnucleotides sel atoms\nselect clear\n# 5' exon: residues -7--1\ncolor #422.1/5:-7--1 #FF9D00\nselect #422.1/5:-7--1\nnucleotides sel fill\nselect clear\n# intron: residues 1-22;90-101\n# 5'SS: residues 1-6\n# U2 BP pairing: residues 33-40\ncolor #422.1/H:33-40 #0B6E2D\nselect #422.1/H:33-40\nnucleotides sel fill\nselect clear\n# U5 loop I: residues 40-46\ncolor #422.1/B:40-46 #1B3CD0\nselect #422.1/B:40-46\nnucleotides sel fill\nselect clear\n# 5-prime terminal stem-loop: residues 1-12\ncolor #422.1/F:1-12 #F97316\nselect #422.1/F:1-12\nnucleotides sel fill\nselect clear\n# U6 ACAGAGA: residues 34-40\ncolor #422.1/F:34-40 #DC143C\nselect #422.1/F:34-40\nnucleotides sel fill\nselect clear\n# U6 AGC triad: residues 46-48\ncolor #422.1/F:46-48 #C91236\nselect #422.1/F:46-48\nnucleotides sel fill\nselect clear\n# Catalytic U67: residues 67\ncolor #422.1/F:67 #F97316\nselect #422.1/F:67\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #422.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8xi2_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/8xi2_selection_browser.py\nview\nshow nucleic\n"
+    "8xi2": "# Lightweight ChimeraX script for 8XI2\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Shared anchor frame: 8H6L\n# Structure group: #422; target model: #422.1; RNA labels: #422.2.\n\nopen 8h6l id 422.9 name 8H6L_anchor\nopen 8xi2 id 422.1 name 8XI2\nopen emdb:38362 id 422.3.1 name Cstar_8xi2_EMD-38362_primary_map\nrename #422 Cstar_8xi2_structure\n\n# Align on PRPF8.\nmatchmaker #422.1/A to #422.9/5B bring #422.3.1\nclose #422.9\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# PRPF8\ncolor #422.1/A #BFC3E8\n# U5 snRNA\ncolor #422.1/B #4F9FD3\n# EFTUD2\ncolor #422.1/C #6495ED\n# PRP8BP\ncolor #422.1/E #E2F3F4\n# U6 snRNA\ncolor #422.1/F #EF4444\n# PRPF19\ncolor #422.1/q #FFFFAB\n# PRPF19\ncolor #422.1/r #FFFFAB\n# PRPF19\ncolor #422.1/s #FFFFAB\n# PRPF19\ncolor #422.1/t #FFFFAB\n# U5-Sm SNRPD3\ncolor #422.1/a #A9CFE8\n# U5-Sm SNRPG\ncolor #422.1/g #A9CFE8\n# U5-Sm SNRPE\ncolor #422.1/e #A9CFE8\n# U5-Sm SNRPF\ncolor #422.1/f #A9CFE8\n# U5-Sm SNRPD2\ncolor #422.1/d #A9CFE8\n# U5-Sm SNRPD1\ncolor #422.1/c #A9CFE8\n# U5-Sm SNRPB\ncolor #422.1/b #A9CFE8\n# SYF1\ncolor #422.1/I #FF957B\n# CRNKL1\ncolor #422.1/J #FFC388\n# CWC15\ncolor #422.1/P #FFDEAD\n# SYF2\ncolor #422.1/M #FF8C00\n# PLRG1\ncolor #422.1/T #F4A460\n# RBM22\ncolor #422.1/O #DE9A52\n# BUD31\ncolor #422.1/N #FFF584\n# SNW1\ncolor #422.1/R #D49F96\n# U2 snRNA\ncolor #422.1/H #71C562\n# PPIL1\ncolor #422.1/S #EEE8AA\n# PRPF17\ncolor #422.1/W #FFF7C9\n# CDC5L\ncolor #422.1/L #DAA520\n# BCAS2\ncolor #422.1/K #FFDAB9\n# SRRM2\ncolor #422.1/U #BDD6F0\n# CWC22\ncolor #422.1/V #2C54DD\n# AQR\ncolor #422.1/Q #FFDAB9\n# mRNA\ncolor #422.1/5 #303030\n# INTRON\ncolor #422.1/3 #303030\n# Named selections for subcomplexes using original deposited chain IDs.\n# EJC/mRNP\n# selector_meta {\"color\":\"#EAA439\",\"family\":\"Protein/RNP groups\",\"group\":\"EJC/mRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_EJC_mRNP #422.1/V\n# NTC/NTR related\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_NTC_NTR_related #422.1/I,J,M,N,O,Q,R,S\n# NTC/PRP19\n# selector_meta {\"color\":\"#F4BF67\",\"family\":\"Protein/RNP groups\",\"group\":\"NTC/NTR groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_NTC_PRP19 #422.1/K,L,P,T,q,r,s,t\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_RNA_substrate #422.1/3,5\n# SR proteins\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_SR_proteins #422.1/U\n# Second step factors\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_Second_step_factors #422.1/W\n# U2 snRNP\n# selector_meta {\"color\":\"#2F8B4D\",\"family\":\"Protein/RNP groups\",\"group\":\"U2/SF3B groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U2_snRNP #422.1/H\n# U5 Sm ring\n# selector_meta {\"color\":\"#BFC3E8\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U5_Sm_ring #422.1/a,b,c,d,e,f,g\n# U5 snRNP\n# selector_meta {\"color\":\"#0000CD\",\"family\":\"Protein/RNP groups\",\"group\":\"U5 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U5_snRNP #422.1/A,B,C,E\n# U6 snRNP\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"Protein/RNP groups\",\"group\":\"U6 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8XI2_U6_snRNP #422.1/F\n# Named selections for resolved substrate RNA features.\n# 5-prime exon: residues -7--1, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#FF9D00\",\"family\":\"RNA\",\"feature\":\"exon_5\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_5exon #422.1/5:-7--1\n# Intron: residues 1-22;90-101, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"intron\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_intron #422.1/3:1-22,90-101\n# 5-prime splice site: residues 1-6, manual-review-addition, high confidence, validation validated\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"feature\":\"five_prime_splice_site\",\"group\":\"pre-mRNA features\",\"group_key\":\"pre_mRNA_features\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_5SS #422.1/3:1-6\n# Named selections for resolved snRNA functional regions.\n# U2 snRNA Branch-helix region: residues 33-40, paper-curated, high confidence\n# selector_meta {\"color\":\"#0B6E2D\",\"family\":\"RNA\",\"feature\":\"U2_branchpoint_pairing_region\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U2_branchpoint_pairing_region #422.1/H:33-40\n# U5 snRNA Loop I / 5-prime exon contact: residues 40-46, paper-curated, high confidence\n# selector_meta {\"color\":\"#1B3CD0\",\"family\":\"RNA\",\"feature\":\"U5_loop_I\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U5_loop_I #422.1/B:40-46\n# U6 snRNA 5-prime terminal stem-loop: residues 1-12, paper-curated, high confidence\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"RNA\",\"feature\":\"U6_5prime_stem_loop\",\"group\":\"other snRNA regions\",\"group_key\":\"other_snRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_5_stem_loop #422.1/F:1-12\n# U6 snRNA ACAGAGA box: residues 34-40, paper-curated, high confidence\n# selector_meta {\"color\":\"#DC143C\",\"family\":\"RNA\",\"feature\":\"U6_ACAGAGA_box\",\"group\":\"other snRNA regions\",\"group_key\":\"other_snRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_ACAGAGA_box #422.1/F:34-40\n# U6 snRNA Catalytic AGC triad: residues 46-48, paper-curated, high confidence\n# selector_meta {\"color\":\"#C91236\",\"family\":\"RNA\",\"feature\":\"U6_AGC_catalytic_triad\",\"group\":\"catalytic core regions\",\"group_key\":\"catalytic_core_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_AGC_catalytic_triad #422.1/F:46-48\n# U6 snRNA Catalytic U67: residues 67, paper-curated, high confidence\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"RNA\",\"feature\":\"U6_catalytic_U\",\"group\":\"other snRNA regions\",\"group_key\":\"other_snRNA_regions\",\"kind\":\"rna_feature\"}\nname Cstar_8XI2_U6_catalytic_U #422.1/F:67\n# RNA feature nucleotide display.\nselect #422.1 & nucleic\nnucleotides sel atoms\nselect clear\n# 5' exon: residues -7--1\ncolor #422.1/5:-7--1 #FF9D00\nselect #422.1/5:-7--1\nnucleotides sel fill\nselect clear\n# intron: residues 1-22;90-101\n# 5'SS: residues 1-6\n# U2 BP pairing: residues 33-40\ncolor #422.1/H:33-40 #0B6E2D\nselect #422.1/H:33-40\nnucleotides sel fill\nselect clear\n# U5 loop I: residues 40-46\ncolor #422.1/B:40-46 #1B3CD0\nselect #422.1/B:40-46\nnucleotides sel fill\nselect clear\n# 5-prime terminal stem-loop: residues 1-12\ncolor #422.1/F:1-12 #F97316\nselect #422.1/F:1-12\nnucleotides sel fill\nselect clear\n# U6 ACAGAGA: residues 34-40\ncolor #422.1/F:34-40 #DC143C\nselect #422.1/F:34-40\nnucleotides sel fill\nselect clear\n# U6 AGC triad: residues 46-48\ncolor #422.1/F:46-48 #C91236\nselect #422.1/F:46-48\nnucleotides sel fill\nselect clear\n# Catalytic U67: residues 67\ncolor #422.1/F:67 #F97316\nselect #422.1/F:67\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #422.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8xi2_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/8xi2_selection_browser.py\nview\nshow nucleic\n",
+    "9gbz": "# Lightweight ChimeraX script for 9GBZ\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Structure group: #604; target model: #604.1; RNA labels: #604.2.\n\nopen 9gbz id 604.1 name 9GBZ\nopen emdb:51225 id 604.3.1 name U11_snRNP_9gbz_EMD-51225_primary_map\nrename #604 U11_snRNP_9gbz_structure\n\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# C16ORF33\ncolor #604.1/B #A458BB\n# HM1\ncolor #604.1/C #BFA1D9\n# mRNA\ncolor #604.1/G #303030\n# U11 snRNA\ncolor #604.1/R #D46BB8\n# Named selections for subcomplexes using original deposited chain IDs.\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_9GBZ_RNA_substrate #604.1/G\n# U11/U12 snRNP\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GBZ_U11_U12_snRNP #604.1/R\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GBZ_other #604.1/B,C\n# Named selections for resolved snRNA functional regions.\n# U11 snRNA 5' splice-site recognition region: residues 1-7, reference-alignment, high confidence\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"RNA\",\"feature\":\"U11_5prime_5SS_recognition\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname U11_snRNP_9GBZ_U11_5_5SS_recognition #604.1/R:1-7\n# RNA feature nucleotide display.\nselect #604.1 & nucleic\nnucleotides sel atoms\nselect clear\n# U11 5'SS recog.: residues 1-7\ncolor #604.1/R:1-7 #B66AAE\nselect #604.1/R:1-7\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #604.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9gbz_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9gbz_selection_browser.py\nview\nshow nucleic\n",
+    "9gcm": "# Lightweight ChimeraX script for 9GCM\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Structure group: #607; target model: #607.1; RNA labels: #607.2.\n\nopen 9gcm id 607.1 name 9GCM\nopen emdb:51234 id 607.3.1 name U11_snRNP_9gcm_EMD-51234_primary_map\nrename #607 U11_snRNP_9gcm_structure\n\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# U11 snRNA\ncolor #607.1/A #D46BB8\n# C16ORF33\ncolor #607.1/B #A458BB\n# HM1\ncolor #607.1/C #BFA1D9\n# PDCD7\ncolor #607.1/D #CFC7DB\n# Named selections for subcomplexes using original deposited chain IDs.\n# U11/U12 snRNP\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GCM_U11_U12_snRNP #607.1/A\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GCM_other #607.1/B,C,D\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9gcm_selection_browser.py\nview\nshow nucleic\n",
+    "9gc0": "# Lightweight ChimeraX script for 9GC0\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Structure group: #605; target model: #605.1; RNA labels: #605.2.\n\nopen 9gc0 id 605.1 name 9GC0\nopen emdb:51226 id 605.3.1 name U11_snRNP_9gc0_EMD-51226_primary_map\nrename #605 U11_snRNP_9gc0_structure\n\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# ZMAT5\ncolor #605.1/E #67A6C1\n# PDCD7\ncolor #605.1/D #CFC7DB\n# U1-Sm SNRPD1\ncolor #605.1/h #EAD7E8\n# U1-Sm SNRPD3\ncolor #605.1/j #EAD7E8\n# U1-Sm SNRPB\ncolor #605.1/k #EAD7E8\n# U1-Sm SNRPE\ncolor #605.1/l #EAD7E8\n# U1-Sm SNRPF\ncolor #605.1/m #EAD7E8\n# U1-Sm SNRPG\ncolor #605.1/n #EAD7E8\n# U11 snRNA\ncolor #605.1/Q #D46BB8\n# C6ORF151\ncolor #605.1/F #CA7DCA\n# U1-Sm SNRPD2\ncolor #605.1/i #EAD7E8\n# Named selections for subcomplexes using original deposited chain IDs.\n# RNA-binding\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GC0_RNA_binding #605.1/E\n# U1 Sm ring\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GC0_U1_Sm_ring #605.1/h,i,j,k,l,m,n\n# U11/U12 snRNP\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GC0_U11_U12_snRNP #605.1/Q\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GC0_other #605.1/D,F\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9gc0_selection_browser.py\nview\nshow nucleic\n",
+    "9gcl": "# Lightweight ChimeraX script for 9GCL\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Structure group: #606; target model: #606.1; RNA labels: #606.2.\n\nopen 9gcl id 606.1 name 9GCL\nopen emdb:51233 id 606.3.1 name U11_snRNP_9gcl_EMD-51233_primary_map\nrename #606 U11_snRNP_9gcl_structure\n\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# ZMAT5\ncolor #606.1/E #67A6C1\n# U1-Sm SNRPD1\ncolor #606.1/h #EAD7E8\n# U1-Sm SNRPD3\ncolor #606.1/j #EAD7E8\n# U1-Sm SNRPB\ncolor #606.1/k #EAD7E8\n# U1-Sm SNRPE\ncolor #606.1/l #EAD7E8\n# U1-Sm SNRPF\ncolor #606.1/m #EAD7E8\n# U1-Sm SNRPG\ncolor #606.1/n #EAD7E8\n# C6ORF151\ncolor #606.1/F #CA7DCA\n# U1-Sm SNRPD2\ncolor #606.1/i #EAD7E8\n# U11 snRNA\ncolor #606.1/A #D46BB8\n# Named selections for subcomplexes using original deposited chain IDs.\n# RNA-binding\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GCL_RNA_binding #606.1/E\n# U1 Sm ring\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GCL_U1_Sm_ring #606.1/h,i,j,k,l,m,n\n# U11/U12 snRNP\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GCL_U11_U12_snRNP #606.1/A\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GCL_other #606.1/F\n# Named selections for resolved snRNA functional regions.\n# U11 snRNA 5' splice-site recognition region: residues 5-7, reference-alignment, high confidence\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"RNA\",\"feature\":\"U11_5prime_5SS_recognition\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname U11_snRNP_9GCL_U11_5_5SS_recognition #606.1/A:5-7\n# RNA feature nucleotide display.\nselect #606.1 & nucleic\nnucleotides sel atoms\nselect clear\n# U11 5'SS recog.: residues 5-7\ncolor #606.1/A:5-7 #B66AAE\nselect #606.1/A:5-7\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #606.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9gcl_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9gcl_selection_browser.py\nview\nshow nucleic\n",
+    "8r7n": "# Lightweight ChimeraX script for 8R7N\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Structure group: #602; target model: #602.1; RNA labels: #602.2.\n\nopen 8r7n id 602.1 name 8R7N\nopen emdb:18984 id 602.3.1 name U11_snRNP_8r7n_EMD-18984_primary_map\nrename #602 U11_snRNP_8r7n_structure\n\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# U11 snRNA\ncolor #602.1/A #D46BB8\n# C16ORF33\ncolor #602.1/B #A458BB\n# HM1\ncolor #602.1/C #BFA1D9\n# PDCD7\ncolor #602.1/D #CFC7DB\n# ZMAT5\ncolor #602.1/E #67A6C1\n# C6ORF151\ncolor #602.1/F #CA7DCA\n# U1-Sm SNRPD1\ncolor #602.1/h #EAD7E8\n# U1-Sm SNRPD2\ncolor #602.1/i #EAD7E8\n# U1-Sm SNRPD3\ncolor #602.1/j #EAD7E8\n# U1-Sm SNRPB\ncolor #602.1/k #EAD7E8\n# U1-Sm SNRPE\ncolor #602.1/l #EAD7E8\n# U1-Sm SNRPF\ncolor #602.1/m #EAD7E8\n# U1-Sm SNRPG\ncolor #602.1/n #EAD7E8\n# Named selections for subcomplexes using original deposited chain IDs.\n# RNA-binding\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8R7N_RNA_binding #602.1/E\n# U1 Sm ring\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8R7N_U1_Sm_ring #602.1/h,i,j,k,l,m,n\n# U11/U12 snRNP\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8R7N_U11_U12_snRNP #602.1/A\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_8R7N_other #602.1/B,C,D,F\n# Named selections for resolved snRNA functional regions.\n# U11 snRNA 5' splice-site recognition region: residues 5-7, reference-alignment, high confidence\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"RNA\",\"feature\":\"U11_5prime_5SS_recognition\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname U11_snRNP_8R7N_U11_5_5SS_recognition #602.1/A:5-7\n# RNA feature nucleotide display.\nselect #602.1 & nucleic\nnucleotides sel atoms\nselect clear\n# U11 5'SS recog.: residues 5-7\ncolor #602.1/A:5-7 #B66AAE\nselect #602.1/A:5-7\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #602.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/8r7n_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/8r7n_selection_browser.py\nview\nshow nucleic\n",
+    "9gbw": "# Lightweight ChimeraX script for 9GBW\n# Models are downloaded directly by ChimeraX from the PDB.\n# Primary maps, when requested, are downloaded directly from EMDB.\n# Original deposited chain identifiers are used.\n\n# Structure group: #603; target model: #603.1; RNA labels: #603.2.\n\nopen 9gbw id 603.1 name 9GBW\nopen emdb:51223 id 603.3.1 name U11_snRNP_9gbw_EMD-51223_primary_map\nrename #603 U11_snRNP_9gbw_structure\n\n\n# Remove implausibly long deposited covalent bonds before styling.\n# Fetch and run the implausible-bond pruning helper from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/prune_implausible_bonds.py\n\nhide atoms\ncartoon\n# Default display style.\nstyle (protein|nucleic|solvent) & @@draw_mode=0 stick\ncartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20\ncartoon style ~(nucleic|strand) x round\ncartoon style (nucleic|strand) x rect\ncartoon style nucleic x round width 4 thick 4\nlighting shadows false\nlighting simple\ncamera ortho\nlighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1\nlighting soft\n\n# bg and model colors\nset bgColor white\nstyle nucleic stick\ngraphics silhouettes true\ncartoon style arrowScale 1.5\ncolor byhetero\n# Subunit colors from color_code/subunit_color_code.csv.\n# C16ORF33\ncolor #603.1/B #A458BB\n# HM1\ncolor #603.1/C #BFA1D9\n# PDCD7\ncolor #603.1/D #CFC7DB\n# ZMAT5\ncolor #603.1/E #67A6C1\n# mRNA\ncolor #603.1/G #303030\n# U1-Sm SNRPD1\ncolor #603.1/h #EAD7E8\n# U1-Sm SNRPD3\ncolor #603.1/j #EAD7E8\n# U1-Sm SNRPB\ncolor #603.1/k #EAD7E8\n# U1-Sm SNRPE\ncolor #603.1/l #EAD7E8\n# U1-Sm SNRPF\ncolor #603.1/m #EAD7E8\n# U1-Sm SNRPG\ncolor #603.1/n #EAD7E8\n# C6ORF151\ncolor #603.1/F #CA7DCA\n# U1-Sm SNRPD2\ncolor #603.1/i #EAD7E8\n# U11 snRNA\ncolor #603.1/R #D46BB8\n# Named selections for subcomplexes using original deposited chain IDs.\n# RNA-binding\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GBW_RNA_binding #603.1/E\n# RNA/substrate\n# selector_meta {\"color\":\"#303030\",\"family\":\"RNA\",\"group\":\"pre-mRNA features\",\"kind\":\"subcomplex\"}\nname pdb_9GBW_RNA_substrate #603.1/G\n# U1 Sm ring\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GBW_U1_Sm_ring #603.1/h,i,j,k,l,m,n\n# U11/U12 snRNP\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"Protein/RNP groups\",\"group\":\"U1 snRNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GBW_U11_U12_snRNP #603.1/R\n# other\n# selector_meta {\"color\":\"#9CA3AF\",\"family\":\"Protein/RNP groups\",\"group\":\"other protein/RNP groups\",\"kind\":\"subcomplex\"}\nname pdb_9GBW_other #603.1/B,C,D,F\n# Named selections for resolved snRNA functional regions.\n# U11 snRNA 5' splice-site recognition region: residues 1-7, reference-alignment, high confidence\n# selector_meta {\"color\":\"#B66AAE\",\"family\":\"RNA\",\"feature\":\"U11_5prime_5SS_recognition\",\"group\":\"snRNA-pre-mRNA regions\",\"group_key\":\"snRNA_pre_mRNA_regions\",\"kind\":\"rna_feature\"}\nname U11_snRNP_9GBW_U11_5_5SS_recognition #603.1/R:1-7\n# RNA feature nucleotide display.\nselect #603.1 & nucleic\nnucleotides sel atoms\nselect clear\n# U11 5'SS recog.: residues 1-7\ncolor #603.1/R:1-7 #B66AAE\nselect #603.1/R:1-7\nnucleotides sel fill\nselect clear\n# RNA feature 3D residue labels.\n# Labels are created as independent grouped models under #603.2.\n# Fetch and run the self-contained RNA label script from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/label_scripts/9gbw_rna_labels.py\n# Searchable named selection browser.\n# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.\n# Fetch and open the self-contained named selection browser from GitHub.\nopen https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts/selection_browser_scripts/9gbw_selection_browser.py\nview\nshow nucleic\n"
   },
   "protein_lookup": [
     {
@@ -155437,6 +156909,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -155449,6 +156922,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -155673,6 +157149,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -155685,6 +157162,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -155865,6 +157345,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -155877,6 +157358,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -156112,6 +157596,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -156124,6 +157609,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -156359,6 +157847,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -156371,6 +157860,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -156585,6 +158077,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -156597,6 +158090,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -156811,6 +158307,7 @@
         "8r09",
         "8r0a",
         "8r0b",
+        "8r7n",
         "8rc0",
         "8rm5",
         "8ro0",
@@ -156823,6 +158320,9 @@
         "9esh",
         "9esi",
         "9fmd",
+        "9gbw",
+        "9gc0",
+        "9gcl",
         "9if7",
         "9if8",
         "9l5r",
@@ -157245,7 +158745,11 @@
       "color_note": "generated from Class/Family palette; class_family=U11/U12 snRNP; class_source=SpliceosomeDB; seen_in=8y6o",
       "source": "generated_class_family_palette",
       "seen_in_pdb_ids": [
-        "8y6o"
+        "8r7n",
+        "8y6o",
+        "9gbw",
+        "9gbz",
+        "9gcm"
       ],
       "canonical_chain_ids": [
         {
@@ -157287,7 +158791,11 @@
       "color_note": "generated from Class/Family palette; class_family=U11/U12 snRNP; class_source=SpliceosomeDB; seen_in=8y6o",
       "source": "generated_class_family_palette",
       "seen_in_pdb_ids": [
-        "8y6o"
+        "8r7n",
+        "8y6o",
+        "9gbw",
+        "9gc0",
+        "9gcl"
       ],
       "canonical_chain_ids": [
         {
@@ -157330,7 +158838,11 @@
       "color_note": "generated from Class/Family palette; class_family=U11/U12 snRNP; class_source=SpliceosomeDB; seen_in=8y6o",
       "source": "generated_class_family_palette",
       "seen_in_pdb_ids": [
-        "8y6o"
+        "8r7n",
+        "8y6o",
+        "9gbw",
+        "9gbz",
+        "9gcm"
       ],
       "canonical_chain_ids": [
         {
@@ -168807,7 +170319,11 @@
       "color_note": "generated from Class/Family palette; class_family=other rna binding domain containing; class_source=SpliceosomeDB; seen_in=8y6o",
       "source": "generated_class_family_palette",
       "seen_in_pdb_ids": [
-        "8y6o"
+        "8r7n",
+        "8y6o",
+        "9gbw",
+        "9gc0",
+        "9gcl"
       ],
       "canonical_chain_ids": [
         {
@@ -169881,7 +171397,11 @@
       "color_note": "generated from Class/Family palette; class_family=unclassified; class_source=none; seen_in=8y6o",
       "source": "generated_class_family_palette",
       "seen_in_pdb_ids": [
-        "8y6o"
+        "8r7n",
+        "8y6o",
+        "9gbw",
+        "9gc0",
+        "9gcm"
       ],
       "canonical_chain_ids": [
         {

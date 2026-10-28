@@ -1,0 +1,104 @@
+# Lightweight ChimeraX script for 9GCM
+# Models are downloaded directly by ChimeraX from the PDB.
+# Primary maps, when requested, are downloaded directly from EMDB.
+# Deposited chains are renamed in-session to systematic project IDs.
+
+# Structure group: #607; target model: #607.1; RNA labels: #607.2.
+
+# Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
+open 9gcm id 607.1 name 9GCM
+# Rename 9GCM chains to systematic project IDs.
+# Temporary safe-harbor IDs avoid collisions with deposited or target chain IDs.
+changechains #607.1 A,B,C,D TMP001,TMP002,TMP003,TMP004 log false
+changechains #607.1 TMP001,TMP002,TMP003,TMP004 11,XJ,XAK,XAW log false
+open emdb:51234 id 607.3.1 name U11_snRNP_9gcm_EMD-51234_primary_map
+rename #607 U11_snRNP_9gcm_structure
+
+
+# Remove implausibly long deposited covalent bonds before styling.
+# Fetch and run the implausible-bond pruning helper from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic_with_primary_maps/prune_implausible_bonds.py
+
+hide atoms
+cartoon
+# Default display style.
+style (protein|nucleic|solvent) & @@draw_mode=0 stick
+cartoon style modeh def arrows t arrowshelix f arrowscale 3 wid 4 thick 3 sides 12 div 20
+cartoon style ~(nucleic|strand) x round
+cartoon style (nucleic|strand) x rect
+cartoon style nucleic x round width 4 thick 4
+lighting shadows false
+lighting simple
+camera ortho
+lighting soft intensity 0.2 fillIntensity 0.5 ambientIntensity 1
+lighting soft
+
+# bg and model colors
+set bgColor white
+style nucleic stick
+graphics silhouettes true
+cartoon style arrowScale 1.5
+color byhetero
+# Subunit colors from color_code/subunit_color_code.csv.
+# U11/U12 snRNP: U11 snRNA
+color #607.1/11 #D46BB8
+# other: C16ORF33
+color #607.1/XJ #A458BB
+# other: HM1
+color #607.1/XAK #BFA1D9
+# other: PDCD7
+color #607.1/XAW #CFC7DB
+# Named selections for systematic-chain subcomplexes.
+# U11/U12 snRNP
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name pdb_9GCM_U11_U12_snRNP #607.1/11
+# other
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name pdb_9GCM_other #607.1/XAK,XAW,XJ
+
+# Model-independent named selections for all renamed systematic-chain models.
+# RNA-binding
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name spliceosome_RNA_binding /RC
+# RNA/substrate
+# selector_meta {"color":"#303030","family":"RNA","group":"pre-mRNA features","kind":"subcomplex"}
+name spliceosome_RNA_substrate /M
+# Sm ring
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name spliceosome_Sm_ring /SAA,SAB,SAC,SBA,SBB,SBC,SCA,SCB,SCC,SDA,SDB,SDC,SEA,SEB,SEC,SFA,SFB,SFC,SGA,SGB,SGC
+# U1 Sm ring
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name spliceosome_U1_Sm_ring /1S1,1S2,1S3,1SB,1SE,1SF,1SG
+# U11/U12 snRNP
+# selector_meta {"color":"#B66AAE","family":"Protein/RNP groups","group":"U1 snRNP groups","kind":"subcomplex"}
+name spliceosome_U11_U12_snRNP /11
+# U2 snRNP
+# selector_meta {"color":"#2F8B4D","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
+name spliceosome_U2_snRNP /2,2K,2L
+# U2/SF3B
+# selector_meta {"color":"#6DBE70","family":"Protein/RNP groups","group":"U2/SF3B groups","kind":"subcomplex"}
+name spliceosome_U2_SF3B /2A,2B,2C,2D,2E,2F,2G,2H,2I,2J
+# U4 snRNP
+# selector_meta {"color":"#D8C800","family":"Protein/RNP groups","group":"U4 snRNP groups","kind":"subcomplex"}
+name spliceosome_U4_snRNP /4
+# U4/U6 snRNP
+# selector_meta {"color":"#C3BA7A","family":"Protein/RNP groups","group":"U4/U6 groups","kind":"subcomplex"}
+name spliceosome_U4_U6_snRNP /4A,4B,4C,4D,6B
+# U5 snRNP
+# selector_meta {"color":"#0000CD","family":"Protein/RNP groups","group":"U5 snRNP groups","kind":"subcomplex"}
+name spliceosome_U5_snRNP /5,5A,5B,5C,5D,5E,5H
+# U6 LSm
+# selector_meta {"color":"#FECACA","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name spliceosome_U6_LSm /6L2,6L3,6L4,6L5,6L6,6L7,6L8
+# U6 snRNP
+# selector_meta {"color":"#DC143C","family":"Protein/RNP groups","group":"U6 snRNP groups","kind":"subcomplex"}
+name spliceosome_U6_snRNP /6
+# other
+# selector_meta {"color":"#9CA3AF","family":"Protein/RNP groups","group":"other protein/RNP groups","kind":"subcomplex"}
+name spliceosome_other /X4,XAE,XAK,XAW,XBD,XJ,XM
+# Searchable named selection browser.
+# In GUI ChimeraX this opens a small panel for selecting, zooming, and toggling RNA labels.
+# Fetch and open the self-contained named selection browser from GitHub.
+open https://raw.githubusercontent.com/plaschka-lab/SpliceVis/main/scripts_systematic_with_primary_maps/selection_browser_scripts/9gcm_selection_browser.py
+view
+show nucleic
