@@ -17,6 +17,7 @@ open 7evn id 315.1 name 7EVN
 changechains #315.1 A,B,C,D,E TMP001,TMP002,TMP003,TMP004,TMP005 log false
 changechains #315.1 TMP001,TMP002,TMP003,TMP004,TMP005 2C,2E,2A,2G,2Q log false
 open emdb:31330 id 315.3.1 name U2_snRNP_7evn_EMD-31330_primary_map
+volume #315.3.1 color #ffffff80
 rename #315 U2_snRNP_7evn_structure
 
 # Align on SF3B1.

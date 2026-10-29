@@ -9,6 +9,7 @@
 open 8h6l id 343.9 name 8H6L_anchor
 open 5zwn id 343.1 name 5ZWN
 open emdb:6973 id 343.3.1 name pre_B_5zwn_EMD-6973_primary_map
+volume #343.3.1 color #ffffff80
 rename #343 pre_B_5zwn_structure
 
 # No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.

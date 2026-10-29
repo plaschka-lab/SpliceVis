@@ -9,6 +9,7 @@
 open 8h6l id 408.9 name 8H6L_anchor
 open 5yzg id 408.1 name 5YZG
 open emdb:6864 id 408.3.1 name C_5yzg_EMD-6864_primary_map
+volume #408.3.1 color #ffffff80
 rename #408 C_5yzg_structure
 
 # Align on PRPF8.

@@ -7,6 +7,7 @@
 
 open 9gc0 id 605.1 name 9GC0
 open emdb:51226 id 605.3.1 name U11_snRNP_9gc0_EMD-51226_primary_map
+volume #605.3.1 color #ffffff80
 rename #605 U11_snRNP_9gc0_structure
 
 

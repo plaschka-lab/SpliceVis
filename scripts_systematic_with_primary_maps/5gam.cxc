@@ -17,6 +17,7 @@ open 5gam id 338.1 name 5GAM
 changechains #338.1 A,C,U,W,b,d,e,f,g,h,j,x TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012 log false
 changechains #338.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011,TMP012 5A,5C,5,6,5SB,5S3,5SE,5SF,5SG,5S1,5S2,XBW log false
 open emdb:8011 id 338.3.1 name tri_snRNP_5gam_EMD-8011_primary_map
+volume #338.3.1 color #ffffff80
 rename #338 tri_snRNP_5gam_structure
 
 # Align on PRPF8.

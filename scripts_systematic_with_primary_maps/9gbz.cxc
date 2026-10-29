@@ -12,6 +12,7 @@ open 9gbz id 604.1 name 9GBZ
 changechains #604.1 B,C,G,R TMP001,TMP002,TMP003,TMP004 log false
 changechains #604.1 TMP001,TMP002,TMP003,TMP004 XJ,XAK,M,11 log false
 open emdb:51225 id 604.3.1 name U11_snRNP_9gbz_EMD-51225_primary_map
+volume #604.3.1 color #ffffff80
 rename #604 U11_snRNP_9gbz_structure
 
 

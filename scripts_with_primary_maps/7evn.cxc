@@ -9,6 +9,7 @@
 open 8h6l id 315.9 name 8H6L_anchor
 open 7evn id 315.1 name 7EVN
 open emdb:31330 id 315.3.1 name U2_snRNP_7evn_EMD-31330_primary_map
+volume #315.3.1 color #ffffff80
 rename #315 U2_snRNP_7evn_structure
 
 # Align on SF3B1.

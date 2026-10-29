@@ -9,6 +9,7 @@
 open 8h6l id 337.9 name 8H6L_anchor
 open 5gap id 337.1 name 5GAP
 open emdb:8014 id 337.3.1 name tri_snRNP_5gap_EMD-8014_primary_map
+volume #337.3.1 color #ffffff80
 rename #337 tri_snRNP_5gap_structure
 
 # Align on PRPF8.

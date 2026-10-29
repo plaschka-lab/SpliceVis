@@ -9,6 +9,7 @@
 open 8h6l id 312.9 name 8H6L_anchor
 open 7q4o id 312.1 name 7Q4O
 open emdb:13811 id 312.3.1 name U2_snRNP_7q4o_EMD-13811_primary_map
+volume #312.3.1 color #ffffff80
 rename #312 U2_snRNP_7q4o_structure
 
 # Align on SF3B1.

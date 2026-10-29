@@ -9,6 +9,7 @@
 open 8h6l id 442.9 name 8H6L_anchor
 open 9s2f id 442.1 name 9S2F
 open emdb:54494 id 442.3.1 name DIS_9s2f_EMD-54494_primary_map
+volume #442.3.1 color #ffffff80
 rename #442 DIS_9s2f_structure
 
 # Align on PRPF8.

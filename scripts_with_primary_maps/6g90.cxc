@@ -9,6 +9,7 @@
 open 8h6l id 332.9 name 8H6L_anchor
 open 6g90 id 332.1 name 6G90
 open emdb:4364 id 332.3.1 name A_complex_6g90_EMD-4364_primary_map
+volume #332.3.1 color #ffffff80
 rename #332 A_complex_6g90_structure
 
 # Align on SF3B1.

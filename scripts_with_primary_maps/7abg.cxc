@@ -9,6 +9,7 @@
 open 8h6l id 375.9 name 8H6L_anchor
 open 7abg id 375.1 name 7ABG
 open emdb:11695 id 375.3.1 name pre_Bact_7abg_EMD-11695_primary_map
+volume #375.3.1 color #ffffff80
 rename #375 pre_Bact_7abg_structure
 
 # Align on PRPF8.

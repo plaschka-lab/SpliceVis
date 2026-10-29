@@ -9,6 +9,7 @@
 open 8h6l id 346.9 name 8H6L_anchor
 open 8y7e id 346.1 name 8Y7E
 open emdb:39013 id 346.3.1 name pre_B_8y7e_EMD-39013_primary_map
+volume #346.3.1 color #ffffff80
 rename #346 pre_B_8y7e_structure
 
 # Align on SF3B1.

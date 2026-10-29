@@ -9,6 +9,7 @@
 open 8h6l id 326.9 name 8H6L_anchor
 open 9zed id 326.1 name 9ZED
 open emdb:74100 id 326.3.1 name U2_snRNP_9zed_EMD-74100_primary_map
+volume #326.3.1 color #ffffff80
 rename #326 U2_snRNP_9zed_structure
 
 # Align on SF3B1.

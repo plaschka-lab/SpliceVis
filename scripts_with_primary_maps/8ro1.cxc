@@ -9,6 +9,7 @@
 open 8h6l id 438.9 name 8H6L_anchor
 open 8ro1 id 438.1 name 8RO1
 open emdb:19398 id 438.3.1 name ILS_8ro1_EMD-19398_primary_map
+volume #438.3.1 color #ffffff80
 rename #438 ILS_8ro1_structure
 
 # Align on PRPF8.

@@ -9,6 +9,7 @@
 open 8h6l id 340.9 name 8H6L_anchor
 open 3jcr id 340.1 name 3JCR
 open emdb:6581 id 340.3.1 name tri_snRNP_3jcr_EMD-6581_primary_map
+volume #340.3.1 color #ffffff80
 rename #340 tri_snRNP_3jcr_structure
 
 # Align on PRPF8.

@@ -17,6 +17,7 @@ open 5zya id 305.1 name 5ZYA
 changechains #305.1 A,B,C,D TMP001,TMP002,TMP003,TMP004 log false
 changechains #305.1 TMP001,TMP002,TMP003,TMP004 2C,2E,2A,2G log false
 open emdb:6915 id 305.3.1 name U2_snRNP_5zya_EMD-6915_primary_map
+volume #305.3.1 color #ffffff80
 rename #305 U2_snRNP_5zya_structure
 
 # Align on SF3B1.

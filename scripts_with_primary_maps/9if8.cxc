@@ -9,6 +9,7 @@
 open 8h6l id 431.9 name 8H6L_anchor
 open 9if8 id 431.1 name 9IF8
 open emdb:52844 id 431.3.1 name P_9if8_EMD-52844_primary_map
+volume #431.3.1 color #ffffff80
 rename #431 P_9if8_structure
 
 # Align on PRPF8.

@@ -9,6 +9,7 @@
 open 8h6l id 398.9 name 8H6L_anchor
 open 6j6n id 398.1 name 6J6N
 open emdb:0691 id 398.3.1 name Bstar_6j6n_EMD-0691_primary_map
+volume #398.3.1 color #ffffff80
 rename #398 Bstar_6j6n_structure
 
 # Align on PRPF8.

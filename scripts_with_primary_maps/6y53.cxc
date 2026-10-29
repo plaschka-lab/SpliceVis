@@ -9,6 +9,7 @@
 open 8h6l id 306.9 name 8H6L_anchor
 open 6y53 id 306.1 name 6Y53
 open emdb:10689 id 306.3.1 name U2_snRNP_6y53_EMD-10689_primary_map
+volume #306.3.1 color #ffffff80
 rename #306 U2_snRNP_6y53_structure
 
 # Align on SF3B1.

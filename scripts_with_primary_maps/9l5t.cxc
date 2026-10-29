@@ -9,6 +9,7 @@
 open 8h6l id 403.9 name 8H6L_anchor
 open 9l5t id 403.1 name 9L5T
 open emdb:62843 id 403.3.1 name BstarD_9l5t_EMD-62843_primary_map
+volume #403.3.1 color #ffffff80
 rename #403 BstarD_9l5t_structure
 
 # Align on PRPF8.

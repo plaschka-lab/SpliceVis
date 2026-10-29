@@ -9,6 +9,7 @@
 open 8h6l id 378.9 name 8H6L_anchor
 open 9r3d id 378.1 name 9R3D
 open emdb:53554 id 378.3.1 name pre_Bact_9r3d_EMD-53554_primary_map
+volume #378.3.1 color #ffffff80
 rename #378 pre_Bact_9r3d_structure
 
 # Align on PRPF8.

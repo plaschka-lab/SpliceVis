@@ -8,6 +8,7 @@
 
 open 8h6l id 370.1 name 8H6L
 open emdb:34508 id 370.3.1 name B_8h6l_EMD-34508_primary_map
+volume #370.3.1 color #ffffff80
 rename #370 B_8h6l_structure
 
 # Remove implausibly long deposited covalent bonds before styling.

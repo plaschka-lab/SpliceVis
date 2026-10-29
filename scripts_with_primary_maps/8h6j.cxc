@@ -9,6 +9,7 @@
 open 8h6l id 349.9 name 8H6L_anchor
 open 8h6j id 349.1 name 8H6J
 open emdb:34505 id 349.3.1 name pre_B_8h6j_EMD-34505_primary_map
+volume #349.3.1 color #ffffff80
 rename #349 pre_B_8h6j_structure
 
 # Align on PRPF8.

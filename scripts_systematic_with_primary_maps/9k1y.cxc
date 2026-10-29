@@ -17,6 +17,7 @@ open 9k1y id 321.1 name 9K1Y
 changechains #321.1 A,B,C,D,G,H TMP001,TMP002,TMP003,TMP004,TMP005,TMP006 log false
 changechains #321.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006 2C,2E,2A,2G,I,2 log false
 open emdb:61984 id 321.3.1 name U2_snRNP_9k1y_EMD-61984_primary_map
+volume #321.3.1 color #ffffff80
 rename #321 U2_snRNP_9k1y_structure
 
 # Align on SF3B1.

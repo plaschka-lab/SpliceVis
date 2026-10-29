@@ -9,6 +9,7 @@
 open 8h6l id 450.9 name 8H6L_anchor
 open 8q7x id 450.1 name 8Q7X
 open emdb:18237 id 450.3.1 name U5_recycling_8q7x_EMD-18237_primary_map
+volume #450.3.1 color #ffffff80
 rename #450 U5_recycling_8q7x_structure
 
 # Align on PRPF8.

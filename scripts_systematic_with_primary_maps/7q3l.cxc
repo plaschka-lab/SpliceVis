@@ -17,6 +17,7 @@ open 7q3l id 311.1 name 7Q3L
 changechains #311.1 2,9,A,B,C,E,G,p,q TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 log false
 changechains #311.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 2,2J,2A,2B,2C,2E,2G,2M,2N log false
 open emdb:13793 id 311.3.1 name U2_snRNP_7q3l_EMD-13793_primary_map
+volume #311.3.1 color #ffffff80
 rename #311 U2_snRNP_7q3l_structure
 
 # Align on SF3B1.

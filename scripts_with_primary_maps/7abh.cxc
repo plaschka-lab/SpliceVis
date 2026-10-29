@@ -9,6 +9,7 @@
 open 8h6l id 374.9 name 8H6L_anchor
 open 7abh id 374.1 name 7ABH
 open emdb:11696 id 374.3.1 name pre_Bact_7abh_EMD-11696_primary_map
+volume #374.3.1 color #ffffff80
 rename #374 pre_Bact_7abh_structure
 
 # Align on SF3B1.

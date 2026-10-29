@@ -9,6 +9,7 @@
 open 8h6l id 421.9 name 8H6L_anchor
 open 8c6j id 421.1 name 8C6J
 open emdb:16452 id 421.3.1 name Cstar_8c6j_EMD-16452_primary_map
+volume #421.3.1 color #ffffff80
 rename #421 Cstar_8c6j_structure
 
 # Align on PRPF8.

@@ -9,6 +9,7 @@
 open 8h6l id 417.9 name 8H6L_anchor
 open 5xjc id 417.1 name 5XJC
 open emdb:6721 id 417.3.1 name Cstar_5xjc_EMD-6721_primary_map
+volume #417.3.1 color #ffffff80
 rename #417 Cstar_5xjc_structure
 
 # Align on PRPF8.

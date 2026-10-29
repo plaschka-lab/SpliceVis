@@ -9,6 +9,7 @@
 open 8h6l id 409.9 name 8H6L_anchor
 open 6zym id 409.1 name 6ZYM
 open emdb:11569 id 409.3.1 name C_6zym_EMD-11569_primary_map
+volume #409.3.1 color #ffffff80
 rename #409 C_6zym_structure
 
 # Align on PRPF8.

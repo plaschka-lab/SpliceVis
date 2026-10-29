@@ -9,6 +9,7 @@
 open 8h6l id 379.9 name 8H6L_anchor
 open 9r8v id 379.1 name 9R8V
 open emdb:53843 id 379.3.1 name pre_Bact_9r8v_EMD-53843_primary_map
+volume #379.3.1 color #ffffff80
 rename #379 pre_Bact_9r8v_structure
 
 # Align on SF3B1.

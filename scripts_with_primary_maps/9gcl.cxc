@@ -7,6 +7,7 @@
 
 open 9gcl id 606.1 name 9GCL
 open emdb:51233 id 606.3.1 name U11_snRNP_9gcl_EMD-51233_primary_map
+volume #606.3.1 color #ffffff80
 rename #606 U11_snRNP_9gcl_structure
 
 

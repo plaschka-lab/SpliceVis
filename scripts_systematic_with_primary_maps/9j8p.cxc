@@ -17,6 +17,7 @@ open 9j8p id 329.1 name 9J8P
 changechains #329.1 A,B TMP001,TMP002 log false
 changechains #329.1 TMP001,TMP002 XBK,6 log false
 open emdb:61237 id 329.3.1 name U6_snRNA_biogenesis_9j8p_EMD-61237_primary_map
+volume #329.3.1 color #ffffff80
 rename #329 U6_snRNA_biogenesis_9j8p_structure
 
 # No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.

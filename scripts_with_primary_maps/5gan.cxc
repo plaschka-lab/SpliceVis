@@ -9,6 +9,7 @@
 open 8h6l id 335.9 name 8H6L_anchor
 open 5gan id 335.1 name 5GAN
 open emdb:8012 id 335.3.1 name tri_snRNP_5gan_EMD-8012_primary_map
+volume #335.3.1 color #ffffff80
 rename #335 tri_snRNP_5gan_structure
 
 # Align on PRPF8.

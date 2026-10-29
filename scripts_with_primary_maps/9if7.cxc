@@ -9,6 +9,7 @@
 open 8h6l id 423.9 name 8H6L_anchor
 open 9if7 id 423.1 name 9IF7
 open emdb:52843 id 423.3.1 name Cstar_9if7_EMD-52843_primary_map
+volume #423.3.1 color #ffffff80
 rename #423 Cstar_9if7_structure
 
 # Align on PRPF8.

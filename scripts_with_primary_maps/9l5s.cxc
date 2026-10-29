@@ -9,6 +9,7 @@
 open 8h6l id 402.9 name 8H6L_anchor
 open 9l5s id 402.1 name 9L5S
 open emdb:62842 id 402.3.1 name BstarD_9l5s_EMD-62842_primary_map
+volume #402.3.1 color #ffffff80
 rename #402 BstarD_9l5s_structure
 
 # Align on PRPF8.

@@ -9,6 +9,7 @@
 open 8h6l id 428.9 name 8H6L_anchor
 open 6icz id 428.1 name 6ICZ
 open emdb:9645 id 428.3.1 name P_6icz_EMD-9645_primary_map
+volume #428.3.1 color #ffffff80
 rename #428 P_6icz_structure
 
 # Align on PRPF8.

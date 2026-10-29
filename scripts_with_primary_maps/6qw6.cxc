@@ -9,6 +9,7 @@
 open 8h6l id 341.9 name 8H6L_anchor
 open 6qw6 id 341.1 name 6QW6
 open emdb:4658 id 341.3.1 name tri_snRNP_6qw6_EMD-4658_primary_map
+volume #341.3.1 color #ffffff80
 rename #341 tri_snRNP_6qw6_structure
 
 # Align on PRPF8.

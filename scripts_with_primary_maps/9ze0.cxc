@@ -9,6 +9,7 @@
 open 8h6l id 322.9 name 8H6L_anchor
 open 9ze0 id 322.1 name 9ZE0
 open emdb:74082 id 322.3.1 name U2_snRNP_9ze0_EMD-74082_primary_map
+volume #322.3.1 color #ffffff80
 rename #322 U2_snRNP_9ze0_structure
 
 # Align on SF3B1.

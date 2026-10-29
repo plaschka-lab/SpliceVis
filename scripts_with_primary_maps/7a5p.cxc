@@ -9,6 +9,7 @@
 open 8h6l id 410.9 name 8H6L_anchor
 open 7a5p id 410.1 name 7A5P
 open emdb:11570 id 410.3.1 name C_7a5p_EMD-11570_primary_map
+volume #410.3.1 color #ffffff80
 rename #410 C_7a5p_structure
 
 # Align on PRPF8.

@@ -9,6 +9,7 @@
 open 8h6l id 338.9 name 8H6L_anchor
 open 5gam id 338.1 name 5GAM
 open emdb:8011 id 338.3.1 name tri_snRNP_5gam_EMD-8011_primary_map
+volume #338.3.1 color #ffffff80
 rename #338 tri_snRNP_5gam_structure
 
 # Align on PRPF8.

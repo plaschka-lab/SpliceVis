@@ -9,6 +9,7 @@
 open 8h6l id 414.9 name 8H6L_anchor
 open 5mq0 id 414.1 name 5MQ0
 open emdb:3541 id 414.3.1 name Cstar_5mq0_EMD-3541_primary_map
+volume #414.3.1 color #ffffff80
 rename #414 Cstar_5mq0_structure
 
 # Align on PRPF8.

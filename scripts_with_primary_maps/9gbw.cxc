@@ -7,6 +7,7 @@
 
 open 9gbw id 603.1 name 9GBW
 open emdb:51223 id 603.3.1 name U11_snRNP_9gbw_EMD-51223_primary_map
+volume #603.3.1 color #ffffff80
 rename #603 U11_snRNP_9gbw_structure
 
 

@@ -12,6 +12,7 @@ open 9gcl id 606.1 name 9GCL
 changechains #606.1 A,E,F,h,i,j,k,l,m,n TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010 log false
 changechains #606.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010 11,RC,XM,1S1,1S2,1S3,1SB,1SE,1SF,1SG log false
 open emdb:51233 id 606.3.1 name U11_snRNP_9gcl_EMD-51233_primary_map
+volume #606.3.1 color #ffffff80
 rename #606 U11_snRNP_9gcl_structure
 
 

@@ -9,6 +9,7 @@
 open 8h6l id 386.9 name 8H6L_anchor
 open 6ff7 id 386.1 name 6FF7
 open emdb:4240 id 386.3.1 name Bact_6ff7_EMD-4240_primary_map
+volume #386.3.1 color #ffffff80
 rename #386 Bact_6ff7_structure
 
 # Align on PRPF8.

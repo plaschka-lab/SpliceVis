@@ -17,6 +17,7 @@ open 7os2 id 444.1 name 7OS2
 changechains #444.1 B,C,J TMP001,TMP002,TMP003 log false
 changechains #444.1 TMP001,TMP002,TMP003 5B,XO,5A log false
 open emdb:13046 id 444.3.1 name U5_recycling_7os2_EMD-13046_primary_map
+volume #444.3.1 color #ffffff80
 rename #444 U5_recycling_7os2_structure
 
 # Align on PRPF8.

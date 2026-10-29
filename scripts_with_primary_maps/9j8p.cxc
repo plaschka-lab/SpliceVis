@@ -9,6 +9,7 @@
 open 8h6l id 329.9 name 8H6L_anchor
 open 9j8p id 329.1 name 9J8P
 open emdb:61237 id 329.3.1 name U6_snRNA_biogenesis_9j8p_EMD-61237_primary_map
+volume #329.3.1 color #ffffff80
 rename #329 U6_snRNA_biogenesis_9j8p_structure
 
 # No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.

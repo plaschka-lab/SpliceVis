@@ -9,6 +9,7 @@
 open 8h6l id 406.9 name 8H6L_anchor
 open 5gmk id 406.1 name 5GMK
 open emdb:9525 id 406.3.1 name C_5gmk_EMD-9525_primary_map
+volume #406.3.1 color #ffffff80
 rename #406 C_5gmk_structure
 
 # Align on PRPF8.

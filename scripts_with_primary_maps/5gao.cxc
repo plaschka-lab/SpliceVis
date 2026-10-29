@@ -9,6 +9,7 @@
 open 8h6l id 336.9 name 8H6L_anchor
 open 5gao id 336.1 name 5GAO
 open emdb:8013 id 336.3.1 name tri_snRNP_5gao_EMD-8013_primary_map
+volume #336.3.1 color #ffffff80
 rename #336 tri_snRNP_5gao_structure
 
 # Align on PRPF8.

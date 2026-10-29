@@ -9,6 +9,7 @@
 open 8h6l id 418.9 name 8H6L_anchor
 open 7w59 id 418.1 name 7W59
 open emdb:32317 id 418.3.1 name Cstar_7w59_EMD-32317_primary_map
+volume #418.3.1 color #ffffff80
 rename #418 Cstar_7w59_structure
 
 # Align on PRPF8.

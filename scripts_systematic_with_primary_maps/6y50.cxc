@@ -17,6 +17,7 @@ open 6y50 id 308.1 name 6Y50
 changechains #308.1 2,8,9,p,q,u,v,x,y TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 log false
 changechains #308.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009 2,2B,2J,2M,2N,2A,2C,2E,2G log false
 open emdb:10688 id 308.3.1 name U2_snRNP_6y50_EMD-10688_primary_map
+volume #308.3.1 color #ffffff80
 rename #308 U2_snRNP_6y50_structure
 
 # Align on SF3B1.

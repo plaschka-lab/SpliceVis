@@ -7,6 +7,7 @@
 
 open 8r7n id 602.1 name 8R7N
 open emdb:18984 id 602.3.1 name U11_snRNP_8r7n_EMD-18984_primary_map
+volume #602.3.1 color #ffffff80
 rename #602 U11_snRNP_8r7n_structure
 
 

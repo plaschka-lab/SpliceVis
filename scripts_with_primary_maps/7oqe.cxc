@@ -9,6 +9,7 @@
 open 8h6l id 333.9 name 8H6L_anchor
 open 7oqe id 333.1 name 7OQE
 open emdb:13033 id 333.3.1 name A_complex_7oqe_EMD-13033_primary_map
+volume #333.3.1 color #ffffff80
 rename #333 A_complex_7oqe_structure
 
 # Align on SF3B1.

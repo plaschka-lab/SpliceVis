@@ -9,6 +9,7 @@
 open 8h6l id 351.9 name 8H6L_anchor
 open 8qp8 id 351.1 name 8QP8
 open emdb:18544 id 351.3.1 name pre_B_8qp8_EMD-18544_primary_map
+volume #351.3.1 color #ffffff80
 rename #351 pre_B_8qp8_structure
 
 # Align on PRPF8.

@@ -12,6 +12,7 @@ open 9gcm id 607.1 name 9GCM
 changechains #607.1 A,B,C,D TMP001,TMP002,TMP003,TMP004 log false
 changechains #607.1 TMP001,TMP002,TMP003,TMP004 11,XJ,XAK,XAW log false
 open emdb:51234 id 607.3.1 name U11_snRNP_9gcm_EMD-51234_primary_map
+volume #607.3.1 color #ffffff80
 rename #607 U11_snRNP_9gcm_structure
 
 

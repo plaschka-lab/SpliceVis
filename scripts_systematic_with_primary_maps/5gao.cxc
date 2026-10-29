@@ -17,6 +17,7 @@ open 5gao id 336.1 name 5GAO
 changechains #336.1 A,B,E,V,k,l,m,n,p,q,r TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011 log false
 changechains #336.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008,TMP009,TMP010,TMP011 5A,5B,5H,4,SA,SB,SC,SD,SE,SF,SG log false
 open emdb:8013 id 336.3.1 name tri_snRNP_5gao_EMD-8013_primary_map
+volume #336.3.1 color #ffffff80
 rename #336 tri_snRNP_5gao_structure
 
 # Align on PRPF8.

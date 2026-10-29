@@ -17,6 +17,7 @@ open 7q4p id 313.1 name 7Q4P
 changechains #313.1 1,2,9,A,B,C,E,G TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008 log false
 changechains #313.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006,TMP007,TMP008 2I,2,2J,2A,2B,2C,2E,2G log false
 open emdb:13812 id 313.3.1 name U2_snRNP_7q4p_EMD-13812_primary_map
+volume #313.3.1 color #ffffff80
 rename #313 U2_snRNP_7q4p_structure
 
 # Align on SF3B1.

@@ -9,6 +9,7 @@
 open 8h6l id 415.9 name 8H6L_anchor
 open 5wsg id 415.1 name 5WSG
 open emdb:6684 id 415.3.1 name Cstar_5wsg_EMD-6684_primary_map
+volume #415.3.1 color #ffffff80
 rename #415 Cstar_5wsg_structure
 
 # Align on PRPF8.

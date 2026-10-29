@@ -9,6 +9,7 @@
 open 8h6l id 425.9 name 8H6L_anchor
 open 6bk8 id 425.1 name 6BK8
 open emdb:7109 id 425.3.1 name P_6bk8_EMD-7109_primary_map
+volume #425.3.1 color #ffffff80
 rename #425 P_6bk8_structure
 
 # Align on PRPF8.

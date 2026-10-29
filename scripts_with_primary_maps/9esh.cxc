@@ -9,6 +9,7 @@
 open 8h6l id 400.9 name 8H6L_anchor
 open 9esh id 400.1 name 9ESH
 open emdb:19941 id 400.3.1 name BstarD_9esh_EMD-19941_primary_map
+volume #400.3.1 color #ffffff80
 rename #400 BstarD_9esh_structure
 
 # Align on PRPF8.

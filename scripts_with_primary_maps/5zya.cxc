@@ -9,6 +9,7 @@
 open 8h6l id 305.9 name 8H6L_anchor
 open 5zya id 305.1 name 5ZYA
 open emdb:6915 id 305.3.1 name U2_snRNP_5zya_EMD-6915_primary_map
+volume #305.3.1 color #ffffff80
 rename #305 U2_snRNP_5zya_structure
 
 # Align on SF3B1.

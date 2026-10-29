@@ -9,6 +9,7 @@
 open 8h6l id 433.9 name 8H6L_anchor
 open 3jb9 id 433.1 name 3JB9
 open emdb:6413 id 433.3.1 name ILS_3jb9_EMD-6413_primary_map
+volume #433.3.1 color #ffffff80
 rename #433 ILS_3jb9_structure
 
 # Align on PRPF8.

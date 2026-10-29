@@ -9,6 +9,7 @@
 open 8h6l id 334.9 name 8H6L_anchor
 open 7vpx id 334.1 name 7VPX
 open emdb:32074 id 334.3.1 name A_complex_7vpx_EMD-32074_primary_map
+volume #334.3.1 color #ffffff80
 rename #334 A_complex_7vpx_structure
 
 # Align on SF3B1.

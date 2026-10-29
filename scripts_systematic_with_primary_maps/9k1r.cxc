@@ -17,6 +17,7 @@ open 9k1r id 319.1 name 9K1R
 changechains #319.1 A,B,C,D,G,H TMP001,TMP002,TMP003,TMP004,TMP005,TMP006 log false
 changechains #319.1 TMP001,TMP002,TMP003,TMP004,TMP005,TMP006 2C,2E,2A,2G,I,2 log false
 open emdb:61980 id 319.3.1 name U2_snRNP_9k1r_EMD-61980_primary_map
+volume #319.3.1 color #ffffff80
 rename #319 U2_snRNP_9k1r_structure
 
 # Align on SF3B1.

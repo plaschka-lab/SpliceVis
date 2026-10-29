@@ -9,6 +9,7 @@
 open 8h6l id 407.9 name 8H6L_anchor
 open 5lj5 id 407.1 name 5LJ5
 open emdb:4057 id 407.3.1 name C_5lj5_EMD-4057_primary_map
+volume #407.3.1 color #ffffff80
 rename #407 C_5lj5_structure
 
 # Align on PRPF8.

@@ -9,6 +9,7 @@
 open 8h6l id 330.9 name 8H6L_anchor
 open 6n7p id 330.1 name 6N7P
 open emdb:0360 id 330.3.1 name E_complex_6n7p_EMD-0360_primary_map
+volume #330.3.1 color #ffffff80
 rename #330 E_complex_6n7p_structure
 
 # No PRPF8 or SF3B1 chain was detected; anchor is closed without alignment.
