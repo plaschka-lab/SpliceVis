@@ -1799,7 +1799,7 @@ ${await scriptFor(record,"no_maps")}
       document.getElementById('comparisonOnlyProtein').checked=false;
       try{
         if(!comparison3d.manifest){
-          const response=await fetch('data/comparison-alignments.json',{signal:abort.signal});
+          const response=await fetch('data/comparison-alignments.json?v=2',{signal:abort.signal,cache:'no-cache'});
           if(!response.ok) throw new Error('Alignment evidence is unavailable in this release. Use the tables or ChimeraX scripts below.');
           comparison3d.manifest=await response.json();
         }

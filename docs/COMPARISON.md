@@ -26,7 +26,11 @@ Fits use sequence-aligned, modelled Cα atoms from a unique PRPF8 anchor, with S
 as a fallback. They do not use author residue numbers as homology evidence. The
 current acceptance criteria require at least 100 matched atoms, 35% sequence
 identity, 60% sequence coverage, 25% modelled coverage, 60% retained fit positions,
-core RMSD at most 3 Å and all-matched RMSD at most 12 Å. Reported fit/core counts,
+core RMSD at most 3 Å and all-matched RMSD at most 12 Å. If the initial monotone-trimmed fit is rejected, refinement retries and re-evaluates
+all matched residues so positions displaced by the initial fit can rejoin the core.
+The 60% retained fraction is checked after convergence, not during intermediate
+fits in this retry. Retry refinement stops after at most 30 iterations; non-convergent fits are rejected.
+Reported fit/core counts,
 identity and both RMSDs make trimmed fits visible. The fitted anchor does not imply
 that every other protein or domain shares the same conformation.
 
