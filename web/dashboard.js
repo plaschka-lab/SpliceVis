@@ -1434,20 +1434,23 @@ ${await scriptFor(record,"no_maps")}
       clearMolstarLegendActive();
       document.querySelectorAll(".molstar-feature-button").forEach(item=>item.classList.remove("active"));
       if(status) status.textContent=`Focused ${payload.label||`${r.pdb_id.toUpperCase()} chain ${payload.chain}`}.`;
+      return true;
     }
     window.addEventListener("message",event=>{
       const payload=event.data;
-      const frame=[document.getElementById("rnaAlignmentFrame"),document.getElementById("snrnaAlignmentFrame")].find(item=>item && event.source===item.contentWindow);
+      const frame=[document.getElementById("rnaAlignmentFrame"),document.getElementById("snrnaAlignmentFrame"),document.querySelector(".rna-2d-viewer")].find(item=>item && event.source===item.contentWindow);
       if(!frame || event.origin !== location.origin) return;
-      if(payload?.source==="splicevis-rna-alignment-resize"){
+      if(payload?.source==="splicevis-rna-alignment-resize" && !frame.classList.contains("rna-2d-viewer")){
         if(frame&&event.source===frame.contentWindow){
           const height=Math.max(150,Math.min(460,Number(payload.height)||300));
           frame.style.height=`${Math.ceil(height)}px`;
         }
         return;
       }
-      if(!payload||payload.source!=="splicevis-rna-alignment") return;
-      focusMolstarAlignmentSelection(payload).catch(error=>{
+      if(!payload||!["splicevis-rna-alignment","splicevis-rna-secondary"].includes(payload.source)) return;
+      focusMolstarAlignmentSelection(payload).then(ok=>{
+        if(payload.source==="splicevis-rna-secondary")frame.contentWindow.postMessage({source:"splicevis-rna-secondary-result",pdb_id:payload.pdb_id,message:ok?`Focused ${payload.label} in 3D (${payload.auth_residues.length} modelled residues).`:"Could not focus this selection. Open the 3D viewer and try again."},location.origin);
+      }).catch(error=>{
         const status=document.getElementById("molstarStatus");
         if(status) status.textContent=`Mol* alignment selection failed: ${error.message}`;
       });
@@ -1616,7 +1619,7 @@ ${await scriptFor(record,"no_maps")}
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
       const resourceBlock = `<nav class="structure-links" aria-label="Structure links">${externalLinks(r,true)}</nav>`;
       const substrateBadges=unique((r.substrate_types||[]).map(item=>item.family||item.type)).filter(value=>value!=="Other/unspecified substrate").slice(0,2).map(value=>annotationBadge(value, "", "The RNA used in the experiment, or its sequence family. Find the sequence and supporting information under RNA Annotations.")).join("");
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta">${annotationBadge(r.state, "", `Where this structure belongs in the splicing pathway. See the cycle overview for what happens at this stage.`)}${minorSpliceosomeBadge(r)}${transSpliceosomeBadge(r)}${annotationBadge(r.species, "", "The organism this structure comes from. The RNA used in the experiment may have a different source.")}${annotationBadge(`${formatResolution(r.resolution)||"?"} A`, "", "How much detail the experiment reveals, in angstroms. Smaller values usually mean finer detail; ? means unavailable.")}${annotationBadge(r.year||"n/a", "", "The year listed for this structure.")}${annotationBadge(`${r.chain_count||0} chains`, "", "Number of protein and RNA chains in the deposited structure. Several chains can be copies of the same molecule.")}${substrateBadges}${curationBadges(r)}</div>${resourceBlock}${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Curation, Quality, and Audits", externalLinks(r) + reportIssueLink(r) + curationPanel(r) + proteinEvidencePanel(r) + unassignedPanel(r.unassigned_components||[]) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}`;
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta">${annotationBadge(r.state, "", `Where this structure belongs in the splicing pathway. See the cycle overview for what happens at this stage.`)}${minorSpliceosomeBadge(r)}${transSpliceosomeBadge(r)}${annotationBadge(r.species, "", "The organism this structure comes from. The RNA used in the experiment may have a different source.")}${annotationBadge(`${formatResolution(r.resolution)||"?"} A`, "", "How much detail the experiment reveals, in angstroms. Smaller values usually mean finer detail; ? means unavailable.")}${annotationBadge(r.year||"n/a", "", "The year listed for this structure.")}${annotationBadge(`${r.chain_count||0} chains`, "", "Number of protein and RNA chains in the deposited structure. Several chains can be copies of the same molecule.")}${substrateBadges}${curationBadges(r)}</div>${resourceBlock}${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Curation, Quality, and Audits", externalLinks(r) + reportIssueLink(r) + curationPanel(r) + proteinEvidencePanel(r) + unassignedPanel(r.unassigned_components||[]) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{},r.pdb_id) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}`;
       renderMolstarFeatureButtons();
     }
     function detailSection(title, body, open=false){
@@ -1645,10 +1648,10 @@ ${await scriptFor(record,"no_maps")}
       if(!items.length) return `<h3>Unassigned Components</h3><div class="subtle">No unresolved components in the generated audit.</div>`;
       return `<h3>Unassigned Components (${items.length})</h3><div class="mini-list">${items.map(i=>`<div><strong>${esc(i.gene_name||i.molecule_name)}</strong> <span class="subtle">${esc(i.chains)} · ${esc(i.issue)}</span></div>`).join("")}</div>`;
     }
-    function rna2dPanel(item){
+    function rna2dPanel(item,pdbId){
       if(!item || (!item.png && !item.svg)) return "";
       const links = item.png ? [`<a href="${attr(item.png)}">PNG</a>`] : [];
-      const interactiveUrl=item.svg?`web/rna-viewer.html?svg=${encodeURIComponent("../"+item.svg)}`:"";
+      const interactiveUrl=item.svg?`web/rna-viewer.html?svg=${encodeURIComponent("../"+item.svg)}&pdb=${encodeURIComponent(pdbId)}`:"";
       if(interactiveUrl) links.unshift(`<a href="${attr(interactiveUrl)}" target="_blank" rel="noopener">Open interactive viewer ↗</a>`);
       if(item.svg) links.push(`<a href="${attr(item.svg)}">SVG</a>`);
       const counts = [item.rna_chain_count ? `${item.rna_chain_count} RNA chains` : "", item.r2dt_chain_count ? `${item.r2dt_chain_count} R2DT layouts` : "", item.failed_chain_count && item.failed_chain_count !== "0" ? `${item.failed_chain_count} failed` : ""].filter(Boolean).join("; ");

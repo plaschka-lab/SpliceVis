@@ -19,3 +19,15 @@ test('dense RNA tracks use smaller glyphs and feature dots while sparse layouts 
  assert.deepEqual(nucleotideSize([{x:0,y:0},{x:40,y:0}]),{font:12,radius:9.2});
  assert.deepEqual(nucleotideSize([]),{font:12,radius:7});
 });
+const {baseTarget,featureResidues}=require(path.join(__dirname,root,'web/rna-viewer.js'));
+test('RNA clicks use deposited numbering, rejecting missing or ambiguous author IDs',()=>{
+ assert.deepEqual(baseTarget('/G seq 59 auth 1'),{chain:'G',seq:59,auth:1});
+ assert.deepEqual(baseTarget('/G seq 1 auth -12'),{chain:'G',seq:1,auth:-12});
+ for(const text of ['/G seq 59','/G seq 59 auth 1A','/G seq 59 auth ?'])assert.equal(baseTarget(text),null);
+});
+test('feature clicks map exact sequence ranges through modelled bases, never through label numbers',()=>{
+ const bases=[baseTarget('/G seq 59 auth 1'),baseTarget('/G seq 60 auth 2'),baseTarget('/H seq 60 auth 60'),baseTarget('/G seq 61'),baseTarget('/G seq 62 auth 5')];
+ assert.deepEqual(featureResidues(bases,'G',[[59,62]]),[1,2,5]);
+ assert.deepEqual(featureResidues(bases,'G',[[60,60]]),[2]);
+ assert.deepEqual(featureResidues(bases,'G',[[1,6]]),[]);
+});
