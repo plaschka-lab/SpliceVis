@@ -75,7 +75,7 @@
   }
   function setDepthCue(instance, enabled){
     const plugin=ready(instance);
-    plugin.canvas3d.setProps({cameraFog:enabled ? {name:'on',params:{intensity:20}} : {name:'off',params:{}}});
+    plugin.canvas3d.setProps({cameraFog:enabled ? {name:'on',params:{intensity:60}} : {name:'off',params:{}}});
   }
 
   return Object.freeze({select,clear,hide,showOnly,showAll,setDepthCue});

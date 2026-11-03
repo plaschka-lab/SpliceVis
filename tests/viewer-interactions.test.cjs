@@ -67,5 +67,5 @@ test('clear removes persistent and hover markers and resets view without changin
 
 test('depth cue is independent of clipping, palette and camera focus',()=>{
   const {instance,calls}=viewer(); api.setDepthCue(instance,false); api.setDepthCue(instance,true);
-  assert.deepEqual(calls,[['props',{cameraFog:{name:'off',params:{}}}],['props',{cameraFog:{name:'on',params:{intensity:20}}}]]);
+  assert.deepEqual(calls,[['props',{cameraFog:{name:'off',params:{}}}],['props',{cameraFog:{name:'on',params:{intensity:60}}}]]);
 });
