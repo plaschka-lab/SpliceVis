@@ -1646,13 +1646,15 @@ ${await scriptFor(record,"no_maps")}
       return `<h3>Unassigned Components (${items.length})</h3><div class="mini-list">${items.map(i=>`<div><strong>${esc(i.gene_name||i.molecule_name)}</strong> <span class="subtle">${esc(i.chains)} · ${esc(i.issue)}</span></div>`).join("")}</div>`;
     }
     function rna2dPanel(item){
-      if(!item || !item.png) return "";
-      const links = [`<a href="${attr(item.png)}">PNG</a>`];
+      if(!item || (!item.png && !item.svg)) return "";
+      const links = item.png ? [`<a href="${attr(item.png)}">PNG</a>`] : [];
+      const interactiveUrl=item.svg?`web/rna-viewer.html?svg=${encodeURIComponent("../"+item.svg)}`:"";
+      if(interactiveUrl) links.unshift(`<a href="${attr(interactiveUrl)}" target="_blank" rel="noopener">Open interactive viewer ↗</a>`);
       if(item.svg) links.push(`<a href="${attr(item.svg)}">SVG</a>`);
       const counts = [item.rna_chain_count ? `${item.rna_chain_count} RNA chains` : "", item.r2dt_chain_count ? `${item.r2dt_chain_count} R2DT layouts` : "", item.failed_chain_count && item.failed_chain_count !== "0" ? `${item.failed_chain_count} failed` : ""].filter(Boolean).join("; ");
       const r2dt=Boolean(item.r2dt_chain_count && item.r2dt_chain_count!=="0");
       const legend=r2dt ? "Grey backbone: deposited sequence; dashed backbone: unresolved interval. Thin black lines: base pairs. Dashed curves between RNAs: clustered FR3D interactions; thicker curves represent more reported interactions (capped width), not stronger binding or higher confidence. Coloured overlays mark annotated features." : "Coloured tracks: deposited RNA chains. Thin arcs: reported intrachain base pairs. Dashed links: annotation-derived feature relationships; line width does not encode interaction strength.";
-      return `<details class="rna-2d-details"><summary>RNA secondary-structure rendering</summary><img class="rna-2d-img" src="${attr(item.png)}" alt="RNA secondary-structure panel for the selected PDB entry" loading="lazy"><div class="subtle">${esc(counts)} ${links.join(" ")}</div><p class="rna-2d-legend">${esc(legend)} Open SVG to inspect individual interaction tooltips.</p>${item.notes ? `<div class="subtle">${esc(item.notes)}</div>` : ""}</details>`;
+      return `<details class="rna-2d-details"><summary>RNA secondary-structure rendering</summary>${interactiveUrl?`<iframe class="rna-2d-viewer" src="${attr(interactiveUrl)}" title="Interactive RNA secondary-structure viewer" loading="lazy"></iframe>`:`<img class="rna-2d-img" src="${attr(item.png)}" alt="RNA secondary-structure panel for the selected PDB entry" loading="lazy">`}<div class="subtle">${esc(counts)} ${links.join(" ")}</div><p class="rna-2d-legend">${esc(legend)} Choose an RNA and zoom to inspect individual interactions. Layout sizes are schematic and are not comparable between RNAs.</p>${item.notes ? `<div class="subtle">${esc(item.notes)}</div>` : ""}</details>`;
     }
     function substrateTypePanel(items){
       if(!items.length) return "";
