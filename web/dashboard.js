@@ -964,7 +964,7 @@ ${await scriptFor(record,"no_maps")}
       return `<a class="report-link" href="${attr(reportIssueUrl(r))}" target="_blank" rel="noreferrer" title="Open a prefilled GitHub issue for reporting annotation, homolog, RNA-feature, pathway, or coloring errors">Report annotation/coloring error</a>`;
     }
     function molstarLegend(r, query=""){
-      return molstarLegendItems(r).map((x,index)=>({x,index})).filter(({x})=>matchesSearch(query,`${x.label} ${x.searchText || ""} ${x.chains.join(" ")}`)).map(({x,index})=>`<button type="button" class="molstar-legend-chip" data-legend-index="${index}" onclick="selectMolstarComponentFromLegend(this)" title="${attr(`${x.label}; deposited chains ${x.chains.join(', ')}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label)} <small>chain ${esc(x.chains.join(', '))}</small></span></button>`).join("") || '<span class="subtle">No matching components.</span>';
+      return molstarLegendItems(r).map((x,index)=>({x,index})).filter(({x})=>matchesSearch(query,`${x.label} ${x.searchText || ""} ${x.chains.join(" ")}`)).map(({x,index})=>`<div class="molstar-protein-row"><input type="checkbox" data-protein-index="${index}" ${molstarProteinSelection.has(index)?'checked':''} onchange="toggleMolstarProtein(this)" aria-label="${attr(`Include ${x.label} in display selection`)}"><button type="button" class="molstar-legend-chip ${molstarProteinSelection.has(index)?'active':''}" data-legend-index="${index}" onclick="selectMolstarComponentFromLegend(this)" title="${attr(`Focus ${x.label}; deposited chains ${x.chains.join(', ')}. Replaces the current selection.`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label)} <small>chain ${esc(x.chains.join(', '))}</small></span></button></div>`).join("") || '<span class="subtle">No matching components.</span>';
     }
     function searchMolstarProteins(input){
       document.getElementById("molstarProteinList").innerHTML=molstarLegend(currentMolstarRecord(),input.value);
@@ -991,7 +991,7 @@ ${await scriptFor(record,"no_maps")}
     }
     function alignmentViewerUrl(path){
       // Mol* always uses deposited IDs; ChimeraX scripts choose their own URL.
-      return `${path}${path.includes("?")?"&":"?"}v=20261103-selection`;
+      return `${path}${path.includes("?")?"&":"?"}v=20261103-hover`;
     }
     function rnaAlignmentPanel(r){
       const items = structureAlignmentItems(r);
@@ -1059,7 +1059,7 @@ ${await scriptFor(record,"no_maps")}
       const hasFeatures = Boolean((r.molstar_feature_selections || []).length);
       const hasLegend = Boolean(legend);
       const features = hasFeatures ? `<section class="molstar-selection-section" id="selection-rna" role="tabpanel" aria-labelledby="selection-tab-rna" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
-      const legendBlock = hasLegend ? `<section class="molstar-selection-section" id="selection-protein" role="tabpanel" aria-labelledby="selection-tab-protein" data-molstar-section="protein" ${hasFeatures?'hidden':''}><h3>Proteins</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><label for="molstarProteinSearch">Find protein or chain</label><input id="molstarProteinSearch" type="search" placeholder="PRPF8, chain ID" oninput="searchMolstarProteins(this)"><div class="molstar-legend" id="molstarProteinList">${legend}</div></section>` : "";
+      const legendBlock = hasLegend ? `<section class="molstar-selection-section" id="selection-protein" role="tabpanel" aria-labelledby="selection-tab-protein" data-molstar-section="protein" ${hasFeatures?'hidden':''}><h3>Proteins</h3><p class="section-note">Tick proteins to combine them for Display actions. Click a name to select only that protein and zoom.</p><label for="molstarProteinSearch">Find protein or chain</label><input id="molstarProteinSearch" type="search" placeholder="PRPF8, chain ID" oninput="searchMolstarProteins(this)"><div class="molstar-protein-selection"><span id="molstarProteinCount" role="status" aria-live="polite">0 proteins selected</span><button type="button" id="molstarProteinClear" disabled onclick="clearMolstarFeature(false)">Clear selection</button></div><div class="molstar-legend" id="molstarProteinList">${legend}</div></section>` : "";
       const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar"><div class="molstar-selection-tabs" role="tablist" aria-label="Model components">${[["rna","RNA elements",hasFeatures],["protein","Proteins",hasLegend]].filter(x=>x[2]).map(([id,label],index)=>`<button class="molstar-selection-tab ${index===0?'active':''}" type="button" role="tab" id="selection-tab-${id}" aria-controls="selection-${id}" aria-selected="${index===0}" tabindex="${index===0?'0':'-1'}" data-selection-tab="${id}" onclick="switchMolstarSelectionTab('${id}')" onkeydown="selectionTabKey(event,this)">${label}</button>`).join('')}</div>${features}${legendBlock}</aside>` : "";
       return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer" aria-label="3D structure viewer" tabindex="0" aria-describedby="molstarGestureHint"></div>${sidebar}</div><div class="molstar-toolbar"><span id="molstarGestureHint" class="subtle">${state.panelOnly?'Drag to rotate · scroll to zoom':'Drag to rotate · Alt + scroll to zoom'}</span><button type="button" onclick="zoomMolstar(.8)" aria-label="Zoom in">+</button><button type="button" onclick="zoomMolstar(1.25)" aria-label="Zoom out">−</button><button type="button" onclick="clearMolstarFeature()">Reset view</button><details class="viewer-display"><summary>Display</summary><div class="viewer-display-actions"><button type="button" data-requires-selection disabled onclick="changeMolstarVisibility('hide')">Hide selection</button><button type="button" data-requires-selection disabled onclick="changeMolstarVisibility('showOnly')">Show only selection</button><button type="button" onclick="changeMolstarVisibility('showAll')">Show all</button></div><label><input type="checkbox" onchange="setMolstarDepthCue(this)">Depth cue</label></details><span class="molstar-status" id="molstarStatus" role="status" aria-live="polite">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${rnaAlignmentPanel(r)}${snrnaAlignmentControl(r)}</div>`;
     }
@@ -1209,6 +1209,8 @@ ${await scriptFor(record,"no_maps")}
     function disposeMolstar(){
       molstarSelectionIntent++;
       molstarSelectionQueries=[];
+      molstarProteinSelection=new Set();
+      refreshMolstarProteinSelection();
       molstarVisibilityOperation=null;
       molstarGeneration++;
       molstarAbort?.abort();
@@ -1351,6 +1353,7 @@ ${await scriptFor(record,"no_maps")}
       clearMolstarLegendActive();
     }
     let molstarSelectionQueries=[];
+    let molstarProteinSelection=new Set();
     let molstarSelectionIntent=0;
     let molstarVisibilityOperation=null;
     async function prepareMolstarSelection(requested){
@@ -1371,11 +1374,13 @@ ${await scriptFor(record,"no_maps")}
     function molstarSelectionIsCurrent(selection){
       return Boolean(selection && selection.intent===molstarSelectionIntent && state.selected===selection.requested && state.molstarPdbId===selection.requested && currentMolstarViewerElement()?.viewerInstance===selection.instance);
     }
-    async function markMolstarSelection(selection,queries){
+    async function markMolstarSelection(selection,queries,{focus=true,proteinIndices=null}={}){
       if(!molstarSelectionIsCurrent(selection)) return false;
       try{
-        SpliceVisInteractions.select(selection.instance,queries);
+        SpliceVisInteractions.select(selection.instance,queries,{focus});
         molstarSelectionQueries=queries.map(q=>({...q}));
+        molstarProteinSelection=proteinIndices ? new Set(proteinIndices) : new Set();
+        refreshMolstarProteinSelection();
         refreshMolstarVisibilityControls();
         return true;
       }catch(error){
@@ -1467,8 +1472,64 @@ ${await scriptFor(record,"no_maps")}
       }
       return groups.filter(item=>!item.chains.every(chain=>rnaChains.has(chain))).sort((a,b)=>a.label.localeCompare(b.label,undefined,{numeric:true,sensitivity:"base"}));
     }
+    function refreshMolstarProteinSelection(){
+      for(const checkbox of document.querySelectorAll('[data-protein-index]')) checkbox.checked=molstarProteinSelection.has(Number(checkbox.dataset.proteinIndex));
+      for(const chip of document.querySelectorAll('.molstar-legend-chip')) chip.classList.toggle('active',molstarProteinSelection.has(Number(chip.dataset.legendIndex)));
+      const count=document.getElementById('molstarProteinCount');
+      if(count) count.textContent=`${molstarProteinSelection.size} protein${molstarProteinSelection.size===1?'':'s'} selected`;
+      const clear=document.getElementById('molstarProteinClear');
+      if(clear) clear.disabled=!molstarProteinSelection.size;
+    }
     function clearMolstarLegendActive(){
-      for(const item of document.querySelectorAll(".molstar-legend-chip")) item.classList.remove("active");
+      molstarProteinSelection=new Set();
+      refreshMolstarProteinSelection();
+    }
+    function molstarProteinQueries(r,indices){
+      const items=molstarLegendItems(r),seen=new Set(),queries=[];
+      for(const index of indices) for(const auth_asym_id of items[index]?.chains || []){
+        if(seen.has(auth_asym_id)) continue;
+        seen.add(auth_asym_id);
+        queries.push({auth_asym_id,color:items[index].color});
+      }
+      return queries;
+    }
+    async function toggleMolstarProtein(checkbox){
+      const r=currentMolstarRecord(),index=Number(checkbox.dataset.proteinIndex);
+      if(!r || !Number.isInteger(index) || !molstarLegendItems(r)[index]) return;
+      const selected=new Set(molstarProteinSelection);
+      if(checkbox.checked) selected.add(index); else selected.delete(index);
+      if(!selected.size){ await clearMolstarFeature(false); return; }
+      // Start loading first: a new model disposes the previous selection synchronously.
+      const pending=prepareMolstarSelection(r.pdb_id);
+      molstarProteinSelection=selected;
+      molstarSelectionQueries=[];
+      refreshMolstarProteinSelection();
+      refreshMolstarVisibilityControls();
+      let selection;
+      try{ selection=await pending; }
+      catch(error){
+        if(molstarProteinSelection===selected){
+          clearMolstarLegendActive();
+          const status=document.getElementById('molstarStatus');
+          if(status) status.textContent=`Protein selection failed: ${error.message}`;
+        }
+        return;
+      }
+      if(!molstarSelectionIsCurrent(selection) || molstarProteinSelection!==selected){
+        if(molstarProteinSelection===selected) clearMolstarLegendActive();
+        return;
+      }
+      const ok=await markMolstarSelection(selection,molstarProteinQueries(r,selected),{focus:false,proteinIndices:selected});
+      if(!molstarSelectionIsCurrent(selection)) return;
+      if(!ok){
+        clearMolstarLegendActive();
+        // Keep the error from markMolstarSelection, but remove any older outline.
+        await SpliceVisInteractions.clear(selection.instance,{resetCamera:false});
+        return;
+      }
+      document.querySelectorAll('.molstar-feature-button').forEach(item=>item.classList.remove('active'));
+      const status=document.getElementById('molstarStatus');
+      if(status) status.textContent=`${selected.size} protein${selected.size===1?'':'s'} selected. Use Display to hide them or show only this selection.`;
     }
     async function selectMolstarComponentFromLegend(button){
       const r = currentMolstarRecord();
@@ -1478,13 +1539,12 @@ ${await scriptFor(record,"no_maps")}
       if(!molstarSelectionIsCurrent(selection)) return;
       const status=document.getElementById("molstarStatus");
       const queries = item.chains.map(auth_asym_id=>({auth_asym_id, color: item.color, focus: true}));
-      if(!await markMolstarSelection(selection,queries) || !molstarSelectionIsCurrent(selection)) return;
-      for(const chip of document.querySelectorAll(".molstar-legend-chip")) chip.classList.toggle("active", chip===button);
+      if(!await markMolstarSelection(selection,queries,{proteinIndices:[Number(button.dataset.legendIndex)]}) || !molstarSelectionIsCurrent(selection)) return;
       const featureList = document.getElementById("molstarFeatureList");
       if(featureList) for(const featureButton of featureList.querySelectorAll(".molstar-feature-button")) featureButton.classList.remove("active");
       if(status) status.textContent = `Focused ${item.label} chain${item.chains.length === 1 ? "" : "s"} ${item.chains.join(", ")}.`;
     }
-    async function clearMolstarFeature(){
+    async function clearMolstarFeature(resetCamera=true){
       const intent=++molstarSelectionIntent;
       const status = document.getElementById("molstarStatus");
       const viewer = currentMolstarViewerElement();
@@ -1494,10 +1554,10 @@ ${await scriptFor(record,"no_maps")}
       const list = document.getElementById("molstarFeatureList");
       if(list) for(const item of list.querySelectorAll(".molstar-feature-button")) item.classList.remove("active");
       clearMolstarLegendActive();
-      if(status) status.textContent = "Reset view and cleared selection.";
+      if(status) status.textContent = resetCamera ? "Reset view and cleared selection." : "Cleared selection; component visibility is unchanged.";
       if(instance?.plugin?.canvas3d){
         await SpliceVisInteractions.clear(instance,{resetCamera:false});
-        if(intent===molstarSelectionIntent && currentMolstarViewerElement()?.viewerInstance===instance) await instance.visual?.reset?.({camera:true});
+        if(resetCamera && intent===molstarSelectionIntent && currentMolstarViewerElement()?.viewerInstance===instance) await instance.visual?.reset?.({camera:true});
       }
     }
     function showStartTab(tab){
@@ -1801,7 +1861,17 @@ ${await scriptFor(record,"no_maps")}
       else content = '<p class="comparison-note">Matched by curated identity, including Sm-ring context. Colours follow the SpliceVis component code. “Not reported” does not establish biological absence.</p>' + comparisonComponentTable(selected,'protein');
       return controls + `<div class="comparison-tabs" role="tablist" aria-label="Comparison categories">${tabs.map(([id,label])=>`<button type="button" role="tab" id="comparison-tab-${id}" aria-controls="comparison-content" aria-selected="${comparisonView.tab===id}" tabindex="${comparisonView.tab===id?'0':'-1'}" data-comparison-tab="${id}">${label}</button>`).join('')}</div><div id="comparison-content" role="tabpanel" aria-labelledby="comparison-tab-${comparisonView.tab}">${content}</div>`;
     }
+    function renderComparisonBasket(){
+      const basket=document.getElementById('comparisonBasket');
+      if(!basket)return;
+      const selected=state.compareIds.map(id=>records.find(r=>r.pdb_id===id)).filter(Boolean);
+      basket.hidden=!selected.length;
+      basket.innerHTML=selected.length?`<span class="basket-label">Comparison basket <span class="subtle">${selected.length}/5</span></span>${selected.map(r=>`<span class="comparison-chip" title="${attr(`${r.species} · ${r.state}`)}"><span>${esc(r.pdb_id.toUpperCase())}</span><button type="button" data-basket-remove="${attr(r.pdb_id)}" aria-label="Remove ${attr(r.pdb_id.toUpperCase())} from comparison basket">×</button></span>`).join('')}<button class="basket-clear" type="button" data-basket-clear>Clear all</button>${selected.length===5?'<span class="subtle">Basket full · remove one to add another</span>':''}`:'';
+      basket.querySelectorAll('[data-basket-remove]').forEach(button=>button.addEventListener('click',()=>toggleCompare(button.dataset.basketRemove)));
+      basket.querySelector('[data-basket-clear]')?.addEventListener('click',clearComparison);
+    }
     function renderComparison(){
+      renderComparisonBasket();
       disposeComparison3d();
       const launch = document.getElementById('openComparison');
       if(launch){ launch.textContent = `Compare selected (${state.compareIds.length})`; launch.disabled = !state.compareIds.length; }

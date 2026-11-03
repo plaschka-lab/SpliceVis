@@ -18,7 +18,7 @@ function setup(){
   const target={isConnected:true,getBoundingClientRect:()=>({width,height:400}),getClientRects:()=>width?[{}]:[],
     closest:q=>q==='details'?section:!open?section:null,querySelector:()=>viewer,addEventListener(){},appendChild:v=>viewer=v};
   const ctx=vm.createContext({state:{activeTab:'structures',selected:'a',molstarViewer:null,molstarPdbId:'',mobilePane:'detail'},records:[{pdb_id:'a'}],els:{},DATA:{},
-    molstarSelectionIntent:0,molstarSelectionQueries:[],molstarVisibilityOperation:null,molstarVisibilityObserver:null,
+    molstarSelectionIntent:0,molstarSelectionQueries:[],molstarVisibilityOperation:null,refreshMolstarProteinSelection:()=>{},molstarProteinSelection:new Set(),molstarVisibilityObserver:null,
     molstarGeneration:0,molstarAbort:null,molstarLoadTask:null,molstarPendingPdbId:'',molstarAutoPreviewEnabled:true,
     AbortController,requestAnimationFrame:fn=>frames.push(fn),fitCycleArt:()=>{},
     window:{setTimeout:fn=>timers.push(fn),dispatchEvent:()=>calls.push('global resize')},

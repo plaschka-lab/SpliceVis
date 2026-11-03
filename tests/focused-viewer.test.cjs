@@ -17,7 +17,7 @@ function setup(){
   const createViewer=()=>({viewerInstance:{plugin:{canvas3d:{},dispose(){}},visual:{reset:async()=>calls.push('reset')}}});
   let viewer=createViewer();
   const ctx=vm.createContext({state:{selected:'a',molstarPdbId:'a',molstarViewer:viewer},molstarSelectionQueries:[{auth_asym_id:'A'}],molstarSelectionIntent:1,
-    molstarVisibilityOperation:null,molstarLoadTask:null,molstarGeneration:0,molstarAbort:null,molstarPendingPdbId:'',
+    molstarVisibilityOperation:null,refreshMolstarProteinSelection:()=>{},molstarProteinSelection:new Set(),molstarLoadTask:null,molstarGeneration:0,molstarAbort:null,molstarPendingPdbId:'',
     currentMolstarViewerElement:()=>viewer,clearMolstarLegendActive:()=>{},
     document:{getElementById:id=>id==='molstarStatus'?status:null,querySelectorAll:q=>q==='.viewer-display-actions button'?controls:[]},
     SpliceVisInteractions:{select:(_instance,queries)=>calls.push(['select',queries]),clear:async()=>{}}

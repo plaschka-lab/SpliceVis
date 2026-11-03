@@ -1,7 +1,8 @@
 # Comparing spliceosome structures
 
 Select up to five atlas rows, then choose **Compare selected**. Selection is retained
-when filtering. Remove individual entries or clear the set in the comparison
+when filtering. The compact atlas basket shows selected PDB IDs, individual remove
+buttons and Clear all. Remove individual entries or clear the set in the comparison
 workspace. **Proteins** opens first and highlights component presence and copy-count
 differences. Chain-ID changes alone are not differences. Component colours match
 the structure viewer; colours are not used to establish identity.
@@ -39,8 +40,14 @@ representation control.
 ## Focused viewing and proximity
 
 **Open viewer** gives the selected structure its own tab with RNA/protein controls.
-Protein search accepts canonical names and aliases. Feature labels are clickable;
-when several chains match, choose a chain explicitly. Selection outlines preserve
+Protein search accepts canonical names and aliases. Check several protein boxes to
+build a display selection, then use Hide selection or Show only selection. Filtering
+the protein list retains the checked set. Clicking a protein name replaces that set
+and focuses the named protein; Clear selection removes the group. Feature labels are clickable;
+when several chains match, choose a chain explicitly. A residue information strip updates immediately on hover, keyboard focus or touch.
+It distinguishes deposited author numbers, sequence positions and alignment columns,
+and labels feature membership as aligned reference annotations.
+Selection outlines preserve
 the component colours. Display options can hide or isolate a selection, restore all
 components and toggle depth cue. Ordinary scrolling over the embedded atlas viewer
 moves the page; Alt-scroll or the zoom buttons zoom the structure. The focused

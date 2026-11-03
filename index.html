@@ -7,7 +7,7 @@
   <title>SpliceVis | Spliceosome Structure Atlas</title>
   <link rel="stylesheet" href="web/vendor/pdbe-molstar.css">
   <script src="web/vendor/pdbe-molstar-plugin.js"></script>
-  <link rel="stylesheet" href="web/dashboard.css?v=20261103-roadmap">
+  <link rel="stylesheet" href="web/dashboard.css?v=20261103-basket">
 </head>
 <body>
   <div class="app">
@@ -73,6 +73,7 @@
               <div class="cycle-context" id="cycleContext"></div>
               <section class="structure-browser">
                 <div class="structure-list-head"><h3>Associated Structures</h3><div class="structure-list-tools"><span class="subtle" id="tableCount"></span><button id="openComparison" type="button" class="button" onclick="showStartTab('comparison')">Compare selected (0)</button></div></div>
+                <div id="comparisonBasket" class="comparison-basket" role="region" aria-label="Comparison basket" hidden></div>
                 <div class="table-wrap"><table><thead><tr><th scope="col" data-sort="pdb" tabindex="0" aria-sort="none">PDB</th><th scope="col">Preview</th><th scope="col" data-sort="species" tabindex="0" aria-sort="none">Species</th><th scope="col" data-sort="title" tabindex="0" aria-sort="none">Title</th><th scope="col" data-sort="state" tabindex="0" aria-sort="none">State</th><th scope="col" data-sort="substrate" tabindex="0" aria-sort="none">(pre-)mRNA type</th><th scope="col" data-sort="resolution" tabindex="0" aria-sort="none">Res.</th><th scope="col" data-sort="year" tabindex="0" aria-sort="none">Year</th><th scope="col" data-sort="chains" tabindex="0" aria-sort="none">Total chains</th><th scope="col" data-sort="proteins" tabindex="0" aria-sort="none">Composition</th><th scope="col">RNA</th><th scope="col">Curation</th><th scope="col">Compare</th></tr></thead><tbody id="rows"></tbody></table></div>
               </section>
             </div>
@@ -167,6 +168,6 @@ python3 tools/setup_offline.py --dest ~/Documents/SpliceVis</pre></div>
   <script src="web/viewer-interactions.js"></script>
   <script src="web/comparison-viewer.js"></script>
   <script src="web/script-actions.js"></script>
-    <script src="web/dashboard.js?v=20261103-roadmap"></script>
+    <script src="web/dashboard.js?v=20261103-basket"></script>
 </body>
 </html>

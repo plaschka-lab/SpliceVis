@@ -45,7 +45,7 @@ function setup(){
   let live=null,resolveLoad=null,resolveClear=null;
   const instance={visual:{reset:async()=>calls.push('camera-reset')},plugin:{canvas3d:{},dispose:()=>calls.push('disposed')}};
   Object.assign(ctx,{
-    state:{selected:'a',molstarPdbId:'',molstarViewer:null},molstarLoadTask:null,molstarSelectionQueries:[],molstarSelectionIntent:0,molstarVisibilityOperation:null,
+    state:{selected:'a',molstarPdbId:'',molstarViewer:null},molstarLoadTask:null,molstarSelectionQueries:[],molstarSelectionIntent:0,molstarVisibilityOperation:null,refreshMolstarProteinSelection:()=>{},molstarProteinSelection:new Set(),
     molstarGeneration:0,molstarAbort:null,molstarPendingPdbId:'',
     document:{getElementById:id=>id==='molstarStatus'?status:null,querySelectorAll:q=>['[data-requires-selection]','.viewer-display-actions button'].includes(q)?controls:[]},
     currentMolstarViewerElement:()=>live,
