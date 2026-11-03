@@ -595,3 +595,7 @@
 .molstar-protein-row .molstar-legend-chip{width:100%;min-width:0}
 .molstar-protein-selection{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:7px 0;font-size:11px;color:var(--muted)}
 .molstar-protein-selection button{padding:3px 6px;font-size:11px}
+
+/* Explicit dismissal complements pointer-leave, Escape and outside-click. */
+.popover-close{float:right;margin:0 0 6px 10px;padding:3px 7px;border:1px solid #c6d3e2;border-radius:5px;background:#fff;color:#40566e;font:600 11px system-ui;cursor:pointer}
+.popover-close:focus-visible{outline:2px solid #1769aa;outline-offset:2px}
