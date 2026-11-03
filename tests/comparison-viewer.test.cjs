@@ -16,7 +16,7 @@ function fixture({fail=false,delay=0}={}){
   async render(element,options){
    calls.push(["render",options]);
    const self=this;let pose={mode:'perspective',position:[0,0,100],target:[0,0,0],up:[0,1,0],radius:50,fov:.7};
-   this.plugin={dispose(){calls.push(['dispose']);},canvas3d:{setProps:x=>calls.push(['props',x]),camera:{getSnapshot:()=>structuredClone(pose),setState:x=>{pose={...pose,...structuredClone(x)};calls.push(['camera',instances.indexOf(self),x]);}}},managers:{structure:{component:{state:{options:{quality:"auto"}},async setOptions(value){calls.push(["style",value]);}},hierarchy:{current:{structures:[]}}},interactivity:{lociSelects:{select:(x,g)=>calls.push(['mark',x,g]),deselectAll:()=>calls.push(['deselect'])}},camera:{focusLoci:(l,o)=>calls.push(['focus',l,o])}}};
+   this.plugin={dispose(){calls.push(['dispose']);},canvas3d:{setProps:x=>calls.push(['props',x]),camera:{getSnapshot:()=>structuredClone(pose),setState:x=>{pose={...pose,...structuredClone(x)};calls.push(['camera',instances.indexOf(self),x]);}}},managers:{structure:{component:{state:{options:{quality:"auto"}},async setOptions(value){calls.push(["style",value]);}},hierarchy:{current:{structures:[]}}},interactivity:{lociSelects:{select:(x,g)=>calls.push(['mark',x,g]),deselect:x=>calls.push(['unmark',x]),deselectAll:()=>calls.push(['deselect'])}},camera:{focusLoci:(l,o)=>calls.push(['focus',l,o])}}};
   }
   getLociForParams(queries,number){return {kind:'element-loci',elements:queries.length?[{number}]:[]};}
  }
@@ -120,4 +120,25 @@ test('bad evidence in an extra view disposes all previously loaded canvases',asy
  const f=fixture(),element={...f.options.rightElement,style:{visibility:''},events:new Map()};
  await assert.rejects(api.create({...f.options,additional:[{element,record:record('6icz'),transform:I,probes:probes.map(p=>({...p,x:99}))}]},f.runtime),/coordinates differ/);
  assert.equal(f.calls.filter(x=>x[0]==='dispose').length,3);assert.ok(element.cleared);assert.equal(f.frames.size,0);
+});
+
+test('per-model selections preserve colours and synchronize focus from the chosen view',async()=>{
+ const f=fixture(),c=await api.create(f.options,f.runtime);
+ await c.selectInView(1,[{auth_asym_id:'B'}],{only:true});
+ const last=f.calls.filter(x=>x[0]==='select').at(-1);
+ assert.equal(last[1],1);assert.equal(last[2].nonSelectedOpacity,0);assert.equal(last[2].keepColors,true);
+ assert.equal(last[2].data[0].color,null);
+ assert.ok(f.calls.some(x=>x[0]==='unmark'));
+ await c.selectInView(1,[],{focus:false});
+ await assert.rejects(c.selectInView(3,[{auth_asym_id:'A'}]),/valid component/);
+ c.dispose();
+});
+test('per-model overlay selection addresses the second model and restores transparency',async()=>{
+ const f=fixture(),c=await api.create({...f.options,overlay:true},f.runtime);
+ await c.selectInView(1,[{auth_asym_id:'R',beg_auth_seq_id:3,end_auth_seq_id:5}],{only:true});
+ const last=f.calls.filter(x=>x[0]==='select').at(-1)[2];
+ assert.equal(last.structureNumber,2);assert.equal(last.data[0].opacity,.55);assert.equal(last.data[0].beg_auth_seq_id,3);
+ await c.selectInView(1,[],{focus:false});
+ assert.equal(f.calls.filter(x=>x[0]==='select').at(-1)[2].data[0].opacity,.55);
+ c.dispose();
 });

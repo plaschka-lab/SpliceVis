@@ -599,6 +599,7 @@
 /* Explicit dismissal complements pointer-leave, Escape and outside-click. */
 .popover-close{float:right;margin:0 0 6px 10px;padding:3px 7px;border:1px solid #c6d3e2;border-radius:5px;background:#fff;color:#40566e;font:600 11px system-ui;cursor:pointer}
 .popover-close:focus-visible{outline:2px solid #1769aa;outline-offset:2px}
+
 /* Keep the comparison action aligned with selects and visibly actionable. */
 .comparison-3d-controls .comparison-load-primary{align-self:end;min-height:36px;background:#225d85;color:white;border-color:#225d85;font-weight:650;margin:0}
 .comparison-3d-controls .comparison-load-primary:hover{background:#174668;color:white}
@@ -606,3 +607,18 @@
 .comparison-3d-controls select{min-height:36px;box-sizing:border-box}
 .comparison-3d-controls label{min-width:0;max-width:100%;margin:0}
 .comparison-canvases:not(.overlay){grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+
+/* Component controls stay outside each Mol* canvas and retain model context. */
+.comparison-components{padding:10px;border:1px solid var(--line);border-radius:8px;margin-top:8px;min-width:0}
+.comparison-components>input{width:100%;box-sizing:border-box;margin:8px 0}
+.comparison-component-actions{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.comparison-component-list{max-height:240px;overflow:auto;overscroll-behavior:contain}
+.comparison-components .molstar-legend-chip{width:100%;text-align:left}
+.comparison-components p{font-size:12px;margin:6px 0 0}
+.chimerax-options-body>.script-copy{display:block;margin:6px 0}
+
+.comparison-component-actions button{border:1px solid #c6d3e2;border-radius:6px;padding:5px 9px;background:#fff;color:#304965;cursor:pointer}
+.comparison-component-actions button:disabled{opacity:.5;cursor:default}
+.comparison-components button:focus-visible{outline:2px solid #1769aa;outline-offset:2px}
+
+.comparison-components h4{font-size:13px;margin:0 0 8px}

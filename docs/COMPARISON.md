@@ -73,3 +73,9 @@ to load. The ChimeraX selection browser applies thin **Detail** ribbons when foc
 features; **Overview** restores thick ribbons, and **Reset view** restores Overview,
 clears that model's selection and fits it. These controls preserve component colours
 and leave unrelated models and maps unchanged.
+
+Each aligned model has a searchable **Proteins / RNA elements** panel. Click a
+name to focus its deposited chains or annotated residues; tick multiple entries
+and choose **Show only selected** to isolate them in that model. **Show all / clear**
+restores the model. Camera synchronization also applies when focusing selections.
+In overlay mode, panels are labelled by PDB ID and act on that model only.

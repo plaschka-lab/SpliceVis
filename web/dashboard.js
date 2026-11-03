@@ -1172,7 +1172,7 @@ ${await scriptFor(record,"no_maps")}
         const instance = new PDBeMolstarPlugin();
         viewer.viewerInstance = instance;
         const options = {assemblyId:"1", hideStructure:["water"], hideControls:!state.panelOnly, selectInteraction:false,
-          hideCanvasControls:state.panelOnly?["animation","trajectory"]:["animation","trajectory","controlToggle","controlInfo","selection","expand"],
+          hideCanvasControls:state.panelOnly?["animation","trajectory","expand"]:["animation","trajectory","controlToggle","controlInfo","selection","expand"],
           sequencePanel:false, pdbeLink:!DATA.offline, loadingOverlay:true,
           lighting:"flat", subscribeEvents:false, bgColor:{r:255,g:255,b:255},
           validationAnnotation:false, domainAnnotation:false, symmetryAnnotation:false};
@@ -1606,9 +1606,9 @@ ${await scriptFor(record,"no_maps")}
       if (state.chainMode === "systematic" && !systematicAvailable) state.chainMode = "original";
       const chainModeOption = `<label class="selected-header-chain-toggle" title="${attr(systematicAvailable ? `Rename ${r.systematic_chain_count || 0} mapped chains inside ChimeraX using safe-harbor IDs before coloring and named selections. Systematic IDs attempt to give identical or homologous proteins the same chain IDs across structures.` : "No systematic chain map is available for this entry.")}"><input type="checkbox" ${selectedScriptMode === "systematic" ? "checked" : ""} ${systematicAvailable ? "" : "disabled"} onchange="setChainMode(this.checked ? 'systematic' : 'original')">Use systematic chain IDs</label>`;
       const primaryMapAvailable = selectedScriptMode === "systematic" ? r.primary_map_script_systematic_path : r.primary_map_script_path;
-      const primaryMapButton = primaryMapAvailable ? `<button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy ChimeraX script (model + map)</button>` : "";
+      const primaryMapButton = primaryMapAvailable ? `<button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy script: model + map</button>` : "";
       const compositeButtons = (r.composite_groups||[]).map(group => `<button class="script-copy" onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')} ${attr(group.label || group.composite_id || "")}">Copy assembly</button>`).join("");
-      els.selectedScriptActions.innerHTML = `${state.panelOnly?`<a class="button" href="${attr(atlasUrl(r.pdb_id))}">Back to atlas</a>`:`<a class="button" href="${attr(structurePanelUrl(r.pdb_id))}" target="_blank" rel="noopener">Open viewer ↗</a>`}<button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">ChimeraX: copy model</button><details class="chimerax-options"><summary>ChimeraX options & help</summary><div class="chimerax-options-body">${primaryMapButton}${compositeButtons}${chainModeOption}<p>Paste the copied script into the ChimeraX command line. Model-only loads fastest; maps can be large and take several minutes. Feature clicks in the named-selection browser use thin Detail ribbons; Overview and Reset view restore the wider view.</p><div class="actions"><a href="https://www.rbvi.ucsf.edu/chimerax/download.html" target="_blank" rel="noreferrer">Download ChimeraX</a><a href="https://www.rbvi.ucsf.edu/chimerax/docs/quickstart/index.html" target="_blank" rel="noreferrer">Quick start</a><a href="https://www.rbvi.ucsf.edu/chimerax/tutorials.html" target="_blank" rel="noreferrer">Tutorials</a></div></div></details>`;
+      els.selectedScriptActions.innerHTML = `${state.panelOnly?`<a class="button" href="${attr(atlasUrl(r.pdb_id))}">Back to atlas</a>`:`<a class="button" href="${attr(structurePanelUrl(r.pdb_id))}" target="_blank" rel="noopener">Open in new tab ↗</a>`}<details class="chimerax-options"><summary>ChimeraX scripts</summary><div class="chimerax-options-body"><button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy script: model only</button>${primaryMapButton}${compositeButtons}${chainModeOption}<p>Paste the copied script into the ChimeraX command line. Model-only loads fastest; maps can be large and take several minutes. Feature clicks in the named-selection browser use thin Detail ribbons; Overview and Reset view restore the wider view.</p><div class="actions"><a href="https://www.rbvi.ucsf.edu/chimerax/download.html" target="_blank" rel="noreferrer">Download ChimeraX</a><a href="https://www.rbvi.ucsf.edu/chimerax/docs/quickstart/index.html" target="_blank" rel="noreferrer">Quick start</a><a href="https://www.rbvi.ucsf.edu/chimerax/tutorials.html" target="_blank" rel="noreferrer">Tutorials</a></div></div></details>`;
     }
     function renderDetailBody(r){
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
@@ -1780,13 +1780,55 @@ ${await scriptFor(record,"no_maps")}
       const ids=comparison3d.mode==='overlay'?[comparison3d.reference,comparison3d.mobile]:[comparison3d.reference,...state.compareIds.filter(id=>id!==comparison3d.reference)];
       return ids.map(id=>records.find(r=>r.pdb_id===id)).filter(Boolean);
     }
+    function comparisonSelectionItems(r,kind){
+      if(kind==='protein') return molstarLegendItems(r).map(x=>({...x,detail:'chain '+x.chains.join(', '),queries:x.chains.map(auth_asym_id=>({auth_asym_id}))}));
+      return (r.molstar_feature_selections||[]).map(x=>({...x,label:(x.label||x.feature)+(x.confidence&&x.confidence!=='high'?' ?':''),detail:[x.chain,x.residue_ranges].filter(Boolean).join(': ')+(x.confidence&&x.confidence!=='high'?' · provisional annotation':'')}));
+    }
+    function comparisonSelectionPanel(r,index){
+      return `<aside class="comparison-components" data-view-index="${index}" aria-label="${attr(r.pdb_id.toUpperCase())} components"><h4>${esc(r.pdb_id.toUpperCase())} components</h4><div class="molstar-selection-tabs" role="group" aria-label="Component type"><button type="button" data-component-kind="protein" aria-pressed="true" class="molstar-selection-tab active">Proteins</button><button type="button" data-component-kind="rna" aria-pressed="false" class="molstar-selection-tab">RNA elements</button></div><input type="search" aria-label="Find component in ${attr(r.pdb_id.toUpperCase())}" placeholder="Find protein, RNA feature or chain"><div class="comparison-component-actions"><button type="button" data-component-action="only" disabled>Show only selected</button><button type="button" data-component-action="all">Show all / clear</button><span class="subtle" data-component-count>0 selected</span></div><div class="comparison-component-list"></div><p class="subtle">Click a name to focus; tick entries to combine selections.</p></aside>`;
+    }
+    function bindComparisonComponents(){
+      for(const previous of document.querySelectorAll('.comparison-components')){
+        const panel=previous.cloneNode(true);previous.replaceWith(panel);
+        const index=Number(panel.dataset.viewIndex),record=comparison3dRecords()[index];
+        let kind='protein',selected=new Set();
+        const list=panel.querySelector('.comparison-component-list'),search=panel.querySelector('input[type="search"]');
+        const update=()=>{
+          const items=comparisonSelectionItems(record,kind);
+          list.innerHTML=items.map((item,i)=>({item,i})).filter(({item})=>matchesSearch(search.value,`${item.label} ${item.detail} ${item.searchText||''}`)).map(({item,i})=>`<div class="molstar-protein-row"><input type="checkbox" data-item="${i}" ${selected.has(i)?'checked':''} aria-label="${attr('Include '+item.label+' in selection')}"><button type="button" class="molstar-legend-chip ${selected.has(i)?'active':''}" data-item="${i}" title="${attr(item.detail||'')}"><span class="component-swatch" style="background:${attr(item.color||'#999999')}"></span><span>${esc(item.label)} <small>${esc(item.detail||'')}</small></span></button></div>`).join('')||'<p class="subtle">No matching components or annotations.</p>';
+          panel.querySelector('[data-component-count]').textContent=`${selected.size} selected`;
+          panel.querySelector('[data-component-action="only"]').disabled=!selected.size;
+        };
+        const apply=async(options={})=>{
+          const controller=comparison3d.controller;if(!controller)return;
+          document.getElementById('comparisonSharedProtein').value='';document.getElementById('comparisonOnlyProtein').checked=false;
+          const items=comparisonSelectionItems(record,kind),queries=[...selected].flatMap(i=>items[i]?.queries||[]);
+          panel.querySelectorAll('button,input').forEach(el=>el.disabled=true);
+          try{await controller.selectInView(index,queries,options);}
+          catch(error){if(controller===comparison3d.controller)document.getElementById('comparison3dStatus').textContent=error.message;}
+          finally{if(panel.isConnected){panel.querySelectorAll('button,input').forEach(el=>el.disabled=false);update();}}
+        };
+        panel.querySelectorAll('[data-component-kind]').forEach(button=>button.addEventListener('click',()=>{
+          kind=button.dataset.componentKind;selected.clear();search.value='';
+          panel.querySelectorAll('[data-component-kind]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});
+          update();void apply({focus:false});
+        }));
+        search.addEventListener('input',update);
+        list.addEventListener('click',event=>{const button=event.target.closest('button[data-item]');if(!button)return;selected=new Set([Number(button.dataset.item)]);update();void apply();});
+        list.addEventListener('change',event=>{const input=event.target.closest('input[data-item]');if(!input)return;const i=Number(input.dataset.item);if(input.checked)selected.add(i);else selected.delete(i);update();void apply({focus:false});});
+        panel.querySelector('[data-component-action="only"]').addEventListener('click',()=>void apply({only:true}));
+        panel.querySelector('[data-component-action="all"]').addEventListener('click',()=>{selected.clear();update();void apply({focus:false});});
+        panel.addEventListener('comparison-clear',()=>{selected.clear();update();});
+        update();
+      }
+    }
     function comparison3dPanel(selected){
       if(!selected.some(r=>r.pdb_id===comparison3d.reference)) comparison3d.reference=selected[0].pdb_id;
       if(!selected.some(r=>r.pdb_id===comparison3d.mobile) || comparison3d.mobile===comparison3d.reference) comparison3d.mobile=selected.find(r=>r.pdb_id!==comparison3d.reference).pdb_id;
       const chooser=(id,value,label)=>`<label>${label}<select id="${id}">${selected.map(r=>`<option value="${attr(r.pdb_id)}" ${r.pdb_id===value?'selected':''}>${esc(r.pdb_id.toUpperCase())} · ${esc(r.state)} · ${esc(r.species)}</option>`).join('')}</select></label>`;
       const compared=comparison3dRecords(),[reference,mobile]=compared;
       const common=componentDifferenceRows(compared).filter(row=>row.type==='protein' && row.matched && row.entries.size===compared.length);
-      return `<p class="comparison-note">Align deposited models using a shared protein anchor. This helps inspect structural changes; the Proteins tab remains the quickest way to identify reported gains or losses.</p><div class="comparison-3d-controls">${chooser('compare3dReference',comparison3d.reference,'Reference')}${comparison3d.mode==='overlay'?chooser('compare3dMobile',comparison3d.mobile,'Compare with'):''}<label>View<select id="compare3dMode"><option value="side" ${comparison3d.mode==='side'?'selected':''}>Side by side</option><option value="overlay" ${comparison3d.mode==='overlay'?'selected':''}>Overlay</option></select></label><button class="comparison-load-primary" type="button" id="loadComparison3d">Align and view</button></div><p id="comparison3dStatus" role="status">Loading the selected structures automatically…</p><div id="comparison3dTools" class="comparison-3d-tools" hidden><label><input id="comparisonCameraSync" type="checkbox" checked>Synchronize views</label><label>Shared protein<select id="comparisonSharedProtein"><option value="">Choose a protein</option>${common.map(row=>`<option value="${attr(row.key)}">${esc(row.label)}</option>`).join('')}</select></label><label><input id="comparisonOnlyProtein" type="checkbox">Show only this protein</label><button type="button" id="resetComparison3d">Reset views</button></div><div class="comparison-canvases ${comparison3d.mode==='overlay'?'overlay':''}" id="comparisonCanvases" hidden>${(comparison3d.mode==='overlay'?[reference]:compared).map((r,i)=>`<section><h3>${esc(r.pdb_id.toUpperCase())}${comparison3d.mode==='overlay'?` + ${esc(mobile.pdb_id.toUpperCase())}`:i===0?' · reference':''}</h3><div id="${i===0?'comparisonLeft':i===1?'comparisonRight':`comparisonExtra${i}`}" class="comparison-canvas"></div></section>`).join('')}</div><p class="subtle">For detailed fitting, maps and measurements, use ChimeraX: ${compared.map(r=>`<a href="${attr(r.script_path || '')}" download>${esc(r.pdb_id.toUpperCase())} script</a>`).join(' · ')}. Side-by-side shows all selected structures (up to five), each fitted to the reference. Overlay retains component colours; use Show only this protein to reduce overlap.</p>`;
+      return `<p class="comparison-note">Align deposited models using a shared protein anchor. This helps inspect structural changes; the Proteins tab remains the quickest way to identify reported gains or losses.</p><div class="comparison-3d-controls">${chooser('compare3dReference',comparison3d.reference,'Reference')}${comparison3d.mode==='overlay'?chooser('compare3dMobile',comparison3d.mobile,'Compare with'):''}<label>View<select id="compare3dMode"><option value="side" ${comparison3d.mode==='side'?'selected':''}>Side by side</option><option value="overlay" ${comparison3d.mode==='overlay'?'selected':''}>Overlay</option></select></label><button class="comparison-load-primary" type="button" id="loadComparison3d">Align and view</button></div><p id="comparison3dStatus" role="status">Loading the selected structures automatically…</p><div id="comparison3dTools" class="comparison-3d-tools" hidden><label><input id="comparisonCameraSync" type="checkbox" checked>Synchronize views</label><label>Shared protein<select id="comparisonSharedProtein"><option value="">Choose a protein</option>${common.map(row=>`<option value="${attr(row.key)}">${esc(row.label)}</option>`).join('')}</select></label><label><input id="comparisonOnlyProtein" type="checkbox">Show only this protein</label><button type="button" id="resetComparison3d">Reset views</button></div><div class="comparison-canvases ${comparison3d.mode==='overlay'?'overlay':''}" id="comparisonCanvases" hidden>${(comparison3d.mode==='overlay'?[reference]:compared).map((r,i)=>`<section><h3>${esc(r.pdb_id.toUpperCase())}${comparison3d.mode==='overlay'?` + ${esc(mobile.pdb_id.toUpperCase())}`:i===0?' · reference':''}</h3><div id="${i===0?'comparisonLeft':i===1?'comparisonRight':`comparisonExtra${i}`}" class="comparison-canvas"></div>${comparison3d.mode==='overlay'?compared.map((entry,index)=>comparisonSelectionPanel(entry,index)).join(''):comparisonSelectionPanel(r,i)}</section>`).join('')}</div><p class="subtle">For detailed fitting, maps and measurements, use ChimeraX: ${compared.map(r=>`<a href="${attr(r.script_path || '')}" download>${esc(r.pdb_id.toUpperCase())} script</a>`).join(' · ')}. Side-by-side shows all selected structures (up to five), each fitted to the reference. Overlay retains component colours; use Show only this protein to reduce overlap.</p>`;
     }
     async function loadComparison3d(){
       disposeComparison3d();
@@ -1816,6 +1858,7 @@ ${await scriptFor(record,"no_maps")}
         const controller=await SpliceVisComparisonViewer.create({leftElement:document.getElementById('comparisonLeft'),rightElement:document.getElementById('comparisonRight'),reference,mobile,referenceProbes:comparison3d.manifest.probes?.[reference.pdb_id],mobileProbes:comparison3d.manifest.probes?.[mobile.pdb_id],matrix,additional:fits.slice(1).map((fit,i)=>({element:document.getElementById(`comparisonExtra${i+2}`),record:fit.record,transform:fit.matrix,probes:comparison3d.manifest.probes?.[fit.record.pdb_id]})),overlay:comparison3d.mode==='overlay',offline:!!DATA.offline,signal:abort.signal,onStatus:message=>{if(!abort.signal.aborted)status.textContent=message;}});
         if(abort.signal.aborted){controller.dispose();return;}
         comparison3d.controller=controller;
+        bindComparisonComponents();
         status.textContent=evidence;
         document.getElementById('comparison3dTools').hidden=false;
         document.getElementById('comparisonCameraSync').closest('label').hidden=comparison3d.mode==='overlay';
@@ -1831,6 +1874,7 @@ ${await scriptFor(record,"no_maps")}
       const queries=r=>row.entries.get(r.pdb_id).map(auth_asym_id=>({auth_asym_id}));
       const controls=[document.getElementById('comparisonSharedProtein'),document.getElementById('comparisonOnlyProtein'),document.getElementById('resetComparison3d')];
       const only=controls[1].checked;controls.forEach(control=>control.disabled=true);
+      document.querySelectorAll('.comparison-components').forEach(panel=>panel.dispatchEvent(new Event('comparison-clear')));
       try{await controller.selectComponent(queries(reference),queries(mobile),{only,additionalQueries:compared.slice(2).map(queries)});}
       catch(error){if(controller===comparison3d.controller){const status=document.getElementById('comparison3dStatus');if(status)status.textContent=error.message;}}
       finally{if(controller===comparison3d.controller)controls.forEach(control=>control.disabled=false);}
@@ -1848,6 +1892,7 @@ ${await scriptFor(record,"no_maps")}
         const controller=comparison3d.controller;if(!controller)return;
         try{await controller.reset();if(controller!==comparison3d.controller)return;
           document.getElementById('comparisonSharedProtein').value='';document.getElementById('comparisonOnlyProtein').checked=false;
+          document.querySelectorAll('.comparison-components').forEach(panel=>panel.dispatchEvent(new Event('comparison-clear')));
         }catch(error){if(controller===comparison3d.controller)document.getElementById('comparison3dStatus').textContent=error.message;}
       });
     }

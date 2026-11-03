@@ -150,6 +150,26 @@
       if(overlay)await instances[0].visual.select({structureNumber:2,data:[{color:null,opacity:.55}],keepColors:true,keepRepresentations:true});
       active=0;if(!overlay&&sync)synchronize(0);remember();
     }
+    async function selectInView(index,queries,{only=false,focus=true}={}){
+      guard();
+      const view=targets()[index];
+      if(!view||!Array.isArray(queries)||queries.some(q=>!q?.auth_asym_id))throw new Error('Choose a valid component in this structure.');
+      const {instance,number}=view;
+      const loci=queries.length?instance.getLociForParams(queries,number):null;
+      if(loci&&(loci.kind!=='element-loci'||!loci.elements?.length))throw new Error('This selection has no modelled atoms.');
+      // Only clear this model's marker, including in a shared overlay canvas.
+      const modelLoci=instance.getLociForParams([{}],number);
+      instance.plugin.managers.interactivity.lociSelects.deselect({loci:modelLoci});
+      await instance.visual.clearSelection(number,{keepColors:true,keepRepresentations:true});guard();
+      if(loci)instance.plugin.managers.interactivity.lociSelects.select({loci},false);
+      if(only&&queries.length)await instance.visual.select({structureNumber:number,data:queries.map(q=>({...q,color:null,opacity:overlay&&index===1?.55:1,focus:false})),nonSelectedOpacity:0,keepColors:true,keepRepresentations:true});
+      else if(overlay&&index===1)await instance.visual.select({structureNumber:number,data:[{color:null,opacity:.55}],keepColors:true,keepRepresentations:true});
+      guard();
+      if(loci&&focus){
+        instance.plugin.managers.camera.focusLoci(loci,{minRadius:15,extraRadius:8,durationMs:0});
+        active=overlay?0:index;if(!overlay&&sync)synchronize(active);remember();
+      }
+    }
     async function selectComponent(refQueries,mobileQueries,{only=false,additionalQueries=[]}={}){
       guard();
       const views=targets(),queries=[refQueries,mobileQueries,...additionalQueries];
@@ -180,7 +200,7 @@
       remember();frame=raf(tick);
       elements.forEach((element,index)=>element.style.visibility=visibility[index]);
       onStatus(overlay?'Aligned overlay. The second structure is semi-transparent.':'Aligned models ready. Rotate or zoom any view.');
-      return Object.freeze({dispose,setSync(value){guard();sync=Boolean(value);if(sync&&!overlay)synchronize(active);remember();},reset,selectComponent});
+      return Object.freeze({dispose,setSync(value){guard();sync=Boolean(value);if(sync&&!overlay)synchronize(active);remember();},reset,selectComponent,selectInView});
     }catch(error){dispose();throw error;}
   }
   return Object.freeze({create,validateMatrix,invertMatrix,validateProbes,coordinateSource,palette});
