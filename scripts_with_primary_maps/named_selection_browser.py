@@ -4,9 +4,12 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 
 from chimerax.core.commands import run
+
+_UNBOUND_MODEL = object()
 
 
 def _ui_available(session) -> bool:
@@ -27,6 +30,76 @@ def _model_by_id(session, model_id: str):
 def _parent_model_ids(model_id: str) -> list[str]:
     parts = str(model_id).split(".")
     return [".".join(parts[:idx]) for idx in range(1, len(parts))]
+
+
+def _model_scope(session, spec, bound_model=_UNBOUND_MODEL):
+    """Use the browser's exact atomic model, never a parent containing other models."""
+    model_id = str(spec.get("structure_model_id", ""))
+    if not re.fullmatch(r"[1-9]\d*(?:\.\d+)*", model_id):
+        raise ValueError("This selection browser has no valid structure model ID.")
+    model = _model_by_id(session, model_id)
+    if model is None or not hasattr(model, "atoms"):
+        raise ValueError(f"Structure #{model_id} is no longer open.")
+    if bound_model is not _UNBOUND_MODEL and model is not bound_model:
+        raise ValueError(f"Structure #{model_id} has been replaced; reopen its selection browser.")
+    return f"#{model_id}"
+
+
+def ribbon_preset_commands(scope, preset):
+    """Model-scoped subset of Matthias's Thin_ribbons.cxc preset.
+
+    Overview uses the generated dashboard's width 4 / thickness 3; Detail uses
+    the supplied width 2 / thickness 1. RNA remains width/thickness 4, as in the
+    template. Do not change colours, nucleotide annotation display, maps, or
+    global lighting/background/camera. `divisions` is global even with a scope,
+    so unlike the source template it is deliberately omitted here.
+    """
+    if not re.fullmatch(r"#[1-9]\d*(?:\.\d+)*", scope):
+        raise ValueError("Ribbon presets require an exact structure model ID.")
+    if preset not in ("overview", "detail"):
+        raise ValueError("Choose Overview or Detail ribbons.")
+    width, thickness = (2, 1) if preset == "detail" else (4, 3)
+    return [
+        f"cartoon style {scope} modeHelix default arrows true arrowsHelix false arrowScale 1.5 width {width} thickness {thickness} sides 12",
+        f"cartoon style ({scope} & ~(nucleic|strand)) xsection round",
+        f"cartoon style ({scope} & (nucleic|strand)) xsection rectangle",
+        f"cartoon style ({scope} & nucleic) xsection round width 4 thickness 4",
+    ]
+
+
+def apply_ribbon_preset(session, spec, preset, bound_model=_UNBOUND_MODEL):
+    scope = _model_scope(session, spec, bound_model)
+    for command in ribbon_preset_commands(scope, preset):
+        run(session, command)
+
+
+def _selection_has_atoms(session, target):
+    from chimerax.core.commands import AtomSpecArg
+    parsed, _, _ = AtomSpecArg.parse(target, session)
+    return bool(len(parsed.evaluate(session).atoms))
+
+
+def focus_named_selection(session, spec, data, bound_model=_UNBOUND_MODEL):
+    """Select/focus only this browser's model and automatically use Detail."""
+    scope = _model_scope(session, spec, bound_model)
+    selector = str(data.get("name", ""))
+    if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", selector):
+        raise ValueError("This feature has no valid named selector.")
+    target = f"({scope} & {selector})"
+    if not _selection_has_atoms(session, target):
+        raise ValueError("This feature has no modelled atoms in this structure.")
+    apply_ribbon_preset(session, spec, "detail", bound_model)
+    run(session, f"select subtract {scope}")
+    run(session, f"select add {target}")
+    # 'view sel' would include an unrelated structure's preserved selection.
+    run(session, f"view {target}")
+
+
+def reset_structure_view(session, spec, bound_model=_UNBOUND_MODEL):
+    scope = _model_scope(session, spec, bound_model)
+    apply_ribbon_preset(session, spec, "overview", bound_model)
+    run(session, f"select subtract {scope}")
+    run(session, f"view {scope}")
 
 
 def open_selection_browser(session, spec_path: str) -> None:
@@ -64,6 +137,7 @@ def open_selection_browser(session, spec_path: str) -> None:
         def __init__(self, session, tool_name, spec, selectors):
             super().__init__(session, tool_name)
             self.spec = spec
+            self.bound_model = _model_by_id(session, str(spec.get("structure_model_id", "")))
             self.selectors = selectors
             self.filtered = list(selectors)
             self._populating = False
@@ -75,6 +149,18 @@ def open_selection_browser(session, spec_path: str) -> None:
                 f"({len(selectors)} total)"
             )
             layout.addWidget(title)
+            presets = QHBoxLayout()
+            presets.addWidget(QLabel("Ribbons", parent))
+            self.overview_button = QPushButton("Overview", parent)
+            self.detail_button = QPushButton("Detail", parent)
+            for button in (self.overview_button, self.detail_button):
+                button.setCheckable(True)
+                presets.addWidget(button)
+            self.overview_button.setChecked(True)
+            self.overview_button.setToolTip("Thick overview ribbons for this structure only; preserve component colours.")
+            self.detail_button.setToolTip("Thinner protein ribbons for close inspection; also applied when focusing a feature. RNA width follows the supplied preset.")
+            presets.addStretch()
+            layout.addLayout(presets)
             self.search = QLineEdit(parent)
             self.search.setPlaceholderText("Search selector, label, category, residues, or atomspec")
             layout.addWidget(self.search)
@@ -89,7 +175,8 @@ def open_selection_browser(session, spec_path: str) -> None:
             self.select_button = QPushButton("Select + Zoom", parent)
             self.show_labels_button = QPushButton("Show Labels", parent)
             self.hide_labels_button = QPushButton("Hide Labels", parent)
-            self.clear_button = QPushButton("Clear", parent)
+            self.clear_button = QPushButton("Reset view", parent)
+            self.clear_button.setToolTip("Clear this structure's selection, restore Overview ribbons, and fit this structure in the view.")
             buttons.addWidget(self.select_button)
             buttons.addWidget(self.show_labels_button)
             buttons.addWidget(self.hide_labels_button)
@@ -103,7 +190,9 @@ def open_selection_browser(session, spec_path: str) -> None:
             self.select_button.clicked.connect(self._activate_current)
             self.show_labels_button.clicked.connect(lambda: self._set_all_filtered_labels(True))
             self.hide_labels_button.clicked.connect(lambda: self._set_all_filtered_labels(False))
-            self.clear_button.clicked.connect(lambda: run(self.session, "select clear"))
+            self.overview_button.clicked.connect(lambda: self._preset("overview"))
+            self.detail_button.clicked.connect(lambda: self._preset("detail"))
+            self.clear_button.clicked.connect(self._reset_view)
             self._populate()
             self.tool_window.manage("side")
 
@@ -253,16 +342,34 @@ def open_selection_browser(session, spec_path: str) -> None:
             data = item.data(0, Qt.UserRole)
             if not data:
                 return
-            selector = data.get("name", "")
-            if not selector:
-                return
-            run(self.session, "select clear")
-            run(self.session, f"select {selector}")
-            run(self.session, "view sel")
+            try:
+                focus_named_selection(self.session, self.spec, data, self.bound_model)
+                self._preset_checked("detail")
+            except Exception as error:
+                self.session.logger.warning(f"Could not focus this feature: {error}")
+
+        def _preset_checked(self, preset):
+            self.overview_button.setChecked(preset == "overview")
+            self.detail_button.setChecked(preset == "detail")
+
+        def _preset(self, preset):
+            try:
+                apply_ribbon_preset(self.session, self.spec, preset, self.bound_model)
+                self._preset_checked(preset)
+            except Exception as error:
+                self.session.logger.warning(f"Could not change ribbon style: {error}")
+
+        def _reset_view(self):
+            try:
+                reset_structure_view(self.session, self.spec, self.bound_model)
+                self._preset_checked("overview")
+            except Exception as error:
+                self.session.logger.warning(f"Could not reset this structure's view: {error}")
 
     tool_name = f"Spliceosome Selections {spec.get('pdb_id', '').upper()}".strip()
     SpliceosomeSelectionBrowser(session, tool_name, spec, selectors)
     session.logger.info(f"Opened spliceosome named selection browser with {len(selectors)} entries.")
 
 
-open_selection_browser(session, sys.argv[1])
+if "session" in globals() and len(sys.argv) > 1:
+    open_selection_browser(session, sys.argv[1])

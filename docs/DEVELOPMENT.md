@@ -95,3 +95,18 @@ re-downloading existing coordinates. Keep personal files outside these folders.
 The reviewed curation environment used Biopython 1.88, NumPy 2.5.2, and MAFFT
 7.526. The public UI and its validation tests require only Python 3's standard
 library and Node.js for JavaScript tests; they do not rerun sequence alignment.
+
+## Comparison and viewer regression checks
+
+See [Comparing structures](COMPARISON.md) for the user workflow and alignment scope.
+`comparison-viewer.js` adapts the pinned Mol* build for transformed models,
+coordinate-probe validation, synchronized cameras and disposal. `viewer-interactions.js`
+keeps persistent selection edges and visibility separate from canonical colours.
+Regression tests exercise cancellation, failed loads, model changes, stale selection
+intents and mutually exclusive visibility actions. Also test a narrow viewport:
+comparison checkboxes, clear-selection controls and navigation must stay reachable.
+
+The curation workspace's `build_comparison_alignments.py` generates
+`data/comparison-alignments.json`; the public client does not fit structures itself.
+RNA alignment HTML is refreshed from its existing embedded scientific payload.
+Template changes must not alter sequences, annotations or residue correspondences.

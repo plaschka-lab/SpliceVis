@@ -5,9 +5,10 @@
     let proteinLookup = [];
     let rnaFeatureDefinitions = [];
     let rnaFeatureConsistency = [];
-    const state = { activeTab:"structures", structureQuery:"", proteinQuery:"", mode:"all", family:"all", species:"all", substrateType:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, openPanelInNewTab:false, panelOnly:false, mobilePane:"cycle" };
+    const state = { activeTab:"structures", structureQuery:"", proteinQuery:"", mode:"all", family:"all", species:"all", substrateType:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false,  panelOnly:false, mobilePane:"cycle" };
+    const comparisonView = { onlyDifferences: true, tab: 'proteins' };
     const els = {};
-    for (const id of ["sidebarToggle","atlasNavButton","componentsNavButton","openPanelOnly","mobileViewSwitch","search","searchMode","family","species","substrateTypeFilter","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","selectedScriptActions","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
+    for (const id of ["sidebarToggle","atlasNavButton","componentsNavButton","mobileViewSwitch","search","searchMode","family","species","substrateTypeFilter","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityScope","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","selectedScriptActions","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U1 snRNP","U11 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
     const ORDER = Object.fromEntries(STAGES.map((s,i)=>[s,i]));
     const STATE_COLORS = {
@@ -24,6 +25,7 @@
     let molstarGeneration = 0;
     let molstarLoadTask = null;
     let molstarAbort = null;
+    let molstarVisibilityObserver = null;
     let renderedDetailId = null;
     function esc(v){return String(v ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
     function attr(v){return esc(v);}
@@ -33,7 +35,9 @@
       const number = Number.parseFloat(value);
       return Number.isFinite(number) ? number.toFixed(1) : String(value);
     }
+    let hideAnnotationHelp = () => {};
     async function init(){
+      initBadgeHelp();
       const response = await fetch("data/structures.json?v=20260903-ui-guide-v2", {
         cache: "no-cache",
       });
@@ -54,7 +58,7 @@
       const params = new URLSearchParams(window.location.search);
       const panelPdb = String(params.get("panel") || params.get("structure") || "").trim().toLowerCase();
       const panelRecord = panelPdb ? records.find(r=>String(r.pdb_id).toLowerCase()===panelPdb) : null;
-      state.panelOnly = Boolean(panelRecord);
+      state.panelOnly = Boolean(panelRecord && !params.has("atlas"));
       if(state.panelOnly) document.body.classList.add("structure-only");
       if(state.panelOnly) state.mobilePane = "detail";
       state.selected = (panelRecord || records.find(r=>String(r.pdb_id).toLowerCase()==="6ah0") || records.find(r=>String(r.pdb_id).toLowerCase()==="5zya") || records[0])?.pdb_id || "";
@@ -67,6 +71,7 @@
       populateProteinComplexFilter();
       populateProximityProteins();
       populateProximitySpecies();
+      updateProximityScope();
       renderRnaFeatureQuickSelect();
       bind();
       renderSidebarState();
@@ -106,6 +111,7 @@
     }
     function updateSearchContext(){
       const componentView = state.activeTab === "proteins";
+      document.querySelector('.search-cluster').hidden = state.activeTab === 'comparison';
       els.search.value = componentView ? state.proteinQuery : state.structureQuery;
       els.search.placeholder = componentView ? "Protein, homolog, alias, chain ID" : "PDB, title, state, author, species";
       els.search.setAttribute("aria-label", componentView ? "Find components" : "Find structures");
@@ -113,7 +119,7 @@
       if(refine){ refine.hidden = componentView; if(componentView) refine.open = false; }
     }
     function setMobilePane(pane){
-      state.mobilePane = ["cycle","structures","detail"].includes(pane) ? pane : "cycle";
+      state.mobilePane = state.panelOnly ? "detail" : ["cycle","structures","detail"].includes(pane) ? pane : "cycle";
       document.body.classList.remove("mobile-pane-cycle","mobile-pane-structures","mobile-pane-detail");
       document.body.classList.add(`mobile-pane-${state.mobilePane}`);
       if(els.mobileViewSwitch) for(const button of els.mobileViewSwitch.querySelectorAll("button")){
@@ -122,17 +128,14 @@
         if(active) button.setAttribute("aria-current", "page");
         else button.removeAttribute("aria-current");
       }
+      reconcileMolstarVisibility();
       requestAnimationFrame(fitCycleArt);
-      requestAnimationFrame(() => {
-        if(state.activeTab === "structures" && molstarAutoPreviewEnabled) autoLoadMolstarForSelected();
-        window.dispatchEvent(new Event("resize"));
-      });
     }
     function activateSort(header){
       const key=header.dataset.sort;
       if(!key)return;
       if(state.sortBy===key) state.sortDir=state.sortDir==="asc"?"desc":"asc";
-      else { state.sortBy=key; state.sortDir=["year","chains","proteins","resolution"].includes(key)?"desc":"asc"; }
+      else { state.sortBy=key; state.sortDir=["year","chains","proteins"].includes(key)?"desc":"asc"; }
       if([...els.sortBy.options].some(option=>option.value===key)) els.sortBy.value = key;
       render();
     }
@@ -141,7 +144,7 @@
       els.proximityProteinOptions.innerHTML = proteins.map(p=>`<option value="${attr(p.name)}">${esc(p.name)} (${p.pdbs} PDBs)</option>`).join("");
       const maxDistance = Number(DATA.proximity.max_distance_a || 0);
       els.proximityDistance.max = maxDistance || "";
-      els.proximityCoverage.textContent = DATA.proximity.available ? `${proteins.length} proteins; maximum ${maxDistance} Å cutoff` : "Proximity index not bundled";
+      els.proximityCoverage.textContent = DATA.proximity.available ? `${DATA.proximity.structures_indexed || 0} indexed structures · ${proteins.length} proteins · ≤${maxDistance} Å` : "Proximity index not bundled";
       els.runProximitySearch.disabled = !DATA.proximity.available;
       if(!DATA.proximity.available) els.proximityStatus.textContent = "Proximity payloads are not available in this build.";
     }
@@ -152,10 +155,12 @@
       if(els.sidebarToggle) els.sidebarToggle.addEventListener("click",()=>{state.sidebarCollapsed=!state.sidebarCollapsed; renderSidebarState();});
       if(els.atlasNavButton) els.atlasNavButton.addEventListener("click",()=>showStartTab("structures"));
       if(els.componentsNavButton) els.componentsNavButton.addEventListener("click",()=>showStartTab("proteins"));
-      window.addEventListener("resize",()=>requestAnimationFrame(fitCycleArt));
-      els.openPanelOnly.addEventListener("change",()=>{state.openPanelInNewTab=els.openPanelOnly.checked;});
+      // Run before Mol*'s debounced resize handler can allocate a zero-sized framebuffer.
+      window.addEventListener("resize",()=>{ reconcileMolstarVisibility(); requestAnimationFrame(fitCycleArt); },{capture:true});
       els.search.addEventListener("input",()=>{
-        const query=els.search.value.trim().toLowerCase();
+        // Keep the input verbatim: trimming on each keystroke deletes spaces
+        // before the next word can be typed. Normalize only for matching.
+        const query=els.search.value;
         if(state.activeTab === "proteins") state.proteinQuery=query;
         else state.structureQuery=query;
         if(state.activeTab === "structures" && state.structureQuery){ state.family="all"; state.cyclePdbIds=[]; state.cyclePdbLabel=""; els.family.value="all"; }
@@ -176,17 +181,18 @@
       els.proteinComplexFilter.addEventListener("change",()=>{state.proteinComplex=els.proteinComplexFilter.value; renderProteins();});
       els.helperSource.addEventListener("change",()=>{state.helperSource=els.helperSource.value; render();});
       els.localRepoPath.addEventListener("input",()=>{state.localRepoPath=els.localRepoPath.value.trim(); render();});
-      els.sortBy.addEventListener("change",()=>{state.sortBy=els.sortBy.value; state.sortDir = ["year","chains","proteins","resolution"].includes(state.sortBy) ? "desc" : "asc"; render();});
+      els.sortBy.addEventListener("change",()=>{state.sortBy=els.sortBy.value; state.sortDir = ["year","chains","proteins"].includes(state.sortBy) ? "desc" : "asc"; render();});
       els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); if(els.atlasNavButton) els.atlasNavButton.classList.toggle("active",state.activeTab==="structures"); if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab==="proteins"); const drawer=b.closest(".tools-drawer"); if(drawer) drawer.open=false; render();});
       document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(th) activateSort(th);});
       document.addEventListener("keydown", event=>{const th=event.target.closest("th[data-sort]"); if(!th || !["Enter"," "].includes(event.key))return; event.preventDefault(); activateSort(th);});
       if(els.mobileViewSwitch) els.mobileViewSwitch.addEventListener("click",event=>{const button=event.target.closest("button[data-mobile-pane]"); if(button)setMobilePane(button.dataset.mobilePane);});
       els.runProximitySearch.addEventListener("click", runProximitySearch);
-      els.copyProximityCxc.addEventListener("click",async()=>copyText(await proximityChimeraXScript(), els.copyProximityCxc));
+      els.copyProximityCxc.addEventListener("click",copyProximityChimeraX);
       els.downloadProximityCsv.addEventListener("click", downloadProximityCsv);
       els.proximityDeduplicate.addEventListener("change", updateProximityResultPresentation);
       els.proximitySpecies.addEventListener("change", updateProximityResultPresentation);
       for(const input of [els.proximityProtein, els.proximityStart, els.proximityEnd, els.proximityDistance]) input.addEventListener("keydown", event=>{if(event.key==="Enter"){event.preventDefault(); runProximitySearch();}});
+      els.proximityScope.addEventListener("change",updateProximityScope);
       els.proximityRows.addEventListener("click", event=>{const b=event.target.closest("button[data-proximity-pdb]"); if(!b)return; state.selected=b.dataset.proximityPdb; state.activeTab="structures"; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x.dataset.tab==="structures"); render();});
       els.reset.addEventListener("click",()=>{state.structureQuery=""; state.mode="all"; state.family="all"; state.species="all"; state.substrateType="all"; state.rnaFeature="all"; state.rnaFeatureSearch=""; state.cyclePdbIds=[]; state.cyclePdbLabel=""; state.rnaDefinitionQuery=""; state.sortBy="pathway"; state.sortDir="asc"; els.search.value=""; els.searchMode.value="all"; els.family.value="all"; els.species.value="all"; els.substrateTypeFilter.value="all"; els.rnaFeatureFilter.value="all"; els.rnaFeatureQuickSearch.value=""; renderRnaFeatureQuickSelect(); els.rnaDefinitionSearch.value=""; els.sortBy.value="pathway"; render();});
     }
@@ -199,10 +205,50 @@
         all:[r.pdb_id,r.title,r.state,r.species,r.paper_title,r.abstract,r.doi,r.pubmed_id,r.journal,r.authors,...(r.substrate_types||[]).flatMap(item=>[item.type,item.family,item.molecule_name]),...r.proteins.map(p=>`${p.gene} ${p.name}`),...r.rnas.map(x=>x.name),...(r.substrate_features||[]).map(x=>`${x.feature} ${x.label} ${x.feature_sequence}`),...(r.snrna_features||[]).map(x=>`${x.snrna} ${x.feature} ${x.label} ${x.feature_sequence}`)]
       };
     }
+    function normalizeSearch(value){
+      return String(value || "").toLowerCase().replace(/[′’‘`]/g,"'").replace(/[_‐‑–—-]/g," ")
+        .replace(/\b([35])\s*(?:'|prime)?\s*(?:splice\s*site|ss)\b/g,"$1ss")
+        .replace(/\bsplice site ([35])\b/g,"$1ss")
+        .replace(/\bhomo sapiens\b/g,"human").replace(/\bsaccharomyces cerevisiae\b/g,"budding yeast")
+        .replace(/\bschizosaccharomyces pombe\b/g,"fission yeast").replace(/\s+/g," ").trim();
+    }
+    function matchesSearch(query, text){
+      const hay=normalizeSearch(text);
+      // Spaces require every term; commas separate alternatives. Empty clauses do not match everything.
+      const alternatives=String(query || "").split(",").map(normalizeSearch).filter(Boolean);
+      return !alternatives.length || alternatives.some(part=>part.split(" ").every(term=>hay.includes(term)));
+    }
     function exactStageForQuery(query){
       const needle=String(query||"").trim().toLowerCase();
       if(!needle)return "";
       return STAGES.find(stage=>{const label=stage.toLowerCase(); return needle===label || needle===label.replace(/\s+complex$/,"") || needle===label.split("/")[0];}) || "";
+    }
+    function parseStructureSearchClause(clause){
+      const exact=exactStageForQuery(clause);
+      if(exact) return {stages:new Set([exact]),text:""};
+      let remaining=normalizeSearch(clause);
+      const aliases=STAGES.flatMap(stage=>{
+        const label=normalizeSearch(stage);
+        // A bare U5 in a multi-term query can name the RNA component. Only
+        // use its full stage label here; preserve legacy exact-query aliases.
+        return [...new Set([label,label.replace(/\s+complex$/,""),...(label.startsWith("ils/")?["ils"]:[])])].map(alias=>({stage,alias}));
+      }).sort((a,b)=>b.alias.length-a.alias.length);
+      const stages=new Set();
+      for(const {stage,alias} of aliases){
+        // Do not interpret the ordinary article "a" as A complex.
+        if(alias==="a" && !/(?:^|\s)A(?:\s|$)/.test(clause) && !/(?:^|\s)a\s+complex(?:\s|$)/i.test(clause)) continue;
+        const escaped=alias.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+        const expression=new RegExp(`(^|\\s)${escaped}(?:\\s+complex)?(?=\\s|$)`,"g");
+        remaining=remaining.replace(expression,(_match,prefix)=>{stages.add(stage);return prefix;}).replace(/\s+/g," ").trim();
+      }
+      return {stages,text:remaining};
+    }
+    function parseStructureSearch(query){
+      return String(query || "").split(",").map(part=>part.trim()).filter(Boolean).map(parseStructureSearchClause);
+    }
+    function matchesStructureSearch(query, record, hay, parsed=null){
+      const clauses=parsed || parseStructureSearch(query);
+      return !clauses.length || clauses.some(({stages,text})=>stages.size<=1 && (!stages.size || stages.has(record.state)) && matchesSearch(text,hay));
     }
     function rnaFeatureOk(r){
       const value = state.rnaFeature;
@@ -308,14 +354,15 @@
       return rows.some(item=>item.family===value || item.type===value);
     }
     function filtered(options = {}){
-      const exactStage=exactStageForQuery(state.structureQuery);
+      const query = state.structureQuery.trim().toLowerCase();
+      const searchClauses=parseStructureSearch(state.structureQuery);
       return records.filter(r=>{
         const fields = fieldsFor(r);
         const parts = state.mode === "all" ? fields.all : [...fields.structure, ...(fields[state.mode] || [])];
         const hay = parts.join(" ").toLowerCase();
         const familyOk = options.ignoreFamily || state.family==="all" || r.state===state.family;
         const cycleOk = options.ignoreCyclePdb || !state.cyclePdbIds.length || state.cyclePdbIds.includes(String(r.pdb_id || "").toLowerCase());
-        const queryOk = !state.structureQuery || (exactStage ? r.state===exactStage : hay.includes(state.structureQuery));
+        const queryOk = !query || matchesStructureSearch(state.structureQuery,r,hay,searchClauses);
         return queryOk && familyOk && cycleOk && (state.species==="all" || r.species===state.species) && substrateTypeOk(r) && rnaFeatureOk(r);
       }).sort((a,b)=>{
         let value = 0;
@@ -334,11 +381,14 @@
       });
     }
     function render(){
+      hideAnnotationHelp();
+      renderComparison();
       updateSearchContext();
       setMobilePane(state.mobilePane);
       if(els.atlasNavButton){ const active=state.activeTab === "structures"; els.atlasNavButton.classList.toggle("active",active); els.atlasNavButton.setAttribute("aria-pressed",String(active)); }
       if(els.componentsNavButton){ const active=state.activeTab === "proteins"; els.componentsNavButton.classList.toggle("active",active); els.componentsNavButton.setAttribute("aria-pressed",String(active)); }
       els.structuresView.hidden = state.activeTab !== "structures";
+      document.getElementById('comparisonView').hidden = state.activeTab !== 'comparison';
       els.proximityView.hidden = state.activeTab !== "proximity";
       els.rnaFeaturesView.hidden = state.activeTab !== "rnaFeatures";
       els.cycleStatesView.hidden = state.activeTab !== "cycleStates";
@@ -348,6 +398,10 @@
       els.documentationView.hidden = state.activeTab !== "documentation";
       els.helpView.hidden = state.activeTab !== "help";
       els.localCopyView.hidden = state.activeTab !== "localCopy";
+      if(state.activeTab === 'comparison'){
+        els.resultSubtitle.textContent = 'Compare selected structures';
+        return;
+      }
       if(state.activeTab === "proximity") {
         els.resultSubtitle.textContent = proximityDisplayResults().length ? `${proximityDisplayResults().length} proximity matches` : "Spatial search across indexed public structures";
         return;
@@ -485,7 +539,7 @@
       const svg=DATA.splicing_cycle_svg || "";
       if(!svg){ els.cycle.innerHTML='<div class="subtle">Splicing cycle SVG was not embedded during dashboard generation.</div>'; return; }
       const hotspots=cycleHotspots();
-      els.cycle.innerHTML = `<div class="cycle-art" aria-label="Splicing cycle pathway filter">${svg}${hotspots.map((item,i)=>{ const count=cycleHotspotCount(item, rows); const active=cycleHotspotActive(item); const info=cycleHoverInfo(item,count); const label=`${info.title}, ${info.count} structures. RNA: ${info.rna} Helicase: ${info.helicase} Change: ${info.change}`; return `<button type="button" class="cycle-hotspot ${active?"active":""} ${count?"":"empty-stage"}" data-cycle-hotspot="${i}" style="${cycleHotspotStyle(item)}" aria-label="${attr(label)}">${cycleTooltipHtml(item,count)}</button>`; }).join("")}</div>`;
+      els.cycle.innerHTML = `<div class="cycle-art" aria-label="Splicing cycle pathway filter">${svg}${hotspots.map((item,i)=>{ const count=cycleHotspotCount(item, rows); const active=cycleHotspotActive(item); const info=cycleHoverInfo(item,count); const label=`${info.title}, ${info.count} structures. RNA: ${info.rna} Helicase: ${info.helicase} Change: ${info.change}`; return `<button type="button" class="cycle-hotspot ${active?"active":""} ${count?"":"empty-stage"}" data-cycle-hotspot="${i}" aria-pressed="${active}" style="${cycleHotspotStyle(item)}" aria-label="${attr(label)}">${cycleTooltipHtml(item,count)}</button>`; }).join("")}</div>`;
       fitCycleArt();
       for(const button of els.cycle.querySelectorAll("[data-cycle-hotspot]")) button.addEventListener("click",()=>activateCycleHotspot(hotspots[Number(button.dataset.cycleHotspot)]));
     }
@@ -522,9 +576,8 @@
         els.rows.innerHTML = `<tr><td colspan="13" class="empty-state"><strong>No structures shown</strong>${esc(message)}</td></tr>`;
         return;
       }
-      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const selected=r.pdb_id===state.selected; const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); const substrate=substrateTypeLabel(r); return `<tr class="${selected?"selected":""}" data-pdb="${attr(r.pdb_id)}" tabindex="0" aria-selected="${selected}" aria-label="Select ${attr(r.pdb_id.toUpperCase())}: ${attr(r.title)}"><td class="pdb"><a href="?structure=${attr(r.pdb_id)}" title="Select this structure" onclick="event.preventDefault()" style="--state-color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate" title="${attr(r.title)}">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}${transSpliceosomeBadge(r)}</td><td title="${attr(substrate)}">${esc(substrate)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}">${inCompare?"On":"Add"}</button></td></tr>`; }).join("");
+      els.rows.innerHTML = rows.map(r=>{ const inCompare=state.compareIds.includes(r.pdb_id); const selected=r.pdb_id===state.selected; const pdbe=r.pdbe_url || `https://www.ebi.ac.uk/pdbe/entry/pdb/${r.pdb_id}`; const meta=[r.species, `${r.protein_count||0} protein`, `${r.rna_count||0} RNA`].filter(Boolean).join(" / "); const pdbColor=stateColor(r.state); const substrate=substrateTypeLabel(r); return `<tr class="${selected?"selected":""}" data-pdb="${attr(r.pdb_id)}" tabindex="0" aria-selected="${selected}" aria-label="Select ${attr(r.pdb_id.toUpperCase())}: ${attr(r.title)}"><td class="pdb"><a href="?structure=${attr(r.pdb_id)}" title="Select this structure" onclick="event.preventDefault()" style="--state-color:${attr(pdbColor)}">${esc(r.pdb_id)}</a></td><td class="preview-cell">${tableThumbnail(r)}</td><td>${esc(r.species)}</td><td class="title-cell"><div class="truncate" title="${attr(r.title)}">${esc(r.title)}</div><div class="row-card-meta">${esc(meta)}</div></td><td><div>${esc(r.state)}</div>${minorSpliceosomeBadge(r)}${transSpliceosomeBadge(r)}</td><td title="${attr(substrate)}">${esc(substrate)}</td><td>${esc(formatResolution(r.resolution))}</td><td>${esc(r.year||"")}</td><td>${r.chain_count||0}</td><td>${r.protein_count} protein<br>${r.rna_count} RNA</td><td class="rna-badge-cell">${rnaAnnotationBadges(r)}</td><td>${curationBadges(r, false)}</td><td><button type="button" class="compare-toggle ${inCompare?"active":""}" data-compare="${attr(r.pdb_id)}" aria-pressed="${inCompare}" aria-label="${inCompare ? "Remove" : "Add"} ${attr(r.pdb_id.toUpperCase())} ${inCompare ? "from" : "to"} comparison" ${!inCompare && state.compareIds.length>=5 ? "disabled" : ""}>${inCompare?"Added":"Add"}</button></td></tr>`; }).join("");
       const selectRow = row => {
-        if(state.openPanelInNewTab){ window.open(structurePanelUrl(row.dataset.pdb), "_blank", "noopener"); return; }
         state.selected = row.dataset.pdb;
         state.mobilePane = "detail";
         molstarAutoPreviewEnabled = true;
@@ -551,13 +604,18 @@
     }
     function structurePanelUrl(pdbId){
       const url = new URL(window.location.href);
+      url.searchParams.delete("atlas");
       url.searchParams.set("panel", String(pdbId || "").toLowerCase());
       return url.toString();
+    }
+    function atlasUrl(pdbId){
+      const url=new URL(window.location.href);url.searchParams.delete('panel');url.searchParams.set('structure',pdbId);url.searchParams.set('atlas','1');return url.toString();
     }
     function stateColor(stage){
       return STATE_COLORS[String(stage || "")] || "#0b5cab";
     }
     const proximityLoadPromises = new Map();
+    let proximitySearchIntent=0;
     window.SPLICEOSOME_PROXIMITY = window.SPLICEOSOME_PROXIMITY || {};
     function proximityCatalogEntry(query){
       const needle = String(query||"").trim().toLowerCase();
@@ -585,50 +643,64 @@
         document.head.appendChild(script);
       });
       proximityLoadPromises.set(entry.name,promise);
+      promise.catch(()=>proximityLoadPromises.delete(entry.name));
       return promise;
     }
+    function updateProximityScope(){
+      const whole=els.proximityScope.value==='whole';
+      for(const input of [els.proximityStart,els.proximityEnd]){input.disabled=whole;input.closest('.field').hidden=whole;}
+    }
+    function proximityRange(scope,startValue,endValue){
+      if(scope==='whole')return null;
+      if(!String(startValue).trim() || !String(endValue).trim() || !Number.isInteger(Number(startValue)) || !Number.isInteger(Number(endValue)))throw new Error('Enter integer residue numbers for both ends, or choose Whole protein.');
+      const values=[Number(startValue),Number(endValue)].sort((a,b)=>a-b);return {start:values[0],end:values[1]};
+    }
+    function proximityMatches(payload,recordByPdb,protein,range,distance){
+      const best=new Map();
+      for(const [pdbId,rows] of payload.pdbs || []){
+        if(!recordByPdb.has(pdbId))continue;
+        for(const row of rows){
+          const sourceNumber=row[2],minDistance=row[6]===null || row[6]===undefined ? NaN : Number(row[6]);
+          if(!Number.isFinite(minDistance) || minDistance<0 || minDistance>distance)continue;
+          if(range && (sourceNumber===null || sourceNumber===undefined || !Number.isFinite(Number(sourceNumber)) || Number(sourceNumber)<range.start || Number(sourceNumber)>range.end))continue;
+          const key=`${pdbId}\t${row[4]}`,previous=best.get(key);
+          if(!previous || minDistance<previous.min_distance_a)best.set(key,{query_protein:protein,query_scope:range?'residue range':'whole protein',query_start:range?.start??'',query_end:range?.end??'',cutoff_a:distance,pdb_id:pdbId,source_chain:row[0],source_auth_seq:row[1],source_label_seq:row[3],target_protein:row[4],target_chain:row[5],min_distance_a:minDistance,target_auth_seq:row[7],target_label_seq:row[8],record:recordByPdb.get(pdbId)});
+        }
+      }
+      return [...best.values()].sort((a,b)=>a.min_distance_a-b.min_distance_a || String(a.target_protein).localeCompare(String(b.target_protein)) || String(a.pdb_id).localeCompare(String(b.pdb_id)));
+    }
     async function runProximitySearch(){
+      // Every attempt supersedes earlier loads, including invalid newer input.
+      const intent=++proximitySearchIntent;
+      els.runProximitySearch.disabled=!DATA.proximity.available;
+      if(!DATA.proximity.available){els.proximityStatus.textContent="The proximity index is unavailable in this release.";return;}
       const entry = proximityCatalogEntry(els.proximityProtein.value);
-      const startInput=Number(els.proximityStart.value);
-      const endInput=Number(els.proximityEnd.value);
+      let range;
+      try{range=proximityRange(els.proximityScope.value,els.proximityStart.value,els.proximityEnd.value);}
+      catch(error){els.proximityStatus.textContent=error.message;return;}
       const distance=Number(els.proximityDistance.value);
       const maxDistance=Number(DATA.proximity.max_distance_a||0);
       if(!entry){ els.proximityStatus.textContent="Choose one protein identity from the available list."; return; }
-      if(!Number.isInteger(startInput)||!Number.isInteger(endInput)){ els.proximityStatus.textContent="Enter integer residue numbers for both ends of the range."; return; }
       if(!(distance>0)||distance>maxDistance){ els.proximityStatus.textContent=`Enter a distance greater than 0 and no more than ${maxDistance} A.`; return; }
-      const start=Math.min(startInput,endInput), end=Math.max(startInput,endInput);
       const recordByPdb=new Map(records.map(r=>[r.pdb_id,r]));
       els.proximityProtein.value=entry.name;
       els.runProximitySearch.disabled=true;
       els.proximityStatus.textContent=`Loading ${entry.name} proximity index...`;
       try{
         const payload=await loadProximityPayload(entry);
-        const best=new Map();
-        for(const [pdbId, rows] of payload.pdbs||[]){
-          if(!recordByPdb.has(pdbId)) continue;
-          for(const row of rows){
-            if(row[2]===null || row[2]===undefined) continue;
-            const sourceNumber=Number(row[2]);
-            const minDistance=Number(row[6]);
-            if(sourceNumber<start || sourceNumber>end || minDistance>distance) continue;
-            const key=`${pdbId}	${row[4]}`;
-            const previous=best.get(key);
-            if(!previous || minDistance<previous.min_distance_a){
-              best.set(key,{query_protein:entry.name,query_start:start,query_end:end,cutoff_a:distance,pdb_id:pdbId,source_chain:row[0],source_auth_seq:row[1],source_label_seq:row[3],target_protein:row[4],target_chain:row[5],min_distance_a:minDistance,target_auth_seq:row[7],target_label_seq:row[8],record:recordByPdb.get(pdbId)});
-            }
-          }
-        }
-        state.proximityResults=[...best.values()].sort((a,b)=>a.min_distance_a-b.min_distance_a || String(a.target_protein).localeCompare(String(b.target_protein)) || String(a.pdb_id).localeCompare(String(b.pdb_id)));
-        state.proximityQuerySummary=`${entry.name} residues ${start}-${end} within ${distance} A`;
+        if(intent!==proximitySearchIntent)return;
+        state.proximityResults=proximityMatches(payload,recordByPdb,entry.name,range,distance);
+        state.proximityQuerySummary=`${entry.name} ${range?`residues ${range.start}-${range.end}`:'whole protein (indexed modelled residues)'} within ${distance} Å`;
         updateProximityResultPresentation();
       }catch(error){
+        if(intent!==proximitySearchIntent)return;
         state.proximityResults=[];
         renderProximityResults();
         els.downloadProximityCsv.disabled=true;
         els.copyProximityCxc.disabled=true;
         els.proximityStatus.textContent=`Proximity index error: ${error.message}`;
       }finally{
-        els.runProximitySearch.disabled=!DATA.proximity.available;
+        if(intent===proximitySearchIntent)els.runProximitySearch.disabled=!DATA.proximity.available;
       }
     }
     function proximityDisplayResults(){
@@ -650,22 +722,33 @@
       const shown=rows.length;
       els.downloadProximityCsv.disabled=!shown;
       els.copyProximityCxc.disabled=!shown;
+      const modelCount=new Set(rows.map(row=>row.pdb_id)).size;
+      els.copyProximityCxc.textContent=shown?`Copy CXC (${modelCount} models)`:'Copy CXC';
+      els.copyProximityCxc.title=shown?`Copies scripts for all ${modelCount} representative models shown. Paste into ChimeraX to open them; restrict the species or residue range for fewer models.`:'Copy model-only ChimeraX scripts for the results';
       els.proximityStatus.textContent = state.proximityResults.length ? `${shown} shown for ${state.proximityQuerySummary}.` : `No proteins matched ${state.proximityQuerySummary}.`;
       renderProximityResults();
     }
     function renderProximityResults(){
       const rows=proximityDisplayResults();
-      if(!rows.length){ els.proximityRows.innerHTML='<tr><td colspan="7" class="proximity-empty">No proteins matched this residue range and cutoff.</td></tr>'; return; }
-      els.proximityRows.innerHTML=rows.map(item=>`<tr><td><strong>${esc(item.target_protein)}</strong>${item.associated_pdb_count>1?`<div class="subtle">${item.associated_pdb_count} PDBs: ${esc(item.associated_pdb_ids.join(", "))}</div>`:""}</td><td><span class="pdb">${esc(item.pdb_id.toUpperCase())}</span><br><span class="subtle">${esc(item.record?.state||"")}</span></td><td>${esc(item.record?.species||"")}</td><td class="proximity-distance">${item.min_distance_a.toFixed(3)} A</td><td>${esc(item.query_protein)} / ${esc(item.source_chain)}:${esc(item.source_auth_seq)}</td><td>${esc(item.target_protein)} / ${esc(item.target_chain)}:${esc(item.target_auth_seq)}</td><td><button class="button" type="button" data-proximity-pdb="${attr(item.pdb_id)}">View</button></td></tr>`).join("");
+      if(!rows.length){ els.proximityRows.innerHTML='<tr><td colspan="7" class="proximity-empty">No proteins matched this query and cutoff.</td></tr>'; return; }
+      els.proximityRows.innerHTML=rows.map(item=>`<tr><td>${comparisonSwatch((item.record?.molstar_color_selections||[]).find(component=>component.auth_asym_id===item.target_chain)?.color)}<strong>${esc(item.target_protein)}</strong>${item.associated_pdb_count>1?`<div class="subtle">${item.associated_pdb_count} PDBs: ${esc(item.associated_pdb_ids.slice(0,5).join(", "))}${item.associated_pdb_count>5?` +${item.associated_pdb_count-5} more (CSV)`:""}</div>`:""}</td><td><span class="pdb">${esc(item.pdb_id.toUpperCase())}</span><br><span class="subtle">${esc(item.record?.state||"")}</span></td><td>${esc(item.record?.species||"")}</td><td class="proximity-distance">${item.min_distance_a.toFixed(3)} A</td><td>${esc(item.query_protein)} / ${esc(item.source_chain)}:${esc(item.source_auth_seq)}</td><td>${esc(item.target_protein)} / ${esc(item.target_chain)}:${esc(item.target_auth_seq)}</td><td><button class="button" type="button" data-proximity-pdb="${attr(item.pdb_id)}">View</button></td></tr>`).join("");
     }
     function downloadProximityCsv(){
-      const fields=["query_protein","query_start","query_end","cutoff_A","nearby_protein","representative_pdb_id","associated_pdb_count","associated_pdb_ids","state","species","min_distance_A","query_chain","query_auth_residue","nearby_chain","nearby_auth_residue"];
+      const fields=["query_protein","query_scope","query_start","query_end","cutoff_A","nearby_protein","representative_pdb_id","associated_pdb_count","associated_pdb_ids","state","species","min_distance_A","query_chain","query_auth_residue","nearby_chain","nearby_auth_residue"];
       const lines=[fields.join(",")];
       for(const item of proximityDisplayResults()){
-        lines.push([item.query_protein,item.query_start,item.query_end,item.cutoff_a,item.target_protein,item.pdb_id,item.associated_pdb_count,item.associated_pdb_ids.join("; "),item.record?.state||"",item.record?.species||"",item.min_distance_a,item.source_chain,item.source_auth_seq,item.target_chain,item.target_auth_seq].map(csvCell).join(","));
+        lines.push([item.query_protein,item.query_scope,item.query_start,item.query_end,item.cutoff_a,item.target_protein,item.pdb_id,item.associated_pdb_count,item.associated_pdb_ids.join("; "),item.record?.state||"",item.record?.species||"",item.min_distance_a,item.source_chain,item.source_auth_seq,item.target_chain,item.target_auth_seq].map(csvCell).join(","));
       }
       const blob=new Blob([lines.join("\n")+"\n"],{type:"text/csv;charset=utf-8"});
       const url=URL.createObjectURL(blob); const link=document.createElement("a"); link.href=url; link.download="spliceosome_proximity_results.csv"; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url);
+    }
+    async function copyProximityChimeraX(){
+      const button=els.copyProximityCxc;
+      button.disabled=true;
+      try{await copyText(await proximityChimeraXScript(),button);}
+      catch(error){
+        els.proximityStatus.textContent=`Could not copy the ChimeraX script: ${error.message}. Try again when the scripts and clipboard are available.`;
+      }finally{button.disabled=!proximityDisplayResults().length;}
     }
     async function proximityChimeraXScript(){
       const ids=[...new Set(proximityDisplayResults().map(x=>x.pdb_id))].sort();
@@ -685,13 +768,88 @@ ${await scriptFor(record,"no_maps")}
       if(!image) return '<span class="subtle">-</span>';
       return `<img class="table-thumbnail" src="${attr(image)}" alt="${attr(r.pdb_id.toUpperCase())} thumbnail" loading="lazy">`;
     }
+    function initBadgeHelp(){
+      const popup=document.createElement("div");
+      popup.id="annotationBadgeHelp";
+      popup.className="annotation-badge-help";
+      popup.setAttribute("role", "tooltip");
+      popup.hidden=true;
+      document.body.appendChild(popup);
+      let current=null, closeTimer;
+      const hide=()=>{
+        clearTimeout(closeTimer);
+        current?.removeAttribute("aria-describedby");
+        current=null;
+        popup.hidden=true;
+      };
+      hideAnnotationHelp=hide;
+      const badgeFor=target=>target instanceof Element ? target.closest(".badge[data-badge-help]") : null;
+      const show=badge=>{
+        // Flags already have an immediate hover panel which can also be pinned open.
+        if(!badge || badge.closest(".flag-badge-details")) return;
+        hide();
+        current=badge;
+        popup.textContent=badge.dataset.badgeHelp;
+        badge.setAttribute("aria-describedby", popup.id);
+        popup.hidden=false;
+        const box=badge.getBoundingClientRect(), help=popup.getBoundingClientRect();
+        const left=Math.max(8, Math.min(box.left, innerWidth-help.width-8));
+        const top=box.bottom+6+help.height<=innerHeight-8 ? box.bottom+6 : Math.max(8, box.top-help.height-6);
+        popup.style.left=`${left}px`;
+        popup.style.top=`${top}px`;
+      };
+      document.addEventListener("pointerover", event=>{
+        if(popup.contains(event.target)){ clearTimeout(closeTimer); return; }
+        const badge=badgeFor(event.target);
+        if(badge && badge!==current) show(badge);
+        else if(badge) clearTimeout(closeTimer);
+      });
+      document.addEventListener("focusin", event=>show(badgeFor(event.target)));
+      document.addEventListener("pointerout", event=>{
+        if(current?.contains(event.target) || popup.contains(event.target)){
+          if(current?.contains(event.relatedTarget) || popup.contains(event.relatedTarget)) return;
+          clearTimeout(closeTimer);
+          closeTimer=setTimeout(hide, 120);
+        }
+      });
+      document.addEventListener("focusout", event=>{ if(current?.contains(event.target)) hide(); });
+      document.addEventListener("keydown", event=>{ if(event.key==="Escape") hide(); });
+      document.addEventListener("scroll", event=>{ if(!popup.contains(event.target)) hide(); }, true);
+      window.addEventListener("resize", hide);
+    }
+    function annotationBadge(label, cls, help){
+      return `<span class="badge ${attr(cls)}" data-badge-help="${attr(help)}" tabindex="0" aria-label="${attr(label)}">${esc(label)}</span>`;
+    }
+    function rnaAnnotationHelp(kind, count){
+      return `${count} labelled regions of ${kind==="snRNA"?"spliceosomal RNA":"the RNA being spliced"} are available to explore. This counts regions, not RNA molecules; some labels may still need checking.`;
+    }
+    function evidenceHelp(level, subject="Assignment"){
+      const meaning = {
+        high:"The available information supports this label well. It is not a guarantee that everything is correct.",
+        medium:"This label has some support, but parts are uncertain. Check the details before relying on it.",
+        low:"There is little support for this label. It needs checking.",
+        review:"Some components or the splicing state need checking. Open the curation details to see why.",
+      };
+      return `${subject}: ${meaning[level] || "This has not been assessed yet."}`;
+    }
+    function curationTagHelp(label){
+      return {
+        publication:"A paper is linked to this structure. Find Paper beside the structure details.",
+        quality:"Model-quality information is available in the details. This badge does not mean that every check passed.",
+        "primary map":"The main experimental density map is linked. It is downloaded only when requested.",
+        "linked maps":"Additional experimental density maps are linked to this structure.",
+        "all proteins colored":"Every protein has a display color. This does not confirm that all protein names are correct.",
+        "needs review":"Some labels need checking. Open the curation details for the reasons.",
+        "chains renamed":"Shared chain names are available for comparing structures in ChimeraX. Enable systematic chain IDs to use them.",
+      }[label] || `See the curation details for more about this label: ${label}.`;
+    }
     function rnaAnnotationBadges(r){
       const substrateCount = (r.substrate_features||[]).length;
       const snrnaCount = (r.snrna_features||[]).length;
       const bits = [];
-      if(substrateCount) bits.push(`<span class="badge good">mRNA ${substrateCount}</span>`);
-      if(snrnaCount) bits.push(`<span class="badge good">snRNA ${snrnaCount}</span>`);
-      return `<div class="badge-row">${bits.join("") || '<span class="badge">none</span>'}</div>`;
+      if(substrateCount) bits.push(annotationBadge(`mRNA ${substrateCount}`, "good", rnaAnnotationHelp("(pre-)mRNA", substrateCount)));
+      if(snrnaCount) bits.push(annotationBadge(`snRNA ${snrnaCount}`, "good", rnaAnnotationHelp("snRNA", snrnaCount)));
+      return `<div class="badge-row">${bits.join("") || annotationBadge("none", "", "No RNA regions have been labelled for this entry. RNA may still be present in the structure.")}</div>`;
     }
     function isMinorSpliceosome(r){
       return /\bminor\b/i.test([r?.title, r?.paper_title].filter(Boolean).join(" "));
@@ -700,62 +858,78 @@ ${await scriptFor(record,"no_maps")}
       return /\btrans[- ](?:spliceosom|[CP]\b)/i.test([r?.title,r?.paper_title].filter(Boolean).join(" "));
     }
     function transSpliceosomeBadge(r){
-      return isTransSpliceosome(r) ? '<span class="badge trans-spliceosome" title="Trans-spliceosome: joins a spliced-leader RNA exon to a separate pre-mRNA">trans</span>' : "";
+      return isTransSpliceosome(r) ? annotationBadge("trans", "trans-spliceosome", "Trans-spliceosome: joins a spliced-leader RNA exon to a separate pre-mRNA.") : "";
     }
     function minorSpliceosomeBadge(r){
-      return isMinorSpliceosome(r) ? '<span class="badge minor-spliceosome" title="Minor spliceosome">minor</span>' : "";
+      return isMinorSpliceosome(r) ? annotationBadge("minor", "minor-spliceosome", "Part of the minor spliceosome, which removes a less common class of introns called U12-type introns.") : "";
     }
     function flagSupportingMetric(flag,r){
       const value=String(flag||"").toLowerCase(),q=r.quality||{};
-      if(value.includes("validation geometry") && q.geometry_quality) return `Geometry quality metric: ${q.geometry_quality}.`;
-      if(value.includes("ramachandran") && q.rama_outliers_percent) return `Ramachandran outliers: ${q.rama_outliers_percent}%.`;
-      if(value.includes("rna suite") && q.rna_suite_outliers_percent) return `RNA suite outliers: ${q.rna_suite_outliers_percent}%.`;
+      if(value.includes("validation geometry") && q.geometry_quality) return `Some atom positions or bond arrangements need checking. Reported geometry score: ${q.geometry_quality}.`;
+      if(value.includes("ramachandran") && q.rama_outliers_percent) return `${q.rama_outliers_percent}% of assessed protein backbone angles are unusual. These regions may need closer inspection.`;
+      if(value.includes("rna suite") && q.rna_suite_outliers_percent) return `${q.rna_suite_outliers_percent}% of assessed RNA backbone arrangements are unusual and may need checking.`;
       if(value.includes("low resolution")) return `Reported resolution: ${formatResolution(r.resolution)||q.map_resolution_A||"not available"} A.`;
       if(value.includes("local/non-pdb")) return "This is a local or non-PDB model rather than a public deposited entry.";
-      return "See Curation and Quality for the supporting audit values.";
+      return "Open the curation and quality details for the reason behind this warning.";
     }
     function flagBadge(r,interactive=false){
       const flags=r.curation?.flags||[];
       if(!flags.length) return "";
       const label=`${flags.length} flag${flags.length===1?"":"s"}`;
       const hover=flags.map(flag=>`${flag}\n${flagSupportingMetric(flag,r)}`).join("\n\n");
-      if(!interactive) return `<span class="badge bad" title="${attr(hover)}">${label}</span>`;
-      return `<details class="flag-badge-details"><summary class="badge bad" title="${attr(hover)}">${label}</summary><div class="flag-popover"><strong>Curation and validation flags</strong><ul>${flags.map(flag=>`<li>${esc(flag)}<span class="flag-metric">${esc(flagSupportingMetric(flag,r))}</span></li>`).join("")}</ul></div></details>`;
+      if(!interactive) return annotationBadge(label, "bad", hover);
+      return `<details class="flag-badge-details"><summary class="badge bad" data-badge-help="${attr(hover)}" aria-label="${attr(label)}">${label}</summary><div class="flag-popover"><strong>Things to check</strong><ul>${flags.map(flag=>`<li>${esc(flag)}<span class="flag-metric">${esc(flagSupportingMetric(flag,r))}</span></li>`).join("")}</ul></div></details>`;
     }
     function curationBadges(r, includeRna=true){
       const c=r.curation||{}; const flags=c.flags||[]; const confidence=c.overall_confidence||"";
       const bits=[];
-      if(c.assignment_completeness) bits.push(`<span class="badge" title="Component naming and color coverage, not validation of biological identity.">Components: ${esc(c.assignment_completeness)}</span>`);
-      if(confidence) bits.push(`<span class="badge ${confidence==="review"?"review":""}" title="Rule-based evidence assessment; not a calibrated probability or a model-quality score.">Evidence: ${esc(confidence)}</span>`);
-      if(includeRna && c.provisional_rna_features) bits.push(`<span class="badge warn" title="${attr(c.annotation_scope)}">${c.provisional_rna_features} provisional RNA regions</span>`);
-      if(includeRna && (r.substrate_features||[]).length) bits.push('<span class="badge good">(pre-)mRNA features annotated</span>');
-      if(includeRna && (r.snrna_features||[]).length) bits.push('<span class="badge good">snRNA features annotated</span>');
+      if(c.assignment_completeness) bits.push(annotationBadge(`Components: ${c.assignment_completeness}`, "", `${c.assignment_completeness==="complete"?"All components have names and color assignments in the database.":`${c.unassigned_components||"Some"} component(s) still need a name or color assignment. See Unassigned Components.`} This does not mean every part of the structure was resolved.`));
+      if(confidence) bits.push(annotationBadge(`Evidence: ${confidence}`, confidence==="review"?"review":"", evidenceHelp(confidence, "Support for the structure labels")));
+      if(includeRna && c.provisional_rna_features) bits.push(annotationBadge(`${c.provisional_rna_features} provisional RNA regions`, "warn", "Some RNA labels are approximate and need checking. Use them as a guide, not as proof of an RNA interaction."));
+      if(includeRna && (r.substrate_features||[]).length) bits.push(annotationBadge("(pre-)mRNA features annotated", "good", rnaAnnotationHelp("(pre-)mRNA", r.substrate_features.length)));
+      if(includeRna && (r.snrna_features||[]).length) bits.push(annotationBadge("snRNA features annotated", "good", rnaAnnotationHelp("snRNA", r.snrna_features.length)));
       if(flags.length) bits.push(flagBadge(r,includeRna));
-      return `<div class="badge-row">${bits.join("") || '<span class="badge">n/a</span>'}</div>`;
+      return `<div class="badge-row">${bits.join("") || annotationBadge("n/a", "", "This entry has not been assessed yet.")}</div>`;
     }
     function toggleCompare(pdbId){
       const i=state.compareIds.indexOf(pdbId);
-      if(i>=0) state.compareIds.splice(i,1); else state.compareIds.push(pdbId);
-      if(state.compareIds.length>5) state.compareIds.shift();
-      render();
+      if(i>=0) state.compareIds.splice(i,1);
+      else if(state.compareIds.length<5 && records.some(r=>r.pdb_id===pdbId)) state.compareIds.push(pdbId);
+      refreshComparisonControls();
+    }
+    function clearComparison(){
+      state.compareIds = [];
+      refreshComparisonControls();
+    }
+    function refreshComparisonControls(){
+      renderComparison();
+      for(const button of els.rows.querySelectorAll('[data-compare]')){
+        const selected = state.compareIds.includes(button.dataset.compare);
+        button.textContent = selected ? "Added" : "Add";
+        button.classList.toggle("active", selected);
+        button.setAttribute("aria-pressed", String(selected));
+        button.setAttribute("aria-label", `${selected ? "Remove" : "Add"} ${button.dataset.compare.toUpperCase()} ${selected ? "from" : "to"} comparison`);
+        button.disabled = !selected && state.compareIds.length >= 5;
+      }
     }
     function setChainMode(mode){
       state.chainMode = mode === "systematic" ? "systematic" : "original";
       const r = records.find(item => item.pdb_id === state.selected);
       if(r) renderScriptActions(r);
     }
-    function externalLinks(r){
+    function externalLinks(r,compact=false){
       const links = [];
+      if(r.doi) links.push(`<a href="https://doi.org/${attr(r.doi)}" target="_blank" rel="noreferrer" title="Open the associated paper">Paper ↗</a>`);
+      else if(r.pubmed_id) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${attr(r.pubmed_id)}/" target="_blank" rel="noreferrer">Paper ↗</a>`);
       if(r.rcsb_url) links.push(`<a href="${attr(r.rcsb_url)}" target="_blank" rel="noreferrer" title="Open this entry at the RCSB PDB">RCSB PDB</a>`);
-      if(r.pdbe_url) links.push(`<a href="${attr(r.pdbe_url)}" target="_blank" rel="noreferrer" title="Open this entry at PDBe">PDBe</a>`);
-      if(r.empiar_id) links.push(`<a href="https://www.ebi.ac.uk/empiar/${attr(r.empiar_id)}/" target="_blank" rel="noreferrer" title="Open the raw cryo-EM dataset at EMPIAR">${esc(r.empiar_id)}</a>`);
-      if(r.pubmed_id) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${attr(r.pubmed_id)}/" target="_blank" rel="noreferrer" title="Open the associated publication at PubMed">PubMed</a>`);
-      if(r.doi) links.push(`<a href="https://doi.org/${attr(r.doi)}" target="_blank" rel="noreferrer" title="Open the publication DOI">DOI</a>`);
+      if(!compact && r.pdbe_url) links.push(`<a href="${attr(r.pdbe_url)}" target="_blank" rel="noreferrer" title="Open this entry at PDBe">PDBe</a>`);
+      if(!compact && r.empiar_id) links.push(`<a href="https://www.ebi.ac.uk/empiar/${attr(r.empiar_id)}/" target="_blank" rel="noreferrer" title="Open the raw cryo-EM dataset at EMPIAR">${esc(r.empiar_id)}</a>`);
+      if(!compact && r.pubmed_id) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${attr(r.pubmed_id)}/" target="_blank" rel="noreferrer" title="Open the associated publication at PubMed">PubMed</a>`);
       for(const emdb of r.emdb_ids || []){
         const digits = String(emdb).match(/\d+/);
-        if(digits) links.push(`<a href="https://www.ebi.ac.uk/emdb/EMD-${attr(digits[0])}" target="_blank" rel="noreferrer" title="Open ${attr(emdb)} at EMDB">${esc(emdb.toUpperCase())}</a>`);
+        if(digits) links.push(`<a href="https://www.ebi.ac.uk/emdb/EMD-${attr(digits[0])}" target="_blank" rel="noreferrer" title="Open ${attr(emdb)} at EMDB">EMDB ${esc(emdb.toUpperCase())}</a>`);
       }
-      return links.length ? `<div class="actions external-links">${links.join("")}</div>` : '<div class="subtle">No external resources listed for this entry.</div>';
+      return links.length ? `<div class="actions external-links">${links.join("")}</div>` : '<div class="subtle">No paper or database links listed for this entry.</div>';
     }
     function reportIssueUrl(r){
       const title = `[curation] ${String(r.pdb_id || "").toUpperCase()} annotation/coloring issue`;
@@ -789,26 +963,17 @@ ${await scriptFor(record,"no_maps")}
     function reportIssueLink(r){
       return `<a class="report-link" href="${attr(reportIssueUrl(r))}" target="_blank" rel="noreferrer" title="Open a prefilled GitHub issue for reporting annotation, homolog, RNA-feature, pathway, or coloring errors">Report annotation/coloring error</a>`;
     }
-    function molstarLegend(r){
-      const groups = [];
-      const byKey = new Map();
-      for(const x of (r.molstar_color_selections||[])){
-        const key = `${x.label}|${x.color}`;
-        let item = byKey.get(key);
-        if(!item){
-          item = {label: x.label || x.auth_asym_id, color: x.color, chains: []};
-          byKey.set(key, item);
-          groups.push(item);
-        }
-        if(x.auth_asym_id && !item.chains.includes(x.auth_asym_id)) item.chains.push(x.auth_asym_id);
-      }
-      return groups.map((x,index)=>`<button type="button" class="molstar-legend-chip" data-legend-index="${index}" onclick="selectMolstarComponentFromLegend(this)" title="${attr(`${x.label} ${x.color}; chains ${x.chains.join(', ')}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label)}</span></button>`).join("");
+    function molstarLegend(r, query=""){
+      return molstarLegendItems(r).map((x,index)=>({x,index})).filter(({x})=>matchesSearch(query,`${x.label} ${x.searchText || ""} ${x.chains.join(" ")}`)).map(({x,index})=>`<button type="button" class="molstar-legend-chip" data-legend-index="${index}" onclick="selectMolstarComponentFromLegend(this)" title="${attr(`${x.label}; deposited chains ${x.chains.join(', ')}`)}"><span class="component-swatch" style="background:${attr(x.color)}"></span><span>${esc(x.label)} <small>chain ${esc(x.chains.join(', '))}</small></span></button>`).join("") || '<span class="subtle">No matching components.</span>';
+    }
+    function searchMolstarProteins(input){
+      document.getElementById("molstarProteinList").innerHTML=molstarLegend(currentMolstarRecord(),input.value);
     }
     function molstarFeatureBrowser(r){
       const features = r.molstar_feature_selections || [];
       if(!features.length) return '<div class="subtle">No RNA feature selections are available for this structure.</div>';
       const groups = unique(features.map(x=>x.group));
-      return `<div class="molstar-feature-box"><div class="molstar-feature-controls"><div class="field"><label for="molstarFeatureGroup">Feature group</label><select id="molstarFeatureGroup" onchange="renderMolstarFeatureButtons()"><option value="all">All feature groups</option>${groups.map(g=>`<option value="${attr(g)}">${esc(g)}</option>`).join("")}</select></div><div class="field"><label for="molstarFeatureSearch">Find feature</label><input id="molstarFeatureSearch" type="search" placeholder="branch, 5SS, U6" oninput="renderMolstarFeatureButtons()"></div><button type="button" onclick="clearMolstarFeature()" title="Clear Mol* feature highlight and refocus the full structure.">Clear feature</button></div><div class="molstar-feature-list" id="molstarFeatureList"></div></div>`;
+      return `<div class="molstar-feature-box"><div class="molstar-feature-controls"><div class="field"><label for="molstarFeatureGroup">Feature group</label><select id="molstarFeatureGroup" onchange="renderMolstarFeatureButtons()"><option value="all">All feature groups</option>${groups.map(g=>`<option value="${attr(g)}">${esc(g)}</option>`).join("")}</select></div><div class="field"><label for="molstarFeatureSearch">Find feature</label><input id="molstarFeatureSearch" type="search" placeholder="branch, 5SS, U6" oninput="renderMolstarFeatureButtons()"></div></div><div class="molstar-feature-list" id="molstarFeatureList"></div></div>`;
     }
     function structureAlignmentItems(r){
       const byPath = new Map((r.rna_sequence_views || []).map(item=>[item.html,item]));
@@ -826,7 +991,7 @@ ${await scriptFor(record,"no_maps")}
     }
     function alignmentViewerUrl(path){
       // Mol* always uses deposited IDs; ChimeraX scripts choose their own URL.
-      return path;
+      return `${path}${path.includes("?")?"&":"?"}v=20261103-selection`;
     }
     function rnaAlignmentPanel(r){
       const items = structureAlignmentItems(r);
@@ -893,18 +1058,64 @@ ${await scriptFor(record,"no_maps")}
       const legend = molstarLegend(r);
       const hasFeatures = Boolean((r.molstar_feature_selections || []).length);
       const hasLegend = Boolean(legend);
-      const features = hasFeatures ? `<section class="molstar-selection-section" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
-      const legendBlock = hasLegend ? `<section class="molstar-selection-section" data-molstar-section="protein"><h3>Proteins</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><div class="molstar-legend">${legend}</div></section>` : "";
-      const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar">${features}${legendBlock}</aside>` : "";
-      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer"></div>${sidebar}</div><div class="molstar-toolbar"><span class="molstar-status" id="molstarStatus">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${rnaAlignmentPanel(r)}${snrnaAlignmentControl(r)}</div>`;
+      const features = hasFeatures ? `<section class="molstar-selection-section" id="selection-rna" role="tabpanel" aria-labelledby="selection-tab-rna" data-molstar-section="rna"><h3>RNA elements</h3><p class="section-note">Click a feature to zoom and highlight it in the 3D model.</p>${molstarFeatureBrowser(r)}</section>` : "";
+      const legendBlock = hasLegend ? `<section class="molstar-selection-section" id="selection-protein" role="tabpanel" aria-labelledby="selection-tab-protein" data-molstar-section="protein" ${hasFeatures?'hidden':''}><h3>Proteins</h3><p class="section-note">Click a component to zoom and highlight all matching chains.</p><label for="molstarProteinSearch">Find protein or chain</label><input id="molstarProteinSearch" type="search" placeholder="PRPF8, chain ID" oninput="searchMolstarProteins(this)"><div class="molstar-legend" id="molstarProteinList">${legend}</div></section>` : "";
+      const sidebar = features || legendBlock ? `<aside class="molstar-selection-sidebar"><div class="molstar-selection-tabs" role="tablist" aria-label="Model components">${[["rna","RNA elements",hasFeatures],["protein","Proteins",hasLegend]].filter(x=>x[2]).map(([id,label],index)=>`<button class="molstar-selection-tab ${index===0?'active':''}" type="button" role="tab" id="selection-tab-${id}" aria-controls="selection-${id}" aria-selected="${index===0}" tabindex="${index===0?'0':'-1'}" data-selection-tab="${id}" onclick="switchMolstarSelectionTab('${id}')" onkeydown="selectionTabKey(event,this)">${label}</button>`).join('')}</div>${features}${legendBlock}</aside>` : "";
+      return `<div class="molstar-panel"><div class="molstar-workbench"><div class="molstar-viewer" id="molstarViewer" aria-label="3D structure viewer" tabindex="0" aria-describedby="molstarGestureHint"></div>${sidebar}</div><div class="molstar-toolbar"><span id="molstarGestureHint" class="subtle">${state.panelOnly?'Drag to rotate · scroll to zoom':'Drag to rotate · Alt + scroll to zoom'}</span><button type="button" onclick="zoomMolstar(.8)" aria-label="Zoom in">+</button><button type="button" onclick="zoomMolstar(1.25)" aria-label="Zoom out">−</button><button type="button" onclick="clearMolstarFeature()">Reset view</button><details class="viewer-display"><summary>Display</summary><div class="viewer-display-actions"><button type="button" data-requires-selection disabled onclick="changeMolstarVisibility('hide')">Hide selection</button><button type="button" data-requires-selection disabled onclick="changeMolstarVisibility('showOnly')">Show only selection</button><button type="button" onclick="changeMolstarVisibility('showAll')">Show all</button></div><label><input type="checkbox" onchange="setMolstarDepthCue(this)">Depth cue</label></details><span class="molstar-status" id="molstarStatus" role="status" aria-live="polite">${count ? `${count} chain-color selections are applied automatically.` : "No chain-color selections are available for this entry."}</span></div>${rnaAlignmentPanel(r)}${snrnaAlignmentControl(r)}</div>`;
     }
     function switchMolstarSelectionTab(tab){
       const value = tab === "protein" ? "protein" : "rna";
       const sidebar = document.querySelector(".molstar-selection-sidebar");
       if(!sidebar) return;
       sidebar.dataset.activeSelection = value;
-      for(const button of sidebar.querySelectorAll("[data-selection-tab]")) button.classList.toggle("active", button.dataset.selectionTab === value);
+      for(const button of sidebar.querySelectorAll("[data-selection-tab]")){
+        const active=button.dataset.selectionTab===value;
+        button.classList.toggle('active',active);button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;
+      }
+      for(const panel of sidebar.querySelectorAll('[data-molstar-section]'))panel.hidden=panel.dataset.molstarSection!==value;
       renderMolstarFeatureButtons();
+    }
+    function selectionTabKey(event,button){
+      if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+      const buttons=[...button.parentElement.querySelectorAll('[data-selection-tab]')];
+      event.preventDefault();const index=buttons.indexOf(button);
+      const next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(index+1)%buttons.length;
+      switchMolstarSelectionTab(buttons[next].dataset.selectionTab);buttons[next].focus();
+    }
+    function zoomMolstar(factor){
+      const camera=currentMolstarViewerElement()?.viewerInstance?.plugin?.canvas3d?.camera;
+      if(!camera)return;
+      const snapshot=camera.getSnapshot();
+      camera.setState({position:snapshot.position.map((v,i)=>snapshot.target[i]+(v-snapshot.target[i])*factor)},150);
+    }
+    function refreshMolstarVisibilityControls(){
+      const viewer=currentMolstarViewerElement();
+      const ready=Boolean(!molstarLoadTask && viewer?.viewerInstance?.plugin?.canvas3d && state.molstarPdbId===state.selected);
+      const busy=Boolean(molstarVisibilityOperation && molstarVisibilityOperation.viewer===viewer);
+      for(const button of document.querySelectorAll('.viewer-display-actions button')){
+        button.disabled=busy || !ready || (button.hasAttribute('data-requires-selection') && !molstarSelectionQueries.length);
+      }
+    }
+    async function changeMolstarVisibility(action){
+      const viewer=currentMolstarViewerElement(),instance=viewer?.viewerInstance;
+      if(!['hide','showOnly','showAll'].includes(action))return;
+      if(molstarLoadTask)return;
+      // Controls are disabled while mutating opacity. Also guard duplicate
+      // calls so a second action cannot race a pending transparency update.
+      if(molstarVisibilityOperation?.viewer===viewer)return;
+      const operation={viewer,intent:molstarSelectionIntent};
+      const queries=molstarSelectionQueries.map(query=>({...query}));
+      molstarVisibilityOperation=operation;
+      refreshMolstarVisibilityControls();
+      try{
+        if(action==='showAll')await SpliceVisInteractions.showAll(instance);
+        else await SpliceVisInteractions[action](instance,queries);
+        if(viewer!==currentMolstarViewerElement() || operation.intent!==molstarSelectionIntent)return;
+        document.getElementById('molstarStatus').textContent=action==='showAll'?'Showing all components.':action==='hide'?'Selection hidden. Use Show all to restore.':'Showing only the selected component or residues. Use Show all to restore.';
+      }catch(error){if(viewer===currentMolstarViewerElement() && operation.intent===molstarSelectionIntent)document.getElementById('molstarStatus').textContent=error.message;}
+      finally{
+        if(molstarVisibilityOperation===operation){molstarVisibilityOperation=null;refreshMolstarVisibilityControls();}
+      }
     }
     function pdbeMolstarReady(){
       return typeof PDBeMolstarPlugin === "function";
@@ -928,8 +1139,7 @@ ${await scriptFor(record,"no_maps")}
       const status = document.getElementById("molstarStatus");
       if(!r || !target) return;
       if(molstarPendingPdbId === r.pdb_id && molstarLoadTask) return molstarLoadTask;
-      const box = target.getBoundingClientRect();
-      if(box.width < 2 || box.height < 2) return;
+      if(!molstarTargetIsVisible(target)) return;
       disposeMolstar();
       const generation = molstarGeneration;
       molstarAbort = new AbortController();
@@ -941,10 +1151,14 @@ ${await scriptFor(record,"no_maps")}
       if(button) button.disabled = true;
       try{
         await waitForMolstarComponent();
-        if(state.selected !== requestedPdbId) return;
+        if(signal.aborted || generation !== molstarGeneration || state.selected !== requestedPdbId) return;
         const liveTarget = document.getElementById("molstarViewer");
-        if(!liveTarget) return;
+        if(liveTarget !== target || !molstarTargetIsVisible(liveTarget)) return;
         liveTarget.innerHTML = "";
+        if(!state.panelOnly)liveTarget.addEventListener('wheel',event=>{
+          // Keep ordinary wheel gestures available for page scrolling.
+          if(!event.altKey)event.stopImmediatePropagation();
+        },{capture:true,passive:true,signal});
         state.molstarViewer = null;
         state.molstarPdbId = "";
         if(signal.aborted) return;
@@ -957,7 +1171,8 @@ ${await scriptFor(record,"no_maps")}
         state.molstarPdbId = r.pdb_id;
         const instance = new PDBeMolstarPlugin();
         viewer.viewerInstance = instance;
-        const options = {assemblyId:"1", hideStructure:["water"], hideControls:false,
+        const options = {assemblyId:"1", hideStructure:["water"], hideControls:!state.panelOnly, selectInteraction:false,
+          hideCanvasControls:state.panelOnly?["animation","trajectory"]:["animation","trajectory","controlToggle","controlInfo","selection","expand"],
           sequencePanel:false, pdbeLink:!DATA.offline, loadingOverlay:true,
           lighting:"flat", subscribeEvents:false, bgColor:{r:255,g:255,b:255},
           validationAnnotation:false, domainAnnotation:false, symmetryAnnotation:false};
@@ -966,13 +1181,17 @@ ${await scriptFor(record,"no_maps")}
         molstarLoadTask = SpliceVisViewer.load(instance, viewer, options, signal);
         await molstarLoadTask;
         if(signal.aborted || generation !== molstarGeneration) return;
+        if(!molstarTargetIsVisible(target)){ disposeMolstar(); return; }
         await applyMolstarIllustrativeStyle();
+        if(signal.aborted || generation !== molstarGeneration) return;
+        SpliceVisInteractions.setDepthCue(instance,false);
         try{
           await applyMolstarColors();
         }catch(colorError){
           const liveStatus = document.getElementById("molstarStatus");
           if(liveStatus) liveStatus.textContent = `Loaded ${r.pdb_id.toUpperCase()}, but the SpliceVis color overlay failed: ${colorError.message}`;
         }
+        if(signal.aborted || generation !== molstarGeneration) return;
         renderMolstarFeatureButtons();
       }catch(error){
         if(signal.aborted || generation !== molstarGeneration) return;
@@ -982,25 +1201,57 @@ ${await scriptFor(record,"no_maps")}
         if(generation === molstarGeneration){
           molstarPendingPdbId = "";
           molstarLoadTask = null;
+          refreshMolstarVisibilityControls();
         }
         if(button) button.disabled = false;
       }
     }
     function disposeMolstar(){
+      molstarSelectionIntent++;
+      molstarSelectionQueries=[];
+      molstarVisibilityOperation=null;
       molstarGeneration++;
       molstarAbort?.abort();
       state.molstarViewer?.viewerInstance?.plugin?.dispose();
+      state.molstarViewer?.remove?.();
       state.molstarViewer = null;
       state.molstarPdbId = "";
       molstarPendingPdbId = "";
       molstarLoadTask = null;
+      document.querySelectorAll('.viewer-display-actions button').forEach(button=>button.disabled=true);
+    }
+    function molstarTargetIsVisible(target=document.getElementById("molstarViewer")){
+      if(state.activeTab !== "structures" || !target || !target.isConnected) return false;
+      // A closed details element can retain a measurable child box in some browsers.
+      if(target.closest('details:not([open])')) return false;
+      const box=target.getBoundingClientRect();
+      return box.width >= 2 && box.height >= 2 && target.getClientRects().length > 0;
+    }
+    function reconcileMolstarVisibility(){
+      if(!molstarTargetIsVisible()){
+        if(state.molstarViewer || molstarPendingPdbId) disposeMolstar();
+        return;
+      }
+      if(molstarAutoPreviewEnabled) autoLoadMolstarForSelected();
+    }
+    function observeMolstarVisibility(){
+      molstarVisibilityObserver?.disconnect();
+      const target=document.getElementById("molstarViewer");
+      if(!target) return;
+      target.closest('details')?.addEventListener('toggle',reconcileMolstarVisibility);
+      // Covers details collapse, responsive CSS, and container-only size changes.
+      // Keep observing after disposal so reopening automatically restores the preview.
+      if(typeof ResizeObserver !== 'undefined'){
+        molstarVisibilityObserver=new ResizeObserver(reconcileMolstarVisibility);
+        molstarVisibilityObserver.observe(target);
+      }
     }
     function autoLoadMolstarForSelected(){
       const requestedPdbId = state.selected;
       window.setTimeout(()=>{
         if(state.selected !== requestedPdbId) return;
         const target = document.getElementById("molstarViewer");
-        if(!target || target.getBoundingClientRect().width < 2 || target.getBoundingClientRect().height < 2) return;
+        if(!molstarTargetIsVisible(target)) return;
         if(molstarPendingPdbId === requestedPdbId) return;
         if(state.molstarPdbId === requestedPdbId && target.querySelector(".molstar-instance")) return;
         loadMolstarForSelected();
@@ -1083,7 +1334,7 @@ ${await scriptFor(record,"no_maps")}
       const query = (document.getElementById("molstarFeatureSearch")?.value || "").trim().toLowerCase();
       const features = (r?.molstar_feature_selections || []).filter((item, index)=>{
         const hay = [item.label,item.feature,item.group,item.kind,item.chain,item.residue_ranges,item.confidence].join(" ").toLowerCase();
-        return (group==="all" || item.group===group) && (!query || hay.includes(query));
+        return (group==="all" || item.group===group) && matchesSearch(query,hay);
       });
       list.innerHTML = features.length ? features.slice(0,70).map((item,index)=>`<button type="button" class="molstar-feature-button" data-feature-index="${index}" onclick="selectMolstarFeatureFromButton(this)" title="${attr(`${item.group}: ${item.label} chain ${item.chain} residues ${item.residue_ranges}; ${item.confidence || "unrated"} confidence; ${item.method || "see RNA annotations"}`)}"><span class="component-swatch" style="background:${attr(item.color)}"></span>${esc(item.label)}${item.confidence !== "high" ? '<span class="feature-confidence" aria-label="Provisional annotation">?</span>' : ""} <span class="subtle">${esc(item.residue_ranges)}</span></button>`).join("") + (features.length>70 ? `<span class="subtle">+${features.length-70} more</span>` : "") : '<span class="subtle">No matching feature selections.</span>';
       list._molstarFeatures = features;
@@ -1093,27 +1344,61 @@ ${await scriptFor(record,"no_maps")}
       const featureIndex = Number(button.dataset.featureIndex);
       const feature = list?._molstarFeatures?.[featureIndex];
       if(!feature) return;
-      await selectMolstarFeature(feature);
+      const intent=await selectMolstarFeature(feature);
+      if(!intent || intent!==molstarSelectionIntent) return;
       const currentList = document.getElementById("molstarFeatureList");
-      if(currentList) for(const item of currentList.querySelectorAll(".molstar-feature-button")) item.classList.toggle("active", Number(item.dataset.featureIndex) === featureIndex);
+      if(currentList) for(const item of currentList.querySelectorAll(".molstar-feature-button")) item.classList.toggle("active", currentList._molstarFeatures?.[Number(item.dataset.featureIndex)] === feature);
       clearMolstarLegendActive();
     }
-    async function selectMolstarFeature(feature){
-      const status = document.getElementById("molstarStatus");
-      const requested = state.selected;
-      if(!currentMolstarViewerElement() || state.molstarPdbId !== state.selected){
-        await loadMolstarForSelected();
+    let molstarSelectionQueries=[];
+    let molstarSelectionIntent=0;
+    let molstarVisibilityOperation=null;
+    async function prepareMolstarSelection(requested){
+      let intent=++molstarSelectionIntent;
+      if(!currentMolstarViewerElement() || state.molstarPdbId!==requested){
+        const task=loadMolstarForSelected();
+        // Starting a new model disposes its predecessor synchronously. This
+        // action owns that load, but later selections/reset must supersede it.
+        intent=molstarSelectionIntent;
+        await task;
       }
       if(molstarLoadTask) await molstarLoadTask;
-      if(state.selected !== requested) return;
-      const viewer = currentMolstarViewerElement();
-      const instance = viewer && viewer.viewerInstance;
-      if(!instance || !instance.visual){ if(status) status.textContent = "Mol* viewer is not ready yet."; return; }
+      if(intent!==molstarSelectionIntent || state.selected!==requested || state.molstarPdbId!==requested) return null;
+      const instance=currentMolstarViewerElement()?.viewerInstance;
+      if(!instance?.visual) return null;
+      return {instance,intent,requested};
+    }
+    function molstarSelectionIsCurrent(selection){
+      return Boolean(selection && selection.intent===molstarSelectionIntent && state.selected===selection.requested && state.molstarPdbId===selection.requested && currentMolstarViewerElement()?.viewerInstance===selection.instance);
+    }
+    async function markMolstarSelection(selection,queries){
+      if(!molstarSelectionIsCurrent(selection)) return false;
+      try{
+        SpliceVisInteractions.select(selection.instance,queries);
+        molstarSelectionQueries=queries.map(q=>({...q}));
+        refreshMolstarVisibilityControls();
+        return true;
+      }catch(error){
+        const status=document.getElementById('molstarStatus');
+        if(status) status.textContent=error.message;
+        return false;
+      }
+    }
+    function setMolstarDepthCue(input){
+      const instance=currentMolstarViewerElement()?.viewerInstance;
+      try{SpliceVisInteractions.setDepthCue(instance,input.checked);}
+      catch(error){document.getElementById('molstarStatus').textContent=error.message;}
+    }
+    async function selectMolstarFeature(feature){
+      const requested = state.selected;
+      const selection=await prepareMolstarSelection(requested);
+      if(!molstarSelectionIsCurrent(selection)) return;
+      const status = document.getElementById("molstarStatus");
       const queries = (feature.queries || []).map(q=>({...q, color: feature.color || "#FFFF00", focus: true}));
       if(!queries.length){ if(status) status.textContent = "This feature has no selectable Mol* residue ranges."; return; }
-      await instance.visual.focus(queries);
-      await instance.visual.highlight({data: queries, color: feature.color || "#FFFF00"});
+      if(!await markMolstarSelection(selection,queries) || !molstarSelectionIsCurrent(selection)) return;
       if(status) status.textContent = `Focused ${feature.label} (${feature.chain}:${feature.residue_ranges}).`;
+      return selection.intent;
     }
     function compactNumericRanges(values){
       const ordered=[...new Set(values.map(Number).filter(Number.isFinite))].sort((a,b)=>a-b),ranges=[];
@@ -1127,20 +1412,19 @@ ${await scriptFor(record,"no_maps")}
       return ranges;
     }
     async function focusMolstarAlignmentSelection(payload){
-      const r=currentMolstarRecord(),status=document.getElementById("molstarStatus");
+      const r=currentMolstarRecord();
       if(!r || String(payload.pdb_id||"").toLowerCase()!==String(r.pdb_id||"").toLowerCase()) return;
       const validChains=new Set((r.rnas||[]).flatMap(item=>String(item.chains||"").split(/;\s*/)).filter(Boolean));
       if(!validChains.has(String(payload.chain||""))) return;
-      const ranges=compactNumericRanges(Array.isArray(payload.auth_residues)?payload.auth_residues:[]);
+      const residues=Array.isArray(payload.auth_residues)?payload.auth_residues:[];
+      if(!residues.length || residues.some(value=>!Number.isSafeInteger(value))) return;
+      const ranges=compactNumericRanges(residues);
       if(!ranges.length) return;
-      if(!currentMolstarViewerElement() || state.molstarPdbId!==state.selected) await loadMolstarForSelected();
-      if(molstarLoadTask) await molstarLoadTask;
-      if(state.selected !== r.pdb_id) return;
-      const viewer=currentMolstarViewerElement(),instance=viewer&&viewer.viewerInstance;
-      if(!instance||!instance.visual){ if(status) status.textContent="Mol* viewer is not ready yet."; return; }
+      const selection=await prepareMolstarSelection(r.pdb_id);
+      if(!molstarSelectionIsCurrent(selection)) return;
+      const status=document.getElementById("molstarStatus");
       const queries=ranges.map(([start,end])=>({auth_asym_id:payload.chain,beg_auth_seq_id:start,end_auth_seq_id:end,color:"#00A6C8",focus:true}));
-      await instance.visual.focus(queries);
-      await instance.visual.highlight({data:queries,color:"#00A6C8"});
+      if(!await markMolstarSelection(selection,queries) || !molstarSelectionIsCurrent(selection)) return;
       clearMolstarLegendActive();
       document.querySelectorAll(".molstar-feature-button").forEach(item=>item.classList.remove("active"));
       if(status) status.textContent=`Focused ${payload.label||`${r.pdb_id.toUpperCase()} chain ${payload.chain}`}.`;
@@ -1175,7 +1459,13 @@ ${await scriptFor(record,"no_maps")}
         }
         if(x.auth_asym_id && !item.chains.includes(x.auth_asym_id)) item.chains.push(x.auth_asym_id);
       }
-      return groups;
+      const rnaChains=new Set((r?.rnas || []).flatMap(item=>String(item.chains || "").split(/;\s*/)));
+      for(const item of groups){
+        const related=(r?.comparison_components || []).filter(c=>c.chains.some(chain=>item.chains.includes(chain)));
+        const deposited=(r?.proteins || []).filter(c=>String(c.chains || "").split(/;\s*/).some(chain=>item.chains.includes(chain)));
+        item.searchText=[...related.map(c=>c.label),...deposited.map(c=>`${c.gene || ""} ${c.name || ""}`)].join(" ");
+      }
+      return groups.filter(item=>!item.chains.every(chain=>rnaChains.has(chain))).sort((a,b)=>a.label.localeCompare(b.label,undefined,{numeric:true,sensitivity:"base"}));
     }
     function clearMolstarLegendActive(){
       for(const item of document.querySelectorAll(".molstar-legend-chip")) item.classList.remove("active");
@@ -1183,34 +1473,32 @@ ${await scriptFor(record,"no_maps")}
     async function selectMolstarComponentFromLegend(button){
       const r = currentMolstarRecord();
       const item = molstarLegendItems(r)[Number(button.dataset.legendIndex)];
-      const status = document.getElementById("molstarStatus");
       if(!item || !item.chains.length) return;
-      if(!currentMolstarViewerElement() || state.molstarPdbId !== state.selected){
-        await loadMolstarForSelected();
-      }
-      if(molstarLoadTask) await molstarLoadTask;
-      if(state.selected !== r.pdb_id) return;
-      const viewer = currentMolstarViewerElement();
-      const instance = viewer && viewer.viewerInstance;
-      if(!instance || !instance.visual){ if(status) status.textContent = "Mol* viewer is not ready yet."; return; }
+      const selection=await prepareMolstarSelection(r.pdb_id);
+      if(!molstarSelectionIsCurrent(selection)) return;
+      const status=document.getElementById("molstarStatus");
       const queries = item.chains.map(auth_asym_id=>({auth_asym_id, color: item.color, focus: true}));
-      await instance.visual.focus(queries);
-      await instance.visual.highlight({data: queries, color: item.color});
+      if(!await markMolstarSelection(selection,queries) || !molstarSelectionIsCurrent(selection)) return;
       for(const chip of document.querySelectorAll(".molstar-legend-chip")) chip.classList.toggle("active", chip===button);
       const featureList = document.getElementById("molstarFeatureList");
       if(featureList) for(const featureButton of featureList.querySelectorAll(".molstar-feature-button")) featureButton.classList.remove("active");
       if(status) status.textContent = `Focused ${item.label} chain${item.chains.length === 1 ? "" : "s"} ${item.chains.join(", ")}.`;
     }
     async function clearMolstarFeature(){
+      const intent=++molstarSelectionIntent;
       const status = document.getElementById("molstarStatus");
       const viewer = currentMolstarViewerElement();
       const instance = viewer && viewer.viewerInstance;
-      if(instance?.visual?.clearHighlight) await instance.visual.clearHighlight();
-      if(instance?.visual?.reset) await instance.visual.reset({camera:true});
+      molstarSelectionQueries=[];
+      refreshMolstarVisibilityControls();
       const list = document.getElementById("molstarFeatureList");
       if(list) for(const item of list.querySelectorAll(".molstar-feature-button")) item.classList.remove("active");
       clearMolstarLegendActive();
-      if(status) status.textContent = "Cleared Mol* feature highlight.";
+      if(status) status.textContent = "Reset view and cleared selection.";
+      if(instance?.plugin?.canvas3d){
+        await SpliceVisInteractions.clear(instance,{resetCamera:false});
+        if(intent===molstarSelectionIntent && currentMolstarViewerElement()?.viewerInstance===instance) await instance.visual?.reset?.({camera:true});
+      }
     }
     function showStartTab(tab){
       state.activeTab = tab;
@@ -1242,9 +1530,6 @@ ${await scriptFor(record,"no_maps")}
     function renderDetail(r){
       if(r && renderedDetailId === r.pdb_id && els.detail.querySelector('#molstarViewer')){
         renderScriptActions(r);
-        for(const section of els.detail.querySelectorAll('details.detail-section')){
-          if(section.querySelector('summary')?.textContent === 'Compare Structures') section.querySelector('.detail-section-body').innerHTML = comparisonPanel();
-        }
         return;
       }
       disposeMolstar();
@@ -1253,6 +1538,7 @@ ${await scriptFor(record,"no_maps")}
       els.selectedId.textContent = r.pdb_id.toUpperCase();
       renderScriptActions(r);
       renderDetailBody(r);
+      observeMolstarVisibility();
     }
     function renderScriptActions(r){
       const systematicAvailable = Boolean(r.script_systematic_path);
@@ -1262,19 +1548,27 @@ ${await scriptFor(record,"no_maps")}
       const primaryMapAvailable = selectedScriptMode === "systematic" ? r.primary_map_script_systematic_path : r.primary_map_script_path;
       const primaryMapButton = primaryMapAvailable ? `<button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'primary_map')" title="Copy a ChimeraX script that downloads the model and primary EMDB map, then aligns the model and brings the map when possible.">Copy ChimeraX script (model + map)</button>` : "";
       const compositeButtons = (r.composite_groups||[]).map(group => `<button class="script-copy" onclick="copyScriptFile('${attr(group.script_path)}', this)" title="${attr(group.note || 'Copy a combined ChimeraX script for this split deposited assembly.')} ${attr(group.label || group.composite_id || "")}">Copy assembly</button>`).join("");
-      els.selectedScriptActions.innerHTML = `<span class="selected-header-actions-label">ChimeraX</span><button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">Copy ChimeraX script (model only)</button>${primaryMapButton}${compositeButtons}${chainModeOption}`;
+      els.selectedScriptActions.innerHTML = `${state.panelOnly?`<a class="button" href="${attr(atlasUrl(r.pdb_id))}">Back to atlas</a>`:`<a class="button" href="${attr(structurePanelUrl(r.pdb_id))}" target="_blank" rel="noopener">Open viewer ↗</a>`}<button class="script-copy" onclick="copyStructureScript('${attr(r.pdb_id)}', this, 'no_maps')" title="Copy a model-only ChimeraX script that downloads the deposited PDB coordinates directly.">ChimeraX: copy model</button><details class="chimerax-options"><summary>ChimeraX options & help</summary><div class="chimerax-options-body">${primaryMapButton}${compositeButtons}${chainModeOption}<p>Paste the copied script into the ChimeraX command line. Model-only loads fastest; maps can be large and take several minutes. Feature clicks in the named-selection browser use thin Detail ribbons; Overview and Reset view restore the wider view.</p><div class="actions"><a href="https://www.rbvi.ucsf.edu/chimerax/download.html" target="_blank" rel="noreferrer">Download ChimeraX</a><a href="https://www.rbvi.ucsf.edu/chimerax/docs/quickstart/index.html" target="_blank" rel="noreferrer">Quick start</a><a href="https://www.rbvi.ucsf.edu/chimerax/tutorials.html" target="_blank" rel="noreferrer">Tutorials</a></div></div></details>`;
     }
     function renderDetailBody(r){
       const abstractBlock = r.abstract ? `<details class="detail-section"><summary>Abstract</summary><div class="detail-section-body">${esc(r.abstract)}</div></details>` : "";
-      const resourceBlock = `${externalLinks(r)}<div class="actions secondary-actions">${reportIssueLink(r)}</div>`;
-      const substrateBadges=unique((r.substrate_types||[]).map(item=>item.family||item.type)).filter(value=>value!=="Other/unspecified substrate").slice(0,2).map(value=>`<span class="badge">${esc(value)}</span>`).join("");
-      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta"><span class="badge">${esc(r.state)}</span>${minorSpliceosomeBadge(r)}${transSpliceosomeBadge(r)}<span class="badge">${esc(r.species)}</span><span class="badge">${esc(formatResolution(r.resolution)||"?")} A</span><span class="badge">${esc(r.year||"")}</span><span class="badge">${r.chain_count||0} chains</span>${substrateBadges}${curationBadges(r)}</div>${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Resources", resourceBlock)}${detailSection("Curation, Quality, and Audits", curationPanel(r) + proteinEvidencePanel(r) + unassignedPanel(r.unassigned_components||[]) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}${detailSection("Compare Structures", comparisonPanel())}`;
+      const resourceBlock = `<nav class="structure-links" aria-label="Structure links">${externalLinks(r,true)}</nav>`;
+      const substrateBadges=unique((r.substrate_types||[]).map(item=>item.family||item.type)).filter(value=>value!=="Other/unspecified substrate").slice(0,2).map(value=>annotationBadge(value, "", "The RNA used in the experiment, or its sequence family. Find the sequence and supporting information under RNA Annotations.")).join("");
+      els.detail.innerHTML = `<p class="detail-title">${esc(r.title)}</p><div class="detail-meta">${annotationBadge(r.state, "", `Where this structure belongs in the splicing pathway. See the cycle overview for what happens at this stage.`)}${minorSpliceosomeBadge(r)}${transSpliceosomeBadge(r)}${annotationBadge(r.species, "", "The organism this structure comes from. The RNA used in the experiment may have a different source.")}${annotationBadge(`${formatResolution(r.resolution)||"?"} A`, "", "How much detail the experiment reveals, in angstroms. Smaller values usually mean finer detail; ? means unavailable.")}${annotationBadge(r.year||"n/a", "", "The year listed for this structure.")}${annotationBadge(`${r.chain_count||0} chains`, "", "Number of protein and RNA chains in the deposited structure. Several chains can be copies of the same molecule.")}${substrateBadges}${curationBadges(r)}</div>${resourceBlock}${detailSection("Interactive 3D", molstarPanel(r), true)}${detailSection("Curation, Quality, and Audits", externalLinks(r) + reportIssueLink(r) + curationPanel(r) + proteinEvidencePanel(r) + unassignedPanel(r.unassigned_components||[]) + qualityPanel(r.quality))}${detailSection("RNA Annotations", substrateTypePanel(r.substrate_types||[]) + rna2dPanel(r.rna_2d||{}) + snrnaPanel(r.snrna_features||[]), Boolean((r.rna_2d&&r.rna_2d.png) || (r.substrate_types||[]).length || (r.snrna_features||[]).length))}`;
       renderMolstarFeatureButtons();
     }
     function detailSection(title, body, open=false){
       return `<details class="detail-section"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="detail-section-body">${body}</div></details>`;
     }
-    function confidenceBadge(v){ const label=v||"n/a"; const cls=label==="high"?"good":label==="review"?"review":label==="low"?"bad":"warn"; return `<span class="badge ${cls}">${esc(label)}</span>`; }
+    function confidenceBadge(v, subject="Assignment"){
+      const label=v||"n/a";
+      const cls=label==="high"?"good":label==="review"?"review":label==="low"?"bad":"warn";
+      let help=evidenceHelp(v, subject);
+      if(subject==="Color coverage") help="Color coverage: high means all proteins have colors, medium means some do, and low means none do. Colors do not confirm protein identity.";
+      if(subject==="RNA identity") help="High means all RNAs have been identified by the current checks. Medium means some still need identifying. Individual RNA labels may still need checking.";
+      if(!v) help=`${subject}: this has not been assessed yet.`;
+      return annotationBadge(label, cls, help);
+    }
     function proteinEvidencePanel(r){
       const proteins=(r.proteins||[]).filter(p=>p.homolog_relationship);
       if(!proteins.length) return "";
@@ -1283,7 +1577,7 @@ ${await scriptFor(record,"no_maps")}
     }
     function curationPanel(r){
       const c=r.curation||{}; const flags=c.flags||[];
-      return `<h3>Curation Provenance</h3><div class="detail-grid"><div class="detail-block"><div class="kv"><div>Stage evidence</div><div>${esc(c.stage_evidence||"n/a")}</div><div>Stage confidence</div><div>${confidenceBadge(c.stage_confidence)}</div><div>Homolog confidence</div><div>${confidenceBadge(c.homolog_confidence)}</div><div>Color confidence</div><div>${confidenceBadge(c.color_confidence)}</div><div>RNA ID confidence</div><div>${confidenceBadge(c.rna_identity_confidence)}</div></div></div><div class="detail-block"><div class="kv"><div>Badges</div><div>${(c.badges||[]).map(x=>`<span class="badge ${x==="needs review"?"review":"good"}">${esc(x)}</span>`).join(" ")||"n/a"}</div><div>Flags</div><div>${flags.length?flags.map(x=>`<span class="badge bad">${esc(x)}</span>`).join(" "):'<span class="badge good">none</span>'}</div><div>Protein colors</div><div>${esc(c.colored_proteins||"0")}/${esc(c.protein_count||"0")}</div><div>Unassigned</div><div>${esc(c.unassigned_components||"0")}</div><div>Summary</div><div>${esc(c.curation_summary||"n/a")}</div></div></div></div>`;
+      return `<h3>Curation Provenance</h3><div class="detail-grid"><div class="detail-block"><div class="kv"><div>Stage evidence</div><div>${esc(c.stage_evidence||"n/a")}</div><div>Stage confidence</div><div>${confidenceBadge(c.stage_confidence, "Splicing state")}</div><div>Homolog confidence</div><div>${confidenceBadge(c.homolog_confidence, "Protein identification across species")}</div><div>Color confidence</div><div>${confidenceBadge(c.color_confidence, "Color coverage")}</div><div>RNA ID confidence</div><div>${confidenceBadge(c.rna_identity_confidence, "RNA identity")}</div></div></div><div class="detail-block"><div class="kv"><div>Badges</div><div>${(c.badges||[]).map(x=>annotationBadge(x, x==="needs review"?"review":"good", curationTagHelp(x))).join(" ")||"n/a"}</div><div>Flags</div><div>${flags.length?flags.map(x=>annotationBadge(x, "bad", `${x}: ${flagSupportingMetric(x,r)}`)).join(" "):annotationBadge("none", "good", "The available checks found no warnings. This does not rule out problems they did not test.")}</div><div>Protein colors</div><div>${esc(c.colored_proteins||"0")}/${esc(c.protein_count||"0")}</div><div>Unassigned</div><div>${esc(c.unassigned_components||"0")}</div><div>Summary</div><div>${esc(c.curation_summary||"n/a")}</div></div></div></div>`;
     }
     function unassignedPanel(items){
       if(!items.length) return `<h3>Unassigned Components</h3><div class="subtle">No unresolved components in the generated audit.</div>`;
@@ -1294,7 +1588,9 @@ ${await scriptFor(record,"no_maps")}
       const links = [`<a href="${attr(item.png)}">PNG</a>`];
       if(item.svg) links.push(`<a href="${attr(item.svg)}">SVG</a>`);
       const counts = [item.rna_chain_count ? `${item.rna_chain_count} RNA chains` : "", item.r2dt_chain_count ? `${item.r2dt_chain_count} R2DT layouts` : "", item.failed_chain_count && item.failed_chain_count !== "0" ? `${item.failed_chain_count} failed` : ""].filter(Boolean).join("; ");
-      return `<details class="rna-2d-details"><summary>RNA secondary-structure rendering</summary><img class="rna-2d-img" src="${attr(item.png)}" alt="RNA secondary-structure panel for the selected PDB entry" loading="lazy"><div class="subtle">${esc(counts)} ${links.join(" ")}</div>${item.notes ? `<div class="subtle">${esc(item.notes)}</div>` : ""}</details>`;
+      const r2dt=Boolean(item.r2dt_chain_count && item.r2dt_chain_count!=="0");
+      const legend=r2dt ? "Grey backbone: deposited sequence; dashed backbone: unresolved interval. Thin black lines: base pairs. Dashed curves between RNAs: clustered FR3D interactions; thicker curves represent more reported interactions (capped width), not stronger binding or higher confidence. Coloured overlays mark annotated features." : "Coloured tracks: deposited RNA chains. Thin arcs: reported intrachain base pairs. Dashed links: annotation-derived feature relationships; line width does not encode interaction strength.";
+      return `<details class="rna-2d-details"><summary>RNA secondary-structure rendering</summary><img class="rna-2d-img" src="${attr(item.png)}" alt="RNA secondary-structure panel for the selected PDB entry" loading="lazy"><div class="subtle">${esc(counts)} ${links.join(" ")}</div><p class="rna-2d-legend">${esc(legend)} Open SVG to inspect individual interaction tooltips.</p>${item.notes ? `<div class="subtle">${esc(item.notes)}</div>` : ""}</details>`;
     }
     function substrateTypePanel(items){
       if(!items.length) return "";
@@ -1332,10 +1628,209 @@ ${await scriptFor(record,"no_maps")}
       if(!items.length) return "";
       return `<details class="snrna-feature-details"><summary>snRNA feature annotations (${items.length})</summary><div class="snrna-feature-details-body"><div class="subtle">A leading ? marks an uncertain assignment retained with validation warnings.</div><div class="mini-list">${items.map(i=>`<div><strong>${esc(i.snrna||"snRNA")} ${esc(i.label||i.feature)}</strong> <span class="subtle">deposited chain ${esc(i.original_chain_id||"")}, seq ${esc(i.seq_start)}-${esc(i.seq_end)}, residues ${esc(i.auth_residue_ranges||"n/a")}</span><br><code>${esc(i.feature_sequence||"")}</code></div>`).join("")}</div></div></details>`;
     }
+    function componentDifferenceRows(selected){
+      const rows = new Map();
+      for(const record of selected){
+        for(const component of record.comparison_components || []){
+          if(!rows.has(component.key)) rows.set(component.key, {...component, entries: new Map(), colors: new Map()});
+          const row = rows.get(component.key);
+          row.colors.set(record.pdb_id, component.color_hex || '');
+          const previous = row.entries.get(record.pdb_id) || [];
+          row.entries.set(record.pdb_id, [...new Set([...previous, ...component.chains])]);
+        }
+      }
+      return [...rows.values()].map(row=>{
+        const counts = selected.map(r=>row.entries.has(r.pdb_id) ? row.entries.get(r.pdb_id).length : -1);
+        return {...row, different: new Set(counts).size > 1};
+      }).sort((a,b)=>Number(b.different)-Number(a.different) || a.type.localeCompare(b.type) || a.label.localeCompare(b.label, undefined, {numeric:true}));
+    }
+    function comparisonSwatch(color){
+      return /^#[0-9a-f]{6}$/i.test(color || '') ? `<span class="comparison-swatch" style="background:${color}" aria-hidden="true"></span>` : '';
+    }
+    function comparisonTable(selected, title, rows){
+      return `<div class="comparison-table-wrap" tabindex="0" role="region" aria-label="${attr(title)}"><table class="comparison-table comparison-count-${selected.length}"><caption class="sr-only">${esc(title)}</caption><thead><tr><th scope="col">${esc(title)}</th>${selected.map(r=>`<th scope="col"><a href="${attr(structurePanelUrl(r.pdb_id))}" target="_blank" rel="noopener">${esc(r.pdb_id.toUpperCase())}</a><span class="comparison-kind">${esc(r.species)} · ${esc(r.state)}</span></th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr><th scope="row">${row.label}</th>${row.values.map(value=>`<td>${value}</td>`).join('')}</tr>`).join('') || `<tr><td colspan="${selected.length+1}">No rows to show. If Differences only is enabled, uncheck it to see shared proteins.</td></tr>`}</tbody></table></div>`;
+    }
+    function comparisonComponentTable(selected, kind){
+      const allRows = componentDifferenceRows(selected).filter(row=>row.type===kind);
+      const rows = kind==='protein' && comparisonView.onlyDifferences ? allRows.filter(row=>row.different) : allRows;
+      const controls = kind==='protein' ? `<div class="comparison-options"><label><input type="checkbox" data-comparison-differences ${comparisonView.onlyDifferences?'checked':''}> Differences only</label><span class="subtle">${rows.length} of ${allRows.length} protein identities · presence or deposited chain count</span></div>` : '';
+      return controls + comparisonTable(selected, kind==='protein'?'Proteins':'RNA components', rows.map(row=>({
+        label: `${comparisonSwatch(row.color_hex)}${esc(row.label)}${row.matched?'':'<span class="comparison-kind">Identity unassigned; not matched across entries</span>'}`,
+        values: selected.map(r=>row.entries.has(r.pdb_id) ? `${comparisonSwatch(row.colors.get(r.pdb_id))}<strong>Reported</strong><span class="comparison-chains">${row.entries.get(r.pdb_id).length ? 'Chain'+(row.entries.get(r.pdb_id).length>1?'s':'')+' '+esc(row.entries.get(r.pdb_id).join(', ')) : 'Chain ID unavailable'}</span>` : '<span class="component-not-reported">Not reported</span>')
+      })));
+    }
+    function comparisonFeatureRows(selected){
+      const features = new Map();
+      for(const r of selected){
+        for(const item of r.molstar_feature_selections || []){
+          const key = `${item.kind}:${item.feature}`;
+          if(!features.has(key)) features.set(key, {label:item.label, color:item.color, entries:new Map()});
+          const feature = features.get(key);
+          if(!feature.entries.has(r.pdb_id)) feature.entries.set(r.pdb_id, []);
+          feature.entries.get(r.pdb_id).push(item);
+        }
+      }
+      return [...features.values()].sort((a,b)=>a.label.localeCompare(b.label)).map(feature=>({
+        label: `${comparisonSwatch(feature.color)}${esc(feature.label)}`,
+        values: selected.map(r=>feature.entries.has(r.pdb_id) ? feature.entries.get(r.pdb_id).map(item=>`<div>${comparisonSwatch(item.color)}<strong>${item.confidence==='high'?'Annotated':'Provisional annotation'}</strong><span class="comparison-chains">${esc(item.chain)}:${esc(item.residue_ranges)} · ${esc(item.confidence||'unrated')} confidence</span></div>`).join('') : '<span class="subtle">Not annotated</span>')
+      }));
+    }
+    function comparisonRnaPanel(selected){
+      const substrate = [
+        {label:'Substrate / construct', values:selected.map(r=>(r.substrate_types||[]).map(s=>`<strong>${esc(s.type||s.family||'Unspecified')}</strong><span class="comparison-chains">${esc(s.reference_label||s.molecule_name||'')} · chain ${esc(s.chains||'unspecified')} · ${esc(s.confidence||'unrated')} confidence</span>`).join('<br>') || 'No substrate assignment')},
+        {label:'Assignment evidence', values:selected.map(r=>(r.substrate_types||[]).map(s=>esc(s.evidence||'Not recorded')).join('<br>') || 'Not recorded')}
+      ];
+      const features = comparisonFeatureRows(selected);
+      return `<p class="comparison-note">Compare substrate assignments, reported RNA components and annotated features. “Not annotated” does not mean the RNA or interaction is absent. Residue numbers belong to each deposition and are not aligned positions.</p>${comparisonTable(selected,'Substrate',substrate)}<h3>RNA components</h3>${comparisonComponentTable(selected,'rna')}<h3>Annotated features (${features.length})</h3>${features.length?comparisonTable(selected,'Feature annotations',features):'<p>No selectable RNA feature annotations in these entries.</p>'}`;
+    }
+    function comparisonOverview(selected){
+      const text = value => value===undefined || value===null || value==='' ? 'Not available' : esc(value);
+      const fields = [
+        ['Splicing state',r=>r.state], ['Species',r=>r.species],
+        ['Reported resolution (Å)',r=>r.resolution], ['Publication year',r=>r.year],
+        ['Total deposited chains',r=>r.chain_count], ['Protein entities',r=>r.protein_count],
+        ['RNA entities',r=>r.rna_count], ['Structure title',r=>r.title],
+        ['Publication',r=>r.paper_title], ['Journal',r=>r.journal]
+      ];
+      return '<p class="comparison-note">Entity counts and chain counts differ: an entity can have multiple chains. Reported resolution is a global value, not local quality at a feature.</p>' + comparisonTable(selected,'Structure details',fields.map(([label,read])=>({label:esc(label),values:selected.map(r=>text(read(r)))})));
+    }
+    function comparisonEvidence(selected){
+      const text = value=>value===undefined || value===null || value==='' ? 'Not available' : esc(value);
+      const fields = [
+        ['Annotation confidence',r=>text(r.curation?.overall_confidence)],
+        ['Component assignment',r=>text(r.curation?.assignment_completeness)],
+        ['Curation warnings',r=>(r.curation?.flags||[]).map(esc).join('<br>') || 'None recorded'],
+        ['Primary EMDB map',r=>text(r.quality?.primary_emdb_id)],
+        ['Map resolution (Å)',r=>text(r.quality?.map_resolution_A)],
+        ['Clashscore',r=>text(r.quality?.clashscore)],
+        ['Ramachandran outliers (%)',r=>text(r.quality?.rama_outliers_percent)],
+        ['RNA suite outliers (%)',r=>text(r.quality?.rna_suite_outliers_percent)],
+        ['Publication and data links',r=>externalLinks(r)]
+      ];
+      return '<p class="comparison-note">Use these values and source links to assess comparability. Missing metrics are unavailable, not zero; annotation confidence is not experimental model quality.</p>' + comparisonTable(selected,'Evidence & links',fields.map(([label,read])=>({label:esc(label),values:selected.map(read)})));
+    }
+    const comparison3d = {reference:'',mobile:'',mode:'side',manifest:null,controller:null,abort:null};
+    function disposeComparison3d(){
+      comparison3d.abort?.abort();
+      comparison3d.controller?.dispose();
+      comparison3d.controller=null;
+      comparison3d.abort=null;
+    }
+    function comparison3dRecords(){
+      return [comparison3d.reference,comparison3d.mobile].map(id=>records.find(r=>r.pdb_id===id));
+    }
+    function comparison3dPanel(selected){
+      if(!selected.some(r=>r.pdb_id===comparison3d.reference)) comparison3d.reference=selected[0].pdb_id;
+      if(!selected.some(r=>r.pdb_id===comparison3d.mobile) || comparison3d.mobile===comparison3d.reference) comparison3d.mobile=selected.find(r=>r.pdb_id!==comparison3d.reference).pdb_id;
+      const chooser=(id,value,label)=>`<label>${label}<select id="${id}">${selected.map(r=>`<option value="${attr(r.pdb_id)}" ${r.pdb_id===value?'selected':''}>${esc(r.pdb_id.toUpperCase())} · ${esc(r.state)} · ${esc(r.species)}</option>`).join('')}</select></label>`;
+      const [reference,mobile]=comparison3dRecords();
+      const common=componentDifferenceRows([reference,mobile]).filter(row=>row.type==='protein' && row.matched && row.entries.size===2);
+      return `<p class="comparison-note">Align deposited models using a shared protein anchor. This helps inspect structural changes; the Proteins tab remains the quickest way to identify reported gains or losses.</p><div class="comparison-3d-controls">${chooser('compare3dReference',comparison3d.reference,'Reference')}${chooser('compare3dMobile',comparison3d.mobile,'Compare with')}<label>View<select id="compare3dMode"><option value="side" ${comparison3d.mode==='side'?'selected':''}>Side by side</option><option value="overlay" ${comparison3d.mode==='overlay'?'selected':''}>Overlay</option></select></label><button type="button" id="loadComparison3d">Align and view</button></div><p id="comparison3dStatus" role="status">Models load only when you choose Align and view. At most two viewers are active.</p><div id="comparison3dTools" class="comparison-3d-tools" hidden><label><input id="comparisonCameraSync" type="checkbox" checked>Synchronize views</label><label>Shared protein<select id="comparisonSharedProtein"><option value="">Choose a protein</option>${common.map(row=>`<option value="${attr(row.key)}">${esc(row.label)}</option>`).join('')}</select></label><label><input id="comparisonOnlyProtein" type="checkbox">Show only this protein</label><button type="button" id="resetComparison3d">Reset views</button></div><div class="comparison-canvases ${comparison3d.mode==='overlay'?'overlay':''}" id="comparisonCanvases" hidden><section><h3>${esc(reference.pdb_id.toUpperCase())}${comparison3d.mode==='overlay'?` + ${esc(mobile.pdb_id.toUpperCase())}`:''}</h3><div id="comparisonLeft" class="comparison-canvas"></div></section><section ${comparison3d.mode==='overlay'?'hidden':''}><h3>${esc(mobile.pdb_id.toUpperCase())}</h3><div id="comparisonRight" class="comparison-canvas"></div></section></div><p class="subtle">For detailed fitting, maps and measurements, use ChimeraX: <a href="${attr(reference.script_path || '')}" download>${esc(reference.pdb_id.toUpperCase())} script</a> · <a href="${attr(mobile.script_path || '')}" download>${esc(mobile.pdb_id.toUpperCase())} script</a>. Overlay retains component colours; use Show only this protein to reduce overlap.</p>`;
+    }
+    async function loadComparison3d(){
+      disposeComparison3d();
+      const abort=new AbortController();comparison3d.abort=abort;
+      const status=document.getElementById('comparison3dStatus'),button=document.getElementById('loadComparison3d');
+      const [reference,mobile]=comparison3dRecords();
+      button.disabled=true;status.textContent='Checking shared alignment evidence…';
+      document.getElementById('comparison3dTools').hidden=true;
+      document.getElementById('comparisonCameraSync').checked=true;
+      document.getElementById('comparisonSharedProtein').value='';
+      document.getElementById('comparisonOnlyProtein').checked=false;
+      try{
+        if(!comparison3d.manifest){
+          const response=await fetch('data/comparison-alignments.json',{signal:abort.signal});
+          if(!response.ok) throw new Error('Alignment evidence is unavailable in this release. Use the tables or ChimeraX scripts below.');
+          comparison3d.manifest=await response.json();
+        }
+        if(abort.signal.aborted)return;
+        const pair=comparison3d.manifest.pairs[[reference.pdb_id,mobile.pdb_id].sort().join(':')];
+        if(!pair?.supported) throw new Error(`No reliable shared alignment: ${pair?.reason || 'no validated protein anchor'}. Use the component tables or ChimeraX for a custom fit.`);
+        const matrix=pair.reference===reference.pdb_id?pair.matrix:SpliceVisComparisonViewer.invertMatrix(pair.matrix);
+        const evidence=`${pair.anchor} anchor · ${pair.fit_residues}/${pair.matched_residues} matched Cα atoms fitted · RMSD ${pair.rmsd.toFixed(2)} Å (all matched: ${pair.all_matched_rmsd.toFixed(2)} Å) · sequence identity ${(100*pair.sequence_identity).toFixed(0)}%. This is an anchor fit, not a whole-spliceosome fit.`;
+        document.getElementById('comparisonCanvases').hidden=false;
+        const controller=await SpliceVisComparisonViewer.create({leftElement:document.getElementById('comparisonLeft'),rightElement:document.getElementById('comparisonRight'),reference,mobile,referenceProbes:comparison3d.manifest.probes?.[reference.pdb_id],mobileProbes:comparison3d.manifest.probes?.[mobile.pdb_id],matrix,overlay:comparison3d.mode==='overlay',offline:!!DATA.offline,signal:abort.signal,onStatus:message=>{if(!abort.signal.aborted)status.textContent=message;}});
+        if(abort.signal.aborted){controller.dispose();return;}
+        comparison3d.controller=controller;
+        status.textContent=evidence;
+        document.getElementById('comparison3dTools').hidden=false;
+        document.getElementById('comparisonCameraSync').closest('label').hidden=comparison3d.mode==='overlay';
+      }catch(error){
+        if(!abort.signal.aborted){status.textContent=error.message;document.getElementById('comparisonCanvases').hidden=true;document.getElementById('comparison3dTools').hidden=true;}
+      }finally{if(!abort.signal.aborted)button.disabled=false;}
+    }
+    async function selectComparisonProtein(){
+      const controller=comparison3d.controller;if(!controller)return;
+      const [reference,mobile]=comparison3dRecords(),key=document.getElementById('comparisonSharedProtein').value;
+      const row=componentDifferenceRows([reference,mobile]).find(r=>r.key===key);
+      if(!row)return;
+      const queries=r=>row.entries.get(r.pdb_id).map(auth_asym_id=>({auth_asym_id}));
+      const controls=[document.getElementById('comparisonSharedProtein'),document.getElementById('comparisonOnlyProtein'),document.getElementById('resetComparison3d')];
+      const only=controls[1].checked;controls.forEach(control=>control.disabled=true);
+      try{await controller.selectComponent(queries(reference),queries(mobile),{only});}
+      catch(error){if(controller===comparison3d.controller){const status=document.getElementById('comparison3dStatus');if(status)status.textContent=error.message;}}
+      finally{if(controller===comparison3d.controller)controls.forEach(control=>control.disabled=false);}
+    }
+    function bindComparison3d(){
+      for(const [id,key] of [['compare3dReference','reference'],['compare3dMobile','mobile'],['compare3dMode','mode']]){
+        document.getElementById(id)?.addEventListener('change',event=>{comparison3d[key]=event.target.value;renderComparison();});
+      }
+      document.getElementById('loadComparison3d')?.addEventListener('click',loadComparison3d);
+      document.getElementById('comparisonCameraSync')?.addEventListener('change',event=>comparison3d.controller?.setSync(event.target.checked));
+      document.getElementById('comparisonSharedProtein')?.addEventListener('change',selectComparisonProtein);
+      document.getElementById('comparisonOnlyProtein')?.addEventListener('change',selectComparisonProtein);
+      document.getElementById('resetComparison3d')?.addEventListener('click',async()=>{
+        const controller=comparison3d.controller;if(!controller)return;
+        try{await controller.reset();if(controller!==comparison3d.controller)return;
+          document.getElementById('comparisonSharedProtein').value='';document.getElementById('comparisonOnlyProtein').checked=false;
+        }catch(error){if(controller===comparison3d.controller)document.getElementById('comparison3dStatus').textContent=error.message;}
+      });
+    }
     function comparisonPanel(){
-      if(!state.compareIds.length) return `<h3>Compare Structures</h3><div class="subtle">Use the Compare column to add up to five structures.</div>`;
-      const selected=state.compareIds.map(id=>records.find(r=>r.pdb_id===id)).filter(Boolean);
-      return `<h3>Compare Structures (${selected.length})</h3><div class="mini-list"><div class="kv"><div>PDBs</div><div>${selected.map(r=>`<span class="badge">${esc(r.pdb_id.toUpperCase())}</span>`).join(" ")}</div><div>States</div><div>${selected.map(r=>`${esc(r.pdb_id.toUpperCase())}: ${esc(r.state)}`).join("<br>")}</div><div>Species</div><div>${selected.map(r=>`${esc(r.pdb_id.toUpperCase())}: ${esc(r.species)}`).join("<br>")}</div><div>Proteins/RNAs</div><div>${selected.map(r=>`${esc(r.pdb_id.toUpperCase())}: ${r.protein_count}/${r.rna_count}`).join("<br>")}</div><div>Flags</div><div>${selected.map(r=>`${esc(r.pdb_id.toUpperCase())}: ${(r.curation?.flags||[]).join("; ")||"none"}`).join("<br>")}</div></div></div>`;
+      const selected = state.compareIds.map(id=>records.find(r=>r.pdb_id===id)).filter(Boolean);
+      const chips = selected.map(r=>`<span class="comparison-chip"><a href="${attr(structurePanelUrl(r.pdb_id))}" target="_blank" rel="noopener" title="Open ${attr(r.pdb_id.toUpperCase())} in a separate viewer">${esc(r.pdb_id.toUpperCase())}</a><button type="button" data-remove-comparison="${attr(r.pdb_id)}" aria-label="Remove ${attr(r.pdb_id.toUpperCase())} from comparison">×</button></span>`).join('');
+      const controls = `<div class="comparison-heading"><h2>Compare structures</h2><button class="button" type="button" data-comparison-back>Back to atlas</button></div><div class="comparison-selection">${chips}${selected.length ? '<button class="button" type="button" data-clear-comparison>Clear comparison</button>' : ''}<span class="subtle">${selected.length}/5 selected${selected.length===5 ? ' · remove one to add another' : ''}</span></div>`;
+      if(selected.length<2) return controls + '<p>Add at least two structures using the Compare column in the atlas. Selections stay when you search or filter.</p>';
+      const tabs = [['proteins','Proteins'],['rna','RNA & substrate'],['overview','Overview'],['evidence','Evidence & links'],['3d','Aligned 3D']];
+      let content;
+      if(comparisonView.tab==='3d') content=comparison3dPanel(selected);
+      else if(comparisonView.tab==='overview') content = comparisonOverview(selected);
+      else if(comparisonView.tab==='evidence') content = comparisonEvidence(selected);
+      else if(selected.some(r=>!Array.isArray(r.comparison_components))) content = '<p>Component comparison data is unavailable for an entry.</p>';
+      else if(comparisonView.tab==='rna') content = comparisonRnaPanel(selected);
+      else content = '<p class="comparison-note">Matched by curated identity, including Sm-ring context. Colours follow the SpliceVis component code. “Not reported” does not establish biological absence.</p>' + comparisonComponentTable(selected,'protein');
+      return controls + `<div class="comparison-tabs" role="tablist" aria-label="Comparison categories">${tabs.map(([id,label])=>`<button type="button" role="tab" id="comparison-tab-${id}" aria-controls="comparison-content" aria-selected="${comparisonView.tab===id}" tabindex="${comparisonView.tab===id?'0':'-1'}" data-comparison-tab="${id}">${label}</button>`).join('')}</div><div id="comparison-content" role="tabpanel" aria-labelledby="comparison-tab-${comparisonView.tab}">${content}</div>`;
+    }
+    function renderComparison(){
+      disposeComparison3d();
+      const launch = document.getElementById('openComparison');
+      if(launch){ launch.textContent = `Compare selected (${state.compareIds.length})`; launch.disabled = !state.compareIds.length; }
+      const panel = document.getElementById('comparison');
+      if(!panel) return;
+      panel.innerHTML = comparisonPanel();
+      if(comparisonView.tab==='3d')bindComparison3d();
+      panel.querySelector('[data-comparison-back]')?.addEventListener('click',()=>showStartTab('structures'));
+      panel.querySelectorAll('[data-remove-comparison]').forEach(button=>button.addEventListener('click',()=>{
+        toggleCompare(button.dataset.removeComparison);
+        (panel.querySelector('[data-remove-comparison]') || panel.querySelector('[data-comparison-back]'))?.focus();
+      }));
+      panel.querySelector('[data-clear-comparison]')?.addEventListener('click',()=>{clearComparison(); panel.querySelector('[data-comparison-back]')?.focus();});
+      panel.querySelector('[data-comparison-differences]')?.addEventListener('change',event=>{
+        comparisonView.onlyDifferences = event.target.checked;
+        renderComparison();
+        panel.querySelector('[data-comparison-differences]')?.focus();
+      });
+      const tabs = [...panel.querySelectorAll('[data-comparison-tab]')];
+      tabs.forEach((button,index)=>{
+        const activate = id=>{comparisonView.tab=id; renderComparison(); panel.querySelector(`[data-comparison-tab="${id}"]`)?.focus();};
+        button.addEventListener('click',()=>activate(button.dataset.comparisonTab));
+        button.addEventListener('keydown',event=>{
+          if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+          event.preventDefault();
+          const next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+          activate(tabs[next].dataset.comparisonTab);
+        });
+      });
     }
     function fmtMetric(value, suffix="", digits=2){
       if(value === null || value === undefined || value === "") return "n/a";
@@ -1395,11 +1890,14 @@ ${await scriptFor(record,"no_maps")}
       return group ? group.terms.some(t=>hay.includes(t)) : hay.includes(label);
     }
     function rnaConsistencyBadge(status){
-      if(status==="consistent") return '<span class="badge good">consistent</span>';
-      if(status==="partial_resolved") return '<span class="badge warn">partial resolved</span>';
-      if(status==="not_resolved") return '<span class="badge">not resolved</span>';
-      if(status==="inconsistent") return '<span class="badge bad">inconsistent</span>';
-      return `<span class="badge">${esc(status||"n/a")}</span>`;
+      const descriptions={
+        consistent:["good", "This RNA region is labelled the same way in the compared structures. Shared labels can still need checking."],
+        partial_resolved:["warn", "This RNA region is labelled in some compared structures but not others. Missing labels do not necessarily mean missing RNA."],
+        not_resolved:["", "This RNA region has not been labelled in any of the compared structures. It may still be visible in the model."],
+        inconsistent:["bad", "The compared structures have different labels or sequences for this RNA region. Check whether this is a real difference or a labelling error."],
+      };
+      const [cls,help]=descriptions[status]||["", "This RNA comparison has not been assessed yet."];
+      return annotationBadge((status||"n/a").replaceAll("_", " "), cls, help);
     }
     function renderRnaConsistency(){
       const rank = {inconsistent:0, partial_resolved:1, not_resolved:2, consistent:3};
@@ -1407,8 +1905,8 @@ ${await scriptFor(record,"no_maps")}
       els.rnaConsistencyRows.innerHTML = rows.map(x=>`<tr><td><strong>${esc(x.family_label||"")}</strong><br><span class="subtle">${esc(x.sequence_length||"")} nt</span></td><td>${esc(x.label||x.feature)}<br><code>${esc(x.expected_seq_start)}-${esc(x.expected_seq_end)} ${esc(x.expected_sequence||"")}</code></td><td>${rnaConsistencyBadge(x.status)}</td><td>${esc(x.observed_count||"0")} / ${esc(x.missing_count||"0")} / ${esc(x.conflict_count||"0")}</td><td><span class="subtle">seen:</span> ${esc(x.observed_members||"none")}<br>${x.missing_members?`<span class="subtle">missing:</span> ${esc(x.missing_members)}<br>`:""}${x.conflicting_members?`<span class="subtle">conflicts:</span> ${esc(x.conflicting_members)}`:""}</td></tr>`).join("") || '<tr><td colspan="5" class="subtle">No repeated RNA feature audit rows.</td></tr>';
     }
     function renderProteins(){
-      const q = state.proteinQuery;
-      const rows = proteinLookup.filter(p=>proteinComplexMatches(p) && (!q || [p.display_name,p.human_gene,p.protein_name,p.class_family,p.aliases?.join(" "),systematicChainText(p),homologItems(p).map(h=>`${h.species_code} ${h.gene} ${h.entry||""}`).join(" ")].join(" ").toLowerCase().includes(q)));
+      const q = state.proteinQuery.trim().toLowerCase();
+      const rows = proteinLookup.filter(p=>proteinComplexMatches(p) && (!q || matchesSearch(q,[p.display_name,p.human_gene,p.protein_name,p.class_family,p.aliases?.join(" "),systematicChainText(p),homologItems(p).map(h=>`${h.species_code} ${h.gene} ${h.entry||""}`).join(" ")].join(" "))));
       const resolved = rows.filter(p=>(p.seen_in_pdb_ids||[]).length);
       const referenceOnly = rows.filter(p=>!(p.seen_in_pdb_ids||[]).length);
       els.resultSubtitle.textContent = q ? `${rows.length} matching components` : `${proteinLookup.length} component and homolog records`;
