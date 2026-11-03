@@ -48,14 +48,15 @@ representation control.
 
 ## Focused viewing and proximity
 
-**Open viewer** gives the selected structure its own tab with RNA/protein controls.
+**Open in new tab** gives the selected structure its own tab with RNA/protein controls.
 Protein search accepts canonical names and aliases. Check several protein boxes to
 build a display selection, then use Hide selection or Show only selection. Filtering
 the protein list retains the checked set. Clicking a protein name replaces that set
 and focuses the named protein; Clear selection removes the group. Feature labels are clickable;
-when several chains match, choose a chain explicitly. A residue information strip updates immediately on hover, keyboard focus or touch.
-It distinguishes deposited author numbers, sequence positions and alignment columns,
-and labels feature membership as aligned reference annotations.
+when several chains match, choose a chain explicitly. A compact tooltip appears immediately on hover, keyboard focus or touch.
+It shows the deposited residue number (when available), modelled status and features
+at that aligned position. Feature bars inherit the sequence font so their coordinate
+scale matches the nucleotide cells.
 Selection outlines preserve
 the component colours. Display options can hide or isolate a selection, restore all
 components and toggle depth cue. Ordinary scrolling over the embedded atlas viewer
@@ -69,7 +70,7 @@ can differ between species. Grouped results show the closest contact and retain 
 associated PDB IDs in CSV. Distances are geometric observations; clashes can produce
 very short distances and do not imply strong interactions.
 
-The visible **ChimeraX: copy model** action loads coordinates only. Options include
+The **ChimeraX scripts** menu offers a model-only script. Other options include
 a primary map, systematic chain IDs and official usage links. Large maps take longer
 to load. The ChimeraX selection browser applies thin **Detail** ribbons when focusing
 features; **Overview** restores thick ribbons, and **Reset view** restores Overview,

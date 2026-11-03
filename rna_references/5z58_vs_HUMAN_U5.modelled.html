@@ -9,9 +9,8 @@
 .alignment-panel{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}.scroll-shell{overflow-x:auto;overflow-y:visible;padding:8px 0 14px}.wrap-shell{padding:2px 0}.alignment-block{margin:12px 0 20px}.block-heading{display:flex;justify-content:space-between;gap:16px;margin-bottom:6px;color:#697583;font-size:11px;font-weight:700}.track-grid,.alignment-row{display:grid;grid-template-columns:var(--label-width) max-content;gap:12px;align-items:start}.track-label,.member{position:sticky;left:0;z-index:5;min-height:20px;padding-right:8px;background:#fff;color:#596574;font:700 11px ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}.track-content{position:relative;font:13px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0}.feature-lane{position:relative;height:36px}.feature-bar{position:absolute;top:2px;height:15px;border:1px solid rgba(21,29,37,.48);min-width:1px}.feature-name{position:absolute;top:19px;left:50%;transform:translateX(-50%);color:#303944;font:600 11px system-ui;white-space:nowrap}.alignment-feature-map{margin:7px 0 12px}.alignment-row{min-height:20px;line-height:1.5}.alignment-row code{font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0;white-space:pre}.continuous .track-label,.continuous .member{box-shadow:8px 0 8px -10px #334155}.residue-cell{display:inline-block;width:1ch}.residue-cell.selectable{cursor:crosshair}.residue-cell.selectable:hover,.residue-cell.selection-preview{background:#ffe568;color:#17212b;outline:1px solid #d6a900}.selection-status{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0;padding:8px 10px;border:1px solid #b9d6ee;border-radius:6px;background:#f4f9fd;color:#29465d;font-size:12px}.selection-status[hidden]{display:none}.selection-status a,.selection-status button{border:1px solid #9dbbd4;border-radius:5px;background:#fff;color:#155f96;padding:4px 8px;text-decoration:none;font:600 12px system-ui;cursor:pointer}
 .coverage-wrap{overflow:auto}.coverage{border-collapse:collapse;width:max-content;min-width:720px;margin-top:8px;font-size:12px}.coverage th,.coverage td{padding:7px 9px;border-bottom:1px solid #e3e8ee;text-align:left}.coverage th{position:sticky;top:47px;background:#f7f9fb}.coverage code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.empty{padding:18px;color:var(--muted)}
 .chimerax-help{display:none}
-.residue-info{position:sticky;top:0;z-index:30;box-sizing:border-box;height:4.8em;overflow:auto;scrollbar-width:thin;margin:0;padding:7px 10px;border:1px solid #b9d6ee;background:#f4f9fd;color:#29465d;font:12px/1.35 system-ui;overflow-wrap:anywhere}.residue-cell:focus-visible{outline:2px solid #1769aa;outline-offset:1px;position:relative;z-index:6}.residue-cell:not(.selectable):hover{outline:1px solid #9dbbd4}
-@media(max-width:600px){.residue-info{height:8em}}
-.feature-bar{padding:0;cursor:pointer}.feature-bar:focus-visible,.feature-chip:focus-visible{outline:2px solid #1769aa;outline-offset:3px}.feature-chip{border:0;background:transparent;padding:3px 0;cursor:pointer;text-align:left}.feature-chip:hover,.feature-name:hover{text-decoration:underline}#featureChain{max-width:100%;font:inherit;padding:3px;border:1px solid #9dbbd4;border-radius:4px}#featureSelection[hidden],#featureChainControl[hidden]{display:none}
+.residue-info{position:fixed;z-index:100;max-width:min(300px,calc(100vw - 16px));max-height:160px;overflow:auto;margin:0;padding:8px 11px;border:1px solid #b9d6ee;border-radius:6px;background:#fff;box-shadow:0 3px 12px #0002;color:#29465d;font:12px/1.5 system-ui;white-space:pre-line;pointer-events:none}.residue-info[hidden]{display:none}.residue-cell:focus-visible{outline:2px solid #1769aa;outline-offset:1px;position:relative;z-index:6}.residue-cell:not(.selectable):hover{outline:1px solid #9dbbd4}
+.feature-bar{font:inherit;letter-spacing:inherit;padding:0;cursor:pointer}.feature-bar:focus-visible,.feature-chip:focus-visible{outline:2px solid #1769aa;outline-offset:3px}.feature-chip{border:0;background:transparent;padding:3px 0;cursor:pointer;text-align:left}.feature-chip:hover,.feature-name:hover{text-decoration:underline}#featureChain{max-width:100%;font:inherit;padding:3px;border:1px solid #9dbbd4;border-radius:4px}#featureSelection[hidden],#featureChainControl[hidden]{display:none}
 html.embedded main{padding:0}html.embedded h1,html.embedded h2,html.embedded .intro,html.embedded .toolbar,html.embedded .coverage-section{display:none}html.embedded .alignment-panel{border-top:0}html.embedded .scroll-shell{padding-top:0}html.embedded .alignment-block{margin-top:2px}html.embedded .legend,html.embedded .feature-index{margin:6px 10px}html.embedded .selection-status{margin:6px 10px;padding:4px 0;border:0;background:transparent}html.embedded .selection-status a,html.embedded .selection-status button{display:none}
 html.chimerax main{padding:4px 6px}html.chimerax h1,html.chimerax h2,html.chimerax .intro,html.chimerax .toolbar,html.chimerax .legend,html.chimerax .feature-index,html.chimerax .selection-status,html.chimerax .coverage-section{display:none}html.chimerax .chimerax-help{display:block;margin:0 0 5px;color:#586574;font-size:11px;line-height:1.35}html.chimerax .alignment-panel{border:0}html.chimerax .scroll-shell{padding:0 0 6px}html.chimerax .alignment-block{margin:2px 0 8px}
 @media(max-width:700px){:root{--label-width:105px}main{padding:14px}.toolbar{margin:16px -14px;padding:7px 14px;gap:10px;flex-wrap:wrap}.track-content,.alignment-row code{font-size:12px}.feature-name{font-size:10px}}
@@ -22,7 +21,7 @@ html.chimerax main{padding:4px 6px}html.chimerax h1,html.chimerax h2,html.chimer
 <h2>Multiple-sequence alignment</h2>
 <p class="intro">Feature positions are projected from reference coordinates onto alignment columns. Click a modelled nucleotide, or drag across a modelled range in one deposited chain, to focus it in the dashboard Mol* viewer.</p>
 <p class="chimerax-help">Click a blue modelled nucleotide, or drag across one deposited chain, to select and focus the corresponding residue(s) in ChimeraX.</p>
-<div id="residueInfo" class="residue-info" role="status" aria-live="polite" aria-atomic="true">Hover, focus or touch a nucleotide for residue numbers and aligned reference features. Use arrow keys to move along a focused sequence.</div>
+<div id="residueInfo" class="residue-info" role="tooltip" hidden></div>
 <div id="alignment" class="alignment-panel"></div>
 <div id="featureSelection" class="selection-status" hidden><span id="featureSelectionNote" role="status"></span><label id="featureChainControl" hidden>Chain <select id="featureChain" aria-label="Chain to focus for selected feature"></select></label></div>
 <label id="fullReferenceControl" hidden style="font-size:11px;color:#586574" title="Unmodelled terminal MS2 tags are collapsed in this view. Downloads retain the complete reference sequence and its original numbering."><input id="fullReference" type="checkbox">Full reference (include unmodelled MS2 tag)</label>
@@ -83,11 +82,11 @@ function sequenceMarkup(record,start,end){
     const referenceBase=referenceRecord?.sequence[index],mismatch=!record.reference&&base!=="-"&&referenceBase&&referenceBase!=="-"&&base!==referenceBase;
     const selectable=!record.reference&&marker==="M"&&numericAuth(auth)!==null;
     const features=data.features.filter(feature=>index+1>=feature.alignment_start&&index+1<=feature.alignment_end).map(feature=>feature.label);
-    const state=base==="-"?"alignment gap":record.reference?"reference":marker==="M"?"modelled":"unresolved (sequence record, not modelled)";
-    const identity=record.reference?"Reference":`${record.pdb_id.toUpperCase()} deposited chain ${record.chain}`;
-    const numbering=`author residue ${auth===null||auth===undefined?"unavailable":auth}; sequence position ${seq===null?"none":seq}; alignment column ${index+1}`;
-    const tooltip=`${identity}; base ${base}; ${state}; ${numbering}; Aligned reference features: ${features.join(", ")||"none"}${!record.reference&&marker==="M"&&!selectable?"; browser selection unavailable for this residue identifier":""}`;
-    const attributes=` title="${escapeHtml(tooltip)}" tabindex="${index===start-1?0:-1}" aria-describedby="residueInfo"`+(selectable?` data-member="${escapeHtml(record.id)}" data-chain="${escapeHtml(record.chain)}" data-auth="${escapeHtml(auth)}" data-seq="${seq}"`:"");
+    const state=base==="-"?"alignment gap":record.reference?"reference":marker==="M"?"modelled":"not modelled";
+    const heading=record.reference?"Reference":`Residue ${auth===null||auth===undefined?"unavailable":auth}`;
+    const tooltip=`${heading} · ${state}
+Features: ${features.join(", ")||"none"}`;
+    const attributes=` data-residue-info="${escapeHtml(tooltip)}" tabindex="${index===start-1?0:-1}" aria-label="${escapeHtml(tooltip)}" aria-describedby="residueInfo"`+(selectable?` data-member="${escapeHtml(record.id)}" data-chain="${escapeHtml(record.chain)}" data-auth="${escapeHtml(auth)}" data-seq="${seq}"`:"");
     output.push(`<span class="residue-cell ${css}${mismatch?" mismatch":""}${selectable?" selectable":""}"${attributes}>${escapeHtml(base)}</span>`);
   }
   return output.join("");
@@ -101,6 +100,7 @@ function alignmentBlock(start,end,continuous=false){
   return `<section class="alignment-block${continuous?" continuous":""}"><div class="block-heading" style="width:calc(var(--label-width) + 12px + ${end-start+1} * 1ch)"><span>Alignment columns ${start}-${end}</span><span>${end} / ${data.alignment_length}</span></div><div class="alignment-feature-map">${featureMap}</div>${rows}</section>`;
 }
 function render(){
+  hideResidueInfo();
   const width=Number(lineWidth.value)||100;
   const full=document.getElementById("fullReference").checked;
   const first=full?1:data.display_start,last=full?data.alignment_length:data.display_end;
@@ -182,10 +182,15 @@ function bindResidueSelection(){
     cell.addEventListener("pointerup",()=>{if(dragStart&&cell.dataset.member===dragStart.member)dragEnd={member:cell.dataset.member,seq:Number(cell.dataset.seq)};previewSelection();finishSelection()});
   }
 }
+function hideResidueInfo(){document.getElementById("residueInfo").hidden=true}
 function inspectResidueCell(cell){
   if(!cell)return;
-  const info=document.getElementById("residueInfo"),text=cell.getAttribute("title");
-  if(info&&text&&info.textContent!==text){info.textContent=text;info.scrollTop=0;}
+  const info=document.getElementById("residueInfo"),text=cell.getAttribute("data-residue-info");
+  if(!info||!text)return;
+  info.textContent=text;info.scrollTop=0;info.hidden=false;
+  const rect=cell.getBoundingClientRect(),width=info.offsetWidth,height=info.offsetHeight;
+  info.style.left=Math.max(8,Math.min(rect.left,window.innerWidth-width-8))+"px";
+  info.style.top=Math.max(8,rect.bottom+height+8<window.innerHeight?rect.bottom+8:rect.top-height-8)+"px";
 }
 function residueInspectionKey(event){
   const cell=event.target.closest(".residue-cell");
@@ -198,7 +203,11 @@ function residueInspectionKey(event){
     event.preventDefault();inspectResidueCell(cell);dragStart={member:cell.dataset.member,seq:Number(cell.dataset.seq)};dragEnd={...dragStart};previewSelection();finishSelection();
   }
 }
-document.addEventListener("pointerover",event=>inspectResidueCell(event.target.closest(".residue-cell")));
+document.addEventListener("pointerover",event=>{const cell=event.target.closest(".residue-cell");if(cell)inspectResidueCell(cell);else hideResidueInfo()});
+document.addEventListener("pointerout",event=>{if(event.target.closest(".residue-cell"))hideResidueInfo()});
+document.addEventListener("focusout",hideResidueInfo);
+document.addEventListener("scroll",hideResidueInfo,true);
+document.addEventListener("keydown",event=>{if(event.key==="Escape")hideResidueInfo()});
 document.addEventListener("pointerdown",event=>inspectResidueCell(event.target.closest(".residue-cell")));
 document.addEventListener("focusin",event=>inspectResidueCell(event.target.closest(".residue-cell")));
 document.addEventListener("keydown",residueInspectionKey);
