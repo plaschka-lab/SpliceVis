@@ -48,22 +48,22 @@ def _model_scope(session, spec, bound_model=_UNBOUND_MODEL):
 def ribbon_preset_commands(scope, preset):
     """Model-scoped subset of Matthias's Thin_ribbons.cxc preset.
 
-    Overview uses the generated dashboard's width 4 / thickness 3; Detail uses
-    the supplied width 2 / thickness 1. RNA remains width/thickness 4, as in the
-    template. Do not change colours, nucleotide annotation display, maps, or
+    Thick uses protein width 4 / thickness 3; Thin uses width 2 / thickness 1.
+    Nucleic cartoons use width/thickness 4 for Thick and 2 for Thin. Do not change colours, nucleotide annotation display, maps, or
     global lighting/background/camera. `divisions` is global even with a scope,
     so unlike the source template it is deliberately omitted here.
     """
     if not re.fullmatch(r"#[1-9]\d*(?:\.\d+)*", scope):
         raise ValueError("Ribbon presets require an exact structure model ID.")
     if preset not in ("overview", "detail"):
-        raise ValueError("Choose Overview or Detail ribbons.")
+        raise ValueError("Choose Thick or Thin style.")
     width, thickness = (2, 1) if preset == "detail" else (4, 3)
+    nucleic_size = 2 if preset == "detail" else 4
     return [
         f"cartoon style {scope} modeHelix default arrows true arrowsHelix false arrowScale 1.5 width {width} thickness {thickness} sides 12",
         f"cartoon style ({scope} & ~(nucleic|strand)) xsection round",
         f"cartoon style ({scope} & (nucleic|strand)) xsection rectangle",
-        f"cartoon style ({scope} & nucleic) xsection round width 4 thickness 4",
+        f"cartoon style ({scope} & nucleic) xsection round width {nucleic_size} thickness {nucleic_size}",
     ]
 
 
@@ -150,15 +150,15 @@ def open_selection_browser(session, spec_path: str) -> None:
             )
             layout.addWidget(title)
             presets = QHBoxLayout()
-            presets.addWidget(QLabel("Ribbons", parent))
-            self.overview_button = QPushButton("Overview", parent)
-            self.detail_button = QPushButton("Detail", parent)
+            presets.addWidget(QLabel("Style:", parent))
+            self.overview_button = QPushButton("Thick", parent)
+            self.detail_button = QPushButton("Thin", parent)
             for button in (self.overview_button, self.detail_button):
                 button.setCheckable(True)
                 presets.addWidget(button)
             self.overview_button.setChecked(True)
             self.overview_button.setToolTip("Thick overview ribbons for this structure only; preserve component colours.")
-            self.detail_button.setToolTip("Thinner protein ribbons for close inspection; also applied when focusing a feature. RNA width follows the supplied preset.")
+            self.detail_button.setToolTip("Thinner protein ribbons for close inspection; also applied when focusing a feature. Nucleic cartoons use width and thickness 2.")
             presets.addStretch()
             layout.addLayout(presets)
             self.search = QLineEdit(parent)
@@ -176,7 +176,7 @@ def open_selection_browser(session, spec_path: str) -> None:
             self.show_labels_button = QPushButton("Show Labels", parent)
             self.hide_labels_button = QPushButton("Hide Labels", parent)
             self.clear_button = QPushButton("Reset view", parent)
-            self.clear_button.setToolTip("Clear this structure's selection, restore Overview ribbons, and fit this structure in the view.")
+            self.clear_button.setToolTip("Clear this structure's selection, restore Thick style, and fit this structure in the view.")
             buttons.addWidget(self.select_button)
             buttons.addWidget(self.show_labels_button)
             buttons.addWidget(self.hide_labels_button)

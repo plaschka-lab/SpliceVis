@@ -18,7 +18,7 @@ class EmbeddedBrowserTests(unittest.TestCase):
                     self.assertEqual(text.split(MARKER, 1)[0].strip(), expected)
                     ast.parse(text)
                     self.assertIn('apply_ribbon_preset(session, spec, "detail", bound_model)', text)
-                    self.assertIn('QPushButton("Overview", parent)', text)
+                    self.assertIn('QPushButton("Thick", parent)', text)
                     self.assertIn('QPushButton("Reset view", parent)', text)
                     self.assertIn('open_selection_browser(session, _spec_path)', text)
                     count += 1
