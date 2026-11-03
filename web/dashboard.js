@@ -6,7 +6,7 @@
     let rnaFeatureDefinitions = [];
     let rnaFeatureConsistency = [];
     const state = { activeTab:"structures", structureQuery:"", proteinQuery:"", mode:"all", family:"all", species:"all", substrateType:"all", rnaFeature:"all", rnaFeatureSearch:"", cyclePdbIds:[], cyclePdbLabel:"", rnaDefinitionQuery:"", proteinComplex:"all", helperSource:"github", localRepoPath:"", proximityResults:[], proximityQuerySummary:"", sortBy:"pathway", sortDir:"asc", chainMode:"original", selected: records[0]?.pdb_id || "", compareIds: [], molstarPdbId:"", molstarViewer:null, sidebarCollapsed:false, depthCue:true, panelOnly:false, mobilePane:"cycle" };
-    const comparisonView = { onlyDifferences: true, tab: 'proteins' };
+    const comparisonView = { onlyDifferences: true, tab: '3d' };
     const els = {};
     for (const id of ["sidebarToggle","atlasNavButton","componentsNavButton","mobileViewSwitch","search","searchMode","family","species","substrateTypeFilter","rnaFeatureFilter","rnaFeatureQuickSearch","rnaFeatureQuickResults","rnaQuickFilters","activeFilterPanel","activeFilterChips","filterHint","rnaDefinitionSearch","rnaDefinitionRows","cycleStateGuide","rnaElementGuide","proteinComplexGuide","proteinComplexFilter","helperSource","localRepoPath","proximityView","proximityProtein","proximityProteinOptions","proximityStart","proximityEnd","proximityScope","proximityDistance","proximitySpecies","runProximitySearch","downloadProximityCsv","copyProximityCxc","proximityDeduplicate","proximityCoverage","proximityStatus","proximityRows","localCopyView","sortBy","reset","tabs","structuresView","rnaFeaturesView","cycleStatesView","rnaElementsView","complexesView","proteinsView","documentationView","helpView","stats","cycle","cycleContext","rows","detail","tableCount","resultSubtitle","selectedId","selectedScriptActions","proteinRows","proteinCount"]) els[id] = document.getElementById(id);
     const STAGES = ["U1 snRNP","U11 snRNP","U2 snRNP","U6 snRNP","U6 snRNA biogenesis","E complex","A complex","U5/tri-snRNP","pre-B","B","pre-Bact","Bact","B*","B*D complex","C","C*","P","ILS/disassembly","DIS","U5 recycling"];
@@ -182,7 +182,7 @@
       els.helperSource.addEventListener("change",()=>{state.helperSource=els.helperSource.value; render();});
       els.localRepoPath.addEventListener("input",()=>{state.localRepoPath=els.localRepoPath.value.trim(); render();});
       els.sortBy.addEventListener("change",()=>{state.sortBy=els.sortBy.value; state.sortDir = ["year","chains","proteins"].includes(state.sortBy) ? "desc" : "asc"; render();});
-      els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); if(els.atlasNavButton) els.atlasNavButton.classList.toggle("active",state.activeTab==="structures"); if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab==="proteins"); const drawer=b.closest(".tools-drawer"); if(drawer) drawer.open=false; render();});
+      els.tabs.addEventListener("click",event=>{const b=event.target.closest("button"); if(!b)return; if(b.dataset.tab==='comparison' && state.activeTab!=='comparison')comparisonView.tab='3d'; state.activeTab=b.dataset.tab; for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x===b); if(els.atlasNavButton) els.atlasNavButton.classList.toggle("active",state.activeTab==="structures"); if(els.componentsNavButton) els.componentsNavButton.classList.toggle("active",state.activeTab==="proteins"); const drawer=b.closest(".tools-drawer"); if(drawer) drawer.open=false; render();});
       document.addEventListener("click", event=>{const th=event.target.closest("th[data-sort]"); if(th) activateSort(th);});
       document.addEventListener("keydown", event=>{const th=event.target.closest("th[data-sort]"); if(!th || !["Enter"," "].includes(event.key))return; event.preventDefault(); activateSort(th);});
       if(els.mobileViewSwitch) els.mobileViewSwitch.addEventListener("click",event=>{const button=event.target.closest("button[data-mobile-pane]"); if(button)setMobilePane(button.dataset.mobilePane);});
@@ -1562,6 +1562,7 @@ ${await scriptFor(record,"no_maps")}
       }
     }
     function showStartTab(tab){
+      if(tab==='comparison' && state.activeTab!=='comparison')comparisonView.tab='3d';
       state.activeTab = tab;
       for(const x of els.tabs.querySelectorAll("button")) x.classList.toggle("active",x.dataset.tab===tab);
       if(els.atlasNavButton) els.atlasNavButton.classList.toggle("active",tab==="structures");
@@ -1911,7 +1912,7 @@ ${await scriptFor(record,"no_maps")}
       const chips = selected.map(r=>`<span class="comparison-chip"><a href="${attr(structurePanelUrl(r.pdb_id))}" target="_blank" rel="noopener" title="Open ${attr(r.pdb_id.toUpperCase())} in a separate viewer">${esc(r.pdb_id.toUpperCase())}</a><button type="button" data-remove-comparison="${attr(r.pdb_id)}" aria-label="Remove ${attr(r.pdb_id.toUpperCase())} from comparison">×</button></span>`).join('');
       const controls = `<div class="comparison-heading"><h2>Compare structures</h2><button class="button" type="button" data-comparison-back>Back to atlas</button></div><div class="comparison-selection">${chips}${selected.length ? '<button class="button" type="button" data-clear-comparison>Clear comparison</button>' : ''}<span class="subtle">${selected.length}/5 selected${selected.length===5 ? ' · remove one to add another' : ''}</span></div>`;
       if(selected.length<2) return controls + '<p>Add at least two structures using the Compare column in the atlas. Selections stay when you search or filter.</p>';
-      const tabs = [['proteins','Proteins'],['rna','RNA & substrate'],['overview','Overview'],['evidence','Evidence & links'],['3d','Aligned 3D']];
+      const tabs = [['3d','Aligned 3D'],['proteins','Proteins'],['rna','RNA & substrate'],['overview','Overview'],['evidence','Evidence & links']];
       let content;
       if(comparisonView.tab==='3d') content=comparison3dPanel(selected);
       else if(comparisonView.tab==='overview') content = comparisonOverview(selected);
