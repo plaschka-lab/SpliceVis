@@ -101,3 +101,23 @@ test('left camera motion synchronizes once and idle frames cannot create a feedb
  assert.equal(f.calls.filter(x=>x[0]==='camera').length,writes);assert.equal(f.frames.size,1);
  c.dispose();f.tick();assert.equal(f.frames.size,0);assert.equal(f.calls.filter(x=>x[0]==='camera').length,writes);
 });
+
+test('five views use distinct transforms, synchronize from any view and isolate a protein in every view',async()=>{
+ const f=fixture();
+ const extras=Array.from({length:3},(_,i)=>({element:{...f.options.rightElement,style:{visibility:''},events:new Map()},record:record(['6icz','6ah0','6exn'][i]),transform:[...I.slice(0,12),i+5,0,0,1],probes}));
+ const c=await api.create({...f.options,additional:extras},f.runtime);
+ assert.equal(f.instances.length,5);
+ assert.deepEqual(f.calls.filter(x=>x[0]==='load').slice(2).map(x=>x[1][0].matrix),extras.map(x=>x.transform));
+ extras[2].element.events.get('pointerdown')();f.instances[4].plugin.canvas3d.camera.setState({position:[9,8,7]});f.tick();
+ assert.ok(f.instances.every(v=>v.plugin.canvas3d.camera.getSnapshot().position.join()==='9,8,7'));
+ const writes=f.calls.filter(x=>x[0]==='camera').length;f.tick();assert.equal(f.calls.filter(x=>x[0]==='camera').length,writes);
+ await c.selectComponent([{auth_asym_id:'A'}],[{auth_asym_id:'B'}],{only:true,additionalQueries:extras.map(()=>[{auth_asym_id:'C'}])});
+ assert.equal(f.calls.filter(x=>x[0]==='mark').length,5);
+ assert.equal(f.calls.filter(x=>x[0]==='select'&&x[2].nonSelectedOpacity===0).length,5);
+ await c.reset();c.dispose();assert.equal(f.calls.filter(x=>x[0]==='dispose').length,5);assert.equal(f.frames.size,0);
+});
+test('bad evidence in an extra view disposes all previously loaded canvases',async()=>{
+ const f=fixture(),element={...f.options.rightElement,style:{visibility:''},events:new Map()};
+ await assert.rejects(api.create({...f.options,additional:[{element,record:record('6icz'),transform:I,probes:probes.map(p=>({...p,x:99}))}]},f.runtime),/coordinates differ/);
+ assert.equal(f.calls.filter(x=>x[0]==='dispose').length,3);assert.ok(element.cleared);assert.equal(f.frames.size,0);
+});

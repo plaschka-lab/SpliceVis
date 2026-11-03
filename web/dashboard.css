@@ -599,3 +599,10 @@
 /* Explicit dismissal complements pointer-leave, Escape and outside-click. */
 .popover-close{float:right;margin:0 0 6px 10px;padding:3px 7px;border:1px solid #c6d3e2;border-radius:5px;background:#fff;color:#40566e;font:600 11px system-ui;cursor:pointer}
 .popover-close:focus-visible{outline:2px solid #1769aa;outline-offset:2px}
+/* Keep the comparison action aligned with selects and visibly actionable. */
+.comparison-3d-controls .comparison-load-primary{align-self:end;min-height:36px;background:#225d85;color:white;border-color:#225d85;font-weight:650;margin:0}
+.comparison-3d-controls .comparison-load-primary:hover{background:#174668;color:white}
+.comparison-3d-controls .comparison-load-primary:disabled{opacity:.65;cursor:wait}
+.comparison-3d-controls select{min-height:36px;box-sizing:border-box}
+.comparison-3d-controls label{min-width:0;max-width:100%;margin:0}
+.comparison-canvases:not(.overlay){grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}

@@ -1777,22 +1777,23 @@ ${await scriptFor(record,"no_maps")}
       comparison3d.abort=null;
     }
     function comparison3dRecords(){
-      return [comparison3d.reference,comparison3d.mobile].map(id=>records.find(r=>r.pdb_id===id));
+      const ids=comparison3d.mode==='overlay'?[comparison3d.reference,comparison3d.mobile]:[comparison3d.reference,...state.compareIds.filter(id=>id!==comparison3d.reference)];
+      return ids.map(id=>records.find(r=>r.pdb_id===id)).filter(Boolean);
     }
     function comparison3dPanel(selected){
       if(!selected.some(r=>r.pdb_id===comparison3d.reference)) comparison3d.reference=selected[0].pdb_id;
       if(!selected.some(r=>r.pdb_id===comparison3d.mobile) || comparison3d.mobile===comparison3d.reference) comparison3d.mobile=selected.find(r=>r.pdb_id!==comparison3d.reference).pdb_id;
       const chooser=(id,value,label)=>`<label>${label}<select id="${id}">${selected.map(r=>`<option value="${attr(r.pdb_id)}" ${r.pdb_id===value?'selected':''}>${esc(r.pdb_id.toUpperCase())} · ${esc(r.state)} · ${esc(r.species)}</option>`).join('')}</select></label>`;
-      const [reference,mobile]=comparison3dRecords();
-      const common=componentDifferenceRows([reference,mobile]).filter(row=>row.type==='protein' && row.matched && row.entries.size===2);
-      return `<p class="comparison-note">Align deposited models using a shared protein anchor. This helps inspect structural changes; the Proteins tab remains the quickest way to identify reported gains or losses.</p><div class="comparison-3d-controls">${chooser('compare3dReference',comparison3d.reference,'Reference')}${chooser('compare3dMobile',comparison3d.mobile,'Compare with')}<label>View<select id="compare3dMode"><option value="side" ${comparison3d.mode==='side'?'selected':''}>Side by side</option><option value="overlay" ${comparison3d.mode==='overlay'?'selected':''}>Overlay</option></select></label><button type="button" id="loadComparison3d">Align and view</button></div><p id="comparison3dStatus" role="status">Models load only when you choose Align and view. At most two viewers are active.</p><div id="comparison3dTools" class="comparison-3d-tools" hidden><label><input id="comparisonCameraSync" type="checkbox" checked>Synchronize views</label><label>Shared protein<select id="comparisonSharedProtein"><option value="">Choose a protein</option>${common.map(row=>`<option value="${attr(row.key)}">${esc(row.label)}</option>`).join('')}</select></label><label><input id="comparisonOnlyProtein" type="checkbox">Show only this protein</label><button type="button" id="resetComparison3d">Reset views</button></div><div class="comparison-canvases ${comparison3d.mode==='overlay'?'overlay':''}" id="comparisonCanvases" hidden><section><h3>${esc(reference.pdb_id.toUpperCase())}${comparison3d.mode==='overlay'?` + ${esc(mobile.pdb_id.toUpperCase())}`:''}</h3><div id="comparisonLeft" class="comparison-canvas"></div></section><section ${comparison3d.mode==='overlay'?'hidden':''}><h3>${esc(mobile.pdb_id.toUpperCase())}</h3><div id="comparisonRight" class="comparison-canvas"></div></section></div><p class="subtle">For detailed fitting, maps and measurements, use ChimeraX: <a href="${attr(reference.script_path || '')}" download>${esc(reference.pdb_id.toUpperCase())} script</a> · <a href="${attr(mobile.script_path || '')}" download>${esc(mobile.pdb_id.toUpperCase())} script</a>. Overlay retains component colours; use Show only this protein to reduce overlap.</p>`;
+      const compared=comparison3dRecords(),[reference,mobile]=compared;
+      const common=componentDifferenceRows(compared).filter(row=>row.type==='protein' && row.matched && row.entries.size===compared.length);
+      return `<p class="comparison-note">Align deposited models using a shared protein anchor. This helps inspect structural changes; the Proteins tab remains the quickest way to identify reported gains or losses.</p><div class="comparison-3d-controls">${chooser('compare3dReference',comparison3d.reference,'Reference')}${comparison3d.mode==='overlay'?chooser('compare3dMobile',comparison3d.mobile,'Compare with'):''}<label>View<select id="compare3dMode"><option value="side" ${comparison3d.mode==='side'?'selected':''}>Side by side</option><option value="overlay" ${comparison3d.mode==='overlay'?'selected':''}>Overlay</option></select></label><button class="comparison-load-primary" type="button" id="loadComparison3d">Align and view</button></div><p id="comparison3dStatus" role="status">Loading the selected structures automatically…</p><div id="comparison3dTools" class="comparison-3d-tools" hidden><label><input id="comparisonCameraSync" type="checkbox" checked>Synchronize views</label><label>Shared protein<select id="comparisonSharedProtein"><option value="">Choose a protein</option>${common.map(row=>`<option value="${attr(row.key)}">${esc(row.label)}</option>`).join('')}</select></label><label><input id="comparisonOnlyProtein" type="checkbox">Show only this protein</label><button type="button" id="resetComparison3d">Reset views</button></div><div class="comparison-canvases ${comparison3d.mode==='overlay'?'overlay':''}" id="comparisonCanvases" hidden>${(comparison3d.mode==='overlay'?[reference]:compared).map((r,i)=>`<section><h3>${esc(r.pdb_id.toUpperCase())}${comparison3d.mode==='overlay'?` + ${esc(mobile.pdb_id.toUpperCase())}`:i===0?' · reference':''}</h3><div id="${i===0?'comparisonLeft':i===1?'comparisonRight':`comparisonExtra${i}`}" class="comparison-canvas"></div></section>`).join('')}</div><p class="subtle">For detailed fitting, maps and measurements, use ChimeraX: ${compared.map(r=>`<a href="${attr(r.script_path || '')}" download>${esc(r.pdb_id.toUpperCase())} script</a>`).join(' · ')}. Side-by-side shows all selected structures (up to five), each fitted to the reference. Overlay retains component colours; use Show only this protein to reduce overlap.</p>`;
     }
     async function loadComparison3d(){
       disposeComparison3d();
       const abort=new AbortController();comparison3d.abort=abort;
       const status=document.getElementById('comparison3dStatus'),button=document.getElementById('loadComparison3d');
-      const [reference,mobile]=comparison3dRecords();
-      button.disabled=true;status.textContent='Checking shared alignment evidence…';
+      const compared=comparison3dRecords(),[reference,mobile]=compared;
+      button.textContent="Aligning…";button.disabled=true;status.textContent='Checking shared alignment evidence…';
       document.getElementById('comparison3dTools').hidden=true;
       document.getElementById('comparisonCameraSync').checked=true;
       document.getElementById('comparisonSharedProtein').value='';
@@ -1804,12 +1805,15 @@ ${await scriptFor(record,"no_maps")}
           comparison3d.manifest=await response.json();
         }
         if(abort.signal.aborted)return;
-        const pair=comparison3d.manifest.pairs[[reference.pdb_id,mobile.pdb_id].sort().join(':')];
-        if(!pair?.supported) throw new Error(`No reliable shared alignment: ${pair?.reason || 'no validated protein anchor'}. Use the component tables or ChimeraX for a custom fit.`);
-        const matrix=pair.reference===reference.pdb_id?pair.matrix:SpliceVisComparisonViewer.invertMatrix(pair.matrix);
-        const evidence=`${pair.anchor} anchor · ${pair.fit_residues}/${pair.matched_residues} matched Cα atoms fitted · RMSD ${pair.rmsd.toFixed(2)} Å (all matched: ${pair.all_matched_rmsd.toFixed(2)} Å) · sequence identity ${(100*pair.sequence_identity).toFixed(0)}%. This is an anchor fit, not a whole-spliceosome fit.`;
+        const fits=compared.slice(1).map(record=>{
+          const pair=comparison3d.manifest.pairs[[reference.pdb_id,record.pdb_id].sort().join(':')];
+          if(!pair?.supported)throw new Error(`No reliable alignment for ${record.pdb_id.toUpperCase()} against ${reference.pdb_id.toUpperCase()}: ${pair?.reason || 'no validated protein anchor'}. Choose another reference or remove this structure from the basket.`);
+          return {record,pair,matrix:pair.reference===reference.pdb_id?pair.matrix:SpliceVisComparisonViewer.invertMatrix(pair.matrix)};
+        });
+        const matrix=fits[0].matrix;
+        const evidence=fits.map(({record,pair})=>`${record.pdb_id.toUpperCase()}: ${pair.anchor} · ${pair.fit_residues}/${pair.matched_residues} Cα atoms · RMSD ${pair.rmsd.toFixed(2)} Å (all matched ${pair.all_matched_rmsd.toFixed(2)} Å; ${(100*pair.sequence_identity).toFixed(0)}% identity)`).join(' | ') + '. Each fit uses its stated anchor against the reference, not the whole spliceosome.';
         document.getElementById('comparisonCanvases').hidden=false;
-        const controller=await SpliceVisComparisonViewer.create({leftElement:document.getElementById('comparisonLeft'),rightElement:document.getElementById('comparisonRight'),reference,mobile,referenceProbes:comparison3d.manifest.probes?.[reference.pdb_id],mobileProbes:comparison3d.manifest.probes?.[mobile.pdb_id],matrix,overlay:comparison3d.mode==='overlay',offline:!!DATA.offline,signal:abort.signal,onStatus:message=>{if(!abort.signal.aborted)status.textContent=message;}});
+        const controller=await SpliceVisComparisonViewer.create({leftElement:document.getElementById('comparisonLeft'),rightElement:document.getElementById('comparisonRight'),reference,mobile,referenceProbes:comparison3d.manifest.probes?.[reference.pdb_id],mobileProbes:comparison3d.manifest.probes?.[mobile.pdb_id],matrix,additional:fits.slice(1).map((fit,i)=>({element:document.getElementById(`comparisonExtra${i+2}`),record:fit.record,transform:fit.matrix,probes:comparison3d.manifest.probes?.[fit.record.pdb_id]})),overlay:comparison3d.mode==='overlay',offline:!!DATA.offline,signal:abort.signal,onStatus:message=>{if(!abort.signal.aborted)status.textContent=message;}});
         if(abort.signal.aborted){controller.dispose();return;}
         comparison3d.controller=controller;
         status.textContent=evidence;
@@ -1817,17 +1821,17 @@ ${await scriptFor(record,"no_maps")}
         document.getElementById('comparisonCameraSync').closest('label').hidden=comparison3d.mode==='overlay';
       }catch(error){
         if(!abort.signal.aborted){status.textContent=error.message;document.getElementById('comparisonCanvases').hidden=true;document.getElementById('comparison3dTools').hidden=true;}
-      }finally{if(!abort.signal.aborted)button.disabled=false;}
+      }finally{if(!abort.signal.aborted){button.disabled=false;button.textContent=comparison3d.controller?"Reload aligned views":"Retry alignment";}}
     }
     async function selectComparisonProtein(){
       const controller=comparison3d.controller;if(!controller)return;
-      const [reference,mobile]=comparison3dRecords(),key=document.getElementById('comparisonSharedProtein').value;
-      const row=componentDifferenceRows([reference,mobile]).find(r=>r.key===key);
+      const compared=comparison3dRecords(),[reference,mobile]=compared,key=document.getElementById('comparisonSharedProtein').value;
+      const row=componentDifferenceRows(compared).find(r=>r.key===key);
       if(!row)return;
       const queries=r=>row.entries.get(r.pdb_id).map(auth_asym_id=>({auth_asym_id}));
       const controls=[document.getElementById('comparisonSharedProtein'),document.getElementById('comparisonOnlyProtein'),document.getElementById('resetComparison3d')];
       const only=controls[1].checked;controls.forEach(control=>control.disabled=true);
-      try{await controller.selectComponent(queries(reference),queries(mobile),{only});}
+      try{await controller.selectComponent(queries(reference),queries(mobile),{only,additionalQueries:compared.slice(2).map(queries)});}
       catch(error){if(controller===comparison3d.controller){const status=document.getElementById('comparison3dStatus');if(status)status.textContent=error.message;}}
       finally{if(controller===comparison3d.controller)controls.forEach(control=>control.disabled=false);}
     }
@@ -1836,6 +1840,7 @@ ${await scriptFor(record,"no_maps")}
         document.getElementById(id)?.addEventListener('change',event=>{comparison3d[key]=event.target.value;renderComparison();});
       }
       document.getElementById('loadComparison3d')?.addEventListener('click',loadComparison3d);
+      if(state.activeTab==='comparison' && document.getElementById('loadComparison3d'))void loadComparison3d();
       document.getElementById('comparisonCameraSync')?.addEventListener('change',event=>comparison3d.controller?.setSync(event.target.checked));
       document.getElementById('comparisonSharedProtein')?.addEventListener('change',selectComparisonProtein);
       document.getElementById('comparisonOnlyProtein')?.addEventListener('change',selectComparisonProtein);

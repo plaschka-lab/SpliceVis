@@ -16,11 +16,14 @@ structures by a single quality score.
 
 ## Aligned 3D
 
-Choose two selected entries and explicitly load an alignment. Side-by-side views
-share a coordinate frame and optionally synchronize their cameras. Overlay is
-available for close inspection; isolating a shared protein often makes it easier
-to interpret. Changing entries releases the old models. At most two comparison
-canvases are active. Shared-protein selection uses curated component identities.
+Opening Aligned 3D automatically loads all selected structures side by side (up
+to five). Each model is fitted to the chosen reference; changing the reference or
+view reloads the comparison. Cameras synchronize from any viewer, with an option
+to disable synchronization. The blue reload button also allows retrying failures.
+Overlay compares two selected entries. Shared-protein isolation applies across all
+active structures and preserves component colours. The layout wraps on smaller
+screens. A missing supported fit identifies the affected structure; choose another
+reference or remove that structure before retrying. Changing tabs releases models.
 
 Fits use sequence-aligned, modelled Cα atoms from a unique PRPF8 anchor, with SF3B1
 as a fallback. They do not use author residue numbers as homology evidence. The

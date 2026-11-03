@@ -1,4 +1,4 @@
-/* Two deposited models in one coordinate frame. No fit is inferred in the viewer. */
+/* Deposited models in one coordinate frame. No fit is inferred in the viewer. */
 (function(root,factory){
   const api=factory(root);
   if(typeof module==='object'&&module.exports) module.exports=api;
@@ -75,12 +75,15 @@
   async function create(options,runtime={}){
     const {leftElement,rightElement,reference,mobile,overlay=false,offline=false,onStatus=()=>{},signal,timeoutMs=120000}=options;
     const matrix=validateMatrix(options.matrix),Ctor=runtime.Plugin||root.PDBeMolstarPlugin;
+    const entries=[{element:leftElement,record:reference,transform:identity(),probes:options.referenceProbes},{element:rightElement,record:mobile,transform:matrix,probes:options.mobileProbes},...(options.additional||[]).map(x=>({...x,transform:validateMatrix(x.transform)}))];
+    if(entries.length>5 || (overlay&&entries.length!==2))throw new Error('Choose up to five side-by-side structures or two for overlay.');
+    for(const entry of entries){coordinateSource(entry.record,offline);if(!Array.isArray(entry.probes)||entry.probes.length<3||(!overlay&&!entry.element))throw new Error('Alignment evidence or viewer target is missing.');}
     if(!leftElement||(!overlay&&!rightElement)||!Ctor?.extensions?.MVS) throw new Error('The comparison viewer is unavailable.');
     coordinateSource(reference,offline);coordinateSource(mobile,offline);
     if(!Array.isArray(options.referenceProbes)||options.referenceProbes.length<3||!Array.isArray(options.mobileProbes)||options.mobileProbes.length<3)throw new Error('Coordinate-version checks are unavailable for this alignment.');
     if(signal?.aborted)throw abortError();
     const instances=[],listeners=[];
-    const elements=overlay?[leftElement]:[leftElement,rightElement],visibility=elements.map(element=>element.style.visibility);
+    const elements=overlay?[leftElement]:entries.map(x=>x.element),visibility=elements.map(element=>element.style.visibility);
     elements.forEach(element=>element.style.visibility='hidden');
     const raf=runtime.requestAnimationFrame||root.requestAnimationFrame.bind(root),caf=runtime.cancelAnimationFrame||root.cancelAnimationFrame.bind(root);
     let disposed=false,frame=null,sync=true,active=0,previous=[];
@@ -92,7 +95,7 @@
       signal?.removeEventListener('abort',dispose);
       listeners.forEach(([element,name,fn])=>element.removeEventListener(name,fn));
       for(const instance of instances)instance.plugin?.dispose();
-      leftElement.replaceChildren();rightElement?.replaceChildren();
+      elements.forEach(element=>element.replaceChildren());
       elements.forEach((element,index)=>element.style.visibility=visibility[index]);
     }
     if(signal?.aborted)throw abortError();
@@ -129,12 +132,13 @@
     }
     const cameras=()=>instances.map(x=>x.plugin.canvas3d.camera);
     function copyCamera(from,to){const cs=cameras();cs[to].setState(cameraPose(cs[from]),0);}
+    function synchronize(from){for(let i=0;i<instances.length;i++)if(i!==from)copyCamera(from,i);}
     function remember(){previous=cameras().map(c=>JSON.stringify(cameraPose(c)));}
     function tick(){
       if(disposed)return;
-      if(!overlay&&instances.length===2){
+      if(!overlay&&instances.length>=2){
         const now=cameras().map(c=>JSON.stringify(cameraPose(c)));
-        if(sync){const changed=now.map((v,i)=>v!==previous[i]);const from=changed[active]?active:changed[1-active]?1-active:-1;if(from>=0)copyCamera(from,1-from);}
+        if(sync){const changed=now.map((v,i)=>v!==previous[i]);const from=changed[active]?active:changed.findIndex(Boolean);if(from>=0)synchronize(from);}
         remember();
       }
       frame=raf(tick);
@@ -144,16 +148,16 @@
       guard();
       for(const instance of instances){await instance.visual.clearSelection(undefined,{keepColors:true,keepRepresentations:true});instance.plugin.managers.interactivity.lociSelects.deselectAll();await instance.visual.reset({camera:true});guard();}
       if(overlay)await instances[0].visual.select({structureNumber:2,data:[{color:null,opacity:.55}],keepColors:true,keepRepresentations:true});
-      active=0;if(!overlay&&sync)copyCamera(0,1);remember();
+      active=0;if(!overlay&&sync)synchronize(0);remember();
     }
-    async function selectComponent(refQueries,mobileQueries,{only=false}={}){
+    async function selectComponent(refQueries,mobileQueries,{only=false,additionalQueries=[]}={}){
       guard();
-      const views=targets(),queries=[refQueries,mobileQueries];
-      if(queries.some(items=>!Array.isArray(items)||!items.length||items.some(q=>!q?.auth_asym_id)))throw new Error('Choose a shared component first.');
+      const views=targets(),queries=[refQueries,mobileQueries,...additionalQueries];
+      if(queries.length!==views.length || queries.some(items=>!Array.isArray(items)||!items.length||items.some(q=>!q?.auth_asym_id)))throw new Error('Choose a shared component first.');
       const loci=views.map((v,i)=>v.instance.getLociForParams(queries[i],v.number));
       if(loci.some(l=>l?.kind!=='element-loci'||!l.elements?.length))throw new Error('This component has no modelled atoms in one of the structures.');
       for(const instance of instances)instance.plugin.managers.interactivity.lociSelects.deselectAll();
-      for(let i=0;i<2;i++){
+      for(let i=0;i<views.length;i++){
         const {instance,number}=views[i];
         instance.plugin.managers.interactivity.lociSelects.select({loci:loci[i]},false);
         await instance.visual.clearSelection(number,{keepColors:true,keepRepresentations:true});guard();
@@ -162,22 +166,21 @@
       }
       active=0;
       instances[0].plugin.managers.camera.focusLoci(overlay?loci:loci[0],{minRadius:15,extraRadius:8,durationMs:0});
-      if(!overlay){if(sync)copyCamera(0,1);else instances[1].plugin.managers.camera.focusLoci(loci[1],{minRadius:15,extraRadius:8,durationMs:0});}remember();
+      if(!overlay){if(sync)synchronize(0);else for(let i=1;i<instances.length;i++)instances[i].plugin.managers.camera.focusLoci(loci[i],{minRadius:15,extraRadius:8,durationMs:0});}remember();
     }
     try{
       onStatus('Loading aligned coordinate models…');
       await bounded((async()=>{
         if(overlay)await load(leftElement,[{record:reference,transform:identity(),probes:options.referenceProbes},{record:mobile,transform:matrix,probes:options.mobileProbes}]);
         else{
-          await load(leftElement,[{record:reference,transform:identity(),probes:options.referenceProbes}]);
-          await load(rightElement,[{record:mobile,transform:matrix,probes:options.mobileProbes}]);
+          for(const entry of entries)await load(entry.element,[entry]);
         }
       })());guard();
-      if(!overlay){copyCamera(0,1);[leftElement,rightElement].forEach((element,index)=>{const activate=()=>active=index;element.addEventListener('pointerdown',activate);element.addEventListener('wheel',activate,{passive:true});listeners.push([element,'pointerdown',activate],[element,'wheel',activate]);});}
+      if(!overlay){synchronize(0);elements.forEach((element,index)=>{const activate=()=>active=index;element.addEventListener('pointerdown',activate);element.addEventListener('wheel',activate,{passive:true});listeners.push([element,'pointerdown',activate],[element,'wheel',activate]);});}
       remember();frame=raf(tick);
       elements.forEach((element,index)=>element.style.visibility=visibility[index]);
-      onStatus(overlay?'Aligned overlay. The second structure is semi-transparent.':'Aligned models ready. Rotate or zoom either view.');
-      return Object.freeze({dispose,setSync(value){guard();sync=Boolean(value);if(sync&&!overlay)copyCamera(active,1-active);remember();},reset,selectComponent});
+      onStatus(overlay?'Aligned overlay. The second structure is semi-transparent.':'Aligned models ready. Rotate or zoom any view.');
+      return Object.freeze({dispose,setSync(value){guard();sync=Boolean(value);if(sync&&!overlay)synchronize(active);remember();},reset,selectComponent});
     }catch(error){dispose();throw error;}
   }
   return Object.freeze({create,validateMatrix,invertMatrix,validateProbes,coordinateSource,palette});
