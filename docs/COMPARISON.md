@@ -21,8 +21,8 @@ to five). Each model is fitted to the chosen reference; changing the reference o
 view reloads the comparison. Cameras synchronize from any viewer, with an option
 to disable synchronization. The blue reload button also allows retrying failures.
 Overlay compares two selected entries. Shared-protein isolation applies across all
-active structures and preserves component colours. The layout wraps on smaller
-screens. A missing supported fit identifies the affected structure; choose another
+active structures and preserves component colours. Columns defaults to Auto, which wraps on smaller screens; choose 1–5 to
+control the grid. Changing columns preserves loaded models, selections and views. A missing supported fit identifies the affected structure; choose another
 reference or remove that structure before retrying. Changing tabs releases models.
 
 Fits use sequence-aligned, modelled Cα atoms from a unique PRPF8 anchor, with SF3B1

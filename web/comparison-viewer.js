@@ -200,7 +200,7 @@
       remember();frame=raf(tick);
       elements.forEach((element,index)=>element.style.visibility=visibility[index]);
       onStatus(overlay?'Aligned overlay. The second structure is semi-transparent.':'Aligned models ready. Rotate or zoom any view.');
-      return Object.freeze({dispose,setSync(value){guard();sync=Boolean(value);if(sync&&!overlay)synchronize(active);remember();},reset,selectComponent,selectInView});
+      return Object.freeze({dispose,resize(){guard();for(const instance of instances)instance.plugin.handleResize?.();},setSync(value){guard();sync=Boolean(value);if(sync&&!overlay)synchronize(active);remember();},reset,selectComponent,selectInView});
     }catch(error){dispose();throw error;}
   }
   return Object.freeze({create,validateMatrix,invertMatrix,validateProbes,coordinateSource,palette});
