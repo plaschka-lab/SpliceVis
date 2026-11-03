@@ -1842,7 +1842,7 @@ ${await scriptFor(record,"no_maps")}
       document.getElementById('comparisonOnlyProtein').checked=false;
       try{
         if(!comparison3d.manifest){
-          const response=await fetch('data/comparison-alignments.json?v=2',{signal:abort.signal,cache:'no-cache'});
+          const response=await fetch('data/comparison-alignments.json?v=3',{signal:abort.signal,cache:'no-cache'});
           if(!response.ok) throw new Error('Alignment evidence is unavailable in this release. Use the tables or ChimeraX scripts below.');
           comparison3d.manifest=await response.json();
         }
@@ -1853,7 +1853,7 @@ ${await scriptFor(record,"no_maps")}
           return {record,pair,matrix:pair.reference===reference.pdb_id?pair.matrix:SpliceVisComparisonViewer.invertMatrix(pair.matrix)};
         });
         const matrix=fits[0].matrix;
-        const evidence=fits.map(({record,pair})=>`${record.pdb_id.toUpperCase()}: ${pair.anchor} · ${pair.fit_residues}/${pair.matched_residues} Cα atoms · RMSD ${pair.rmsd.toFixed(2)} Å (all matched ${pair.all_matched_rmsd.toFixed(2)} Å; ${(100*pair.sequence_identity).toFixed(0)}% identity)`).join(' | ') + '. Each fit uses its stated anchor against the reference, not the whole spliceosome.';
+        const evidence=fits.map(({record,pair})=>`${record.pdb_id.toUpperCase()}: ${pair.anchor} · ${pair.fit_residues}/${pair.matched_residues} Cα atoms · RMSD ${pair.rmsd.toFixed(2)} Å (all matched ${pair.all_matched_rmsd.toFixed(2)} Å; ${(100*pair.sequence_identity).toFixed(0)}% identity)${pair.warning ? ` — ${pair.warning}` : ""}`).join(' | ') + '. Each fit uses its stated anchor against the reference, not the whole spliceosome.';
         document.getElementById('comparisonCanvases').hidden=false;
         const controller=await SpliceVisComparisonViewer.create({leftElement:document.getElementById('comparisonLeft'),rightElement:document.getElementById('comparisonRight'),reference,mobile,referenceProbes:comparison3d.manifest.probes?.[reference.pdb_id],mobileProbes:comparison3d.manifest.probes?.[mobile.pdb_id],matrix,additional:fits.slice(1).map((fit,i)=>({element:document.getElementById(`comparisonExtra${i+2}`),record:fit.record,transform:fit.matrix,probes:comparison3d.manifest.probes?.[fit.record.pdb_id]})),overlay:comparison3d.mode==='overlay',offline:!!DATA.offline,signal:abort.signal,onStatus:message=>{if(!abort.signal.aborted)status.textContent=message;}});
         if(abort.signal.aborted){controller.dispose();return;}

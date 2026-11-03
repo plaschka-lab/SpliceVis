@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class ComparisonReleaseTests(unittest.TestCase):
     def test_prpf8_disassembly_comparisons_have_refined_core_fits(self):
         manifest = json.loads((ROOT / 'data/comparison-alignments.json').read_text())
-        self.assertEqual(manifest['provenance']['version'], 2)
+        self.assertEqual(manifest['provenance']['version'], 3)
         for key in ('8ro0:8ro2', '8ro1:8ro2'):
             pair = manifest['pairs'][key]
             self.assertTrue(pair['supported'], pair.get('reason'))
@@ -17,6 +17,15 @@ class ComparisonReleaseTests(unittest.TestCase):
             self.assertGreater(pair['fit_residues'], 1300)
             self.assertLess(pair['rmsd'], 2.5)
             self.assertGreaterEqual(pair['fit_residues'] / pair['matched_residues'], .6)
+
+    def test_large_domain_motion_warns_without_rejecting_a_good_core(self):
+        manifest = json.loads((ROOT / 'data/comparison-alignments.json').read_text())
+        pair = manifest['pairs']['5lj5:6id0']
+        self.assertTrue(pair['supported'])
+        self.assertGreater(pair['fit_residues'], 1400)
+        self.assertLess(pair['rmsd'], 1.5)
+        self.assertGreater(pair['all_matched_rmsd'], 12)
+        self.assertTrue(pair['warning'])
 
     def test_fits_only_reference_public_entries_and_valid_coordinate_frames(self):
         records = json.loads((ROOT / 'data/structures.json').read_text())['records']
