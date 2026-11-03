@@ -555,8 +555,7 @@
 .molstar-legend-chip{max-width:none;border-radius:5px;text-align:left;padding:5px 8px}
 .molstar-legend-chip small{color:var(--muted);font-size:10px}
 #molstarProteinSearch{width:100%;margin:6px 0 10px;padding:7px;border:1px solid var(--line);border-radius:5px}
-.viewer-display{position:relative;font-size:12px}.viewer-display>summary{cursor:pointer;padding:6px}
-.viewer-display[open]{padding:4px;border:1px solid var(--line);border-radius:6px;background:white}
+.viewer-display{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:12px}
 .viewer-display-actions{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0}
 .viewer-display label{display:flex;align-items:center;gap:6px}.viewer-display input[type="checkbox"]{width:16px;height:16px;min-height:0}
 .selected-header-actions>a.button{color:#0b5cab;text-decoration:none;white-space:nowrap;padding:6px 10px}
