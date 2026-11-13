@@ -29,7 +29,9 @@ Fits use sequence-aligned, modelled Cα atoms from a unique PRPF8 anchor, with S
 as a fallback. They do not use author residue numbers as homology evidence. The
 current acceptance criteria require at least 100 matched atoms, 35% sequence
 identity, 60% sequence coverage, 25% modelled coverage, 60% retained fit positions,
-core RMSD at most 3 Å. All-matched RMSD above 12 Å is reported as a warning about
+core RMSD at most 3 Å. If the standard fit fails, a converged partial-core fit is
+accepted when it contains at least 200 positions and 40% of matched residues; the
+viewer flags this narrower fit and reports its counts. All-matched RMSD above 12 Å is reported as a warning about
 displacement outside the fitted core, rather than rejecting an otherwise sound
 core alignment. Existing accepted fits are preserved. If the initial monotone-trimmed fit is rejected, refinement retries and re-evaluates
 all matched residues so positions displaced by the initial fit can rejoin the core.
